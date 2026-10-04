@@ -32,3 +32,21 @@ assert.deepEqual([...detectorIds].sort(),[
  'radial-crease-proximal-interphalangeal-middle-finger'
 ]);
 console.log('Interactive PIP/DIP detector anatomy and specialized specs validated.');
+
+const skin=atlas.parts.find(p=>p.name==='Skin');
+const hair=atlas.parts.find(p=>p.name==='Hair of head');
+assert.ok(skin&&skin.system==='integumentary','BodyParts3D Skin mesh required for canonical anchor projection');
+assert.ok(hair&&hair.system==='integumentary','BodyParts3D Hair of head mesh required for hairline segmentation proposals');
+assert.ok(hair.bounds[0][1]>skin.bounds[0][1]&&hair.bounds[1][1]<=skin.bounds[1][1]+0.02,'Hair of head bounds must lie in the cranial Skin envelope');
+const hairlineIds=['midpoint-anterior-hairline','midpoint-posterior-hairline','left-anterior-hairline-corner','right-anterior-hairline-corner'];
+for(const id of hairlineIds){
+ const spec=specs.landmarks.find(x=>x.landmarkId===id);
+ assert.equal(spec?.detector?.type,'bodyparts3d-hair-boundary-to-skin-projection',`${id}: explicit hair segmentation detector required`);
+ assert.equal(spec?.detector?.status,'requires-manual-confirmation',`${id}: detector must remain manual-confirmation gated`);
+}
+const sceneSource=fs.readFileSync('app/scene.tsx','utf8');
+assert.match(sceneSource,/controls\.zoomToCursor=true/,'Cursor-centered zoom must remain enabled');
+assert.match(sceneSource,/controls\.touches\.TWO=T\.TOUCH\.DOLLY_PAN/,'Mobile two-finger pinch/pan must remain enabled');
+assert.match(sceneSource,/computeHairlineProposal/,'Hairline segmentation proposal code missing');
+assert.match(sceneSource,/focusLandmark/,'Landmark auto-focus code missing');
+assert.match(sceneSource,/p\.name!==['"]Skin['"]/,'Canonical anchor raycasts must be restricted to Skin');

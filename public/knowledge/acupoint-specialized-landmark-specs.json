@@ -7,7 +7,8 @@
     "Manual anchors must lie on the body-surface mesh and carry explicit provenance and reviewer status.",
     "Detector-derived anchors are not accepted automatically unless landmark-specific QC passes.",
     "Bilateral landmarks require laterality checks and paired plausibility checks, but symmetry never overrides source anatomy.",
-    "All accepted anchors are tied to the exact atlas/model revision."
+    "All accepted anchors are tied to the exact atlas/model revision.",
+    "The explicit BodyParts3D Hair of head mesh may provide a segmentation-boundary proposal for hairline landmarks; the proposal must be projected to Skin and manually confirmed."
   ],
   "statuses": {
     "detector": [
@@ -28,18 +29,21 @@
     {
       "landmarkId": "midpoint-anterior-hairline",
       "class": "soft-surface-boundary",
-      "primaryMethod": "manual-anchor",
+      "primaryMethod": "segmentation-detector-with-manual-confirmation",
       "detector": {
-        "type": "surface-boundary-detector",
-        "status": "candidate-only",
+        "type": "bodyparts3d-hair-boundary-to-skin-projection",
+        "status": "requires-manual-confirmation",
         "requiredSignals": [
-          "hair-bearing/non-hair-bearing boundary or explicit texture/segmentation input"
+          "BodyParts3D Hair of head mesh",
+          "BodyParts3D Skin mesh",
+          "hair-mesh surface boundary"
         ],
         "forbiddenFallbacks": [
-          "fixed fraction of cranial height",
-          "fixed distance from glabella without source landmark confirmation"
+          "fixed cranial-height fraction",
+          "generic body-height ratio",
+          "blind bilateral mirroring"
         ],
-        "output": "candidate polyline on anterior scalp surface"
+        "output": "midpoint-anterior-hairline candidate derived from the explicit Hair of head mesh boundary and projected to Skin"
       },
       "manualAnchor": {
         "geometryType": "point-on-surface",
@@ -52,25 +56,29 @@
         "requiredEvidence": [
           "orthogonal front view",
           "orthogonal lateral view",
-          "visible or externally supplied hairline boundary"
+          "BodyParts3D Hair of head boundary visible at the proposed location",
+          "proposal projected to Skin surface"
         ]
       }
     },
     {
       "landmarkId": "midpoint-posterior-hairline",
       "class": "soft-surface-boundary",
-      "primaryMethod": "manual-anchor",
+      "primaryMethod": "segmentation-detector-with-manual-confirmation",
       "detector": {
-        "type": "surface-boundary-detector",
-        "status": "candidate-only",
+        "type": "bodyparts3d-hair-boundary-to-skin-projection",
+        "status": "requires-manual-confirmation",
         "requiredSignals": [
-          "hair-bearing/non-hair-bearing boundary or explicit texture/segmentation input"
+          "BodyParts3D Hair of head mesh",
+          "BodyParts3D Skin mesh",
+          "hair-mesh surface boundary"
         ],
         "forbiddenFallbacks": [
-          "fixed fraction of cranial height",
-          "fixed distance from external occipital protuberance without source landmark confirmation"
+          "fixed cranial-height fraction",
+          "generic body-height ratio",
+          "blind bilateral mirroring"
         ],
-        "output": "candidate polyline on posterior scalp surface"
+        "output": "midpoint-posterior-hairline candidate derived from the explicit Hair of head mesh boundary and projected to Skin"
       },
       "manualAnchor": {
         "geometryType": "point-on-surface",
@@ -83,7 +91,8 @@
         "requiredEvidence": [
           "orthogonal posterior view",
           "orthogonal lateral view",
-          "visible or externally supplied hairline boundary"
+          "BodyParts3D Hair of head boundary visible at the proposed location",
+          "proposal projected to Skin surface"
         ]
       }
     },
@@ -91,18 +100,21 @@
       "landmarkId": "left-anterior-hairline-corner",
       "class": "soft-surface-boundary",
       "laterality": "left",
-      "primaryMethod": "manual-anchor",
+      "primaryMethod": "segmentation-detector-with-manual-confirmation",
       "detector": {
-        "type": "surface-boundary-corner-detector",
-        "status": "candidate-only",
+        "type": "bodyparts3d-hair-boundary-to-skin-projection",
+        "status": "requires-manual-confirmation",
         "requiredSignals": [
-          "anterior hairline boundary"
+          "BodyParts3D Hair of head mesh",
+          "BodyParts3D Skin mesh",
+          "hair-mesh surface boundary"
         ],
         "forbiddenFallbacks": [
-          "mirror right side blindly",
-          "fixed transverse head fraction"
+          "fixed cranial-height fraction",
+          "generic body-height ratio",
+          "blind bilateral mirroring"
         ],
-        "output": "left frontotemporal hairline corner candidate"
+        "output": "left-anterior-hairline-corner candidate derived from the explicit Hair of head mesh boundary and projected to Skin"
       },
       "manualAnchor": {
         "geometryType": "point-on-surface",
@@ -115,7 +127,8 @@
         "requiredEvidence": [
           "front view",
           "left oblique view",
-          "visible or externally supplied hairline boundary"
+          "BodyParts3D Hair of head boundary visible at the proposed location",
+          "proposal projected to Skin surface"
         ]
       }
     },
@@ -123,18 +136,21 @@
       "landmarkId": "right-anterior-hairline-corner",
       "class": "soft-surface-boundary",
       "laterality": "right",
-      "primaryMethod": "manual-anchor",
+      "primaryMethod": "segmentation-detector-with-manual-confirmation",
       "detector": {
-        "type": "surface-boundary-corner-detector",
-        "status": "candidate-only",
+        "type": "bodyparts3d-hair-boundary-to-skin-projection",
+        "status": "requires-manual-confirmation",
         "requiredSignals": [
-          "anterior hairline boundary"
+          "BodyParts3D Hair of head mesh",
+          "BodyParts3D Skin mesh",
+          "hair-mesh surface boundary"
         ],
         "forbiddenFallbacks": [
-          "mirror left side blindly",
-          "fixed transverse head fraction"
+          "fixed cranial-height fraction",
+          "generic body-height ratio",
+          "blind bilateral mirroring"
         ],
-        "output": "right frontotemporal hairline corner candidate"
+        "output": "right-anterior-hairline-corner candidate derived from the explicit Hair of head mesh boundary and projected to Skin"
       },
       "manualAnchor": {
         "geometryType": "point-on-surface",
@@ -147,7 +163,8 @@
         "requiredEvidence": [
           "front view",
           "right oblique view",
-          "visible or externally supplied hairline boundary"
+          "BodyParts3D Hair of head boundary visible at the proposed location",
+          "proposal projected to Skin surface"
         ]
       }
     },

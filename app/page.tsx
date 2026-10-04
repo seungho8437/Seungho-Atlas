@@ -82,7 +82,7 @@ export default function Home(){
   if(!atlas||!anchorTarget||!anchorDraft)return;
   const record:SpecializedLandmarkAnchorRecord={
    ...anchorDraft,landmarkId:anchorTarget,modelRevision:atlas.version,reviewStatus:'accepted',
-   evidence:{views:[state.view],definitionCheck:true,detectorMetrics:anchorDraft.detectorId?{detectorId:anchorDraft.detectorId,detectorConfidence:anchorDraft.detectorConfidence??'moderate'}:undefined},
+   evidence:{views:[state.view],definitionCheck:true,detectorMetrics:anchorDraft.detectorId?{detectorId:anchorDraft.detectorId,detectorConfidence:anchorDraft.detectorConfidence??'moderate'}:undefined,reviewerNote:anchorDraft.detectorId?.startsWith('bodyparts3d-hair-boundary:')?'BodyParts3D Hair of head segmentation boundary proposal visually confirmed on Skin.':undefined},
    provenance:{createdBy:'interactive-reviewer',createdAt:new Date().toISOString(),sourceSpecVersion:1}
   };
   setLandmarkAnchors(current=>{
@@ -100,7 +100,9 @@ export default function Home(){
  };
  const activeLandmarkSpec=anchorTarget?landmarkSpecs.find(x=>x.landmarkId===anchorTarget):undefined;
  const acceptedLandmarkCount=landmarkSpecs.filter(spec=>landmarkAnchors.some(anchor=>anchor.landmarkId===spec.landmarkId&&anchor.reviewStatus==='accepted')).length;
- const detectorCapable=anchorTarget==='radial-crease-proximal-interphalangeal-middle-finger'||anchorTarget==='radial-crease-distal-interphalangeal-middle-finger';
+ const fingerDetectorCapable=anchorTarget==='radial-crease-proximal-interphalangeal-middle-finger'||anchorTarget==='radial-crease-distal-interphalangeal-middle-finger';
+ const hairlineDetectorCapable=!!anchorTarget&&['midpoint-anterior-hairline','midpoint-posterior-hairline','left-anterior-hairline-corner','right-anterior-hairline-corner'].includes(anchorTarget);
+ const detectorCapable=fingerDetectorCapable||hairlineDetectorCapable;
  return <main className="studio">
   {atlas&&<AnatomyScene atlas={atlas} state={{...state,inspectorOpen:details&&selectedParts.length>0}} acupointCoordinates={acupointCoordinates} showAcupoints={showAcupoints} anchorTarget={anchorTarget} anchorDraft={anchorDraft} detectorProposal={detectorProposal} detectorSide={detectorSide} onAnchorPick={candidate=>setAnchorDraft(candidate)} onDetectorProposal={setDetectorProposal} onSelect={choosePart} onSelectAcupoint={id=>{const point=acupoints.find(item=>item.id===id);if(point)chooseAcupoint(point);}} onProgress={n=>{setProgress(n);if(n===100)setError('');}} onError={setError}/>}
   <div className="vignette"/>
@@ -122,7 +124,7 @@ export default function Home(){
     <div className="anchor-target-title"><span>현재 대상</span><strong>{LANDMARK_KO[activeLandmarkSpec.landmarkId]??activeLandmarkSpec.landmarkId}</strong></div>
     <p>{activeLandmarkSpec.manualAnchor.definition}</p>
     <div className="anchor-constraints">{activeLandmarkSpec.manualAnchor.constraints.map(x=><Badge key={x} variant="secondary">{x}</Badge>)}</div>
-    {detectorCapable&&<div className="detector-box"><div><strong>PIP/DIP detector proposal</strong><span>관절 geometry에서 노쪽 체표 교점을 제안하며 자동 승인되지 않습니다.</span></div><div className="anchor-side-choice"><Button variant="ghost" className={detectorSide==='left'?'active':''} onClick={()=>{setDetectorSide('left');setAnchorDraft(null);setDetectorProposal(null);}}>왼쪽</Button><Button variant="ghost" className={detectorSide==='right'?'active':''} onClick={()=>{setDetectorSide('right');setAnchorDraft(null);setDetectorProposal(null);}}>오른쪽</Button></div>{detectorProposal?<div className="proposal-actions"><span>주황색 detector 후보가 표시되었습니다.</span><Button onClick={useDetectorProposal}>제안을 후보로 채택</Button><Button variant="ghost" onClick={()=>setDetectorProposal(null)}>제안 거절</Button></div>:<span className="context-note">해당 손의 PIP/DIP geometry를 찾으면 제안점이 자동 표시됩니다. 찾지 못하면 수동 지정만 사용합니다.</span>}</div>}
+    {detectorCapable&&<div className="detector-box"><div><strong>{hairlineDetectorCapable?'BodyParts3D hair-boundary proposal':'PIP/DIP detector proposal'}</strong><span>{hairlineDetectorCapable?'명시적인 Hair of head mesh 경계를 Skin 체표에 투영합니다. 고정 두개 비율은 사용하지 않으며 자동 승인되지 않습니다.':'관절 geometry에서 노쪽 체표 교점을 제안하며 자동 승인되지 않습니다.'}</span></div>{fingerDetectorCapable&&<div className="anchor-side-choice"><Button variant="ghost" className={detectorSide==='left'?'active':''} onClick={()=>{setDetectorSide('left');setAnchorDraft(null);setDetectorProposal(null);}}>왼쪽</Button><Button variant="ghost" className={detectorSide==='right'?'active':''} onClick={()=>{setDetectorSide('right');setAnchorDraft(null);setDetectorProposal(null);}}>오른쪽</Button></div>}{detectorProposal?<div className="proposal-actions"><span>주황색 detector 후보가 표시되었습니다.</span><Button onClick={useDetectorProposal}>제안을 후보로 채택</Button><Button variant="ghost" onClick={()=>setDetectorProposal(null)}>제안 거절</Button></div>:<span className="context-note">{hairlineDetectorCapable?'Hair of head 경계에서 후보를 찾지 못하면 임의 비율로 대체하지 말고 수동 검토 상태로 남깁니다.':'해당 손의 PIP/DIP geometry를 찾으면 제안점이 자동 표시됩니다. 찾지 못하면 수동 지정만 사용합니다.'}</span>}</div>}
     <div className="manual-anchor-help"><Crosshair size={16}/><span>모델을 확대·회전한 뒤 원하는 체표면을 클릭하면 수동 후보가 생성됩니다. 후보는 실제 integumentary triangle과 barycentric coordinate에 고정됩니다.</span></div>
     {anchorDraft&&<div className="anchor-draft"><div><strong>후보 준비됨</strong><span>{anchorDraft.method==='manual-anchor'?'수동 체표 지정':'Detector 제안 + 수동 확인'} · mesh {anchorDraft.surfaceProjection.meshId} · triangle {anchorDraft.surfaceProjection.triangleIndex}</span></div><div className="proposal-actions"><Button onClick={acceptAnchor}><Check size={16}/> 승인</Button><Button variant="ghost" onClick={()=>setAnchorDraft(null)}>다시 지정</Button></div></div>}
    </div>}
