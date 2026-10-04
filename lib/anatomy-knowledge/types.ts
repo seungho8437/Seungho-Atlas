@@ -1,11 +1,13 @@
 export type AnatomyLocalization = {
-  nameKo: string;
+  nameKo?: string;
   legacyKo?: string;
   hanja?: string;
   descriptionKo?: string;
   aliases?: string[];
   status?: 'verified' | 'derived' | 'review-needed';
   sourceIds?: string[];
+  sourceNameEn?: string;
+  unresolvedTokens?: string[];
 };
 
 export type AnatomyLocalizationMap = Record<string, AnatomyLocalization>;
