@@ -1,33 +1,20 @@
 {
-  "generatedAt": "2026-10-04T11:28:37.457Z",
+  "generatedAt": "2026-10-04T11:33:07.012Z",
   "logicalAcupoints": 361,
   "physicalCoordinates": 670,
   "expectedPhysicalCoordinates": 670,
   "surfaceTriangleCount": 60362,
   "integumentaryPartCount": 5,
   "invalidGeometryOrLaterality": [],
-  "duplicateClusters": [
-    [
-      "ST43",
-      "GB42"
-    ],
-    [
-      "BL63",
-      "GB41"
-    ],
-    [
-      "TE3",
-      "TE4"
-    ]
-  ],
+  "duplicateClusters": [],
   "exactDuplicateClusters": [],
   "confidenceCounts": {
     "moderate": 293,
     "high": 377
   },
   "projectionDistance": {
-    "max": 0.4965,
-    "mean": 0.05217179104477608
+    "max": 0.5908,
+    "mean": 0.05637567164179104
   },
   "axes": {
     "source": "native BodyParts3D 4.0 atlas coordinates",

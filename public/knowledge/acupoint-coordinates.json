@@ -1,7 +1,7 @@
 {
   "version": 1,
   "model": "BodyParts3D-4.0",
-  "generatedAt": "2026-10-04T11:28:37.456Z",
+  "generatedAt": "2026-10-04T11:33:07.010Z",
   "coordinateFrame": {
     "source": "native BodyParts3D 4.0 atlas coordinates",
     "axes": {
@@ -4844,8 +4844,8 @@
       "side": "left",
       "position": [
         0.1166,
-        0.2139,
-        -0.0253
+        0.0594,
+        0.047
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -4854,7 +4854,7 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0723,
+        "projectionDistance": 0.1545,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
           0.1166,
@@ -4864,7 +4864,8 @@
         "relationCount": 3,
         "specificLandmarkCount": 3,
         "whoConstraintCount": 6,
-        "whoTextLandmarkCount": 2
+        "whoTextLandmarkCount": 2,
+        "reviewedException": "reviewed-foot-lr-ap"
       },
       "sourceIds": [
         "WHO_ACUPOINT_2008",
@@ -4877,8 +4878,8 @@
       "side": "right",
       "position": [
         -0.1101,
-        0.2139,
-        -0.01
+        0.0645,
+        0.047
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -4887,7 +4888,7 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0571,
+        "projectionDistance": 0.1494,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
           -0.1101,
@@ -4897,7 +4898,8 @@
         "relationCount": 3,
         "specificLandmarkCount": 3,
         "whoConstraintCount": 6,
-        "whoTextLandmarkCount": 2
+        "whoTextLandmarkCount": 2,
+        "reviewedException": "reviewed-foot-lr-ap"
       },
       "sourceIds": [
         "WHO_ACUPOINT_2008",
@@ -12367,9 +12369,9 @@
       "acupointId": "BL63",
       "side": "left",
       "position": [
-        0.1152,
-        0.1989,
-        -0.026
+        0.2966,
+        0.7797,
+        0.0368
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -12378,17 +12380,18 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.1475,
+        "projectionDistance": 0.5808,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.2433,
+          0.2966,
           0.1989,
-          0.047
+          0.0368
         ],
         "relationCount": 3,
         "specificLandmarkCount": 3,
         "whoConstraintCount": 5,
-        "whoTextLandmarkCount": 3
+        "whoTextLandmarkCount": 3,
+        "reviewedException": "reviewed-foot-lr-ap"
       },
       "sourceIds": [
         "WHO_ACUPOINT_2008",
@@ -12400,9 +12403,9 @@
       "acupointId": "BL63",
       "side": "right",
       "position": [
-        -0.1174,
-        0.1989,
-        -0.0297
+        -0.2901,
+        0.7818,
+        0.0368
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -12411,17 +12414,18 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.142,
+        "projectionDistance": 0.5829,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.2368,
+          -0.2901,
           0.1989,
-          0.047
+          0.0368
         ],
         "relationCount": 3,
         "specificLandmarkCount": 3,
         "whoConstraintCount": 5,
-        "whoTextLandmarkCount": 3
+        "whoTextLandmarkCount": 3,
+        "reviewedException": "reviewed-foot-lr-ap"
       },
       "sourceIds": [
         "WHO_ACUPOINT_2008",
@@ -15271,9 +15275,9 @@
       "acupointId": "TE4",
       "side": "left",
       "position": [
-        0.2293,
-        0.8861,
-        0.0047
+        0.2192,
+        0.8084,
+        0.0472
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -15282,17 +15286,18 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0539,
+        "projectionDistance": 0.0458,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.2293,
-          0.9399,
-          0.0047
+          0.1996,
+          0.8084,
+          0.0058
         ],
         "relationCount": 3,
         "specificLandmarkCount": 2,
         "whoConstraintCount": 1,
-        "whoTextLandmarkCount": 1
+        "whoTextLandmarkCount": 1,
+        "reviewedException": "reviewed-wrist-between-TE3-TE5"
       },
       "sourceIds": [
         "WHO_ACUPOINT_2008",
@@ -15304,9 +15309,9 @@
       "acupointId": "TE4",
       "side": "right",
       "position": [
-        -0.2288,
-        0.8896,
-        0.0047
+        -0.2202,
+        0.8104,
+        0.0458
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -15315,17 +15320,18 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0514,
+        "projectionDistance": 0.0448,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.2288,
-          0.941,
-          0.0047
+          -0.2,
+          0.8104,
+          0.0058
         ],
         "relationCount": 3,
         "specificLandmarkCount": 2,
         "whoConstraintCount": 1,
-        "whoTextLandmarkCount": 1
+        "whoTextLandmarkCount": 1,
+        "reviewedException": "reviewed-wrist-between-TE3-TE5"
       },
       "sourceIds": [
         "WHO_ACUPOINT_2008",
@@ -19245,9 +19251,9 @@
       "acupointId": "GB41",
       "side": "left",
       "position": [
-        0.115,
-        0.1989,
-        -0.0254
+        0.2433,
+        0.7484,
+        0.0704
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -19256,17 +19262,18 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.1215,
+        "projectionDistance": 0.5495,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.1966,
+          0.2433,
           0.1989,
-          0.0646
+          0.0704
         ],
         "relationCount": 3,
         "specificLandmarkCount": 3,
         "whoConstraintCount": 5,
-        "whoTextLandmarkCount": 3
+        "whoTextLandmarkCount": 3,
+        "reviewedException": "reviewed-foot-lr-ap"
       },
       "sourceIds": [
         "WHO_ACUPOINT_2008",
@@ -19278,9 +19285,9 @@
       "acupointId": "GB41",
       "side": "right",
       "position": [
-        -0.1148,
-        0.1989,
-        -0.0217
+        -0.2368,
+        0.7895,
+        0.0569
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -19289,17 +19296,18 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.1145,
+        "projectionDistance": 0.5908,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.1901,
+          -0.2368,
           0.1989,
-          0.0646
+          0.0704
         ],
         "relationCount": 3,
         "specificLandmarkCount": 3,
         "whoConstraintCount": 5,
-        "whoTextLandmarkCount": 3
+        "whoTextLandmarkCount": 3,
+        "reviewedException": "reviewed-foot-lr-ap"
       },
       "sourceIds": [
         "WHO_ACUPOINT_2008",
@@ -19311,9 +19319,9 @@
       "acupointId": "GB42",
       "side": "left",
       "position": [
-        0.1167,
-        0.2139,
-        -0.0255
+        0.23,
+        0.7783,
+        0.0543
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -19322,17 +19330,18 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.113,
+        "projectionDistance": 0.5644,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.1966,
+          0.23,
           0.2139,
           0.0543
         ],
         "relationCount": 3,
         "specificLandmarkCount": 3,
         "whoConstraintCount": 8,
-        "whoTextLandmarkCount": 2
+        "whoTextLandmarkCount": 2,
+        "reviewedException": "reviewed-foot-lr-ap"
       },
       "sourceIds": [
         "WHO_ACUPOINT_2008",
@@ -19344,9 +19353,9 @@
       "acupointId": "GB42",
       "side": "right",
       "position": [
-        -0.1187,
-        0.2139,
-        -0.0269
+        -0.2234,
+        0.7768,
+        0.0543
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -19355,17 +19364,18 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.1082,
+        "projectionDistance": 0.5629,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.1901,
+          -0.2234,
           0.2139,
           0.0543
         ],
         "relationCount": 3,
         "specificLandmarkCount": 3,
         "whoConstraintCount": 8,
-        "whoTextLandmarkCount": 2
+        "whoTextLandmarkCount": 2,
+        "reviewedException": "reviewed-foot-lr-ap"
       },
       "sourceIds": [
         "WHO_ACUPOINT_2008",
@@ -20896,8 +20906,8 @@
       "side": "midline",
       "position": [
         0.0033,
-        1.4455,
-        -0.1042
+        1.4992,
+        -0.0823
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -20906,17 +20916,18 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0656,
+        "projectionDistance": 0.0378,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
           0.0033,
-          1.4183,
+          1.4992,
           -0.0445
         ],
         "relationCount": 1,
         "specificLandmarkCount": 0,
         "whoConstraintCount": 1,
-        "whoTextLandmarkCount": 0
+        "whoTextLandmarkCount": 0,
+        "reviewedException": "reviewed-GV15-0.5-cun-inferior-to-GV16"
       },
       "sourceIds": [
         "WHO_ACUPOINT_2008",
