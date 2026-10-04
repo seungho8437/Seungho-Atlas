@@ -5,15 +5,16 @@
     "constructed-surface-geometry": 13,
     "resolved-atlas-geometry": 6,
     "constructed-atlas-geometry": 3,
-    "manual-or-specialized-detection-required": 9,
+    "accepted-specialized-anchor": 9,
     "constructed-surface-region": 1
   },
-  "resolvedOrConstructed": 23,
-  "unresolved": 9,
+  "resolvedOrConstructed": 32,
+  "unresolved": 0,
   "invariants": {
     "noAnthropometricGuessForHairlineNippleUmbilicus": true,
     "allConstructedCoordinatesFinite": true,
     "derivedSoftLandmarksLabeledByConfidence": true,
-    "unresolvedLandmarksHaveNoFabricatedGeometry": true
+    "unresolvedLandmarksHaveNoFabricatedGeometry": true,
+    "acceptedSpecializedAnchorsPreserveSurfaceProjection": true
   }
 }

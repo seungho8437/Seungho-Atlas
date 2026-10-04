@@ -11,6 +11,10 @@ on:
       - public/models/atlas.json
       - scripts/build-acupoint-resolution-pipeline.mjs
       - scripts/validate-acupoint-resolution-pipeline.mjs
+      - public/knowledge/acupoint-specialized-landmark-anchors.json
+      - scripts/construct-acupoint-derived-surface-landmarks.mjs
+      - scripts/resolve-acupoint-final-calibration-geometry.mjs
+      - scripts/validate-acupoint-final-calibration-geometry.mjs
       - .github/workflows/build-acupoint-resolution-pipeline.yml
   workflow_dispatch:
 
@@ -51,11 +55,15 @@ jobs:
         run: node scripts/validate-acupoint-derived-surface-landmarks.mjs
       - name: Validate specialized detector/manual anchor system
         run: node scripts/validate-acupoint-specialized-landmarks.mjs
+      - name: Resolve final WHO calibration geometry
+        run: node scripts/resolve-acupoint-final-calibration-geometry.mjs
+      - name: Validate final WHO calibration geometry
+        run: node scripts/validate-acupoint-final-calibration-geometry.mjs
       - name: Commit generated semantic layers
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/knowledge/acupoint-entity-resolution.json public/knowledge/acupoint-measurement-frames.json public/knowledge/acupoint-constraint-atoms.json public/knowledge/acupoint-solver-plans.json public/knowledge/acupoint-resolution-audit.json public/knowledge/acupoint-measurement-frame-bindings.json public/knowledge/acupoint-measurement-calibration-audit.json public/knowledge/acupoint-measurement-frame-disambiguation.json public/knowledge/acupoint-measurement-disambiguation-audit.json public/knowledge/acupoint-pregeometry-expert-review.json public/knowledge/acupoint-landmark-geometry.json public/knowledge/acupoint-landmark-geometry-audit.json public/knowledge/acupoint-derived-surface-landmarks.json public/knowledge/acupoint-derived-surface-landmarks-audit.json public/knowledge/acupoint-specialized-landmark-specs.json public/knowledge/acupoint-specialized-landmark-anchors.json public/knowledge/acupoint-specialized-landmark-anchor-audit.json
+          git add public/knowledge/acupoint-entity-resolution.json public/knowledge/acupoint-measurement-frames.json public/knowledge/acupoint-constraint-atoms.json public/knowledge/acupoint-solver-plans.json public/knowledge/acupoint-resolution-audit.json public/knowledge/acupoint-measurement-frame-bindings.json public/knowledge/acupoint-measurement-calibration-audit.json public/knowledge/acupoint-measurement-frame-disambiguation.json public/knowledge/acupoint-measurement-disambiguation-audit.json public/knowledge/acupoint-pregeometry-expert-review.json public/knowledge/acupoint-landmark-geometry.json public/knowledge/acupoint-landmark-geometry-audit.json public/knowledge/acupoint-derived-surface-landmarks.json public/knowledge/acupoint-derived-surface-landmarks-audit.json public/knowledge/acupoint-specialized-landmark-specs.json public/knowledge/acupoint-specialized-landmark-anchors.json public/knowledge/acupoint-specialized-landmark-anchor-audit.json public/knowledge/acupoint-final-calibration-geometry.json public/knowledge/acupoint-final-calibration-geometry-audit.json
           if git diff --cached --quiet; then
             echo "No generated changes."
           else

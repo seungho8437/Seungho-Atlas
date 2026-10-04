@@ -27,8 +27,13 @@ for(const a of anchors.records){
  assert.ok(Array.isArray(a.position)&&a.position.length===3&&a.position.every(Number.isFinite),a.landmarkId+': invalid position');
  assert.ok(a.modelRevision&&a.modelRevision===atlas.version,a.landmarkId+': model revision mismatch');
  assert.ok(a.surfaceProjection&&Number.isInteger(a.surfaceProjection.triangleIndex),a.landmarkId+': missing surface projection');
- assert.ok(Array.isArray(a.surfaceProjection.barycentric)&&a.surfaceProjection.barycentric.length===3,a.landmarkId+': invalid barycentric');
+ assert.ok(Array.isArray(a.surfaceProjection.barycentric)&&a.surfaceProjection.barycentric.length===3&&a.surfaceProjection.barycentric.every(Number.isFinite),a.landmarkId+': invalid barycentric');
+ const barySum=a.surfaceProjection.barycentric.reduce((s,v)=>s+v,0);
+ assert.ok(Math.abs(barySum-1)<=1e-6,a.landmarkId+': barycentric sum must equal 1');
+ assert.ok(a.surfaceProjection.barycentric.every(v=>v>=-1e-7&&v<=1+1e-7),a.landmarkId+': barycentric coordinate outside triangle');
  assert.ok(Number.isFinite(a.surfaceProjection.distance),a.landmarkId+': invalid surface distance');
+ const surfacePart=atlas.parts.find(p=>p.id===a.surfaceProjection.meshId);
+ assert.ok(surfacePart&&surfacePart.name==='Skin'&&surfacePart.system==='integumentary',a.landmarkId+': accepted anchor must project to canonical Skin mesh');
  if(a.reviewStatus==='accepted')assert.ok(a.surfaceProjection.distance<=specs.acceptancePolicy.positionTolerance.surfaceDistanceMaxModelUnits,a.landmarkId+': accepted anchor is too far from skin');
  assert.ok(Array.isArray(a.evidence?.views)&&a.evidence.views.length>=1,a.landmarkId+': missing evidence views');
  assert.ok(a.evidence?.definitionCheck===true,a.landmarkId+': definition check not confirmed');

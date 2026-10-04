@@ -6,6 +6,8 @@ const write=(p,v)=>fs.writeFileSync(new URL(p,root),JSON.stringify(v,null,2)+'\n
 
 const atlas=read('public/models/atlas.json');
 const prior=read('public/knowledge/acupoint-landmark-geometry.json');
+const specializedAnchors=read('public/knowledge/acupoint-specialized-landmark-anchors.json').records??[];
+const acceptedSpecialized=new Map(specializedAnchors.filter(x=>x.reviewStatus==='accepted').map(x=>[x.landmarkId,x]));
 const chunks=atlas.chunks.map(c=>fs.readFileSync(new URL('public/models/'+c.url.split('/').pop(),root)));
 
 const partsByConcept=new Map();
@@ -239,11 +241,11 @@ for(const [id,aspect] of [['anterior-axillary-fold','anterior'],['posterior-axil
  set({landmarkId:'glabella',status:p?'constructed-surface-geometry':'review-required',geometry:p?{type:'bone-guided-surface-point',position:p}:null,confidence:'moderate',construction:'inferomedial frontal-bone guided anterior surface projection'});
 }
 
-// Hairline and nipple/umbilicus are not identifiable from an unsegmented generic skin mesh
-// without introducing anthropometric guesses. Keep them explicitly gated rather than fabricate.
+// Soft landmarks remain gated unless an accepted model-revision-specific surface anchor exists.
 for(const id of ['midpoint-anterior-hairline','midpoint-posterior-hairline','left-anterior-hairline-corner','right-anterior-hairline-corner','left-nipple-center','right-nipple-center','umbilicus-center','radial-crease-proximal-interphalangeal-middle-finger','radial-crease-distal-interphalangeal-middle-finger']){
- const old=out.get(id);
- set({...old,status:'manual-or-specialized-detection-required',geometry:null,confidence:'unresolved',constructionNote:'Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates.'});
+ const old=out.get(id),anchor=acceptedSpecialized.get(id);
+ if(anchor)set({...old,status:'accepted-specialized-anchor',geometry:{type:'accepted-surface-anchor',position:anchor.position,surfaceProjection:anchor.surfaceProjection,method:anchor.method,side:anchor.side??null,detectorId:anchor.detectorId??null,detectorConfidence:anchor.detectorConfidence??null},confidence:anchor.detectorConfidence==='high'?'high':'reviewed',constructionNote:'Accepted by interactive landmark QC on the exact BodyParts3D model revision.'});
+ else set({...old,status:'manual-or-specialized-detection-required',geometry:null,confidence:'unresolved',constructionNote:'No accepted model-specific surface anchor is available; anthropometric fallback is prohibited.'});
 }
 
 const landmarks=[...out.values()].sort((a,b)=>a.landmarkId.localeCompare(b.landmarkId));
@@ -252,7 +254,7 @@ const audit={
  schemaVersion:1,
  landmarkCount:landmarks.length,
  statusCounts:statuses,
- resolvedOrConstructed:landmarks.filter(l=>['resolved-atlas-geometry','constructed-atlas-geometry','constructed-surface-geometry','constructed-surface-region'].includes(l.status)).length,
+ resolvedOrConstructed:landmarks.filter(l=>['resolved-atlas-geometry','constructed-atlas-geometry','constructed-surface-geometry','constructed-surface-region','accepted-specialized-anchor'].includes(l.status)).length,
  unresolved:landmarks.filter(l=>['review-required','manual-or-specialized-detection-required'].includes(l.status)).length,
  invariants:{
    noAnthropometricGuessForHairlineNippleUmbilicus:true,

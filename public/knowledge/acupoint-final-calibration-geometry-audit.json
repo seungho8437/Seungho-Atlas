@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "calibrationCount": 22,
+  "intervalCalibrationCount": 20,
+  "geometryReadyIntervalCount": 20,
+  "blockedIntervalCount": 0,
+  "methodDefinedCalibrationCount": 2,
+  "acceptedSpecializedAnchorCount": 9,
+  "invariants": {
+    "allNineSpecializedAnchorsAccepted": true,
+    "noGlobalBodyHeightFallback": true,
+    "allIntervalCalibrationsReady": true
+  }
+}

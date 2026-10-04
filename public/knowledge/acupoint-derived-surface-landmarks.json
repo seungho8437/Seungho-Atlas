@@ -330,15 +330,36 @@
     },
     {
       "landmarkId": "left-anterior-hairline-corner",
-      "status": "manual-or-specialized-detection-required",
-      "geometry": null,
+      "status": "accepted-specialized-anchor",
+      "geometry": {
+        "type": "accepted-surface-anchor",
+        "position": [
+          0.06798804320438002,
+          1.598425825309668,
+          0.015555116201117582
+        ],
+        "surfaceProjection": {
+          "meshId": "FJ2810",
+          "triangleIndex": 30226,
+          "barycentric": [
+            0.05810298546087583,
+            0.4252230057607666,
+            0.5166740087783576
+          ],
+          "distance": 0
+        },
+        "method": "specialized-detector+manual-confirmation",
+        "side": "left",
+        "detectorId": "bodyparts3d-hair-boundary:left-anterior-hairline-corner",
+        "detectorConfidence": "moderate"
+      },
       "definition": {
         "kind": "derived-soft-landmark",
         "construction": "hairline-corner",
         "side": "left"
       },
-      "confidence": "unresolved",
-      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+      "confidence": "reviewed",
+      "constructionNote": "Accepted by interactive landmark QC on the exact BodyParts3D model revision."
     },
     {
       "landmarkId": "left-mastoid-process",
@@ -381,8 +402,29 @@
     },
     {
       "landmarkId": "left-nipple-center",
-      "status": "manual-or-specialized-detection-required",
-      "geometry": null,
+      "status": "accepted-specialized-anchor",
+      "geometry": {
+        "type": "accepted-surface-anchor",
+        "position": [
+          0.10977442355309219,
+          1.2767360186136059,
+          0.11536354723471787
+        ],
+        "surfaceProjection": {
+          "meshId": "FJ2810",
+          "triangleIndex": 33603,
+          "barycentric": [
+            0.648707443554962,
+            0.0038186970275968096,
+            0.34747385941744113
+          ],
+          "distance": 0
+        },
+        "method": "manual-anchor",
+        "side": null,
+        "detectorId": null,
+        "detectorConfidence": null
+      },
       "definition": {
         "kind": "concept-or-surface-feature",
         "aliases": [
@@ -392,32 +434,74 @@
         "feature": "center",
         "side": "left"
       },
-      "confidence": "unresolved",
-      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+      "confidence": "reviewed",
+      "constructionNote": "Accepted by interactive landmark QC on the exact BodyParts3D model revision."
     },
     {
       "landmarkId": "midpoint-anterior-hairline",
-      "status": "manual-or-specialized-detection-required",
-      "geometry": null,
+      "status": "accepted-specialized-anchor",
+      "geometry": {
+        "type": "accepted-surface-anchor",
+        "position": [
+          -0.009164012649194517,
+          1.6745205481833698,
+          0.07034331032000371
+        ],
+        "surfaceProjection": {
+          "meshId": "FJ2810",
+          "triangleIndex": 21474,
+          "barycentric": [
+            0.021926231032425192,
+            0.8399101786159295,
+            0.1381635903516453
+          ],
+          "distance": 0
+        },
+        "method": "specialized-detector+manual-confirmation",
+        "side": null,
+        "detectorId": "bodyparts3d-hair-boundary:midpoint-anterior-hairline",
+        "detectorConfidence": "moderate"
+      },
       "definition": {
         "kind": "derived-soft-landmark",
         "construction": "hairline-midpoint",
         "reason": "Hairline is a surface landmark not reliably represented as a discrete BodyParts3D concept."
       },
-      "confidence": "unresolved",
-      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+      "confidence": "reviewed",
+      "constructionNote": "Accepted by interactive landmark QC on the exact BodyParts3D model revision."
     },
     {
       "landmarkId": "midpoint-posterior-hairline",
-      "status": "manual-or-specialized-detection-required",
-      "geometry": null,
+      "status": "accepted-specialized-anchor",
+      "geometry": {
+        "type": "accepted-surface-anchor",
+        "position": [
+          0.0021070081764764364,
+          1.5246969630538236,
+          -0.08412869774845701
+        ],
+        "surfaceProjection": {
+          "meshId": "FJ2810",
+          "triangleIndex": 23355,
+          "barycentric": [
+            0.8224434313798225,
+            0.08178291774110158,
+            0.09577365087907598
+          ],
+          "distance": 0
+        },
+        "method": "specialized-detector+manual-confirmation",
+        "side": null,
+        "detectorId": "bodyparts3d-hair-boundary:midpoint-posterior-hairline",
+        "detectorConfidence": "moderate"
+      },
       "definition": {
         "kind": "derived-soft-landmark",
         "construction": "hairline-midpoint",
         "reason": "Hairline is a surface landmark not reliably represented as a discrete BodyParts3D concept."
       },
-      "confidence": "unresolved",
-      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+      "confidence": "reviewed",
+      "constructionNote": "Accepted by interactive landmark QC on the exact BodyParts3D model revision."
     },
     {
       "landmarkId": "midpoint-xiphisternal-junction",
@@ -588,37 +672,100 @@
     },
     {
       "landmarkId": "radial-crease-distal-interphalangeal-middle-finger",
-      "status": "manual-or-specialized-detection-required",
-      "geometry": null,
+      "status": "accepted-specialized-anchor",
+      "geometry": {
+        "type": "accepted-surface-anchor",
+        "position": [
+          -0.2854897690729975,
+          0.7434988984833695,
+          0.0804561798712062
+        ],
+        "surfaceProjection": {
+          "meshId": "FJ2810",
+          "triangleIndex": 1330,
+          "barycentric": [
+            0.23092727914896427,
+            0.47628037821657043,
+            0.2927923426344653
+          ],
+          "distance": 0
+        },
+        "method": "specialized-detector+manual-confirmation",
+        "side": "right",
+        "detectorId": "middle-finger-dip-radial-joint-surface-local",
+        "detectorConfidence": "high"
+      },
       "definition": {
         "kind": "derived-soft-landmark",
         "construction": "finger-crease"
       },
-      "confidence": "unresolved",
-      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+      "confidence": "high",
+      "constructionNote": "Accepted by interactive landmark QC on the exact BodyParts3D model revision."
     },
     {
       "landmarkId": "radial-crease-proximal-interphalangeal-middle-finger",
-      "status": "manual-or-specialized-detection-required",
-      "geometry": null,
+      "status": "accepted-specialized-anchor",
+      "geometry": {
+        "type": "accepted-surface-anchor",
+        "position": [
+          -0.28376909764596087,
+          0.7645783552591559,
+          0.06177738657366204
+        ],
+        "surfaceProjection": {
+          "meshId": "FJ2810",
+          "triangleIndex": 1347,
+          "barycentric": [
+            0.46569156759666774,
+            0.1339868208379775,
+            0.4003216115653548
+          ],
+          "distance": 0
+        },
+        "method": "specialized-detector+manual-confirmation",
+        "side": "right",
+        "detectorId": "middle-finger-pip-radial-joint-surface-local",
+        "detectorConfidence": "high"
+      },
       "definition": {
         "kind": "derived-soft-landmark",
         "construction": "finger-crease"
       },
-      "confidence": "unresolved",
-      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+      "confidence": "high",
+      "constructionNote": "Accepted by interactive landmark QC on the exact BodyParts3D model revision."
     },
     {
       "landmarkId": "right-anterior-hairline-corner",
-      "status": "manual-or-specialized-detection-required",
-      "geometry": null,
+      "status": "accepted-specialized-anchor",
+      "geometry": {
+        "type": "accepted-surface-anchor",
+        "position": [
+          -0.06840076431877484,
+          1.6220149200583849,
+          0.01559719328974462
+        ],
+        "surfaceProjection": {
+          "meshId": "FJ2810",
+          "triangleIndex": 14239,
+          "barycentric": [
+            0.17385293957825287,
+            0.27153280459702955,
+            0.5546142558247176
+          ],
+          "distance": 0
+        },
+        "method": "specialized-detector+manual-confirmation",
+        "side": "right",
+        "detectorId": "bodyparts3d-hair-boundary:right-anterior-hairline-corner",
+        "detectorConfidence": "moderate"
+      },
       "definition": {
         "kind": "derived-soft-landmark",
         "construction": "hairline-corner",
         "side": "right"
       },
-      "confidence": "unresolved",
-      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+      "confidence": "reviewed",
+      "constructionNote": "Accepted by interactive landmark QC on the exact BodyParts3D model revision."
     },
     {
       "landmarkId": "right-mastoid-process",
@@ -661,8 +808,29 @@
     },
     {
       "landmarkId": "right-nipple-center",
-      "status": "manual-or-specialized-detection-required",
-      "geometry": null,
+      "status": "accepted-specialized-anchor",
+      "geometry": {
+        "type": "accepted-surface-anchor",
+        "position": [
+          -0.10464618912727613,
+          1.2737596856897986,
+          0.11730811699402821
+        ],
+        "surfaceProjection": {
+          "meshId": "FJ2810",
+          "triangleIndex": 11086,
+          "barycentric": [
+            0.32325402841514744,
+            0.46263805077474823,
+            0.21410792081010435
+          ],
+          "distance": 0
+        },
+        "method": "manual-anchor",
+        "side": null,
+        "detectorId": null,
+        "detectorConfidence": null
+      },
       "definition": {
         "kind": "concept-or-surface-feature",
         "aliases": [
@@ -672,8 +840,8 @@
         "feature": "center",
         "side": "right"
       },
-      "confidence": "unresolved",
-      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+      "confidence": "reviewed",
+      "constructionNote": "Accepted by interactive landmark QC on the exact BodyParts3D model revision."
     },
     {
       "landmarkId": "sole",
@@ -746,8 +914,29 @@
     },
     {
       "landmarkId": "umbilicus-center",
-      "status": "manual-or-specialized-detection-required",
-      "geometry": null,
+      "status": "accepted-specialized-anchor",
+      "geometry": {
+        "type": "accepted-surface-anchor",
+        "position": [
+          -0.00476730630196931,
+          1.039050298281352,
+          0.09756270902768799
+        ],
+        "surfaceProjection": {
+          "meshId": "FJ2810",
+          "triangleIndex": 21236,
+          "barycentric": [
+            0.26334359166574917,
+            0.5214837903356819,
+            0.21517261799856885
+          ],
+          "distance": 0
+        },
+        "method": "manual-anchor",
+        "side": null,
+        "detectorId": null,
+        "detectorConfidence": null
+      },
       "definition": {
         "kind": "concept-or-surface-feature",
         "aliases": [
@@ -756,8 +945,8 @@
         ],
         "feature": "center"
       },
-      "confidence": "unresolved",
-      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+      "confidence": "reviewed",
+      "constructionNote": "Accepted by interactive landmark QC on the exact BodyParts3D model revision."
     }
   ]
 }
