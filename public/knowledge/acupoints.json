@@ -1,17 +1,2135 @@
 [
   {
+    "id": "LU1",
+    "meridian": "LU",
+    "name": {
+      "ko": "중부",
+      "hanja": "中府",
+      "pinyin": "Zhongfu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LU2",
+    "meridian": "LU",
+    "name": {
+      "ko": "운문",
+      "hanja": "雲門",
+      "pinyin": "Yunmen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LU3",
+    "meridian": "LU",
+    "name": {
+      "ko": "천부",
+      "hanja": "天府",
+      "pinyin": "Tianfu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LU4",
+    "meridian": "LU",
+    "name": {
+      "ko": "협백",
+      "hanja": "俠白",
+      "pinyin": "Xiabai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LU5",
+    "meridian": "LU",
+    "name": {
+      "ko": "척택",
+      "hanja": "尺澤",
+      "pinyin": "Chize"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LU6",
+    "meridian": "LU",
+    "name": {
+      "ko": "공최",
+      "hanja": "孔最",
+      "pinyin": "Kongzui"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LU7",
+    "meridian": "LU",
+    "name": {
+      "ko": "렬결",
+      "hanja": "列缺",
+      "pinyin": "Lieque"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LU8",
+    "meridian": "LU",
+    "name": {
+      "ko": "경거",
+      "hanja": "經渠",
+      "pinyin": "Jingqu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LU9",
+    "meridian": "LU",
+    "name": {
+      "ko": "태연",
+      "hanja": "太淵",
+      "pinyin": "Taiyuan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LU10",
+    "meridian": "LU",
+    "name": {
+      "ko": "어제",
+      "hanja": "魚際",
+      "pinyin": "Yuji"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LU11",
+    "meridian": "LU",
+    "name": {
+      "ko": "소상",
+      "hanja": "少商",
+      "pinyin": "Shaoshang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI1",
+    "meridian": "LI",
+    "name": {
+      "ko": "상양",
+      "hanja": "商陽",
+      "pinyin": "Shangyang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI2",
+    "meridian": "LI",
+    "name": {
+      "ko": "이간",
+      "hanja": "二間",
+      "pinyin": "Erjian"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI3",
+    "meridian": "LI",
+    "name": {
+      "ko": "삼간",
+      "hanja": "三間",
+      "pinyin": "Sanjian"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI4",
+    "meridian": "LI",
+    "name": {
+      "ko": "합곡",
+      "hanja": "合谷",
+      "pinyin": "Hegu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI5",
+    "meridian": "LI",
+    "name": {
+      "ko": "양계",
+      "hanja": "陽谿",
+      "pinyin": "Yangxi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI6",
+    "meridian": "LI",
+    "name": {
+      "ko": "편력",
+      "hanja": "偏歷",
+      "pinyin": "Pianli"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI7",
+    "meridian": "LI",
+    "name": {
+      "ko": "온류",
+      "hanja": "溫溜",
+      "pinyin": "Wenliu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI8",
+    "meridian": "LI",
+    "name": {
+      "ko": "하렴",
+      "hanja": "下廉",
+      "pinyin": "Xialian"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI9",
+    "meridian": "LI",
+    "name": {
+      "ko": "상렴",
+      "hanja": "上廉",
+      "pinyin": "Shanglian"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI10",
+    "meridian": "LI",
+    "name": {
+      "ko": "수삼리",
+      "hanja": "手三里",
+      "pinyin": "Shousanli"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI11",
+    "meridian": "LI",
+    "name": {
+      "ko": "곡지",
+      "hanja": "曲池",
+      "pinyin": "Quchi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI12",
+    "meridian": "LI",
+    "name": {
+      "ko": "주료",
+      "hanja": "肘髎",
+      "pinyin": "Zhouliao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI13",
+    "meridian": "LI",
+    "name": {
+      "ko": "수오리",
+      "hanja": "手五里",
+      "pinyin": "Shouwuli"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI14",
+    "meridian": "LI",
+    "name": {
+      "ko": "비노",
+      "hanja": "臂臑",
+      "pinyin": "Binao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI15",
+    "meridian": "LI",
+    "name": {
+      "ko": "견우",
+      "hanja": "肩髃",
+      "pinyin": "Jianyu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI16",
+    "meridian": "LI",
+    "name": {
+      "ko": "거골",
+      "hanja": "巨骨",
+      "pinyin": "Jugu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI17",
+    "meridian": "LI",
+    "name": {
+      "ko": "천정",
+      "hanja": "天鼎",
+      "pinyin": "Tianding"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI18",
+    "meridian": "LI",
+    "name": {
+      "ko": "부돌",
+      "hanja": "扶突",
+      "pinyin": "Futu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI19",
+    "meridian": "LI",
+    "name": {
+      "ko": "구화료",
+      "hanja": "口禾髎",
+      "pinyin": "Kouheliao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LI20",
+    "meridian": "LI",
+    "name": {
+      "ko": "영향",
+      "hanja": "迎香",
+      "pinyin": "Yingxiang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST1",
+    "meridian": "ST",
+    "name": {
+      "ko": "승읍",
+      "hanja": "承泣",
+      "pinyin": "Chengqi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST2",
+    "meridian": "ST",
+    "name": {
+      "ko": "사백",
+      "hanja": "四白",
+      "pinyin": "Sibai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST3",
+    "meridian": "ST",
+    "name": {
+      "ko": "거료",
+      "hanja": "巨髎",
+      "pinyin": "Juliao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST4",
+    "meridian": "ST",
+    "name": {
+      "ko": "지창",
+      "hanja": "地倉",
+      "pinyin": "Dicang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST5",
+    "meridian": "ST",
+    "name": {
+      "ko": "대영",
+      "hanja": "大迎",
+      "pinyin": "Daying"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST6",
+    "meridian": "ST",
+    "name": {
+      "ko": "협거",
+      "hanja": "頰車",
+      "pinyin": "Jiache"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST7",
+    "meridian": "ST",
+    "name": {
+      "ko": "하관",
+      "hanja": "下關",
+      "pinyin": "Xiaguan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST8",
+    "meridian": "ST",
+    "name": {
+      "ko": "두유",
+      "hanja": "頭維",
+      "pinyin": "Touwei"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST9",
+    "meridian": "ST",
+    "name": {
+      "ko": "인영",
+      "hanja": "人迎",
+      "pinyin": "Renying"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST10",
+    "meridian": "ST",
+    "name": {
+      "ko": "수돌",
+      "hanja": "水突",
+      "pinyin": "Shuitu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST11",
+    "meridian": "ST",
+    "name": {
+      "ko": "기사",
+      "hanja": "氣舍",
+      "pinyin": "Qishe"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST12",
+    "meridian": "ST",
+    "name": {
+      "ko": "결분",
+      "hanja": "缺盆",
+      "pinyin": "Quepen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST13",
+    "meridian": "ST",
+    "name": {
+      "ko": "기호",
+      "hanja": "氣戶",
+      "pinyin": "Qihu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST14",
+    "meridian": "ST",
+    "name": {
+      "ko": "고방",
+      "hanja": "庫房",
+      "pinyin": "Kufang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST15",
+    "meridian": "ST",
+    "name": {
+      "ko": "옥예",
+      "hanja": "屋翳",
+      "pinyin": "Wuyi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST16",
+    "meridian": "ST",
+    "name": {
+      "ko": "응창",
+      "hanja": "膺窗",
+      "pinyin": "Yingchuang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST17",
+    "meridian": "ST",
+    "name": {
+      "ko": "중",
+      "hanja": "中",
+      "pinyin": "Ruzhong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST18",
+    "meridian": "ST",
+    "name": {
+      "ko": "근",
+      "hanja": "根",
+      "pinyin": "Rugen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST19",
+    "meridian": "ST",
+    "name": {
+      "ko": "부용",
+      "hanja": "不容",
+      "pinyin": "Burong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST20",
+    "meridian": "ST",
+    "name": {
+      "ko": "승만",
+      "hanja": "承滿",
+      "pinyin": "Chengman"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST21",
+    "meridian": "ST",
+    "name": {
+      "ko": "량문",
+      "hanja": "梁門",
+      "pinyin": "Liangmen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST22",
+    "meridian": "ST",
+    "name": {
+      "ko": "관문",
+      "hanja": "關門",
+      "pinyin": "Guanmen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST23",
+    "meridian": "ST",
+    "name": {
+      "ko": "태을",
+      "hanja": "太乙",
+      "pinyin": "Taiyi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST24",
+    "meridian": "ST",
+    "name": {
+      "ko": "골육문",
+      "hanja": "滑肉門",
+      "pinyin": "Huaroumen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST25",
+    "meridian": "ST",
+    "name": {
+      "ko": "천추",
+      "hanja": "天樞",
+      "pinyin": "Tianshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST26",
+    "meridian": "ST",
+    "name": {
+      "ko": "외능",
+      "hanja": "外陵",
+      "pinyin": "Wailing"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST27",
+    "meridian": "ST",
+    "name": {
+      "ko": "대거",
+      "hanja": "大巨",
+      "pinyin": "Daju"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST28",
+    "meridian": "ST",
+    "name": {
+      "ko": "수도",
+      "hanja": "水道",
+      "pinyin": "Shuidao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST29",
+    "meridian": "ST",
+    "name": {
+      "ko": "귀내",
+      "hanja": "歸來",
+      "pinyin": "Guilai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST30",
+    "meridian": "ST",
+    "name": {
+      "ko": "기충",
+      "hanja": "氣衝",
+      "pinyin": "Qichong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST31",
+    "meridian": "ST",
+    "name": {
+      "ko": "비관",
+      "hanja": "髀關",
+      "pinyin": "Biguan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST32",
+    "meridian": "ST",
+    "name": {
+      "ko": "복토",
+      "hanja": "伏兎",
+      "pinyin": "Futu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST33",
+    "meridian": "ST",
+    "name": {
+      "ko": "음시",
+      "hanja": "陰市",
+      "pinyin": "Yinshi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST34",
+    "meridian": "ST",
+    "name": {
+      "ko": "량구",
+      "hanja": "梁丘",
+      "pinyin": "Liangqiu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST35",
+    "meridian": "ST",
+    "name": {
+      "ko": "독비",
+      "hanja": "犢鼻",
+      "pinyin": "Dubi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
     "id": "ST36",
     "meridian": "ST",
     "name": {
       "ko": "족삼리",
       "hanja": "足三里",
-      "pinyin": "Zúsānlǐ",
-      "en": "Zusanli"
+      "pinyin": "Zusanli"
     },
     "locationKo": "아래다리 앞쪽에서 ST35와 ST41을 잇는 선 위에 있으며, ST35에서 아래쪽으로 3 B-cun 떨어진 위치로 표준화되어 있다.",
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_2008"
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST37",
+    "meridian": "ST",
+    "name": {
+      "ko": "상거허",
+      "hanja": "上巨虛",
+      "pinyin": "Shangjuxu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST38",
+    "meridian": "ST",
+    "name": {
+      "ko": "조구",
+      "hanja": "條口",
+      "pinyin": "Tiaokou"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST39",
+    "meridian": "ST",
+    "name": {
+      "ko": "하거허",
+      "hanja": "下巨虛",
+      "pinyin": "Xiajuxu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST40",
+    "meridian": "ST",
+    "name": {
+      "ko": "풍륭",
+      "hanja": "豐隆",
+      "pinyin": "Fenglong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST41",
+    "meridian": "ST",
+    "name": {
+      "ko": "해계",
+      "hanja": "解谿",
+      "pinyin": "Jiexi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST42",
+    "meridian": "ST",
+    "name": {
+      "ko": "충양",
+      "hanja": "衝陽",
+      "pinyin": "Chongyang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST43",
+    "meridian": "ST",
+    "name": {
+      "ko": "함곡",
+      "hanja": "陷谷",
+      "pinyin": "Xiangu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST44",
+    "meridian": "ST",
+    "name": {
+      "ko": "내정",
+      "hanja": "内庭",
+      "pinyin": "Neiting"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "ST45",
+    "meridian": "ST",
+    "name": {
+      "ko": "려태",
+      "hanja": "厲兌",
+      "pinyin": "Lidui"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP1",
+    "meridian": "SP",
+    "name": {
+      "ko": "은백",
+      "hanja": "隱白",
+      "pinyin": "Yinbai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP2",
+    "meridian": "SP",
+    "name": {
+      "ko": "대도",
+      "hanja": "大都",
+      "pinyin": "Dadu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP3",
+    "meridian": "SP",
+    "name": {
+      "ko": "태백",
+      "hanja": "太白",
+      "pinyin": "Taibai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP4",
+    "meridian": "SP",
+    "name": {
+      "ko": "공손",
+      "hanja": "公孫",
+      "pinyin": "Gongsun"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP5",
+    "meridian": "SP",
+    "name": {
+      "ko": "상구",
+      "hanja": "商丘",
+      "pinyin": "Shangqiu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP6",
+    "meridian": "SP",
+    "name": {
+      "ko": "삼음교",
+      "hanja": "三陰交",
+      "pinyin": "Sanyinjiao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP7",
+    "meridian": "SP",
+    "name": {
+      "ko": "누곡",
+      "hanja": "漏谷",
+      "pinyin": "Lougu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP8",
+    "meridian": "SP",
+    "name": {
+      "ko": "지기",
+      "hanja": "地機",
+      "pinyin": "Diji"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP9",
+    "meridian": "SP",
+    "name": {
+      "ko": "음능천",
+      "hanja": "陰陵泉",
+      "pinyin": "Yinlingquan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP10",
+    "meridian": "SP",
+    "name": {
+      "ko": "혈해",
+      "hanja": "血海",
+      "pinyin": "Xuehai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP11",
+    "meridian": "SP",
+    "name": {
+      "ko": "기문",
+      "hanja": "箕門",
+      "pinyin": "Jimen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP12",
+    "meridian": "SP",
+    "name": {
+      "ko": "충문",
+      "hanja": "衝門",
+      "pinyin": "Chongmen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP13",
+    "meridian": "SP",
+    "name": {
+      "ko": "부사",
+      "hanja": "府舍",
+      "pinyin": "Fushe"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP14",
+    "meridian": "SP",
+    "name": {
+      "ko": "복결",
+      "hanja": "腹結",
+      "pinyin": "Fujie"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP15",
+    "meridian": "SP",
+    "name": {
+      "ko": "대횡",
+      "hanja": "大橫",
+      "pinyin": "Daheng"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP16",
+    "meridian": "SP",
+    "name": {
+      "ko": "복애",
+      "hanja": "腹哀",
+      "pinyin": "Fuai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP17",
+    "meridian": "SP",
+    "name": {
+      "ko": "식두",
+      "hanja": "食竇",
+      "pinyin": "Shidou"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP18",
+    "meridian": "SP",
+    "name": {
+      "ko": "천계",
+      "hanja": "天谿",
+      "pinyin": "Tianxi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP19",
+    "meridian": "SP",
+    "name": {
+      "ko": "흉향",
+      "hanja": "胸鄉",
+      "pinyin": "Xiongxiang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP20",
+    "meridian": "SP",
+    "name": {
+      "ko": "주영",
+      "hanja": "周榮",
+      "pinyin": "Zhourong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SP21",
+    "meridian": "SP",
+    "name": {
+      "ko": "대포",
+      "hanja": "大包",
+      "pinyin": "Dabao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "HT1",
+    "meridian": "HT",
+    "name": {
+      "ko": "극천",
+      "hanja": "極泉",
+      "pinyin": "Jiquan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "HT2",
+    "meridian": "HT",
+    "name": {
+      "ko": "청령",
+      "hanja": "靑靈",
+      "pinyin": "Qingling"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "HT3",
+    "meridian": "HT",
+    "name": {
+      "ko": "소해",
+      "hanja": "少海",
+      "pinyin": "Shaohai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "HT4",
+    "meridian": "HT",
+    "name": {
+      "ko": "령도",
+      "hanja": "靈道",
+      "pinyin": "Lingdao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "HT5",
+    "meridian": "HT",
+    "name": {
+      "ko": "통리",
+      "hanja": "通里",
+      "pinyin": "Tongli"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "HT6",
+    "meridian": "HT",
+    "name": {
+      "ko": "음극",
+      "hanja": "陰郄",
+      "pinyin": "Yinxi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "HT7",
+    "meridian": "HT",
+    "name": {
+      "ko": "신문",
+      "hanja": "神門",
+      "pinyin": "Shenmen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "HT8",
+    "meridian": "HT",
+    "name": {
+      "ko": "소부",
+      "hanja": "少府",
+      "pinyin": "Shaofu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "HT9",
+    "meridian": "HT",
+    "name": {
+      "ko": "소충",
+      "hanja": "少衝",
+      "pinyin": "Shaochong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI1",
+    "meridian": "SI",
+    "name": {
+      "ko": "소택",
+      "hanja": "少澤",
+      "pinyin": "Shaoze"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI2",
+    "meridian": "SI",
+    "name": {
+      "ko": "전곡",
+      "hanja": "前谷",
+      "pinyin": "Qiangu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI3",
+    "meridian": "SI",
+    "name": {
+      "ko": "후계",
+      "hanja": "後谿",
+      "pinyin": "Houxi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI4",
+    "meridian": "SI",
+    "name": {
+      "ko": "완골",
+      "hanja": "腕骨",
+      "pinyin": "Wangu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI5",
+    "meridian": "SI",
+    "name": {
+      "ko": "양곡",
+      "hanja": "陽谷",
+      "pinyin": "Yanggu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI6",
+    "meridian": "SI",
+    "name": {
+      "ko": "양노",
+      "hanja": "養老",
+      "pinyin": "Yanglao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI7",
+    "meridian": "SI",
+    "name": {
+      "ko": "지정",
+      "hanja": "支正",
+      "pinyin": "Zhizheng"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI8",
+    "meridian": "SI",
+    "name": {
+      "ko": "소해",
+      "hanja": "小海",
+      "pinyin": "Xiaohai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI9",
+    "meridian": "SI",
+    "name": {
+      "ko": "견정",
+      "hanja": "肩貞",
+      "pinyin": "Jianzhen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI10",
+    "meridian": "SI",
+    "name": {
+      "ko": "노유",
+      "hanja": "臑兪",
+      "pinyin": "Naoshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI11",
+    "meridian": "SI",
+    "name": {
+      "ko": "천종",
+      "hanja": "天宗",
+      "pinyin": "Tianzong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI12",
+    "meridian": "SI",
+    "name": {
+      "ko": "병풍",
+      "hanja": "秉風",
+      "pinyin": "Bingfeng"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI13",
+    "meridian": "SI",
+    "name": {
+      "ko": "곡원",
+      "hanja": "曲垣",
+      "pinyin": "Quyuan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI14",
+    "meridian": "SI",
+    "name": {
+      "ko": "견외유",
+      "hanja": "肩外兪",
+      "pinyin": "Jianwaishu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI15",
+    "meridian": "SI",
+    "name": {
+      "ko": "견중유",
+      "hanja": "肩中兪",
+      "pinyin": "Jianzhongshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI16",
+    "meridian": "SI",
+    "name": {
+      "ko": "천창",
+      "hanja": "天窗",
+      "pinyin": "Tianchuang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI17",
+    "meridian": "SI",
+    "name": {
+      "ko": "천용",
+      "hanja": "天容",
+      "pinyin": "Tianrong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI18",
+    "meridian": "SI",
+    "name": {
+      "ko": "관료",
+      "hanja": "顴髎",
+      "pinyin": "Quanliao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "SI19",
+    "meridian": "SI",
+    "name": {
+      "ko": "청궁",
+      "hanja": "聽宮",
+      "pinyin": "Tinggong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL1",
+    "meridian": "BL",
+    "name": {
+      "ko": "정명",
+      "hanja": "睛明",
+      "pinyin": "Jingming"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL2",
+    "meridian": "BL",
+    "name": {
+      "ko": "찬죽",
+      "hanja": "攢竹",
+      "pinyin": "Zanzhu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL3",
+    "meridian": "BL",
+    "name": {
+      "ko": "미충",
+      "hanja": "眉衝",
+      "pinyin": "Meichong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL4",
+    "meridian": "BL",
+    "name": {
+      "ko": "곡차",
+      "hanja": "曲差",
+      "pinyin": "Qucha"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL5",
+    "meridian": "BL",
+    "name": {
+      "ko": "오처",
+      "hanja": "五處",
+      "pinyin": "Wuchu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL6",
+    "meridian": "BL",
+    "name": {
+      "ko": "승광",
+      "hanja": "承光",
+      "pinyin": "Chengguang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL7",
+    "meridian": "BL",
+    "name": {
+      "ko": "통천",
+      "hanja": "通天",
+      "pinyin": "Tongtian"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL8",
+    "meridian": "BL",
+    "name": {
+      "ko": "락각",
+      "hanja": "絡卻",
+      "pinyin": "Luoque"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL9",
+    "meridian": "BL",
+    "name": {
+      "ko": "옥침",
+      "hanja": "玉枕",
+      "pinyin": "Yuzhen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL10",
+    "meridian": "BL",
+    "name": {
+      "ko": "천주",
+      "hanja": "天柱",
+      "pinyin": "Tianzhu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL11",
+    "meridian": "BL",
+    "name": {
+      "ko": "대저",
+      "hanja": "大杼",
+      "pinyin": "Dazhu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL12",
+    "meridian": "BL",
+    "name": {
+      "ko": "풍문",
+      "hanja": "風門",
+      "pinyin": "Fengmen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL13",
+    "meridian": "BL",
+    "name": {
+      "ko": "폐유",
+      "hanja": "肺兪",
+      "pinyin": "Feishu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL14",
+    "meridian": "BL",
+    "name": {
+      "ko": "궐음유",
+      "hanja": "厥陰兪",
+      "pinyin": "Jueyinshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL15",
+    "meridian": "BL",
+    "name": {
+      "ko": "심유",
+      "hanja": "心兪",
+      "pinyin": "Xinshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL16",
+    "meridian": "BL",
+    "name": {
+      "ko": "독유",
+      "hanja": "督兪",
+      "pinyin": "Dushu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL17",
+    "meridian": "BL",
+    "name": {
+      "ko": "격유",
+      "hanja": "膈兪",
+      "pinyin": "Geshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL18",
+    "meridian": "BL",
+    "name": {
+      "ko": "간유",
+      "hanja": "肝兪",
+      "pinyin": "Ganshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL19",
+    "meridian": "BL",
+    "name": {
+      "ko": "담유",
+      "hanja": "膽兪",
+      "pinyin": "Danshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL20",
+    "meridian": "BL",
+    "name": {
+      "ko": "비유",
+      "hanja": "脾兪",
+      "pinyin": "Pishu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL21",
+    "meridian": "BL",
+    "name": {
+      "ko": "위유",
+      "hanja": "胃兪",
+      "pinyin": "Weishu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL22",
+    "meridian": "BL",
+    "name": {
+      "ko": "삼초유",
+      "hanja": "三焦兪",
+      "pinyin": "Sanjiaoshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL23",
+    "meridian": "BL",
+    "name": {
+      "ko": "신유",
+      "hanja": "腎兪",
+      "pinyin": "Shenshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL24",
+    "meridian": "BL",
+    "name": {
+      "ko": "기해유",
+      "hanja": "氣海兪",
+      "pinyin": "Qihaishu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL25",
+    "meridian": "BL",
+    "name": {
+      "ko": "대장유",
+      "hanja": "大腸兪",
+      "pinyin": "Dachangshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL26",
+    "meridian": "BL",
+    "name": {
+      "ko": "관원유",
+      "hanja": "關元兪",
+      "pinyin": "Guanyuanshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL27",
+    "meridian": "BL",
+    "name": {
+      "ko": "소장유",
+      "hanja": "小腸兪",
+      "pinyin": "Xiaochangshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL28",
+    "meridian": "BL",
+    "name": {
+      "ko": "방광유",
+      "hanja": "膀胱兪",
+      "pinyin": "Pangguangshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL29",
+    "meridian": "BL",
+    "name": {
+      "ko": "중려유",
+      "hanja": "中膂兪",
+      "pinyin": "Zhonglushu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL30",
+    "meridian": "BL",
+    "name": {
+      "ko": "백환유",
+      "hanja": "白環兪",
+      "pinyin": "Baihuanshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL31",
+    "meridian": "BL",
+    "name": {
+      "ko": "상료",
+      "hanja": "上髎",
+      "pinyin": "Shangliao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL32",
+    "meridian": "BL",
+    "name": {
+      "ko": "차료",
+      "hanja": "次髎",
+      "pinyin": "Chiliao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL33",
+    "meridian": "BL",
+    "name": {
+      "ko": "중료",
+      "hanja": "中髎",
+      "pinyin": "Zhongliao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL34",
+    "meridian": "BL",
+    "name": {
+      "ko": "하료",
+      "hanja": "下髎",
+      "pinyin": "Xialiao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL35",
+    "meridian": "BL",
+    "name": {
+      "ko": "회양",
+      "hanja": "會陽",
+      "pinyin": "Huiyang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL36",
+    "meridian": "BL",
+    "name": {
+      "ko": "승부",
+      "hanja": "承扶",
+      "pinyin": "Chengfu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL37",
+    "meridian": "BL",
+    "name": {
+      "ko": "은문",
+      "hanja": "殷門",
+      "pinyin": "Yinmen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL38",
+    "meridian": "BL",
+    "name": {
+      "ko": "극",
+      "hanja": "郄",
+      "pinyin": "Fuxi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL39",
+    "meridian": "BL",
+    "name": {
+      "ko": "위양",
+      "hanja": "委陽",
+      "pinyin": "Weiyang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
     ]
   },
   {
@@ -20,13 +2138,2560 @@
     "name": {
       "ko": "위중",
       "hanja": "委中",
-      "pinyin": "Wěizhōng",
-      "en": "Weizhong"
+      "pinyin": "Weizhong"
     },
     "locationKo": "무릎 뒤쪽에서 오금주름의 가운데에 위치한다.",
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_2008"
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL41",
+    "meridian": "BL",
+    "name": {
+      "ko": "부분",
+      "hanja": "附分",
+      "pinyin": "Fufen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL42",
+    "meridian": "BL",
+    "name": {
+      "ko": "백호",
+      "hanja": "魄户",
+      "pinyin": "Pohu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL43",
+    "meridian": "BL",
+    "name": {
+      "ko": "고황",
+      "hanja": "膏肓",
+      "pinyin": "Gaohuang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL44",
+    "meridian": "BL",
+    "name": {
+      "ko": "신당",
+      "hanja": "神堂",
+      "pinyin": "Shentang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL45",
+    "meridian": "BL",
+    "name": {
+      "ko": "의희",
+      "hanja": "譩譆",
+      "pinyin": "Yixi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL46",
+    "meridian": "BL",
+    "name": {
+      "ko": "격관",
+      "hanja": "膈關",
+      "pinyin": "Geguan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL47",
+    "meridian": "BL",
+    "name": {
+      "ko": "혼문",
+      "hanja": "魂門",
+      "pinyin": "Hunmen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL48",
+    "meridian": "BL",
+    "name": {
+      "ko": "양강",
+      "hanja": "陽綱",
+      "pinyin": "Yanggang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL49",
+    "meridian": "BL",
+    "name": {
+      "ko": "의사",
+      "hanja": "意舍",
+      "pinyin": "Yishe"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL50",
+    "meridian": "BL",
+    "name": {
+      "ko": "위창",
+      "hanja": "胃倉",
+      "pinyin": "Weicang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL51",
+    "meridian": "BL",
+    "name": {
+      "ko": "황문",
+      "hanja": "肓門",
+      "pinyin": "Huangmen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL52",
+    "meridian": "BL",
+    "name": {
+      "ko": "지실",
+      "hanja": "志室",
+      "pinyin": "Zhishi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL53",
+    "meridian": "BL",
+    "name": {
+      "ko": "포황",
+      "hanja": "胞肓",
+      "pinyin": "Baohuang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL54",
+    "meridian": "BL",
+    "name": {
+      "ko": "질변",
+      "hanja": "秩邊",
+      "pinyin": "Zhibian"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL55",
+    "meridian": "BL",
+    "name": {
+      "ko": "합양",
+      "hanja": "合陽",
+      "pinyin": "Heyang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL56",
+    "meridian": "BL",
+    "name": {
+      "ko": "승근",
+      "hanja": "承筋",
+      "pinyin": "Chengjin"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL57",
+    "meridian": "BL",
+    "name": {
+      "ko": "승산",
+      "hanja": "承山",
+      "pinyin": "Chengshan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL58",
+    "meridian": "BL",
+    "name": {
+      "ko": "비양",
+      "hanja": "飛揚",
+      "pinyin": "Feiyang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL59",
+    "meridian": "BL",
+    "name": {
+      "ko": "부양",
+      "hanja": "跗陽",
+      "pinyin": "Fuyang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL60",
+    "meridian": "BL",
+    "name": {
+      "ko": "곤륜",
+      "hanja": "崑崙",
+      "pinyin": "Kunlun"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL61",
+    "meridian": "BL",
+    "name": {
+      "ko": "복삼",
+      "hanja": "僕參",
+      "pinyin": "Pucan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL62",
+    "meridian": "BL",
+    "name": {
+      "ko": "신맥",
+      "hanja": "申脈",
+      "pinyin": "Shenmai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL63",
+    "meridian": "BL",
+    "name": {
+      "ko": "금문",
+      "hanja": "金門",
+      "pinyin": "Jinmen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL64",
+    "meridian": "BL",
+    "name": {
+      "ko": "경골",
+      "hanja": "京骨",
+      "pinyin": "Jinggu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL65",
+    "meridian": "BL",
+    "name": {
+      "ko": "속골",
+      "hanja": "束骨",
+      "pinyin": "Shugu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL66",
+    "meridian": "BL",
+    "name": {
+      "ko": "족통곡",
+      "hanja": "足通谷",
+      "pinyin": "Zutonggu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "BL67",
+    "meridian": "BL",
+    "name": {
+      "ko": "지음",
+      "hanja": "至陰",
+      "pinyin": "Zhiyin"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI1",
+    "meridian": "KI",
+    "name": {
+      "ko": "용천",
+      "hanja": "湧泉",
+      "pinyin": "Yongquan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI2",
+    "meridian": "KI",
+    "name": {
+      "ko": "연곡",
+      "hanja": "然谷",
+      "pinyin": "Rangu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI3",
+    "meridian": "KI",
+    "name": {
+      "ko": "태계",
+      "hanja": "太谿",
+      "pinyin": "Taixi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI4",
+    "meridian": "KI",
+    "name": {
+      "ko": "대종",
+      "hanja": "大鍾",
+      "pinyin": "Dazhong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI5",
+    "meridian": "KI",
+    "name": {
+      "ko": "수천",
+      "hanja": "水泉",
+      "pinyin": "Shuiquan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI6",
+    "meridian": "KI",
+    "name": {
+      "ko": "조해",
+      "hanja": "照海",
+      "pinyin": "Zhaohai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI7",
+    "meridian": "KI",
+    "name": {
+      "ko": "복류",
+      "hanja": "復溜",
+      "pinyin": "Fuliu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI8",
+    "meridian": "KI",
+    "name": {
+      "ko": "교신",
+      "hanja": "交信",
+      "pinyin": "Jiaoxin"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI9",
+    "meridian": "KI",
+    "name": {
+      "ko": "축빈",
+      "hanja": "築賓",
+      "pinyin": "Zhubin"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI10",
+    "meridian": "KI",
+    "name": {
+      "ko": "음곡",
+      "hanja": "陰谷",
+      "pinyin": "Yingu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI11",
+    "meridian": "KI",
+    "name": {
+      "ko": "횡골",
+      "hanja": "橫骨",
+      "pinyin": "Henggu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI12",
+    "meridian": "KI",
+    "name": {
+      "ko": "대혁",
+      "hanja": "大赫",
+      "pinyin": "Dahe"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI13",
+    "meridian": "KI",
+    "name": {
+      "ko": "기혈",
+      "hanja": "氣穴",
+      "pinyin": "Qixue"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI14",
+    "meridian": "KI",
+    "name": {
+      "ko": "사만",
+      "hanja": "四滿",
+      "pinyin": "Siman"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI15",
+    "meridian": "KI",
+    "name": {
+      "ko": "중주",
+      "hanja": "中注",
+      "pinyin": "Zhongzhu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI16",
+    "meridian": "KI",
+    "name": {
+      "ko": "황유",
+      "hanja": "肓兪",
+      "pinyin": "Huangshu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI17",
+    "meridian": "KI",
+    "name": {
+      "ko": "상곡",
+      "hanja": "商曲",
+      "pinyin": "Shangqu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI18",
+    "meridian": "KI",
+    "name": {
+      "ko": "석관",
+      "hanja": "石關",
+      "pinyin": "Shiguan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI19",
+    "meridian": "KI",
+    "name": {
+      "ko": "음도",
+      "hanja": "陰都",
+      "pinyin": "Yindu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI20",
+    "meridian": "KI",
+    "name": {
+      "ko": "복통곡",
+      "hanja": "腹通谷",
+      "pinyin": "Futonggu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI21",
+    "meridian": "KI",
+    "name": {
+      "ko": "유문",
+      "hanja": "幽門",
+      "pinyin": "Youmen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI22",
+    "meridian": "KI",
+    "name": {
+      "ko": "보낭",
+      "hanja": "步廊",
+      "pinyin": "Bulang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI23",
+    "meridian": "KI",
+    "name": {
+      "ko": "신봉",
+      "hanja": "神封",
+      "pinyin": "Shengfeng"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI24",
+    "meridian": "KI",
+    "name": {
+      "ko": "령허",
+      "hanja": "靈墟",
+      "pinyin": "Lingxu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI25",
+    "meridian": "KI",
+    "name": {
+      "ko": "신장",
+      "hanja": "神藏",
+      "pinyin": "Shencang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI26",
+    "meridian": "KI",
+    "name": {
+      "ko": "욱중",
+      "hanja": "彧中",
+      "pinyin": "Yuzhong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "KI27",
+    "meridian": "KI",
+    "name": {
+      "ko": "유부",
+      "hanja": "兪府",
+      "pinyin": "Shufu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "PC1",
+    "meridian": "PC",
+    "name": {
+      "ko": "천지",
+      "hanja": "天池",
+      "pinyin": "Tianchi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "PC2",
+    "meridian": "PC",
+    "name": {
+      "ko": "천천",
+      "hanja": "天泉",
+      "pinyin": "Tianquan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "PC3",
+    "meridian": "PC",
+    "name": {
+      "ko": "곡택",
+      "hanja": "曲澤",
+      "pinyin": "Quze"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "PC4",
+    "meridian": "PC",
+    "name": {
+      "ko": "극문",
+      "hanja": "郄門",
+      "pinyin": "Ximen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "PC5",
+    "meridian": "PC",
+    "name": {
+      "ko": "간사",
+      "hanja": "間使",
+      "pinyin": "Jianshi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "PC6",
+    "meridian": "PC",
+    "name": {
+      "ko": "내관",
+      "hanja": "內關",
+      "pinyin": "Neiguan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "PC7",
+    "meridian": "PC",
+    "name": {
+      "ko": "대능",
+      "hanja": "大陵",
+      "pinyin": "Daling"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "PC8",
+    "meridian": "PC",
+    "name": {
+      "ko": "노궁",
+      "hanja": "勞宮",
+      "pinyin": "Laogong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "PC9",
+    "meridian": "PC",
+    "name": {
+      "ko": "중충",
+      "hanja": "中衝",
+      "pinyin": "Zhongchong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE1",
+    "meridian": "TE",
+    "name": {
+      "ko": "관충",
+      "hanja": "關衝",
+      "pinyin": "Guanchong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE2",
+    "meridian": "TE",
+    "name": {
+      "ko": "액문",
+      "hanja": "液門",
+      "pinyin": "Yemen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE3",
+    "meridian": "TE",
+    "name": {
+      "ko": "중저",
+      "hanja": "中渚",
+      "pinyin": "Zhongzhu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE4",
+    "meridian": "TE",
+    "name": {
+      "ko": "양지",
+      "hanja": "陽池",
+      "pinyin": "Yangchi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE5",
+    "meridian": "TE",
+    "name": {
+      "ko": "외관",
+      "hanja": "外關",
+      "pinyin": "Waiguan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE6",
+    "meridian": "TE",
+    "name": {
+      "ko": "지구",
+      "hanja": "支溝",
+      "pinyin": "Zhigou"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE7",
+    "meridian": "TE",
+    "name": {
+      "ko": "회종",
+      "hanja": "會宗",
+      "pinyin": "Huizong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE8",
+    "meridian": "TE",
+    "name": {
+      "ko": "삼양락",
+      "hanja": "三陽絡",
+      "pinyin": "Sanyangluo"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE9",
+    "meridian": "TE",
+    "name": {
+      "ko": "사독",
+      "hanja": "四瀆",
+      "pinyin": "Sidu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE10",
+    "meridian": "TE",
+    "name": {
+      "ko": "천정",
+      "hanja": "天井",
+      "pinyin": "Tianjing"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE11",
+    "meridian": "TE",
+    "name": {
+      "ko": "청냉연",
+      "hanja": "淸冷淵",
+      "pinyin": "Qinglengyuan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE12",
+    "meridian": "TE",
+    "name": {
+      "ko": "소락",
+      "hanja": "消濼",
+      "pinyin": "Xiaoluo"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE13",
+    "meridian": "TE",
+    "name": {
+      "ko": "노회",
+      "hanja": "臑會",
+      "pinyin": "Naohui"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE14",
+    "meridian": "TE",
+    "name": {
+      "ko": "견료",
+      "hanja": "肩髎",
+      "pinyin": "Jianliao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE15",
+    "meridian": "TE",
+    "name": {
+      "ko": "천료",
+      "hanja": "天髎",
+      "pinyin": "Tianliao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE16",
+    "meridian": "TE",
+    "name": {
+      "ko": "천유",
+      "hanja": "天牖",
+      "pinyin": "Tianyou"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE17",
+    "meridian": "TE",
+    "name": {
+      "ko": "예풍",
+      "hanja": "翳風",
+      "pinyin": "Yifeng"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE18",
+    "meridian": "TE",
+    "name": {
+      "ko": "계맥",
+      "hanja": "瘈脈",
+      "pinyin": "Chimai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE19",
+    "meridian": "TE",
+    "name": {
+      "ko": "로식",
+      "hanja": "顱息",
+      "pinyin": "Luxi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE20",
+    "meridian": "TE",
+    "name": {
+      "ko": "각손",
+      "hanja": "角孫",
+      "pinyin": "Jiaosun"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE21",
+    "meridian": "TE",
+    "name": {
+      "ko": "이문",
+      "hanja": "耳門",
+      "pinyin": "Ermen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE22",
+    "meridian": "TE",
+    "name": {
+      "ko": "이화료",
+      "hanja": "耳和髎",
+      "pinyin": "Erheliao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "TE23",
+    "meridian": "TE",
+    "name": {
+      "ko": "사죽공",
+      "hanja": "絲竹空",
+      "pinyin": "Sizhukong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB1",
+    "meridian": "GB",
+    "name": {
+      "ko": "동자료",
+      "hanja": "瞳子髎",
+      "pinyin": "Tongziliao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB2",
+    "meridian": "GB",
+    "name": {
+      "ko": "청회",
+      "hanja": "聽會",
+      "pinyin": "Tinghui"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB3",
+    "meridian": "GB",
+    "name": {
+      "ko": "상관",
+      "hanja": "上關",
+      "pinyin": "Shangguan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB4",
+    "meridian": "GB",
+    "name": {
+      "ko": "암염",
+      "hanja": "頷厭",
+      "pinyin": "Hanyan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB5",
+    "meridian": "GB",
+    "name": {
+      "ko": "현로",
+      "hanja": "懸顱",
+      "pinyin": "Xuanlu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB6",
+    "meridian": "GB",
+    "name": {
+      "ko": "현리",
+      "hanja": "懸釐",
+      "pinyin": "Xuanli"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB7",
+    "meridian": "GB",
+    "name": {
+      "ko": "곡빈",
+      "hanja": "曲鬢",
+      "pinyin": "Qubin"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB8",
+    "meridian": "GB",
+    "name": {
+      "ko": "률곡",
+      "hanja": "率谷",
+      "pinyin": "Shuaigu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB9",
+    "meridian": "GB",
+    "name": {
+      "ko": "천충",
+      "hanja": "天衝",
+      "pinyin": "Tianchong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB10",
+    "meridian": "GB",
+    "name": {
+      "ko": "백",
+      "hanja": "白",
+      "pinyin": "Fubai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB11",
+    "meridian": "GB",
+    "name": {
+      "ko": "두규음",
+      "hanja": "頭竅陰",
+      "pinyin": "Touqiaoyin"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB12",
+    "meridian": "GB",
+    "name": {
+      "ko": "완골",
+      "hanja": "完骨",
+      "pinyin": "Wangu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB13",
+    "meridian": "GB",
+    "name": {
+      "ko": "본신",
+      "hanja": "本神",
+      "pinyin": "Benshen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB14",
+    "meridian": "GB",
+    "name": {
+      "ko": "양백",
+      "hanja": "陽白",
+      "pinyin": "Yangbai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB15",
+    "meridian": "GB",
+    "name": {
+      "ko": "두림읍",
+      "hanja": "頭臨泣",
+      "pinyin": "Toulinqi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB16",
+    "meridian": "GB",
+    "name": {
+      "ko": "목창",
+      "hanja": "目窗",
+      "pinyin": "Muchuang"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB17",
+    "meridian": "GB",
+    "name": {
+      "ko": "정영",
+      "hanja": "正營",
+      "pinyin": "Zhengying"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB18",
+    "meridian": "GB",
+    "name": {
+      "ko": "승령",
+      "hanja": "承靈",
+      "pinyin": "Chengling"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB19",
+    "meridian": "GB",
+    "name": {
+      "ko": "뇌공",
+      "hanja": "腦空",
+      "pinyin": "Naokong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB20",
+    "meridian": "GB",
+    "name": {
+      "ko": "풍지",
+      "hanja": "風池",
+      "pinyin": "Fengchi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB21",
+    "meridian": "GB",
+    "name": {
+      "ko": "견정",
+      "hanja": "肩井",
+      "pinyin": "Jianjing"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB22",
+    "meridian": "GB",
+    "name": {
+      "ko": "연액",
+      "hanja": "淵液",
+      "pinyin": "Yuanye"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB23",
+    "meridian": "GB",
+    "name": {
+      "ko": "첩근",
+      "hanja": "輒筋",
+      "pinyin": "Zhejin"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB24",
+    "meridian": "GB",
+    "name": {
+      "ko": "일월",
+      "hanja": "日月",
+      "pinyin": "Riyue"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB25",
+    "meridian": "GB",
+    "name": {
+      "ko": "경문",
+      "hanja": "京門",
+      "pinyin": "Jingmen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB26",
+    "meridian": "GB",
+    "name": {
+      "ko": "대맥",
+      "hanja": "帶脈",
+      "pinyin": "Daimai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB27",
+    "meridian": "GB",
+    "name": {
+      "ko": "오추",
+      "hanja": "五樞",
+      "pinyin": "Wushu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB28",
+    "meridian": "GB",
+    "name": {
+      "ko": "유도",
+      "hanja": "維道",
+      "pinyin": "Weidao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB29",
+    "meridian": "GB",
+    "name": {
+      "ko": "거료",
+      "hanja": "居髎",
+      "pinyin": "Juliao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB30",
+    "meridian": "GB",
+    "name": {
+      "ko": "환도",
+      "hanja": "環跳",
+      "pinyin": "Huantiao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB31",
+    "meridian": "GB",
+    "name": {
+      "ko": "풍시",
+      "hanja": "風市",
+      "pinyin": "Fengshi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB32",
+    "meridian": "GB",
+    "name": {
+      "ko": "중독",
+      "hanja": "中瀆",
+      "pinyin": "Zhongdu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB33",
+    "meridian": "GB",
+    "name": {
+      "ko": "슬양관",
+      "hanja": "膝陽關",
+      "pinyin": "Xiyangguan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB34",
+    "meridian": "GB",
+    "name": {
+      "ko": "양능천",
+      "hanja": "陽陵泉",
+      "pinyin": "Yanglingquan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB35",
+    "meridian": "GB",
+    "name": {
+      "ko": "양교",
+      "hanja": "陽交",
+      "pinyin": "Yangjiao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB36",
+    "meridian": "GB",
+    "name": {
+      "ko": "외구",
+      "hanja": "外丘",
+      "pinyin": "Waiqiu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB37",
+    "meridian": "GB",
+    "name": {
+      "ko": "광명",
+      "hanja": "光明",
+      "pinyin": "Guangming"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB38",
+    "meridian": "GB",
+    "name": {
+      "ko": "양보",
+      "hanja": "陽輔",
+      "pinyin": "Yangfu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB39",
+    "meridian": "GB",
+    "name": {
+      "ko": "현종",
+      "hanja": "懸鍾",
+      "pinyin": "Xuanzhong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB40",
+    "meridian": "GB",
+    "name": {
+      "ko": "구허",
+      "hanja": "丘墟",
+      "pinyin": "Qiuxu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB41",
+    "meridian": "GB",
+    "name": {
+      "ko": "족림읍",
+      "hanja": "足臨泣",
+      "pinyin": "Zulinqi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB42",
+    "meridian": "GB",
+    "name": {
+      "ko": "지오회",
+      "hanja": "地五會",
+      "pinyin": "Diwuhui"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB43",
+    "meridian": "GB",
+    "name": {
+      "ko": "협계",
+      "hanja": "俠谿",
+      "pinyin": "Xiaxi"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GB44",
+    "meridian": "GB",
+    "name": {
+      "ko": "족규음",
+      "hanja": "足竅陰",
+      "pinyin": "Zuqiaoyin"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LR1",
+    "meridian": "LR",
+    "name": {
+      "ko": "대돈",
+      "hanja": "大敦",
+      "pinyin": "Dadun"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LR2",
+    "meridian": "LR",
+    "name": {
+      "ko": "항간",
+      "hanja": "行間",
+      "pinyin": "Xingjian"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LR3",
+    "meridian": "LR",
+    "name": {
+      "ko": "태충",
+      "hanja": "太衝",
+      "pinyin": "Taichong"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LR4",
+    "meridian": "LR",
+    "name": {
+      "ko": "중봉",
+      "hanja": "中封",
+      "pinyin": "Zhongfeng"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LR5",
+    "meridian": "LR",
+    "name": {
+      "ko": "려구",
+      "hanja": "蠡溝",
+      "pinyin": "Ligou"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LR6",
+    "meridian": "LR",
+    "name": {
+      "ko": "중도",
+      "hanja": "中都",
+      "pinyin": "Zhongdu"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LR7",
+    "meridian": "LR",
+    "name": {
+      "ko": "슬관",
+      "hanja": "膝關",
+      "pinyin": "Xiguan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LR8",
+    "meridian": "LR",
+    "name": {
+      "ko": "곡천",
+      "hanja": "曲泉",
+      "pinyin": "Ququan"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LR9",
+    "meridian": "LR",
+    "name": {
+      "ko": "음포",
+      "hanja": "陰包",
+      "pinyin": "Yinbao"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LR10",
+    "meridian": "LR",
+    "name": {
+      "ko": "족오리",
+      "hanja": "足五里",
+      "pinyin": "Zuwuli"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LR11",
+    "meridian": "LR",
+    "name": {
+      "ko": "음렴",
+      "hanja": "陰廉",
+      "pinyin": "Yinlian"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LR12",
+    "meridian": "LR",
+    "name": {
+      "ko": "급맥",
+      "hanja": "急脈",
+      "pinyin": "Jimai"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LR13",
+    "meridian": "LR",
+    "name": {
+      "ko": "장문",
+      "hanja": "章門",
+      "pinyin": "Zhangmen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "LR14",
+    "meridian": "LR",
+    "name": {
+      "ko": "기문",
+      "hanja": "期門",
+      "pinyin": "Qimen"
+    },
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV1",
+    "meridian": "GV",
+    "name": {
+      "ko": "장강",
+      "hanja": "長強",
+      "pinyin": "Changqiang"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV2",
+    "meridian": "GV",
+    "name": {
+      "ko": "요유",
+      "hanja": "腰兪",
+      "pinyin": "Yaoshu"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV3",
+    "meridian": "GV",
+    "name": {
+      "ko": "요양관",
+      "hanja": "腰陽關",
+      "pinyin": "Yaoyangguan"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV4",
+    "meridian": "GV",
+    "name": {
+      "ko": "명문",
+      "hanja": "命門",
+      "pinyin": "Mingmen"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV5",
+    "meridian": "GV",
+    "name": {
+      "ko": "현추",
+      "hanja": "懸樞",
+      "pinyin": "Xuanshu"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV6",
+    "meridian": "GV",
+    "name": {
+      "ko": "척중",
+      "hanja": "脊中",
+      "pinyin": "Jizhong"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV7",
+    "meridian": "GV",
+    "name": {
+      "ko": "중추",
+      "hanja": "中樞",
+      "pinyin": "Zhongshu"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV8",
+    "meridian": "GV",
+    "name": {
+      "ko": "근축",
+      "hanja": "筋縮",
+      "pinyin": "Jinsuo"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV9",
+    "meridian": "GV",
+    "name": {
+      "ko": "지양",
+      "hanja": "至陽",
+      "pinyin": "Zhiyang"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV10",
+    "meridian": "GV",
+    "name": {
+      "ko": "령대",
+      "hanja": "靈臺",
+      "pinyin": "Lingtai"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV11",
+    "meridian": "GV",
+    "name": {
+      "ko": "신도",
+      "hanja": "神道",
+      "pinyin": "Shendao"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV12",
+    "meridian": "GV",
+    "name": {
+      "ko": "신주",
+      "hanja": "身柱",
+      "pinyin": "Shenzhu"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV13",
+    "meridian": "GV",
+    "name": {
+      "ko": "도도",
+      "hanja": "陶道",
+      "pinyin": "Taodao"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV14",
+    "meridian": "GV",
+    "name": {
+      "ko": "대추",
+      "hanja": "大椎",
+      "pinyin": "Dazhui"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV15",
+    "meridian": "GV",
+    "name": {
+      "ko": "아문",
+      "hanja": "瘂門",
+      "pinyin": "Yamen"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV16",
+    "meridian": "GV",
+    "name": {
+      "ko": "풍부",
+      "hanja": "風府",
+      "pinyin": "Fengfu"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV17",
+    "meridian": "GV",
+    "name": {
+      "ko": "뇌호",
+      "hanja": "腦戶",
+      "pinyin": "Naohu"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV18",
+    "meridian": "GV",
+    "name": {
+      "ko": "강간",
+      "hanja": "強間",
+      "pinyin": "Qiangjian"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV19",
+    "meridian": "GV",
+    "name": {
+      "ko": "후정",
+      "hanja": "後頂",
+      "pinyin": "Houding"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV20",
+    "meridian": "GV",
+    "name": {
+      "ko": "백회",
+      "hanja": "百會",
+      "pinyin": "Baihui"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV21",
+    "meridian": "GV",
+    "name": {
+      "ko": "전정",
+      "hanja": "前頂",
+      "pinyin": "Qianding"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV22",
+    "meridian": "GV",
+    "name": {
+      "ko": "신회",
+      "hanja": "顖會",
+      "pinyin": "Xinhui"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV23",
+    "meridian": "GV",
+    "name": {
+      "ko": "상성",
+      "hanja": "上星",
+      "pinyin": "Shangxing"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV24",
+    "meridian": "GV",
+    "name": {
+      "ko": "신정",
+      "hanja": "神庭",
+      "pinyin": "Shenting"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV25",
+    "meridian": "GV",
+    "name": {
+      "ko": "소료",
+      "hanja": "素髎",
+      "pinyin": "Suliao"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV26",
+    "meridian": "GV",
+    "name": {
+      "ko": "수구",
+      "hanja": "水溝",
+      "pinyin": "Shuigou"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV27",
+    "meridian": "GV",
+    "name": {
+      "ko": "태단",
+      "hanja": "兌端",
+      "pinyin": "Duiduan"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "GV28",
+    "meridian": "GV",
+    "name": {
+      "ko": "간교",
+      "hanja": "齦交",
+      "pinyin": "Yinjiao"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV1",
+    "meridian": "CV",
+    "name": {
+      "ko": "회음",
+      "hanja": "會陰",
+      "pinyin": "Huiyin"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV2",
+    "meridian": "CV",
+    "name": {
+      "ko": "곡골",
+      "hanja": "曲骨",
+      "pinyin": "Qugu"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV3",
+    "meridian": "CV",
+    "name": {
+      "ko": "중극",
+      "hanja": "中極",
+      "pinyin": "Zhongji"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV4",
+    "meridian": "CV",
+    "name": {
+      "ko": "관원",
+      "hanja": "關元",
+      "pinyin": "Guanyuan"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV5",
+    "meridian": "CV",
+    "name": {
+      "ko": "석문",
+      "hanja": "石門",
+      "pinyin": "Shimen"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV6",
+    "meridian": "CV",
+    "name": {
+      "ko": "기해",
+      "hanja": "氣海",
+      "pinyin": "Qihai"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV7",
+    "meridian": "CV",
+    "name": {
+      "ko": "음교",
+      "hanja": "陰交",
+      "pinyin": "Yinjiao"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV8",
+    "meridian": "CV",
+    "name": {
+      "ko": "신궐",
+      "hanja": "神闕",
+      "pinyin": "Shenque"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV9",
+    "meridian": "CV",
+    "name": {
+      "ko": "수분",
+      "hanja": "水分",
+      "pinyin": "Shuifen"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV10",
+    "meridian": "CV",
+    "name": {
+      "ko": "하완",
+      "hanja": "下脘",
+      "pinyin": "Xiawan"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV11",
+    "meridian": "CV",
+    "name": {
+      "ko": "건리",
+      "hanja": "建里",
+      "pinyin": "Jianli"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV12",
+    "meridian": "CV",
+    "name": {
+      "ko": "중완",
+      "hanja": "中脘",
+      "pinyin": "Zhongwan"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV13",
+    "meridian": "CV",
+    "name": {
+      "ko": "상완",
+      "hanja": "上脘",
+      "pinyin": "Shangwan"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV14",
+    "meridian": "CV",
+    "name": {
+      "ko": "거궐",
+      "hanja": "巨闕",
+      "pinyin": "Juque"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV15",
+    "meridian": "CV",
+    "name": {
+      "ko": "구미",
+      "hanja": "鳩尾",
+      "pinyin": "Jiuwei"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV16",
+    "meridian": "CV",
+    "name": {
+      "ko": "중정",
+      "hanja": "中庭",
+      "pinyin": "Zhongting"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV17",
+    "meridian": "CV",
+    "name": {
+      "ko": "전중",
+      "hanja": "膻中",
+      "pinyin": "Tanzhong"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV18",
+    "meridian": "CV",
+    "name": {
+      "ko": "옥당",
+      "hanja": "玉堂",
+      "pinyin": "Yutang"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV19",
+    "meridian": "CV",
+    "name": {
+      "ko": "자궁",
+      "hanja": "紫宮",
+      "pinyin": "Zigong"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV20",
+    "meridian": "CV",
+    "name": {
+      "ko": "화개",
+      "hanja": "華蓋",
+      "pinyin": "Huagai"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV21",
+    "meridian": "CV",
+    "name": {
+      "ko": "선기",
+      "hanja": "璇璣",
+      "pinyin": "Xuanji"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV22",
+    "meridian": "CV",
+    "name": {
+      "ko": "천돌",
+      "hanja": "天突",
+      "pinyin": "Tiantu"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV23",
+    "meridian": "CV",
+    "name": {
+      "ko": "렴천",
+      "hanja": "廉泉",
+      "pinyin": "Lianquan"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
+    ]
+  },
+  {
+    "id": "CV24",
+    "meridian": "CV",
+    "name": {
+      "ko": "승장",
+      "hanja": "承漿",
+      "pinyin": "Chengjiang"
+    },
+    "laterality": "midline",
+    "sourceIds": [
+      "WHO_ACUPOINT_NOMENCLATURE_1993"
     ]
   }
 ]
