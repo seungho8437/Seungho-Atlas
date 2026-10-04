@@ -15,7 +15,9 @@ const anatomyMeridianSinewRelations=read('anatomy-meridian-sinew-relations.json'
 
 const concepts=new Map(atlas.concepts.map(concept=>[concept.id,concept]));
 const sourceIds=new Set(Object.keys(sources));
-const meridianIds=new Set(['LU','LI','ST','SP','HT','SI','BL','KI','PC','TE','GB','LR']);
+const meridianIds=new Set(['LU','LI','ST','SP','HT','SI','BL','KI','PC','TE','GB','LR','GV','CV']);
+const sinewMeridianIds=new Set(['LU','LI','ST','SP','HT','SI','BL','KI','PC','TE','GB','LR']);
+const expectedPointCounts={LU:11,LI:20,ST:45,SP:21,HT:9,SI:19,BL:67,KI:27,PC:9,TE:23,GB:44,LR:14,GV:28,CV:24};
 
 assert.ok(Object.keys(anatomyKo).length>0,'Korean anatomy localization is empty.');
 
@@ -51,11 +53,14 @@ for(const point of acupoints){
   for(const id of point.sourceIds)assert.ok(sourceIds.has(id),`${point.id}: missing source ${id}`);
 }
 
+assert.equal(acupointIds.size,361,'Expected exactly 361 standard acupuncture points.');
+for(const [meridian,count] of Object.entries(expectedPointCounts))assert.equal(acupoints.filter(point=>point.meridian===meridian).length,count,`${meridian}: unexpected acupuncture point count`);
+
 const sinewIds=new Set();
 for(const sinew of meridianSinews){
   assert.ok(sinew.id&&!sinewIds.has(sinew.id),`${sinew.id}: duplicate or missing meridian sinew id`);
   sinewIds.add(sinew.id);
-  assert.ok(meridianIds.has(sinew.meridian),`${sinew.id}: invalid meridian`);
+  assert.ok(sinewMeridianIds.has(sinew.meridian),`${sinew.id}: invalid meridian sinew channel`);
   assert.ok(sinew.name?.ko?.trim()&&sinew.name?.hanja?.trim()&&sinew.name?.en?.trim(),`${sinew.id}: names are incomplete`);
   for(const id of sinew.sourceIds??[])assert.ok(sourceIds.has(id),`${sinew.id}: missing source ${id}`);
 }
@@ -74,4 +79,4 @@ for(const relation of anatomyMeridianSinewRelations){
   for(const id of relation.sourceIds??[])assert.ok(sourceIds.has(id),`sinew relation: missing source ${id}`);
 }
 
-console.log(`Verified ${Object.keys(anatomyKo).length} Korean anatomy localizations, ${acupointIds.size} pilot acupoints, ${sinewIds.size} meridian sinews, ${anatomyAcupointRelations.length} anatomy-acupoint relations, and ${anatomyMeridianSinewRelations.length} anatomy-sinew relations against ${atlas.concepts.length} atlas concepts.`);
+console.log(`Verified ${Object.keys(anatomyKo).length} Korean anatomy localizations, ${acupointIds.size} standard acupoints, ${sinewIds.size} meridian sinews, ${anatomyAcupointRelations.length} anatomy-acupoint relations, and ${anatomyMeridianSinewRelations.length} anatomy-sinew relations against ${atlas.concepts.length} atlas concepts.`);
