@@ -9,6 +9,7 @@ const atlas=JSON.parse(fs.readFileSync(new URL('atlas.json',modelBase),'utf8'));
 const anatomyKo=read('anatomy-ko.json');
 const sources=read('sources.json');
 const acupoints=read('acupoints.json');
+const acupointWhoAudit=read('acupoints-who2008-audit.json');
 const meridianSinews=read('meridian-sinews.json');
 const anatomyAcupointRelations=read('anatomy-acupoint-relations.json');
 const anatomyMeridianSinewRelations=read('anatomy-meridian-sinew-relations.json');
@@ -55,12 +56,26 @@ for(const point of acupoints){
   acupointIds.add(point.id);
   assert.ok(meridianIds.has(point.meridian),`${point.id}: invalid meridian`);
   assert.ok(point.name?.ko?.trim()&&point.name?.hanja?.trim(),`${point.id}: Korean/Hanja name is required`);
+  const numericId=Number(point.id.match(/\d+$/)?.[0]);
+  assert.equal(point.number,numericId,`${point.id}: point number must match id`);
+  assert.ok(Number.isInteger(point.who2008Page)&&point.who2008Page>0,`${point.id}: WHO 2008 page index is required`);
+  assert.ok(point.sourceIds.includes('WHO_ACUPOINT_2008'),`${point.id}: WHO 2008 source is required`);
   assert.ok(['midline','bilateral'].includes(point.laterality),`${point.id}: invalid laterality`);
   assert.ok(Array.isArray(point.sourceIds)&&point.sourceIds.length,`${point.id}: sourceIds are required`);
   for(const id of point.sourceIds)assert.ok(sourceIds.has(id),`${point.id}: missing source ${id}`);
 }
 
 assert.equal(acupointIds.size,361,'Expected exactly 361 standard acupuncture points.');
+assert.equal(acupointWhoAudit.standardPointCount,361,'WHO acupoint audit must target 361 points');
+assert.equal(acupointWhoAudit.mappedPointCount,361,'WHO acupoint audit must map all 361 points');
+assert.equal(acupointWhoAudit.records.length,361,'WHO acupoint audit record count mismatch');
+assert.ok(acupointWhoAudit.allPinyinMatched,'WHO acupoint audit has Pinyin mismatches');
+assert.ok(acupointWhoAudit.allHanjaSupported,'WHO acupoint audit has unsupported Hanja labels');
+assert.ok(acupointWhoAudit.allWhoLocationsAvailable,'WHO acupoint audit has missing WHO locations');
+for(const record of acupointWhoAudit.records){
+  assert.ok(acupointIds.has(record.id),`${record.id}: WHO audit points to missing acupoint`);
+  assert.ok(Number.isInteger(record.who2008Page)&&record.who2008Page>0,`${record.id}: invalid WHO page`);
+}
 for(const [meridian,count] of Object.entries(expectedPointCounts))assert.equal(acupoints.filter(point=>point.meridian===meridian).length,count,`${meridian}: unexpected acupuncture point count`);
 
 const sinewIds=new Set();
