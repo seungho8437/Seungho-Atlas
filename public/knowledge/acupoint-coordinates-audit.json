@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T10:50:25.354Z",
+  "generatedAt": "2026-10-04T10:52:24.186Z",
   "logicalAcupoints": 361,
   "physicalCoordinates": 670,
   "expectedPhysicalCoordinates": 670,
@@ -8,122 +8,70 @@
   "invalidGeometryOrLaterality": [],
   "duplicateClusters": [
     [
-      "LI2",
-      "LI3",
-      "SI2",
-      "SI3",
-      "TE2"
+      "LU8",
+      "HT6"
     ],
     [
       "LI2",
+      "SI2"
+    ],
+    [
+      "LI2",
+      "SI2"
+    ],
+    [
       "LI3",
-      "SI2",
-      "SI3",
-      "TE2"
+      "SI3"
     ],
     [
-      "ST5",
-      "ST6"
+      "LI3",
+      "SI3"
     ],
     [
-      "ST5",
-      "ST6"
+      "LI14",
+      "TE15"
+    ],
+    [
+      "ST3",
+      "GB2"
+    ],
+    [
+      "ST3",
+      "GB2"
     ],
     [
       "ST36",
       "ST40"
     ],
     [
-      "SP2",
-      "SP3",
-      "KI6"
+      "ST44",
+      "GB43"
     ],
     [
-      "SP2",
-      "SP3",
-      "KI6"
+      "ST44",
+      "GB43"
     ],
     [
-      "HT8",
-      "TE3"
+      "HT4",
+      "HT5",
+      "HT6",
+      "PC6"
     ],
     [
-      "HT8",
-      "TE3"
-    ],
-    [
-      "SI9",
-      "TE13"
-    ],
-    [
-      "SI9",
-      "TE13"
-    ],
-    [
-      "SI11",
-      "SI12",
-      "TE15"
-    ],
-    [
-      "SI11",
-      "SI12",
-      "TE15"
-    ],
-    [
-      "SI19",
-      "TE21",
-      "GB2"
-    ],
-    [
-      "SI19",
-      "TE21",
-      "GB2"
-    ],
-    [
-      "BL2",
-      "GB14"
-    ],
-    [
-      "BL2",
-      "GB14"
-    ],
-    [
-      "BL57",
-      "KI3"
-    ],
-    [
-      "BL57",
-      "KI3"
+      "HT4",
+      "HT5"
     ],
     [
       "BL63",
       "GB42"
     ],
     [
-      "BL63",
-      "GB42"
-    ],
-    [
-      "BL65",
-      "BL66"
-    ],
-    [
-      "BL65",
-      "BL66"
-    ],
-    [
-      "TE17",
-      "GB12"
-    ],
-    [
-      "TE17",
-      "GB12"
+      "TE6",
+      "TE7"
     ],
     [
       "TE18",
       "TE19",
-      "TE20",
-      "GB3",
       "GB4",
       "GB5",
       "GB6"
@@ -131,11 +79,13 @@
     [
       "TE18",
       "TE19",
-      "TE20",
-      "GB3",
       "GB4",
       "GB5",
       "GB6"
+    ],
+    [
+      "TE20",
+      "GB7"
     ],
     [
       "GB1",
@@ -146,20 +96,8 @@
       "GB16"
     ],
     [
-      "GB10",
-      "GB11"
-    ],
-    [
-      "GB10",
-      "GB11"
-    ],
-    [
-      "GB26",
-      "LR13"
-    ],
-    [
-      "GB26",
-      "LR13"
+      "GV20",
+      "GV23"
     ],
     [
       "CV8",
@@ -167,13 +105,13 @@
     ]
   ],
   "confidenceCounts": {
-    "moderate": 337,
-    "high": 289,
-    "low": 44
+    "moderate": 326,
+    "high": 324,
+    "low": 20
   },
   "projectionDistance": {
     "max": 0.099,
-    "mean": 0.030204179104477626
+    "mean": 0.030524179104477637
   },
   "axes": {
     "source": "native BodyParts3D 4.0 atlas coordinates",
