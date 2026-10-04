@@ -49,7 +49,10 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
   // Acupoints must obey the anatomy depth buffer. Keeping depthWrite off avoids
   // markers occluding one another, while depthTest hides points on the far side
   // of the body as the camera orbits.
-  const acupointMaterial=new T.PointsMaterial({map:acupointTexture,color:0xffffff,size:15,sizeAttenuation:false,transparent:true,alphaTest:.18,opacity:1,depthTest:true,depthWrite:false,toneMapped:false});
+  // Use a world-space marker diameter with perspective attenuation. The old
+  // fixed 15px markers stayed the same screen size while the body shrank,
+  // causing distant acupoints to visually pile up when zoomed out.
+  const acupointMaterial=new T.PointsMaterial({map:acupointTexture,color:0xffffff,size:.035,sizeAttenuation:true,transparent:true,alphaTest:.18,opacity:1,depthTest:true,depthWrite:false,toneMapped:false});
   const acupointMarkers=new T.Points(acupointGeometry,acupointMaterial);acupointMarkers.frustumCulled=false;acupointMarkers.renderOrder=20;acupointMarkers.visible=false;scene.add(acupointMarkers);
   const hover=document.createElement('div');hover.className='part-hover';hover.setAttribute('role','tooltip');hover.hidden=true;el.appendChild(hover);
   type Target={index:number;x:number;y:number;left:number;right:number;top:number;bottom:number};let targets:Target[]=[];
