@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "measurementFrameCount": 237,
+  "bindingCount": 237,
+  "counts": {
+    "candidateBound": 84,
+    "ambiguousCandidateSet": 132,
+    "unresolvedNoWhoInterval": 10,
+    "fCunMethodBound": 11
+  },
+  "invariants": {
+    "allFramesBoundToRecord": true,
+    "noGlobalBodyHeightFallback": true,
+    "ambiguityPreserved": true
+  }
+}
