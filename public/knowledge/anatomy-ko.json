@@ -327,8 +327,8 @@
     ]
   },
   "FMA13322": {
-    "nameKo": "오른빗장뼈",
-    "legacyKo": "우쇄골",
+    "nameKo": "오른쪽 빗장뼈",
+    "legacyKo": "우측 쇄골",
     "hanja": "右鎖骨",
     "status": "derived",
     "sourceIds": [
@@ -336,8 +336,8 @@
     ]
   },
   "FMA13323": {
-    "nameKo": "왼빗장뼈",
-    "legacyKo": "좌쇄골",
+    "nameKo": "왼쪽 빗장뼈",
+    "legacyKo": "좌측 쇄골",
     "hanja": "左鎖骨",
     "status": "derived",
     "sourceIds": [
@@ -345,8 +345,8 @@
     ]
   },
   "FMA13395": {
-    "nameKo": "오른어깨뼈",
-    "legacyKo": "우견갑골",
+    "nameKo": "오른쪽 어깨뼈",
+    "legacyKo": "우측 견갑골",
     "hanja": "右肩胛骨",
     "status": "derived",
     "sourceIds": [
@@ -354,8 +354,8 @@
     ]
   },
   "FMA13396": {
-    "nameKo": "왼어깨뼈",
-    "legacyKo": "좌견갑골",
+    "nameKo": "왼쪽 어깨뼈",
+    "legacyKo": "좌측 견갑골",
     "hanja": "左肩胛骨",
     "status": "derived",
     "sourceIds": [
@@ -363,8 +363,8 @@
     ]
   },
   "FMA22544": {
-    "nameKo": "오른앞정강근",
-    "legacyKo": "우전경골근",
+    "nameKo": "오른쪽 앞정강근",
+    "legacyKo": "우측 전경골근",
     "hanja": "右前脛骨筋",
     "status": "derived",
     "sourceIds": [
@@ -372,8 +372,8 @@
     ]
   },
   "FMA22545": {
-    "nameKo": "왼앞정강근",
-    "legacyKo": "좌전경골근",
+    "nameKo": "왼쪽 앞정강근",
+    "legacyKo": "좌측 전경골근",
     "hanja": "左前脛骨筋",
     "status": "derived",
     "sourceIds": [
@@ -381,8 +381,8 @@
     ]
   },
   "FMA23130": {
-    "nameKo": "오른위팔뼈",
-    "legacyKo": "우상완골",
+    "nameKo": "오른쪽 위팔뼈",
+    "legacyKo": "우측 상완골",
     "hanja": "右上腕骨",
     "status": "derived",
     "sourceIds": [
@@ -390,8 +390,8 @@
     ]
   },
   "FMA23131": {
-    "nameKo": "왼위팔뼈",
-    "legacyKo": "좌상완골",
+    "nameKo": "왼쪽 위팔뼈",
+    "legacyKo": "좌측 상완골",
     "hanja": "左上腕骨",
     "status": "derived",
     "sourceIds": [
@@ -399,8 +399,8 @@
     ]
   },
   "FMA23464": {
-    "nameKo": "오른노뼈",
-    "legacyKo": "우요골",
+    "nameKo": "오른쪽 노뼈",
+    "legacyKo": "우측 요골",
     "hanja": "右橈骨",
     "status": "derived",
     "sourceIds": [
@@ -408,8 +408,8 @@
     ]
   },
   "FMA23465": {
-    "nameKo": "왼노뼈",
-    "legacyKo": "좌요골",
+    "nameKo": "왼쪽 노뼈",
+    "legacyKo": "좌측 요골",
     "hanja": "左橈骨",
     "status": "derived",
     "sourceIds": [
@@ -417,8 +417,8 @@
     ]
   },
   "FMA23467": {
-    "nameKo": "오른자뼈",
-    "legacyKo": "우척골",
+    "nameKo": "오른쪽 자뼈",
+    "legacyKo": "우측 척골",
     "hanja": "右尺骨",
     "status": "derived",
     "sourceIds": [
@@ -426,8 +426,8 @@
     ]
   },
   "FMA23468": {
-    "nameKo": "왼자뼈",
-    "legacyKo": "좌척골",
+    "nameKo": "왼쪽 자뼈",
+    "legacyKo": "좌측 척골",
     "hanja": "左尺骨",
     "status": "derived",
     "sourceIds": [
@@ -435,8 +435,8 @@
     ]
   },
   "FMA24474": {
-    "nameKo": "오른넙다리뼈",
-    "legacyKo": "우대퇴골",
+    "nameKo": "오른쪽 넙다리뼈",
+    "legacyKo": "우측 대퇴골",
     "hanja": "右大腿骨",
     "status": "derived",
     "sourceIds": [
@@ -444,8 +444,8 @@
     ]
   },
   "FMA24475": {
-    "nameKo": "왼넙다리뼈",
-    "legacyKo": "좌대퇴골",
+    "nameKo": "왼쪽 넙다리뼈",
+    "legacyKo": "좌측 대퇴골",
     "hanja": "左大腿骨",
     "status": "derived",
     "sourceIds": [
@@ -453,8 +453,8 @@
     ]
   },
   "FMA24477": {
-    "nameKo": "오른정강뼈",
-    "legacyKo": "우경골",
+    "nameKo": "오른쪽 정강뼈",
+    "legacyKo": "우측 경골",
     "hanja": "右脛骨",
     "status": "derived",
     "sourceIds": [
@@ -462,8 +462,8 @@
     ]
   },
   "FMA24478": {
-    "nameKo": "왼정강뼈",
-    "legacyKo": "좌경골",
+    "nameKo": "왼쪽 정강뼈",
+    "legacyKo": "좌측 경골",
     "hanja": "左脛骨",
     "status": "derived",
     "sourceIds": [
@@ -471,8 +471,8 @@
     ]
   },
   "FMA24480": {
-    "nameKo": "오른종아리뼈",
-    "legacyKo": "우비골",
+    "nameKo": "오른쪽 종아리뼈",
+    "legacyKo": "우측 비골",
     "hanja": "右腓骨",
     "status": "derived",
     "sourceIds": [
@@ -480,8 +480,8 @@
     ]
   },
   "FMA24481": {
-    "nameKo": "왼종아리뼈",
-    "legacyKo": "좌비골",
+    "nameKo": "왼쪽 종아리뼈",
+    "legacyKo": "좌측 비골",
     "hanja": "左腓骨",
     "status": "derived",
     "sourceIds": [
@@ -489,8 +489,8 @@
     ]
   },
   "FMA24486": {
-    "nameKo": "오른무릎뼈",
-    "legacyKo": "우슬개골",
+    "nameKo": "오른쪽 무릎뼈",
+    "legacyKo": "우측 슬개골",
     "hanja": "右膝蓋骨",
     "status": "derived",
     "sourceIds": [
@@ -498,8 +498,8 @@
     ]
   },
   "FMA24487": {
-    "nameKo": "왼무릎뼈",
-    "legacyKo": "좌슬개골",
+    "nameKo": "왼쪽 무릎뼈",
+    "legacyKo": "좌측 슬개골",
     "hanja": "左膝蓋骨",
     "status": "derived",
     "sourceIds": [
@@ -507,8 +507,8 @@
     ]
   },
   "FMA52738": {
-    "nameKo": "오른관자뼈",
-    "legacyKo": "우측두골",
+    "nameKo": "오른쪽 관자뼈",
+    "legacyKo": "우측 측두골",
     "hanja": "右側頭骨",
     "status": "derived",
     "sourceIds": [
@@ -516,8 +516,8 @@
     ]
   },
   "FMA52739": {
-    "nameKo": "왼관자뼈",
-    "legacyKo": "좌측두골",
+    "nameKo": "왼쪽 관자뼈",
+    "legacyKo": "좌측 측두골",
     "hanja": "左側頭骨",
     "status": "derived",
     "sourceIds": [
@@ -525,8 +525,8 @@
     ]
   },
   "FMA52788": {
-    "nameKo": "오른마루뼈",
-    "legacyKo": "우두정골",
+    "nameKo": "오른쪽 마루뼈",
+    "legacyKo": "우측 두정골",
     "hanja": "右頭頂骨",
     "status": "derived",
     "sourceIds": [
@@ -534,8 +534,8 @@
     ]
   },
   "FMA52789": {
-    "nameKo": "왼마루뼈",
-    "legacyKo": "좌두정골",
+    "nameKo": "왼쪽 마루뼈",
+    "legacyKo": "좌측 두정골",
     "hanja": "左頭頂骨",
     "status": "derived",
     "sourceIds": [
