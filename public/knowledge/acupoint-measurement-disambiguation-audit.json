@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "standardAcupointCount": 361,
+  "measurementFrameCount": 237,
+  "resolutionCount": 237,
+  "counts": {
+    "disambiguated": 226,
+    "fingerMethodBound": 11,
+    "direct": 197,
+    "moderate": 40
+  },
+  "invariants": {
+    "allBcunHaveExactlyOneCalibration": true,
+    "noAmbiguousStatusRemains": true,
+    "allSelectedIdsAreWhoRegistry": true,
+    "everyResolutionHasIntentCheck": true,
+    "sourceMeaningNotRewritten": true
+  }
+}
