@@ -8,6 +8,12 @@ const relations = readJson('public/knowledge/anatomy-acupoint-relations.json');
 const anatomyKo = readJson('public/knowledge/anatomy-ko.json');
 
 const chunks = atlas.chunks.map(c => fs.readFileSync(new URL('public/models/' + c.url.split('/').pop(), root)));
+console.log('ATLAS_ID_DIAGNOSTIC', JSON.stringify({
+  sampleConcepts: atlas.concepts.slice(0,8).map(c=>({id:c.id,name:c.name,elements:c.elements?.slice(0,3)})),
+  sampleParts: atlas.parts.slice(0,8).map(p=>({id:p.id,name:p.name,conceptId:p.conceptId,system:p.system})),
+  relationIdSamples: relations.slice(0,8).map(r=>r.anatomyId)
+}, null, 2));
+
 const partsByConcept = new Map();
 for (const p of atlas.parts) {
   if (!partsByConcept.has(p.conceptId)) partsByConcept.set(p.conceptId, []);
