@@ -4,6 +4,8 @@ export type AnatomyLocalization = {
   hanja?: string;
   descriptionKo?: string;
   aliases?: string[];
+  status?: 'verified' | 'derived' | 'review-needed';
+  sourceIds?: string[];
 };
 
 export type AnatomyLocalizationMap = Record<string, AnatomyLocalization>;
