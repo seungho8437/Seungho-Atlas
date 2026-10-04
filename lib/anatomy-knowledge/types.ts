@@ -29,6 +29,8 @@ export type KnowledgeSourceMap = Record<string, KnowledgeSource>;
 export type Acupoint = {
   id: string;
   meridian: MeridianId;
+  number: number;
+  who2008Page: number;
   name: {
     ko: string;
     hanja: string;
