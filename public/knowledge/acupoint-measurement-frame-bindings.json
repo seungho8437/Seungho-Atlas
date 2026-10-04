@@ -25,7 +25,7 @@
           "unit": "B-cun",
           "status": "candidate-bound",
           "candidateCalibrationIds": [
-            "CHEST_NIPPLE_TO_NIPPLE"
+            "CHEST_SUPRASTERNAL_TO_XIPHISTERNAL"
           ],
           "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
           "sourceSpan": {

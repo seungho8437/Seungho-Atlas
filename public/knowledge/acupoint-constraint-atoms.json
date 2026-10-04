@@ -147,7 +147,7 @@
           "evidence": {
             "amount": 1,
             "unit": "B-cun",
-            "direction": "lateral",
+            "direction": "inferior",
             "text": "1 B-cun"
           },
           "sourceSpan": {
