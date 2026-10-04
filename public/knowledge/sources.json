@@ -1,0 +1,78 @@
+{
+  "BODY_PARTS_3D_4": {
+    "id": "BODY_PARTS_3D_4",
+    "title": "BodyParts3D 4.0",
+    "note": "Source anatomy and concept identifiers used by the existing atlas."
+  },
+  "KO_ANATOMY_PILOT": {
+    "id": "KO_ANATOMY_PILOT",
+    "title": "Seungho Atlas Korean anatomy localization pilot",
+    "note": "Pilot terminology and educational descriptions. Review against the project's chosen Korean anatomical terminology standard before full-scale rollout."
+  },
+  "WHO_ACUPOINT_2008": {
+    "id": "WHO_ACUPOINT_2008",
+    "title": "WHO Standard Acupuncture Point Locations in the Western Pacific Region",
+    "publisher": "World Health Organization Regional Office for the Western Pacific",
+    "year": 2008,
+    "note": "Primary standard reference for acupuncture point locations. App text should summarize or structure the standard rather than reproduce long passages verbatim."
+  },
+  "WHO_TCM_TERMS_2022": {
+    "id": "WHO_TCM_TERMS_2022",
+    "title": "WHO international standard terminologies on traditional Chinese medicine",
+    "publisher": "World Health Organization",
+    "year": 2022,
+    "note": "Terminology reference for traditional Chinese medicine concepts."
+  },
+  "KJA_ST36_2023": {
+    "id": "KJA_ST36_2023",
+    "title": "Suggestion on Locating Method for ST36 Acupoint Based on Neuroanatomical Features",
+    "publisher": "Korean Journal of Acupuncture",
+    "year": 2023,
+    "note": "Used only for modern anatomical correspondence around ST36."
+  },
+  "KJA_ST_JINGJIN_2006": {
+    "id": "KJA_ST_JINGJIN_2006",
+    "title": "A study on muscular system of Foot yangmyung meridian-muscle",
+    "publisher": "Korean Journal of Acupuncture",
+    "year": 2006,
+    "note": "Used as an interpretive modern-anatomy correspondence source for the Foot Yangming meridian sinew."
+  },
+  "KAA_TERMINOLOGY_6": {
+    "id": "KAA_TERMINOLOGY_6",
+    "title": "해부학용어 제6판 (Korean Anatomical Terminology, 6th ed.)",
+    "publisher": "대한해부학회",
+    "year": 2014,
+    "note": "Reference standard for Korean anatomical terminology. The atlas stores independently curated mappings rather than reproducing the terminology book."
+  },
+  "WHO_ACUPOINT_NOMENCLATURE_1993": {
+    "id": "WHO_ACUPOINT_NOMENCLATURE_1993",
+    "title": "Standard acupuncture nomenclature: a brief explanation of 361 classical acupuncture point names and their multilingual comparative list",
+    "publisher": "World Health Organization Regional Office for the Western Pacific",
+    "year": 1993,
+    "note": "Reference for the standardized 361-point identifiers, Pinyin names, and Han-character nomenclature."
+  },
+  "UNICODE_UNIHAN": {
+    "id": "UNICODE_UNIHAN",
+    "title": "Unicode Han Database (Unihan) readings",
+    "publisher": "Unicode Consortium",
+    "note": "Used to cross-check Korean readings of Han characters; point-name readings are normalized separately."
+  },
+  "LINGSHU_JINGJIN": {
+    "id": "LINGSHU_JINGJIN",
+    "title": "黃帝內經靈樞·經筋",
+    "note": "Classical source for the twelve meridian-sinew pathways. Atlas pathway descriptions are concise modern Korean summaries rather than verbatim reproduction."
+  },
+  "KJA_FOOT_THREE_YANG_2008": {
+    "id": "KJA_FOOT_THREE_YANG_2008",
+    "title": "A Study on Muscular System of Foot Three Yang Meridian-Muscle",
+    "publisher": "Korean Journal of Acupuncture",
+    "year": 2008,
+    "note": "Interpretive comparison between Foot Three Yang meridian-sinews and modern muscular anatomy; not treated as one-to-one anatomical identity."
+  },
+  "TARA_ACUPOINT_CURATED": {
+    "id": "TARA_ACUPOINT_CURATED",
+    "title": "TARA Acupoints Ontology curated acupoint data",
+    "publisher": "SciCrunch / TARA ontology curation team",
+    "note": "Secondary cross-check used to index each of the 361 standard acupoints to the corresponding WHO 2008 source page and to confirm Pinyin/Chinese labels. WHO 2008 remains the primary location standard."
+  }
+}

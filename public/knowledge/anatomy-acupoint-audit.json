@@ -1,0 +1,873 @@
+{
+  "generatedAt": "2026-10-04",
+  "methodology": {
+    "primaryStandard": "WHO Standard Acupuncture Point Locations in the Western Pacific Region (2008)",
+    "secondaryStructuredSource": "TARA Acupoints Ontology curated acupoints-locations.csv",
+    "atlas": "BodyParts3D 4.0 / FMA concept subset used by Seungho Atlas",
+    "scope": "All 361 standard acupoints",
+    "mappingRule": "Use WHO/TARA anatomical surface regions and reference landmarks only. Exact normalized atlas matches are preferred. A short curated alias table is permitted only when the target atlas concept name is uniquely verified. Missing surface-region classes may use a broader regional proxy, explicitly labeled as such in noteKo.",
+    "prohibitedInference": "Do not infer deep structures, nerves, vessels, muscles, or one-to-one identity from meridian theory alone.",
+    "relationPolicy": "locatedOnTheSurfaceOf -> surface-landmark; locatedInRelationTo -> reference-landmark; previously published ST36 adjacent mappings are preserved."
+  },
+  "standardAcupointCount": 361,
+  "coveredAcupointCount": 361,
+  "relationCount": 578,
+  "preservedLiteratureRelations": 2,
+  "generatedFromWhoTara": 578,
+  "resolutionMethodCounts": {
+    "regional-proxy": 283,
+    "exact-normalized": 285,
+    "curated-alias": 10
+  },
+  "relationCounts": {
+    "surface-landmark": 361,
+    "reference-landmark": 215,
+    "adjacent": 2
+  },
+  "minimumRelationsPerPoint": 1,
+  "maximumRelationsPerPoint": 5,
+  "pointsWithOneRelation": [
+    "LU1",
+    "LU2",
+    "LU3",
+    "LU4",
+    "LU5",
+    "LU6",
+    "LU11",
+    "LI1",
+    "LI2",
+    "LI3",
+    "LI5",
+    "LI6",
+    "LI7",
+    "LI8",
+    "LI9",
+    "LI10",
+    "LI11",
+    "LI12",
+    "LI13",
+    "LI15",
+    "LI19",
+    "LI20",
+    "ST1",
+    "ST2",
+    "ST3",
+    "ST7",
+    "ST8",
+    "ST14",
+    "ST16",
+    "ST17",
+    "ST18",
+    "ST20",
+    "ST21",
+    "ST22",
+    "ST23",
+    "ST24",
+    "ST25",
+    "ST26",
+    "ST27",
+    "ST28",
+    "ST29",
+    "ST41",
+    "ST44",
+    "ST45",
+    "SP1",
+    "SP2",
+    "SP3",
+    "SP13",
+    "SP14",
+    "SP15",
+    "SP16",
+    "SP17",
+    "SP18",
+    "SP19",
+    "SP20",
+    "SP21",
+    "HT2",
+    "HT3",
+    "HT9",
+    "SI1",
+    "SI2",
+    "SI3",
+    "SI5",
+    "SI10",
+    "SI19",
+    "BL1",
+    "BL3",
+    "BL4",
+    "BL5",
+    "BL6",
+    "BL7",
+    "BL8",
+    "BL27",
+    "BL28",
+    "BL29",
+    "BL30",
+    "BL31",
+    "BL32",
+    "BL33",
+    "BL34",
+    "BL35",
+    "BL36",
+    "BL38",
+    "BL39",
+    "BL40",
+    "BL53",
+    "BL54",
+    "BL55",
+    "BL56",
+    "BL65",
+    "BL66",
+    "BL67",
+    "KI1",
+    "KI5",
+    "KI6",
+    "KI10",
+    "KI11",
+    "KI12",
+    "KI13",
+    "KI14",
+    "KI15",
+    "KI16",
+    "KI17",
+    "KI18",
+    "KI19",
+    "KI20",
+    "KI21",
+    "KI22",
+    "KI23",
+    "KI24",
+    "KI25",
+    "KI26",
+    "PC1",
+    "PC2",
+    "PC3",
+    "PC4",
+    "PC5",
+    "PC6",
+    "PC7",
+    "PC9",
+    "TE1",
+    "TE2",
+    "TE10",
+    "TE11",
+    "TE12",
+    "TE14",
+    "TE17",
+    "TE18",
+    "TE19",
+    "TE20",
+    "TE21",
+    "TE22",
+    "GB1",
+    "GB2",
+    "GB3",
+    "GB4",
+    "GB5",
+    "GB6",
+    "GB7",
+    "GB8",
+    "GB9",
+    "GB10",
+    "GB11",
+    "GB12",
+    "GB13",
+    "GB15",
+    "GB16",
+    "GB17",
+    "GB18",
+    "GB19",
+    "GB22",
+    "GB23",
+    "GB24",
+    "GB27",
+    "GB28",
+    "GB29",
+    "GB30",
+    "GB31",
+    "GB32",
+    "GB40",
+    "GB43",
+    "GB44",
+    "LR1",
+    "LR4",
+    "LR7",
+    "LR10",
+    "LR12",
+    "LR14",
+    "GV1",
+    "GV2",
+    "GV15",
+    "GV17",
+    "GV18",
+    "GV19",
+    "GV20",
+    "GV21",
+    "GV22",
+    "GV23",
+    "GV26",
+    "GV27",
+    "GV28",
+    "CV1",
+    "CV2",
+    "CV3",
+    "CV4",
+    "CV5",
+    "CV6",
+    "CV7",
+    "CV8",
+    "CV9",
+    "CV10",
+    "CV11",
+    "CV12",
+    "CV13",
+    "CV14",
+    "CV15",
+    "CV16",
+    "CV17",
+    "CV18",
+    "CV19",
+    "CV20",
+    "CV21",
+    "CV24"
+  ],
+  "uncoveredAcupoints": [],
+  "unresolvedIdentifiedLocationLabels": [
+    {
+      "label": "Anterior Median Line",
+      "count": 79
+    },
+    {
+      "label": "Posterior Median Line",
+      "count": 48
+    },
+    {
+      "label": "Umbilicus",
+      "count": 40
+    },
+    {
+      "label": "Anterior Hairline",
+      "count": 17
+    },
+    {
+      "label": "Medial Malleolus",
+      "count": 13
+    },
+    {
+      "label": "Palmar Wrist Crease",
+      "count": 12
+    },
+    {
+      "label": "Distal Phalanx",
+      "count": 11
+    },
+    {
+      "label": "Dorsal Wrist Crease",
+      "count": 10
+    },
+    {
+      "label": "Lateral Malleolus",
+      "count": 10
+    },
+    {
+      "label": "Popliteal Crease",
+      "count": 10
+    },
+    {
+      "label": "Cubital Crease",
+      "count": 9
+    },
+    {
+      "label": "Pupil",
+      "count": 7
+    },
+    {
+      "label": "Anterior Superior Iliac Spine",
+      "count": 6
+    },
+    {
+      "label": "Fourth Intercostal Space",
+      "count": 6
+    },
+    {
+      "label": "Median Sacral Crest",
+      "count": 6
+    },
+    {
+      "label": "Olecranon",
+      "count": 5
+    },
+    {
+      "label": "Scapula Spine",
+      "count": 5
+    },
+    {
+      "label": "Mastoid Process",
+      "count": 5
+    },
+    {
+      "label": "Hairline",
+      "count": 5
+    },
+    {
+      "label": "First Intercostal Space",
+      "count": 4
+    },
+    {
+      "label": "Biceps Brachii Muscle",
+      "count": 4
+    },
+    {
+      "label": "Second Intercostal Space",
+      "count": 4
+    },
+    {
+      "label": "Third Intercostal Space",
+      "count": 4
+    },
+    {
+      "label": "Pubic Symphysis",
+      "count": 4
+    },
+    {
+      "label": "Toenail",
+      "count": 4
+    },
+    {
+      "label": "Tendon of flexor carpi ulnaris",
+      "count": 4
+    },
+    {
+      "label": "Nail Of Manual Digit 5",
+      "count": 4
+    },
+    {
+      "label": "External Occipital Protuberance",
+      "count": 4
+    },
+    {
+      "label": "Sacral Hiatus",
+      "count": 4
+    },
+    {
+      "label": "Gastrocnemius Muscle",
+      "count": 4
+    },
+    {
+      "label": "Palmaris Longus Tendon",
+      "count": 4
+    },
+    {
+      "label": "Tendon of flexor carpi radialis",
+      "count": 4
+    },
+    {
+      "label": "ear",
+      "count": 4
+    },
+    {
+      "label": "Anterior Axillary Fold",
+      "count": 3
+    },
+    {
+      "label": "Radial Styloid Process",
+      "count": 3
+    },
+    {
+      "label": "Acromion",
+      "count": 3
+    },
+    {
+      "label": "Nipple",
+      "count": 3
+    },
+    {
+      "label": "Fifth Intercostal Space",
+      "count": 3
+    },
+    {
+      "label": "Tendon of extensor digitorum longus",
+      "count": 3
+    },
+    {
+      "label": "Midaxillary Line",
+      "count": 3
+    },
+    {
+      "label": "Eye",
+      "count": 3
+    },
+    {
+      "label": "Second Posterior Sacral Foramen",
+      "count": 3
+    },
+    {
+      "label": "Fourth Posterior Sacral Foramen",
+      "count": 3
+    },
+    {
+      "label": "Biceps Femoris Tendon",
+      "count": 3
+    },
+    {
+      "label": "Metatarsophalangeal Joint Of Pedal Digit 5",
+      "count": 3
+    },
+    {
+      "label": "Interosseous Muscle Of Autopod",
+      "count": 3
+    },
+    {
+      "label": "Costal Arch",
+      "count": 3
+    },
+    {
+      "label": "Iliotibial Band",
+      "count": 3
+    },
+    {
+      "label": "Posterior Hairline",
+      "count": 3
+    },
+    {
+      "label": "Xiphisternal Junction",
+      "count": 3
+    },
+    {
+      "label": "Infraclavicular Fossa",
+      "count": 2
+    },
+    {
+      "label": "Biceps Brachii Tendon",
+      "count": 2
+    },
+    {
+      "label": "Abductor Pollicis Longus Tendon",
+      "count": 2
+    },
+    {
+      "label": "Metacarpophalangeal Joint",
+      "count": 2
+    },
+    {
+      "label": "Lateral Epicondyle",
+      "count": 2
+    },
+    {
+      "label": "Greater Tubercle Of The Humerus",
+      "count": 2
+    },
+    {
+      "label": "Philtrum",
+      "count": 2
+    },
+    {
+      "label": "Ala Of Nose",
+      "count": 2
+    },
+    {
+      "label": "Nasolabial Sulcus",
+      "count": 2
+    },
+    {
+      "label": "Masseter",
+      "count": 2
+    },
+    {
+      "label": "Zygomatic Arch",
+      "count": 2
+    },
+    {
+      "label": "Tendon Of Quadriceps Femoris",
+      "count": 2
+    },
+    {
+      "label": "Second Toe",
+      "count": 2
+    },
+    {
+      "label": "First Metatarsophalangeal Joint",
+      "count": 2
+    },
+    {
+      "label": "Medial Condyle Of The Tibia",
+      "count": 2
+    },
+    {
+      "label": "Sixth Intercostal Space",
+      "count": 2
+    },
+    {
+      "label": "Medial Epicondyle",
+      "count": 2
+    },
+    {
+      "label": "Little Finger",
+      "count": 2
+    },
+    {
+      "label": "Triquetrum",
+      "count": 2
+    },
+    {
+      "label": "Posterior Axillary Fold",
+      "count": 2
+    },
+    {
+      "label": "Outer Canthus",
+      "count": 2
+    },
+    {
+      "label": "Frontal Notch",
+      "count": 2
+    },
+    {
+      "label": "Second Cervical Vertebra",
+      "count": 2
+    },
+    {
+      "label": "First Posterior Sacral Foramen",
+      "count": 2
+    },
+    {
+      "label": "Third Posterior Sacral Foramen",
+      "count": 2
+    },
+    {
+      "label": "Coccyx",
+      "count": 2
+    },
+    {
+      "label": "Gluteal Fold",
+      "count": 2
+    },
+    {
+      "label": "Biceps Femoris",
+      "count": 2
+    },
+    {
+      "label": "Semitendinosus Tendon",
+      "count": 2
+    },
+    {
+      "label": "Elbow",
+      "count": 2
+    },
+    {
+      "label": "Condyloid Process",
+      "count": 2
+    },
+    {
+      "label": "Auricular Root",
+      "count": 2
+    },
+    {
+      "label": "Greater Trochanter",
+      "count": 2
+    },
+    {
+      "label": "Anus",
+      "count": 2
+    },
+    {
+      "label": "Suprasternal Fossa",
+      "count": 2
+    },
+    {
+      "label": "Coracoid Process Of The Scapula",
+      "count": 1
+    },
+    {
+      "label": "Clavipectoral Triangle",
+      "count": 1
+    },
+    {
+      "label": "Thumb Nail",
+      "count": 1
+    },
+    {
+      "label": "nail of manual digit 2",
+      "count": 1
+    },
+    {
+      "label": "Radial Fossa",
+      "count": 1
+    },
+    {
+      "label": "Extensor Pollicis Longus Tendon",
+      "count": 1
+    },
+    {
+      "label": "Extensor Pollicis Brevis Tendon",
+      "count": 1
+    },
+    {
+      "label": "Lateral Supraepicondylar Ridge",
+      "count": 1
+    },
+    {
+      "label": "Suprascapular Fossa",
+      "count": 1
+    },
+    {
+      "label": "Nostril",
+      "count": 1
+    },
+    {
+      "label": "Eyeball",
+      "count": 1
+    },
+    {
+      "label": "Infraorbital Margin",
+      "count": 1
+    },
+    {
+      "label": "Infraorbital Foramen",
+      "count": 1
+    },
+    {
+      "label": "Facial Artery",
+      "count": 1
+    },
+    {
+      "label": "Mandibular Notch",
+      "count": 1
+    },
+    {
+      "label": "Forehead",
+      "count": 1
+    },
+    {
+      "label": "Lesser Supraclavicular Fossa",
+      "count": 1
+    },
+    {
+      "label": "Greater Supraclavicular Fossa",
+      "count": 1
+    },
+    {
+      "label": "Sternal Angle",
+      "count": 1
+    },
+    {
+      "label": "Nipple Line",
+      "count": 1
+    },
+    {
+      "label": "Infrasternal Angle",
+      "count": 1
+    },
+    {
+      "label": "Patellar Ligament",
+      "count": 1
+    },
+    {
+      "label": "Ankle Joint",
+      "count": 1
+    },
+    {
+      "label": "Tendon of extensor hallucis longus",
+      "count": 1
+    },
+    {
+      "label": "LATERAL MALLEOLUS",
+      "count": 1
+    },
+    {
+      "label": "metatarsophalangeal joint of pedal digit 2",
+      "count": 1
+    },
+    {
+      "label": "Third Toe",
+      "count": 1
+    },
+    {
+      "label": "Nail Of The Second Toe",
+      "count": 1
+    },
+    {
+      "label": "Knee Joint",
+      "count": 1
+    },
+    {
+      "label": "Inguinal Crease",
+      "count": 1
+    },
+    {
+      "label": "Axillary Fossa",
+      "count": 1
+    },
+    {
+      "label": "metacarpophalangeal joint of manual digit 5",
+      "count": 1
+    },
+    {
+      "label": "Ulnar Styloid Process",
+      "count": 1
+    },
+    {
+      "label": "Flexor Carpi Ulnaris Muscle",
+      "count": 1
+    },
+    {
+      "label": "Ulnar Nerve",
+      "count": 1
+    },
+    {
+      "label": "Shoulder Joint",
+      "count": 1
+    },
+    {
+      "label": "Supraspinatus Fossa",
+      "count": 1
+    },
+    {
+      "label": "Tragus",
+      "count": 1
+    },
+    {
+      "label": "Mandible Condylar Process",
+      "count": 1
+    },
+    {
+      "label": "Inner Canthus",
+      "count": 1
+    },
+    {
+      "label": "Orbital Cavity",
+      "count": 1
+    },
+    {
+      "label": "Posterior Superior Iliac Spine",
+      "count": 1
+    },
+    {
+      "label": "Second Sacral Vertebra",
+      "count": 1
+    },
+    {
+      "label": "Pedal Digit 2",
+      "count": 1
+    },
+    {
+      "label": "Pedal Digit 3",
+      "count": 1
+    },
+    {
+      "label": "Calcaneal Tuberosity",
+      "count": 1
+    },
+    {
+      "label": "METACARPOPHALANGEAL JOINT",
+      "count": 1
+    },
+    {
+      "label": "Nail Of Manual Digit 3",
+      "count": 1
+    },
+    {
+      "label": "Nail Of Manual Digit 4",
+      "count": 1
+    },
+    {
+      "label": "Ring Finger",
+      "count": 1
+    },
+    {
+      "label": "Metacarpophalangeal Joint Of Manual Digit 4",
+      "count": 1
+    },
+    {
+      "label": "Tendon of extensor digitorum",
+      "count": 1
+    },
+    {
+      "label": "Olecranon Fossa",
+      "count": 1
+    },
+    {
+      "label": "Ear Lobe",
+      "count": 1
+    },
+    {
+      "label": "supratragic notch",
+      "count": 1
+    },
+    {
+      "label": "Superficial Temporal Artery",
+      "count": 1
+    },
+    {
+      "label": "Intertragic Notch",
+      "count": 1
+    },
+    {
+      "label": "Seventh Intercostal Space",
+      "count": 1
+    },
+    {
+      "label": "Midclavicular Line",
+      "count": 1
+    },
+    {
+      "label": "Posterior Axillary Line",
+      "count": 1
+    },
+    {
+      "label": "Metatarsophalangeal Joint Of Pedal Digit 4",
+      "count": 1
+    },
+    {
+      "label": "Fourth Toe",
+      "count": 1
+    },
+    {
+      "label": "Fifth Toe",
+      "count": 1
+    },
+    {
+      "label": "Nail Of Pedal Digit 4",
+      "count": 1
+    },
+    {
+      "label": "Tibialis Anterior Tendon",
+      "count": 1
+    },
+    {
+      "label": "Anal Cleft",
+      "count": 1
+    },
+    {
+      "label": "Iliac Crest",
+      "count": 1
+    },
+    {
+      "label": "Nose Tip",
+      "count": 1
+    },
+    {
+      "label": "Upper Lip",
+      "count": 1
+    },
+    {
+      "label": "Labial Frenulum",
+      "count": 1
+    },
+    {
+      "label": "Upper Gum",
+      "count": 1
+    },
+    {
+      "label": "Genital Organ",
+      "count": 1
+    },
+    {
+      "label": "Hyoid Tubercle",
+      "count": 1
+    },
+    {
+      "label": "Mentolabial Sulcus",
+      "count": 1
+    }
+  ]
+}
