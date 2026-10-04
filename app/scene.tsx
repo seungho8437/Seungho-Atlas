@@ -156,10 +156,11 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
    atlas.parts.forEach((p,i)=>{const txt=partSearchText(i);if(/left/.test(txt)){leftMean+=centers[i].x;leftN++;}if(/right/.test(txt)){rightMean+=centers[i].x;rightN++;}});
    const leftX=leftN?leftMean/leftN:-1,rightX=rightN?rightMean/rightN:1,leftPositive=leftX>rightX;
    const outward=(side==='left'?(leftPositive?1:-1):(leftPositive?-1:1));
-   const detectorRay=new T.Raycaster(joint.clone(),new T.Vector3(outward,0,0),0,.25);
+   const radial=new T.Vector3(outward,0,0),outside=joint.clone().addScaledVector(radial,.18);
+   const detectorRay=new T.Raycaster(outside,radial.clone().multiplyScalar(-1),0,.36);
    let hit=nearestSkinHit(detectorRay);
    if(!hit){
-    detectorRay.ray.direction.set(outward,0,.22).normalize();hit=nearestSkinHit(detectorRay);
+    outside.z+=.035;detectorRay.ray.origin.copy(outside);detectorRay.ray.direction.set(-outward,0,-.12).normalize();hit=nearestSkinHit(detectorRay);
    }
    if(!hit)return null;
    return candidateFromHit(landmarkId,hit.partIndex,hit.hit,'specialized-detector',side,pip?'middle-finger-pip-radial-joint-surface':'middle-finger-dip-radial-joint-surface');
