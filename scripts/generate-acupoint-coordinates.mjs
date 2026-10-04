@@ -74,12 +74,13 @@ const regionRules = [
   [/vertex|머리꼭대기|정수리|두정부|머리 위/, .97, .50],
   [/forehead|이마|눈썹|미간|코|입술|턱|얼굴|눈|귀|관자/, .91, .82],
   [/occip|뒤통수|후두|뒷머리/, .91, .18],
+  [/head|머리|두피/, .93, .55],
   [/neck|목|경부|목덜미/, .82, .52],
   [/shoulder|어깨|견갑|빗장|쇄골/, .76, .58],
   [/chest|가슴|흉부|갈비|늑간|유두/, .69, .78],
   [/upper abdomen|윗배|상복부|명치/, .59, .76],
-  [/abdomen|배꼽|복부|배 부위/, .50, .77],
-  [/pelvis|샅|회음|두덩|치골|엉덩|볼기|천골/, .38, .50],
+  [/abdomen|배꼽|복부|배 부위|아랫배/, .50, .77],
+  [/pelvis|샅|회음|두덩|치골|엉덩|볼기|천골|엉치/, .38, .50],
   [/upper arm|위팔|상완/, .66, .60],
   [/elbow|팔꿈치|주와/, .55, .58],
   [/forearm|아래팔|전완/, .47, .58],
@@ -87,7 +88,7 @@ const regionRules = [
   [/hand|손등|손바닥|손가락|엄지|새끼손가락/, .32, .64],
   [/thigh|넓적다리|대퇴/, .31, .53],
   [/knee|무릎|오금|슬부/, .20, .50],
-  [/leg|종아리|정강|하퇴/, .12, .52],
+  [/leg|종아리|정강|하퇴|아래다리/, .12, .52],
   [/ankle|복사|발목/, .055, .53],
   [/foot|발등|발바닥|발가락|엄지발가락/, .025, .62],
 ];
@@ -125,6 +126,24 @@ function applyWhoConstraints(input,text,side){
     t[supAxis]=nav[1]==='위'?navel+n*cunY:navel-n*cunY;
     count++;
   }
+  const navLat=text.match(/배꼽(?:\s*중심)?으로부터\s*가쪽으로\s*(\d+(?:\.\d+)?)\s*B-cun/);
+  if(navLat&&sideSign){
+    const n=Number(navLat[1]);
+    t[supAxis]=norm(supAxis,.455);
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*(extent[lrAxis]/2)*Math.min(.82,n/4*.62);
+    count+=2;
+  }
+  const sacral=text.match(/(첫째|둘째|셋째|넷째)\s*뒤엉치뼈구멍/);
+  if(sacral){
+    const ord={첫째:1,둘째:2,셋째:3,넷째:4}[sacral[1]];
+    t[supAxis]=norm(supAxis,.405-(ord-1)*.026);
+    count++;
+  }
+  const hair=text.match(/(?:앞머리선|머리선)[^,.]{0,35}?(?:위로|안쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/);
+  if(hair){
+    t[supAxis]=norm(supAxis,.895)+Number(hair[1])*cunY;
+    count++;
+  }
   const ic=text.match(/(첫째|둘째|셋째|넷째|다섯째|여섯째|일곱째)\s*갈비사이공간/);
   if(ic){
     const n=ordinalIntercostal[ic[1]];
@@ -133,8 +152,8 @@ function applyWhoConstraints(input,text,side){
   }
   const refs=[
     [/앞겨드랑주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .735],
-    [/손바닥쪽\s*손목주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .385],
-    [/손등쪽\s*손목주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .385],
+    [/손바닥쪽\s*손목주름[^,.]{0,35}?(위|아래|몸쪽|먼쪽)으로\s*(\d+(?:\.\d+)?)\s*B-cun/, .385],
+    [/손등쪽\s*손목주름[^,.]{0,35}?(위|아래|몸쪽|먼쪽)으로\s*(\d+(?:\.\d+)?)\s*B-cun/, .385],
     [/팔오금주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .55],
     [/무릎뼈바닥[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .215],
     [/ST35[^,.]{0,35}?(위|아래)(?:쪽)?으로\s*(\d+(?:\.\d+)?)\s*B-cun/, .20],
