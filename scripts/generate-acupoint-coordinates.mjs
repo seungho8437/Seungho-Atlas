@@ -249,6 +249,9 @@ function applyWhoConstraints(input,text,side){
   if(/가쪽눈구석/.test(text)&&sideSign){
     t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*.55;
     t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.28;count+=2;
+    if(/바로\s*아래/.test(text)){t[supAxis]-=cunY*1.25;count++;}
+    const canthusLat=text.match(/가쪽눈구석에서\s*가쪽으로\s*(\d+(?:\.\d+)?)\s*B-cun/);
+    if(canthusLat){t[lrAxis]+=sideSign*localHalfWidth(t[supAxis])*(Number(canthusLat[1])*.18);count++;}
   }
   if(/관자부\s*머리선|머리선\s*뒤모서리/.test(text)){t[apAxis]=bodyCenter[apAxis]-anteriorSign*extent[apAxis]*.08;count++;}
   if(side==='midline'){t[lrAxis]=bodyCenter[lrAxis];count++;}
@@ -288,9 +291,9 @@ function project(target, side, locks={}){
   const scorePoint=q=>{
     const d=dist2(target,q);
     let score=d;
-    if(locks.sup) score+=28*(q[supAxis]-target[supAxis])**2;
-    if(locks.lr) score+=28*(q[lrAxis]-target[lrAxis])**2;
-    if(locks.ap) score+=12*(q[apAxis]-target[apAxis])**2;
+    if(locks.sup) score+=420*(q[supAxis]-target[supAxis])**2;
+    if(locks.lr) score+=220*(q[lrAxis]-target[lrAxis])**2;
+    if(locks.ap) score+=55*(q[apAxis]-target[apAxis])**2;
     return {d,score};
   };
   for(let r=0;r<=8;r++){
@@ -432,7 +435,8 @@ function relationTarget(point, side){
   }
   if(broadN){
     const bg=broadAcc.map(v=>v/broadN);
-    rt=bg.map((v,i)=>v*.76+rt[i]*.24);
+    const base=[...rt];
+    rt=bg.map((v,i)=>i===supAxis?base[i]:v*.64+base[i]*.36);
   }
   const textHits=whoTextLandmarks(text,sideSign);
   for(const hit of textHits){
@@ -462,8 +466,8 @@ for(const p of acupoints){
     const locText=p.locationKo||'';
     const locks={
       sup:/B-cun/.test(locText)&&/(위로|아래로|위쪽으로|아래쪽으로|몸쪽으로|먼쪽으로|머리선|갈비사이공간|같은 높이|뒤엉치뼈구멍)/.test(locText),
-      lr:/가쪽(?:으로)?\s*\d+(?:\.\d+)?\s*B-cun|노뼈와\s*자뼈\s*사이|자뼈\s*바로\s*노쪽|동공|귀구슬|귓바퀴|가쪽눈구석/.test(locText),
-      ap:/손바닥|손등|발바닥|발등|어깨뼈\s*부위|어깨세모근|가쪽눈구석|관자부/.test(locText)
+      lr:/가쪽(?:으로)?\s*\d+(?:\.\d+)?\s*B-cun|노뼈와\s*자뼈\s*사이|자뼈\s*바로\s*노쪽|동공|귀구슬|귓바퀴|가쪽눈구석|손허리|손가락|발허리|발가락/.test(locText),
+      ap:/손바닥|손등|발바닥|발등|손허리|손가락|발허리|발가락|어깨뼈\s*부위|어깨세모근|가쪽눈구석|관자부/.test(locText)
     };
     const projected=project(target,side,locks);
     const sideExpected=side==='left'?leftSign:side==='right'?-leftSign:0;
@@ -482,7 +486,7 @@ for(const p of acupoints){
 const resultByKey=new Map(results.map(x=>[x.acupointId+':'+x.side,x]));
 const acupointById=new Map(acupoints.map(x=>[x.id,x]));
 function updateFromRelativeDefinition(item,text){
-  const pair=text.match(/([A-Z]{1,2}\d+)\s*(?:와|과)\s*([A-Z]{1,2}\d+)를\s*잇는\s*(?:곡선|선)/);
+  const pair=text.match(/([A-Z]{1,2}\d+)\s*(?:와|과)\s*([A-Z]{1,2}\d+)(?:을|를)\s*잇는\s*(?:곡선|선)/);
   if(!pair)return false;
   const a=resultByKey.get(pair[1]+':'+item.side), b=resultByKey.get(pair[2]+':'+item.side);
   if(!a||!b)return false;
@@ -521,9 +525,13 @@ const invalid=results.filter(x=>!x.validation.surfaceProjected||!x.validation.la
 const coordKey=x=>x.position.map(v=>Math.round(v/(bodyDiag*0.0008))).join(',');
 const dup=new Map(); for(const x of results){const k=x.side+':'+coordKey(x);if(!dup.has(k))dup.set(k,[]);dup.get(k).push(x.acupointId);}
 const duplicateClusters=[...dup.values()].filter(v=>v.length>1);
+const exactMap=new Map();
+for(const x of results){const k=x.side+':'+x.position.join(',');if(!exactMap.has(k))exactMap.set(k,[]);exactMap.get(k).push(x.acupointId);}
+const exactDuplicateClusters=[...exactMap.values()].filter(v=>v.length>1);
 const out={version:1,model:'BodyParts3D-4.0',generatedAt:new Date().toISOString(),coordinateFrame:{source:'native BodyParts3D 4.0 atlas coordinates',axes:{superiorInferior:supAxis,leftRight:lrAxis,anteriorPosterior:apAxis},signs:{left:leftSign,anterior:anteriorSign}},methodology:{primary:'WHO 2008 location text',anatomyConstraints:'anatomy-acupoint-relations.json (B)',laterality:'bilateral points generated independently by side; GV/CV retained on midline',projection:'nearest point on actual integumentary mesh triangle, not bounding-box or vertex-only snapping'},points:results};
 fs.writeFileSync(new URL('public/knowledge/acupoint-coordinates.json',root),JSON.stringify(out,null,2)+'\n');
-const audit={generatedAt:new Date().toISOString(),logicalAcupoints:acupoints.length,physicalCoordinates:results.length,expectedPhysicalCoordinates:expected,surfaceTriangleCount:surfaceTriangles.length,integumentaryPartCount:surfaceParts.length,invalidGeometryOrLaterality:invalid.map(x=>x.acupointId+':'+x.side),duplicateClusters,confidenceCounts:results.reduce((m,x)=>(m[x.confidence]=(m[x.confidence]||0)+1,m),{}),projectionDistance:{max:Math.max(...results.map(x=>x.validation.projectionDistance)),mean:results.reduce((n,x)=>n+x.validation.projectionDistance,0)/results.length},axes:out.coordinateFrame,bodyBounds:{min:bodyMin,max:bodyMax,center:bodyCenter,extent,bodyDiag}};
+const audit={generatedAt:new Date().toISOString(),logicalAcupoints:acupoints.length,physicalCoordinates:results.length,expectedPhysicalCoordinates:expected,surfaceTriangleCount:surfaceTriangles.length,integumentaryPartCount:surfaceParts.length,invalidGeometryOrLaterality:invalid.map(x=>x.acupointId+':'+x.side),duplicateClusters,exactDuplicateClusters,confidenceCounts:results.reduce((m,x)=>(m[x.confidence]=(m[x.confidence]||0)+1,m),{}),projectionDistance:{max:Math.max(...results.map(x=>x.validation.projectionDistance)),mean:results.reduce((n,x)=>n+x.validation.projectionDistance,0)/results.length},axes:out.coordinateFrame,bodyBounds:{min:bodyMin,max:bodyMax,center:bodyCenter,extent,bodyDiag}};
 fs.writeFileSync(new URL('public/knowledge/acupoint-coordinates-audit.json',root),JSON.stringify(audit,null,2)+'\n');
+if(exactDuplicateClusters.length){console.error('EXACT_DUPLICATE_COORDINATES',JSON.stringify(exactDuplicateClusters,null,2));}
 if(invalid.length){console.error('INVALID_COORDINATES',JSON.stringify(invalid.map(x=>({id:x.acupointId,side:x.side,position:x.position,validation:x.validation})),null,2));throw new Error('Coordinate validation failed: '+invalid.length+' side/surface errors');}
 console.log(JSON.stringify(audit,null,2));
