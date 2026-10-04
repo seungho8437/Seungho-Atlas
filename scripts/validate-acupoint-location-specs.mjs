@@ -77,6 +77,7 @@ for(const spec of registry.specs){
 }
 
 for(const point of acupoints)assert.ok(registry.specs.some(s=>s.acupointId===point.id),`${point.id}: missing location spec`);
+assert.equal(unspecifiedRegionCount,0,'Every acupoint location statement must resolve to a coarse body region');
 
 const audit={
  schemaVersion:1,
