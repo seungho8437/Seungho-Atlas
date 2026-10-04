@@ -206,5 +206,5 @@ const out={version:1,model:'BodyParts3D-4.0',generatedAt:new Date().toISOString(
 fs.writeFileSync(new URL('public/knowledge/acupoint-coordinates.json',root),JSON.stringify(out,null,2)+'\n');
 const audit={generatedAt:new Date().toISOString(),logicalAcupoints:acupoints.length,physicalCoordinates:results.length,expectedPhysicalCoordinates:expected,surfaceTriangleCount:surfaceTriangles.length,integumentaryPartCount:surfaceParts.length,invalidGeometryOrLaterality:invalid.map(x=>x.acupointId+':'+x.side),duplicateClusters,confidenceCounts:results.reduce((m,x)=>(m[x.confidence]=(m[x.confidence]||0)+1,m),{}),projectionDistance:{max:Math.max(...results.map(x=>x.validation.projectionDistance)),mean:results.reduce((n,x)=>n+x.validation.projectionDistance,0)/results.length},axes:out.coordinateFrame};
 fs.writeFileSync(new URL('public/knowledge/acupoint-coordinates-audit.json',root),JSON.stringify(audit,null,2)+'\n');
-if(invalid.length) throw new Error('Coordinate validation failed: '+invalid.length+' side/surface errors');
+if(invalid.length){console.error('INVALID_COORDINATES',JSON.stringify(invalid.map(x=>({id:x.acupointId,side:x.side,position:x.position,validation:x.validation})),null,2));throw new Error('Coordinate validation failed: '+invalid.length+' side/surface errors');}
 console.log(JSON.stringify(audit,null,2));
