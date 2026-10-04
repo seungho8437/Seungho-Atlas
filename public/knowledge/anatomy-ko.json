@@ -24448,9 +24448,17 @@
   "FMA67242": {
     "sourceNameEn": "gray matter of neuraxis",
     "status": "derived",
-    "nameKo": "신경축회색질질",
-    "legacyKo": "신경축회백질질",
-    "hanja": "神經軸灰白質質"
+    "nameKo": "신경축회색질",
+    "legacyKo": "신경축회백질",
+    "hanja": "神經軸灰白質",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      149
+    ],
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoDerivation": "gray matter (KAA p.149) + FMA qualifier"
   },
   "FMA67325": {
     "nameKo": "뒤통수엽",
@@ -28149,16 +28157,32 @@
   "FMA83912": {
     "sourceNameEn": "gray matter of diencephalon",
     "status": "derived",
-    "nameKo": "사이뇌회색질질",
-    "legacyKo": "간뇌회백질질",
-    "hanja": "間腦灰白質質"
+    "nameKo": "사이뇌회색질",
+    "legacyKo": "간뇌회백질",
+    "hanja": "間腦灰白質",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      149
+    ],
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoDerivation": "gray matter (KAA p.149) + FMA qualifier"
   },
   "FMA83915": {
     "sourceNameEn": "gray matter of hypothalamus",
     "status": "derived",
-    "nameKo": "시상하부회색질질",
-    "legacyKo": "시상하부회백질질",
-    "hanja": "視床下部灰白質質"
+    "nameKo": "시상하부회색질",
+    "legacyKo": "시상하부회백질",
+    "hanja": "視床下部灰白質",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      149
+    ],
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoDerivation": "gray matter (KAA p.149) + FMA qualifier"
   },
   "FMA83929": {
     "sourceNameEn": "white matter of neuraxis",
@@ -28653,9 +28677,17 @@
   "FMA223151": {
     "sourceNameEn": "internal gray matter component",
     "status": "derived",
-    "nameKo": "속회색질질구성요소",
-    "legacyKo": "내회백질질성분",
-    "hanja": "內灰白質質成分"
+    "nameKo": "속회색질구성요소",
+    "legacyKo": "내회백질성분",
+    "hanja": "內灰白質成分",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      149
+    ],
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoDerivation": "gray matter (KAA p.149) + FMA qualifier"
   },
   "FMA225818": {
     "nameKo": "안구벽층부위",
