@@ -911,6 +911,34 @@ for(const item of results){
   const text=acupointById.get(item.acupointId)?.locationKo||'';
   updateFromRelativeDefinition(item,text);
 }
+
+function enforceBilateralAnalogy(acupointId){
+  const left=resultByKey.get(acupointId+':left'), right=resultByKey.get(acupointId+':right');
+  if(!left||!right)return;
+  const lp=left.validation.preProjectionTarget, rp=right.validation.preProjectionTarget;
+  const avgSup=(lp[supAxis]+rp[supAxis])/2;
+  const avgAp=(lp[apAxis]+rp[apAxis])/2;
+  const avgLat=(Math.abs(lp[lrAxis]-bodyCenter[lrAxis])+Math.abs(rp[lrAxis]-bodyCenter[lrAxis]))/2;
+  for(const item of [left,right]){
+    const sign=item.side==='left'?leftSign:-leftSign;
+    const target=[...item.validation.preProjectionTarget];
+    target[supAxis]=avgSup;
+    target[apAxis]=avgAp;
+    target[lrAxis]=bodyCenter[lrAxis]+sign*avgLat;
+    const text=acupointById.get(item.acupointId)?.locationKo||'';
+    // Preserve the homologous level and anterior/posterior surface. Let the
+    // mesh choose the precise side-surface x coordinate independently.
+    const pr=project(target,item.side,{sup:true,ap:true},projectionRegion(text,target));
+    item.position=pr.point.map(v=>+v.toFixed(4));
+    item.validation.projectionDistance=+pr.distance.toFixed(4);
+    item.validation.projectionDelta=pr.point.map((v,i)=>+(v-target[i]).toFixed(4));
+    item.validation.surfacePartId=pr.part;
+    item.validation.preProjectionTarget=target.map(v=>+v.toFixed(4));
+    item.validation.bilateralAnalogy='mirrored-WHO-target-sup-ap-preserved';
+  }
+}
+for(const id of ['LU5','BL40','LR9','KI13','KI14','KI15','HT7'])enforceBilateralAnalogy(id);
+
 function pointToBoundsDistance(point,st){
   let d2=0;
   for(let i=0;i<3;i++){
