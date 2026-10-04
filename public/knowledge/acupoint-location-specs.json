@@ -22,7 +22,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -153,8 +153,8 @@
         "who2008Page": 26
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "chest",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -421,8 +421,8 @@
         "who2008Page": 28
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "elbow",
+        "regionEvidence": "팔꿈치",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -496,8 +496,8 @@
         "who2008Page": 28
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -598,8 +598,8 @@
         "who2008Page": 29
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -687,8 +687,8 @@
         "who2008Page": 29
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -776,8 +776,8 @@
         "who2008Page": 30
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "손목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -1106,8 +1106,8 @@
         "who2008Page": 34
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "집게손가락",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -1181,8 +1181,8 @@
         "who2008Page": 35
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "손등",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -1322,8 +1322,8 @@
         "who2008Page": 36
       },
       "context": {
-        "bodyRegion": "head",
-        "regionEvidence": "코",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "손목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -1436,8 +1436,8 @@
         "who2008Page": 36
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -1538,8 +1538,8 @@
         "who2008Page": 37
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -1640,8 +1640,8 @@
         "who2008Page": 37
       },
       "context": {
-        "bodyRegion": "elbow",
-        "regionEvidence": "팔오금",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -1742,8 +1742,8 @@
         "who2008Page": 38
       },
       "context": {
-        "bodyRegion": "elbow",
-        "regionEvidence": "팔오금",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -1844,8 +1844,8 @@
         "who2008Page": 38
       },
       "context": {
-        "bodyRegion": "elbow",
-        "regionEvidence": "팔오금",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -1946,8 +1946,8 @@
         "who2008Page": 39
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "elbow",
+        "regionEvidence": "팔꿈치",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -2070,8 +2070,8 @@
         "who2008Page": 39
       },
       "context": {
-        "bodyRegion": "upper-arm",
-        "regionEvidence": "위팔",
+        "bodyRegion": "elbow",
+        "regionEvidence": "팔꿈치",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -2244,8 +2244,8 @@
         "who2008Page": 40
       },
       "context": {
-        "bodyRegion": "shoulder",
-        "regionEvidence": "어깨",
+        "bodyRegion": "upper-arm",
+        "regionEvidence": "위팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -2338,8 +2338,8 @@
         "who2008Page": 41
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "shoulder",
+        "regionEvidence": "어깨",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -2453,8 +2453,8 @@
         "who2008Page": 41
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "shoulder",
+        "regionEvidence": "어깨",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -3536,7 +3536,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -3948,7 +3948,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -4032,7 +4032,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -4122,7 +4122,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -4212,7 +4212,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -4302,7 +4302,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": []
@@ -4404,7 +4404,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -5694,8 +5694,8 @@
         "who2008Page": 61
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "thigh",
+        "regionEvidence": "넓적다리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -5769,8 +5769,8 @@
         "who2008Page": 62
       },
       "context": {
-        "bodyRegion": "pelvis-perineum",
-        "regionEvidence": "엉덩",
+        "bodyRegion": "thigh",
+        "regionEvidence": "넓적다리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -6030,8 +6030,8 @@
         "who2008Page": 63
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "knee",
+        "regionEvidence": "무릎",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -6553,8 +6553,8 @@
         "who2008Page": 66
       },
       "context": {
-        "bodyRegion": "wrist-hand",
-        "regionEvidence": "손가락",
+        "bodyRegion": "leg",
+        "regionEvidence": "아래다리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -6676,8 +6676,8 @@
         "who2008Page": 66
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "발목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -6844,8 +6844,8 @@
         "who2008Page": 67
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "발등",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -7168,8 +7168,8 @@
         "who2008Page": 70
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "엄지",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -7242,8 +7242,8 @@
         "who2008Page": 71
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "발허리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -7388,8 +7388,8 @@
         "who2008Page": 72
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "복사",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -7737,8 +7737,8 @@
         "who2008Page": 74
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "leg",
+        "regionEvidence": "아래다리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -8454,7 +8454,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -8544,7 +8544,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -8634,7 +8634,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -8724,7 +8724,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -8887,8 +8887,8 @@
         "who2008Page": 82
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "upper-arm",
+        "regionEvidence": "겨드랑",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": []
@@ -9042,8 +9042,8 @@
         "who2008Page": 83
       },
       "context": {
-        "bodyRegion": "upper-arm",
-        "regionEvidence": "위팔",
+        "bodyRegion": "elbow",
+        "regionEvidence": "팔꿈치",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -9117,8 +9117,8 @@
         "who2008Page": 83
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -9206,8 +9206,8 @@
         "who2008Page": 84
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -9295,8 +9295,8 @@
         "who2008Page": 84
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -9384,8 +9384,8 @@
         "who2008Page": 85
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "손목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -9463,8 +9463,8 @@
         "who2008Page": 85
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "손바닥",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -9753,8 +9753,8 @@
         "who2008Page": 88
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "새끼손가락",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -9828,8 +9828,8 @@
         "who2008Page": 89
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "손등",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -9903,8 +9903,8 @@
         "who2008Page": 89
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "손목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -9979,8 +9979,8 @@
         "who2008Page": 90
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "손목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -10053,8 +10053,8 @@
         "who2008Page": 90
       },
       "context": {
-        "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -10143,8 +10143,8 @@
         "who2008Page": 91
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -10235,8 +10235,8 @@
         "who2008Page": 91
       },
       "context": {
-        "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "bodyRegion": "elbow",
+        "regionEvidence": "팔꿈치",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -10396,8 +10396,8 @@
         "who2008Page": 92
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "shoulder",
+        "regionEvidence": "어깨",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -10470,8 +10470,8 @@
         "who2008Page": 93
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "shoulder",
+        "regionEvidence": "어깨",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -10568,8 +10568,8 @@
         "who2008Page": 93
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "shoulder",
+        "regionEvidence": "어깨",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -10642,8 +10642,8 @@
         "who2008Page": 94
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "shoulder",
+        "regionEvidence": "어깨",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -10717,7 +10717,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -10807,8 +10807,8 @@
         "who2008Page": 95
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "back",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -10973,8 +10973,8 @@
         "who2008Page": 96
       },
       "context": {
-        "bodyRegion": "head",
-        "regionEvidence": "턱",
+        "bodyRegion": "neck",
+        "regionEvidence": "목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -11331,7 +11331,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -11405,7 +11405,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -11487,7 +11487,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -11583,7 +11583,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -11679,7 +11679,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -11775,7 +11775,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -11871,7 +11871,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -11967,7 +11967,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -12134,7 +12134,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -12225,7 +12225,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -12316,7 +12316,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -12407,7 +12407,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -12498,7 +12498,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -12589,7 +12589,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -12680,7 +12680,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -12771,7 +12771,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -12862,7 +12862,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -12953,7 +12953,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -13044,7 +13044,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -13135,7 +13135,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "뒤정중선",
+        "regionEvidence": "허리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -13223,7 +13223,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "뒤정중선",
+        "regionEvidence": "허리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -13311,7 +13311,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "뒤정중선",
+        "regionEvidence": "허리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -13399,7 +13399,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "뒤정중선",
+        "regionEvidence": "허리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -13487,7 +13487,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "뒤정중선",
+        "regionEvidence": "허리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -14166,8 +14166,8 @@
         "who2008Page": 117
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "pelvis-perineum",
+        "regionEvidence": "볼기",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -14324,8 +14324,8 @@
         "who2008Page": 118
       },
       "context": {
-        "bodyRegion": "pelvis-perineum",
-        "regionEvidence": "볼기",
+        "bodyRegion": "thigh",
+        "regionEvidence": "넓적다리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -14649,7 +14649,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -14740,7 +14740,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -14831,7 +14831,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -14922,7 +14922,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -15013,7 +15013,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -15104,7 +15104,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -15195,7 +15195,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -15286,7 +15286,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -15377,7 +15377,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -15468,7 +15468,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "등뼈",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -15559,7 +15559,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "뒤정중선",
+        "regionEvidence": "허리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -15647,7 +15647,7 @@
       },
       "context": {
         "bodyRegion": "back",
-        "regionEvidence": "뒤정중선",
+        "regionEvidence": "허리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -15906,8 +15906,8 @@
         "who2008Page": 127
       },
       "context": {
-        "bodyRegion": "knee",
-        "regionEvidence": "오금",
+        "bodyRegion": "leg",
+        "regionEvidence": "아래다리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -15997,8 +15997,8 @@
         "who2008Page": 127
       },
       "context": {
-        "bodyRegion": "knee",
-        "regionEvidence": "오금",
+        "bodyRegion": "leg",
+        "regionEvidence": "아래다리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -16086,8 +16086,8 @@
         "who2008Page": 128
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "leg",
+        "regionEvidence": "아래다리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -16350,8 +16350,8 @@
         "who2008Page": 129
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "발목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -16503,8 +16503,8 @@
         "who2008Page": 130
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "복사",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -16579,8 +16579,8 @@
         "who2008Page": 131
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "발등",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -16726,8 +16726,8 @@
         "who2008Page": 132
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "발허리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -16801,8 +16801,8 @@
         "who2008Page": 132
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "발가락",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -16965,8 +16965,8 @@
         "who2008Page": 136
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "발바닥",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -17166,8 +17166,8 @@
         "who2008Page": 137
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "발목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -17240,8 +17240,8 @@
         "who2008Page": 137
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "복사",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -17315,8 +17315,8 @@
         "who2008Page": 138
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "발꿈치",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -17411,8 +17411,8 @@
         "who2008Page": 138
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "복사",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -17584,8 +17584,8 @@
         "who2008Page": 139
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "leg",
+        "regionEvidence": "아래다리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -18899,7 +18899,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -18989,7 +18989,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -19079,7 +19079,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -19169,7 +19169,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -19259,7 +19259,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -19349,7 +19349,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -19433,7 +19433,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -19611,8 +19611,8 @@
         "who2008Page": 153
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "elbow",
+        "regionEvidence": "팔꿈치",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -19686,8 +19686,8 @@
         "who2008Page": 153
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -19776,8 +19776,8 @@
         "who2008Page": 154
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -19866,8 +19866,8 @@
         "who2008Page": 154
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -19956,8 +19956,8 @@
         "who2008Page": 155
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "손목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -20031,8 +20031,8 @@
         "who2008Page": 155
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "손바닥",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -20264,8 +20264,8 @@
         "who2008Page": 158
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "손등",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -20340,8 +20340,8 @@
         "who2008Page": 159
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "손등",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -20414,8 +20414,8 @@
         "who2008Page": 159
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "wrist-hand",
+        "regionEvidence": "손목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -20489,8 +20489,8 @@
         "who2008Page": 160
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -20582,8 +20582,8 @@
         "who2008Page": 160
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -20675,8 +20675,8 @@
         "who2008Page": 161
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -20763,8 +20763,8 @@
         "who2008Page": 161
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -20856,8 +20856,8 @@
         "who2008Page": 162
       },
       "context": {
-        "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "bodyRegion": "forearm",
+        "regionEvidence": "아래팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -20947,8 +20947,8 @@
         "who2008Page": 162
       },
       "context": {
-        "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "bodyRegion": "elbow",
+        "regionEvidence": "팔꿈치",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -21070,8 +21070,8 @@
         "who2008Page": 163
       },
       "context": {
-        "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "bodyRegion": "upper-arm",
+        "regionEvidence": "위팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -21157,8 +21157,8 @@
         "who2008Page": 163
       },
       "context": {
-        "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "bodyRegion": "upper-arm",
+        "regionEvidence": "위팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -21244,8 +21244,8 @@
         "who2008Page": 164
       },
       "context": {
-        "bodyRegion": "shoulder",
-        "regionEvidence": "어깨",
+        "bodyRegion": "upper-arm",
+        "regionEvidence": "위팔",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -21331,8 +21331,8 @@
         "who2008Page": 164
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "shoulder",
+        "regionEvidence": "어깨",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -21433,8 +21433,8 @@
         "who2008Page": 165
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "shoulder",
+        "regionEvidence": "어깨",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -21505,8 +21505,8 @@
         "who2008Page": 165
       },
       "context": {
-        "bodyRegion": "head",
-        "regionEvidence": "턱",
+        "bodyRegion": "neck",
+        "regionEvidence": "목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -21580,8 +21580,8 @@
         "who2008Page": 166
       },
       "context": {
-        "bodyRegion": "head",
-        "regionEvidence": "꼭지돌기",
+        "bodyRegion": "neck",
+        "regionEvidence": "목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -21656,7 +21656,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -21763,7 +21763,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -21868,7 +21868,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": []
@@ -22036,7 +22036,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -22105,7 +22105,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -22179,7 +22179,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -22369,7 +22369,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": []
@@ -22439,7 +22439,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -22544,7 +22544,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": []
@@ -22625,7 +22625,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -22730,7 +22730,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": []
@@ -22798,7 +22798,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -22880,7 +22880,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -22966,7 +22966,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -23073,7 +23073,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -23179,8 +23179,8 @@
         "who2008Page": 177
       },
       "context": {
-        "bodyRegion": "head",
-        "regionEvidence": "꼭지돌기",
+        "bodyRegion": "neck",
+        "regionEvidence": "목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -23253,7 +23253,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -23349,7 +23349,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -23433,7 +23433,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -23517,7 +23517,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -23601,7 +23601,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -23685,7 +23685,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -23769,7 +23769,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": []
@@ -23846,8 +23846,8 @@
         "who2008Page": 181
       },
       "context": {
-        "bodyRegion": "head",
-        "regionEvidence": "뒤통수",
+        "bodyRegion": "neck",
+        "regionEvidence": "목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -24161,7 +24161,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -24732,8 +24732,8 @@
         "who2008Page": 187
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "thigh",
+        "regionEvidence": "넓적다리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -24809,8 +24809,8 @@
         "who2008Page": 187
       },
       "context": {
-        "bodyRegion": "pelvis-perineum",
-        "regionEvidence": "엉덩",
+        "bodyRegion": "thigh",
+        "regionEvidence": "넓적다리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -24897,8 +24897,8 @@
         "who2008Page": 188
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "knee",
+        "regionEvidence": "무릎",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -24973,8 +24973,8 @@
         "who2008Page": 188
       },
       "context": {
-        "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "bodyRegion": "leg",
+        "regionEvidence": "아래다리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -25476,8 +25476,8 @@
         "who2008Page": 191
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "발목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -25550,8 +25550,8 @@
         "who2008Page": 192
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "발등",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -25623,8 +25623,8 @@
         "who2008Page": 192
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "발등",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -26019,8 +26019,8 @@
         "who2008Page": 197
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "발등",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -26093,8 +26093,8 @@
         "who2008Page": 197
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "ankle-foot",
+        "regionEvidence": "발목",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -26429,8 +26429,8 @@
         "who2008Page": 199
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "knee",
+        "regionEvidence": "무릎",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -26505,8 +26505,8 @@
         "who2008Page": 200
       },
       "context": {
-        "bodyRegion": "pelvis-perineum",
-        "regionEvidence": "두덩",
+        "bodyRegion": "thigh",
+        "regionEvidence": "넓적다리",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -26934,7 +26934,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -27095,8 +27095,8 @@
         "who2008Page": 204
       },
       "context": {
-        "bodyRegion": "back",
-        "regionEvidence": "뒤정중선",
+        "bodyRegion": "pelvis-perineum",
+        "regionEvidence": "엉치",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": []
@@ -27163,8 +27163,8 @@
         "who2008Page": 205
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "back",
+        "regionEvidence": "허리",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": []
@@ -27235,8 +27235,8 @@
         "who2008Page": 205
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "back",
+        "regionEvidence": "허리",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": []
@@ -27307,8 +27307,8 @@
         "who2008Page": 206
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "back",
+        "regionEvidence": "허리",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": []
@@ -27379,8 +27379,8 @@
         "who2008Page": 206
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "back",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -27455,8 +27455,8 @@
         "who2008Page": 207
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "back",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -27531,8 +27531,8 @@
         "who2008Page": 207
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "back",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -27607,8 +27607,8 @@
         "who2008Page": 208
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "back",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -27683,8 +27683,8 @@
         "who2008Page": 208
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "back",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -27759,8 +27759,8 @@
         "who2008Page": 209
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "back",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -27835,8 +27835,8 @@
         "who2008Page": 209
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "back",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -27911,8 +27911,8 @@
         "who2008Page": 210
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "back",
+        "regionEvidence": "등 위쪽",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -28139,8 +28139,8 @@
         "who2008Page": 211
       },
       "context": {
-        "bodyRegion": "head",
-        "regionEvidence": "뒤통수",
+        "bodyRegion": "neck",
+        "regionEvidence": "목",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -28214,7 +28214,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -28290,7 +28290,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -28376,7 +28376,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -28462,7 +28462,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -28574,7 +28574,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -28660,7 +28660,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -28746,7 +28746,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -28832,7 +28832,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "머리",
+        "regionEvidence": "머리에서",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
@@ -30521,7 +30521,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": []
@@ -30591,7 +30591,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": []
@@ -30667,7 +30667,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": []
@@ -30743,7 +30743,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": []
@@ -30819,7 +30819,7 @@
       },
       "context": {
         "bodyRegion": "chest",
-        "regionEvidence": "가슴",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": []
@@ -30894,8 +30894,8 @@
         "who2008Page": 230
       },
       "context": {
-        "bodyRegion": "neck",
-        "regionEvidence": "목",
+        "bodyRegion": "chest",
+        "regionEvidence": "앞가슴",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": [
