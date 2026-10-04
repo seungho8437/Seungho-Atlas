@@ -171,7 +171,7 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
    return candidateFromHit(landmarkId,hit.partIndex,hit.hit,'specialized-detector',side,pip?'middle-finger-pip-radial-joint-surface':'middle-finger-dip-radial-joint-surface');
   };
   const down=(e:PointerEvent)=>{hover.hidden=true;tap.down(e.pointerId,e.clientX,e.clientY,e.pointerType==='touch'?12:5);};
-  const move=(e:PointerEvent)=>{tap.move(e.pointerId,e.clientX,e.clientY);if(e.buttons||amount<.5||e.pointerType==='touch'){hover.hidden=true;return;}const rect=el.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top,index=findTarget(x,y,12);hover.hidden=index<0;renderer.domElement.style.cursor=index<0?'grab':'pointer';if(index>=0){hover.textContent=atlas.parts[index].name;hover.style.left=`${Math.max(8,Math.min(x+14,el.clientWidth-260))}px`;hover.style.top=`${Math.max(8,Math.min(y+18,el.clientHeight-55))}px`;}};
+  const move=(e:PointerEvent)=>{tap.move(e.pointerId,e.clientX,e.clientY);if(anchorTargetRef.current){hover.hidden=true;renderer.domElement.style.cursor='crosshair';return;}if(e.buttons||amount<.5||e.pointerType==='touch'){hover.hidden=true;renderer.domElement.style.cursor='grab';return;}const rect=el.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top,index=findTarget(x,y,12);hover.hidden=index<0;renderer.domElement.style.cursor=index<0?'grab':'pointer';if(index>=0){hover.textContent=atlas.parts[index].name;hover.style.left=`${Math.max(8,Math.min(x+14,el.clientWidth-260))}px`;hover.style.top=`${Math.max(8,Math.min(y+18,el.clientHeight-55))}px`;}};
   const cancel=(e:PointerEvent)=>tap.cancel(e.pointerId);
   const up=(e:PointerEvent)=>{
    const validTap=tap.up(e.pointerId,e.clientX,e.clientY);if(!validTap||!ready)return;const rect=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);
@@ -235,6 +235,8 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
     dirty=true;
    }
    const draft=anchorDraftRef.current,proposalState=detectorProposalStateRef.current;
+   const integumentaryMaterial=mats.get('integumentary') as T.MeshStandardMaterial|undefined;
+   if(integumentaryMaterial){const opacity=anchorTargetRef.current?.length?.55:.1;if(integumentaryMaterial.opacity!==opacity){integumentaryMaterial.opacity=opacity;integumentaryMaterial.needsUpdate=true;dirty=true;}}
    anchorMarker.visible=!!draft&&!!anchorTargetRef.current;proposalMarker.visible=!!proposalState&&!!anchorTargetRef.current;
    if(draft)anchorMarker.position.fromArray(draft.position);
    if(proposalState)proposalMarker.position.fromArray(proposalState.position);
