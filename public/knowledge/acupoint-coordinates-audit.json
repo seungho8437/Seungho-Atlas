@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T10:56:09.505Z",
+  "generatedAt": "2026-10-04T10:58:10.723Z",
   "logicalAcupoints": 361,
   "physicalCoordinates": 670,
   "expectedPhysicalCoordinates": 670,
@@ -8,58 +8,33 @@
   "invalidGeometryOrLaterality": [],
   "duplicateClusters": [
     [
-      "LU4",
-      "ST16"
+      "ST6",
+      "GB13"
     ],
     [
-      "LU10",
-      "LI2"
+      "ST27",
+      "KI14"
     ],
     [
-      "ST8",
-      "TE19",
-      "GB4",
-      "GB5",
-      "GB6"
+      "ST28",
+      "KI13"
+    ],
+    [
+      "ST29",
+      "KI12"
+    ],
+    [
+      "ST29",
+      "SP13"
     ],
     [
       "ST42",
-      "SP4",
-      "LR2"
+      "BL61"
     ],
     [
-      "ST42",
-      "SP4",
-      "BL61",
-      "LR2"
-    ],
-    [
-      "ST43",
-      "BL63",
-      "GB41",
-      "LR3"
-    ],
-    [
-      "ST43",
-      "BL63",
-      "GB41",
-      "LR3"
-    ],
-    [
-      "SP2",
-      "KI22"
-    ],
-    [
-      "HT4",
-      "HT5"
-    ],
-    [
-      "HT4",
-      "PC6"
-    ],
-    [
-      "SI18",
-      "GB1"
+      "ST45",
+      "BL67",
+      "GB44"
     ],
     [
       "SI19",
@@ -70,20 +45,77 @@
       "GB15"
     ],
     [
-      "TE19",
-      "GB4",
-      "GB5",
-      "GB6"
+      "BL4",
+      "GB15"
+    ],
+    [
+      "BL6",
+      "GB17"
+    ],
+    [
+      "BL63",
+      "GB41"
+    ],
+    [
+      "KI5",
+      "LR9"
+    ],
+    [
+      "GV13",
+      "GV15"
+    ],
+    [
+      "CV6",
+      "CV7"
+    ]
+  ],
+  "exactDuplicateClusters": [
+    [
+      "ST6",
+      "GB13"
+    ],
+    [
+      "ST42",
+      "BL61"
+    ],
+    [
+      "ST45",
+      "BL67",
+      "GB44"
+    ],
+    [
+      "BL4",
+      "GB15"
+    ],
+    [
+      "BL4",
+      "GB15"
+    ],
+    [
+      "BL6",
+      "GB17"
+    ],
+    [
+      "BL63",
+      "GB41"
+    ],
+    [
+      "KI5",
+      "LR9"
+    ],
+    [
+      "CV6",
+      "CV7"
     ]
   ],
   "confidenceCounts": {
-    "moderate": 315,
-    "high": 339,
-    "low": 16
+    "moderate": 321,
+    "high": 341,
+    "low": 8
   },
   "projectionDistance": {
-    "max": 0.1079,
-    "mean": 0.03323686567164177
+    "max": 0.1207,
+    "mean": 0.03488910447761192
   },
   "axes": {
     "source": "native BodyParts3D 4.0 atlas coordinates",
