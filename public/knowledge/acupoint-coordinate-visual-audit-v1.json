@@ -227,7 +227,9 @@
     "LR6:right",
     "ST3:right",
     "ST7:left",
-    "ST7:right"
+    "ST7:right",
+    "LU8:left",
+    "LU8:right"
   ],
   "sweepResult": {
     "result": "PASS except the explicitly listed CORRECT and ambiguous/model-limitation cases.",
@@ -237,5 +239,12 @@
       "Long segment lines between anatomically distant consecutive meridian points were not treated as errors by themselves; they were judged against WHO regional sequence."
     ]
   },
-  "nextStep": "User re-confirms definiteCorrect and ambiguousUserRecheck groups. Only then modify generator rules, regenerate all 361/670 coordinates, rerun hard gates, and repeat focused visual regression."
+  "nextStep": "User re-confirms definiteCorrect and ambiguousUserRecheck groups. Only then modify generator rules, regenerate all 361/670 coordinates, rerun hard gates, and repeat focused visual regression.",
+  "summary": {
+    "PASS": 612,
+    "CORRECT": 8,
+    "MODEL_LIMITATION": 50,
+    "userRecheckPhysicalCoordinates": 58,
+    "note": "PASS includes 44 detailed high-risk points and 568 points accepted at meridian-sweep level. CORRECT includes 5 detailed high-risk points and 3 additional sweep-detected points. MODEL_LIMITATION includes 36 detailed/ambiguous high-risk points and 14 additional sweep-detected points."
+  }
 }
