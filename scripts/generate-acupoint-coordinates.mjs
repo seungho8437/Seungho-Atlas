@@ -158,11 +158,10 @@ function applyWhoConstraints(input,text,side){
   if(lateral&&sideSign){
     const n=Number(lateral[1]);
     const frac=Math.min(.92,n/6*.84);
-    // B-cun is a proportional surface measure. At the abdomen the raw
-    // cross-section sampler can underestimate torso width because limbs share
-    // the same superior-inferior band. Preserve a minimum physical offset
-    // derived from the model's longitudinal B-cun scale.
-    const offset=Math.max(localHalfWidth(t[supAxis])*frac,n*cunY);
+    const baseOffset=localHalfWidth(t[supAxis])*frac;
+    // Only abdominal midline offsets need a minimum proportional distance.
+    // Applying this globally collapses some head points after skin projection.
+    const offset=/배|복부/.test(text)?Math.max(baseOffset,n*cunY):baseOffset;
     t[lrAxis]=bodyCenter[lrAxis]+sideSign*offset;
     count++;
   }
@@ -257,14 +256,6 @@ function applyWhoConstraints(input,text,side){
   if(/눈썹\s*안쪽끝/.test(text)){t[supAxis]=norm(supAxis,.885);count++;}
   if(/앞위쪽/.test(text)){t[supAxis]+=cunY*.7;count++;}
   if(/배꼽\s*중심과\s*같은\s*높이/.test(text)){t[supAxis]=norm(supAxis,.455);count++;}
-  if(/회음\s*부위|항문과\s*(?:생식기|음낭|대음순)/.test(text)){
-    // CV1: perineal midpoint. Keep the target at the pelvic floor instead of
-    // allowing a broad perineum concept centroid to pull it into the trunk.
-    t[supAxis]=norm(supAxis,.375);
-    t[lrAxis]=bodyCenter[lrAxis];
-    t[apAxis]=bodyCenter[apAxis]-anteriorSign*extent[apAxis]*.10;
-    count+=3;
-  }
   if(/가쪽배/.test(text)&&sideSign){
     t[lrAxis]=localSideLateral(t[supAxis],sideSign,.78);
     count++;
@@ -847,6 +838,17 @@ function applyReviewedExceptionProjection(item){
     }
   }
 
+  if(item.acupointId==='LR10'){
+    const st30=resultByKey.get('ST30:'+item.side);
+    if(st30){
+      const target=[...st30.position];
+      target[supAxis]-=3*cunY;
+      mark(target,{sup:true,lr:true},'reviewed-LR10-3-cun-distal-to-ST30');
+      item.confidence='moderate';
+      return true;
+    }
+  }
+
   if(item.acupointId==='GV15'){
     const gv16=resultByKey.get('GV16:midline');
     if(gv16){
@@ -861,26 +863,6 @@ function applyReviewedExceptionProjection(item){
 }
 for(const item of results) applyReviewedExceptionProjection(item);
 function updateFromRelativeDefinition(item,text){
-  const refOffset=text.match(/([A-Z]{1,2}\d+)보다\s*(몸쪽|먼쪽)으로\s*(\d+(?:\.\d+)?)\s*B-cun/);
-  if(refOffset){
-    const ref=resultByKey.get(refOffset[1]+':'+item.side);
-    if(ref){
-      const target=[...ref.position];
-      const n=Number(refOffset[3]);
-      const proximal=refOffset[2]==='몸쪽';
-      target[supAxis]+=(proximal?1:-1)*n*cunY;
-      const pr=project(target,item.side,{sup:true,lr:true},projectionRegion(text,target));
-      item.position=pr.point.map(v=>+v.toFixed(4));
-      item.validation.projectionDistance=+pr.distance.toFixed(4);
-      item.validation.projectionDelta=pr.point.map((v,i)=>+(v-target[i]).toFixed(4));
-      item.validation.regionConstrained=true;
-      item.validation.surfacePartId=pr.part;
-      item.validation.preProjectionTarget=target.map(v=>+v.toFixed(4));
-      item.validation.relativeConstraint='reference-point-B-cun-offset';
-      if(item.confidence==='low')item.confidence='moderate';
-      return true;
-    }
-  }
   const pair=text.match(/([A-Z]{1,2}\d+)\s*(?:와|과)\s*([A-Z]{1,2}\d+)(?:을|를)\s*잇는\s*(?:곡선|선)/);
   if(!pair)return false;
   const a=resultByKey.get(pair[1]+':'+item.side), b=resultByKey.get(pair[2]+':'+item.side);
