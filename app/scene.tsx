@@ -11,15 +11,15 @@ import type {AcupointCoordinate} from '@/lib/anatomy-knowledge/types';
 import type {LandmarkAnchorCandidate,LandmarkAnchorSide} from '@/lib/anatomy-knowledge/landmark-anchors';
 interface Props {
  atlas:Atlas;state:SceneState;acupointCoordinates:AcupointCoordinate[];showAcupoints:boolean;
- anchorTarget:string|null;anchorDraft:LandmarkAnchorCandidate|null;detectorSide:LandmarkAnchorSide;
+ anchorTarget:string|null;anchorDraft:LandmarkAnchorCandidate|null;detectorProposal:LandmarkAnchorCandidate|null;detectorSide:LandmarkAnchorSide;
  onAnchorPick:(candidate:LandmarkAnchorCandidate)=>void;onDetectorProposal:(candidate:LandmarkAnchorCandidate|null)=>void;
  onSelect:(id:string)=>void;onSelectAcupoint:(id:string)=>void;onProgress:(n:number)=>void;onError:(s:string)=>void
 }
-export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoints,anchorTarget,anchorDraft,detectorSide,onAnchorPick,onDetectorProposal,onSelect,onSelectAcupoint,onProgress,onError}:Props){
+export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoints,anchorTarget,anchorDraft,detectorProposal,detectorSide,onAnchorPick,onDetectorProposal,onSelect,onSelectAcupoint,onProgress,onError}:Props){
  const host=useRef<HTMLDivElement>(null),latest=useRef(state),select=useRef(onSelect),selectAcupoint=useRef(onSelectAcupoint),showAcupointsRef=useRef(showAcupoints);
- const anchorTargetRef=useRef(anchorTarget),anchorDraftRef=useRef(anchorDraft),detectorSideRef=useRef(detectorSide),anchorPickRef=useRef(onAnchorPick),detectorProposalRef=useRef(onDetectorProposal);
+ const anchorTargetRef=useRef(anchorTarget),anchorDraftRef=useRef(anchorDraft),detectorProposalStateRef=useRef(detectorProposal),detectorSideRef=useRef(detectorSide),anchorPickRef=useRef(onAnchorPick),detectorProposalRef=useRef(onDetectorProposal);
  latest.current=state;select.current=onSelect;selectAcupoint.current=onSelectAcupoint;showAcupointsRef.current=showAcupoints;
- anchorTargetRef.current=anchorTarget;anchorDraftRef.current=anchorDraft;detectorSideRef.current=detectorSide;anchorPickRef.current=onAnchorPick;detectorProposalRef.current=onDetectorProposal;
+ anchorTargetRef.current=anchorTarget;anchorDraftRef.current=anchorDraft;detectorProposalStateRef.current=detectorProposal;detectorSideRef.current=detectorSide;anchorPickRef.current=onAnchorPick;detectorProposalRef.current=onDetectorProposal;
  useEffect(()=>{
   const el=host.current!;let disposed=false,frame=0,dirty=true,ready=false,lastView='',lastReset=-1,lastIsolate='',layoutKey='',amount=0;
   let lastState:SceneState|null=null;
