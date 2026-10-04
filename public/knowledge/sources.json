@@ -36,5 +36,12 @@
     "publisher": "Korean Journal of Acupuncture",
     "year": 2006,
     "note": "Used as an interpretive modern-anatomy correspondence source for the Foot Yangming meridian sinew."
+  },
+  "KAA_TERMINOLOGY_6": {
+    "id": "KAA_TERMINOLOGY_6",
+    "title": "해부학용어 제6판 (Korean Anatomical Terminology, 6th ed.)",
+    "publisher": "대한해부학회",
+    "year": 2014,
+    "note": "Reference standard for Korean anatomical terminology. The atlas stores independently curated mappings rather than reproducing the terminology book."
   }
 }
