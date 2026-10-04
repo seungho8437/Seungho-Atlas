@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "standardAcupointCount": 361,
+  "measurementFrameCount": 237,
+  "calibrationGeometry": {
+    "readyIntervalCount": 20,
+    "referencedCalibrationCount": 16,
+    "unreferencedReadyCalibrations": [
+      "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE",
+      "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+      "KNEE_MEDIAL_TIBIAL_CONDYLE_TO_PATELLA_APEX",
+      "F_CUN_MIDDLE_FINGER"
+    ],
+    "referencedCalibrationIds": [
+      "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS",
+      "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+      "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE",
+      "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "CHEST_NIPPLE_TO_NIPPLE",
+      "CHEST_SUPRASTERNAL_TO_XIPHISTERNAL",
+      "FOREARM_CUBITAL_TO_WRIST",
+      "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+      "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+      "HEAD_MASTOID_TO_MASTOID",
+      "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+      "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS",
+      "THIGH_GLUTEAL_FOLD_TO_POPLITEAL",
+      "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+      "THIGH_PUBIC_TO_PATELLA_BASE",
+      "UPPER_ARM_AXILLARY_TO_CUBITAL"
+    ]
+  },
+  "connections": {
+    "directFrames": 186,
+    "provisionalFrames": 40,
+    "fingerMethodFrames": 11,
+    "directAutoSolveFrames": 172,
+    "pathMetricPendingFrames": 2,
+    "endpointAlternativeReviewFrames": 15
+  },
+  "solver": {
+    "readyPointPlans": 78,
+    "reviewRequiredPointPlans": 283
+  },
+  "invariants": {
+    "all361Covered": true,
+    "allNonFingerMeasurementFramesHaveGeometry": true,
+    "provisionalReferencesRemainGated": true,
+    "fingerMethodsRemainUnselected": true,
+    "noGlobalBodyHeightCun": true
+  },
+  "coordinateFrame": {
+    "superiorInferiorAxis": 1,
+    "leftRightAxis": 0,
+    "anteriorPosteriorAxis": 2
+  }
+}

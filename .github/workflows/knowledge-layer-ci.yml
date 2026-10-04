@@ -26,6 +26,7 @@ jobs:
       - run: node scripts/validate-acupoint-specialized-landmarks.mjs
       - run: node scripts/validate-landmark-anchor-ui.mjs
       - run: node scripts/validate-acupoint-final-calibration-geometry.mjs
+      - run: node scripts/validate-acupoint-coordinate-solver.mjs
       - run: npm run audit:korean
       - run: npm run audit:terminology
       - run: npm run build
