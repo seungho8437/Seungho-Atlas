@@ -200,7 +200,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 1,
-    "who2008Page": 34
+    "who2008Page": 34,
+    "locationKo": "집게손가락 끝마디뼈의 노쪽에서 집게손톱 노쪽 모서리의 몸쪽·가쪽으로 0.1 F-cun 떨어진 곳이며, 손톱 노쪽 경계의 세로선과 손톱바닥의 가로선이 만나는 지점이다."
   },
   {
     "id": "LI2",
@@ -216,7 +217,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 2,
-    "who2008Page": 34
+    "who2008Page": 34,
+    "locationKo": "집게손가락에서 둘째 손허리손가락관절의 노쪽 먼쪽 오목한 곳, 손바닥과 손등 피부의 경계에 있다."
   },
   {
     "id": "LI3",
@@ -232,7 +234,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 3,
-    "who2008Page": 35
+    "who2008Page": 35,
+    "locationKo": "손등에서 둘째 손허리손가락관절의 노쪽 몸쪽 오목한 곳에 있다."
   },
   {
     "id": "LI4",
@@ -248,7 +251,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 4,
-    "who2008Page": 35
+    "who2008Page": 35,
+    "locationKo": "손등에서 둘째손허리뼈 중간 높이의 노쪽에 있다."
   },
   {
     "id": "LI5",
@@ -264,7 +268,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 5,
-    "who2008Page": 36
+    "who2008Page": 36,
+    "locationKo": "손목 뒤가쪽에서 손등쪽 손목주름의 노쪽, 노뼈붓돌기 먼쪽의 해부학코담배갑 오목에 있다. 엄지를 충분히 벌리고 펴면 긴엄지폄근힘줄과 짧은엄지폄근힘줄 사이에서 오목이 형성된다."
   },
   {
     "id": "LI6",
@@ -280,7 +285,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 6,
-    "who2008Page": 36
+    "who2008Page": 36,
+    "locationKo": "아래팔 뒤가쪽에서 LI5와 LI11을 잇는 선 위, 손등쪽 손목주름에서 위로 3 B-cun 떨어진 곳이다."
   },
   {
     "id": "LI7",
@@ -296,7 +302,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 7,
-    "who2008Page": 37
+    "who2008Page": 37,
+    "locationKo": "아래팔 뒤가쪽에서 LI5와 LI11을 잇는 선 위, 손등쪽 손목주름에서 위로 5 B-cun 떨어진 곳이다."
   },
   {
     "id": "LI8",
@@ -312,7 +319,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 8,
-    "who2008Page": 37
+    "who2008Page": 37,
+    "locationKo": "아래팔 뒤가쪽에서 LI5와 LI11을 잇는 선 위, 팔오금주름에서 아래로 4 B-cun 떨어진 곳이다."
   },
   {
     "id": "LI9",
@@ -328,7 +336,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 9,
-    "who2008Page": 38
+    "who2008Page": 38,
+    "locationKo": "아래팔 뒤가쪽에서 LI5와 LI11을 잇는 선 위, 팔오금주름에서 아래로 3 B-cun 떨어진 곳이다."
   },
   {
     "id": "LI10",
@@ -344,7 +353,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 10,
-    "who2008Page": 38
+    "who2008Page": 38,
+    "locationKo": "아래팔 뒤가쪽에서 LI5와 LI11을 잇는 선 위, 팔오금주름에서 아래로 2 B-cun 떨어진 곳이다."
   },
   {
     "id": "LI11",
@@ -360,7 +370,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 11,
-    "who2008Page": 39
+    "who2008Page": 39,
+    "locationKo": "팔꿈치 가쪽에서 LU5와 위팔뼈 가쪽위관절융기를 잇는 선의 중점에 있다. 팔꿈치를 완전히 굽히면 팔오금주름 가쪽 끝의 오목한 곳이다."
   },
   {
     "id": "LI12",
@@ -376,7 +387,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 12,
-    "who2008Page": 39
+    "who2008Page": 39,
+    "locationKo": "팔꿈치 뒤가쪽에서 위팔뼈 가쪽위관절융기 위쪽, 가쪽관절융기위능선의 앞쪽에 있다."
   },
   {
     "id": "LI13",
@@ -392,7 +404,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 13,
-    "who2008Page": 40
+    "who2008Page": 40,
+    "locationKo": "위팔 가쪽에서 LI11과 LI15를 잇는 선 위, 팔오금주름에서 위로 3 B-cun 떨어진 곳이다."
   },
   {
     "id": "LI14",
@@ -408,7 +421,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 14,
-    "who2008Page": 40
+    "who2008Page": 40,
+    "locationKo": "위팔 가쪽에서 어깨세모근 경계 바로 앞쪽, LI11에서 위로 7 B-cun 떨어진 곳이다."
   },
   {
     "id": "LI15",
@@ -424,7 +438,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 15,
-    "who2008Page": 41
+    "who2008Page": 41,
+    "locationKo": "어깨이음부에서 봉우리 가쪽모서리의 앞끝과 위팔뼈 큰결절 사이의 오목한 곳이다. 팔을 벌리면 봉우리 앞뒤에 오목이 생기며, 그중 앞쪽의 더 깊은 오목이 LI15이다."
   },
   {
     "id": "LI16",
@@ -440,7 +455,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 16,
-    "who2008Page": 41
+    "who2008Page": 41,
+    "locationKo": "어깨이음부에서 빗장뼈 봉우리끝과 어깨뼈가시 사이의 오목한 곳, 즉 가시위오목 가쪽에서 두 뼈 사이의 오목에 있다."
   },
   {
     "id": "LI17",
@@ -456,7 +472,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 17,
-    "who2008Page": 42
+    "who2008Page": 42,
+    "locationKo": "목 앞쪽에서 반지연골과 같은 높이이며, 목빗근 경계 바로 뒤쪽에 있다. LI18 바로 아래이고 ST10과 같은 높이이다."
   },
   {
     "id": "LI18",
@@ -472,7 +489,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 18,
-    "who2008Page": 42
+    "who2008Page": 42,
+    "locationKo": "목 앞쪽에서 방패연골 위모서리와 같은 높이이며, 목빗근의 앞모서리와 뒷모서리 사이에 있다."
   },
   {
     "id": "LI19",
@@ -488,7 +506,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 19,
-    "who2008Page": 43
+    "who2008Page": 43,
+    "locationKo": "얼굴에서 인중의 중점과 같은 높이이며 콧방울 가쪽모서리 아래에 있다. GV26에서 가쪽으로 0.5 B-cun 떨어진 곳이다."
   },
   {
     "id": "LI20",
@@ -504,7 +523,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 20,
-    "who2008Page": 43
+    "who2008Page": 43,
+    "locationKo": "얼굴의 코입술고랑에서 콧방울 가쪽모서리 중점과 같은 높이에 있다."
   },
   {
     "id": "ST1",
