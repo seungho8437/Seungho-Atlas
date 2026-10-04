@@ -56,5 +56,17 @@
     "title": "Unicode Han Database (Unihan) readings",
     "publisher": "Unicode Consortium",
     "note": "Used to cross-check Korean readings of Han characters; point-name readings are normalized separately."
+  },
+  "LINGSHU_JINGJIN": {
+    "id": "LINGSHU_JINGJIN",
+    "title": "黃帝內經靈樞·經筋",
+    "note": "Classical source for the twelve meridian-sinew pathways. Atlas pathway descriptions are concise modern Korean summaries rather than verbatim reproduction."
+  },
+  "KJA_FOOT_THREE_YANG_2008": {
+    "id": "KJA_FOOT_THREE_YANG_2008",
+    "title": "A Study on Muscular System of Foot Three Yang Meridian-Muscle",
+    "publisher": "Korean Journal of Acupuncture",
+    "year": 2008,
+    "note": "Interpretive comparison between Foot Three Yang meridian-sinews and modern muscular anatomy; not treated as one-to-one anatomical identity."
   }
 }
