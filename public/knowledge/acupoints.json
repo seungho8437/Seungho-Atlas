@@ -5266,7 +5266,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 1,
-    "who2008Page": 204
+    "who2008Page": 204,
+    "locationKo": "회음 부위에서 꼬리뼈 아래, 꼬리뼈 끝과 항문 사이의 중점에 있다."
   },
   {
     "id": "GV2",
@@ -5282,7 +5283,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 2,
-    "who2008Page": 204
+    "who2008Page": 204,
+    "locationKo": "엉치 부위에서 뒤정중선 위의 엉치뼈틈새에 있다."
   },
   {
     "id": "GV3",
@@ -5298,7 +5300,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 3,
-    "who2008Page": 205
+    "who2008Page": 205,
+    "locationKo": "허리에서 넷째허리뼈(L4) 가시돌기 아래의 오목한 곳, 뒤정중선 위에 있다."
   },
   {
     "id": "GV4",
@@ -5314,7 +5317,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 4,
-    "who2008Page": 205
+    "who2008Page": 205,
+    "locationKo": "허리에서 둘째허리뼈(L2) 가시돌기 아래의 오목한 곳, 뒤정중선 위에 있다."
   },
   {
     "id": "GV5",
@@ -5330,7 +5334,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 5,
-    "who2008Page": 206
+    "who2008Page": 206,
+    "locationKo": "허리에서 첫째허리뼈(L1) 가시돌기 아래의 오목한 곳, 뒤정중선 위에 있다."
   },
   {
     "id": "GV6",
@@ -5346,7 +5351,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 6,
-    "who2008Page": 206
+    "who2008Page": 206,
+    "locationKo": "등 위쪽에서 열한째등뼈(T11) 가시돌기 아래의 오목한 곳, 뒤정중선 위에 있다."
   },
   {
     "id": "GV7",
@@ -5362,7 +5368,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 7,
-    "who2008Page": 207
+    "who2008Page": 207,
+    "locationKo": "등 위쪽에서 열째등뼈(T10) 가시돌기 아래의 오목한 곳, 뒤정중선 위에 있다."
   },
   {
     "id": "GV8",
@@ -5378,7 +5385,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 8,
-    "who2008Page": 207
+    "who2008Page": 207,
+    "locationKo": "등 위쪽에서 아홉째등뼈(T9) 가시돌기 아래의 오목한 곳, 뒤정중선 위에 있다."
   },
   {
     "id": "GV9",
@@ -5394,7 +5402,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 9,
-    "who2008Page": 208
+    "who2008Page": 208,
+    "locationKo": "등 위쪽에서 일곱째등뼈(T7) 가시돌기 아래의 오목한 곳, 뒤정중선 위에 있다."
   },
   {
     "id": "GV10",
@@ -5410,7 +5419,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 10,
-    "who2008Page": 208
+    "who2008Page": 208,
+    "locationKo": "등 위쪽에서 여섯째등뼈(T6) 가시돌기 아래의 오목한 곳, 뒤정중선 위에 있다."
   },
   {
     "id": "GV11",
@@ -5426,7 +5436,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 11,
-    "who2008Page": 209
+    "who2008Page": 209,
+    "locationKo": "등 위쪽에서 다섯째등뼈(T5) 가시돌기 아래의 오목한 곳, 뒤정중선 위에 있다."
   },
   {
     "id": "GV12",
@@ -5442,7 +5453,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 12,
-    "who2008Page": 209
+    "who2008Page": 209,
+    "locationKo": "등 위쪽에서 셋째등뼈(T3) 가시돌기 아래의 오목한 곳, 뒤정중선 위에 있다."
   },
   {
     "id": "GV13",
@@ -5458,7 +5470,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 13,
-    "who2008Page": 210
+    "who2008Page": 210,
+    "locationKo": "등 위쪽에서 첫째등뼈(T1) 가시돌기 아래의 오목한 곳, 뒤정중선 위에 있다."
   },
   {
     "id": "GV14",
@@ -5474,7 +5487,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 14,
-    "who2008Page": 210
+    "who2008Page": 210,
+    "locationKo": "목 뒤쪽에서 일곱째목뼈(C7) 가시돌기 아래의 오목한 곳, 뒤정중선 위에 있다."
   },
   {
     "id": "GV15",
@@ -5490,7 +5504,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 15,
-    "who2008Page": 211
+    "who2008Page": 211,
+    "locationKo": "목 뒤쪽에서 둘째목뼈(C2) 가시돌기 위의 오목한 곳, 뒤정중선 위에 있다."
   },
   {
     "id": "GV16",
@@ -5506,7 +5521,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 16,
-    "who2008Page": 211
+    "who2008Page": 211,
+    "locationKo": "목 뒤쪽에서 바깥뒤통수뼈융기 바로 아래, 양쪽 등세모근 사이의 오목한 곳에 있다."
   },
   {
     "id": "GV17",
@@ -5522,7 +5538,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 17,
-    "who2008Page": 212
+    "who2008Page": 212,
+    "locationKo": "머리에서 바깥뒤통수뼈융기 위쪽의 오목한 곳, 뒤정중선 위에 있다."
   },
   {
     "id": "GV18",
@@ -5538,7 +5555,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 18,
-    "who2008Page": 212
+    "who2008Page": 212,
+    "locationKo": "머리에서 뒤머리선보다 위로 4 B-cun, 뒤정중선 위에 있다."
   },
   {
     "id": "GV19",
@@ -5554,7 +5572,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 19,
-    "who2008Page": 213
+    "who2008Page": 213,
+    "locationKo": "머리에서 뒤머리선보다 위로 5.5 B-cun, 뒤정중선 위에 있다."
   },
   {
     "id": "GV20",
@@ -5570,7 +5589,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 20,
-    "who2008Page": 213
+    "who2008Page": 213,
+    "locationKo": "머리에서 앞머리선보다 위로 5 B-cun, 앞정중선 위에 있다. 양쪽 귓바퀴 꼭대기를 잇는 선의 중점에 해당한다."
   },
   {
     "id": "GV21",
@@ -5586,7 +5606,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 21,
-    "who2008Page": 214
+    "who2008Page": 214,
+    "locationKo": "머리에서 앞머리선보다 위로 3.5 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "GV22",
@@ -5602,7 +5623,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 22,
-    "who2008Page": 214
+    "who2008Page": 214,
+    "locationKo": "머리에서 앞머리선보다 위로 2 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "GV23",
@@ -5618,7 +5640,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 23,
-    "who2008Page": 215
+    "who2008Page": 215,
+    "locationKo": "머리에서 앞머리선보다 위로 1 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "GV24",
@@ -5634,7 +5657,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 24,
-    "who2008Page": 215
+    "who2008Page": 215,
+    "locationKo": "머리에서 앞머리선보다 위로 0.5 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "GV25",
@@ -5650,7 +5674,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 25,
-    "who2008Page": 216
+    "who2008Page": 216,
+    "locationKo": "얼굴에서 코끝에 있다."
   },
   {
     "id": "GV26",
@@ -5666,7 +5691,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 26,
-    "who2008Page": 216
+    "who2008Page": 216,
+    "locationKo": "얼굴에서 인중 정중선의 중점에 있다."
   },
   {
     "id": "GV27",
@@ -5682,7 +5708,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 27,
-    "who2008Page": 217
+    "who2008Page": 217,
+    "locationKo": "얼굴에서 윗입술결절의 중점에 있다."
   },
   {
     "id": "GV28",
@@ -5698,7 +5725,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 28,
-    "who2008Page": 217
+    "who2008Page": 217,
+    "locationKo": "얼굴에서 윗입술소대와 윗잇몸이 만나는 곳에 있다."
   },
   {
     "id": "CV1",
@@ -5714,7 +5742,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 1,
-    "who2008Page": 220
+    "who2008Page": 220,
+    "locationKo": "회음 부위에서 항문과 생식기 사이의 중점에 있다. 남성은 항문과 음낭 뒤모서리 사이, 여성은 항문과 대음순 뒤맞교차 사이의 중점이다."
   },
   {
     "id": "CV2",
@@ -5730,7 +5759,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 2,
-    "who2008Page": 220
+    "who2008Page": 220,
+    "locationKo": "아랫배에서 두덩결합 위쪽, 앞정중선 위에 있다."
   },
   {
     "id": "CV3",
@@ -5746,7 +5776,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 3,
-    "who2008Page": 221
+    "who2008Page": 221,
+    "locationKo": "아랫배에서 배꼽 중심보다 아래로 4 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "CV4",
@@ -5762,7 +5793,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 4,
-    "who2008Page": 221
+    "who2008Page": 221,
+    "locationKo": "아랫배에서 배꼽 중심보다 아래로 3 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "CV5",
@@ -5778,7 +5810,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 5,
-    "who2008Page": 222
+    "who2008Page": 222,
+    "locationKo": "아랫배에서 배꼽 중심보다 아래로 2 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "CV6",
@@ -5794,7 +5827,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 6,
-    "who2008Page": 222
+    "who2008Page": 222,
+    "locationKo": "아랫배에서 배꼽 중심보다 아래로 1.5 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "CV7",
@@ -5810,7 +5844,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 7,
-    "who2008Page": 223
+    "who2008Page": 223,
+    "locationKo": "아랫배에서 배꼽 중심보다 아래로 1 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "CV8",
@@ -5826,7 +5861,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 8,
-    "who2008Page": 223
+    "who2008Page": 223,
+    "locationKo": "윗배에서 배꼽 중심에 있다."
   },
   {
     "id": "CV9",
@@ -5842,7 +5878,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 9,
-    "who2008Page": 224
+    "who2008Page": 224,
+    "locationKo": "윗배에서 배꼽 중심보다 위로 1 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "CV10",
@@ -5858,7 +5895,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 10,
-    "who2008Page": 224
+    "who2008Page": 224,
+    "locationKo": "윗배에서 배꼽 중심보다 위로 2 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "CV11",
@@ -5874,7 +5912,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 11,
-    "who2008Page": 225
+    "who2008Page": 225,
+    "locationKo": "윗배에서 배꼽 중심보다 위로 3 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "CV12",
@@ -5890,7 +5929,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 12,
-    "who2008Page": 225
+    "who2008Page": 225,
+    "locationKo": "윗배에서 배꼽 중심보다 위로 4 B-cun, 앞정중선 위에 있다. 칼몸통결합과 배꼽 중심을 잇는 선의 중점에 해당한다."
   },
   {
     "id": "CV13",
@@ -5906,7 +5946,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 13,
-    "who2008Page": 226
+    "who2008Page": 226,
+    "locationKo": "윗배에서 배꼽 중심보다 위로 5 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "CV14",
@@ -5922,7 +5963,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 14,
-    "who2008Page": 226
+    "who2008Page": 226,
+    "locationKo": "윗배에서 배꼽 중심보다 위로 6 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "CV15",
@@ -5938,7 +5980,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 15,
-    "who2008Page": 227
+    "who2008Page": 227,
+    "locationKo": "윗배에서 칼몸통결합보다 아래로 1 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "CV16",
@@ -5954,7 +5997,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 16,
-    "who2008Page": 227
+    "who2008Page": 227,
+    "locationKo": "앞가슴에서 칼몸통결합의 중점, 앞정중선 위에 있다."
   },
   {
     "id": "CV17",
@@ -5970,7 +6014,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 17,
-    "who2008Page": 228
+    "who2008Page": 228,
+    "locationKo": "앞가슴에서 넷째 갈비사이공간과 같은 높이, 앞정중선 위에 있다."
   },
   {
     "id": "CV18",
@@ -5986,7 +6031,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 18,
-    "who2008Page": 228
+    "who2008Page": 228,
+    "locationKo": "앞가슴에서 셋째 갈비사이공간과 같은 높이, 앞정중선 위에 있다."
   },
   {
     "id": "CV19",
@@ -6002,7 +6048,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 19,
-    "who2008Page": 229
+    "who2008Page": 229,
+    "locationKo": "앞가슴에서 둘째 갈비사이공간과 같은 높이, 앞정중선 위에 있다."
   },
   {
     "id": "CV20",
@@ -6018,7 +6065,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 20,
-    "who2008Page": 229
+    "who2008Page": 229,
+    "locationKo": "앞가슴에서 첫째 갈비사이공간과 같은 높이, 앞정중선 위에 있다."
   },
   {
     "id": "CV21",
@@ -6034,7 +6082,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 21,
-    "who2008Page": 230
+    "who2008Page": 230,
+    "locationKo": "앞가슴에서 목아래오목보다 아래로 1 B-cun, 앞정중선 위에 있다."
   },
   {
     "id": "CV22",
@@ -6050,7 +6099,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 22,
-    "who2008Page": 230
+    "who2008Page": 230,
+    "locationKo": "목 앞쪽에서 목아래오목의 중심, 앞정중선 위에 있다."
   },
   {
     "id": "CV23",
@@ -6066,7 +6116,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 23,
-    "who2008Page": 231
+    "who2008Page": 231,
+    "locationKo": "목 앞쪽에서 방패연골 위모서리보다 위쪽, 목뿔뼈 위의 오목한 곳이며 앞정중선 위에 있다."
   },
   {
     "id": "CV24",
@@ -6082,6 +6133,7 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 24,
-    "who2008Page": 231
+    "who2008Page": 231,
+    "locationKo": "얼굴에서 턱입술고랑 중심의 오목한 곳에 있다."
   }
 ]
