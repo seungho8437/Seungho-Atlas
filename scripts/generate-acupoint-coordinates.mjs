@@ -713,6 +713,51 @@ for(const p of acupoints){
 }
 const resultByKey=new Map(results.map(x=>[x.acupointId+':'+x.side,x]));
 const acupointById=new Map(acupoints.map(x=>[x.id,x]));
+
+function applyReviewedExceptionProjection(item){
+  const sideSign=item.side==='left'?leftSign:item.side==='right'?-leftSign:0;
+  const mark=(target,locks,rule)=>{
+    const pr=project(target,item.side,locks);
+    item.position=pr.point.map(v=>+v.toFixed(4));
+    item.validation.projectionDistance=+pr.distance.toFixed(4);
+    item.validation.surfacePartId=pr.part;
+    item.validation.preProjectionTarget=target.map(v=>+v.toFixed(4));
+    item.validation.reviewedException=rule;
+  };
+
+  if(/^(?:ST43|GB42|BL63|GB41)$/.test(item.acupointId) && sideSign){
+    const frac={ST43:.34,GB42:.68,BL63:.88,GB41:.72}[item.acupointId];
+    const target=[...item.validation.preProjectionTarget];
+    target[lrAxis]=localSideLateral(norm(supAxis,.06),sideSign,frac);
+    if(item.acupointId==='BL63') target[apAxis]-=anteriorSign*extent[apAxis]*.035;
+    if(item.acupointId==='GB41') target[apAxis]+=anteriorSign*extent[apAxis]*.020;
+    mark(target,{lr:true,ap:true},'reviewed-foot-lr-ap');
+    return true;
+  }
+
+  if(item.acupointId==='TE4'){
+    const distal=resultByKey.get('TE3:'+item.side);
+    const proximal=resultByKey.get('TE5:'+item.side);
+    if(distal&&proximal){
+      const target=distal.position.map((v,i)=>v*.55+proximal.position[i]*.45);
+      mark(target,{sup:true,lr:true},'reviewed-wrist-between-TE3-TE5');
+      return true;
+    }
+  }
+
+  if(item.acupointId==='GV15'){
+    const gv16=resultByKey.get('GV16:midline');
+    if(gv16){
+      const target=[...item.validation.preProjectionTarget];
+      target[lrAxis]=bodyCenter[lrAxis];
+      target[supAxis]=gv16.position[supAxis]-.5*cunY;
+      mark(target,{sup:true},'reviewed-GV15-0.5-cun-inferior-to-GV16');
+      return true;
+    }
+  }
+  return false;
+}
+for(const item of results) applyReviewedExceptionProjection(item);
 function updateFromRelativeDefinition(item,text){
   const pair=text.match(/([A-Z]{1,2}\d+)\s*(?:와|과)\s*([A-Z]{1,2}\d+)(?:을|를)\s*잇는\s*(?:곡선|선)/);
   if(!pair)return false;
