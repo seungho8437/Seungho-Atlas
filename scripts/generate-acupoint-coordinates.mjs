@@ -318,6 +318,24 @@ function semanticConceptHits(text,side){
   if(/다섯째\s*손허리손가락관절/.test(text))patterns.push(/(?:fifth|5th).*metacarpophalangeal|metacarpophalangeal.*(?:little|fifth)/i);
   if(/첫째\s*발허리발가락관절/.test(text))patterns.push(/(?:first|1st).*metatarsophalangeal|metatarsophalangeal.*(?:big|first)/i);
   if(/다섯째\s*발허리발가락관절/.test(text))patterns.push(/(?:fifth|5th).*metatarsophalangeal|metatarsophalangeal.*(?:little|fifth)/i);
+  if(/꼭지돌기/.test(text))patterns.push(/mastoid process/i);
+  if(/광대활/.test(text))patterns.push(/zygomatic arch/i);
+  if(/아래턱뼈/.test(text))patterns.push(/^((?:left|right) )?mandible$|angle of (?:left |right )?mandible|condylar process of (?:left |right )?mandible/i);
+  if(/노뼈붓돌기/.test(text))patterns.push(/styloid process of (?:left |right )?radius/i);
+  if(/자뼈붓돌기/.test(text))patterns.push(/styloid process of (?:left |right )?ulna/i);
+  if(/가쪽위관절융기/.test(text))patterns.push(/lateral epicondyle of (?:left |right )?humerus/i);
+  if(/안쪽위관절융기/.test(text))patterns.push(/medial epicondyle of (?:left |right )?humerus/i);
+  if(/안쪽복사/.test(text))patterns.push(/medial malleolus/i);
+  if(/가쪽복사/.test(text))patterns.push(/lateral malleolus/i);
+  if(/봉우리/.test(text))patterns.push(/(?:left |right )?acromion/i);
+  if(/부리돌기/.test(text))patterns.push(/coracoid process/i);
+  if(/어깨뼈가시/.test(text))patterns.push(/spine of (?:left |right )?scapula/i);
+  if(/위앞엉덩뼈가시/.test(text))patterns.push(/anterior superior iliac spine/i);
+  if(/큰돌기/.test(text))patterns.push(/greater trochanter/i);
+  if(/꼬리뼈/.test(text))patterns.push(/coccyx/i);
+  if(/무릎뼈/.test(text))patterns.push(/(?:left |right )?patella/i);
+  if(/발꿈치뼈/.test(text))patterns.push(/(?:left |right )?calcaneus/i);
+  if(/눈확/.test(text))patterns.push(/(?:left |right )?orbit$/i);
   const hits=[];
   for(const re of patterns){
     let best=null;
@@ -336,19 +354,26 @@ function semanticConceptHits(text,side){
   return hits;
 }
 function relationTarget(point, side){
-  const rels=relByPoint.get(point.id)||[]; const text=point.locationKo||''; const rt=regionTarget(text,side);
-  let acc=[0,0,0], wsum=0, specific=0, textLandmarkCount=0;
+  const rels=relByPoint.get(point.id)||[]; const text=point.locationKo||''; let rt=regionTarget(text,side);
+  let acc=[0,0,0], wsum=0, specific=0, textLandmarkCount=0, broadAcc=[0,0,0], broadN=0;
   const sideSign=side==='left'?1:side==='right'?-1:0;
   for(const r of rels){
     const st=conceptStats(r.anatomyId,sideSign,lrAxis,leftSign)||conceptStats(r.anatomyId,0,lrAxis,leftSign); if(!st)continue;
     const en=anatomyKo[r.anatomyId]?.sourceNameEn || '';
     const isBroad=broad.test(en);
-    if(r.relation==='surface-landmark'&&isBroad) continue;
+    if(r.relation==='surface-landmark'&&isBroad){
+      for(let k=0;k<3;k++)broadAcc[k]+=st.center[k];
+      broadN++;continue;
+    }
     const relationWeight={adjacent:4,between:4,'deep-to':3.5,overlies:3.5,'reference-landmark':3,'surface-landmark':1}[r.relation]||1;
     const specificity=Math.max(.25,Math.min(4,bodyDiag/(st.diag*9+1)));
     const w=relationWeight*specificity;
     for(let k=0;k<3;k++)acc[k]+=st.center[k]*w; wsum+=w;
     specific++;
+  }
+  if(broadN){
+    const bg=broadAcc.map(v=>v/broadN);
+    rt=bg.map((v,i)=>v*.76+rt[i]*.24);
   }
   const textHits=whoTextLandmarks(text,sideSign);
   for(const hit of textHits){
