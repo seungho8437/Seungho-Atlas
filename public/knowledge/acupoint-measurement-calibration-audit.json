@@ -3,9 +3,9 @@
   "measurementFrameCount": 237,
   "bindingCount": 237,
   "counts": {
-    "candidateBound": 84,
-    "ambiguousCandidateSet": 132,
-    "unresolvedNoWhoInterval": 10,
+    "candidateBound": 85,
+    "ambiguousCandidateSet": 140,
+    "unresolvedNoWhoInterval": 1,
     "fCunMethodBound": 11
   },
   "invariants": {

@@ -147,7 +147,7 @@
           "evidence": {
             "amount": 1,
             "unit": "B-cun",
-            "direction": null,
+            "direction": "lateral",
             "text": "1 B-cun"
           },
           "sourceSpan": {
@@ -245,7 +245,7 @@
           "evidence": {
             "amount": 6,
             "unit": "B-cun",
-            "direction": "medial",
+            "direction": "lateral",
             "text": "6 B-cun"
           },
           "sourceSpan": {
@@ -3824,7 +3824,7 @@
           "evidence": {
             "amount": 4,
             "unit": "B-cun",
-            "direction": "superior",
+            "direction": "lateral",
             "text": "4 B-cun"
           },
           "sourceSpan": {
@@ -4624,7 +4624,7 @@
           "evidence": {
             "amount": 2,
             "unit": "B-cun",
-            "direction": "superior",
+            "direction": "lateral",
             "text": "2 B-cun"
           },
           "sourceSpan": {
@@ -4708,7 +4708,7 @@
           "evidence": {
             "amount": 2,
             "unit": "B-cun",
-            "direction": "superior",
+            "direction": "lateral",
             "text": "2 B-cun"
           },
           "sourceSpan": {
@@ -4792,7 +4792,7 @@
           "evidence": {
             "amount": 2,
             "unit": "B-cun",
-            "direction": "superior",
+            "direction": "lateral",
             "text": "2 B-cun"
           },
           "sourceSpan": {
@@ -4876,7 +4876,7 @@
           "evidence": {
             "amount": 2,
             "unit": "B-cun",
-            "direction": "superior",
+            "direction": "lateral",
             "text": "2 B-cun"
           },
           "sourceSpan": {
@@ -4960,7 +4960,7 @@
           "evidence": {
             "amount": 2,
             "unit": "B-cun",
-            "direction": "superior",
+            "direction": "lateral",
             "text": "2 B-cun"
           },
           "sourceSpan": {
@@ -5044,7 +5044,7 @@
           "evidence": {
             "amount": 2,
             "unit": "B-cun",
-            "direction": "superior",
+            "direction": "lateral",
             "text": "2 B-cun"
           },
           "sourceSpan": {
@@ -7971,7 +7971,7 @@
           "evidence": {
             "amount": 4,
             "unit": "B-cun",
-            "direction": "superior",
+            "direction": "lateral",
             "text": "4 B-cun"
           },
           "sourceSpan": {
@@ -10874,7 +10874,7 @@
           "evidence": {
             "amount": 1.5,
             "unit": "B-cun",
-            "direction": "superior",
+            "direction": "lateral",
             "text": "1.5 B-cun"
           },
           "sourceSpan": {
@@ -11042,7 +11042,7 @@
           "evidence": {
             "amount": 1.5,
             "unit": "B-cun",
-            "direction": "superior",
+            "direction": "lateral",
             "text": "1.5 B-cun"
           },
           "sourceSpan": {
@@ -13306,7 +13306,7 @@
           "evidence": {
             "amount": 1,
             "unit": "B-cun",
-            "direction": "medial",
+            "direction": "proximal",
             "text": "1 B-cun"
           },
           "sourceSpan": {
@@ -15556,7 +15556,7 @@
           "evidence": {
             "amount": 0.1,
             "unit": "F-cun",
-            "direction": "lateral",
+            "direction": "proximal",
             "text": "0.1 F-cun"
           },
           "sourceSpan": {
@@ -16839,7 +16839,7 @@
           "evidence": {
             "amount": 0.5,
             "unit": "B-cun",
-            "direction": "superior",
+            "direction": "lateral",
             "text": "0.5 B-cun"
           },
           "sourceSpan": {
@@ -16923,7 +16923,7 @@
           "evidence": {
             "amount": 0.5,
             "unit": "B-cun",
-            "direction": "superior",
+            "direction": "lateral",
             "text": "0.5 B-cun"
           },
           "sourceSpan": {
@@ -17007,7 +17007,7 @@
           "evidence": {
             "amount": 0.5,
             "unit": "B-cun",
-            "direction": "superior",
+            "direction": "lateral",
             "text": "0.5 B-cun"
           },
           "sourceSpan": {
@@ -17091,7 +17091,7 @@
           "evidence": {
             "amount": 0.5,
             "unit": "B-cun",
-            "direction": "superior",
+            "direction": "lateral",
             "text": "0.5 B-cun"
           },
           "sourceSpan": {
@@ -17175,7 +17175,7 @@
           "evidence": {
             "amount": 0.5,
             "unit": "B-cun",
-            "direction": "superior",
+            "direction": "lateral",
             "text": "0.5 B-cun"
           },
           "sourceSpan": {
@@ -19273,7 +19273,7 @@
           "evidence": {
             "amount": 1,
             "unit": "B-cun",
-            "direction": "posterior",
+            "direction": "proximal",
             "text": "1 B-cun"
           },
           "sourceSpan": {
@@ -22953,7 +22953,7 @@
           "evidence": {
             "amount": 7,
             "unit": "B-cun",
-            "direction": "posterior",
+            "direction": "proximal",
             "text": "7 B-cun"
           },
           "sourceSpan": {
@@ -23005,7 +23005,7 @@
           "evidence": {
             "amount": 7,
             "unit": "B-cun",
-            "direction": "anterior",
+            "direction": "proximal",
             "text": "7 B-cun"
           },
           "sourceSpan": {
@@ -23057,7 +23057,7 @@
           "evidence": {
             "amount": 5,
             "unit": "B-cun",
-            "direction": "anterior",
+            "direction": "proximal",
             "text": "5 B-cun"
           },
           "sourceSpan": {
@@ -23109,7 +23109,7 @@
           "evidence": {
             "amount": 4,
             "unit": "B-cun",
-            "direction": "anterior",
+            "direction": "proximal",
             "text": "4 B-cun"
           },
           "sourceSpan": {
@@ -23161,7 +23161,7 @@
           "evidence": {
             "amount": 3,
             "unit": "B-cun",
-            "direction": "anterior",
+            "direction": "proximal",
             "text": "3 B-cun"
           },
           "sourceSpan": {
@@ -23447,7 +23447,7 @@
           "evidence": {
             "amount": 0.1,
             "unit": "F-cun",
-            "direction": "lateral",
+            "direction": "proximal",
             "text": "0.1 F-cun"
           },
           "sourceSpan": {
@@ -23513,7 +23513,7 @@
           "evidence": {
             "amount": 0.1,
             "unit": "F-cun",
-            "direction": "lateral",
+            "direction": "proximal",
             "text": "0.1 F-cun"
           },
           "sourceSpan": {
@@ -23737,7 +23737,7 @@
           "evidence": {
             "amount": 5,
             "unit": "B-cun",
-            "direction": "medial",
+            "direction": "proximal",
             "text": "5 B-cun"
           },
           "sourceSpan": {
@@ -23789,7 +23789,7 @@
           "evidence": {
             "amount": 7,
             "unit": "B-cun",
-            "direction": "medial",
+            "direction": "proximal",
             "text": "7 B-cun"
           },
           "sourceSpan": {
@@ -24053,7 +24053,7 @@
           "evidence": {
             "amount": 3,
             "unit": "B-cun",
-            "direction": "medial",
+            "direction": "distal",
             "text": "3 B-cun"
           },
           "sourceSpan": {
@@ -24123,7 +24123,7 @@
           "evidence": {
             "amount": 2,
             "unit": "B-cun",
-            "direction": "medial",
+            "direction": "distal",
             "text": "2 B-cun"
           },
           "sourceSpan": {

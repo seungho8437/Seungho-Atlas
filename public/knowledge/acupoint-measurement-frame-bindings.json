@@ -23,12 +23,11 @@
         {
           "frameId": "LU1:MF2",
           "unit": "B-cun",
-          "status": "ambiguous-candidate-set",
+          "status": "candidate-bound",
           "candidateCalibrationIds": [
-            "CHEST_SUPRASTERNAL_TO_XIPHISTERNAL",
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
-          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
           "sourceSpan": {
             "start": 64,
             "end": 71
@@ -482,8 +481,8 @@
           "unit": "B-cun",
           "status": "ambiguous-candidate-set",
           "candidateCalibrationIds": [
-            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
-            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
           ],
           "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
@@ -609,8 +608,7 @@
           "unit": "B-cun",
           "status": "ambiguous-candidate-set",
           "candidateCalibrationIds": [
-            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
-            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+            "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
@@ -642,8 +640,7 @@
           "unit": "B-cun",
           "status": "ambiguous-candidate-set",
           "candidateCalibrationIds": [
-            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
-            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+            "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
@@ -675,8 +672,7 @@
           "unit": "B-cun",
           "status": "ambiguous-candidate-set",
           "candidateCalibrationIds": [
-            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
-            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+            "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
@@ -708,8 +704,7 @@
           "unit": "B-cun",
           "status": "ambiguous-candidate-set",
           "candidateCalibrationIds": [
-            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
-            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+            "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
@@ -741,8 +736,7 @@
           "unit": "B-cun",
           "status": "ambiguous-candidate-set",
           "candidateCalibrationIds": [
-            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
-            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+            "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
@@ -774,8 +768,7 @@
           "unit": "B-cun",
           "status": "ambiguous-candidate-set",
           "candidateCalibrationIds": [
-            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
-            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+            "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
@@ -1385,8 +1378,7 @@
           "unit": "B-cun",
           "status": "ambiguous-candidate-set",
           "candidateCalibrationIds": [
-            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
-            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+            "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
@@ -1839,8 +1831,8 @@
           "unit": "B-cun",
           "status": "ambiguous-candidate-set",
           "candidateCalibrationIds": [
-            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
-            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
           ],
           "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
@@ -1905,8 +1897,8 @@
           "unit": "B-cun",
           "status": "ambiguous-candidate-set",
           "candidateCalibrationIds": [
-            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
-            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
           ],
           "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
@@ -3122,8 +3114,7 @@
           "unit": "B-cun",
           "status": "ambiguous-candidate-set",
           "candidateCalibrationIds": [
-            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
-            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+            "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
@@ -3155,8 +3146,7 @@
           "unit": "B-cun",
           "status": "ambiguous-candidate-set",
           "candidateCalibrationIds": [
-            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
-            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+            "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
@@ -3188,8 +3178,7 @@
           "unit": "B-cun",
           "status": "ambiguous-candidate-set",
           "candidateCalibrationIds": [
-            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
-            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+            "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
@@ -3221,8 +3210,7 @@
           "unit": "B-cun",
           "status": "ambiguous-candidate-set",
           "candidateCalibrationIds": [
-            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
-            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+            "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
@@ -3254,8 +3242,7 @@
           "unit": "B-cun",
           "status": "ambiguous-candidate-set",
           "candidateCalibrationIds": [
-            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
-            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+            "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
@@ -4080,9 +4067,13 @@
         {
           "frameId": "GB35:MF1",
           "unit": "B-cun",
-          "status": "unresolved-no-who-interval",
-          "candidateCalibrationIds": [],
-          "selectionRule": "No direct WHO proportional interval was assigned; do not fall back to global body height.",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
             "start": 37,
             "end": 44
@@ -4096,9 +4087,13 @@
         {
           "frameId": "GB36:MF1",
           "unit": "B-cun",
-          "status": "unresolved-no-who-interval",
-          "candidateCalibrationIds": [],
-          "selectionRule": "No direct WHO proportional interval was assigned; do not fall back to global body height.",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
             "start": 37,
             "end": 44
@@ -4112,9 +4107,13 @@
         {
           "frameId": "GB37:MF1",
           "unit": "B-cun",
-          "status": "unresolved-no-who-interval",
-          "candidateCalibrationIds": [],
-          "selectionRule": "No direct WHO proportional interval was assigned; do not fall back to global body height.",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
             "start": 37,
             "end": 44
@@ -4128,9 +4127,13 @@
         {
           "frameId": "GB38:MF1",
           "unit": "B-cun",
-          "status": "unresolved-no-who-interval",
-          "candidateCalibrationIds": [],
-          "selectionRule": "No direct WHO proportional interval was assigned; do not fall back to global body height.",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
             "start": 37,
             "end": 44
@@ -4144,9 +4147,13 @@
         {
           "frameId": "GB39:MF1",
           "unit": "B-cun",
-          "status": "unresolved-no-who-interval",
-          "candidateCalibrationIds": [],
-          "selectionRule": "No direct WHO proportional interval was assigned; do not fall back to global body height.",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
             "start": 37,
             "end": 44
@@ -4228,9 +4235,13 @@
         {
           "frameId": "LR5:MF1",
           "unit": "B-cun",
-          "status": "unresolved-no-who-interval",
-          "candidateCalibrationIds": [],
-          "selectionRule": "No direct WHO proportional interval was assigned; do not fall back to global body height.",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
             "start": 39,
             "end": 46
@@ -4244,9 +4255,13 @@
         {
           "frameId": "LR6:MF1",
           "unit": "B-cun",
-          "status": "unresolved-no-who-interval",
-          "candidateCalibrationIds": [],
-          "selectionRule": "No direct WHO proportional interval was assigned; do not fall back to global body height.",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
             "start": 39,
             "end": 46
@@ -4300,9 +4315,13 @@
         {
           "frameId": "LR10:MF1",
           "unit": "B-cun",
-          "status": "unresolved-no-who-interval",
-          "candidateCalibrationIds": [],
-          "selectionRule": "No direct WHO proportional interval was assigned; do not fall back to global body height.",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "THIGH_PUBIC_TO_PATELLA_BASE",
+            "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+            "THIGH_GLUTEAL_FOLD_TO_POPLITEAL"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
             "start": 22,
             "end": 29
@@ -4316,9 +4335,13 @@
         {
           "frameId": "LR11:MF1",
           "unit": "B-cun",
-          "status": "unresolved-no-who-interval",
-          "candidateCalibrationIds": [],
-          "selectionRule": "No direct WHO proportional interval was assigned; do not fall back to global body height.",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "THIGH_PUBIC_TO_PATELLA_BASE",
+            "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+            "THIGH_GLUTEAL_FOLD_TO_POPLITEAL"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
           "sourceSpan": {
             "start": 22,
             "end": 29
