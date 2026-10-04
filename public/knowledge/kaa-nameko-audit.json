@@ -8083,9 +8083,12 @@
     },
     "FMA32514": {
       "sourceNameEn": "prevertebral muscle",
-      "nameKo": "척추앞근육",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "척주앞근육",
+      "result": "direct-verified",
+      "note": "KAA: Prevertebral muscles; source re-checked in semantic re-audit.",
+      "pages": [
+        53
+      ]
     },
     "FMA32515": {
       "sourceNameEn": "postvertebral muscle",
@@ -11670,9 +11673,12 @@
     },
     "FMA49143": {
       "sourceNameEn": "check ligament of lateral rectus",
-      "nameKo": "가쪽곧은근 제동인대",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "가쪽곧은근제한인대",
+      "result": "direct-verified",
+      "note": "KAA: Check ligament of lateral rectus muscle; source re-checked in semantic re-audit.",
+      "pages": [
+        207
+      ]
     },
     "FMA49144": {
       "sourceNameEn": "check ligament of right lateral rectus",
@@ -22059,9 +22065,12 @@
     },
     "FMA265130": {
       "sourceNameEn": "respiratory tract",
-      "nameKo": "호흡길",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "기도",
+      "result": "direct-verified",
+      "note": "KAA: 기도; 숨길 — Respiratory tract; source re-checked in semantic re-audit.",
+      "pages": [
+        83
+      ]
     },
     "FMA265228": {
       "sourceNameEn": "pancreaticobiliary system",
