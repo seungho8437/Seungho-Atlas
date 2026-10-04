@@ -112,6 +112,58 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
   };
   const resize=()=>{layoutKey='';lastState=null;renderer.setPixelRatio(Math.min(devicePixelRatio,el.clientWidth<768||el.clientHeight<600?1.5:2));camera.aspect=el.clientWidth/el.clientHeight;camera.updateProjectionMatrix();renderer.setSize(el.clientWidth,el.clientHeight);fit(latest.current.view,amount);};const observer=new ResizeObserver(resize);observer.observe(el);
   const raycaster=new T.Raycaster(),pointer=new T.Vector2(),tap=new PointerTap(),worldBox=new T.Box3(),hitPoint=new T.Vector3();raycaster.params.Points={threshold:.025};
+  const baryA=new T.Vector3(),baryB=new T.Vector3(),baryC=new T.Vector3(),baryP=new T.Vector3(),baryOut=new T.Vector3();
+  const candidateFromHit=(landmarkId:string,partIndex:number,hit:T.Intersection<T.Object3D>,method:LandmarkAnchorCandidate['method'],side?:LandmarkAnchorSide,detectorId?:string):LandmarkAnchorCandidate|null=>{
+   if(hit.faceIndex===undefined||hit.faceIndex<0)return null;
+   const mesh=pickers[partIndex];if(!mesh)return null;
+   const geometry=mesh.geometry,index=geometry.index,position=geometry.getAttribute('position');if(!index||!position)return null;
+   const tri=hit.faceIndex,i0=index.getX(tri*3),i1=index.getX(tri*3+1),i2=index.getX(tri*3+2);
+   baryA.fromBufferAttribute(position,i0);baryB.fromBufferAttribute(position,i1);baryC.fromBufferAttribute(position,i2);
+   baryP.copy(hit.point);mesh.worldToLocal(baryP);T.Triangle.getBarycoord(baryP,baryA,baryB,baryC,baryOut);
+   if(!Number.isFinite(baryOut.x)||!Number.isFinite(baryOut.y)||!Number.isFinite(baryOut.z))return null;
+   return {
+    landmarkId,
+    position:[hit.point.x,hit.point.y,hit.point.z],
+    surfaceProjection:{meshId:atlas.parts[partIndex].id,triangleIndex:tri,barycentric:[baryOut.x,baryOut.y,baryOut.z],distance:0},
+    method,side,detectorId,detectorConfidence:detectorId?'moderate':undefined
+   };
+  };
+  const nearestSkinHit=(rc:T.Raycaster)=>{
+   let best:{partIndex:number;hit:T.Intersection<T.Object3D>}|null=null;
+   atlas.parts.forEach((p,i)=>{if(p.system!=='integumentary')return;const mesh=pickers[i];if(!mesh)return;const hit=rc.intersectObject(mesh,false)[0];if(hit&&(!best||hit.distance<best.hit.distance))best={partIndex:i,hit};});
+   return best;
+  };
+  const partSearchText=(i:number)=>`${atlas.parts[i].name} ${atlas.concepts.find(c=>c.id===atlas.parts[i].conceptId)?.name??''}`.toLowerCase();
+  const findPhalanxPart=(side:LandmarkAnchorSide,segment:'proximal'|'middle'|'distal')=>{
+   const sideRe=side==='left'?/left|sinister/:/right|dexter/;
+   const fingerRe=/middle finger|third finger|3rd finger|digit iii|digit 3|third digit/;
+   const segRe=segment==='proximal'?/proximal phalanx/:segment==='middle'?/middle phalanx|intermediate phalanx/:/distal phalanx/;
+   let fallback=-1;
+   for(let i=0;i<atlas.parts.length;i++){
+    const text=partSearchText(i);if(!segRe.test(text)||!sideRe.test(text))continue;
+    if(fingerRe.test(text))return i;
+    if(fallback<0&&/finger|digit/.test(text))fallback=i;
+   }
+   return fallback;
+  };
+  const computeFingerProposal=(landmarkId:string,side:LandmarkAnchorSide):LandmarkAnchorCandidate|null=>{
+   const pip=landmarkId==='radial-crease-proximal-interphalangeal-middle-finger';
+   const dip=landmarkId==='radial-crease-distal-interphalangeal-middle-finger';
+   if(!pip&&!dip)return null;
+   const a=findPhalanxPart(side,pip?'proximal':'middle'),b=findPhalanxPart(side,pip?'middle':'distal');if(a<0||b<0)return null;
+   const ca=centers[a].clone(),cb=centers[b].clone(),joint=ca.add(cb).multiplyScalar(.5);
+   let leftMean=0,rightMean=0,leftN=0,rightN=0;
+   atlas.parts.forEach((p,i)=>{const txt=partSearchText(i);if(/left/.test(txt)){leftMean+=centers[i].x;leftN++;}if(/right/.test(txt)){rightMean+=centers[i].x;rightN++;}});
+   const leftX=leftN?leftMean/leftN:-1,rightX=rightN?rightMean/rightN:1,leftPositive=leftX>rightX;
+   const outward=(side==='left'?(leftPositive?1:-1):(leftPositive?-1:1));
+   const detectorRay=new T.Raycaster(joint.clone(),new T.Vector3(outward,0,0),0,.25);
+   let hit=nearestSkinHit(detectorRay);
+   if(!hit){
+    detectorRay.ray.direction.set(outward,0,.22).normalize();hit=nearestSkinHit(detectorRay);
+   }
+   if(!hit)return null;
+   return candidateFromHit(landmarkId,hit.partIndex,hit.hit,'specialized-detector',side,pip?'middle-finger-pip-radial-joint-surface':'middle-finger-dip-radial-joint-surface');
+  };
   const down=(e:PointerEvent)=>{hover.hidden=true;tap.down(e.pointerId,e.clientX,e.clientY,e.pointerType==='touch'?12:5);};
   const move=(e:PointerEvent)=>{tap.move(e.pointerId,e.clientX,e.clientY);if(e.buttons||amount<.5||e.pointerType==='touch'){hover.hidden=true;return;}const rect=el.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top,index=findTarget(x,y,12);hover.hidden=index<0;renderer.domElement.style.cursor=index<0?'grab':'pointer';if(index>=0){hover.textContent=atlas.parts[index].name;hover.style.left=`${Math.max(8,Math.min(x+14,el.clientWidth-260))}px`;hover.style.top=`${Math.max(8,Math.min(y+18,el.clientHeight-55))}px`;}};
   const cancel=(e:PointerEvent)=>tap.cancel(e.pointerId);
