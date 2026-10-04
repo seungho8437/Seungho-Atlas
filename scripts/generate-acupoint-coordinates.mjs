@@ -8,16 +8,16 @@ const relations = readJson('public/knowledge/anatomy-acupoint-relations.json');
 const anatomyKo = readJson('public/knowledge/anatomy-ko.json');
 
 const chunks = atlas.chunks.map(c => fs.readFileSync(new URL('public/models/' + c.url.split('/').pop(), root)));
-console.log('ATLAS_ID_DIAGNOSTIC', JSON.stringify({
-  sampleConcepts: atlas.concepts.slice(0,8).map(c=>({id:c.id,name:c.name,elements:c.elements?.slice(0,3)})),
-  sampleParts: atlas.parts.slice(0,8).map(p=>({id:p.id,name:p.name,conceptId:p.conceptId,system:p.system})),
-  relationIdSamples: relations.slice(0,8).map(r=>r.anatomyId)
-}, null, 2));
-
+const partsById = new Map(atlas.parts.map(p => [p.id, p]));
 const partsByConcept = new Map();
+for (const c of atlas.concepts) {
+  const mapped = (c.elements ?? []).map(id => partsById.get(id)).filter(Boolean);
+  if (mapped.length) partsByConcept.set(c.id, mapped);
+}
 for (const p of atlas.parts) {
-  if (!partsByConcept.has(p.conceptId)) partsByConcept.set(p.conceptId, []);
-  partsByConcept.get(p.conceptId).push(p);
+  const mapped = partsByConcept.get(p.conceptId) ?? [];
+  if (!mapped.some(x => x.id === p.id)) mapped.push(p);
+  partsByConcept.set(p.conceptId, mapped);
 }
 
 function positionsOfPart(p) {
