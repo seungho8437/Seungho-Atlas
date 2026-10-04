@@ -3300,8 +3300,8 @@
     "sourceNameEn": "stylohyoid",
     "status": "derived",
     "nameKo": "붓목뿔근",
-    "legacyKo": "경상설골",
-    "hanja": "莖狀舌骨",
+    "legacyKo": "경상설골근",
+    "hanja": "莖狀舌骨筋",
     "nameKoSourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
@@ -4647,8 +4647,8 @@
     "sourceNameEn": "thyrohyoid",
     "status": "derived",
     "nameKo": "방패목뿔근",
-    "legacyKo": "갑상설골",
-    "hanja": "甲狀舌骨",
+    "legacyKo": "갑상설골근",
+    "hanja": "甲狀舌骨筋",
     "nameKoSourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
@@ -4751,15 +4751,15 @@
     "sourceNameEn": "right thyrohyoid",
     "status": "derived",
     "nameKo": "오른방패목뿔근",
-    "legacyKo": "우갑상설골",
-    "hanja": "右甲狀舌骨"
+    "legacyKo": "우갑상설골근",
+    "hanja": "右甲狀舌骨筋"
   },
   "FMA13353": {
     "sourceNameEn": "left thyrohyoid",
     "status": "derived",
     "nameKo": "왼방패목뿔근",
-    "legacyKo": "좌갑상설골",
-    "hanja": "左甲狀舌骨"
+    "legacyKo": "좌갑상설골근",
+    "hanja": "左甲狀舌骨筋"
   },
   "FMA13354": {
     "nameKo": "갈비사이근육",
@@ -9064,9 +9064,9 @@
   "FMA22431": {
     "sourceNameEn": "vastus lateralis",
     "status": "derived",
-    "nameKo": "넓은가쪽",
-    "legacyKo": "광외측",
-    "hanja": "廣外側"
+    "nameKo": "가쪽넓은근",
+    "legacyKo": "외측광근",
+    "hanja": "外側廣筋"
   },
   "FMA22432": {
     "sourceNameEn": "vastus medialis",
@@ -9793,9 +9793,9 @@
   "FMA22653": {
     "sourceNameEn": "splenius capitis",
     "status": "derived",
-    "nameKo": "널판머리",
-    "legacyKo": "판상두",
-    "hanja": "板狀頭"
+    "nameKo": "머리널판근",
+    "legacyKo": "두판상근",
+    "hanja": "頭板狀筋"
   },
   "FMA22654": {
     "sourceNameEn": "axillary artery",
@@ -10105,21 +10105,21 @@
   "FMA22702": {
     "sourceNameEn": "iliocostalis lumborum",
     "status": "derived",
-    "nameKo": "엉덩갈비허리",
-    "legacyKo": "장늑요",
-    "hanja": "腸肋腰"
+    "nameKo": "허리엉덩갈비근",
+    "legacyKo": "요장늑근",
+    "hanja": "腰腸肋筋"
   },
   "FMA22703": {
-    "nameKo": "엉덩갈비가슴",
-    "legacyKo": "장늑흉",
-    "hanja": "腸肋胸",
+    "nameKo": "등엉덩갈비근",
+    "legacyKo": "흉장늑근",
+    "hanja": "胸腸肋筋",
     "sourceNameEn": "iliocostalis thoracis",
     "status": "derived"
   },
   "FMA22704": {
-    "nameKo": "엉덩갈비목",
-    "legacyKo": "장늑경",
-    "hanja": "腸肋頸",
+    "nameKo": "목엉덩갈비근",
+    "legacyKo": "경장늑근",
+    "hanja": "頸腸肋筋",
     "sourceNameEn": "iliocostalis cervicis",
     "status": "derived"
   },
@@ -10169,9 +10169,9 @@
     "nameKoDerivation": "left + FMA22706"
   },
   "FMA22709": {
-    "nameKo": "가장긴가슴",
-    "legacyKo": "최장흉",
-    "hanja": "最長胸",
+    "nameKo": "등가장긴근",
+    "legacyKo": "흉최장근",
+    "hanja": "胸最長筋",
     "sourceNameEn": "longissimus thoracis",
     "status": "derived"
   },
@@ -10191,9 +10191,9 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22711": {
-    "nameKo": "가장긴목",
-    "legacyKo": "최장경",
-    "hanja": "最長頸",
+    "nameKo": "목가장긴근",
+    "legacyKo": "경최장근",
+    "hanja": "頸最長筋",
     "sourceNameEn": "longissimus cervicis",
     "status": "derived"
   },
@@ -10230,9 +10230,9 @@
   "FMA22714": {
     "sourceNameEn": "longissimus capitis",
     "status": "derived",
-    "nameKo": "가장긴머리",
-    "legacyKo": "최장두",
-    "hanja": "最長頭"
+    "nameKo": "머리가장긴근",
+    "legacyKo": "두최장근",
+    "hanja": "頭最長筋"
   },
   "FMA22726": {
     "sourceNameEn": "right splenius cervicis",
@@ -10251,16 +10251,16 @@
   "FMA22728": {
     "sourceNameEn": "right splenius capitis",
     "status": "derived",
-    "nameKo": "오른널판머리",
-    "legacyKo": "우판상두",
-    "hanja": "右板狀頭"
+    "nameKo": "오른머리널판근",
+    "legacyKo": "우두판상근",
+    "hanja": "右頭板狀筋"
   },
   "FMA22729": {
     "sourceNameEn": "left splenius capitis",
     "status": "derived",
-    "nameKo": "왼널판머리",
-    "legacyKo": "좌판상두",
-    "hanja": "左板狀頭"
+    "nameKo": "왼머리널판근",
+    "legacyKo": "좌두판상근",
+    "hanja": "左頭板狀筋"
   },
   "FMA22730": {
     "nameKo": "노동맥",
@@ -10325,42 +10325,42 @@
   "FMA22740": {
     "sourceNameEn": "right iliocostalis lumborum",
     "status": "derived",
-    "nameKo": "오른엉덩갈비허리",
-    "legacyKo": "우장늑요",
-    "hanja": "右腸肋腰"
+    "nameKo": "오른허리엉덩갈비근",
+    "legacyKo": "우요장늑근",
+    "hanja": "右腰腸肋筋"
   },
   "FMA22741": {
     "sourceNameEn": "left iliocostalis lumborum",
     "status": "derived",
-    "nameKo": "왼엉덩갈비허리",
-    "legacyKo": "좌장늑요",
-    "hanja": "左腸肋腰"
+    "nameKo": "왼허리엉덩갈비근",
+    "legacyKo": "좌요장늑근",
+    "hanja": "左腰腸肋筋"
   },
   "FMA22742": {
-    "nameKo": "오른엉덩갈비가슴",
-    "legacyKo": "우장늑흉",
-    "hanja": "右腸肋胸",
+    "nameKo": "오른등엉덩갈비근",
+    "legacyKo": "우흉장늑근",
+    "hanja": "右胸腸肋筋",
     "sourceNameEn": "right iliocostalis thoracis",
     "status": "derived"
   },
   "FMA22743": {
-    "nameKo": "왼엉덩갈비가슴",
-    "legacyKo": "좌장늑흉",
-    "hanja": "左腸肋胸",
+    "nameKo": "왼등엉덩갈비근",
+    "legacyKo": "좌흉장늑근",
+    "hanja": "左胸腸肋筋",
     "sourceNameEn": "left iliocostalis thoracis",
     "status": "derived"
   },
   "FMA22744": {
-    "nameKo": "오른엉덩갈비목",
-    "legacyKo": "우장늑경",
-    "hanja": "右腸肋頸",
+    "nameKo": "오른목엉덩갈비근",
+    "legacyKo": "우경장늑근",
+    "hanja": "右頸腸肋筋",
     "sourceNameEn": "right iliocostalis cervicis",
     "status": "derived"
   },
   "FMA22745": {
-    "nameKo": "왼엉덩갈비목",
-    "legacyKo": "좌장늑경",
-    "hanja": "左腸肋頸",
+    "nameKo": "왼목엉덩갈비근",
+    "legacyKo": "좌경장늑근",
+    "hanja": "左頸腸肋筋",
     "sourceNameEn": "left iliocostalis cervicis",
     "status": "derived"
   },
@@ -10380,25 +10380,25 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22751": {
-    "nameKo": "오른가장긴가슴",
-    "legacyKo": "우최장흉",
-    "hanja": "右最長胸",
+    "nameKo": "오른등가장긴근",
+    "legacyKo": "우흉최장근",
+    "hanja": "右胸最長筋",
     "sourceNameEn": "right longissimus thoracis",
     "status": "derived"
   },
   "FMA22753": {
-    "nameKo": "왼가장긴가슴",
-    "legacyKo": "좌최장흉",
-    "hanja": "左最長胸",
+    "nameKo": "왼등가장긴근",
+    "legacyKo": "좌흉최장근",
+    "hanja": "左胸最長筋",
     "sourceNameEn": "left longissimus thoracis",
     "status": "derived"
   },
   "FMA22754": {
     "sourceNameEn": "right longissimus capitis",
     "status": "derived",
-    "nameKo": "오른가장긴머리",
-    "legacyKo": "우최장두",
-    "hanja": "右最長頭"
+    "nameKo": "오른머리가장긴근",
+    "legacyKo": "우두최장근",
+    "hanja": "右頭最長筋"
   },
   "FMA22755": {
     "nameKo": "노동맥등쪽손목가지",
@@ -10410,21 +10410,21 @@
   "FMA22756": {
     "sourceNameEn": "left longissimus capitis",
     "status": "derived",
-    "nameKo": "왼가장긴머리",
-    "legacyKo": "좌최장두",
-    "hanja": "左最長頭"
+    "nameKo": "왼머리가장긴근",
+    "legacyKo": "좌두최장근",
+    "hanja": "左頭最長筋"
   },
   "FMA22757": {
-    "nameKo": "오른가장긴목",
-    "legacyKo": "우최장경",
-    "hanja": "右最長頸",
+    "nameKo": "오른목가장긴근",
+    "legacyKo": "우경최장근",
+    "hanja": "右頸最長筋",
     "sourceNameEn": "right longissimus cervicis",
     "status": "derived"
   },
   "FMA22758": {
-    "nameKo": "왼가장긴목",
-    "legacyKo": "좌최장경",
-    "hanja": "左最長頸",
+    "nameKo": "왼목가장긴근",
+    "legacyKo": "좌경최장근",
+    "hanja": "左頸最長筋",
     "sourceNameEn": "left longissimus cervicis",
     "status": "derived"
   },
@@ -10764,25 +10764,25 @@
     "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22828": {
-    "nameKo": "반가시가슴",
-    "legacyKo": "반극흉",
-    "hanja": "半棘胸",
+    "nameKo": "등반가시근",
+    "legacyKo": "흉반극근",
+    "hanja": "胸半棘筋",
     "sourceNameEn": "semispinalis thoracis",
     "status": "derived"
   },
   "FMA22829": {
-    "nameKo": "반가시목",
-    "legacyKo": "반극경",
-    "hanja": "半棘頸",
+    "nameKo": "목반가시근",
+    "legacyKo": "경반극근",
+    "hanja": "頸半棘筋",
     "sourceNameEn": "semispinalis cervicis",
     "status": "derived"
   },
   "FMA22830": {
     "sourceNameEn": "semispinalis capitis",
     "status": "derived",
-    "nameKo": "반가시머리",
-    "legacyKo": "반극두",
-    "hanja": "半棘頭"
+    "nameKo": "머리반가시근",
+    "legacyKo": "두반극근",
+    "hanja": "頭半棘筋"
   },
   "FMA22834": {
     "nameKo": "얕은손바닥동맥활",
@@ -10977,46 +10977,46 @@
     "nameKoDerivation": "left + FMA22863"
   },
   "FMA22872": {
-    "nameKo": "오른반가시가슴",
-    "legacyKo": "우반극흉",
-    "hanja": "右半棘胸",
+    "nameKo": "오른등반가시근",
+    "legacyKo": "우흉반극근",
+    "hanja": "右胸半棘筋",
     "sourceNameEn": "right semispinalis thoracis",
     "status": "derived"
   },
   "FMA22873": {
-    "nameKo": "왼반가시가슴",
-    "legacyKo": "좌반극흉",
-    "hanja": "左半棘胸",
+    "nameKo": "왼등반가시근",
+    "legacyKo": "좌흉반극근",
+    "hanja": "左胸半棘筋",
     "sourceNameEn": "left semispinalis thoracis",
     "status": "derived"
   },
   "FMA22874": {
-    "nameKo": "오른반가시목",
-    "legacyKo": "우반극경",
-    "hanja": "右半棘頸",
+    "nameKo": "오른목반가시근",
+    "legacyKo": "우경반극근",
+    "hanja": "右頸半棘筋",
     "sourceNameEn": "right semispinalis cervicis",
     "status": "derived"
   },
   "FMA22875": {
-    "nameKo": "왼반가시목",
-    "legacyKo": "좌반극경",
-    "hanja": "左半棘頸",
+    "nameKo": "왼목반가시근",
+    "legacyKo": "좌경반극근",
+    "hanja": "左頸半棘筋",
     "sourceNameEn": "left semispinalis cervicis",
     "status": "derived"
   },
   "FMA22876": {
     "sourceNameEn": "right semispinalis capitis",
     "status": "derived",
-    "nameKo": "오른반가시머리",
-    "legacyKo": "우반극두",
-    "hanja": "右半棘頭"
+    "nameKo": "오른머리반가시근",
+    "legacyKo": "우두반극근",
+    "hanja": "右頭半棘筋"
   },
   "FMA22877": {
     "sourceNameEn": "left semispinalis capitis",
     "status": "derived",
-    "nameKo": "왼반가시머리",
-    "legacyKo": "좌반극두",
-    "hanja": "左半棘頭"
+    "nameKo": "왼머리반가시근",
+    "legacyKo": "좌두반극근",
+    "hanja": "左頭半棘筋"
   },
   "FMA22890": {
     "sourceNameEn": "right interspinalis thoracis",
@@ -15613,16 +15613,16 @@
   "FMA38930": {
     "sourceNameEn": "right vastus lateralis",
     "status": "derived",
-    "nameKo": "오른넓은가쪽",
-    "legacyKo": "우광외측",
-    "hanja": "右廣外側"
+    "nameKo": "오른가쪽넓은근",
+    "legacyKo": "우외측광근",
+    "hanja": "右外側廣筋"
   },
   "FMA38931": {
     "sourceNameEn": "left vastus lateralis",
     "status": "derived",
-    "nameKo": "왼넓은가쪽",
-    "legacyKo": "좌광외측",
-    "hanja": "左廣外側"
+    "nameKo": "왼가쪽넓은근",
+    "legacyKo": "좌외측광근",
+    "hanja": "左外側廣筋"
   },
   "FMA38932": {
     "sourceNameEn": "right vastus medialis",
@@ -16928,15 +16928,15 @@
     "sourceNameEn": "right stylohyoid",
     "status": "derived",
     "nameKo": "오른붓목뿔근",
-    "legacyKo": "우경상설골",
-    "hanja": "右莖狀舌骨"
+    "legacyKo": "우경상설골근",
+    "hanja": "右莖狀舌骨筋"
   },
   "FMA45827": {
     "sourceNameEn": "left stylohyoid",
     "status": "derived",
     "nameKo": "왼붓목뿔근",
-    "legacyKo": "좌경상설골",
-    "hanja": "左莖狀舌骨"
+    "legacyKo": "좌경상설골근",
+    "hanja": "左莖狀舌骨筋"
   },
   "FMA45854": {
     "sourceNameEn": "right pubococcygeus",
@@ -20331,8 +20331,8 @@
   },
   "FMA50735": {
     "nameKo": "간문맥",
-    "legacyKo": "간문맥정맥",
-    "hanja": "肝門脈靜脈",
+    "legacyKo": "간문맥",
+    "hanja": "肝門脈",
     "sourceNameEn": "hepatic portal vein",
     "status": "derived",
     "nameKoSourceIds": [
