@@ -88,8 +88,26 @@ function localHalfWidth(y){
   const value=Math.max(extent[lrAxis]*.035,Math.min(extent[lrAxis]/2,q));
   widthCache.set(bucket,value);return value;
 }
+const coreWidthCache=new Map();
+function localCoreHalfWidth(y){
+  const step=extent[supAxis]*.012,bucket=Math.round((y-bodyMin[supAxis])/step);
+  if(coreWidthCache.has(bucket))return coreWidthCache.get(bucket);
+  let band=extent[supAxis]*.018,vals=[];
+  for(let pass=0;pass<3&&!vals.length;pass++,band*=1.8){
+    vals=surfaceCrossSectionSamples.filter(v=>Math.abs(v[1]-y)<=band).map(v=>Math.abs(v[0]-bodyCenter[lrAxis]));
+  }
+  if(!vals.length)return extent[lrAxis]*.22;
+  vals.sort((a,b)=>a-b);
+  const q=vals[Math.min(vals.length-1,Math.floor(vals.length*.48))];
+  const value=Math.max(extent[lrAxis]*.03,Math.min(extent[lrAxis]*.34,q));
+  coreWidthCache.set(bucket,value);return value;
+}
+function isCoreRegionText(text){
+  return /머리|두피|얼굴|이마|눈|귀|코|입술|턱|목|가슴|흉부|갈비|배|복부|배꼽|엉치|볼기|골반|등|천골|pelvis|chest|abdomen|head|face|neck|back/i.test(text);
+}
 
 const regionRules = [
+  [/앞가슴\s*위쪽|빗장아래오목|쇄골|빗장뼈/, .80, .80],
   [/vertex|머리꼭대기|정수리|두정부|머리 위/, .97, .50],
   [/forehead|이마|눈썹|미간|코|입술|턱|얼굴|눈|귀|관자/, .91, .82],
   [/occip|뒤통수|후두|뒷머리/, .91, .18],
@@ -103,8 +121,8 @@ const regionRules = [
   [/upper arm|위팔|상완/, .66, .60],
   [/elbow|팔꿈치|주와/, .55, .58],
   [/forearm|아래팔|전완/, .47, .58],
-  [/wrist|손목/, .38, .60],
-  [/hand|손등|손바닥|손가락|엄지|새끼손가락/, .32, .64],
+  [/wrist|손목/, .45, .60],
+  [/hand|손등|손바닥|손가락|엄지|새끼손가락/, .43, .64],
   [/thigh|넓적다리|대퇴/, .31, .53],
   [/knee|무릎|오금|슬부/, .20, .50],
   [/leg|종아리|정강|하퇴|아래다리/, .12, .52],
@@ -123,8 +141,8 @@ function regionTarget(text, side){
   if(/앞|anterior|배쪽|손바닥쪽/.test(text)) t[apAxis]=bodyCenter[apAxis]+anteriorSign*apHalf*.72;
   const lateralFrac = /정중|median|midline/.test(text) ? 0 : (/가쪽|lateral|외측/.test(text)?.62:.43);
   const s=side==='left'?leftSign:side==='right'?-leftSign:0;
-  const coreRegion=/머리|두피|얼굴|이마|눈|귀|코|입술|턱|목|가슴|흉부|갈비|배|복부|배꼽|엉치|볼기|골반|등|천골|pelvis|chest|abdomen|head|face|neck|back/i.test(text);
-  const half=coreRegion?localHalfWidth(t[supAxis]):extent[lrAxis]/2;
+  const coreRegion=isCoreRegionText(text);
+  const half=coreRegion?localCoreHalfWidth(t[supAxis]):extent[lrAxis]/2;
   t[lrAxis]=bodyCenter[lrAxis]+s*half*lateralFrac;
   return t;
 }
@@ -135,7 +153,7 @@ function applyWhoConstraints(input,text,side){
   const t=[...input]; let count=0;
   const explicitFoot=/발등|발바닥|발가락|발허리|발꿈치|복사|발목/.test(text) && !/아래다리|넓적다리|무릎/.test(text);
   if(explicitFoot){
-    const ceiling=norm(supAxis,.115), floor=norm(supAxis,.008);
+    const ceiling=norm(supAxis,.075), floor=norm(supAxis,.004);
     t[supAxis]=Math.max(floor,Math.min(ceiling,t[supAxis]));
     count++;
   }
@@ -144,8 +162,11 @@ function applyWhoConstraints(input,text,side){
   if(lateral&&sideSign){
     const n=Number(lateral[1]);
     const frac=Math.min(.92,n/6*.84);
-    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*frac;
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localCoreHalfWidth(t[supAxis])*frac;
     count++;
+  }
+  if(/배꼽\s*중심/.test(text)&&!/배꼽(?:\s*중심)?(?:보다|에서)?\s*(?:위|아래)로/.test(text)){
+    t[supAxis]=norm(supAxis,.455);count++;
   }
   const nav=text.match(/배꼽(?:\s*중심)?(?:보다|에서)?\s*(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(nav){
@@ -157,7 +178,7 @@ function applyWhoConstraints(input,text,side){
   if(navLat&&sideSign){
     const n=Number(navLat[1]);
     t[supAxis]=norm(supAxis,.455);
-    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*Math.min(.82,n/4*.62);
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localCoreHalfWidth(t[supAxis])*Math.min(.82,n/4*.62);
     count+=2;
   }
   const sacral=text.match(/(첫째|둘째|셋째|넷째)\s*뒤엉치뼈구멍/);
@@ -374,32 +395,30 @@ function midlineSliceProjection(target){
   return best?{point:best,distance:Math.sqrt(dist2(target,best)),part:bestPart,constrained:true,midlineSlice:true}:null;
 }
 function constrainedSurfaceProjection(target,side,locks){
-  const locked=[];
-  if(locks.lr)locked.push(lrAxis);
-  if(locks.sup)locked.push(supAxis);
-  if(locks.ap)locked.push(apAxis);
-  if(locked.length<2)return null;
-  // Preserve the two strongest WHO axes exactly through the final skin projection.
-  // sup+lr is preferred for torso/head; sup+ap for hands/feet; lr+ap otherwise.
-  let ax1,ax2;
-  if(locks.sup&&locks.lr){ax1=supAxis;ax2=lrAxis;}
-  else if(locks.sup&&locks.ap){ax1=supAxis;ax2=apAxis;}
-  else {ax1=lrAxis;ax2=apAxis;}
-  const free=[0,1,2].find(a=>a!==ax1&&a!==ax2);
-  let best=null,bestD=Infinity,bestPart=null;
-  for(const T of surfaceTriangles){
-    const bc=barycentric2D(target[ax1],target[ax2],T.tri[0],T.tri[1],T.tri[2],ax1,ax2);
-    if(!bc)continue;
-    const q=[0,0,0];
-    for(let k=0;k<3;k++)q[k]=bc[0]*T.tri[0][k]+bc[1]*T.tri[1][k]+bc[2]*T.tri[2][k];
-    const sideCoord=q[lrAxis]-bodyCenter[lrAxis];
-    if(side==='left' && Math.sign(sideCoord||0)!==leftSign)continue;
-    if(side==='right' && Math.sign(sideCoord||0)!==-leftSign)continue;
-    if(side==='midline' && Math.abs(sideCoord)>extent[lrAxis]*.12)continue;
-    const d=Math.abs(q[free]-target[free]);
-    if(d<bestD){bestD=d;best=q;bestPart=T.part;}
+  const pairs=[];
+  if(locks.sup){
+    if(locks.lr)pairs.push([supAxis,lrAxis]);
+    if(locks.ap)pairs.push([supAxis,apAxis]);
+  } else if(locks.lr&&locks.ap){
+    pairs.push([lrAxis,apAxis]);
   }
-  return best?{point:best,distance:Math.sqrt(dist2(target,best)),part:bestPart,constrained:true}:null;
+  if(!pairs.length)return null;
+  let best=null,bestD=Infinity,bestPart=null,bestPair=null;
+  for(const [ax1,ax2] of pairs){
+    for(const T of surfaceTriangles){
+      const bc=barycentric2D(target[ax1],target[ax2],T.tri[0],T.tri[1],T.tri[2],ax1,ax2);
+      if(!bc)continue;
+      const q=[0,0,0];
+      for(let k=0;k<3;k++)q[k]=bc[0]*T.tri[0][k]+bc[1]*T.tri[1][k]+bc[2]*T.tri[2][k];
+      const sideCoord=q[lrAxis]-bodyCenter[lrAxis];
+      if(side==='left'&&Math.sign(sideCoord||0)!==leftSign)continue;
+      if(side==='right'&&Math.sign(sideCoord||0)!==-leftSign)continue;
+      if(side==='midline'&&Math.abs(sideCoord)>extent[lrAxis]*.035)continue;
+      const d=dist2(target,q);
+      if(d<bestD){bestD=d;best=q;bestPart=T.part;bestPair=[ax1,ax2];}
+    }
+  }
+  return best?{point:best,distance:Math.sqrt(bestD),part:bestPart,constrained:true,lockedAxes:bestPair}:null;
 }
 function weightedClosestOnSegment(target,a,b,weights){
   const d=b.map((v,i)=>v-a[i]);
@@ -609,7 +628,8 @@ function relationTarget(point, side){
     for(let k=0;k<3;k++)acc[k]+=hit.st.center[k]*w;
     wsum+=w;textLandmarkCount++;
   }
-  const blended=wsum ? (()=>{const g=acc.map(v=>v/wsum),alpha=specific>=2?.82:.68;return g.map((v,i)=>v*alpha+rt[i]*(1-alpha));})() : rt;
+  const blended=wsum ? (()=>{const g=acc.map(v=>v/wsum),alpha=specific>=2?.82:.68;return g.map((v,i)=>v*alpha+rt[i]*(1-alpha));})() : [...rt];
+  blended[supAxis]=rt[supAxis];
   const who=applyWhoConstraints(blended,text,side);
   return {target:who.target,specific,rels:rels.length,whoConstraints:who.count,textLandmarkCount};
 }
@@ -624,10 +644,18 @@ for(const p of acupoints){
     if(side==='midline') target[lrAxis]=bodyCenter[lrAxis];
     const locText=p.locationKo||'';
     const locks={
-      sup:(/B-cun/.test(locText)&&/(위로|아래로|위쪽으로|아래쪽으로|몸쪽으로|먼쪽으로|머리선|같은 높이|뒤엉치뼈구멍)/.test(locText))||/갈비사이공간|칼몸통결합|F-cun|귀구슬위패임|귀구슬\s*중심|귀구슬사이패임|발등|발바닥|발가락|발허리|발꿈치|복사|발목/.test(locText),
+      sup:(/B-cun/.test(locText)&&/(위로|아래로|위쪽으로|아래쪽으로|몸쪽으로|먼쪽으로|머리선|같은 높이|뒤엉치뼈구멍)/.test(locText))||/갈비사이공간|칼몸통결합|F-cun|귀구슬위패임|귀구슬\s*중심|귀구슬사이패임|머리|두피|얼굴|이마|눈|귀|코|입술|턱|목|가슴|흉부|갈비|윗배|아랫배|복부|배꼽|손목|손바닥|손등|손가락|팔꿈치|아래팔|위팔|넓적다리|무릎|아래다리|발등|발바닥|발가락|발허리|발꿈치|복사|발목/.test(locText),
       lr:side==='midline'||/앞정중선\s*위|가쪽(?:으로)?\s*\d+(?:\.\d+)?\s*B-cun|노뼈와\s*자뼈\s*사이|자뼈\s*바로\s*노쪽|뒤가쪽|앞가쪽|뒤안쪽|앞안쪽|동공|귀구슬|귓바퀴|가쪽눈구석|손허리|손가락|발허리|발가락/.test(locText),
       ap:/손바닥|손등|발바닥|발등|손허리|손가락|발허리|발가락|어깨뼈\s*부위|어깨세모근|가쪽눈구석|관자부|앞가슴|아랫배|복부|배꼽|앞정중선/.test(locText)
     };
+    if(side!=='midline'){
+      const half=isCoreRegionText(locText)?localCoreHalfWidth(target[supAxis]):localHalfWidth(target[supAxis]);
+      const dx=target[lrAxis]-bodyCenter[lrAxis];
+      if(half>1e-6&&Math.abs(dx)>half*.96){
+        const sign=Math.sign(dx)||(side==='left'?leftSign:-leftSign);
+        target[lrAxis]=bodyCenter[lrAxis]+sign*half*.985*Math.tanh(Math.abs(dx)/(half*.985));
+      }
+    }
     const projected=project(target,side,locks);
     const sideExpected=side==='left'?leftSign:side==='right'?-leftSign:0;
     const lateral=(projected.point[lrAxis]-bodyCenter[lrAxis]);
