@@ -406,6 +406,21 @@ function project(target, side, locks={}){
   return {point:best,distance:Math.sqrt(bestD),part:bestPart,constrained:false};
 }
 
+const relByPoint=new Map();
+for(const r of relations){if(!relByPoint.has(r.acupointId))relByPoint.set(r.acupointId,[]);relByPoint.get(r.acupointId).push(r);}
+const broad=/muscle of upper limb|muscle of lower limb|neck$|abdomen$|chest$|back$|head$|pelvis$|hand$|foot$/i;
+const genericKoTerms=new Set(['근육','뼈','관절','머리','얼굴','목','가슴','복부','배꼽','팔꿈치','손목','손등','손바닥','손가락','발목','발등','발바닥','발가락','무릎','엉치','볼기','오목한곳','중심','중점']);
+const localizationTerms=[];
+for(const [id,loc] of Object.entries(anatomyKo)){
+  if(!partsByConcept.has(id))continue;
+  const terms=[loc.nameKo,loc.legacyKo,...(loc.aliases??[])].filter(Boolean);
+  for(const raw of new Set(terms)){
+    const term=String(raw).replace(/\s+/g,'').replace(/[()]/g,'');
+    if(term.length<3||genericKoTerms.has(term))continue;
+    localizationTerms.push({id,term});
+  }
+}
+
 function whoTextLandmarks(text,sideSign){
   const compact=text.replace(/\s+/g,'');
   const hits=[],seen=new Set();
