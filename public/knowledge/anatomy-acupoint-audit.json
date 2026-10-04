@@ -4,18 +4,24 @@
     "primaryStandard": "WHO Standard Acupuncture Point Locations in the Western Pacific Region (2008)",
     "secondaryStructuredSource": "TARA Acupoints Ontology curated acupoints-locations.csv",
     "atlas": "BodyParts3D 4.0 / FMA concept subset used by Seungho Atlas",
-    "mappingRule": "Map WHO/TARA-identified surface regions or reference landmarks to atlas concepts by normalized exact label or a documented conservative alias. Do not infer deep structures solely from meridian theory.",
-    "relationPolicy": "TARA locatedOnTheSurfaceOf -> surface-landmark; TARA locatedInRelationTo -> reference-landmark. Existing literature-backed ST36 adjacent relations are preserved.",
-    "limitation": "When the atlas lacks the exact surface-region class, a broader or immediately corresponding atlas concept is used and noteKo explicitly marks the relationship as conservative rather than one-to-one identity."
+    "scope": "All 361 standard acupoints",
+    "mappingRule": "Use WHO/TARA anatomical surface regions and reference landmarks only. Exact normalized atlas matches are preferred. A short curated alias table is permitted only when the target atlas concept name is uniquely verified. Missing surface-region classes may use a broader regional proxy, explicitly labeled as such in noteKo.",
+    "prohibitedInference": "Do not infer deep structures, nerves, vessels, muscles, or one-to-one identity from meridian theory alone.",
+    "relationPolicy": "locatedOnTheSurfaceOf -> surface-landmark; locatedInRelationTo -> reference-landmark; previously published ST36 adjacent mappings are preserved."
   },
   "standardAcupointCount": 361,
   "coveredAcupointCount": 361,
-  "relationCount": 599,
-  "existingPreserved": 2,
-  "generatedFromWhoTara": 599,
+  "relationCount": 578,
+  "preservedLiteratureRelations": 2,
+  "generatedFromWhoTara": 578,
+  "resolutionMethodCounts": {
+    "regional-proxy": 283,
+    "exact-normalized": 285,
+    "curated-alias": 10
+  },
   "relationCounts": {
     "surface-landmark": 361,
-    "reference-landmark": 236,
+    "reference-landmark": 215,
     "adjacent": 2
   },
   "minimumRelationsPerPoint": 1,
@@ -23,6 +29,8 @@
   "pointsWithOneRelation": [
     "LU1",
     "LU2",
+    "LU3",
+    "LU4",
     "LU5",
     "LU6",
     "LU11",
@@ -38,11 +46,13 @@
     "LI11",
     "LI12",
     "LI13",
+    "LI15",
     "LI19",
     "LI20",
     "ST1",
     "ST2",
     "ST3",
+    "ST7",
     "ST8",
     "ST14",
     "ST16",
@@ -59,6 +69,7 @@
     "ST28",
     "ST29",
     "ST41",
+    "ST44",
     "ST45",
     "SP1",
     "SP2",
@@ -72,6 +83,7 @@
     "SP19",
     "SP20",
     "SP21",
+    "HT2",
     "HT3",
     "HT9",
     "SI1",
@@ -128,6 +140,7 @@
     "KI25",
     "KI26",
     "PC1",
+    "PC2",
     "PC3",
     "PC4",
     "PC5",
@@ -135,8 +148,11 @@
     "PC7",
     "PC9",
     "TE1",
+    "TE2",
     "TE10",
+    "TE11",
     "TE12",
+    "TE14",
     "TE17",
     "TE18",
     "TE19",
@@ -145,6 +161,7 @@
     "TE22",
     "GB1",
     "GB2",
+    "GB3",
     "GB4",
     "GB5",
     "GB6",
@@ -165,9 +182,12 @@
     "GB24",
     "GB27",
     "GB28",
+    "GB29",
+    "GB30",
     "GB31",
     "GB32",
     "GB40",
+    "GB43",
     "GB44",
     "LR1",
     "LR4",
@@ -177,6 +197,7 @@
     "LR14",
     "GV1",
     "GV2",
+    "GV15",
     "GV17",
     "GV18",
     "GV19",
@@ -293,6 +314,10 @@
       "count": 4
     },
     {
+      "label": "Biceps Brachii Muscle",
+      "count": 4
+    },
+    {
       "label": "Second Intercostal Space",
       "count": 4
     },
@@ -346,6 +371,10 @@
     },
     {
       "label": "Radial Styloid Process",
+      "count": 3
+    },
+    {
+      "label": "Acromion",
       "count": 3
     },
     {
@@ -445,7 +474,15 @@
       "count": 2
     },
     {
+      "label": "Zygomatic Arch",
+      "count": 2
+    },
+    {
       "label": "Tendon Of Quadriceps Femoris",
+      "count": 2
+    },
+    {
+      "label": "Second Toe",
       "count": 2
     },
     {
@@ -465,6 +502,10 @@
       "count": 2
     },
     {
+      "label": "Little Finger",
+      "count": 2
+    },
+    {
       "label": "Triquetrum",
       "count": 2
     },
@@ -478,6 +519,10 @@
     },
     {
       "label": "Frontal Notch",
+      "count": 2
+    },
+    {
+      "label": "Second Cervical Vertebra",
       "count": 2
     },
     {
@@ -505,11 +550,19 @@
       "count": 2
     },
     {
+      "label": "Elbow",
+      "count": 2
+    },
+    {
       "label": "Condyloid Process",
       "count": 2
     },
     {
       "label": "Auricular Root",
+      "count": 2
+    },
+    {
+      "label": "Greater Trochanter",
       "count": 2
     },
     {
@@ -717,6 +770,10 @@
       "count": 1
     },
     {
+      "label": "Ring Finger",
+      "count": 1
+    },
+    {
       "label": "Metacarpophalangeal Joint Of Manual Digit 4",
       "count": 1
     },
@@ -758,6 +815,10 @@
     },
     {
       "label": "Metatarsophalangeal Joint Of Pedal Digit 4",
+      "count": 1
+    },
+    {
+      "label": "Fourth Toe",
       "count": 1
     },
     {
