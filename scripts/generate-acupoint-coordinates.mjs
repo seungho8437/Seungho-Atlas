@@ -242,7 +242,7 @@ function applyWhoConstraints(input,text,side){
   if(/발등/.test(text)){t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.08;count++;}
   if(/꼭지돌기[^,.]{0,24}?앞쪽/.test(text)){t[apAxis]+=anteriorSign*extent[apAxis]*.055;count++;}
   if(/꼭지돌기[^,.]{0,24}?뒤/.test(text)){t[apAxis]-=anteriorSign*extent[apAxis]*.055;count++;}
-  if(/귓바퀴\s*꼭대기\s*바로\s*위/.test(text)){t[supAxis]=norm(supAxis,.91);count++;}
+  if(/귓바퀴\s*꼭대기\s*바로\s*위/.test(text)&&!/머리선[^,.]{0,40}B-cun/.test(text)){t[supAxis]=norm(supAxis,.91);count++;}
   if(/광대활/.test(text)){t[supAxis]=norm(supAxis,.87);count++;}
   if(/귀구슬위패임/.test(text)){t[supAxis]=norm(supAxis,.872);count++;}
   if(/귀구슬\s*중심/.test(text)){t[supAxis]=norm(supAxis,.858);count++;}
@@ -741,10 +741,34 @@ function applyReviewedExceptionProjection(item){
     const pr=project(target,item.side,locks,projectionRegion(text,target));
     item.position=pr.point.map(v=>+v.toFixed(4));
     item.validation.projectionDistance=+pr.distance.toFixed(4);
+    item.validation.projectionDelta=pr.point.map((v,i)=>+(v-target[i]).toFixed(4));
+    item.validation.regionConstrained=true;
     item.validation.surfacePartId=pr.part;
     item.validation.preProjectionTarget=target.map(v=>+v.toFixed(4));
     item.validation.reviewedException=rule;
   };
+
+  if(item.acupointId==='BL67'){
+    const p1=resultByKey.get('BL66:'+item.side),p2=resultByKey.get('BL65:'+item.side);
+    if(p1&&p2){
+      const target=p1.position.map((v,i)=>v+(p1.position[i]-p2.position[i])*1.15);
+      mark(target,{sup:true,lr:true},'reviewed-BL67-distal-continuation-from-BL65-BL66');
+      return true;
+    }
+  }
+  if(item.acupointId==='GB44'){
+    const p1=resultByKey.get('GB43:'+item.side),p2=resultByKey.get('GB42:'+item.side);
+    if(p1&&p2){
+      const target=p1.position.map((v,i)=>v+(p1.position[i]-p2.position[i])*.55);
+      mark(target,{sup:true,lr:true},'reviewed-GB44-distal-continuation-from-GB42-GB43');
+      return true;
+    }
+  }
+  if(item.acupointId==='GB7' || item.acupointId==='GB8'){
+    const target=[...item.validation.preProjectionTarget];
+    mark(target,{sup:true,ap:true},item.acupointId==='GB7'?'reviewed-GB7-temporal-hairline':'reviewed-GB8-temporal-hairline-1.5-cun');
+    return true;
+  }
 
   if(item.acupointId==='ST43'){
     const proximal=resultByKey.get('ST42:'+item.side), distal=resultByKey.get('ST44:'+item.side);
@@ -823,6 +847,8 @@ function updateFromRelativeDefinition(item,text){
   const pr=project(target,item.side,{sup:true,lr:true},projectionRegion(text,target));
   item.position=pr.point.map(v=>+v.toFixed(4));
   item.validation.projectionDistance=+pr.distance.toFixed(4);
+  item.validation.projectionDelta=pr.point.map((v,i)=>+(v-target[i]).toFixed(4));
+  item.validation.regionConstrained=true;
   item.validation.surfacePartId=pr.part;
   item.validation.preProjectionTarget=target.map(v=>+v.toFixed(4));
   item.validation.relativeConstraint=rule;
