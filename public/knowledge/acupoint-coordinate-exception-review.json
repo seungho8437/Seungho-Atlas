@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T11:41:12.662Z",
+  "generatedAt": "2026-10-04T12:04:50.862Z",
   "scope": "Focused visual/anatomical exception review: four formerly low-confidence acupoints plus seven formerly near-duplicate clusters.",
   "coordinateModel": "BodyParts3D-4.0",
   "reviewedLogicalAcupoints": 18,
@@ -193,18 +193,18 @@
         "GB42"
       ],
       "expected": "GB42(4-5 발허리뼈 사이)가 ST43(2-3 사이)보다 가쪽이어야 한다.",
-      "status": "pass",
+      "status": "review-required",
       "surfaceAndLaterality": true,
-      "directionalConstraint": true,
+      "directionalConstraint": false,
       "separationThreshold": 0.0188,
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.0721
+          "distance": 0.0455
         },
         {
           "side": "right",
-          "distance": 0.0693
+          "distance": 0.0488
         }
       ],
       "confidence": [
@@ -217,22 +217,22 @@
         {
           "id": "ST43",
           "side": "left",
-          "distance": 0.0012
+          "distance": 0.0033
         },
         {
           "id": "ST43",
           "side": "right",
-          "distance": 0.0001
+          "distance": 0.0002
         },
         {
           "id": "GB42",
           "side": "left",
-          "distance": 0.0535
+          "distance": 0.0257
         },
         {
           "id": "GB42",
           "side": "right",
-          "distance": 0.0549
+          "distance": 0.0191
         }
       ],
       "caveat": null
@@ -252,11 +252,11 @@
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.0746
+          "distance": 0.0763
         },
         {
           "side": "right",
-          "distance": 0.0745
+          "distance": 0.0757
         }
       ],
       "confidence": [
@@ -269,22 +269,22 @@
         {
           "id": "BL62",
           "side": "left",
-          "distance": 0.1874
+          "distance": 0.1881
         },
         {
           "id": "BL62",
           "side": "right",
-          "distance": 0.1796
+          "distance": 0.1803
         },
         {
           "id": "KI4",
           "side": "left",
-          "distance": 0.0197
+          "distance": 0.0017
         },
         {
           "id": "KI4",
           "side": "right",
-          "distance": 0.0033
+          "distance": 0.0166
         }
       ],
       "caveat": null
@@ -304,11 +304,11 @@
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.0669
+          "distance": 0.0858
         },
         {
           "side": "right",
-          "distance": 0.0688
+          "distance": 0.0809
         }
       ],
       "confidence": [
@@ -321,22 +321,22 @@
         {
           "id": "BL63",
           "side": "left",
-          "distance": 0.0045
+          "distance": 0.0495
         },
         {
           "id": "BL63",
           "side": "right",
-          "distance": 0.0028
+          "distance": 0.0431
         },
         {
           "id": "GB41",
           "side": "left",
-          "distance": 0.025
+          "distance": 0.0134
         },
         {
           "id": "GB41",
           "side": "right",
-          "distance": 0.0218
+          "distance": 0.0155
         }
       ],
       "caveat": null
@@ -356,11 +356,11 @@
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.0899
+          "distance": 0.1116
         },
         {
           "side": "right",
-          "distance": 0.0907
+          "distance": 0.1125
         }
       ],
       "confidence": [
@@ -373,22 +373,22 @@
         {
           "id": "TE3",
           "side": "left",
-          "distance": 0.0714
+          "distance": 0.0188
         },
         {
           "id": "TE3",
           "side": "right",
-          "distance": 0.0688
+          "distance": 0.0181
         },
         {
           "id": "TE4",
           "side": "left",
-          "distance": 0.0458
+          "distance": 0.0258
         },
         {
           "id": "TE4",
           "side": "right",
-          "distance": 0.0448
+          "distance": 0.0303
         }
       ],
       "caveat": null
