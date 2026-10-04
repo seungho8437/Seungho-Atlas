@@ -135,7 +135,7 @@ function applyWhoConstraints(input,text,side){
   const t=[...input]; let count=0;
   const explicitFoot=/발등|발바닥|발가락|발허리|발꿈치|복사|발목/.test(text) && !/아래다리|넓적다리|무릎/.test(text);
   if(explicitFoot){
-    const ceiling=norm(supAxis,.075), floor=norm(supAxis,.004);
+    const ceiling=norm(supAxis,.115), floor=norm(supAxis,.008);
     t[supAxis]=Math.max(floor,Math.min(ceiling,t[supAxis]));
     count++;
   }
@@ -146,9 +146,6 @@ function applyWhoConstraints(input,text,side){
     const frac=Math.min(.92,n/6*.84);
     t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*frac;
     count++;
-  }
-  if(/배꼽\s*중심/.test(text)&&!/배꼽(?:\s*중심)?(?:보다|에서)?\s*(?:위|아래)로/.test(text)){
-    t[supAxis]=norm(supAxis,.455);count++;
   }
   const nav=text.match(/배꼽(?:\s*중심)?(?:보다|에서)?\s*(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(nav){
@@ -382,24 +379,27 @@ function constrainedSurfaceProjection(target,side,locks){
   if(locks.sup)locked.push(supAxis);
   if(locks.ap)locked.push(apAxis);
   if(locked.length<2)return null;
-  const pairs=[];
-  for(let i=0;i<locked.length;i++)for(let j=i+1;j<locked.length;j++)pairs.push([locked[i],locked[j]]);
-  let best=null,bestD=Infinity,bestPart=null,bestPair=null;
-  for(const [ax1,ax2] of pairs){
-    for(const T of surfaceTriangles){
-      const bc=barycentric2D(target[ax1],target[ax2],T.tri[0],T.tri[1],T.tri[2],ax1,ax2);
-      if(!bc)continue;
-      const q=[0,0,0];
-      for(let k=0;k<3;k++)q[k]=bc[0]*T.tri[0][k]+bc[1]*T.tri[1][k]+bc[2]*T.tri[2][k];
-      const sideCoord=q[lrAxis]-bodyCenter[lrAxis];
-      if(side==='left' && Math.sign(sideCoord||0)!==leftSign)continue;
-      if(side==='right' && Math.sign(sideCoord||0)!==-leftSign)continue;
-      if(side==='midline' && Math.abs(sideCoord)>extent[lrAxis]*.035)continue;
-      const d=dist2(target,q);
-      if(d<bestD){bestD=d;best=q;bestPart=T.part;bestPair=[ax1,ax2];}
-    }
+  // Preserve the two strongest WHO axes exactly through the final skin projection.
+  // sup+lr is preferred for torso/head; sup+ap for hands/feet; lr+ap otherwise.
+  let ax1,ax2;
+  if(locks.sup&&locks.lr){ax1=supAxis;ax2=lrAxis;}
+  else if(locks.sup&&locks.ap){ax1=supAxis;ax2=apAxis;}
+  else {ax1=lrAxis;ax2=apAxis;}
+  const free=[0,1,2].find(a=>a!==ax1&&a!==ax2);
+  let best=null,bestD=Infinity,bestPart=null;
+  for(const T of surfaceTriangles){
+    const bc=barycentric2D(target[ax1],target[ax2],T.tri[0],T.tri[1],T.tri[2],ax1,ax2);
+    if(!bc)continue;
+    const q=[0,0,0];
+    for(let k=0;k<3;k++)q[k]=bc[0]*T.tri[0][k]+bc[1]*T.tri[1][k]+bc[2]*T.tri[2][k];
+    const sideCoord=q[lrAxis]-bodyCenter[lrAxis];
+    if(side==='left' && Math.sign(sideCoord||0)!==leftSign)continue;
+    if(side==='right' && Math.sign(sideCoord||0)!==-leftSign)continue;
+    if(side==='midline' && Math.abs(sideCoord)>extent[lrAxis]*.12)continue;
+    const d=Math.abs(q[free]-target[free]);
+    if(d<bestD){bestD=d;best=q;bestPart=T.part;}
   }
-  return best?{point:best,distance:Math.sqrt(bestD),part:bestPart,constrained:true,lockedAxes:bestPair}:null;
+  return best?{point:best,distance:Math.sqrt(dist2(target,best)),part:bestPart,constrained:true}:null;
 }
 function weightedClosestOnSegment(target,a,b,weights){
   const d=b.map((v,i)=>v-a[i]);
@@ -624,18 +624,10 @@ for(const p of acupoints){
     if(side==='midline') target[lrAxis]=bodyCenter[lrAxis];
     const locText=p.locationKo||'';
     const locks={
-      sup:(/B-cun/.test(locText)&&/(위로|아래로|위쪽으로|아래쪽으로|몸쪽으로|먼쪽으로|머리선|갈비사이공간|같은 높이|뒤엉치뼈구멍)/.test(locText))||/F-cun|갈비사이공간|배꼽|귀구슬위패임|귀구슬\s*중심|귀구슬사이패임|귓바퀴\s*꼭대기|발등|발바닥|발가락|발허리|발꿈치|복사|발목/.test(locText),
-      lr:side==='midline'||/앞정중선\s*위|가쪽(?:으로)?\s*\d+(?:\.\d+)?\s*B-cun|노뼈와\s*자뼈\s*사이|자뼈\s*바로\s*노쪽|뒤가쪽|앞가쪽|뒤안쪽|앞안쪽|동공|귀구슬|귓바퀴|가쪽눈구석|손허리|손가락|발허리|발가락|노쪽|자쪽|안쪽|가쪽|노뼈|자뼈/.test(locText),
+      sup:(/B-cun/.test(locText)&&/(위로|아래로|위쪽으로|아래쪽으로|몸쪽으로|먼쪽으로|머리선|같은 높이|뒤엉치뼈구멍)/.test(locText))||/갈비사이공간|칼몸통결합|F-cun|귀구슬위패임|귀구슬\s*중심|귀구슬사이패임|발등|발바닥|발가락|발허리|발꿈치|복사|발목/.test(locText),
+      lr:side==='midline'||/앞정중선\s*위|가쪽(?:으로)?\s*\d+(?:\.\d+)?\s*B-cun|노뼈와\s*자뼈\s*사이|자뼈\s*바로\s*노쪽|뒤가쪽|앞가쪽|뒤안쪽|앞안쪽|동공|귀구슬|귓바퀴|가쪽눈구석|손허리|손가락|발허리|발가락/.test(locText),
       ap:/손바닥|손등|발바닥|발등|손허리|손가락|발허리|발가락|어깨뼈\s*부위|어깨세모근|가쪽눈구석|관자부|앞가슴|아랫배|복부|배꼽|앞정중선/.test(locText)
     };
-    if(side!=='midline'&&locks.lr){
-      const h=localHalfWidth(target[supAxis]);
-      const dx=target[lrAxis]-bodyCenter[lrAxis];
-      if(h>1e-6&&Math.abs(dx)>h*.92){
-        const sign=Math.sign(dx)||(side==='left'?leftSign:-leftSign);
-        target[lrAxis]=bodyCenter[lrAxis]+sign*h*.98*Math.tanh(Math.abs(dx)/(h*.98));
-      }
-    }
     const projected=project(target,side,locks);
     const sideExpected=side==='left'?leftSign:side==='right'?-leftSign:0;
     const lateral=(projected.point[lrAxis]-bodyCenter[lrAxis]);
@@ -686,69 +678,6 @@ for(const item of results){
   const text=acupointById.get(item.acupointId)?.locationKo||'';
   updateFromRelativeDefinition(item,text);
 }
-function surfaceNormalAt(point){
-  let bestD=Infinity,bestTri=null;
-  for(const T of surfaceTriangles){
-    const q=closestOnTri(point,...T.tri),d=dist2(point,q);
-    if(d<bestD){bestD=d;bestTri=T.tri;}
-  }
-  if(!bestTri)return [0,0,1];
-  const a=bestTri[0],b=bestTri[1],c=bestTri[2];
-  const u=[b[0]-a[0],b[1]-a[1],b[2]-a[2]],v=[c[0]-a[0],c[1]-a[1],c[2]-a[2]];
-  const n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];
-  const m=Math.hypot(...n)||1;return n.map(x=>x/m);
-}
-function tangentOfAxis(axis,normal){
-  const e=[0,0,0];e[axis]=1;
-  const d=e[0]*normal[0]+e[1]*normal[1]+e[2]*normal[2];
-  const t=e.map((v,i)=>v-d*normal[i]);
-  const m=Math.hypot(...t);
-  return m>1e-7?t.map(x=>x/m):null;
-}
-function resolveExactCollisions(){
-  const sep=bodyDiag*.0018;
-  let resolved=0;
-  for(let pass=0;pass<4;pass++){
-    const groups=new Map();
-    for(const item of results){
-      const k=item.side+':'+item.position.join(',');
-      if(!groups.has(k))groups.set(k,[]);
-      groups.get(k).push(item);
-    }
-    const collisions=[...groups.values()].filter(g=>g.length>1);
-    if(!collisions.length)break;
-    for(const group of collisions){
-      const base=[...group[0].position],normal=surfaceNormalAt(base);
-      const targets=group.map(x=>x.validation.preProjectionTarget||x.position);
-      const ranges=[0,1,2].map(axis=>{
-        const vals=targets.map(t=>t[axis]);return Math.max(...vals)-Math.min(...vals);
-      });
-      const axes=[0,1,2].sort((a,b)=>ranges[b]-ranges[a]);
-      let axis=axes[0],tangent=tangentOfAxis(axis,normal);
-      if(!tangent||Math.hypot(...tangent)<1e-7){axis=axes[1];tangent=tangentOfAxis(axis,normal);}
-      if(!tangent){tangent=[0,0,0];tangent[(lrAxis+1)%3]=1;}
-      const ordered=group.map((item,i)=>({item,i,target:targets[i]}))
-        .sort((a,b)=>a.target[axis]-b.target[axis]||a.item.acupointId.localeCompare(b.item.acupointId));
-      for(let rank=0;rank<ordered.length;rank++){
-        const {item}=ordered[rank];
-        let offset=(rank-(ordered.length-1)/2)*sep;
-        if(Math.abs(offset)<sep*.35 && ordered.length>1)offset+=(rank%2?1:-1)*sep*.55;
-        const candidate=base.map((v,i)=>v+tangent[i]*offset);
-        const pr=project(candidate,item.side,{});
-        item.validation.collisionResolved=true;
-        item.validation.collisionOriginalPosition=[...item.position];
-        item.validation.collisionTargetAxis=axis;
-        item.validation.collisionTangentOffset=+offset.toFixed(6);
-        item.position=pr.point.map(v=>+v.toFixed(4));
-        item.validation.surfacePartId=pr.part;
-        resolved++;
-      }
-    }
-  }
-  return resolved;
-}
-const collisionResolvedCount=resolveExactCollisions();
-
 const expected=acupoints.reduce((n,p)=>n+(p.laterality==='midline'?1:2),0);
 if(results.length!==expected)throw new Error('Physical point count mismatch');
 const invalid=results.filter(x=>!x.validation.surfaceProjected||!x.validation.lateralityConsistent);
@@ -760,7 +689,7 @@ for(const x of results){const k=x.side+':'+x.position.join(',');if(!exactMap.has
 const exactDuplicateClusters=[...exactMap.values()].filter(v=>v.length>1);
 const out={version:1,model:'BodyParts3D-4.0',generatedAt:new Date().toISOString(),coordinateFrame:{source:'native BodyParts3D 4.0 atlas coordinates',axes:{superiorInferior:supAxis,leftRight:lrAxis,anteriorPosterior:apAxis},signs:{left:leftSign,anterior:anteriorSign}},methodology:{primary:'WHO 2008 location text',anatomyConstraints:'anatomy-acupoint-relations.json (B)',laterality:'bilateral points generated independently by side; GV/CV retained on midline',projection:'nearest point on actual integumentary mesh triangle, not bounding-box or vertex-only snapping'},points:results};
 fs.writeFileSync(new URL('public/knowledge/acupoint-coordinates.json',root),JSON.stringify(out,null,2)+'\n');
-const audit={generatedAt:new Date().toISOString(),logicalAcupoints:acupoints.length,physicalCoordinates:results.length,expectedPhysicalCoordinates:expected,surfaceTriangleCount:surfaceTriangles.length,integumentaryPartCount:surfaceParts.length,invalidGeometryOrLaterality:invalid.map(x=>x.acupointId+':'+x.side),duplicateClusters,exactDuplicateClusters,collisionResolvedCount,confidenceCounts:results.reduce((m,x)=>(m[x.confidence]=(m[x.confidence]||0)+1,m),{}),projectionDistance:{max:Math.max(...results.map(x=>x.validation.projectionDistance)),mean:results.reduce((n,x)=>n+x.validation.projectionDistance,0)/results.length},axes:out.coordinateFrame,bodyBounds:{min:bodyMin,max:bodyMax,center:bodyCenter,extent,bodyDiag}};
+const audit={generatedAt:new Date().toISOString(),logicalAcupoints:acupoints.length,physicalCoordinates:results.length,expectedPhysicalCoordinates:expected,surfaceTriangleCount:surfaceTriangles.length,integumentaryPartCount:surfaceParts.length,invalidGeometryOrLaterality:invalid.map(x=>x.acupointId+':'+x.side),duplicateClusters,exactDuplicateClusters,confidenceCounts:results.reduce((m,x)=>(m[x.confidence]=(m[x.confidence]||0)+1,m),{}),projectionDistance:{max:Math.max(...results.map(x=>x.validation.projectionDistance)),mean:results.reduce((n,x)=>n+x.validation.projectionDistance,0)/results.length},axes:out.coordinateFrame,bodyBounds:{min:bodyMin,max:bodyMax,center:bodyCenter,extent,bodyDiag}};
 fs.writeFileSync(new URL('public/knowledge/acupoint-coordinates-audit.json',root),JSON.stringify(audit,null,2)+'\n');
 if(exactDuplicateClusters.length){console.error('EXACT_DUPLICATE_COORDINATES',JSON.stringify(exactDuplicateClusters,null,2));throw new Error('Coordinate validation failed: '+exactDuplicateClusters.length+' exact duplicate clusters');}
 if(invalid.length){console.error('INVALID_COORDINATES',JSON.stringify(invalid.map(x=>({id:x.acupointId,side:x.side,position:x.position,validation:x.validation})),null,2));throw new Error('Coordinate validation failed: '+invalid.length+' side/surface errors');}
