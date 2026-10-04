@@ -173,6 +173,8 @@ function applyWhoConstraints(input,text,side){
   }
   const refs=[
     [/앞겨드랑주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .735],
+    [/뒤겨드랑주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .735],
+    [/봉우리각[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .76],
     [/손바닥쪽\s*손목주름[^,.]{0,35}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/, .385],
     [/손등쪽\s*손목주름[^,.]{0,35}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/, .385],
     [/팔오금주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .55],
@@ -214,6 +216,30 @@ function applyWhoConstraints(input,text,side){
   if(/콧방울\s*아래모서리와\s*같은\s*높이/.test(text)){t[supAxis]=norm(supAxis,.855);count++;}
   if(/목빗근[^,.]{0,18}?뒤/.test(text)){t[apAxis]-=anteriorSign*extent[apAxis]*.035;count++;}
   if(/목빗근[^,.]{0,18}?앞/.test(text)){t[apAxis]+=anteriorSign*extent[apAxis]*.035;count++;}
+  if(/손바닥/.test(text)){t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.16;count++;}
+  if(/손등/.test(text)){t[apAxis]=bodyCenter[apAxis]-anteriorSign*extent[apAxis]*.10;count++;}
+  if(/발바닥/.test(text)){t[apAxis]=bodyCenter[apAxis]-anteriorSign*extent[apAxis]*.16;count++;}
+  if(/발등/.test(text)){t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.08;count++;}
+  if(/꼭지돌기[^,.]{0,24}?앞쪽/.test(text)){t[apAxis]+=anteriorSign*extent[apAxis]*.055;count++;}
+  if(/꼭지돌기[^,.]{0,24}?뒤/.test(text)){t[apAxis]-=anteriorSign*extent[apAxis]*.055;count++;}
+  if(/귓바퀴\s*꼭대기/.test(text)){t[supAxis]=norm(supAxis,.91);count++;}
+  if(/광대활/.test(text)){t[supAxis]=norm(supAxis,.87);count++;}
+  if(/귀구슬위패임/.test(text)){t[supAxis]=norm(supAxis,.872);count++;}
+  if(/귀구슬\s*중심/.test(text)){t[supAxis]=norm(supAxis,.858);count++;}
+  if(/귀구슬사이패임/.test(text)){t[supAxis]=norm(supAxis,.846);count++;}
+  const browUp=text.match(/눈썹보다\s*위로\s*(\d+(?:\.\d+)?)\s*B-cun/);
+  if(browUp){t[supAxis]=norm(supAxis,.885)+Number(browUp[1])*cunY;count++;}
+  if(/눈썹\s*안쪽끝/.test(text)){t[supAxis]=norm(supAxis,.885);count++;}
+  if(/앞위쪽/.test(text)){t[supAxis]+=cunY*.7;count++;}
+  if(/배꼽\s*중심과\s*같은\s*높이/.test(text)){t[supAxis]=norm(supAxis,.455);count++;}
+  if(/발목/.test(text)&&!/B-cun/.test(text)){t[supAxis]=norm(supAxis,.06);count++;}
+  if(/발허리발가락관절[^,.]{0,12}먼쪽/.test(text)){t[apAxis]+=anteriorSign*extent[apAxis]*.045;count++;}
+  if(/발허리발가락관절[^,.]{0,12}몸쪽/.test(text)){t[apAxis]-=anteriorSign*extent[apAxis]*.035;count++;}
+  if(/손허리손가락관절[^,.]{0,12}먼쪽/.test(text)){t[supAxis]-=cunY*.8;count++;}
+  if(/손허리손가락관절[^,.]{0,12}몸쪽/.test(text)){t[supAxis]+=cunY*.8;count++;}
+  if(/어깨뼈가시\s*중점\s*바로\s*위/.test(text)){t[supAxis]=norm(supAxis,.735);count++;}
+  if(/어깨뼈\s*위각\s*위쪽/.test(text)){t[supAxis]=norm(supAxis,.775);count++;}
+  if(/어깨뼈가시\s*중점과\s*어깨뼈\s*아래각/.test(text)){t[supAxis]=norm(supAxis,.70);count++;}
   if(side==='midline'){t[lrAxis]=bodyCenter[lrAxis];count++;}
   return {target:t,count};
 }
@@ -413,6 +439,42 @@ for(const p of acupoints){
       sourceIds:['WHO_ACUPOINT_2008','BODY_PARTS_3D_4','TARA_ACUPOINT_CURATED']
     });
   }
+}
+const resultByKey=new Map(results.map(x=>[x.acupointId+':'+x.side,x]));
+const acupointById=new Map(acupoints.map(x=>[x.id,x]));
+function updateFromRelativeDefinition(item,text){
+  const pair=text.match(/([A-Z]{1,2}\d+)\s*와\s*([A-Z]{1,2}\d+)를\s*잇는\s*(?:곡선|선)/);
+  if(!pair)return false;
+  const a=resultByKey.get(pair[1]+':'+item.side), b=resultByKey.get(pair[2]+':'+item.side);
+  if(!a||!b)return false;
+  let target=null,rule=null;
+  if(/중점/.test(text)){target=a.position.map((v,i)=>(v+b.position[i])/2);rule='relative-midpoint';}
+  const vertical=text.match(/위쪽\s*(\d+)\/(\d+)과\s*아래쪽\s*(\d+)\/(\d+)\s*경계/);
+  if(vertical){
+    const f=Number(vertical[1])/Number(vertical[2]);
+    const upper=a.position[supAxis]>=b.position[supAxis]?a:b, lower=upper===a?b:a;
+    target=upper.position.map((v,i)=>v*(1-f)+lower.position[i]*f);rule='relative-vertical-fraction';
+  }
+  const lateral=text.match(/가쪽\s*(\d+)\/(\d+)과\s*안쪽\s*(\d+)\/(\d+)\s*경계/);
+  if(lateral){
+    const f=Number(lateral[1])/Number(lateral[2]);
+    const outer=Math.abs(a.position[lrAxis]-bodyCenter[lrAxis])>=Math.abs(b.position[lrAxis]-bodyCenter[lrAxis])?a:b;
+    const inner=outer===a?b:a;
+    target=outer.position.map((v,i)=>v*(1-f)+inner.position[i]*f);rule='relative-lateral-fraction';
+  }
+  if(!target)return false;
+  const pr=project(target,item.side);
+  item.position=pr.point.map(v=>+v.toFixed(4));
+  item.validation.projectionDistance=+pr.distance.toFixed(4);
+  item.validation.surfacePartId=pr.part;
+  item.validation.preProjectionTarget=target.map(v=>+v.toFixed(4));
+  item.validation.relativeConstraint=rule;
+  if(item.confidence==='low')item.confidence='moderate';
+  return true;
+}
+for(const item of results){
+  const text=acupointById.get(item.acupointId)?.locationKo||'';
+  updateFromRelativeDefinition(item,text);
 }
 const expected=acupoints.reduce((n,p)=>n+(p.laterality==='midline'?1:2),0);
 if(results.length!==expected)throw new Error('Physical point count mismatch');
