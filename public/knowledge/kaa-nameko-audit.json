@@ -14,7 +14,9 @@
     "total": 3432,
     "directVerified": 666,
     "derivedFromKaaComponent": 30,
-    "notDirectlyListed": 2736
+    "notDirectlyListed": 2736,
+    "semanticReauditAt": "2026-10-04T13:35:43.503Z",
+    "semanticReauditSourceConfirmedBases": 22
   },
   "records": {
     "FMA3710": {
@@ -2705,8 +2707,11 @@
     "FMA13335": {
       "sourceNameEn": "external oblique",
       "nameKo": "배바깥빗근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "derived-from-KAA-component",
+      "note": "KAA: External abdominal oblique muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        57
+      ]
     },
     "FMA13336": {
       "sourceNameEn": "right external oblique",
@@ -4426,8 +4431,11 @@
     "FMA18060": {
       "sourceNameEn": "psoas major",
       "nameKo": "큰허리근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "direct-verified",
+      "note": "KAA: Psoas major muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        62
+      ]
     },
     "FMA18247": {
       "sourceNameEn": "glans penis",
@@ -4700,20 +4708,29 @@
     "FMA19090": {
       "sourceNameEn": "pubococcygeus",
       "nameKo": "두덩꼬리근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "direct-verified",
+      "note": "KAA: Pubococcygeus muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        59
+      ]
     },
     "FMA19091": {
       "sourceNameEn": "puborectalis",
       "nameKo": "두덩곧창자근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "direct-verified",
+      "note": "KAA: Puborectalis muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        59
+      ]
     },
     "FMA19092": {
       "sourceNameEn": "iliococcygeus",
       "nameKo": "엉덩꼬리근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "direct-verified",
+      "note": "KAA: Iliococcygeus muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        59
+      ]
     },
     "FMA19234": {
       "sourceNameEn": "deferent duct",
@@ -5126,8 +5143,11 @@
     "FMA22310": {
       "sourceNameEn": "iliacus",
       "nameKo": "엉덩근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "direct-verified",
+      "note": "KAA: Iliacus muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        62
+      ]
     },
     "FMA22314": {
       "sourceNameEn": "gluteus maximus",
@@ -5392,8 +5412,11 @@
     "FMA22430": {
       "sourceNameEn": "rectus femoris",
       "nameKo": "넙다리곧은근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "direct-verified",
+      "note": "KAA: Rectus femoris muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        63
+      ]
     },
     "FMA22431": {
       "sourceNameEn": "vastus lateralis",
@@ -5404,14 +5427,20 @@
     "FMA22432": {
       "sourceNameEn": "vastus medialis",
       "nameKo": "안쪽넓은근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "direct-verified",
+      "note": "KAA: Vastus medialis muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        63
+      ]
     },
     "FMA22433": {
       "sourceNameEn": "vastus intermedius",
       "nameKo": "중간넓은근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "direct-verified",
+      "note": "KAA: Vastus intermedius muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        63
+      ]
     },
     "FMA22438": {
       "sourceNameEn": "semimembranosus",
@@ -5640,8 +5669,11 @@
     "FMA22542": {
       "sourceNameEn": "soleus",
       "nameKo": "가자미근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "direct-verified",
+      "note": "KAA: Soleus muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        64
+      ]
     },
     "FMA22543": {
       "sourceNameEn": "plantaris",
@@ -5908,8 +5940,11 @@
     "FMA22681": {
       "sourceNameEn": "splenius cervicis",
       "nameKo": "목널판근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "direct-verified",
+      "note": "KAA: Splenius cervicis muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        55
+      ]
     },
     "FMA22682": {
       "sourceNameEn": "right anterior circumflex humeral artery",
@@ -6221,9 +6256,12 @@
     },
     "FMA22765": {
       "sourceNameEn": "spinalis thoracis",
-      "nameKo": "가슴가시근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "등가시근",
+      "result": "direct-verified",
+      "note": "KAA: Spinalis thoracis muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        55
+      ]
     },
     "FMA22766": {
       "sourceNameEn": "left radial recurrent artery",
@@ -6481,9 +6519,12 @@
     },
     "FMA22846": {
       "sourceNameEn": "interspinalis thoracis",
-      "nameKo": "가슴가시사이근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "등가시사이근",
+      "result": "derived-from-KAA-component",
+      "note": "KAA: Interspinales thoracis muscles; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        55
+      ]
     },
     "FMA22848": {
       "sourceNameEn": "intertransversarius muscle",
@@ -6982,8 +7023,11 @@
     "FMA23082": {
       "sourceNameEn": "cervical rotator",
       "nameKo": "목돌림근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "derived-from-KAA-component",
+      "note": "KAA: Rotatores cervicis muscles; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        55
+      ]
     },
     "FMA23083": {
       "sourceNameEn": "thoracic rotator",
@@ -6994,8 +7038,11 @@
     "FMA23084": {
       "sourceNameEn": "lumbar rotator",
       "nameKo": "허리돌림근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "derived-from-KAA-component",
+      "note": "KAA: Rotatores lumborum muscles; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        55
+      ]
     },
     "FMA23089": {
       "sourceNameEn": "right lumbar rotator",
@@ -8901,9 +8948,12 @@
     },
     "FMA37452": {
       "sourceNameEn": "flexor accessorius",
-      "nameKo": "덧굽힘근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "발바닥네모근",
+      "result": "derived-from-KAA-component",
+      "note": "KAA: Quadratus plantae muscle; Latin alias M. flexor accessorius; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        64
+      ]
     },
     "FMA37453": {
       "sourceNameEn": "lumbrical of foot",
@@ -10976,8 +11026,11 @@
     "FMA46576": {
       "sourceNameEn": "posterior crico-arytenoid",
       "nameKo": "뒤반지모뿔근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "direct-verified",
+      "note": "KAA: Posterior cricoarytenoid muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        86
+      ]
     },
     "FMA46577": {
       "sourceNameEn": "right posterior crico-arytenoid",
@@ -10994,8 +11047,11 @@
     "FMA46579": {
       "sourceNameEn": "lateral crico-arytenoid",
       "nameKo": "가쪽반지모뿔근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "direct-verified",
+      "note": "KAA: Lateral cricoarytenoid muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        86
+      ]
     },
     "FMA46580": {
       "sourceNameEn": "right lateral crico-arytenoid",
@@ -11040,8 +11096,11 @@
     "FMA46588": {
       "sourceNameEn": "thyro-arytenoid",
       "nameKo": "방패모뿔근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "result": "direct-verified",
+      "note": "KAA: Thyroarytenoid muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        86
+      ]
     },
     "FMA46589": {
       "sourceNameEn": "right thyro-arytenoid",
@@ -11155,21 +11214,30 @@
     },
     "FMA46621": {
       "sourceNameEn": "superior pharyngeal constrictor",
-      "nameKo": "위인두조임근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "위인두수축근",
+      "result": "direct-verified",
+      "note": "KAA: Superior pharyngeal constrictor muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        74
+      ]
     },
     "FMA46622": {
       "sourceNameEn": "middle pharyngeal constrictor",
-      "nameKo": "중간인두조임근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "중간인두수축근",
+      "result": "direct-verified",
+      "note": "KAA: Middle pharyngeal constrictor muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        75
+      ]
     },
     "FMA46623": {
       "sourceNameEn": "inferior pharyngeal constrictor",
-      "nameKo": "아래인두조임근",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "아래인두수축근",
+      "result": "direct-verified",
+      "note": "KAA: Inferior pharyngeal constrictor muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        75
+      ]
     },
     "FMA46631": {
       "sourceNameEn": "right superior pharyngeal constrictor",
