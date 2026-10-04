@@ -10,9 +10,9 @@ const anchors=read('public/knowledge/acupoint-specialized-landmark-anchors.json'
 const derived=read('public/knowledge/acupoint-derived-surface-landmarks.json');
 const atlas=read('public/models/atlas.json');
 
-const unresolved=derived.landmarks.filter(l=>l.status==='manual-or-specialized-detection-required').map(l=>l.landmarkId).sort();
+const specializedSet=derived.landmarks.filter(l=>['manual-or-specialized-detection-required','accepted-specialized-anchor'].includes(l.status)).map(l=>l.landmarkId).sort();
 const specIds=specs.landmarks.map(x=>x.landmarkId).sort();
-assert.deepEqual(specIds,unresolved,'Specialized specs must cover exactly the unresolved landmark set');
+assert.deepEqual(specIds,specializedSet,'Specialized specs must cover exactly the model-specific specialized landmark set');
 
 const allowedMethods=new Set(anchors.recordContract.method);
 const allowedStatuses=new Set(anchors.recordContract.reviewStatus);
@@ -55,11 +55,11 @@ for(const [l,r] of bilateralPairs){
 
 const audit={
  schemaVersion:1,
- unresolvedLandmarkCount:unresolved.length,
+ unresolvedLandmarkCount:specializedSet.length,
  specializedSpecCount:specIds.length,
  anchorRecordCount:records.length,
  acceptedAnchorCount:records.filter(x=>x.reviewStatus==='accepted').length,
- pendingLandmarkCount:unresolved.length-records.filter(x=>x.reviewStatus==='accepted').length,
+ pendingLandmarkCount:specializedSet.length-records.filter(x=>x.reviewStatus==='accepted').length,
  coverage:{
    exactUnresolvedSetCovered:true,
    missingSpecializedSpecs:[],
@@ -74,7 +74,7 @@ const audit={
    symmetrySupportingOnly:specs.acceptancePolicy.positionTolerance.pairedSymmetryIsSupportingOnly===true
  },
  pairChecks,
- readiness:records.filter(x=>x.reviewStatus==='accepted').length===unresolved.length?'all-specialized-landmarks-ready':'manual-or-specialized-anchoring-pending'
+ readiness:records.filter(x=>x.reviewStatus==='accepted').length===specializedSet.length?'all-specialized-landmarks-ready':'manual-or-specialized-anchoring-pending'
 };
 write('public/knowledge/acupoint-specialized-landmark-anchor-audit.json',audit);
 console.log(JSON.stringify(audit,null,2));
