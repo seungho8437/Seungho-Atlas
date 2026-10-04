@@ -222,7 +222,7 @@ function applyWhoConstraints(input,text,side){
   if(/발등/.test(text)){t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.08;count++;}
   if(/꼭지돌기[^,.]{0,24}?앞쪽/.test(text)){t[apAxis]+=anteriorSign*extent[apAxis]*.055;count++;}
   if(/꼭지돌기[^,.]{0,24}?뒤/.test(text)){t[apAxis]-=anteriorSign*extent[apAxis]*.055;count++;}
-  if(/귓바퀴\s*꼭대기/.test(text)){t[supAxis]=norm(supAxis,.91);count++;}
+  if(/귓바퀴\s*꼭대기\s*바로\s*위/.test(text)){t[supAxis]=norm(supAxis,.91);count++;}
   if(/광대활/.test(text)){t[supAxis]=norm(supAxis,.87);count++;}
   if(/귀구슬위패임/.test(text)){t[supAxis]=norm(supAxis,.872);count++;}
   if(/귀구슬\s*중심/.test(text)){t[supAxis]=norm(supAxis,.858);count++;}
@@ -240,6 +240,17 @@ function applyWhoConstraints(input,text,side){
   if(/어깨뼈가시\s*중점\s*바로\s*위/.test(text)){t[supAxis]=norm(supAxis,.735);count++;}
   if(/어깨뼈\s*위각\s*위쪽/.test(text)){t[supAxis]=norm(supAxis,.775);count++;}
   if(/어깨뼈가시\s*중점과\s*어깨뼈\s*아래각/.test(text)){t[supAxis]=norm(supAxis,.70);count++;}
+  if(/어깨뼈\s*부위/.test(text)){t[apAxis]=bodyCenter[apAxis]-anteriorSign*extent[apAxis]*.22;count++;}
+  if(/어깨세모근[^,.]{0,24}?앞쪽/.test(text)){t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.13;count++;}
+  if(/귀구슬|귓바퀴|꼭지돌기/.test(text)&&sideSign){
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*.86;count++;
+  }
+  if(/동공/.test(text)&&sideSign){t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*.34;count++;}
+  if(/가쪽눈구석/.test(text)&&sideSign){
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*.55;
+    t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.28;count+=2;
+  }
+  if(/관자부\s*머리선|머리선\s*뒤모서리/.test(text)){t[apAxis]=bodyCenter[apAxis]-anteriorSign*extent[apAxis]*.08;count++;}
   if(side==='midline'){t[lrAxis]=bodyCenter[lrAxis];count++;}
   return {target:t,count};
 }
@@ -272,8 +283,16 @@ function closestOnTri(p,a,b,c){
   const denom=1/(va+vb+vc), v=vb*denom, w=vc*denom; return a.map((x,i)=>x+ab[i]*v+ac[i]*w);
 }
 function dist2(a,b){return (a[0]-b[0])**2+(a[1]-b[1])**2+(a[2]-b[2])**2}
-function project(target, side){
-  const base=target.map(v=>Math.floor(v/cell)); let best=null,bestD=Infinity,bestPart=null;
+function project(target, side, locks={}){
+  const base=target.map(v=>Math.floor(v/cell)); let best=null,bestD=Infinity,bestScore=Infinity,bestPart=null;
+  const scorePoint=q=>{
+    const d=dist2(target,q);
+    let score=d;
+    if(locks.sup) score+=28*(q[supAxis]-target[supAxis])**2;
+    if(locks.lr) score+=28*(q[lrAxis]-target[lrAxis])**2;
+    if(locks.ap) score+=12*(q[apAxis]-target[apAxis])**2;
+    return {d,score};
+  };
   for(let r=0;r<=8;r++){
     let found=false;
     for(let x=-r;x<=r;x++)for(let y=-r;y<=r;y++)for(let z=-r;z<=r;z++){
@@ -285,7 +304,7 @@ function project(target, side){
         const q=closestOnTri(target,...T.tri);
         if(side==='left' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) continue;
         if(side==='right' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) continue;
-        const d=dist2(target,q);if(d<bestD){bestD=d;best=q;bestPart=T.part;}}
+        const {d,score}=scorePoint(q);if(score<bestScore){bestScore=score;bestD=d;best=q;bestPart=T.part;}}
     }
     if(found && best && Math.sqrt(bestD) < (r+1)*cell) break;
   }
@@ -295,7 +314,7 @@ function project(target, side){
     const q=closestOnTri(target,...T.tri);
     if(side==='left' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) continue;
     if(side==='right' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) continue;
-    const d=dist2(target,q);if(d<bestD){bestD=d;best=q;bestPart=T.part;}}}
+    const {d,score}=scorePoint(q);if(score<bestScore){bestScore=score;bestD=d;best=q;bestPart=T.part;}}}
   return {point:best,distance:Math.sqrt(bestD),part:bestPart};
 }
 
@@ -340,8 +359,22 @@ function semanticConceptHits(text,side){
   if(/둘째발가락[^,.]{0,12}끝마디뼈/.test(text))patterns.push(/distal phalanx of (?:left |right )?(?:second|2nd) toe/i);
   if(/새끼발가락[^,.]{0,12}끝마디뼈/.test(text))patterns.push(/distal phalanx of (?:left |right )?(?:little|fifth|5th) toe/i);
   if(/넷째발가락[^,.]{0,12}끝마디뼈/.test(text))patterns.push(/distal phalanx of (?:left |right )?(?:fourth|4th) toe/i);
-  if(/둘째\s*손허리손가락관절/.test(text))patterns.push(/(?:second|2nd).*metacarpophalangeal|metacarpophalangeal.*(?:index|second)/i);
-  if(/다섯째\s*손허리손가락관절/.test(text))patterns.push(/(?:fifth|5th).*metacarpophalangeal|metacarpophalangeal.*(?:little|fifth)/i);
+  if(/둘째\s*손허리손가락관절/.test(text)){
+    patterns.push(/(?:second|2nd).*metacarpophalangeal|metacarpophalangeal.*(?:index|second)/i);
+    patterns.push(/proximal phalanx of (?:left |right )?index finger/i);
+  }
+  if(/다섯째\s*손허리손가락관절/.test(text)){
+    patterns.push(/(?:fifth|5th).*metacarpophalangeal|metacarpophalangeal.*(?:little|fifth)/i);
+    patterns.push(/proximal phalanx of (?:left |right )?little finger/i);
+  }
+  if(/둘째와\s*셋째발가락\s*사이/.test(text)){
+    patterns.push(/proximal phalanx of (?:left |right )?(?:second|2nd) toe/i);
+    patterns.push(/proximal phalanx of (?:left |right )?(?:third|3rd) toe/i);
+  }
+  if(/넷째와\s*다섯째발가락\s*사이/.test(text)){
+    patterns.push(/proximal phalanx of (?:left |right )?(?:fourth|4th) toe/i);
+    patterns.push(/proximal phalanx of (?:left |right )?(?:fifth|5th|little) toe/i);
+  }
   if(/첫째\s*발허리발가락관절/.test(text))patterns.push(/(?:first|1st).*metatarsophalangeal|metatarsophalangeal.*(?:big|first)/i);
   if(/다섯째\s*발허리발가락관절/.test(text))patterns.push(/(?:fifth|5th).*metatarsophalangeal|metatarsophalangeal.*(?:little|fifth)/i);
   if(/꼭지돌기/.test(text))patterns.push(/mastoid process/i);
@@ -426,7 +459,13 @@ for(const p of acupoints){
     if(side==='left' && Math.sign((target[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) target[lrAxis]=bodyCenter[lrAxis]+leftSign*Math.abs(target[lrAxis]-bodyCenter[lrAxis]);
     if(side==='right' && Math.sign((target[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) target[lrAxis]=bodyCenter[lrAxis]-leftSign*Math.abs(target[lrAxis]-bodyCenter[lrAxis]);
     if(side==='midline') target[lrAxis]=bodyCenter[lrAxis];
-    const projected=project(target,side);
+    const locText=p.locationKo||'';
+    const locks={
+      sup:/B-cun/.test(locText)&&/(위로|아래로|위쪽으로|아래쪽으로|몸쪽으로|먼쪽으로|머리선|갈비사이공간|같은 높이|뒤엉치뼈구멍)/.test(locText),
+      lr:/가쪽(?:으로)?\s*\d+(?:\.\d+)?\s*B-cun|노뼈와\s*자뼈\s*사이|자뼈\s*바로\s*노쪽|동공|귀구슬|귓바퀴|가쪽눈구석/.test(locText),
+      ap:/손바닥|손등|발바닥|발등|어깨뼈\s*부위|어깨세모근|가쪽눈구석|관자부/.test(locText)
+    };
+    const projected=project(target,side,locks);
     const sideExpected=side==='left'?leftSign:side==='right'?-leftSign:0;
     const lateral=(projected.point[lrAxis]-bodyCenter[lrAxis]);
     const sideOk=side==='midline'?Math.abs(lateral)<=extent[lrAxis]*.12:Math.sign(lateral||0)===sideExpected;
@@ -443,19 +482,19 @@ for(const p of acupoints){
 const resultByKey=new Map(results.map(x=>[x.acupointId+':'+x.side,x]));
 const acupointById=new Map(acupoints.map(x=>[x.id,x]));
 function updateFromRelativeDefinition(item,text){
-  const pair=text.match(/([A-Z]{1,2}\d+)\s*와\s*([A-Z]{1,2}\d+)를\s*잇는\s*(?:곡선|선)/);
+  const pair=text.match(/([A-Z]{1,2}\d+)\s*(?:와|과)\s*([A-Z]{1,2}\d+)를\s*잇는\s*(?:곡선|선)/);
   if(!pair)return false;
   const a=resultByKey.get(pair[1]+':'+item.side), b=resultByKey.get(pair[2]+':'+item.side);
   if(!a||!b)return false;
   let target=null,rule=null;
   if(/중점/.test(text)){target=a.position.map((v,i)=>(v+b.position[i])/2);rule='relative-midpoint';}
-  const vertical=text.match(/위쪽\s*(\d+)\/(\d+)과\s*아래쪽\s*(\d+)\/(\d+)\s*경계/);
+  const vertical=text.match(/위쪽\s*(\d+)\/(\d+)(?:와|과)\s*아래쪽\s*(\d+)\/(\d+)\s*경계/);
   if(vertical){
     const f=Number(vertical[1])/Number(vertical[2]);
     const upper=a.position[supAxis]>=b.position[supAxis]?a:b, lower=upper===a?b:a;
     target=upper.position.map((v,i)=>v*(1-f)+lower.position[i]*f);rule='relative-vertical-fraction';
   }
-  const lateral=text.match(/가쪽\s*(\d+)\/(\d+)과\s*안쪽\s*(\d+)\/(\d+)\s*경계/);
+  const lateral=text.match(/가쪽\s*(\d+)\/(\d+)(?:와|과)\s*안쪽\s*(\d+)\/(\d+)\s*경계/);
   if(lateral){
     const f=Number(lateral[1])/Number(lateral[2]);
     const outer=Math.abs(a.position[lrAxis]-bodyCenter[lrAxis])>=Math.abs(b.position[lrAxis]-bodyCenter[lrAxis])?a:b;
