@@ -158,7 +158,12 @@ function applyWhoConstraints(input,text,side){
   if(lateral&&sideSign){
     const n=Number(lateral[1]);
     const frac=Math.min(.92,n/6*.84);
-    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*frac;
+    // B-cun is a proportional surface measure. At the abdomen the raw
+    // cross-section sampler can underestimate torso width because limbs share
+    // the same superior-inferior band. Preserve a minimum physical offset
+    // derived from the model's longitudinal B-cun scale.
+    const offset=Math.max(localHalfWidth(t[supAxis])*frac,n*cunY);
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*offset;
     count++;
   }
   const nav=text.match(/배꼽(?:\s*중심)?(?:보다|에서)?\s*(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/);
@@ -230,7 +235,7 @@ function applyWhoConstraints(input,text,side){
   if(/인중(?:의)?\s*정중선|인중의\s*중점/.test(text)){t[supAxis]=norm(supAxis,.835);count++;}
   if(/윗입술결절/.test(text)){t[supAxis]=norm(supAxis,.82);count++;}
   if(/윗입술소대/.test(text)){t[supAxis]=norm(supAxis,.808);count++;}
-  if(/턱입술고랑/.test(text)){t[supAxis]=norm(supAxis,.785);count++;}
+  if(/턱입술고랑/.test(text)){t[supAxis]=norm(supAxis,.855);count++;}
   if(/안쪽눈구석/.test(text)&&sideSign){t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*.16;count++;}
   if(/눈확아래구멍/.test(text)){t[supAxis]-=2.0*cunY;count++;}
   if(/콧방울\s*아래모서리와\s*같은\s*높이/.test(text)){t[supAxis]=norm(supAxis,.855);count++;}
@@ -252,6 +257,25 @@ function applyWhoConstraints(input,text,side){
   if(/눈썹\s*안쪽끝/.test(text)){t[supAxis]=norm(supAxis,.885);count++;}
   if(/앞위쪽/.test(text)){t[supAxis]+=cunY*.7;count++;}
   if(/배꼽\s*중심과\s*같은\s*높이/.test(text)){t[supAxis]=norm(supAxis,.455);count++;}
+  if(/회음\s*부위|항문과\s*(?:생식기|음낭|대음순)/.test(text)){
+    // CV1: perineal midpoint. Keep the target at the pelvic floor instead of
+    // allowing a broad perineum concept centroid to pull it into the trunk.
+    t[supAxis]=norm(supAxis,.375);
+    t[lrAxis]=bodyCenter[lrAxis];
+    t[apAxis]=bodyCenter[apAxis]-anteriorSign*extent[apAxis]*.10;
+    count+=3;
+  }
+  if(/가쪽배/.test(text)&&sideSign){
+    t[lrAxis]=localSideLateral(t[supAxis],sideSign,.78);
+    count++;
+  }
+  if(/무릎뼈의\s*아래가쪽\s*오목|무릎인대\s*가쪽의\s*오목/.test(text)&&sideSign){
+    // ST35: inferolateral patellar depression.
+    t[supAxis]=norm(supAxis,.205);
+    t[lrAxis]=localSideLateral(t[supAxis],sideSign,.60);
+    t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.18;
+    count+=3;
+  }
   if(/배꼽(?:\s*중심)?에\s*있다/.test(text)){t[supAxis]=norm(supAxis,.455);count++;}
   if(/꼬리뼈\s*끝/.test(text)&&sideSign){
     t[supAxis]=norm(supAxis,.38);
@@ -713,7 +737,7 @@ for(const p of acupoints){
     const locText=p.locationKo||'';
     const locks={
       sup:(/B-cun/.test(locText)&&/(위로|아래로|위쪽으로|아래쪽으로|몸쪽으로|먼쪽으로|머리선|같은 높이|뒤엉치뼈구멍)/.test(locText))||/갈비사이공간|칼몸통결합|F-cun|귀구슬위패임|귀구슬\s*중심|귀구슬사이패임|발등|발바닥|발가락|발허리|발꿈치|복사|발목|손목|손등|손바닥|손가락|손허리|가쪽눈구석|안쪽눈구석|눈확|광대뼈|광대활|관자부|귓바퀴|꼭지돌기|목아래오목|목뿔뼈|방패연골|빗장아래오목|빗장뼈|쇄골|배꼽/.test(locText),
-      lr:side==='midline'||/앞정중선\s*위|가쪽(?:으로)?\s*\d+(?:\.\d+)?\s*B-cun|노뼈와\s*자뼈\s*사이|자뼈\s*바로\s*노쪽|뒤가쪽|앞가쪽|뒤안쪽|앞안쪽|동공|귀구슬|귓바퀴|가쪽눈구석|젖꼭지|중간겨드랑선|손허리|손가락|발허리|발가락|가쪽복사|안쪽복사/.test(locText),
+      lr:side==='midline'||/앞정중선\s*위|가쪽(?:으로)?\s*\d+(?:\.\d+)?\s*B-cun|가쪽배|노뼈와\s*자뼈\s*사이|자뼈\s*바로\s*노쪽|뒤가쪽|앞가쪽|뒤안쪽|앞안쪽|동공|귀구슬|귓바퀴|가쪽눈구석|젖꼭지|중간겨드랑선|손허리|손가락|발허리|발가락|가쪽복사|안쪽복사|무릎뼈의\s*아래가쪽|무릎인대\s*가쪽/.test(locText),
       ap:/손바닥|손등|발바닥|발등|손허리|손가락|발허리|발가락|어깨뼈\s*부위|어깨세모근|가쪽눈구석|관자부|앞가슴|아랫배|복부|배꼽|앞정중선/.test(locText)
     };
     const region=projectionRegion(locText,target);
@@ -837,6 +861,26 @@ function applyReviewedExceptionProjection(item){
 }
 for(const item of results) applyReviewedExceptionProjection(item);
 function updateFromRelativeDefinition(item,text){
+  const refOffset=text.match(/([A-Z]{1,2}\d+)보다\s*(몸쪽|먼쪽)으로\s*(\d+(?:\.\d+)?)\s*B-cun/);
+  if(refOffset){
+    const ref=resultByKey.get(refOffset[1]+':'+item.side);
+    if(ref){
+      const target=[...ref.position];
+      const n=Number(refOffset[3]);
+      const proximal=refOffset[2]==='몸쪽';
+      target[supAxis]+=(proximal?1:-1)*n*cunY;
+      const pr=project(target,item.side,{sup:true,lr:true},projectionRegion(text,target));
+      item.position=pr.point.map(v=>+v.toFixed(4));
+      item.validation.projectionDistance=+pr.distance.toFixed(4);
+      item.validation.projectionDelta=pr.point.map((v,i)=>+(v-target[i]).toFixed(4));
+      item.validation.regionConstrained=true;
+      item.validation.surfacePartId=pr.part;
+      item.validation.preProjectionTarget=target.map(v=>+v.toFixed(4));
+      item.validation.relativeConstraint='reference-point-B-cun-offset';
+      if(item.confidence==='low')item.confidence='moderate';
+      return true;
+    }
+  }
   const pair=text.match(/([A-Z]{1,2}\d+)\s*(?:와|과)\s*([A-Z]{1,2}\d+)(?:을|를)\s*잇는\s*(?:곡선|선)/);
   if(!pair)return false;
   const a=resultByKey.get(pair[1]+':'+item.side), b=resultByKey.get(pair[2]+':'+item.side);
