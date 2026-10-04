@@ -22528,17 +22528,17 @@
   },
   "FMA49207": {
     "sourceNameEn": "wall of inflow part of right ventricle",
-    "unresolvedTokens": [
-      "inflow"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른심실 유입부분의 벽",
+    "legacyKo": "우심실 유입부 벽",
+    "hanja": "右心室流入部壁"
   },
   "FMA49214": {
     "sourceNameEn": "wall of inflow part of left ventricle",
-    "unresolvedTokens": [
-      "inflow"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼심실 유입부분의 벽",
+    "legacyKo": "좌심실 유입부 벽",
+    "hanja": "左心室流入部壁"
   },
   "FMA49894": {
     "nameKo": "온몸동맥나무",
