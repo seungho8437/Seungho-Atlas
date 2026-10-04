@@ -47,7 +47,10 @@ const sourceConfirmedBases={
   FMA22830:{nameKo:'머리반가시근',legacyKo:'두반극근',hanja:'頭半棘筋',pages:[55],result:'direct-verified',evidence:'KAA: Semispinalis capitis muscle'},
   FMA9625:{nameKo:'붓목뿔근',legacyKo:'경상설골근',hanja:'莖狀舌骨筋',pages:[54],result:'direct-verified',evidence:'KAA: Stylohyoid muscle'},
   FMA13344:{nameKo:'방패목뿔근',legacyKo:'갑상설골근',hanja:'甲狀舌骨筋',pages:[54],result:'direct-verified',evidence:'KAA: Thyrohyoid muscle'},
-  FMA50735:{nameKo:'간문맥',legacyKo:'간문맥',hanja:'肝門脈',pages:[140],result:'direct-verified',evidence:'KAA: Hepatic portal vein'}
+  FMA50735:{nameKo:'간문맥',legacyKo:'간문맥',hanja:'肝門脈',pages:[140],result:'direct-verified',evidence:'KAA: Hepatic portal vein'},
+  FMA265130:{nameKo:'기도',legacyKo:'기도',hanja:'氣道',pages:[83],result:'direct-verified',evidence:'KAA: 기도; 숨길 — Respiratory tract'},
+  FMA32514:{nameKo:'척주앞근육',pages:[53],result:'direct-verified',evidence:'KAA: Prevertebral muscles'},
+  FMA49143:{nameKo:'가쪽곧은근제한인대',legacyKo:'외직근제한인대',hanja:'外直筋制限靭帶',pages:[207],result:'direct-verified',evidence:'KAA: Check ligament of lateral rectus muscle'}
 };
 
 const changes=[];
