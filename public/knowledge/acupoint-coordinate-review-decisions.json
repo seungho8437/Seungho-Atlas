@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 2,
+  "sourceId": "WHO_ACUPOINT_2008",
+  "purpose": "Reviewed resolution decisions for the final BodyParts3D 4.0 acupoint coordinate solver.",
+  "principles": {
+    "proportionalMeasurement": "Use region-specific WHO B-cun intervals; never derive cun from global body height.",
+    "regionalReferences": "A reviewed regional reference is an implementation of the WHO regional proportional scale, not a claim that the individual point sentence explicitly names both calibration endpoints.",
+    "endpointAlternatives": "Select anterior/posterior or palmar/dorsal endpoints from the source location aspect and named landmark cues.",
+    "surfaceMetric": "For ANKLE_MEDIAL_MALLEOLUS_TO_SOLE, measure shortest-path distance on Skin mesh FJ2810 triangle edges after endpoint-to-skin snapping.",
+    "fingerCun": "If a point sentence gives only a numeric F-cun without naming a finger-width technique, use the canonical 1 F-cun middle-finger method; explicit source technique would override this."
+  },
+  "geodesicCalibrations": [
+    {
+      "calibrationId": "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE",
+      "skinMeshId": "FJ2810",
+      "metric": "edge-weighted-shortest-path",
+      "appliesToFrames": [
+        "KI5:MF1",
+        "KI6:MF1"
+      ]
+    }
+  ],
+  "endpointDecisions": [
+    {
+      "frameId": "LU3:MF1",
+      "from": "anterior-axillary-fold",
+      "to": "cubital-crease",
+      "rationale": "앞겨드랑주름을 직접 명시"
+    },
+    {
+      "frameId": "LU4:MF1",
+      "from": "anterior-axillary-fold",
+      "to": "cubital-crease",
+      "rationale": "앞겨드랑주름을 직접 명시"
+    },
+    {
+      "frameId": "LI8:MF1",
+      "from": "cubital-crease",
+      "to": "dorsal-wrist-crease",
+      "rationale": "아래팔 뒤가쪽/LI5-LI11 선의 배측 맥락"
+    },
+    {
+      "frameId": "LI9:MF1",
+      "from": "cubital-crease",
+      "to": "dorsal-wrist-crease",
+      "rationale": "아래팔 뒤가쪽/LI5-LI11 선의 배측 맥락"
+    },
+    {
+      "frameId": "LI10:MF1",
+      "from": "cubital-crease",
+      "to": "dorsal-wrist-crease",
+      "rationale": "아래팔 뒤가쪽/LI5-LI11 선의 배측 맥락"
+    },
+    {
+      "frameId": "LI13:MF1",
+      "from": "anterior-axillary-fold",
+      "to": "cubital-crease",
+      "rationale": "LI 상완 가쪽선이며 전외측 기준을 사용"
+    },
+    {
+      "frameId": "LI14:MF1",
+      "from": "anterior-axillary-fold",
+      "to": "cubital-crease",
+      "rationale": "어깨세모근 경계 바로 앞쪽이라는 전외측 단서"
+    },
+    {
+      "frameId": "HT2:MF1",
+      "from": "anterior-axillary-fold",
+      "to": "cubital-crease",
+      "rationale": "위팔두갈래근 바로 안쪽의 전내측 단서"
+    },
+    {
+      "frameId": "SI9:MF1",
+      "from": "posterior-axillary-fold",
+      "to": "cubital-crease",
+      "rationale": "뒤겨드랑주름을 직접 명시"
+    },
+    {
+      "frameId": "PC2:MF1",
+      "from": "anterior-axillary-fold",
+      "to": "cubital-crease",
+      "rationale": "앞겨드랑주름을 직접 명시"
+    },
+    {
+      "frameId": "TE9:MF1",
+      "from": "cubital-crease",
+      "to": "dorsal-wrist-crease",
+      "rationale": "아래팔 뒤쪽 뼈사이공간의 배측 맥락"
+    },
+    {
+      "frameId": "TE10:MF1",
+      "from": "posterior-axillary-fold",
+      "to": "cubital-crease",
+      "rationale": "팔꿈치 뒤쪽/팔꿈치머리 융기의 후면 맥락"
+    },
+    {
+      "frameId": "TE11:MF1",
+      "from": "posterior-axillary-fold",
+      "to": "cubital-crease",
+      "rationale": "위팔 뒤쪽, 팔꿈치머리-봉우리각 선"
+    },
+    {
+      "frameId": "TE12:MF1",
+      "from": "posterior-axillary-fold",
+      "to": "cubital-crease",
+      "rationale": "위팔 뒤쪽, 팔꿈치머리-봉우리각 선"
+    },
+    {
+      "frameId": "TE13:MF1",
+      "from": "posterior-axillary-fold",
+      "to": "cubital-crease",
+      "rationale": "위팔 뒤쪽/어깨세모근 뒤아래쪽"
+    }
+  ],
+  "regionalReferenceDecisions": [
+    {
+      "frameId": "ST12:MF1",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "ST19:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "ST20:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "ST21:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "ST22:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "ST23:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "ST24:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "ST25:MF1",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "ST26:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "ST27:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "ST28:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "ST29:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "ST30:MF1",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "SP13:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "SP14:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "SP15:MF1",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "SP16:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "KI11:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "KI12:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "KI13:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "KI14:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "KI15:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "KI16:MF1",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "KI17:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "KI18:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "KI19:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "KI20:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "KI21:MF2",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "LR12:MF1",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "rationale": "reviewed anterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "BL27:MF1",
+      "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "rationale": "reviewed posterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "BL28:MF1",
+      "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "rationale": "reviewed posterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "BL29:MF1",
+      "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "rationale": "reviewed posterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "BL30:MF1",
+      "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "rationale": "reviewed posterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "BL35:MF1",
+      "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "rationale": "reviewed posterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "BL53:MF1",
+      "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "rationale": "reviewed posterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "BL54:MF1",
+      "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "rationale": "reviewed posterior-trunk transverse WHO proportional reference"
+    },
+    {
+      "frameId": "SI9:MF1",
+      "selectedCalibrationId": "UPPER_ARM_AXILLARY_TO_CUBITAL",
+      "rationale": "reviewed upper-arm longitudinal WHO proportional reference"
+    },
+    {
+      "frameId": "TE10:MF1",
+      "selectedCalibrationId": "UPPER_ARM_AXILLARY_TO_CUBITAL",
+      "rationale": "reviewed upper-arm longitudinal WHO proportional reference"
+    },
+    {
+      "frameId": "KI5:MF1",
+      "selectedCalibrationId": "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE",
+      "rationale": "reviewed medial ankle-foot WHO proportional reference; scale is Skin-mesh geodesic"
+    },
+    {
+      "frameId": "BL38:MF1",
+      "selectedCalibrationId": "THIGH_GLUTEAL_FOLD_TO_POPLITEAL",
+      "rationale": "proximal-to-popliteal point belongs to posterior-thigh interval, replacing distal-leg interval"
+    }
+  ],
+  "fingerCunDecisions": [
+    {
+      "frameId": "LU11:MF1",
+      "selectedCalibrationId": "F_CUN_MIDDLE_FINGER",
+      "rule": "numeric-F-cun-without-explicit-technique -> canonical middle-finger 1 F-cun"
+    },
+    {
+      "frameId": "LI1:MF1",
+      "selectedCalibrationId": "F_CUN_MIDDLE_FINGER",
+      "rule": "numeric-F-cun-without-explicit-technique -> canonical middle-finger 1 F-cun"
+    },
+    {
+      "frameId": "ST4:MF1",
+      "selectedCalibrationId": "F_CUN_MIDDLE_FINGER",
+      "rule": "numeric-F-cun-without-explicit-technique -> canonical middle-finger 1 F-cun"
+    },
+    {
+      "frameId": "ST45:MF1",
+      "selectedCalibrationId": "F_CUN_MIDDLE_FINGER",
+      "rule": "numeric-F-cun-without-explicit-technique -> canonical middle-finger 1 F-cun"
+    },
+    {
+      "frameId": "SP1:MF1",
+      "selectedCalibrationId": "F_CUN_MIDDLE_FINGER",
+      "rule": "numeric-F-cun-without-explicit-technique -> canonical middle-finger 1 F-cun"
+    },
+    {
+      "frameId": "HT9:MF1",
+      "selectedCalibrationId": "F_CUN_MIDDLE_FINGER",
+      "rule": "numeric-F-cun-without-explicit-technique -> canonical middle-finger 1 F-cun"
+    },
+    {
+      "frameId": "SI1:MF1",
+      "selectedCalibrationId": "F_CUN_MIDDLE_FINGER",
+      "rule": "numeric-F-cun-without-explicit-technique -> canonical middle-finger 1 F-cun"
+    },
+    {
+      "frameId": "BL67:MF1",
+      "selectedCalibrationId": "F_CUN_MIDDLE_FINGER",
+      "rule": "numeric-F-cun-without-explicit-technique -> canonical middle-finger 1 F-cun"
+    },
+    {
+      "frameId": "TE1:MF1",
+      "selectedCalibrationId": "F_CUN_MIDDLE_FINGER",
+      "rule": "numeric-F-cun-without-explicit-technique -> canonical middle-finger 1 F-cun"
+    },
+    {
+      "frameId": "GB44:MF1",
+      "selectedCalibrationId": "F_CUN_MIDDLE_FINGER",
+      "rule": "numeric-F-cun-without-explicit-technique -> canonical middle-finger 1 F-cun"
+    },
+    {
+      "frameId": "LR1:MF1",
+      "selectedCalibrationId": "F_CUN_MIDDLE_FINGER",
+      "rule": "numeric-F-cun-without-explicit-technique -> canonical middle-finger 1 F-cun"
+    }
+  ]
+}

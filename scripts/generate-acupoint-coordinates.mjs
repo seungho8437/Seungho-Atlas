@@ -5,7 +5,7 @@ const readJson = p => JSON.parse(fs.readFileSync(new URL(p, root), 'utf8'));
 const atlas = readJson('public/models/atlas.json');
 const acupoints = readJson('public/knowledge/acupoints.json');
 const relations = readJson('public/knowledge/anatomy-acupoint-relations.json');
-const anatomyKo = readJson('public/knowledge/anatomy-ko.json');
+const anatomyKo = readJson('public/knowledge/anatomy-ko.json');\nconst coordinateSolver = readJson('public/knowledge/acupoint-coordinate-solver.json');\nconst solverFramesByPoint = new Map(coordinateSolver.records.map(r => [r.acupointId, r.measurementFrames]));
 
 const chunks = atlas.chunks.map(c => fs.readFileSync(new URL('public/models/' + c.url.split('/').pop(), root)));
 const partsById = new Map(atlas.parts.map(p => [p.id, p]));
@@ -145,7 +145,7 @@ function regionTarget(text, side){
 
 const cunY=extent[supAxis]/75;
 const ordinalIntercostal={첫째:1,둘째:2,셋째:3,넷째:4,다섯째:5,여섯째:6,일곱째:7};
-function applyWhoConstraints(input,text,side){
+function applyWhoConstraints(input,text,side,pointId){
   const t=[...input]; let count=0;
   const explicitFoot=/발등|발바닥|발가락|발허리|발꿈치|복사|발목/.test(text) && !/아래다리|넓적다리|무릎/.test(text);
   if(explicitFoot){
@@ -154,21 +154,36 @@ function applyWhoConstraints(input,text,side){
     count++;
   }
   const sideSign=side==='left'?leftSign:side==='right'?-leftSign:0;
+  const fmatch=text.match(/(\d+(?:\.\d+)?)\s*F-cun/);
+  if(fmatch&&pointId){
+    const fs=(solverFramesByPoint.get(pointId)||[]).find(f=>f.unit==='F-cun');
+    const scale=solverCun(pointId,side,fs?.direction,'F-cun');
+    if(scale&&fs){
+      const amount=Number(fmatch[1])*scale,dir=fs.direction;
+      if(dir==='lateral')t[lrAxis]+=sideSign*amount;
+      else if(dir==='medial')t[lrAxis]-=sideSign*amount;
+      else if(dir==='superior'||dir==='proximal')t[supAxis]+=amount;
+      else if(dir==='inferior'||dir==='distal')t[supAxis]-=amount;
+      else if(dir==='anterior')t[apAxis]+=anteriorSign*amount;
+      else if(dir==='posterior')t[apAxis]-=anteriorSign*amount;
+      count++;
+    }
+  }
   const lateral=text.match(/정중선[^,.]{0,45}?가쪽(?:으로)?\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(lateral&&sideSign){
     const n=Number(lateral[1]);
     const frac=Math.min(.92,n/6*.84);
     const baseOffset=localHalfWidth(t[supAxis])*frac;
-    // Only abdominal midline offsets need a minimum proportional distance.
-    // Applying this globally collapses some head points after skin projection.
-    const offset=/배|복부/.test(text)?Math.max(baseOffset,n*cunY):baseOffset;
+    const reviewed=solverCun(pointId,side,'lateral','B-cun');
+    const offset=reviewed?n*reviewed:(/배|복부/.test(text)?Math.max(baseOffset,n*cunY):baseOffset);
     t[lrAxis]=bodyCenter[lrAxis]+sideSign*offset;
     count++;
   }
   const nav=text.match(/배꼽(?:\s*중심)?(?:보다|에서)?\s*(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(nav){
     const n=Number(nav[2]), navel=norm(supAxis,.455);
-    t[supAxis]=nav[1]==='위'?navel+n*cunY:navel-n*cunY;
+    const sc=solverCun(pointId,side,nav[1]==='위'?'superior':'inferior','B-cun')??cunY;
+    t[supAxis]=nav[1]==='위'?navel+n*sc:navel-n*sc;
     count++;
   }
   const navLat=text.match(/배꼽(?:\s*중심)?으로부터\s*가쪽으로\s*(\d+(?:\.\d+)?)\s*B-cun/);
@@ -186,7 +201,8 @@ function applyWhoConstraints(input,text,side){
   }
   const hair=text.match(/(?:앞머리선|머리선)[^,.]{0,35}?(?:위로|안쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(hair){
-    t[supAxis]=norm(supAxis,.895)+Number(hair[1])*cunY;
+    const sc=solverCun(pointId,side,'superior','B-cun')??cunY;
+    t[supAxis]=norm(supAxis,.895)+Number(hair[1])*sc;
     count++;
   }
   const ic=text.match(/(첫째|둘째|셋째|넷째|다섯째|여섯째|일곱째)\s*갈비사이공간/);
@@ -209,7 +225,8 @@ function applyWhoConstraints(input,text,side){
   for(const [re,base] of refs){
     const m=text.match(re); if(!m)continue;
     const n=Number(m[2]), up=(m[1].startsWith('위')||m[1].startsWith('몸쪽'));
-    t[supAxis]=norm(supAxis,base)+(up?1:-1)*n*cunY; count++; break;
+    const sc=solverCun(pointId,side,up?'superior':'inferior','B-cun')??solverCun(pointId,side,up?'proximal':'distal','B-cun')??cunY;
+    t[supAxis]=norm(supAxis,base)+(up?1:-1)*n*sc; count++; break;
   }
   const sacLat=text.match(/정중엉치뼈능선[^,.]{0,30}?가쪽으로\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(sacLat&&sideSign){
@@ -220,12 +237,14 @@ function applyWhoConstraints(input,text,side){
   const malleolus=text.match(/(안쪽|가쪽)복사(?:\s*융기)?에서[^,.]{0,30}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(malleolus){
     const up=(malleolus[2].startsWith('위')||malleolus[2].startsWith('몸쪽'));
-    t[supAxis]=norm(supAxis,.055)+(up?1:-1)*Number(malleolus[3])*cunY;count++;
+    const sc=solverCun(pointId,side,up?'superior':'inferior','B-cun')??solverCun(pointId,side,up?'proximal':'distal','B-cun')??cunY;
+    t[supAxis]=norm(supAxis,.055)+(up?1:-1)*Number(malleolus[3])*sc;count++;
   }
   const popliteal=text.match(/(?<!팔)오금주름에서[^,.]{0,30}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(popliteal){
     const up=(popliteal[1].startsWith('위')||popliteal[1].startsWith('몸쪽'));
-    t[supAxis]=norm(supAxis,.20)+(up?1:-1)*Number(popliteal[2])*cunY;count++;
+    const sc=solverCun(pointId,side,up?'superior':'inferior','B-cun')??solverCun(pointId,side,up?'proximal':'distal','B-cun')??cunY;
+    t[supAxis]=norm(supAxis,.20)+(up?1:-1)*Number(popliteal[2])*sc;count++;
   }
   if(/팔오금주름\s*위/.test(text)&&!/[0-9]\s*B-cun/.test(text)){t[supAxis]=norm(supAxis,.55);count++;}
   if(/손바닥쪽\s*손목주름\s*위에/.test(text)){t[supAxis]=norm(supAxis,.385);count++;}
@@ -715,7 +734,7 @@ function relationTarget(point, side){
   }
   const blended=wsum ? (()=>{const g=acc.map(v=>v/wsum),alpha=specific>=2?.82:.68;return g.map((v,i)=>v*alpha+rt[i]*(1-alpha));})() : rt;
   if(vertebralSup.length) blended[supAxis]=vertebralSup.reduce((a,b)=>a+b,0)/vertebralSup.length;
-  const who=applyWhoConstraints(blended,text,side);
+  const who=applyWhoConstraints(blended,text,side,point.id);
   return {target:who.target,specific,rels:rels.length,whoConstraints:who.count,textLandmarkCount};
 }
 
@@ -742,7 +761,7 @@ for(const p of acupoints){
     const evidence=specific+whoConstraints+Math.min(2,textLandmarkCount); const confidence=evidence>=3?'high':evidence>=1?'moderate':'low';
     results.push({
       acupointId:p.id,side,position:projected.point.map(v=>+v.toFixed(4)),model:'BodyParts3D-4.0',status:'validated',
-      method:'WHO+B-landmarks+laterality+surface-projection',confidence,
+      method:'WHO+reviewed-local-cun-solver+B-landmarks+laterality+surface-projection',confidence,
       validation:{surfaceProjected:surfaceOk,lateralityConsistent:sideOk,projectionDistance:+projected.distance.toFixed(4),projectionDelta:projected.point.map((v,i)=>+(v-target[i]).toFixed(4)),regionConstrained:true,surfacePartId:projected.part,preProjectionTarget:target.map(v=>+v.toFixed(4)),relationCount:rels,specificLandmarkCount:specific,whoConstraintCount:whoConstraints,whoTextLandmarkCount:textLandmarkCount},
       sourceIds:['WHO_ACUPOINT_2008','BODY_PARTS_3D_4','TARA_ACUPOINT_CURATED']
     });
@@ -1001,7 +1020,7 @@ const duplicateClusters=[...dup.values()].filter(v=>v.length>1);
 const exactMap=new Map();
 for(const x of results){const k=x.side+':'+x.position.join(',');if(!exactMap.has(k))exactMap.set(k,[]);exactMap.get(k).push(x.acupointId);}
 const exactDuplicateClusters=[...exactMap.values()].filter(v=>v.length>1);
-const out={version:1,model:'BodyParts3D-4.0',generatedAt:new Date().toISOString(),coordinateFrame:{source:'native BodyParts3D 4.0 atlas coordinates',axes:{superiorInferior:supAxis,leftRight:lrAxis,anteriorPosterior:apAxis},signs:{left:leftSign,anterior:anteriorSign}},methodology:{primary:'WHO 2008 location text',anatomyConstraints:'anatomy-acupoint-relations.json (B)',laterality:'bilateral points generated independently by side; GV/CV retained on midline',projection:'nearest point on actual integumentary mesh triangle, not bounding-box or vertex-only snapping'},points:results};
+const out={version:1,model:'BodyParts3D-4.0',generatedAt:new Date().toISOString(),coordinateFrame:{source:'native BodyParts3D 4.0 atlas coordinates',axes:{superiorInferior:supAxis,leftRight:lrAxis,anteriorPosterior:apAxis},signs:{left:leftSign,anterior:anteriorSign}},methodology:{primary:'WHO 2008 location text',anatomyConstraints:'anatomy-acupoint-relations.json (B)',laterality:'bilateral points generated independently by side; GV/CV retained on midline',projection:'nearest point on actual integumentary mesh triangle, not bounding-box or vertex-only snapping',measurementScale:'reviewed acupoint-coordinate-solver v2; Skin FJ2810 geodesic for medial-malleolus-to-sole interval; no global body-height cun'},points:results};
 fs.writeFileSync(new URL('public/knowledge/acupoint-coordinates.json',root),JSON.stringify(out,null,2)+'\n');
 const sortedProjection=results.slice().sort((a,b)=>b.validation.projectionDistance-a.validation.projectionDistance);
 const manualReviewQueue=sortedProjection.filter((x,i)=>i<Math.ceil(results.length*.05)||x.validation.landmarkPostValidation.status==='review'||x.validation.topologyValidation.status==='review').map(x=>({acupointId:x.acupointId,side:x.side,projectionDistance:x.validation.projectionDistance,projectionDelta:x.validation.projectionDelta,landmarkStatus:x.validation.landmarkPostValidation.status,topologyStatus:x.validation.topologyValidation.status}));
