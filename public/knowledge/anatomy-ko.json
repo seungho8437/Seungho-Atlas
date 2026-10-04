@@ -2973,7 +2973,16 @@
     "legacyKo": "우심방벽",
     "hanja": "右心房壁",
     "sourceNameEn": "wall of right atrium",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      109,
+      110
+    ],
+    "nameKoDerivation": "wall of FMA7096"
   },
   "FMA9464": {
     "sourceNameEn": "cavity of cardiac chamber",
@@ -3001,7 +3010,16 @@
     "legacyKo": "좌심방벽",
     "hanja": "左心房壁",
     "sourceNameEn": "wall of left atrium",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      109,
+      111
+    ],
+    "nameKoDerivation": "wall of FMA7097"
   },
   "FMA9597": {
     "sourceNameEn": "salivary gland",
@@ -7803,7 +7821,15 @@
     "status": "derived",
     "nameKo": "배막부위",
     "legacyKo": "복막영역",
-    "hanja": "腹膜領域"
+    "hanja": "腹膜領域",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      103
+    ],
+    "nameKoDerivation": "region of FMA9584"
   },
   "FMA19783": {
     "sourceNameEn": "loose connective tissue",
@@ -29858,7 +29884,16 @@
     "legacyKo": "우심실벽",
     "hanja": "右心室壁",
     "sourceNameEn": "wall of right ventricle",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      109,
+      110
+    ],
+    "nameKoDerivation": "wall of FMA7098"
   },
   "FMA9535": {
     "nameKo": "오른심실심근",
@@ -29907,7 +29942,16 @@
     "legacyKo": "좌심실벽",
     "hanja": "左心室壁",
     "sourceNameEn": "wall of left ventricle",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      109,
+      111
+    ],
+    "nameKoDerivation": "wall of FMA7101"
   },
   "FMA9558": {
     "nameKo": "왼심실심근",
@@ -30285,21 +30329,45 @@
     "legacyKo": "소장벽",
     "hanja": "小腸壁",
     "sourceNameEn": "wall of small intestine",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      76
+    ],
+    "nameKoDerivation": "wall of FMA7200"
   },
   "FMA14618": {
     "sourceNameEn": "wall of ileum",
     "status": "derived",
     "nameKo": "돌창자벽",
     "legacyKo": "회장벽",
-    "hanja": "回腸壁"
+    "hanja": "回腸壁",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      77
+    ],
+    "nameKoDerivation": "wall of FMA7208"
   },
   "FMA14619": {
     "nameKo": "큰창자벽",
     "legacyKo": "대장벽",
     "hanja": "大腸壁",
     "sourceNameEn": "wall of large intestine",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      77
+    ],
+    "nameKoDerivation": "wall of FMA7201"
   },
   "FMA14627": {
     "nameKo": "앞배벽",
@@ -33133,7 +33201,15 @@
     "legacyKo": "복벽",
     "hanja": "腹壁",
     "sourceNameEn": "wall of abdomen",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      5
+    ],
+    "nameKoDerivation": "wall of FMA9577"
   },
   "FMA259209": {
     "nameKo": "줄기가슴구역",
