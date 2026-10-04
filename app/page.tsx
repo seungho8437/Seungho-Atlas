@@ -19,8 +19,12 @@ const displayAnatomyKo=(loc:AnatomyLocalizationMap[string]|undefined,sourceEngli
  const canonical=loc?.nameKo;
  if(!canonical)return sourceEnglish??'';
  const english=sourceEnglish??loc?.sourceNameEn??'';
- const side=english.match(/^(left|right)\s+/i)?.[1]?.toLowerCase();
- if(!side)return canonical;
+ const match=english.match(/^(left|right)\s+(.+)$/i);
+ if(!match)return canonical;
+ const side=match[1].toLowerCase();
+ // Nested laterality (e.g. "right ... of left coronary artery") is a semantic
+ // relationship inside the structure name, not a safe display prefix rewrite.
+ if(/\b(?:left|right)\b/i.test(match[2]))return canonical;
  const prefix=side==='left'?'왼쪽':'오른쪽';
  let base=canonical.replace(/^(왼쪽|오른쪽)\s*/,'');
  if(side==='left')base=base.replace(/^왼(?=\S)/,'');
