@@ -1,0 +1,22 @@
+[
+  {
+    "anatomyId": "FMA22532",
+    "acupointId": "ST36",
+    "relation": "adjacent",
+    "noteKo": "ST36은 앞정강근과 긴발가락폄근 사이 영역과의 현대해부학적 대응이 보고되어 있다. 이는 경혈의 체표 표준 위치를 특정 근육 하나와 동일시하는 의미가 아니다.",
+    "sourceIds": [
+      "KJA_ST36_2023",
+      "WHO_ACUPOINT_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA22534",
+    "acupointId": "ST36",
+    "relation": "adjacent",
+    "noteKo": "ST36은 앞정강근과 긴발가락폄근 사이 영역과의 현대해부학적 대응이 보고되어 있다.",
+    "sourceIds": [
+      "KJA_ST36_2023",
+      "WHO_ACUPOINT_2008"
+    ]
+  }
+]
