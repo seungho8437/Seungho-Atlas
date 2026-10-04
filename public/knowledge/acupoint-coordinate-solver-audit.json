@@ -2,15 +2,14 @@
   "schemaVersion": 1,
   "standardAcupointCount": 361,
   "measurementFrameCount": 237,
+  "coordinateFrame": {
+    "superiorInferiorAxis": 1,
+    "leftRightAxis": 0,
+    "anteriorPosteriorAxis": 2
+  },
   "calibrationGeometry": {
     "readyIntervalCount": 20,
     "referencedCalibrationCount": 16,
-    "unreferencedReadyCalibrations": [
-      "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE",
-      "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
-      "KNEE_MEDIAL_TIBIAL_CONDYLE_TO_PATELLA_APEX",
-      "F_CUN_MIDDLE_FINGER"
-    ],
     "referencedCalibrationIds": [
       "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS",
       "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
@@ -28,6 +27,12 @@
       "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
       "THIGH_PUBIC_TO_PATELLA_BASE",
       "UPPER_ARM_AXILLARY_TO_CUBITAL"
+    ],
+    "unreferencedReadyCalibrations": [
+      "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE",
+      "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+      "KNEE_MEDIAL_TIBIAL_CONDYLE_TO_PATELLA_APEX",
+      "F_CUN_MIDDLE_FINGER"
     ]
   },
   "connections": {
@@ -48,10 +53,5 @@
     "provisionalReferencesRemainGated": true,
     "fingerMethodsRemainUnselected": true,
     "noGlobalBodyHeightCun": true
-  },
-  "coordinateFrame": {
-    "superiorInferiorAxis": 1,
-    "leftRightAxis": 0,
-    "anteriorPosteriorAxis": 2
   }
 }
