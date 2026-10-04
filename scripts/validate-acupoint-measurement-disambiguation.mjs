@@ -18,14 +18,19 @@ for(const r of frames){
    assert.equal(x.intentCheck,'compatible-with-WHO-source-meaning',`${f.id}: WHO-intent check failed`);
    assert.ok(['high','moderate'].includes(x.confidence),`${f.id}: invalid confidence`);
    if(f.unit==='F-cun'){assert.equal(x.status,'finger-method-bound');assert.equal(x.selectedCalibrationId,null);}
-   else {assert.equal(x.status,'disambiguated');assert.ok(ids.has(x.selectedCalibrationId),`${f.id}: selected calibration is not in WHO registry`);}
+   else {
+     assert.ok(['disambiguated','provisional-regional-reference'].includes(x.status),`${f.id}: invalid B-cun resolution status`);
+     assert.ok(ids.has(x.selectedCalibrationId),`${f.id}: selected calibration is not in WHO registry`);
+     if(x.confidence==='moderate')assert.equal(x.status,'provisional-regional-reference',`${f.id}: moderate regional reference must remain provisional`);
+   }
    assert.ok(x.evidence&&x.rationale,`${f.id}: source-evidence/rationale required`);
  }
 }
 assert.equal(n,audit.measurementFrameCount);
 assert.equal(audit.resolutionCount,n);
-assert.equal(audit.invariants.allBcunHaveExactlyOneCalibration,true);
+assert.equal(audit.invariants.allBcunHaveExactlyOneCalibrationCandidate,true);
 assert.equal(audit.invariants.noAmbiguousStatusRemains,true);
+assert.equal(audit.invariants.provisionalReferencesNotClaimedAsDirect,true);
 assert.equal(audit.invariants.allSelectedIdsAreWhoRegistry,true);
 assert.equal(audit.invariants.everyResolutionHasIntentCheck,true);
 assert.equal(audit.invariants.sourceMeaningNotRewritten,true);
