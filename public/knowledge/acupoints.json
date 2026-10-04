@@ -540,7 +540,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 1,
-    "who2008Page": 46
+    "who2008Page": 46,
+    "locationKo": "얼굴에서 동공 바로 아래, 안구와 눈확아래모서리 사이에 있다."
   },
   {
     "id": "ST2",
@@ -556,7 +557,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 2,
-    "who2008Page": 46
+    "who2008Page": 46,
+    "locationKo": "얼굴의 눈확아래구멍에 있다."
   },
   {
     "id": "ST3",
@@ -572,7 +574,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 3,
-    "who2008Page": 47
+    "who2008Page": 47,
+    "locationKo": "얼굴에서 동공 바로 아래이자 콧방울 아래모서리와 같은 높이에 있다. 정면을 볼 때 동공을 지나는 세로선과 콧방울 아래모서리를 지나는 가로선의 교점이다."
   },
   {
     "id": "ST4",
@@ -588,7 +591,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 4,
-    "who2008Page": 47
+    "who2008Page": 47,
+    "locationKo": "얼굴에서 입꼬리에서 가쪽으로 0.4 F-cun 떨어진 곳이다. 코입술고랑 또는 그 연장선 위에 해당한다."
   },
   {
     "id": "ST5",
@@ -604,7 +608,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 5,
-    "who2008Page": 48
+    "who2008Page": 48,
+    "locationKo": "얼굴에서 아래턱뼈각 앞쪽, 깨물근 부착부 앞의 오목한 곳이며 얼굴동맥 위에 있다."
   },
   {
     "id": "ST6",
@@ -620,7 +625,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 6,
-    "who2008Page": 48
+    "who2008Page": 48,
+    "locationKo": "얼굴에서 아래턱뼈각의 앞위쪽으로 가운데손가락 한 마디 너비 정도 떨어진 곳이다. 이를 악물었을 때 두드러지는 깨물근 부위이며, 힘을 풀면 오목해지는 곳이다."
   },
   {
     "id": "ST7",
@@ -636,7 +642,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 7,
-    "who2008Page": 49
+    "who2008Page": 49,
+    "locationKo": "얼굴에서 광대활 아래모서리 중점과 아래턱패임 사이의 오목한 곳이다. 입을 다물었을 때 GB3 바로 아래의 광대활 아래 오목에 해당한다."
   },
   {
     "id": "ST8",
@@ -652,7 +659,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 8,
-    "who2008Page": 49
+    "who2008Page": 49,
+    "locationKo": "머리에서 이마모서리의 앞머리선 바로 위 0.5 B-cun, 앞정중선에서 가쪽으로 4.5 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST9",
@@ -668,7 +676,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 9,
-    "who2008Page": 50
+    "who2008Page": 50,
+    "locationKo": "목 앞쪽에서 방패연골 위모서리와 같은 높이이며, 목빗근 앞쪽의 온목동맥 위에 있다."
   },
   {
     "id": "ST10",
@@ -684,7 +693,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 10,
-    "who2008Page": 50
+    "who2008Page": 50,
+    "locationKo": "목 앞쪽에서 반지연골과 같은 높이이며, 목빗근 경계 바로 앞쪽에 있다."
   },
   {
     "id": "ST11",
@@ -700,7 +710,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 11,
-    "who2008Page": 51
+    "who2008Page": 51,
+    "locationKo": "목 앞쪽의 작은빗장위오목에서 빗장뼈 복장끝 위쪽, 목빗근의 복장갈래와 빗장갈래 사이 오목에 있다."
   },
   {
     "id": "ST12",
@@ -716,7 +727,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 12,
-    "who2008Page": 51
+    "who2008Page": 51,
+    "locationKo": "목 앞쪽의 큰빗장위오목에서 앞정중선으로부터 가쪽 4 B-cun, 빗장뼈 위쪽의 오목에 있다."
   },
   {
     "id": "ST13",
@@ -732,7 +744,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 13,
-    "who2008Page": 52
+    "who2008Page": 52,
+    "locationKo": "앞가슴에서 빗장뼈 아래, 앞정중선에서 가쪽으로 4 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST14",
@@ -748,7 +761,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 14,
-    "who2008Page": 52
+    "who2008Page": 52,
+    "locationKo": "앞가슴의 첫째 갈비사이공간에서 앞정중선으로부터 가쪽 4 B-cun에 있다."
   },
   {
     "id": "ST15",
@@ -764,7 +778,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 15,
-    "who2008Page": 53
+    "who2008Page": 53,
+    "locationKo": "앞가슴의 둘째 갈비사이공간에서 앞정중선으로부터 가쪽 4 B-cun에 있다."
   },
   {
     "id": "ST16",
@@ -780,7 +795,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 16,
-    "who2008Page": 53
+    "who2008Page": 53,
+    "locationKo": "앞가슴의 셋째 갈비사이공간에서 앞정중선으로부터 가쪽 4 B-cun에 있다."
   },
   {
     "id": "ST17",
@@ -796,7 +812,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 17,
-    "who2008Page": 54
+    "who2008Page": 54,
+    "locationKo": "앞가슴에서 젖꼭지의 중심에 있다. 남성에서는 보통 넷째 갈비사이공간에 해당한다."
   },
   {
     "id": "ST18",
@@ -812,7 +829,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 18,
-    "who2008Page": 54
+    "who2008Page": 54,
+    "locationKo": "앞가슴의 다섯째 갈비사이공간에서 앞정중선으로부터 가쪽 4 B-cun에 있다. 남성에서는 젖꼭지선과 다섯째 갈비사이공간의 교점이고, 여성에서는 젖가슴 아래주름의 중점에 해당한다."
   },
   {
     "id": "ST19",
@@ -828,7 +846,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 19,
-    "who2008Page": 55
+    "who2008Page": 55,
+    "locationKo": "윗배에서 배꼽 중심보다 위로 6 B-cun, 앞정중선에서 가쪽으로 2 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST20",
@@ -844,7 +863,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 20,
-    "who2008Page": 55
+    "who2008Page": 55,
+    "locationKo": "윗배에서 배꼽 중심보다 위로 5 B-cun, 앞정중선에서 가쪽으로 2 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST21",
@@ -860,7 +880,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 21,
-    "who2008Page": 56
+    "who2008Page": 56,
+    "locationKo": "윗배에서 배꼽 중심보다 위로 4 B-cun, 앞정중선에서 가쪽으로 2 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST22",
@@ -876,7 +897,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 22,
-    "who2008Page": 56
+    "who2008Page": 56,
+    "locationKo": "윗배에서 배꼽 중심보다 위로 3 B-cun, 앞정중선에서 가쪽으로 2 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST23",
@@ -892,7 +914,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 23,
-    "who2008Page": 57
+    "who2008Page": 57,
+    "locationKo": "윗배에서 배꼽 중심보다 위로 2 B-cun, 앞정중선에서 가쪽으로 2 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST24",
@@ -908,7 +931,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 24,
-    "who2008Page": 57
+    "who2008Page": 57,
+    "locationKo": "윗배에서 배꼽 중심보다 위로 1 B-cun, 앞정중선에서 가쪽으로 2 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST25",
@@ -924,7 +948,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 25,
-    "who2008Page": 58
+    "who2008Page": 58,
+    "locationKo": "윗배에서 배꼽 중심으로부터 가쪽으로 2 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST26",
@@ -940,7 +965,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 26,
-    "who2008Page": 58
+    "who2008Page": 58,
+    "locationKo": "아랫배에서 배꼽 중심보다 아래로 1 B-cun, 앞정중선에서 가쪽으로 2 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST27",
@@ -956,7 +982,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 27,
-    "who2008Page": 59
+    "who2008Page": 59,
+    "locationKo": "아랫배에서 배꼽 중심보다 아래로 2 B-cun, 앞정중선에서 가쪽으로 2 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST28",
@@ -972,7 +999,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 28,
-    "who2008Page": 59
+    "who2008Page": 59,
+    "locationKo": "아랫배에서 배꼽 중심보다 아래로 3 B-cun, 앞정중선에서 가쪽으로 2 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST29",
@@ -988,7 +1016,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 29,
-    "who2008Page": 60
+    "who2008Page": 60,
+    "locationKo": "아랫배에서 배꼽 중심보다 아래로 4 B-cun, 앞정중선에서 가쪽으로 2 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST30",
@@ -1004,7 +1033,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 30,
-    "who2008Page": 60
+    "who2008Page": 60,
+    "locationKo": "샅고랑 부위에서 두덩결합 위모서리와 같은 높이이며, 앞정중선에서 가쪽으로 2 B-cun 떨어진 넙다리동맥 위에 있다."
   },
   {
     "id": "ST31",
@@ -1020,7 +1050,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 31,
-    "who2008Page": 61
+    "who2008Page": 61,
+    "locationKo": "넓적다리 앞쪽에서 넙다리곧은근 몸쪽 부분, 넙다리빗근, 넙다리근막긴장근 사이에 생기는 오목의 가장 깊은 곳에 있다."
   },
   {
     "id": "ST32",
@@ -1036,7 +1067,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 32,
-    "who2008Page": 62
+    "who2008Page": 62,
+    "locationKo": "넓적다리 앞가쪽에서 무릎뼈바닥 가쪽끝과 위앞엉덩뼈가시를 잇는 선 위, 무릎뼈바닥에서 위로 6 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST33",
@@ -1052,7 +1084,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 33,
-    "who2008Page": 62
+    "who2008Page": 62,
+    "locationKo": "넓적다리 앞가쪽에서 넙다리곧은근힘줄 가쪽, 무릎뼈바닥에서 위로 3 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST34",
@@ -1068,7 +1101,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 34,
-    "who2008Page": 63
+    "who2008Page": 63,
+    "locationKo": "넓적다리 앞가쪽에서 가쪽넓은근과 넙다리곧은근힘줄 가쪽모서리 사이, 무릎뼈바닥에서 위로 2 B-cun 떨어진 곳이다."
   },
   {
     "id": "ST35",
@@ -1084,7 +1118,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 35,
-    "who2008Page": 63
+    "who2008Page": 63,
+    "locationKo": "무릎 앞쪽에서 무릎인대 가쪽의 오목한 곳이다. 무릎을 굽히면 무릎뼈의 아래가쪽 오목에서 찾는다."
   },
   {
     "id": "ST36",
@@ -1117,7 +1152,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 37,
-    "who2008Page": 64
+    "who2008Page": 64,
+    "locationKo": "아래다리 앞쪽에서 ST35와 ST41을 잇는 선 위, ST35에서 아래로 6 B-cun 떨어진 곳이며 앞정강근 위에 있다."
   },
   {
     "id": "ST38",
@@ -1133,7 +1169,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 38,
-    "who2008Page": 65
+    "who2008Page": 65,
+    "locationKo": "아래다리 앞쪽에서 ST35와 ST41을 잇는 선 위, ST35에서 아래로 8 B-cun 떨어진 곳이며 앞정강근 위에 있다."
   },
   {
     "id": "ST39",
@@ -1149,7 +1186,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 39,
-    "who2008Page": 65
+    "who2008Page": 65,
+    "locationKo": "아래다리 앞쪽에서 ST35와 ST41을 잇는 선 위, ST35에서 아래로 9 B-cun 떨어진 곳이며 앞정강근 위에 있다."
   },
   {
     "id": "ST40",
@@ -1165,7 +1203,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 40,
-    "who2008Page": 66
+    "who2008Page": 66,
+    "locationKo": "아래다리 앞가쪽에서 앞정강근 가쪽모서리, 가쪽복사 융기에서 위로 8 B-cun 떨어진 곳이다. ST38에서 가쪽으로 가운데손가락 한 너비 정도에 해당한다."
   },
   {
     "id": "ST41",
@@ -1181,7 +1220,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 41,
-    "who2008Page": 66
+    "who2008Page": 66,
+    "locationKo": "발목 앞쪽에서 발목관절 앞면 중앙의 오목, 긴엄지폄근힘줄과 긴발가락폄근힘줄 사이에 있다. 안쪽복사와 가쪽복사의 가장 돌출된 점을 잇는 선의 중점에 해당한다."
   },
   {
     "id": "ST42",
@@ -1197,7 +1237,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 42,
-    "who2008Page": 67
+    "who2008Page": 67,
+    "locationKo": "발등에서 둘째발허리뼈 바닥과 중간쐐기뼈가 만나는 관절 부위의 발등동맥 위에 있다."
   },
   {
     "id": "ST43",
@@ -1213,7 +1254,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 43,
-    "who2008Page": 67
+    "who2008Page": 67,
+    "locationKo": "발등에서 둘째와 셋째발허리뼈 사이, 둘째 발허리발가락관절 몸쪽의 오목한 곳이다."
   },
   {
     "id": "ST44",
@@ -1229,7 +1271,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 44,
-    "who2008Page": 68
+    "who2008Page": 68,
+    "locationKo": "발등에서 둘째와 셋째발가락 사이, 발가락물갈퀴 가장자리 뒤쪽의 피부 경계에 있다."
   },
   {
     "id": "ST45",
@@ -1245,7 +1288,8 @@
       "WHO_ACUPOINT_2008"
     ],
     "number": 45,
-    "who2008Page": 68
+    "who2008Page": 68,
+    "locationKo": "둘째발가락 끝마디뼈의 가쪽에서 둘째발톱 가쪽모서리의 몸쪽·가쪽으로 0.1 F-cun 떨어진 곳이다."
   },
   {
     "id": "SP1",
