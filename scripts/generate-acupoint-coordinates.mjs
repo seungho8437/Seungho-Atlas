@@ -135,7 +135,7 @@ function applyWhoConstraints(input,text,side){
   const t=[...input]; let count=0;
   const explicitFoot=/발등|발바닥|발가락|발허리|발꿈치|복사|발목/.test(text) && !/아래다리|넓적다리|무릎/.test(text);
   if(explicitFoot){
-    const ceiling=norm(supAxis,.115), floor=norm(supAxis,.008);
+    const ceiling=norm(supAxis,.075), floor=norm(supAxis,.004);
     t[supAxis]=Math.max(floor,Math.min(ceiling,t[supAxis]));
     count++;
   }
@@ -146,6 +146,9 @@ function applyWhoConstraints(input,text,side){
     const frac=Math.min(.92,n/6*.84);
     t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*frac;
     count++;
+  }
+  if(/배꼽\s*중심/.test(text)&&!/배꼽(?:\s*중심)?(?:보다|에서)?\s*(?:위|아래)로/.test(text)){
+    t[supAxis]=norm(supAxis,.455);count++;
   }
   const nav=text.match(/배꼽(?:\s*중심)?(?:보다|에서)?\s*(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(nav){
@@ -379,27 +382,24 @@ function constrainedSurfaceProjection(target,side,locks){
   if(locks.sup)locked.push(supAxis);
   if(locks.ap)locked.push(apAxis);
   if(locked.length<2)return null;
-  // Preserve the two strongest WHO axes exactly through the final skin projection.
-  // sup+lr is preferred for torso/head; sup+ap for hands/feet; lr+ap otherwise.
-  let ax1,ax2;
-  if(locks.sup&&locks.lr){ax1=supAxis;ax2=lrAxis;}
-  else if(locks.sup&&locks.ap){ax1=supAxis;ax2=apAxis;}
-  else {ax1=lrAxis;ax2=apAxis;}
-  const free=[0,1,2].find(a=>a!==ax1&&a!==ax2);
-  let best=null,bestD=Infinity,bestPart=null;
-  for(const T of surfaceTriangles){
-    const bc=barycentric2D(target[ax1],target[ax2],T.tri[0],T.tri[1],T.tri[2],ax1,ax2);
-    if(!bc)continue;
-    const q=[0,0,0];
-    for(let k=0;k<3;k++)q[k]=bc[0]*T.tri[0][k]+bc[1]*T.tri[1][k]+bc[2]*T.tri[2][k];
-    const sideCoord=q[lrAxis]-bodyCenter[lrAxis];
-    if(side==='left' && Math.sign(sideCoord||0)!==leftSign)continue;
-    if(side==='right' && Math.sign(sideCoord||0)!==-leftSign)continue;
-    if(side==='midline' && Math.abs(sideCoord)>extent[lrAxis]*.12)continue;
-    const d=Math.abs(q[free]-target[free]);
-    if(d<bestD){bestD=d;best=q;bestPart=T.part;}
+  const pairs=[];
+  for(let i=0;i<locked.length;i++)for(let j=i+1;j<locked.length;j++)pairs.push([locked[i],locked[j]]);
+  let best=null,bestD=Infinity,bestPart=null,bestPair=null;
+  for(const [ax1,ax2] of pairs){
+    for(const T of surfaceTriangles){
+      const bc=barycentric2D(target[ax1],target[ax2],T.tri[0],T.tri[1],T.tri[2],ax1,ax2);
+      if(!bc)continue;
+      const q=[0,0,0];
+      for(let k=0;k<3;k++)q[k]=bc[0]*T.tri[0][k]+bc[1]*T.tri[1][k]+bc[2]*T.tri[2][k];
+      const sideCoord=q[lrAxis]-bodyCenter[lrAxis];
+      if(side==='left' && Math.sign(sideCoord||0)!==leftSign)continue;
+      if(side==='right' && Math.sign(sideCoord||0)!==-leftSign)continue;
+      if(side==='midline' && Math.abs(sideCoord)>extent[lrAxis]*.035)continue;
+      const d=dist2(target,q);
+      if(d<bestD){bestD=d;best=q;bestPart=T.part;bestPair=[ax1,ax2];}
+    }
   }
-  return best?{point:best,distance:Math.sqrt(dist2(target,best)),part:bestPart,constrained:true}:null;
+  return best?{point:best,distance:Math.sqrt(bestD),part:bestPart,constrained:true,lockedAxes:bestPair}:null;
 }
 function weightedClosestOnSegment(target,a,b,weights){
   const d=b.map((v,i)=>v-a[i]);
@@ -624,10 +624,18 @@ for(const p of acupoints){
     if(side==='midline') target[lrAxis]=bodyCenter[lrAxis];
     const locText=p.locationKo||'';
     const locks={
-      sup:(/B-cun/.test(locText)&&/(위로|아래로|위쪽으로|아래쪽으로|몸쪽으로|먼쪽으로|머리선|갈비사이공간|같은 높이|뒤엉치뼈구멍)/.test(locText))||/F-cun/.test(locText)||/귀구슬위패임|귀구슬\s*중심|귀구슬사이패임|발등|발바닥|발가락|발허리|발꿈치|복사|발목/.test(locText),
-      lr:side==='midline'||/앞정중선\s*위|가쪽(?:으로)?\s*\d+(?:\.\d+)?\s*B-cun|노뼈와\s*자뼈\s*사이|자뼈\s*바로\s*노쪽|뒤가쪽|앞가쪽|뒤안쪽|앞안쪽|동공|귀구슬|귓바퀴|가쪽눈구석|손허리|손가락|발허리|발가락/.test(locText),
+      sup:(/B-cun/.test(locText)&&/(위로|아래로|위쪽으로|아래쪽으로|몸쪽으로|먼쪽으로|머리선|갈비사이공간|같은 높이|뒤엉치뼈구멍)/.test(locText))||/F-cun|갈비사이공간|배꼽|귀구슬위패임|귀구슬\s*중심|귀구슬사이패임|귓바퀴\s*꼭대기|발등|발바닥|발가락|발허리|발꿈치|복사|발목/.test(locText),
+      lr:side==='midline'||/앞정중선\s*위|가쪽(?:으로)?\s*\d+(?:\.\d+)?\s*B-cun|노뼈와\s*자뼈\s*사이|자뼈\s*바로\s*노쪽|뒤가쪽|앞가쪽|뒤안쪽|앞안쪽|동공|귀구슬|귓바퀴|가쪽눈구석|손허리|손가락|발허리|발가락|노쪽|자쪽|안쪽|가쪽|노뼈|자뼈/.test(locText),
       ap:/손바닥|손등|발바닥|발등|손허리|손가락|발허리|발가락|어깨뼈\s*부위|어깨세모근|가쪽눈구석|관자부|앞가슴|아랫배|복부|배꼽|앞정중선/.test(locText)
     };
+    if(side!=='midline'&&locks.lr){
+      const h=localHalfWidth(target[supAxis]);
+      const dx=target[lrAxis]-bodyCenter[lrAxis];
+      if(h>1e-6&&Math.abs(dx)>h*.92){
+        const sign=Math.sign(dx)||(side==='left'?leftSign:-leftSign);
+        target[lrAxis]=bodyCenter[lrAxis]+sign*h*.98*Math.tanh(Math.abs(dx)/(h*.98));
+      }
+    }
     const projected=project(target,side,locks);
     const sideExpected=side==='left'?leftSign:side==='right'?-leftSign:0;
     const lateral=(projected.point[lrAxis]-bodyCenter[lrAxis]);
