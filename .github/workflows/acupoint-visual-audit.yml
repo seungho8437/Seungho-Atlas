@@ -1,0 +1,56 @@
+name: Acupoint Visual Audit Plates
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/korean-tcm-knowledge
+    paths:
+      - scripts/generate-acupoint-visual-audit.mjs
+      - .github/workflows/acupoint-visual-audit.yml
+      - public/knowledge/acupoint-coordinates.json
+      - public/knowledge/acupoint-coordinates-audit.json
+      - public/knowledge/anatomy-acupoint-relations.json
+      - public/knowledge/acupoints.json
+      - public/knowledge/anatomy-ko.json
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/korean-tcm-knowledge
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.0'
+      - run: node scripts/generate-acupoint-visual-audit.mjs
+      - name: Install SVG rasterizer
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq librsvg2-bin imagemagick
+      - name: Rasterize review plates
+        run: |
+          mkdir -p artifacts/acupoint-visual-audit/png
+          for f in artifacts/acupoint-visual-audit/*.svg; do
+            b=$(basename "$f" .svg)
+            rsvg-convert -w 1600 "$f" -o "artifacts/acupoint-visual-audit/png/$b.png"
+          done
+      - name: Build high-risk contact sheets
+        run: |
+          mkdir -p artifacts/acupoint-visual-audit/contact
+          python3 - <<'PY'
+          import glob, os, subprocess
+          files=sorted(glob.glob('artifacts/acupoint-visual-audit/png/detail-*.png'))
+          for i in range(0,len(files),4):
+              batch=files[i:i+4]
+              out=f'artifacts/acupoint-visual-audit/contact/high-risk-{i//4+1:02d}.png'
+              subprocess.run(['montage',*batch,'-tile','2x2','-geometry','800x600+4+4',out],check=True)
+          PY
+      - name: Upload visual audit artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: acupoint-visual-audit
+          path: artifacts/acupoint-visual-audit
+          retention-days: 14
