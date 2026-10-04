@@ -88,9 +88,24 @@ function findAll(re,text,mapper){
  return out;
 }
 function nearestDirection(text,index){
- const lo=Math.max(0,index-24),hi=Math.min(text.length,index+40),window=text.slice(lo,hi);
- for(const [id,re] of DIR_RULES){const m=window.match(re);if(m)return {id,evidence:m[0]};}
- return null;
+ // Korean location statements usually place the anatomical direction either
+ // immediately before "...으로 N B-cun" or just after "N B-cun 아래/위".
+ // Select the closest directional token to the measurement rather than the
+ // first direction in a broad window (which can describe the region/aspect).
+ const lo=Math.max(0,index-28),hi=Math.min(text.length,index+28),window=text.slice(lo,hi),relative=index-lo;
+ const candidates=[];
+ for(const [id,re] of DIR_RULES){
+   const rx=new RegExp(re.source,re.flags.includes('g')?re.flags:re.flags+'g');let m;
+   while((m=rx.exec(window))){
+     const center=m.index+m[0].length/2,dist=Math.abs(center-relative);
+     candidates.push({id,evidence:m[0],dist,index:m.index});
+     if(!m[0].length)rx.lastIndex++;
+   }
+ }
+ if(!candidates.length)return null;
+ candidates.sort((a,b)=>a.dist-b.dist||b.index-a.index);
+ const best=candidates[0];
+ return {id:best.id,evidence:best.evidence};
 }
 function build(point){
  const text=point.locationKo;
