@@ -757,10 +757,10 @@
   },
   "FMA5895": {
     "sourceNameEn": "cranial parasympathetic ganglion",
-    "unresolvedTokens": [
-      "parasympathetic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "머리뼈부교감신경절",
+    "legacyKo": "두개부교감신경절",
+    "hanja": "頭蓋副交感神經節"
   },
   "FMA5897": {
     "nameKo": "해부학적공간",
@@ -2545,10 +2545,10 @@
   },
   "FMA11195": {
     "sourceNameEn": "segment of neural tree organ",
-    "unresolvedTokens": [
-      "neural"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "신경나무기관구역",
+    "legacyKo": "신경수기관분절",
+    "hanja": "神經樹器官分節"
   },
   "FMA11336": {
     "sourceNameEn": "linea alba",
@@ -4163,10 +4163,10 @@
   },
   "FMA14963": {
     "sourceNameEn": "zone of ileum",
-    "unresolvedTokens": [
-      "ileum"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "돌창자부위",
+    "legacyKo": "회장영역",
+    "hanja": "回腸領域"
   },
   "FMA14964": {
     "sourceNameEn": "proximal part of ileum",
@@ -4684,10 +4684,10 @@
   },
   "FMA16980": {
     "sourceNameEn": "zone of jejunum",
-    "unresolvedTokens": [
-      "jejunum"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "빈창자부위",
+    "legacyKo": "공장영역",
+    "hanja": "空腸領域"
   },
   "FMA16981": {
     "sourceNameEn": "proximal part of jejunum",
@@ -5149,11 +5149,10 @@
   },
   "FMA20247": {
     "sourceNameEn": "zone of corpus spongiosum of penis",
-    "unresolvedTokens": [
-      "corpus",
-      "spongiosum"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "음경해면체부위",
+    "legacyKo": "요도해면체영역",
+    "hanja": "尿道海綿體領域"
   },
   "FMA20278": {
     "nameKo": "앞배벽근육",
@@ -11475,10 +11474,10 @@
   },
   "FMA45638": {
     "sourceNameEn": "subdivision of nervous system",
-    "unresolvedTokens": [
-      "nervous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "신경계통세부분",
+    "legacyKo": "신경계통분할",
+    "hanja": "神經系統分割"
   },
   "FMA45728": {
     "nameKo": "해부학적엽",
@@ -14375,48 +14374,45 @@
   },
   "FMA52672": {
     "sourceNameEn": "communicating branch of nasociliary nerve with ciliary ganglion",
-    "unresolvedTokens": [
-      "nasociliary",
-      "with"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "코섬모체신경와연결되는섬모체신경절교통가지",
+    "legacyKo": "비모양신경연결모양신경절교통지",
+    "hanja": "鼻毛樣神經連結毛樣神經節交通枝"
   },
   "FMA52673": {
     "sourceNameEn": "communicating branch of right nasociliary nerve with right ciliary ganglion",
-    "unresolvedTokens": [
-      "nasociliary",
-      "with"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른코섬모체신경와연결되는오른섬모체신경절교통가지",
+    "legacyKo": "우비모양신경연결우모양신경절교통지",
+    "hanja": "右鼻毛樣神經連結右毛樣神經節交通枝"
   },
   "FMA52674": {
     "sourceNameEn": "communicating branch of left nasociliary nerve with left ciliary ganglion",
-    "unresolvedTokens": [
-      "nasociliary",
-      "with"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼코섬모체신경와연결되는왼섬모체신경절교통가지",
+    "legacyKo": "좌비모양신경연결좌모양신경절교통지",
+    "hanja": "左鼻毛樣神經連結左毛樣神經節交通枝"
   },
   "FMA52675": {
     "sourceNameEn": "anterior ethmoidal nerve",
-    "unresolvedTokens": [
-      "ethmoidal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "앞벌집뼈신경",
+    "legacyKo": "전사골신경",
+    "hanja": "前篩骨神經"
   },
   "FMA52676": {
     "sourceNameEn": "right anterior ethmoidal nerve",
-    "unresolvedTokens": [
-      "ethmoidal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른앞벌집뼈신경",
+    "legacyKo": "우전사골신경",
+    "hanja": "右前篩骨神經"
   },
   "FMA52677": {
     "sourceNameEn": "left anterior ethmoidal nerve",
-    "unresolvedTokens": [
-      "ethmoidal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼앞벌집뼈신경",
+    "legacyKo": "좌전사골신경",
+    "hanja": "左前篩骨神經"
   },
   "FMA52691": {
     "nameKo": "긴섬모체신경",
@@ -14448,24 +14444,24 @@
   },
   "FMA52714": {
     "sourceNameEn": "posterior ethmoidal nerve",
-    "unresolvedTokens": [
-      "ethmoidal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뒤벌집뼈신경",
+    "legacyKo": "후사골신경",
+    "hanja": "後篩骨神經"
   },
   "FMA52715": {
     "sourceNameEn": "right posterior ethmoidal nerve",
-    "unresolvedTokens": [
-      "ethmoidal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른뒤벌집뼈신경",
+    "legacyKo": "우후사골신경",
+    "hanja": "右後篩骨神經"
   },
   "FMA52716": {
     "sourceNameEn": "left posterior ethmoidal nerve",
-    "unresolvedTokens": [
-      "ethmoidal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼뒤벌집뼈신경",
+    "legacyKo": "좌후사골신경",
+    "hanja": "左後篩骨神經"
   },
   "FMA52734": {
     "nameKo": "이마뼈",
@@ -16095,10 +16091,10 @@
   },
   "FMA61284": {
     "sourceNameEn": "neural tree organ",
-    "unresolvedTokens": [
-      "neural"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "신경나무기관",
+    "legacyKo": "신경수기관",
+    "hanja": "神經樹器官"
   },
   "FMA61708": {
     "sourceNameEn": "subdivision of auriculotemporal part of head",
@@ -16116,10 +16112,10 @@
   },
   "FMA61815": {
     "sourceNameEn": "cardinal segment of brain",
-    "unresolvedTokens": [
-      "cardinal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뇌주요구역",
+    "legacyKo": "뇌주요분절",
+    "hanja": "腦主要分節"
   },
   "FMA61820": {
     "nameKo": "대뇌반구구역",
@@ -16165,11 +16161,10 @@
   },
   "FMA61842": {
     "sourceNameEn": "septum of telencephalon",
-    "unresolvedTokens": [
-      "septum",
-      "telencephalon"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "끝뇌사이막",
+    "legacyKo": "종뇌중격",
+    "hanja": "終腦中隔"
   },
   "FMA61857": {
     "nameKo": "위이마이랑",
@@ -16243,17 +16238,17 @@
   },
   "FMA61908": {
     "sourceNameEn": "fusiform gyrus",
-    "unresolvedTokens": [
-      "fusiform"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "방추이랑",
+    "legacyKo": "방추상회",
+    "hanja": "紡錘狀回"
   },
   "FMA61918": {
     "sourceNameEn": "parahippocampal gyrus",
-    "unresolvedTokens": [
-      "parahippocampal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "해마곁이랑",
+    "legacyKo": "해마방회",
+    "hanja": "海馬旁回"
   },
   "FMA61934": {
     "sourceNameEn": "choroid plexus of cerebral hemisphere",
@@ -16272,10 +16267,10 @@
   },
   "FMA61961": {
     "sourceNameEn": "anterior commissure",
-    "unresolvedTokens": [
-      "commissure"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "앞맞교차",
+    "legacyKo": "전교련",
+    "hanja": "前交連"
   },
   "FMA61965": {
     "sourceNameEn": "fornix of forebrain",
@@ -16293,19 +16288,17 @@
   },
   "FMA61974": {
     "sourceNameEn": "stria terminalis",
-    "unresolvedTokens": [
-      "stria",
-      "terminalis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "종말줄무늬",
+    "legacyKo": "분계선조",
+    "hanja": "分界線條"
   },
   "FMA61975": {
     "sourceNameEn": "lamina terminalis",
-    "unresolvedTokens": [
-      "lamina",
-      "terminalis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "종말판",
+    "legacyKo": "종판",
+    "hanja": "終板"
   },
   "FMA61993": {
     "sourceNameEn": "midbrain",
@@ -16330,18 +16323,17 @@
   },
   "FMA61998": {
     "sourceNameEn": "segment of hindbrain",
-    "unresolvedTokens": [
-      "hindbrain"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뒤뇌구역",
+    "legacyKo": "후뇌분절",
+    "hanja": "後腦分節"
   },
   "FMA62004": {
     "sourceNameEn": "medulla oblongata",
-    "unresolvedTokens": [
-      "medulla",
-      "oblongata"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "숨뇌",
+    "legacyKo": "연수",
+    "hanja": "延髓"
   },
   "FMA62007": {
     "sourceNameEn": "thalamus",
@@ -16352,17 +16344,17 @@
   },
   "FMA62008": {
     "sourceNameEn": "hypothalamus",
-    "unresolvedTokens": [
-      "hypothalamus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "시상하부",
+    "legacyKo": "시상하부",
+    "hanja": "視床下部"
   },
   "FMA62032": {
     "sourceNameEn": "habenula",
-    "unresolvedTokens": [
-      "habenula"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "고삐",
+    "legacyKo": "수강",
+    "hanja": "手綱"
   },
   "FMA62033": {
     "sourceNameEn": "pineal body",
@@ -16373,10 +16365,10 @@
   },
   "FMA62045": {
     "sourceNameEn": "optic chiasm",
-    "unresolvedTokens": [
-      "chiasm"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "시각교차",
+    "legacyKo": "시교차",
+    "hanja": "視交叉"
   },
   "FMA62046": {
     "nameKo": "시각다발",
@@ -16387,41 +16379,38 @@
   },
   "FMA62072": {
     "sourceNameEn": "posterior commissure",
-    "unresolvedTokens": [
-      "commissure"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뒤맞교차",
+    "legacyKo": "후교련",
+    "hanja": "後交連"
   },
   "FMA62080": {
     "sourceNameEn": "stria medullaris of thalamus",
-    "unresolvedTokens": [
-      "stria",
-      "medullaris",
-      "thalamus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "시상수질줄무늬",
+    "legacyKo": "시상수질선조",
+    "hanja": "視床髓質線條"
   },
   "FMA62209": {
     "sourceNameEn": "lateral geniculate body",
-    "unresolvedTokens": [
-      "geniculate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가쪽무릎체",
+    "legacyKo": "외측슬상체",
+    "hanja": "外側膝狀體"
   },
   "FMA62211": {
     "sourceNameEn": "medial geniculate body",
-    "unresolvedTokens": [
-      "geniculate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "안쪽무릎체",
+    "legacyKo": "내측슬상체",
+    "hanja": "內側膝狀體"
   },
   "FMA62327": {
     "sourceNameEn": "tuber cinereum",
-    "unresolvedTokens": [
-      "tuber",
-      "cinereum"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "회색융기",
+    "legacyKo": "회백융기",
+    "hanja": "灰白隆起"
   },
   "FMA62374": {
     "sourceNameEn": "segment of telencephalon",
@@ -16439,19 +16428,17 @@
   },
   "FMA62394": {
     "sourceNameEn": "peduncle of midbrain",
-    "unresolvedTokens": [
-      "peduncle",
-      "midbrain"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "중간뇌다리",
+    "legacyKo": "중뇌각",
+    "hanja": "中腦脚"
   },
   "FMA62398": {
     "sourceNameEn": "segment of midbrain tectum",
-    "unresolvedTokens": [
-      "midbrain",
-      "tectum"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "중간뇌덮개구역",
+    "legacyKo": "중뇌개분절",
+    "hanja": "中腦蓋分節"
   },
   "FMA62403": {
     "nameKo": "위둔덕",
@@ -16469,10 +16456,10 @@
   },
   "FMA62434": {
     "sourceNameEn": "cingulate gyrus",
-    "unresolvedTokens": [
-      "cingulate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "띠이랑",
+    "legacyKo": "대상회",
+    "hanja": "帶狀回"
   },
   "FMA62445": {
     "sourceNameEn": "commissure of diencephalon",
@@ -16490,10 +16477,10 @@
   },
   "FMA62493": {
     "sourceNameEn": "hippocampus",
-    "unresolvedTokens": [
-      "hippocampus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "해마",
+    "legacyKo": "해마",
+    "hanja": "海馬"
   },
   "FMA62504": {
     "nameKo": "깊은손바닥정맥활지류",
@@ -16525,10 +16512,10 @@
   },
   "FMA62514": {
     "sourceNameEn": "basal ganglion of telencephalon",
-    "unresolvedTokens": [
-      "telencephalon"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "끝뇌바닥신경절",
+    "legacyKo": "종뇌기저신경절",
+    "hanja": "終腦基底神經節"
   },
   "FMA62955": {
     "sourceNameEn": "anatomical entity",
@@ -16539,10 +16526,10 @@
   },
   "FMA63103": {
     "sourceNameEn": "pancreatic duct tree",
-    "unresolvedTokens": [
-      "pancreatic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "이자관나무",
+    "legacyKo": "췌관수",
+    "hanja": "膵管樹"
   },
   "FMA63120": {
     "sourceNameEn": "parenchyma of pancreas",
@@ -16623,11 +16610,10 @@
   },
   "FMA64989": {
     "sourceNameEn": "heterogeneous cluster",
-    "unresolvedTokens": [
-      "heterogeneous",
-      "cluster"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "이질무리",
+    "legacyKo": "이질군",
+    "hanja": "異質群"
   },
   "FMA64990": {
     "sourceNameEn": "organ part cluster",
@@ -16750,20 +16736,17 @@
   },
   "FMA65539": {
     "sourceNameEn": "subdivision of parasympathetic nervous system",
-    "unresolvedTokens": [
-      "parasympathetic",
-      "nervous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "부교감신경계통세부분",
+    "legacyKo": "부교감신경계통분할",
+    "hanja": "副交感神經系統分割"
   },
   "FMA65551": {
     "sourceNameEn": "subdivisionof autonomic nervous system",
-    "unresolvedTokens": [
-      "subdivisionof",
-      "autonomic",
-      "nervous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "자율신경계통",
+    "legacyKo": "자율신경계통",
+    "hanja": "自律神經系統"
   },
   "FMA66241": {
     "nameKo": "첫째뒤갈비사이동맥",
@@ -16957,10 +16940,10 @@
   },
   "FMA67242": {
     "sourceNameEn": "gray matter of neuraxis",
-    "unresolvedTokens": [
-      "gray"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "신경축회색질질",
+    "legacyKo": "신경축회백질질",
+    "hanja": "神經軸灰白質質"
   },
   "FMA67325": {
     "nameKo": "뒤통수엽",
@@ -16971,10 +16954,10 @@
   },
   "FMA67329": {
     "sourceNameEn": "insula",
-    "unresolvedTokens": [
-      "insula"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "섬",
+    "legacyKo": "도",
+    "hanja": "島"
   },
   "FMA67396": {
     "sourceNameEn": "articular disk of symphysis",
@@ -17049,39 +17032,38 @@
   },
   "FMA67942": {
     "sourceNameEn": "segment of metencephalon",
-    "unresolvedTokens": [
-      "metencephalon"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뒤뇌구역",
+    "legacyKo": "후뇌분절",
+    "hanja": "後腦分節"
   },
   "FMA67943": {
     "sourceNameEn": "pons",
-    "unresolvedTokens": [
-      "pons"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "다리뇌",
+    "legacyKo": "교뇌",
+    "hanja": "橋腦"
   },
   "FMA67944": {
     "sourceNameEn": "cerebellum",
-    "unresolvedTokens": [
-      "cerebellum"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "소뇌",
+    "legacyKo": "소뇌",
+    "hanja": "小腦"
   },
   "FMA67950": {
     "sourceNameEn": "stria of telencephalon",
-    "unresolvedTokens": [
-      "stria",
-      "telencephalon"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "끝뇌줄무늬",
+    "legacyKo": "종뇌선조",
+    "hanja": "終腦線條"
   },
   "FMA67951": {
     "sourceNameEn": "lamina of cerebral hemisphere",
-    "unresolvedTokens": [
-      "lamina"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "대뇌반구판",
+    "legacyKo": "대뇌반구판",
+    "hanja": "大腦半球板"
   },
   "FMA67957": {
     "nameKo": "대뇌반구이랑구역",
@@ -18367,24 +18349,24 @@
   },
   "FMA71193": {
     "sourceNameEn": "lobe of thymus",
-    "unresolvedTokens": [
-      "thymus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가슴샘엽",
+    "legacyKo": "흉선엽",
+    "hanja": "胸腺葉"
   },
   "FMA71194": {
     "sourceNameEn": "right lobe of thymus",
-    "unresolvedTokens": [
-      "thymus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가슴샘오른엽",
+    "legacyKo": "흉선우엽",
+    "hanja": "胸腺右葉"
   },
   "FMA71195": {
     "sourceNameEn": "left lobe of thymus",
-    "unresolvedTokens": [
-      "thymus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가슴샘왼엽",
+    "legacyKo": "흉선좌엽",
+    "hanja": "胸腺左葉"
   },
   "FMA71209": {
     "sourceNameEn": "tributary of axillary vein",
@@ -18437,11 +18419,10 @@
   },
   "FMA71235": {
     "sourceNameEn": "region of dura mater",
-    "unresolvedTokens": [
-      "dura",
-      "mater"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "경막막부위",
+    "legacyKo": "경막막영역",
+    "hanja": "硬膜膜領域"
   },
   "FMA71307": {
     "sourceNameEn": "set of interspinales lumborum",
@@ -18894,59 +18875,59 @@
   },
   "FMA72689": {
     "sourceNameEn": "right fusiform gyrus",
-    "unresolvedTokens": [
-      "fusiform"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른방추이랑",
+    "legacyKo": "우방추상회",
+    "hanja": "右紡錘狀回"
   },
   "FMA72690": {
     "sourceNameEn": "left fusiform gyrus",
-    "unresolvedTokens": [
-      "fusiform"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼방추이랑",
+    "legacyKo": "좌방추상회",
+    "hanja": "左紡錘狀回"
   },
   "FMA72705": {
     "sourceNameEn": "right parahippocampal gyrus",
-    "unresolvedTokens": [
-      "parahippocampal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른해마곁이랑",
+    "legacyKo": "우해마방회",
+    "hanja": "右海馬旁回"
   },
   "FMA72706": {
     "sourceNameEn": "left parahippocampal gyrus",
-    "unresolvedTokens": [
-      "parahippocampal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼해마곁이랑",
+    "legacyKo": "좌해마방회",
+    "hanja": "左海馬旁回"
   },
   "FMA72713": {
     "sourceNameEn": "right hippocampus",
-    "unresolvedTokens": [
-      "hippocampus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른해마",
+    "legacyKo": "우해마",
+    "hanja": "右海馬"
   },
   "FMA72714": {
     "sourceNameEn": "left hippocampus",
-    "unresolvedTokens": [
-      "hippocampus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼해마",
+    "legacyKo": "좌해마",
+    "hanja": "左海馬"
   },
   "FMA72717": {
     "sourceNameEn": "right cingulate gyrus",
-    "unresolvedTokens": [
-      "cingulate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른띠이랑",
+    "legacyKo": "우대상회",
+    "hanja": "右帶狀回"
   },
   "FMA72718": {
     "sourceNameEn": "left cingulate gyrus",
-    "unresolvedTokens": [
-      "cingulate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼띠이랑",
+    "legacyKo": "좌대상회",
+    "hanja": "左帶狀回"
   },
   "FMA72800": {
     "nameKo": "오른위관자이랑앞부분",
@@ -19062,11 +19043,10 @@
   },
   "FMA72940": {
     "sourceNameEn": "left stria terminalis",
-    "unresolvedTokens": [
-      "stria",
-      "terminalis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼종말줄무늬",
+    "legacyKo": "좌분계선조",
+    "hanja": "左分界線條"
   },
   "FMA72975": {
     "nameKo": "오른뒤통수엽",
@@ -19084,17 +19064,17 @@
   },
   "FMA72977": {
     "sourceNameEn": "right insula",
-    "unresolvedTokens": [
-      "insula"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른섬",
+    "legacyKo": "우도",
+    "hanja": "右島"
   },
   "FMA72978": {
     "sourceNameEn": "left insula",
-    "unresolvedTokens": [
-      "insula"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼섬",
+    "legacyKo": "좌도",
+    "hanja": "左島"
   },
   "FMA73203": {
     "sourceNameEn": "trunk of subdivision of axillary artery",
@@ -19112,49 +19092,45 @@
   },
   "FMA73303": {
     "sourceNameEn": "right lateral geniculate body",
-    "unresolvedTokens": [
-      "geniculate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른가쪽무릎체",
+    "legacyKo": "우외측슬상체",
+    "hanja": "右外側膝狀體"
   },
   "FMA73304": {
     "sourceNameEn": "left lateral geniculate body",
-    "unresolvedTokens": [
-      "geniculate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼가쪽무릎체",
+    "legacyKo": "좌외측슬상체",
+    "hanja": "左外側膝狀體"
   },
   "FMA73309": {
     "sourceNameEn": "right medial geniculate body",
-    "unresolvedTokens": [
-      "geniculate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른안쪽무릎체",
+    "legacyKo": "우내측슬상체",
+    "hanja": "右內側膝狀體"
   },
   "FMA73310": {
     "sourceNameEn": "left medial geniculate body",
-    "unresolvedTokens": [
-      "geniculate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼안쪽무릎체",
+    "legacyKo": "좌내측슬상체",
+    "hanja": "左內側膝狀體"
   },
   "FMA73413": {
     "sourceNameEn": "right stria medullaris of thalamus",
-    "unresolvedTokens": [
-      "stria",
-      "medullaris",
-      "thalamus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "시상오른줄무늬수질",
+    "legacyKo": "시상우선조수질",
+    "hanja": "視床右線條髓質"
   },
   "FMA73414": {
     "sourceNameEn": "left stria medullaris of thalamus",
-    "unresolvedTokens": [
-      "stria",
-      "medullaris",
-      "thalamus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "시상왼줄무늬수질",
+    "legacyKo": "시상좌선조수질",
+    "hanja": "視床左線條髓質"
   },
   "FMA73422": {
     "nameKo": "오른위둔덕",
@@ -19249,17 +19225,17 @@
   },
   "FMA74866": {
     "sourceNameEn": "zone of diencephalon",
-    "unresolvedTokens": [
-      "diencephalon"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "사이뇌부위",
+    "legacyKo": "간뇌영역",
+    "hanja": "間腦領域"
   },
   "FMA74877": {
     "sourceNameEn": "mammillary body",
-    "unresolvedTokens": [
-      "mammillary"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "유두몸체",
+    "legacyKo": "유두체",
+    "hanja": "乳頭體"
   },
   "FMA74912": {
     "nameKo": "왼관상동맥앞심실사이가지줄기",
@@ -19599,10 +19575,10 @@
   },
   "FMA78467": {
     "sourceNameEn": "cerebral aqueduct",
-    "unresolvedTokens": [
-      "aqueduct"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "중간뇌수도관",
+    "legacyKo": "대뇌수도",
+    "hanja": "大腦水道"
   },
   "FMA78469": {
     "nameKo": "넷째심실",
@@ -19627,11 +19603,10 @@
   },
   "FMA78590": {
     "sourceNameEn": "set of heterogeneous clusters",
-    "unresolvedTokens": [
-      "heterogeneous",
-      "clusters"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "이질무리집합",
+    "legacyKo": "이질군군",
+    "hanja": "異質群群"
   },
   "FMA79615": {
     "sourceNameEn": "branch of postcommunicating part of anterior cerebral artery",
@@ -19798,10 +19773,10 @@
   },
   "FMA83465": {
     "sourceNameEn": "segment of white matter of neuraxis",
-    "unresolvedTokens": [
-      "white"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "신경축백색질질구역",
+    "legacyKo": "신경축백질질분절",
+    "hanja": "神經軸白質質分節"
   },
   "FMA83563": {
     "nameKo": "근육층세부분",
@@ -19819,11 +19794,10 @@
   },
   "FMA83738": {
     "sourceNameEn": "subarachnoid incisure",
-    "unresolvedTokens": [
-      "subarachnoid",
-      "incisure"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "거미막밑패임",
+    "legacyKo": "지주막하절흔",
+    "hanja": "蜘蛛膜下切痕"
   },
   "FMA83740": {
     "sourceNameEn": "interpeduncular fossa",
@@ -19848,10 +19822,10 @@
   },
   "FMA83856": {
     "sourceNameEn": "lamina of neuraxis",
-    "unresolvedTokens": [
-      "lamina"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "신경축판",
+    "legacyKo": "신경축판",
+    "hanja": "神經軸板"
   },
   "FMA83857": {
     "sourceNameEn": "brachium of neuraxis",
@@ -19862,10 +19836,10 @@
   },
   "FMA83860": {
     "sourceNameEn": "peduncle of neuraxis",
-    "unresolvedTokens": [
-      "peduncle"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "신경축다리",
+    "legacyKo": "신경축각",
+    "hanja": "神經軸脚"
   },
   "FMA83865": {
     "sourceNameEn": "fornix of neuraxis",
@@ -19897,42 +19871,38 @@
   },
   "FMA83912": {
     "sourceNameEn": "gray matter of diencephalon",
-    "unresolvedTokens": [
-      "gray",
-      "diencephalon"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "사이뇌회색질질",
+    "legacyKo": "간뇌회백질질",
+    "hanja": "間腦灰白質質"
   },
   "FMA83915": {
     "sourceNameEn": "gray matter of hypothalamus",
-    "unresolvedTokens": [
-      "gray",
-      "hypothalamus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "시상하부회색질질",
+    "legacyKo": "시상하부회백질질",
+    "hanja": "視床下部灰白質質"
   },
   "FMA83929": {
     "sourceNameEn": "white matter of neuraxis",
-    "unresolvedTokens": [
-      "white"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "신경축백색질질",
+    "legacyKo": "신경축백질질",
+    "hanja": "神經軸白質質"
   },
   "FMA83930": {
     "sourceNameEn": "white matter of telencephalon",
-    "unresolvedTokens": [
-      "white",
-      "telencephalon"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "끝뇌백색질질",
+    "legacyKo": "종뇌백질질",
+    "hanja": "終腦白質質"
   },
   "FMA83966": {
     "sourceNameEn": "tentorium cerebelli",
-    "unresolvedTokens": [
-      "tentorium",
-      "cerebelli"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "소뇌천막",
+    "legacyKo": "소뇌천막",
+    "hanja": "小腦天幕"
   },
   "FMA84054": {
     "nameKo": "신경축구역",
@@ -19943,11 +19913,10 @@
   },
   "FMA84059": {
     "sourceNameEn": "nuclear complex of neuraxis",
-    "unresolvedTokens": [
-      "nuclear",
-      "complex"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "신경축핵복합체",
+    "legacyKo": "신경축핵복합체",
+    "hanja": "神經軸核複合體"
   },
   "FMA84081": {
     "sourceNameEn": "circumventricular organ of neuraxis",
@@ -19979,10 +19948,10 @@
   },
   "FMA84881": {
     "sourceNameEn": "subdivision of subarachnoid space",
-    "unresolvedTokens": [
-      "subarachnoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "거미막밑공간세부분",
+    "legacyKo": "지주막하강분할",
+    "hanja": "蜘蛛膜下腔分割"
   },
   "FMA84926": {
     "nameKo": "해부학적칸공간",
@@ -20329,11 +20298,10 @@
   },
   "FMA86464": {
     "sourceNameEn": "corpus callosum",
-    "unresolvedTokens": [
-      "corpus",
-      "callosum"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뇌들보",
+    "legacyKo": "뇌량",
+    "hanja": "腦梁"
   },
   "FMA86565": {
     "nameKo": "왼심실꼭지근육부위",
@@ -20372,10 +20340,10 @@
   },
   "FMA223151": {
     "sourceNameEn": "internal gray matter component",
-    "unresolvedTokens": [
-      "gray"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "속회색질질구성요소",
+    "legacyKo": "내회백질질성분",
+    "hanja": "內灰白質質成分"
   },
   "FMA225818": {
     "nameKo": "안구벽층부위",
@@ -20414,17 +20382,17 @@
   },
   "FMA241998": {
     "sourceNameEn": "cerebral white matter",
-    "unresolvedTokens": [
-      "white"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "대뇌백색질질",
+    "legacyKo": "대뇌백질질",
+    "hanja": "大腦白質質"
   },
   "FMA242193": {
     "sourceNameEn": "region of cerebral cortex",
-    "unresolvedTokens": [
-      "cortex"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "대뇌겉질부위",
+    "legacyKo": "대뇌피질영역",
+    "hanja": "大腦皮質領域"
   },
   "FMA242770": {
     "nameKo": "신경축심실계통벽부위",
@@ -20442,10 +20410,10 @@
   },
   "FMA256174": {
     "sourceNameEn": "region of cerebral white matter",
-    "unresolvedTokens": [
-      "white"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "대뇌백색질질부위",
+    "legacyKo": "대뇌백질질영역",
+    "hanja": "大腦白質質領域"
   },
   "FMA256194": {
     "nameKo": "눈확이랑",
@@ -20498,17 +20466,17 @@
   },
   "FMA260791": {
     "sourceNameEn": "white matter of right cerebral hemisphere",
-    "unresolvedTokens": [
-      "white"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른대뇌반구백색질질",
+    "legacyKo": "우대뇌반구백질질",
+    "hanja": "右大腦半球白質質"
   },
   "FMA260794": {
     "sourceNameEn": "white matter of left cerebral hemisphere",
-    "unresolvedTokens": [
-      "white"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼대뇌반구백색질질",
+    "legacyKo": "좌대뇌반구백질질",
+    "hanja": "左大腦半球白質質"
   },
   "FMA264844": {
     "sourceNameEn": "left calcaneal tendon",
@@ -20540,11 +20508,10 @@
   },
   "FMA266054": {
     "sourceNameEn": "subdivision of cranial dura mater",
-    "unresolvedTokens": [
-      "dura",
-      "mater"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "머리뼈경막막세부분",
+    "legacyKo": "두개경막막분할",
+    "hanja": "頭蓋硬膜膜分割"
   },
   "FMA268667": {
     "nameKo": "오른되돌이뼈사이동맥",
@@ -20657,10 +20624,10 @@
   },
   "FMA7157": {
     "sourceNameEn": "nervous system",
-    "unresolvedTokens": [
-      "nervous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "신경계통",
+    "legacyKo": "신경계통",
+    "hanja": "神經系統"
   },
   "FMA7158": {
     "sourceNameEn": "respiratory system",
@@ -23343,25 +23310,24 @@
   },
   "FMA62003": {
     "sourceNameEn": "metencephalon",
-    "unresolvedTokens": [
-      "metencephalon"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뒤뇌",
+    "legacyKo": "후뇌",
+    "hanja": "後腦"
   },
   "FMA62009": {
     "sourceNameEn": "epithalamus",
-    "unresolvedTokens": [
-      "epithalamus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "시상상부",
+    "legacyKo": "시상상부",
+    "hanja": "視床上部"
   },
   "FMA62028": {
     "sourceNameEn": "intermediate hypothalamic region",
-    "unresolvedTokens": [
-      "intermediate",
-      "hypothalamic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "중간시상하부부위",
+    "legacyKo": "중간시상하부영역",
+    "hanja": "中間視床下部領域"
   },
   "FMA67292": {
     "nameKo": "오른대뇌반구",
@@ -23372,10 +23338,10 @@
   },
   "FMA67687": {
     "sourceNameEn": "hindbrain",
-    "unresolvedTokens": [
-      "hindbrain"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뒤뇌",
+    "legacyKo": "후뇌",
+    "hanja": "後腦"
   },
   "FMA67994": {
     "sourceNameEn": "intrapulmonary part of right pulmonary artery",
@@ -23764,17 +23730,17 @@
   },
   "FMA72980": {
     "sourceNameEn": "right limbic lobe",
-    "unresolvedTokens": [
-      "limbic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른변연엽",
+    "legacyKo": "우변연엽",
+    "hanja": "右邊緣葉"
   },
   "FMA72981": {
     "sourceNameEn": "left limbic lobe",
-    "unresolvedTokens": [
-      "limbic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼변연엽",
+    "legacyKo": "좌변연엽",
+    "hanja": "左邊緣葉"
   },
   "FMA73055": {
     "sourceNameEn": "anterior part of right knee",
@@ -23932,10 +23898,10 @@
   },
   "FMA79876": {
     "sourceNameEn": "brainstem",
-    "unresolvedTokens": [
-      "brainstem"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뇌줄기",
+    "legacyKo": "뇌간",
+    "hanja": "腦幹"
   },
   "FMA82672": {
     "nameKo": "위온몸정맥나무",
@@ -23967,11 +23933,10 @@
   },
   "FMA83902": {
     "sourceNameEn": "midbrain tectum",
-    "unresolvedTokens": [
-      "midbrain",
-      "tectum"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "중간뇌덮개",
+    "legacyKo": "중뇌개",
+    "hanja": "中腦蓋"
   },
   "FMA84842": {
     "nameKo": "오른심실자유벽",
@@ -24144,17 +24109,17 @@
   },
   "FMA242184": {
     "sourceNameEn": "subcortex of right cerebral hemisphere",
-    "unresolvedTokens": [
-      "subcortex"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른대뇌반구겉질밑",
+    "legacyKo": "우대뇌반구피질하",
+    "hanja": "右大腦半球皮質下"
   },
   "FMA242186": {
     "sourceNameEn": "subcortex of left cerebral hemisphere",
-    "unresolvedTokens": [
-      "subcortex"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼대뇌반구겉질밑",
+    "legacyKo": "좌대뇌반구피질하",
+    "hanja": "左大腦半球皮質下"
   },
   "FMA242207": {
     "sourceNameEn": "cortex of right frontal lobe",
@@ -24172,33 +24137,31 @@
   },
   "FMA242609": {
     "sourceNameEn": "right archicortex",
-    "unresolvedTokens": [
-      "archicortex"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른원시겉질",
+    "legacyKo": "우고피질",
+    "hanja": "右古皮質"
   },
   "FMA242611": {
     "sourceNameEn": "left archicortex",
-    "unresolvedTokens": [
-      "archicortex"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼원시겉질",
+    "legacyKo": "좌고피질",
+    "hanja": "左古皮質"
   },
   "FMA242625": {
     "sourceNameEn": "right prefrontal cortex",
-    "unresolvedTokens": [
-      "prefrontal",
-      "cortex"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른앞이마겉질",
+    "legacyKo": "우전전두피질",
+    "hanja": "右前前頭皮質"
   },
   "FMA242627": {
     "sourceNameEn": "left prefrontal cortex",
-    "unresolvedTokens": [
-      "prefrontal",
-      "cortex"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼앞이마겉질",
+    "legacyKo": "좌전전두피질",
+    "hanja": "左前前頭皮質"
   },
   "FMA242675": {
     "nameKo": "신경축심실계통",
@@ -24265,19 +24228,17 @@
   },
   "FMA261139": {
     "sourceNameEn": "right hippocampal formation",
-    "unresolvedTokens": [
-      "hippocampal",
-      "formation"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른해마형성체",
+    "legacyKo": "우해마형성",
+    "hanja": "右海馬形成"
   },
   "FMA261141": {
     "sourceNameEn": "left hippocampal formation",
-    "unresolvedTokens": [
-      "hippocampal",
-      "formation"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼해마형성체",
+    "legacyKo": "좌해마형성",
+    "hanja": "左海馬形成"
   },
   "FMA265130": {
     "sourceNameEn": "respiratory tract",
