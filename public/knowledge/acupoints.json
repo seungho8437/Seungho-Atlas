@@ -9,8 +9,12 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 1,
+    "who2008Page": 26,
+    "locationKo": "앞가슴 부위에서 첫째 갈비사이공간과 같은 높이이며, 앞정중선에서 가쪽으로 6 B-cun 떨어진 곳이다. LU2보다 1 B-cun 아래에 해당한다."
   },
   {
     "id": "LU2",
@@ -22,8 +26,12 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 2,
+    "who2008Page": 26,
+    "locationKo": "앞가슴 위쪽에서 빗장아래오목의 패인 곳, 어깨뼈 부리돌기 안쪽에 있으며 앞정중선에서 가쪽으로 6 B-cun 떨어진 곳이다."
   },
   {
     "id": "LU3",
@@ -35,8 +43,12 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 3,
+    "who2008Page": 27,
+    "locationKo": "위팔 앞가쪽에서 위팔두갈래근 가쪽 경계 바로 바깥에 있으며, 앞겨드랑주름에서 아래로 3 B-cun 떨어진 곳이다."
   },
   {
     "id": "LU4",
@@ -48,8 +60,12 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 4,
+    "who2008Page": 27,
+    "locationKo": "위팔 앞가쪽에서 위팔두갈래근 가쪽 경계 바로 바깥에 있으며, 앞겨드랑주름에서 아래로 4 B-cun 떨어진 곳이다."
   },
   {
     "id": "LU5",
@@ -61,8 +77,12 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 5,
+    "who2008Page": 28,
+    "locationKo": "팔꿈치 앞쪽의 팔오금주름 위에서 위팔두갈래근힘줄 가쪽의 오목한 곳이다."
   },
   {
     "id": "LU6",
@@ -74,8 +94,12 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 6,
+    "who2008Page": 28,
+    "locationKo": "아래팔 앞가쪽에서 LU5와 LU9를 잇는 선 위에 있으며, 손바닥쪽 손목주름에서 위로 7 B-cun 떨어진 곳이다."
   },
   {
     "id": "LU7",
@@ -87,8 +111,12 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 7,
+    "who2008Page": 29,
+    "locationKo": "아래팔 노쪽에서 긴엄지벌림근힘줄과 짧은엄지폄근힘줄 사이, 긴엄지벌림근힘줄 고랑에 있으며 손바닥쪽 손목주름에서 위로 1.5 B-cun 떨어진 곳이다."
   },
   {
     "id": "LU8",
@@ -100,8 +128,12 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 8,
+    "who2008Page": 29,
+    "locationKo": "아래팔 앞가쪽에서 노뼈붓돌기와 노동맥 사이에 있으며, 손바닥쪽 손목주름에서 위로 1 B-cun 떨어진 곳이다."
   },
   {
     "id": "LU9",
@@ -113,8 +145,12 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 9,
+    "who2008Page": 30,
+    "locationKo": "손목 앞가쪽에서 노뼈붓돌기와 손배뼈 사이, 긴엄지벌림근힘줄 자쪽의 오목한 곳이며 손바닥쪽 손목주름의 노쪽에 해당한다."
   },
   {
     "id": "LU10",
@@ -126,8 +162,12 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 10,
+    "who2008Page": 30,
+    "locationKo": "손바닥에서 첫째손허리뼈 중간 높이의 노쪽, 손바닥과 손등 피부가 만나는 경계에 있다."
   },
   {
     "id": "LU11",
@@ -139,8 +179,12 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 11,
+    "who2008Page": 31,
+    "locationKo": "엄지 끝마디뼈의 노쪽에서 엄지손톱 노쪽 모서리의 몸쪽·가쪽으로 0.1 F-cun 떨어진 곳이다."
   },
   {
     "id": "LI1",
@@ -152,8 +196,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 1,
+    "who2008Page": 34
   },
   {
     "id": "LI2",
@@ -165,8 +212,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 2,
+    "who2008Page": 34
   },
   {
     "id": "LI3",
@@ -178,8 +228,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 3,
+    "who2008Page": 35
   },
   {
     "id": "LI4",
@@ -191,8 +244,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 4,
+    "who2008Page": 35
   },
   {
     "id": "LI5",
@@ -204,8 +260,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 5,
+    "who2008Page": 36
   },
   {
     "id": "LI6",
@@ -217,8 +276,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 6,
+    "who2008Page": 36
   },
   {
     "id": "LI7",
@@ -230,8 +292,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 7,
+    "who2008Page": 37
   },
   {
     "id": "LI8",
@@ -243,8 +308,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 8,
+    "who2008Page": 37
   },
   {
     "id": "LI9",
@@ -256,8 +324,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 9,
+    "who2008Page": 38
   },
   {
     "id": "LI10",
@@ -269,8 +340,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 10,
+    "who2008Page": 38
   },
   {
     "id": "LI11",
@@ -282,8 +356,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 11,
+    "who2008Page": 39
   },
   {
     "id": "LI12",
@@ -295,8 +372,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 12,
+    "who2008Page": 39
   },
   {
     "id": "LI13",
@@ -308,8 +388,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 13,
+    "who2008Page": 40
   },
   {
     "id": "LI14",
@@ -321,8 +404,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 14,
+    "who2008Page": 40
   },
   {
     "id": "LI15",
@@ -334,8 +420,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 15,
+    "who2008Page": 41
   },
   {
     "id": "LI16",
@@ -347,8 +436,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 16,
+    "who2008Page": 41
   },
   {
     "id": "LI17",
@@ -360,8 +452,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 17,
+    "who2008Page": 42
   },
   {
     "id": "LI18",
@@ -373,8 +468,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 18,
+    "who2008Page": 42
   },
   {
     "id": "LI19",
@@ -386,8 +484,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 19,
+    "who2008Page": 43
   },
   {
     "id": "LI20",
@@ -399,8 +500,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 20,
+    "who2008Page": 43
   },
   {
     "id": "ST1",
@@ -412,8 +516,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 1,
+    "who2008Page": 46
   },
   {
     "id": "ST2",
@@ -425,8 +532,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 2,
+    "who2008Page": 46
   },
   {
     "id": "ST3",
@@ -438,8 +548,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 3,
+    "who2008Page": 47
   },
   {
     "id": "ST4",
@@ -451,8 +564,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 4,
+    "who2008Page": 47
   },
   {
     "id": "ST5",
@@ -464,8 +580,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 5,
+    "who2008Page": 48
   },
   {
     "id": "ST6",
@@ -477,8 +596,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 6,
+    "who2008Page": 48
   },
   {
     "id": "ST7",
@@ -490,8 +612,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 7,
+    "who2008Page": 49
   },
   {
     "id": "ST8",
@@ -503,8 +628,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 8,
+    "who2008Page": 49
   },
   {
     "id": "ST9",
@@ -516,8 +644,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 9,
+    "who2008Page": 50
   },
   {
     "id": "ST10",
@@ -529,8 +660,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 10,
+    "who2008Page": 50
   },
   {
     "id": "ST11",
@@ -542,8 +676,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 11,
+    "who2008Page": 51
   },
   {
     "id": "ST12",
@@ -555,8 +692,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 12,
+    "who2008Page": 51
   },
   {
     "id": "ST13",
@@ -568,8 +708,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 13,
+    "who2008Page": 52
   },
   {
     "id": "ST14",
@@ -581,8 +724,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 14,
+    "who2008Page": 52
   },
   {
     "id": "ST15",
@@ -594,8 +740,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 15,
+    "who2008Page": 53
   },
   {
     "id": "ST16",
@@ -607,8 +756,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 16,
+    "who2008Page": 53
   },
   {
     "id": "ST17",
@@ -620,8 +772,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 17,
+    "who2008Page": 54
   },
   {
     "id": "ST18",
@@ -633,8 +788,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 18,
+    "who2008Page": 54
   },
   {
     "id": "ST19",
@@ -646,8 +804,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 19,
+    "who2008Page": 55
   },
   {
     "id": "ST20",
@@ -659,8 +820,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 20,
+    "who2008Page": 55
   },
   {
     "id": "ST21",
@@ -672,8 +836,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 21,
+    "who2008Page": 56
   },
   {
     "id": "ST22",
@@ -685,8 +852,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 22,
+    "who2008Page": 56
   },
   {
     "id": "ST23",
@@ -698,8 +868,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 23,
+    "who2008Page": 57
   },
   {
     "id": "ST24",
@@ -711,8 +884,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 24,
+    "who2008Page": 57
   },
   {
     "id": "ST25",
@@ -724,8 +900,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 25,
+    "who2008Page": 58
   },
   {
     "id": "ST26",
@@ -737,8 +916,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 26,
+    "who2008Page": 58
   },
   {
     "id": "ST27",
@@ -750,8 +932,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 27,
+    "who2008Page": 59
   },
   {
     "id": "ST28",
@@ -763,8 +948,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 28,
+    "who2008Page": 59
   },
   {
     "id": "ST29",
@@ -776,8 +964,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 29,
+    "who2008Page": 60
   },
   {
     "id": "ST30",
@@ -789,8 +980,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 30,
+    "who2008Page": 60
   },
   {
     "id": "ST31",
@@ -802,8 +996,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 31,
+    "who2008Page": 61
   },
   {
     "id": "ST32",
@@ -815,8 +1012,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 32,
+    "who2008Page": 62
   },
   {
     "id": "ST33",
@@ -828,8 +1028,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 33,
+    "who2008Page": 62
   },
   {
     "id": "ST34",
@@ -841,8 +1044,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 34,
+    "who2008Page": 63
   },
   {
     "id": "ST35",
@@ -854,8 +1060,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 35,
+    "who2008Page": 63
   },
   {
     "id": "ST36",
@@ -868,8 +1077,11 @@
     "locationKo": "아래다리 앞쪽에서 ST35와 ST41을 잇는 선 위에 있으며, ST35에서 아래쪽으로 3 B-cun 떨어진 위치로 표준화되어 있다.",
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 36,
+    "who2008Page": 64
   },
   {
     "id": "ST37",
@@ -881,8 +1093,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 37,
+    "who2008Page": 64
   },
   {
     "id": "ST38",
@@ -894,8 +1109,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 38,
+    "who2008Page": 65
   },
   {
     "id": "ST39",
@@ -907,8 +1125,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 39,
+    "who2008Page": 65
   },
   {
     "id": "ST40",
@@ -920,8 +1141,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 40,
+    "who2008Page": 66
   },
   {
     "id": "ST41",
@@ -933,8 +1157,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 41,
+    "who2008Page": 66
   },
   {
     "id": "ST42",
@@ -946,8 +1173,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 42,
+    "who2008Page": 67
   },
   {
     "id": "ST43",
@@ -959,8 +1189,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 43,
+    "who2008Page": 67
   },
   {
     "id": "ST44",
@@ -972,8 +1205,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 44,
+    "who2008Page": 68
   },
   {
     "id": "ST45",
@@ -985,8 +1221,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 45,
+    "who2008Page": 68
   },
   {
     "id": "SP1",
@@ -998,8 +1237,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 1,
+    "who2008Page": 70
   },
   {
     "id": "SP2",
@@ -1011,8 +1253,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 2,
+    "who2008Page": 70
   },
   {
     "id": "SP3",
@@ -1024,8 +1269,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 3,
+    "who2008Page": 71
   },
   {
     "id": "SP4",
@@ -1037,8 +1285,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 4,
+    "who2008Page": 71
   },
   {
     "id": "SP5",
@@ -1050,8 +1301,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 5,
+    "who2008Page": 72
   },
   {
     "id": "SP6",
@@ -1063,8 +1317,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 6,
+    "who2008Page": 72
   },
   {
     "id": "SP7",
@@ -1076,8 +1333,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 7,
+    "who2008Page": 73
   },
   {
     "id": "SP8",
@@ -1089,8 +1349,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 8,
+    "who2008Page": 73
   },
   {
     "id": "SP9",
@@ -1102,8 +1365,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 9,
+    "who2008Page": 74
   },
   {
     "id": "SP10",
@@ -1115,8 +1381,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 10,
+    "who2008Page": 74
   },
   {
     "id": "SP11",
@@ -1128,8 +1397,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 11,
+    "who2008Page": 75
   },
   {
     "id": "SP12",
@@ -1141,8 +1413,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 12,
+    "who2008Page": 75
   },
   {
     "id": "SP13",
@@ -1154,8 +1429,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 13,
+    "who2008Page": 76
   },
   {
     "id": "SP14",
@@ -1167,8 +1445,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 14,
+    "who2008Page": 76
   },
   {
     "id": "SP15",
@@ -1180,8 +1461,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 15,
+    "who2008Page": 77
   },
   {
     "id": "SP16",
@@ -1193,8 +1477,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 16,
+    "who2008Page": 77
   },
   {
     "id": "SP17",
@@ -1206,8 +1493,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 17,
+    "who2008Page": 78
   },
   {
     "id": "SP18",
@@ -1219,8 +1509,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 18,
+    "who2008Page": 78
   },
   {
     "id": "SP19",
@@ -1232,8 +1525,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 19,
+    "who2008Page": 79
   },
   {
     "id": "SP20",
@@ -1245,8 +1541,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 20,
+    "who2008Page": 79
   },
   {
     "id": "SP21",
@@ -1258,8 +1557,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 21,
+    "who2008Page": 80
   },
   {
     "id": "HT1",
@@ -1271,8 +1573,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 1,
+    "who2008Page": 82
   },
   {
     "id": "HT2",
@@ -1284,8 +1589,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 2,
+    "who2008Page": 82
   },
   {
     "id": "HT3",
@@ -1297,8 +1605,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 3,
+    "who2008Page": 83
   },
   {
     "id": "HT4",
@@ -1310,8 +1621,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 4,
+    "who2008Page": 83
   },
   {
     "id": "HT5",
@@ -1323,8 +1637,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 5,
+    "who2008Page": 84
   },
   {
     "id": "HT6",
@@ -1336,8 +1653,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 6,
+    "who2008Page": 84
   },
   {
     "id": "HT7",
@@ -1349,8 +1669,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 7,
+    "who2008Page": 85
   },
   {
     "id": "HT8",
@@ -1362,8 +1685,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 8,
+    "who2008Page": 85
   },
   {
     "id": "HT9",
@@ -1375,8 +1701,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 9,
+    "who2008Page": 86
   },
   {
     "id": "SI1",
@@ -1388,8 +1717,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 1,
+    "who2008Page": 88
   },
   {
     "id": "SI2",
@@ -1401,8 +1733,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 2,
+    "who2008Page": 88
   },
   {
     "id": "SI3",
@@ -1414,8 +1749,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 3,
+    "who2008Page": 89
   },
   {
     "id": "SI4",
@@ -1427,8 +1765,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 4,
+    "who2008Page": 89
   },
   {
     "id": "SI5",
@@ -1440,8 +1781,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 5,
+    "who2008Page": 90
   },
   {
     "id": "SI6",
@@ -1453,8 +1797,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 6,
+    "who2008Page": 90
   },
   {
     "id": "SI7",
@@ -1466,8 +1813,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 7,
+    "who2008Page": 91
   },
   {
     "id": "SI8",
@@ -1479,8 +1829,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 8,
+    "who2008Page": 91
   },
   {
     "id": "SI9",
@@ -1492,8 +1845,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 9,
+    "who2008Page": 92
   },
   {
     "id": "SI10",
@@ -1505,8 +1861,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 10,
+    "who2008Page": 92
   },
   {
     "id": "SI11",
@@ -1518,8 +1877,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 11,
+    "who2008Page": 93
   },
   {
     "id": "SI12",
@@ -1531,8 +1893,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 12,
+    "who2008Page": 93
   },
   {
     "id": "SI13",
@@ -1544,8 +1909,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 13,
+    "who2008Page": 94
   },
   {
     "id": "SI14",
@@ -1557,8 +1925,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 14,
+    "who2008Page": 94
   },
   {
     "id": "SI15",
@@ -1570,8 +1941,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 15,
+    "who2008Page": 95
   },
   {
     "id": "SI16",
@@ -1583,8 +1957,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 16,
+    "who2008Page": 95
   },
   {
     "id": "SI17",
@@ -1596,8 +1973,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 17,
+    "who2008Page": 96
   },
   {
     "id": "SI18",
@@ -1609,8 +1989,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 18,
+    "who2008Page": 96
   },
   {
     "id": "SI19",
@@ -1622,8 +2005,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 19,
+    "who2008Page": 97
   },
   {
     "id": "BL1",
@@ -1635,8 +2021,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 1,
+    "who2008Page": 100
   },
   {
     "id": "BL2",
@@ -1648,8 +2037,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 2,
+    "who2008Page": 100
   },
   {
     "id": "BL3",
@@ -1661,8 +2053,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 3,
+    "who2008Page": 101
   },
   {
     "id": "BL4",
@@ -1674,8 +2069,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 4,
+    "who2008Page": 101
   },
   {
     "id": "BL5",
@@ -1687,8 +2085,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 5,
+    "who2008Page": 102
   },
   {
     "id": "BL6",
@@ -1700,8 +2101,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 6,
+    "who2008Page": 102
   },
   {
     "id": "BL7",
@@ -1713,8 +2117,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 7,
+    "who2008Page": 103
   },
   {
     "id": "BL8",
@@ -1726,8 +2133,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 8,
+    "who2008Page": 103
   },
   {
     "id": "BL9",
@@ -1739,8 +2149,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 9,
+    "who2008Page": 104
   },
   {
     "id": "BL10",
@@ -1752,8 +2165,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 10,
+    "who2008Page": 104
   },
   {
     "id": "BL11",
@@ -1765,8 +2181,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 11,
+    "who2008Page": 105
   },
   {
     "id": "BL12",
@@ -1778,8 +2197,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 12,
+    "who2008Page": 105
   },
   {
     "id": "BL13",
@@ -1791,8 +2213,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 13,
+    "who2008Page": 106
   },
   {
     "id": "BL14",
@@ -1804,8 +2229,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 14,
+    "who2008Page": 106
   },
   {
     "id": "BL15",
@@ -1817,8 +2245,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 15,
+    "who2008Page": 107
   },
   {
     "id": "BL16",
@@ -1830,8 +2261,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 16,
+    "who2008Page": 107
   },
   {
     "id": "BL17",
@@ -1843,8 +2277,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 17,
+    "who2008Page": 108
   },
   {
     "id": "BL18",
@@ -1856,8 +2293,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 18,
+    "who2008Page": 108
   },
   {
     "id": "BL19",
@@ -1869,8 +2309,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 19,
+    "who2008Page": 109
   },
   {
     "id": "BL20",
@@ -1882,8 +2325,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 20,
+    "who2008Page": 109
   },
   {
     "id": "BL21",
@@ -1895,8 +2341,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 21,
+    "who2008Page": 110
   },
   {
     "id": "BL22",
@@ -1908,8 +2357,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 22,
+    "who2008Page": 110
   },
   {
     "id": "BL23",
@@ -1921,8 +2373,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 23,
+    "who2008Page": 111
   },
   {
     "id": "BL24",
@@ -1934,8 +2389,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 24,
+    "who2008Page": 111
   },
   {
     "id": "BL25",
@@ -1947,8 +2405,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 25,
+    "who2008Page": 112
   },
   {
     "id": "BL26",
@@ -1960,8 +2421,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 26,
+    "who2008Page": 112
   },
   {
     "id": "BL27",
@@ -1973,8 +2437,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 27,
+    "who2008Page": 113
   },
   {
     "id": "BL28",
@@ -1986,8 +2453,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 28,
+    "who2008Page": 113
   },
   {
     "id": "BL29",
@@ -1999,8 +2469,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 29,
+    "who2008Page": 114
   },
   {
     "id": "BL30",
@@ -2012,8 +2485,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 30,
+    "who2008Page": 114
   },
   {
     "id": "BL31",
@@ -2025,8 +2501,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 31,
+    "who2008Page": 115
   },
   {
     "id": "BL32",
@@ -2038,8 +2517,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 32,
+    "who2008Page": 115
   },
   {
     "id": "BL33",
@@ -2051,8 +2533,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 33,
+    "who2008Page": 116
   },
   {
     "id": "BL34",
@@ -2064,8 +2549,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 34,
+    "who2008Page": 116
   },
   {
     "id": "BL35",
@@ -2077,8 +2565,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 35,
+    "who2008Page": 117
   },
   {
     "id": "BL36",
@@ -2090,8 +2581,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 36,
+    "who2008Page": 117
   },
   {
     "id": "BL37",
@@ -2103,8 +2597,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 37,
+    "who2008Page": 118
   },
   {
     "id": "BL38",
@@ -2116,8 +2613,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 38,
+    "who2008Page": 118
   },
   {
     "id": "BL39",
@@ -2129,8 +2629,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 39,
+    "who2008Page": 119
   },
   {
     "id": "BL40",
@@ -2143,8 +2646,11 @@
     "locationKo": "무릎 뒤쪽에서 오금주름의 가운데에 위치한다.",
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 40,
+    "who2008Page": 119
   },
   {
     "id": "BL41",
@@ -2156,8 +2662,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 41,
+    "who2008Page": 120
   },
   {
     "id": "BL42",
@@ -2169,8 +2678,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 42,
+    "who2008Page": 120
   },
   {
     "id": "BL43",
@@ -2182,8 +2694,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 43,
+    "who2008Page": 121
   },
   {
     "id": "BL44",
@@ -2195,8 +2710,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 44,
+    "who2008Page": 121
   },
   {
     "id": "BL45",
@@ -2208,8 +2726,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 45,
+    "who2008Page": 122
   },
   {
     "id": "BL46",
@@ -2221,8 +2742,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 46,
+    "who2008Page": 122
   },
   {
     "id": "BL47",
@@ -2234,8 +2758,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 47,
+    "who2008Page": 123
   },
   {
     "id": "BL48",
@@ -2247,8 +2774,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 48,
+    "who2008Page": 123
   },
   {
     "id": "BL49",
@@ -2260,8 +2790,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 49,
+    "who2008Page": 124
   },
   {
     "id": "BL50",
@@ -2273,8 +2806,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 50,
+    "who2008Page": 124
   },
   {
     "id": "BL51",
@@ -2286,8 +2822,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 51,
+    "who2008Page": 125
   },
   {
     "id": "BL52",
@@ -2299,8 +2838,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 52,
+    "who2008Page": 125
   },
   {
     "id": "BL53",
@@ -2312,8 +2854,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 53,
+    "who2008Page": 126
   },
   {
     "id": "BL54",
@@ -2325,8 +2870,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 54,
+    "who2008Page": 126
   },
   {
     "id": "BL55",
@@ -2338,8 +2886,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 55,
+    "who2008Page": 127
   },
   {
     "id": "BL56",
@@ -2351,8 +2902,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 56,
+    "who2008Page": 127
   },
   {
     "id": "BL57",
@@ -2364,8 +2918,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 57,
+    "who2008Page": 128
   },
   {
     "id": "BL58",
@@ -2377,8 +2934,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 58,
+    "who2008Page": 128
   },
   {
     "id": "BL59",
@@ -2390,8 +2950,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 59,
+    "who2008Page": 129
   },
   {
     "id": "BL60",
@@ -2403,8 +2966,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 60,
+    "who2008Page": 129
   },
   {
     "id": "BL61",
@@ -2416,8 +2982,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 61,
+    "who2008Page": 130
   },
   {
     "id": "BL62",
@@ -2429,8 +2998,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 62,
+    "who2008Page": 130
   },
   {
     "id": "BL63",
@@ -2442,8 +3014,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 63,
+    "who2008Page": 131
   },
   {
     "id": "BL64",
@@ -2455,8 +3030,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 64,
+    "who2008Page": 131
   },
   {
     "id": "BL65",
@@ -2468,8 +3046,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 65,
+    "who2008Page": 132
   },
   {
     "id": "BL66",
@@ -2481,8 +3062,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 66,
+    "who2008Page": 132
   },
   {
     "id": "BL67",
@@ -2494,8 +3078,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 67,
+    "who2008Page": 133
   },
   {
     "id": "KI1",
@@ -2507,8 +3094,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 1,
+    "who2008Page": 136
   },
   {
     "id": "KI2",
@@ -2520,8 +3110,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 2,
+    "who2008Page": 136
   },
   {
     "id": "KI3",
@@ -2533,8 +3126,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 3,
+    "who2008Page": 137
   },
   {
     "id": "KI4",
@@ -2546,8 +3142,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 4,
+    "who2008Page": 137
   },
   {
     "id": "KI5",
@@ -2559,8 +3158,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 5,
+    "who2008Page": 138
   },
   {
     "id": "KI6",
@@ -2572,8 +3174,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 6,
+    "who2008Page": 138
   },
   {
     "id": "KI7",
@@ -2585,8 +3190,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 7,
+    "who2008Page": 139
   },
   {
     "id": "KI8",
@@ -2598,8 +3206,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 8,
+    "who2008Page": 139
   },
   {
     "id": "KI9",
@@ -2611,8 +3222,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 9,
+    "who2008Page": 140
   },
   {
     "id": "KI10",
@@ -2624,8 +3238,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 10,
+    "who2008Page": 140
   },
   {
     "id": "KI11",
@@ -2637,8 +3254,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 11,
+    "who2008Page": 141
   },
   {
     "id": "KI12",
@@ -2650,8 +3270,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 12,
+    "who2008Page": 141
   },
   {
     "id": "KI13",
@@ -2663,8 +3286,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 13,
+    "who2008Page": 142
   },
   {
     "id": "KI14",
@@ -2676,8 +3302,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 14,
+    "who2008Page": 142
   },
   {
     "id": "KI15",
@@ -2689,8 +3318,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 15,
+    "who2008Page": 143
   },
   {
     "id": "KI16",
@@ -2702,8 +3334,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 16,
+    "who2008Page": 143
   },
   {
     "id": "KI17",
@@ -2715,8 +3350,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 17,
+    "who2008Page": 144
   },
   {
     "id": "KI18",
@@ -2728,8 +3366,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 18,
+    "who2008Page": 144
   },
   {
     "id": "KI19",
@@ -2741,8 +3382,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 19,
+    "who2008Page": 145
   },
   {
     "id": "KI20",
@@ -2754,8 +3398,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 20,
+    "who2008Page": 145
   },
   {
     "id": "KI21",
@@ -2767,8 +3414,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 21,
+    "who2008Page": 146
   },
   {
     "id": "KI22",
@@ -2780,8 +3430,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 22,
+    "who2008Page": 146
   },
   {
     "id": "KI23",
@@ -2793,8 +3446,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 23,
+    "who2008Page": 147
   },
   {
     "id": "KI24",
@@ -2806,8 +3462,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 24,
+    "who2008Page": 147
   },
   {
     "id": "KI25",
@@ -2819,8 +3478,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 25,
+    "who2008Page": 148
   },
   {
     "id": "KI26",
@@ -2832,8 +3494,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 26,
+    "who2008Page": 148
   },
   {
     "id": "KI27",
@@ -2845,8 +3510,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 27,
+    "who2008Page": 149
   },
   {
     "id": "PC1",
@@ -2858,8 +3526,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 1,
+    "who2008Page": 152
   },
   {
     "id": "PC2",
@@ -2871,8 +3542,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 2,
+    "who2008Page": 152
   },
   {
     "id": "PC3",
@@ -2884,8 +3558,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 3,
+    "who2008Page": 153
   },
   {
     "id": "PC4",
@@ -2897,8 +3574,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 4,
+    "who2008Page": 153
   },
   {
     "id": "PC5",
@@ -2910,8 +3590,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 5,
+    "who2008Page": 154
   },
   {
     "id": "PC6",
@@ -2923,8 +3606,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 6,
+    "who2008Page": 154
   },
   {
     "id": "PC7",
@@ -2936,8 +3622,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 7,
+    "who2008Page": 155
   },
   {
     "id": "PC8",
@@ -2949,8 +3638,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 8,
+    "who2008Page": 155
   },
   {
     "id": "PC9",
@@ -2962,8 +3654,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 9,
+    "who2008Page": 156
   },
   {
     "id": "TE1",
@@ -2975,8 +3670,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 1,
+    "who2008Page": 158
   },
   {
     "id": "TE2",
@@ -2988,8 +3686,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 2,
+    "who2008Page": 158
   },
   {
     "id": "TE3",
@@ -3001,8 +3702,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 3,
+    "who2008Page": 159
   },
   {
     "id": "TE4",
@@ -3014,8 +3718,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 4,
+    "who2008Page": 159
   },
   {
     "id": "TE5",
@@ -3027,8 +3734,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 5,
+    "who2008Page": 160
   },
   {
     "id": "TE6",
@@ -3040,8 +3750,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 6,
+    "who2008Page": 160
   },
   {
     "id": "TE7",
@@ -3053,8 +3766,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 7,
+    "who2008Page": 161
   },
   {
     "id": "TE8",
@@ -3066,8 +3782,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 8,
+    "who2008Page": 161
   },
   {
     "id": "TE9",
@@ -3079,8 +3798,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 9,
+    "who2008Page": 162
   },
   {
     "id": "TE10",
@@ -3092,8 +3814,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 10,
+    "who2008Page": 162
   },
   {
     "id": "TE11",
@@ -3105,8 +3830,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 11,
+    "who2008Page": 163
   },
   {
     "id": "TE12",
@@ -3118,8 +3846,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 12,
+    "who2008Page": 163
   },
   {
     "id": "TE13",
@@ -3131,8 +3862,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 13,
+    "who2008Page": 164
   },
   {
     "id": "TE14",
@@ -3144,8 +3878,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 14,
+    "who2008Page": 164
   },
   {
     "id": "TE15",
@@ -3157,8 +3894,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 15,
+    "who2008Page": 165
   },
   {
     "id": "TE16",
@@ -3170,8 +3910,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 16,
+    "who2008Page": 165
   },
   {
     "id": "TE17",
@@ -3183,8 +3926,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 17,
+    "who2008Page": 166
   },
   {
     "id": "TE18",
@@ -3196,8 +3942,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 18,
+    "who2008Page": 166
   },
   {
     "id": "TE19",
@@ -3209,8 +3958,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 19,
+    "who2008Page": 167
   },
   {
     "id": "TE20",
@@ -3222,8 +3974,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 20,
+    "who2008Page": 167
   },
   {
     "id": "TE21",
@@ -3235,8 +3990,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 21,
+    "who2008Page": 168
   },
   {
     "id": "TE22",
@@ -3248,8 +4006,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 22,
+    "who2008Page": 168
   },
   {
     "id": "TE23",
@@ -3261,8 +4022,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 23,
+    "who2008Page": 169
   },
   {
     "id": "GB1",
@@ -3274,8 +4038,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 1,
+    "who2008Page": 172
   },
   {
     "id": "GB2",
@@ -3287,8 +4054,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 2,
+    "who2008Page": 172
   },
   {
     "id": "GB3",
@@ -3300,8 +4070,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 3,
+    "who2008Page": 173
   },
   {
     "id": "GB4",
@@ -3313,8 +4086,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 4,
+    "who2008Page": 173
   },
   {
     "id": "GB5",
@@ -3326,8 +4102,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 5,
+    "who2008Page": 174
   },
   {
     "id": "GB6",
@@ -3339,8 +4118,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 6,
+    "who2008Page": 174
   },
   {
     "id": "GB7",
@@ -3352,8 +4134,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 7,
+    "who2008Page": 175
   },
   {
     "id": "GB8",
@@ -3365,8 +4150,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 8,
+    "who2008Page": 175
   },
   {
     "id": "GB9",
@@ -3378,8 +4166,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 9,
+    "who2008Page": 176
   },
   {
     "id": "GB10",
@@ -3391,8 +4182,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 10,
+    "who2008Page": 176
   },
   {
     "id": "GB11",
@@ -3404,8 +4198,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 11,
+    "who2008Page": 177
   },
   {
     "id": "GB12",
@@ -3417,8 +4214,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 12,
+    "who2008Page": 177
   },
   {
     "id": "GB13",
@@ -3430,8 +4230,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 13,
+    "who2008Page": 178
   },
   {
     "id": "GB14",
@@ -3443,8 +4246,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 14,
+    "who2008Page": 178
   },
   {
     "id": "GB15",
@@ -3456,8 +4262,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 15,
+    "who2008Page": 179
   },
   {
     "id": "GB16",
@@ -3469,8 +4278,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 16,
+    "who2008Page": 179
   },
   {
     "id": "GB17",
@@ -3482,8 +4294,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 17,
+    "who2008Page": 180
   },
   {
     "id": "GB18",
@@ -3495,8 +4310,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 18,
+    "who2008Page": 180
   },
   {
     "id": "GB19",
@@ -3508,8 +4326,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 19,
+    "who2008Page": 181
   },
   {
     "id": "GB20",
@@ -3521,8 +4342,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 20,
+    "who2008Page": 181
   },
   {
     "id": "GB21",
@@ -3534,8 +4358,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 21,
+    "who2008Page": 182
   },
   {
     "id": "GB22",
@@ -3547,8 +4374,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 22,
+    "who2008Page": 182
   },
   {
     "id": "GB23",
@@ -3560,8 +4390,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 23,
+    "who2008Page": 183
   },
   {
     "id": "GB24",
@@ -3573,8 +4406,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 24,
+    "who2008Page": 183
   },
   {
     "id": "GB25",
@@ -3586,8 +4422,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 25,
+    "who2008Page": 184
   },
   {
     "id": "GB26",
@@ -3599,8 +4438,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 26,
+    "who2008Page": 184
   },
   {
     "id": "GB27",
@@ -3612,8 +4454,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 27,
+    "who2008Page": 185
   },
   {
     "id": "GB28",
@@ -3625,8 +4470,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 28,
+    "who2008Page": 185
   },
   {
     "id": "GB29",
@@ -3638,8 +4486,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 29,
+    "who2008Page": 186
   },
   {
     "id": "GB30",
@@ -3651,8 +4502,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 30,
+    "who2008Page": 186
   },
   {
     "id": "GB31",
@@ -3664,8 +4518,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 31,
+    "who2008Page": 187
   },
   {
     "id": "GB32",
@@ -3677,8 +4534,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 32,
+    "who2008Page": 187
   },
   {
     "id": "GB33",
@@ -3690,8 +4550,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 33,
+    "who2008Page": 188
   },
   {
     "id": "GB34",
@@ -3703,8 +4566,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 34,
+    "who2008Page": 188
   },
   {
     "id": "GB35",
@@ -3716,8 +4582,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 35,
+    "who2008Page": 189
   },
   {
     "id": "GB36",
@@ -3729,8 +4598,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 36,
+    "who2008Page": 189
   },
   {
     "id": "GB37",
@@ -3742,8 +4614,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 37,
+    "who2008Page": 190
   },
   {
     "id": "GB38",
@@ -3755,8 +4630,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 38,
+    "who2008Page": 190
   },
   {
     "id": "GB39",
@@ -3768,8 +4646,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 39,
+    "who2008Page": 191
   },
   {
     "id": "GB40",
@@ -3781,8 +4662,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 40,
+    "who2008Page": 191
   },
   {
     "id": "GB41",
@@ -3794,8 +4678,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 41,
+    "who2008Page": 192
   },
   {
     "id": "GB42",
@@ -3807,8 +4694,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 42,
+    "who2008Page": 192
   },
   {
     "id": "GB43",
@@ -3820,8 +4710,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 43,
+    "who2008Page": 193
   },
   {
     "id": "GB44",
@@ -3833,8 +4726,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 44,
+    "who2008Page": 193
   },
   {
     "id": "LR1",
@@ -3846,8 +4742,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 1,
+    "who2008Page": 196
   },
   {
     "id": "LR2",
@@ -3859,8 +4758,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 2,
+    "who2008Page": 196
   },
   {
     "id": "LR3",
@@ -3872,8 +4774,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 3,
+    "who2008Page": 197
   },
   {
     "id": "LR4",
@@ -3885,8 +4790,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 4,
+    "who2008Page": 197
   },
   {
     "id": "LR5",
@@ -3898,8 +4806,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 5,
+    "who2008Page": 198
   },
   {
     "id": "LR6",
@@ -3911,8 +4822,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 6,
+    "who2008Page": 198
   },
   {
     "id": "LR7",
@@ -3924,8 +4838,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 7,
+    "who2008Page": 199
   },
   {
     "id": "LR8",
@@ -3937,8 +4854,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 8,
+    "who2008Page": 199
   },
   {
     "id": "LR9",
@@ -3950,8 +4870,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 9,
+    "who2008Page": 200
   },
   {
     "id": "LR10",
@@ -3963,8 +4886,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 10,
+    "who2008Page": 200
   },
   {
     "id": "LR11",
@@ -3976,8 +4902,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 11,
+    "who2008Page": 201
   },
   {
     "id": "LR12",
@@ -3989,8 +4918,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 12,
+    "who2008Page": 201
   },
   {
     "id": "LR13",
@@ -4002,8 +4934,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 13,
+    "who2008Page": 202
   },
   {
     "id": "LR14",
@@ -4015,8 +4950,11 @@
     },
     "laterality": "bilateral",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 14,
+    "who2008Page": 202
   },
   {
     "id": "GV1",
@@ -4028,8 +4966,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 1,
+    "who2008Page": 204
   },
   {
     "id": "GV2",
@@ -4041,8 +4982,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 2,
+    "who2008Page": 204
   },
   {
     "id": "GV3",
@@ -4054,8 +4998,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 3,
+    "who2008Page": 205
   },
   {
     "id": "GV4",
@@ -4067,8 +5014,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 4,
+    "who2008Page": 205
   },
   {
     "id": "GV5",
@@ -4080,8 +5030,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 5,
+    "who2008Page": 206
   },
   {
     "id": "GV6",
@@ -4093,8 +5046,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 6,
+    "who2008Page": 206
   },
   {
     "id": "GV7",
@@ -4106,8 +5062,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 7,
+    "who2008Page": 207
   },
   {
     "id": "GV8",
@@ -4119,8 +5078,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 8,
+    "who2008Page": 207
   },
   {
     "id": "GV9",
@@ -4132,8 +5094,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 9,
+    "who2008Page": 208
   },
   {
     "id": "GV10",
@@ -4145,8 +5110,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 10,
+    "who2008Page": 208
   },
   {
     "id": "GV11",
@@ -4158,8 +5126,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 11,
+    "who2008Page": 209
   },
   {
     "id": "GV12",
@@ -4171,8 +5142,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 12,
+    "who2008Page": 209
   },
   {
     "id": "GV13",
@@ -4184,8 +5158,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 13,
+    "who2008Page": 210
   },
   {
     "id": "GV14",
@@ -4197,8 +5174,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 14,
+    "who2008Page": 210
   },
   {
     "id": "GV15",
@@ -4210,8 +5190,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 15,
+    "who2008Page": 211
   },
   {
     "id": "GV16",
@@ -4223,8 +5206,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 16,
+    "who2008Page": 211
   },
   {
     "id": "GV17",
@@ -4236,8 +5222,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 17,
+    "who2008Page": 212
   },
   {
     "id": "GV18",
@@ -4249,8 +5238,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 18,
+    "who2008Page": 212
   },
   {
     "id": "GV19",
@@ -4262,8 +5254,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 19,
+    "who2008Page": 213
   },
   {
     "id": "GV20",
@@ -4275,8 +5270,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 20,
+    "who2008Page": 213
   },
   {
     "id": "GV21",
@@ -4288,8 +5286,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 21,
+    "who2008Page": 214
   },
   {
     "id": "GV22",
@@ -4301,8 +5302,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 22,
+    "who2008Page": 214
   },
   {
     "id": "GV23",
@@ -4314,8 +5318,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 23,
+    "who2008Page": 215
   },
   {
     "id": "GV24",
@@ -4327,8 +5334,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 24,
+    "who2008Page": 215
   },
   {
     "id": "GV25",
@@ -4340,8 +5350,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 25,
+    "who2008Page": 216
   },
   {
     "id": "GV26",
@@ -4353,8 +5366,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 26,
+    "who2008Page": 216
   },
   {
     "id": "GV27",
@@ -4366,8 +5382,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 27,
+    "who2008Page": 217
   },
   {
     "id": "GV28",
@@ -4379,8 +5398,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 28,
+    "who2008Page": 217
   },
   {
     "id": "CV1",
@@ -4392,8 +5414,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 1,
+    "who2008Page": 220
   },
   {
     "id": "CV2",
@@ -4405,8 +5430,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 2,
+    "who2008Page": 220
   },
   {
     "id": "CV3",
@@ -4418,8 +5446,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 3,
+    "who2008Page": 221
   },
   {
     "id": "CV4",
@@ -4431,8 +5462,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 4,
+    "who2008Page": 221
   },
   {
     "id": "CV5",
@@ -4444,8 +5478,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 5,
+    "who2008Page": 222
   },
   {
     "id": "CV6",
@@ -4457,8 +5494,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 6,
+    "who2008Page": 222
   },
   {
     "id": "CV7",
@@ -4470,8 +5510,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 7,
+    "who2008Page": 223
   },
   {
     "id": "CV8",
@@ -4483,8 +5526,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 8,
+    "who2008Page": 223
   },
   {
     "id": "CV9",
@@ -4496,8 +5542,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 9,
+    "who2008Page": 224
   },
   {
     "id": "CV10",
@@ -4509,8 +5558,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 10,
+    "who2008Page": 224
   },
   {
     "id": "CV11",
@@ -4522,8 +5574,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 11,
+    "who2008Page": 225
   },
   {
     "id": "CV12",
@@ -4535,8 +5590,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 12,
+    "who2008Page": 225
   },
   {
     "id": "CV13",
@@ -4548,8 +5606,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 13,
+    "who2008Page": 226
   },
   {
     "id": "CV14",
@@ -4561,8 +5622,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 14,
+    "who2008Page": 226
   },
   {
     "id": "CV15",
@@ -4574,8 +5638,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 15,
+    "who2008Page": 227
   },
   {
     "id": "CV16",
@@ -4587,8 +5654,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 16,
+    "who2008Page": 227
   },
   {
     "id": "CV17",
@@ -4600,8 +5670,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 17,
+    "who2008Page": 228
   },
   {
     "id": "CV18",
@@ -4613,8 +5686,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 18,
+    "who2008Page": 228
   },
   {
     "id": "CV19",
@@ -4626,8 +5702,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 19,
+    "who2008Page": 229
   },
   {
     "id": "CV20",
@@ -4639,8 +5718,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 20,
+    "who2008Page": 229
   },
   {
     "id": "CV21",
@@ -4652,8 +5734,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 21,
+    "who2008Page": 230
   },
   {
     "id": "CV22",
@@ -4665,8 +5750,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 22,
+    "who2008Page": 230
   },
   {
     "id": "CV23",
@@ -4678,8 +5766,11 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 23,
+    "who2008Page": 231
   },
   {
     "id": "CV24",
@@ -4691,7 +5782,10 @@
     },
     "laterality": "midline",
     "sourceIds": [
-      "WHO_ACUPOINT_NOMENCLATURE_1993"
-    ]
+      "WHO_ACUPOINT_NOMENCLATURE_1993",
+      "WHO_ACUPOINT_2008"
+    ],
+    "number": 24,
+    "who2008Page": 231
   }
 ]
