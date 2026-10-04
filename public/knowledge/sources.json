@@ -1,0 +1,12 @@
+{
+  "BODY_PARTS_3D_4": {
+    "id": "BODY_PARTS_3D_4",
+    "title": "BodyParts3D 4.0",
+    "note": "Source anatomy and concept identifiers used by the existing atlas."
+  },
+  "KO_ANATOMY_PILOT": {
+    "id": "KO_ANATOMY_PILOT",
+    "title": "Seungho Atlas Korean anatomy localization pilot",
+    "note": "Pilot terminology and educational descriptions. Review against the project's chosen Korean anatomical terminology standard before full-scale rollout."
+  }
+}
