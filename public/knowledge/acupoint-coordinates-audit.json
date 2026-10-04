@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T12:04:50.720Z",
+  "generatedAt": "2026-10-04T12:09:50.030Z",
   "logicalAcupoints": 361,
   "physicalCoordinates": 670,
   "expectedPhysicalCoordinates": 670,
@@ -15,7 +15,7 @@
   },
   "projectionDistance": {
     "max": 0.2075,
-    "mean": 0.039936865671641814
+    "mean": 0.039915671641791065
   },
   "spatialValidation": {
     "regionConstrained": true,

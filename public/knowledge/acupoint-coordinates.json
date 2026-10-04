@@ -1,7 +1,7 @@
 {
   "version": 1,
   "model": "BodyParts3D-4.0",
-  "generatedAt": "2026-10-04T12:04:50.715Z",
+  "generatedAt": "2026-10-04T12:09:50.026Z",
   "coordinateFrame": {
     "source": "native BodyParts3D 4.0 atlas coordinates",
     "axes": {
@@ -28565,9 +28565,9 @@
       "acupointId": "GB42",
       "side": "left",
       "position": [
-        0.1304,
-        0.0487,
-        0.0264
+        0.1394,
+        0.0378,
+        0.0401
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -28576,28 +28576,28 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0257,
+        "projectionDistance": 0.0161,
         "projectionDelta": [
-          -0.0162,
+          -0.01,
           0,
-          -0.0199
+          -0.0126
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.1466,
-          0.0487,
-          0.0463
+          0.1494,
+          0.0378,
+          0.0527
         ],
         "relationCount": 3,
         "specificLandmarkCount": 2,
         "whoConstraintCount": 8,
         "whoTextLandmarkCount": 2,
-        "reviewedException": "reviewed-GB42-lateral-to-ST43",
+        "reviewedException": "reviewed-GB42-between-GB41-GB43",
         "landmarkPostValidation": {
           "status": "pass",
           "checked": 2,
-          "maxDistance": 0.0104,
+          "maxDistance": 0,
           "issues": []
         },
         "topologyValidation": {
@@ -28614,9 +28614,9 @@
       "acupointId": "GB42",
       "side": "right",
       "position": [
-        -0.1313,
-        0.0487,
-        0.0283
+        -0.141,
+        0.0379,
+        0.034
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -28625,28 +28625,28 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0191,
+        "projectionDistance": 0.019,
         "projectionDelta": [
-          0.0088,
+          0.0098,
           0,
-          -0.0169
+          -0.0163
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.1401,
-          0.0487,
-          0.0452
+          -0.1508,
+          0.0379,
+          0.0504
         ],
         "relationCount": 3,
         "specificLandmarkCount": 2,
         "whoConstraintCount": 8,
         "whoTextLandmarkCount": 2,
-        "reviewedException": "reviewed-GB42-lateral-to-ST43",
+        "reviewedException": "reviewed-GB42-between-GB41-GB43",
         "landmarkPostValidation": {
           "status": "pass",
           "checked": 2,
-          "maxDistance": 0.0105,
+          "maxDistance": 0,
           "issues": []
         },
         "topologyValidation": {
@@ -28759,9 +28759,9 @@
       "acupointId": "GB44",
       "side": "left",
       "position": [
-        0.1745,
-        0.0084,
-        0.086
+        0.173,
+        0.0144,
+        0.078
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -28770,18 +28770,18 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0117,
+        "projectionDistance": 0.0091,
         "projectionDelta": [
-          -0.0103,
+          -0.0069,
           0,
-          -0.0055
+          -0.0059
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.1848,
-          0.0084,
-          0.0915
+          0.1799,
+          0.0144,
+          0.084
         ],
         "relationCount": 1,
         "specificLandmarkCount": 0,
@@ -28808,9 +28808,9 @@
       "acupointId": "GB44",
       "side": "right",
       "position": [
-        -0.1761,
-        0.0086,
-        0.0844
+        -0.174,
+        0.0145,
+        0.0791
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -28819,18 +28819,18 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0107,
+        "projectionDistance": 0.0088,
         "projectionDelta": [
-          0.0102,
+          0.007,
           0,
-          -0.0031
+          -0.0052
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.1863,
-          0.0086,
-          0.0875
+          -0.181,
+          0.0145,
+          0.0844
         ],
         "relationCount": 1,
         "specificLandmarkCount": 0,

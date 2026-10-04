@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T12:04:50.862Z",
+  "generatedAt": "2026-10-04T12:09:50.114Z",
   "scope": "Focused visual/anatomical exception review: four formerly low-confidence acupoints plus seven formerly near-duplicate clusters.",
   "coordinateModel": "BodyParts3D-4.0",
   "reviewedLogicalAcupoints": 18,
@@ -193,18 +193,18 @@
         "GB42"
       ],
       "expected": "GB42(4-5 발허리뼈 사이)가 ST43(2-3 사이)보다 가쪽이어야 한다.",
-      "status": "review-required",
+      "status": "pass",
       "surfaceAndLaterality": true,
-      "directionalConstraint": false,
+      "directionalConstraint": true,
       "separationThreshold": 0.0188,
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.0455
+          "distance": 0.0301
         },
         {
           "side": "right",
-          "distance": 0.0488
+          "distance": 0.0432
         }
       ],
       "confidence": [
@@ -227,12 +227,12 @@
         {
           "id": "GB42",
           "side": "left",
-          "distance": 0.0257
+          "distance": 0.0161
         },
         {
           "id": "GB42",
           "side": "right",
-          "distance": 0.0191
+          "distance": 0.019
         }
       ],
       "caveat": null
