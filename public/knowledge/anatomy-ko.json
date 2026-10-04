@@ -134,24 +134,24 @@
   },
   "FMA3845": {
     "sourceNameEn": "septal branch of right posterior interventricular artery",
-    "unresolvedTokens": [
-      "septal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른뒤심실사이동맥의 사이막가지",
+    "legacyKo": "우후심실간동맥 중격지",
+    "hanja": "右後心室間動脈中隔枝"
   },
   "FMA3847": {
     "sourceNameEn": "first septal branch of right posterior interventricular artery",
-    "unresolvedTokens": [
-      "septal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른뒤심실사이동맥의 첫째 사이막가지",
+    "legacyKo": "우후심실간동맥 제1중격지",
+    "hanja": "右後心室間動脈第一中隔枝"
   },
   "FMA3848": {
     "sourceNameEn": "second septal branch of right posterior interventricular artery",
-    "unresolvedTokens": [
-      "septal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른뒤심실사이동맥의 둘째 사이막가지",
+    "legacyKo": "우후심실간동맥 제2중격지",
+    "hanja": "右後心室間動脈第二中隔枝"
   },
   "FMA3855": {
     "nameKo": "왼관상동맥줄기",
@@ -162,10 +162,10 @@
   },
   "FMA3860": {
     "sourceNameEn": "diagonal branch of anterior descending branch of left coronary artery",
-    "unresolvedTokens": [
-      "diagonal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼관상동맥 앞내림가지의 대각가지",
+    "legacyKo": "좌관상동맥 전하행지 대각지",
+    "hanja": "左冠狀動脈前下行枝對角枝"
   },
   "FMA3868": {
     "sourceNameEn": "conus branch of anterior interventricular branch of left coronary artery",
@@ -204,10 +204,10 @@
   },
   "FMA3892": {
     "sourceNameEn": "septal branch of anterior interventricular artery",
-    "unresolvedTokens": [
-      "septal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "앞심실사이동맥의 사이막가지",
+    "legacyKo": "전심실간동맥 중격지",
+    "hanja": "前心室間動脈中隔枝"
   },
   "FMA3895": {
     "nameKo": "왼관상동맥휘돌이가지",
@@ -2559,10 +2559,10 @@
   },
   "FMA11337": {
     "sourceNameEn": "zone of continuity",
-    "unresolvedTokens": [
-      "continuity"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "연속부위",
+    "legacyKo": "연속영역",
+    "hanja": "連續領域"
   },
   "FMA11338": {
     "sourceNameEn": "ileocecal junction",
@@ -3526,10 +3526,10 @@
   },
   "FMA14294": {
     "sourceNameEn": "tributary of azygos vein",
-    "unresolvedTokens": [
-      "azygos"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "홀정맥의 지류",
+    "legacyKo": "기정맥 지류",
+    "hanja": "奇靜脈支流"
   },
   "FMA14309": {
     "nameKo": "끝분절정맥아분절부분",
@@ -3547,10 +3547,10 @@
   },
   "FMA14317": {
     "sourceNameEn": "tributary of external jugular vein",
-    "unresolvedTokens": [
-      "jugular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "바깥목정맥의 지류",
+    "legacyKo": "외경정맥 지류",
+    "hanja": "外頸靜脈支流"
   },
   "FMA14319": {
     "sourceNameEn": "suprascapular vein",
@@ -4086,10 +4086,10 @@
   },
   "FMA14820": {
     "sourceNameEn": "ascending branch of inferior branch of ileocolic artery",
-    "unresolvedTokens": [
-      "ileocolic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "돌막창자동맥 아래가지의 오름가지",
+    "legacyKo": "회결장동맥 하행지의 상행지",
+    "hanja": "回結腸動脈下枝上行枝"
   },
   "FMA14821": {
     "sourceNameEn": "branch of ileocolic artery",
@@ -4100,10 +4100,10 @@
   },
   "FMA14824": {
     "sourceNameEn": "marginal colic artery",
-    "unresolvedTokens": [
-      "marginal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "결장가장자리동맥",
+    "legacyKo": "결장변연동맥",
+    "hanja": "結腸邊緣動脈"
   },
   "FMA14825": {
     "nameKo": "아래창자간막동맥가지줄기",
@@ -4226,10 +4226,10 @@
   },
   "FMA15387": {
     "sourceNameEn": "tributary of splenic vein",
-    "unresolvedTokens": [
-      "splenic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "지라정맥의 지류",
+    "legacyKo": "비정맥 지류",
+    "hanja": "脾靜脈支流"
   },
   "FMA15390": {
     "sourceNameEn": "left gastroepiploic vein",
@@ -7199,10 +7199,10 @@
   },
   "FMA22917": {
     "sourceNameEn": "tributary of venous anastomosis",
-    "unresolvedTokens": [
-      "anastomosis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "정맥문합의 지류",
+    "legacyKo": "정맥문합 지류",
+    "hanja": "靜脈吻合支流"
   },
   "FMA22919": {
     "nameKo": "손바닥손허리정맥",
@@ -12932,24 +12932,24 @@
   },
   "FMA50119": {
     "sourceNameEn": "branch of anterior choroidal artery to posterior limb of internal capsule",
-    "unresolvedTokens": [
-      "to"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "앞맥락동맥에서 속섬유막 뒤다리로 가는 가지",
+    "legacyKo": "전맥락동맥의 내포후각지",
+    "hanja": "前脈絡動脈內包後脚枝"
   },
   "FMA50146": {
     "sourceNameEn": "branch of right anterior choroidal artery to posterior limb of right internal capsule",
-    "unresolvedTokens": [
-      "to"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른앞맥락동맥에서 오른속섬유막 뒤다리로 가는 가지",
+    "legacyKo": "우전맥락동맥의 우내포후각지",
+    "hanja": "右前脈絡動脈右內包後脚枝"
   },
   "FMA50147": {
     "sourceNameEn": "branch of left anterior choroidal artery to posterior limb of left internal capsule",
-    "unresolvedTokens": [
-      "to"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼앞맥락동맥에서 왼속섬유막 뒤다리로 가는 가지",
+    "legacyKo": "좌전맥락동맥의 좌내포후각지",
+    "hanja": "左前脈絡動脈左內包後脚枝"
   },
   "FMA50168": {
     "nameKo": "뒤교통동맥가지",
@@ -13142,10 +13142,10 @@
   },
   "FMA50365": {
     "sourceNameEn": "sphenoid part of middle cerebral artery",
-    "unresolvedTokens": [
-      "sphenoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "중간대뇌동맥 나비뼈부분",
+    "legacyKo": "중대뇌동맥 접형부",
+    "hanja": "中大腦動脈蝶形部"
   },
   "FMA50366": {
     "sourceNameEn": "sphenoid part of right middle cerebral artery",
@@ -13156,17 +13156,17 @@
   },
   "FMA50367": {
     "sourceNameEn": "sphenoid part of left middle cerebral artery",
-    "unresolvedTokens": [
-      "sphenoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼중간대뇌동맥 나비뼈부분",
+    "legacyKo": "좌중대뇌동맥 접형부",
+    "hanja": "左中大腦動脈蝶形部"
   },
   "FMA50368": {
     "sourceNameEn": "insular part of middle cerebral artery",
-    "unresolvedTokens": [
-      "insular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "중간대뇌동맥 섬부분",
+    "legacyKo": "중대뇌동맥 도부",
+    "hanja": "中大腦動脈島部"
   },
   "FMA50369": {
     "sourceNameEn": "insular part of right middle cerebral artery",
@@ -13177,10 +13177,10 @@
   },
   "FMA50370": {
     "sourceNameEn": "insular part of left middle cerebral artery",
-    "unresolvedTokens": [
-      "insular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼중간대뇌동맥 섬부분",
+    "legacyKo": "좌중대뇌동맥 도부",
+    "hanja": "左中大腦動脈島部"
   },
   "FMA50376": {
     "sourceNameEn": "anterolateral central branch of middle cerebral artery",
@@ -13198,10 +13198,10 @@
   },
   "FMA50378": {
     "sourceNameEn": "anterolateral central branch of left middle cerebral artery",
-    "unresolvedTokens": [
-      "anterolateral"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼중간대뇌동맥 앞가쪽중심가지",
+    "legacyKo": "좌중대뇌동맥 전외측중앙지",
+    "hanja": "左中大腦動脈前外側中央枝"
   },
   "FMA50379": {
     "sourceNameEn": "polar temporal artery",
@@ -13261,24 +13261,24 @@
   },
   "FMA50428": {
     "sourceNameEn": "hypothalamic branch of right posterior communicating artery",
-    "unresolvedTokens": [
-      "hypothalamic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른뒤교통동맥의 시상하부가지",
+    "legacyKo": "우후교통동맥 시상하부지",
+    "hanja": "右後交通動脈視床下部枝"
   },
   "FMA50429": {
     "sourceNameEn": "hypothalamic branch of left posterior communicating artery",
-    "unresolvedTokens": [
-      "hypothalamic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼뒤교통동맥의 시상하부가지",
+    "legacyKo": "좌후교통동맥 시상하부지",
+    "hanja": "左後交通動脈視床下部枝"
   },
   "FMA50436": {
     "sourceNameEn": "superior terminal branch of middle cerebral artery",
-    "unresolvedTokens": [
-      "terminal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "중간대뇌동맥 위끝가지",
+    "legacyKo": "중대뇌동맥 상종말지",
+    "hanja": "中大腦動脈上終末枝"
   },
   "FMA50437": {
     "sourceNameEn": "prefrontal artery",
@@ -13296,10 +13296,10 @@
   },
   "FMA50439": {
     "sourceNameEn": "inferior terminal branch of middle cerebral artery",
-    "unresolvedTokens": [
-      "terminal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "중간대뇌동맥 아래끝가지",
+    "legacyKo": "중대뇌동맥 하종말지",
+    "hanja": "中大腦動脈下終末枝"
   },
   "FMA50442": {
     "sourceNameEn": "lateral frontobasal artery",
@@ -13387,10 +13387,10 @@
   },
   "FMA50474": {
     "sourceNameEn": "temporo-occipital branch of left middle cerebral artery",
-    "unresolvedTokens": [
-      "temporo"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼중간대뇌동맥 관자뒤통수가지",
+    "legacyKo": "좌중대뇌동맥 측두후두지",
+    "hanja": "左中大腦動脈側頭後頭枝"
   },
   "FMA50475": {
     "sourceNameEn": "branch of middle cerebral artery to angular gyrus",
@@ -13408,11 +13408,10 @@
   },
   "FMA50477": {
     "sourceNameEn": "branch of left middle cerebral artery to left angular gyrus",
-    "unresolvedTokens": [
-      "to",
-      "angular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼중간대뇌동맥에서 왼모이랑으로 가는 가지",
+    "legacyKo": "좌중대뇌동맥 좌각회지",
+    "hanja": "左中大腦動脈左角回枝"
   },
   "FMA50478": {
     "sourceNameEn": "left prefrontal artery",
@@ -13703,17 +13702,17 @@
   },
   "FMA50590": {
     "sourceNameEn": "precommunicating part of posterior cerebral artery",
-    "unresolvedTokens": [
-      "precommunicating"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뒤대뇌동맥 교통앞부분",
+    "legacyKo": "후대뇌동맥 교통전부",
+    "hanja": "後大腦動脈交通前部"
   },
   "FMA50591": {
     "sourceNameEn": "postcommunicating part of posterior cerebral artery",
-    "unresolvedTokens": [
-      "postcommunicating"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뒤대뇌동맥 교통뒤부분",
+    "legacyKo": "후대뇌동맥 교통후부",
+    "hanja": "後大腦動脈交通後部"
   },
   "FMA50624": {
     "sourceNameEn": "thalamoperforating artery",
@@ -15173,10 +15172,10 @@
   },
   "FMA55677": {
     "sourceNameEn": "hollow tree organ",
-    "unresolvedTokens": [
-      "hollow"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "속빈 나무형 기관",
+    "legacyKo": "중공 수지상 기관",
+    "hanja": "中空樹枝狀器官"
   },
   "FMA55680": {
     "nameKo": "오른위가쪽이차앞니치아",
@@ -16505,17 +16504,17 @@
   },
   "FMA62506": {
     "sourceNameEn": "dorsal venous network of right hand",
-    "unresolvedTokens": [
-      "network"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른손등정맥그물",
+    "legacyKo": "우수배정맥망",
+    "hanja": "右手背靜脈網"
   },
   "FMA62507": {
     "sourceNameEn": "dorsal venous network of left hand",
-    "unresolvedTokens": [
-      "network"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼손등정맥그물",
+    "legacyKo": "좌수배정맥망",
+    "hanja": "左手背靜脈網"
   },
   "FMA62512": {
     "nameKo": "온몸정맥줄기",
@@ -16568,10 +16567,10 @@
   },
   "FMA63822": {
     "sourceNameEn": "posterior intercostal arteries",
-    "unresolvedTokens": [
-      "arteries"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뒤갈비사이동맥들",
+    "legacyKo": "후늑간동맥군",
+    "hanja": "後肋間動脈群"
   },
   "FMA64796": {
     "sourceNameEn": "region of serous membrane",
@@ -18297,17 +18296,17 @@
   },
   "FMA70800": {
     "sourceNameEn": "set of dorsal metacarpal arteries",
-    "unresolvedTokens": [
-      "arteries"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "손등쪽손허리동맥 집합",
+    "legacyKo": "수배측중수동맥군",
+    "hanja": "手背側中手動脈群"
   },
   "FMA70801": {
     "sourceNameEn": "set of dorsal digital arteries",
-    "unresolvedTokens": [
-      "arteries"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "손등쪽손가락동맥 집합",
+    "legacyKo": "수배측지동맥군",
+    "hanja": "手背側指動脈群"
   },
   "FMA70815": {
     "sourceNameEn": "set of perforating arteries",
@@ -18318,31 +18317,31 @@
   },
   "FMA70821": {
     "sourceNameEn": "set of common plantar digital arteries",
-    "unresolvedTokens": [
-      "arteries"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "온발바닥쪽발가락동맥 집합",
+    "legacyKo": "총족저지동맥군",
+    "hanja": "總足底趾動脈群"
   },
   "FMA70839": {
     "sourceNameEn": "set of anterior intercostal veins",
-    "unresolvedTokens": [
-      "veins"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "앞갈비사이정맥 집합",
+    "legacyKo": "전늑간정맥군",
+    "hanja": "前肋間靜脈群"
   },
   "FMA70917": {
     "sourceNameEn": "set of dorsal digital veins",
-    "unresolvedTokens": [
-      "veins"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "손등쪽손가락정맥 집합",
+    "legacyKo": "수배측지정맥군",
+    "hanja": "手背側指靜脈群"
   },
   "FMA70919": {
     "sourceNameEn": "set of plantar digital veins",
-    "unresolvedTokens": [
-      "veins"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "발바닥쪽발가락정맥 집합",
+    "legacyKo": "족저지정맥군",
+    "hanja": "足底趾靜脈群"
   },
   "FMA70922": {
     "sourceNameEn": "set of perforating veins",
@@ -18509,18 +18508,17 @@
   },
   "FMA71502": {
     "sourceNameEn": "set of posterior temporal branches of lateral occipital artery",
-    "unresolvedTokens": [
-      "branches"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가쪽뒤통수동맥의 뒤관자가지 집합",
+    "legacyKo": "외측후두동맥 후측두지군",
+    "hanja": "外側後頭動脈後側頭枝群"
   },
   "FMA71537": {
     "sourceNameEn": "set of oesophageal branches of thoracic aorta",
-    "unresolvedTokens": [
-      "oesophageal",
-      "branches"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가슴대동맥의 식도가지 집합",
+    "legacyKo": "흉대동맥 식도지군",
+    "hanja": "胸大動脈食道枝群"
   },
   "FMA71562": {
     "sourceNameEn": "set of calcaneal branches of posterior tibial artery",
@@ -18531,10 +18529,10 @@
   },
   "FMA71564": {
     "sourceNameEn": "set of plantar digital arteries proper",
-    "unresolvedTokens": [
-      "arteries"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "고유발바닥쪽발가락동맥 집합",
+    "legacyKo": "고유족저지동맥군",
+    "hanja": "固有足底趾動脈群"
   },
   "FMA71708": {
     "nameKo": "오른간동맥오른엽가지",
@@ -19300,24 +19298,24 @@
   },
   "FMA76127": {
     "sourceNameEn": "trunk of inferior terminal branch of middle cerebral artery",
-    "unresolvedTokens": [
-      "terminal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "중간대뇌동맥 아래끝가지의 줄기",
+    "legacyKo": "중대뇌동맥 하종말지간",
+    "hanja": "中大腦動脈下終末枝幹"
   },
   "FMA76128": {
     "sourceNameEn": "trunk of inferior terminal branch of right middle cerebral artery",
-    "unresolvedTokens": [
-      "terminal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른중간대뇌동맥 아래끝가지의 줄기",
+    "legacyKo": "우중대뇌동맥 하종말지간",
+    "hanja": "右中大腦動脈下終末枝幹"
   },
   "FMA76129": {
     "sourceNameEn": "trunk of inferior terminal branch of left middle cerebral artery",
-    "unresolvedTokens": [
-      "terminal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼중간대뇌동맥 아래끝가지의 줄기",
+    "legacyKo": "좌중대뇌동맥 하종말지간",
+    "hanja": "左中大腦動脈下終末枝幹"
   },
   "FMA76259": {
     "nameKo": "척추동맥가지",
@@ -19384,10 +19382,10 @@
   },
   "FMA76998": {
     "sourceNameEn": "supreme intercostal artery",
-    "unresolvedTokens": [
-      "supreme"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "최상갈비사이동맥",
+    "legacyKo": "최상늑간동맥",
+    "hanja": "最上肋間動脈"
   },
   "FMA77140": {
     "nameKo": "자쪽되돌이동맥",
@@ -19531,19 +19529,17 @@
   },
   "FMA78048": {
     "sourceNameEn": "subdivision of superior vena caval tree",
-    "unresolvedTokens": [
-      "vena",
-      "caval"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "위대정맥나무 세부분",
+    "legacyKo": "상대정맥수 분할",
+    "hanja": "上大靜脈樹分割"
   },
   "FMA78049": {
     "sourceNameEn": "subdivision of inferior vena caval tree",
-    "unresolvedTokens": [
-      "vena",
-      "caval"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "아래대정맥나무 세부분",
+    "legacyKo": "하대정맥수 분할",
+    "hanja": "下大靜脈樹分割"
   },
   "FMA78121": {
     "sourceNameEn": "superior phrenic vein",
@@ -19561,10 +19557,10 @@
   },
   "FMA78207": {
     "sourceNameEn": "tributary of basilic vein",
-    "unresolvedTokens": [
-      "basilic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "자쪽피부정맥의 지류",
+    "legacyKo": "척측피정맥 지류",
+    "hanja": "尺側皮靜脈支流"
   },
   "FMA78447": {
     "nameKo": "뇌심실계통부위",
@@ -19624,10 +19620,10 @@
   },
   "FMA78562": {
     "sourceNameEn": "set of organ regions",
-    "unresolvedTokens": [
-      "regions"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "기관부위 집합",
+    "legacyKo": "기관영역군",
+    "hanja": "器官領域群"
   },
   "FMA78590": {
     "sourceNameEn": "set of heterogeneous clusters",
@@ -19646,10 +19642,10 @@
   },
   "FMA79631": {
     "sourceNameEn": "branch of sphenoid part of middle cerebral artery",
-    "unresolvedTokens": [
-      "sphenoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "중간대뇌동맥 나비뼈부분의 가지",
+    "legacyKo": "중대뇌동맥 접형부지",
+    "hanja": "中大腦動脈蝶形部枝"
   },
   "FMA79658": {
     "nameKo": "등쪽어깨뼈동맥",
@@ -20390,10 +20386,10 @@
   },
   "FMA228667": {
     "sourceNameEn": "set of organ parts",
-    "unresolvedTokens": [
-      "parts"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "기관부분 집합",
+    "legacyKo": "기관부군",
+    "hanja": "器官部群"
   },
   "FMA230984": {
     "nameKo": "새끼발가락중간마디뼈",
@@ -20957,10 +20953,10 @@
   },
   "FMA7372": {
     "sourceNameEn": "apicoposterior bronchopulmonary segment",
-    "unresolvedTokens": [
-      "apicoposterior"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "꼭대기뒤 기관지허파구역",
+    "legacyKo": "첨후 기관지폐분절",
+    "hanja": "尖後氣管支肺分節"
   },
   "FMA7373": {
     "nameKo": "왼앞기관지허파구역",
@@ -23502,10 +23498,10 @@
   },
   "FMA68659": {
     "sourceNameEn": "apicoposterior division of right upper lobar artery",
-    "unresolvedTokens": [
-      "apicoposterior"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른위엽동맥 꼭대기뒤분할",
+    "legacyKo": "우상엽동맥 첨후분지",
+    "hanja": "右上葉動脈尖後分枝"
   },
   "FMA68843": {
     "sourceNameEn": "antero-medial basal segmental artery",
@@ -24120,10 +24116,10 @@
   },
   "FMA228642": {
     "sourceNameEn": "vasculature of body",
-    "unresolvedTokens": [
-      "vasculature"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "몸의 혈관계",
+    "legacyKo": "인체 혈관계",
+    "hanja": "人體血管系"
   },
   "FMA231424": {
     "nameKo": "몸통고유",
