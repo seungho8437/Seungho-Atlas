@@ -8,5 +8,33 @@
     "id": "KO_ANATOMY_PILOT",
     "title": "Seungho Atlas Korean anatomy localization pilot",
     "note": "Pilot terminology and educational descriptions. Review against the project's chosen Korean anatomical terminology standard before full-scale rollout."
+  },
+  "WHO_ACUPOINT_2008": {
+    "id": "WHO_ACUPOINT_2008",
+    "title": "WHO Standard Acupuncture Point Locations in the Western Pacific Region",
+    "publisher": "World Health Organization Regional Office for the Western Pacific",
+    "year": 2008,
+    "note": "Primary standard reference for acupuncture point locations. App text should summarize or structure the standard rather than reproduce long passages verbatim."
+  },
+  "WHO_TCM_TERMS_2022": {
+    "id": "WHO_TCM_TERMS_2022",
+    "title": "WHO international standard terminologies on traditional Chinese medicine",
+    "publisher": "World Health Organization",
+    "year": 2022,
+    "note": "Terminology reference for traditional Chinese medicine concepts."
+  },
+  "KJA_ST36_2023": {
+    "id": "KJA_ST36_2023",
+    "title": "Suggestion on Locating Method for ST36 Acupoint Based on Neuroanatomical Features",
+    "publisher": "Korean Journal of Acupuncture",
+    "year": 2023,
+    "note": "Used only for modern anatomical correspondence around ST36."
+  },
+  "KJA_ST_JINGJIN_2006": {
+    "id": "KJA_ST_JINGJIN_2006",
+    "title": "A study on muscular system of Foot yangmyung meridian-muscle",
+    "publisher": "Korean Journal of Acupuncture",
+    "year": 2006,
+    "note": "Used as an interpretive modern-anatomy correspondence source for the Foot Yangming meridian sinew."
   }
 }
