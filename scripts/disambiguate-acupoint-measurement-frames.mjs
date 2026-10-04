@@ -37,7 +37,7 @@ const C={
 
 function result(id,basis,evidence,rationale,confidence='high'){
  if(!calBy.has(id))throw new Error('Unknown calibration '+id);
- return {selectedCalibrationId:id,status:'disambiguated',basis,evidence,rationale,confidence,intentCheck:'compatible-with-WHO-source-meaning'};
+ return {selectedCalibrationId:id,status:confidence==='high'?'disambiguated':'provisional-regional-reference',basis,evidence,rationale,confidence,intentCheck:'compatible-with-WHO-source-meaning'};
 }
 
 function choose(pointId,frame,text){
@@ -116,7 +116,9 @@ for(const r of frames){
  for(const frame of r.frames){
    const chosen=choose(r.acupointId,frame,spec.source.textKo);
    const priorBinding=prior?.bindings.find(x=>x.frameId===frame.id)??null;
-   if(chosen.status==='finger-method-bound')counts.fingerMethodBound++;else counts.disambiguated++;
+   if(chosen.status==='finger-method-bound')counts.fingerMethodBound++;
+   else if(chosen.status==='disambiguated')counts.disambiguated++;
+   else counts.provisionalRegionalReference=(counts.provisionalRegionalReference??0)+1;
    if(chosen.confidence==='moderate')counts.moderate++;else counts.direct++;
    resolutions.push({
      frameId:frame.id,
@@ -138,8 +140,9 @@ const out={schemaVersion:1,methodology:{
  caution:'Regional-reference bindings are labeled as such and must not be represented as if the point text explicitly named both calibration endpoints.'
 },records};
 const audit={schemaVersion:1,standardAcupointCount:specs.length,measurementFrameCount:frames.reduce((n,r)=>n+r.frames.length,0),resolutionCount:records.reduce((n,r)=>n+r.resolutions.length,0),counts,invariants:{
- allBcunHaveExactlyOneCalibration:records.every(r=>r.resolutions.every(x=>x.status==='finger-method-bound'||(x.status==='disambiguated'&&!!x.selectedCalibrationId))),
+ allBcunHaveExactlyOneCalibrationCandidate:records.every(r=>r.resolutions.every(x=>x.status==='finger-method-bound'||!!x.selectedCalibrationId)),
  noAmbiguousStatusRemains:records.every(r=>r.resolutions.every(x=>!String(x.status).includes('ambiguous')&&!String(x.status).includes('unresolved'))),
+ provisionalReferencesNotClaimedAsDirect:records.every(r=>r.resolutions.every(x=>x.confidence!=='moderate'||x.status==='provisional-regional-reference')),
  allSelectedIdsAreWhoRegistry:records.every(r=>r.resolutions.every(x=>!x.selectedCalibrationId||calBy.has(x.selectedCalibrationId))),
  everyResolutionHasIntentCheck:records.every(r=>r.resolutions.every(x=>x.intentCheck==='compatible-with-WHO-source-meaning')),
  sourceMeaningNotRewritten:true
