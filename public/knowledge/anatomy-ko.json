@@ -5104,12 +5104,10 @@
   },
   "FMA19783": {
     "sourceNameEn": "loose connective tissue",
-    "unresolvedTokens": [
-      "loose",
-      "connective",
-      "tissue"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "성긴결합조직",
+    "legacyKo": "소성결합조직",
+    "hanja": "疏性結合組織"
   },
   "FMA19795": {
     "nameKo": "음경등쪽동맥",
@@ -5127,11 +5125,10 @@
   },
   "FMA20111": {
     "sourceNameEn": "mucoid tissue",
-    "unresolvedTokens": [
-      "mucoid",
-      "tissue"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "점액조직",
+    "legacyKo": "점액조직",
+    "hanja": "粘液組織"
   },
   "FMA20194": {
     "sourceNameEn": "cavernous organ",
@@ -5163,10 +5160,10 @@
   },
   "FMA20289": {
     "sourceNameEn": "lacrimal sac",
-    "unresolvedTokens": [
-      "sac"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "눈물주머니",
+    "legacyKo": "누낭",
+    "hanja": "淚囊"
   },
   "FMA20570": {
     "sourceNameEn": "peritoneal mesentery",
@@ -10750,27 +10747,24 @@
   },
   "FMA39988": {
     "sourceNameEn": "flexor retinaculum of wrist",
-    "unresolvedTokens": [
-      "retinaculum",
-      "wrist"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "손목굽힘근지지띠",
+    "legacyKo": "수근굴근지대",
+    "hanja": "手根屈筋支帶"
   },
   "FMA40120": {
     "sourceNameEn": "flexor retinaculum of right wrist",
-    "unresolvedTokens": [
-      "retinaculum",
-      "wrist"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른손목굽힘근지지띠",
+    "legacyKo": "우수근굴근지대",
+    "hanja": "右手根屈筋支帶"
   },
   "FMA40121": {
     "sourceNameEn": "flexor retinaculum of left wrist",
-    "unresolvedTokens": [
-      "retinaculum",
-      "wrist"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼손목굽힘근지지띠",
+    "legacyKo": "좌수근굴근지대",
+    "hanja": "左手根屈筋支帶"
   },
   "FMA42380": {
     "sourceNameEn": "intrinsic muscle of hand",
@@ -12749,10 +12743,10 @@
   },
   "FMA49443": {
     "sourceNameEn": "anatomical cluster",
-    "unresolvedTokens": [
-      "cluster"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "해부학적 무리",
+    "legacyKo": "해부학적 군",
+    "hanja": "解剖學的群"
   },
   "FMA49868": {
     "sourceNameEn": "ophthalmic artery",
@@ -15105,17 +15099,17 @@
   },
   "FMA55661": {
     "sourceNameEn": "parenchymatous organ",
-    "unresolvedTokens": [
-      "parenchymatous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "실질기관",
+    "legacyKo": "실질성기관",
+    "hanja": "實質性器官"
   },
   "FMA55662": {
     "sourceNameEn": "lobular organ",
-    "unresolvedTokens": [
-      "lobular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "소엽성기관",
+    "legacyKo": "소엽성기관",
+    "hanja": "小葉性器官"
   },
   "FMA55663": {
     "sourceNameEn": "corticomedullary organ",
@@ -15518,17 +15512,17 @@
   },
   "FMA58071": {
     "sourceNameEn": "chamber of eyeball",
-    "unresolvedTokens": [
-      "chamber"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "안구방",
+    "legacyKo": "안구강",
+    "hanja": "眼球腔"
   },
   "FMA58078": {
     "sourceNameEn": "anterior chamber of eyeball",
-    "unresolvedTokens": [
-      "chamber"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "안구앞방",
+    "legacyKo": "안구전방",
+    "hanja": "眼球前房"
   },
   "FMA58081": {
     "sourceNameEn": "anterior chamber of right eyeball",
@@ -15553,10 +15547,10 @@
   },
   "FMA58102": {
     "sourceNameEn": "fibrous layer of eyeball",
-    "unresolvedTokens": [
-      "fibrous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "안구섬유층",
+    "legacyKo": "안구섬유막",
+    "hanja": "眼球纖維膜"
   },
   "FMA58235": {
     "sourceNameEn": "iris",
@@ -15693,11 +15687,10 @@
   },
   "FMA58431": {
     "sourceNameEn": "corona ciliaris",
-    "unresolvedTokens": [
-      "corona",
-      "ciliaris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "섬모체관",
+    "legacyKo": "모양체관",
+    "hanja": "毛樣體冠"
   },
   "FMA58479": {
     "nameKo": "섬모체몸통부위",
@@ -15708,47 +15701,45 @@
   },
   "FMA58483": {
     "sourceNameEn": "right corona ciliaris",
-    "unresolvedTokens": [
-      "corona",
-      "ciliaris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른섬모체관",
+    "legacyKo": "우모양체관",
+    "hanja": "右毛樣體冠"
   },
   "FMA58484": {
     "sourceNameEn": "left corona ciliaris",
-    "unresolvedTokens": [
-      "corona",
-      "ciliaris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼섬모체관",
+    "legacyKo": "좌모양체관",
+    "hanja": "左毛樣體冠"
   },
   "FMA58599": {
     "sourceNameEn": "region of retina",
-    "unresolvedTokens": [
-      "retina"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "망막부위",
+    "legacyKo": "망막영역",
+    "hanja": "網膜領域"
   },
   "FMA58604": {
     "sourceNameEn": "optic part of retina",
-    "unresolvedTokens": [
-      "retina"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "망막시각부분",
+    "legacyKo": "망막시부",
+    "hanja": "網膜視部"
   },
   "FMA58607": {
     "sourceNameEn": "optic part of right retina",
-    "unresolvedTokens": [
-      "retina"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른망막시각부분",
+    "legacyKo": "우망막시부",
+    "hanja": "右網膜視部"
   },
   "FMA58608": {
     "sourceNameEn": "optic part of left retina",
-    "unresolvedTokens": [
-      "retina"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼망막시각부분",
+    "legacyKo": "좌망막시부",
+    "hanja": "左網膜視部"
   },
   "FMA58741": {
     "nameKo": "넙다리둘러싸는근막구역",
@@ -15787,97 +15778,94 @@
   },
   "FMA58827": {
     "sourceNameEn": "vitreous body",
-    "unresolvedTokens": [
-      "vitreous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "유리체",
+    "legacyKo": "초자체",
+    "hanja": "硝子體"
   },
   "FMA58828": {
     "sourceNameEn": "right vitreous body",
-    "unresolvedTokens": [
-      "vitreous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른유리체",
+    "legacyKo": "우초자체",
+    "hanja": "右硝子體"
   },
   "FMA58829": {
     "sourceNameEn": "left vitreous body",
-    "unresolvedTokens": [
-      "vitreous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼유리체",
+    "legacyKo": "좌초자체",
+    "hanja": "左硝子體"
   },
   "FMA58838": {
     "sourceNameEn": "suspensory ligament of lens",
-    "unresolvedTokens": [
-      "suspensory",
-      "lens"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "수정체걸이인대",
+    "legacyKo": "수정체현수인대",
+    "hanja": "水晶體懸垂靭帶"
   },
   "FMA58839": {
     "sourceNameEn": "suspensory ligament of right lens",
-    "unresolvedTokens": [
-      "suspensory",
-      "lens"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른수정체걸이인대",
+    "legacyKo": "우수정체현수인대",
+    "hanja": "右水晶體懸垂靭帶"
   },
   "FMA58840": {
     "sourceNameEn": "suspensory ligament of left lens",
-    "unresolvedTokens": [
-      "suspensory",
-      "lens"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼수정체걸이인대",
+    "legacyKo": "좌수정체현수인대",
+    "hanja": "左水晶體懸垂靭帶"
   },
   "FMA59086": {
     "sourceNameEn": "tarsal plate of eyelid",
-    "unresolvedTokens": [
-      "plate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "눈꺼풀판",
+    "legacyKo": "안검판",
+    "hanja": "眼瞼板"
   },
   "FMA59087": {
     "sourceNameEn": "tarsal plate of upper eyelid",
-    "unresolvedTokens": [
-      "plate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "위눈꺼풀판",
+    "legacyKo": "상안검판",
+    "hanja": "上眼瞼板"
   },
   "FMA59088": {
     "sourceNameEn": "tarsal plate of lower eyelid",
-    "unresolvedTokens": [
-      "plate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "아래눈꺼풀판",
+    "legacyKo": "하안검판",
+    "hanja": "下眼瞼板"
   },
   "FMA59089": {
     "sourceNameEn": "tarsal plate of right lower eyelid",
-    "unresolvedTokens": [
-      "plate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른아래눈꺼풀판",
+    "legacyKo": "우하안검판",
+    "hanja": "右下眼瞼板"
   },
   "FMA59090": {
     "sourceNameEn": "tarsal plate of left lower eyelid",
-    "unresolvedTokens": [
-      "plate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼아래눈꺼풀판",
+    "legacyKo": "좌하안검판",
+    "hanja": "左下眼瞼板"
   },
   "FMA59091": {
     "sourceNameEn": "tarsal plate of right upper eyelid",
-    "unresolvedTokens": [
-      "plate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른위눈꺼풀판",
+    "legacyKo": "우상안검판",
+    "hanja": "右上眼瞼板"
   },
   "FMA59092": {
     "sourceNameEn": "tarsal plate of left upper eyelid",
-    "unresolvedTokens": [
-      "plate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼위눈꺼풀판",
+    "legacyKo": "좌상안검판",
+    "hanja": "左上眼瞼板"
   },
   "FMA59101": {
     "nameKo": "눈물샘",
@@ -15902,10 +15890,10 @@
   },
   "FMA59402": {
     "sourceNameEn": "lacrimal lake",
-    "unresolvedTokens": [
-      "lake"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "눈물호수",
+    "legacyKo": "누호",
+    "hanja": "淚湖"
   },
   "FMA59502": {
     "nameKo": "코연골",
@@ -15965,31 +15953,31 @@
   },
   "FMA59541": {
     "sourceNameEn": "right lacrimal lake",
-    "unresolvedTokens": [
-      "lake"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른눈물호수",
+    "legacyKo": "우누호",
+    "hanja": "右淚湖"
   },
   "FMA59542": {
     "sourceNameEn": "left lacrimal lake",
-    "unresolvedTokens": [
-      "lake"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼눈물호수",
+    "legacyKo": "좌누호",
+    "hanja": "左淚湖"
   },
   "FMA59545": {
     "sourceNameEn": "right lacrimal sac",
-    "unresolvedTokens": [
-      "sac"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른눈물주머니",
+    "legacyKo": "우누낭",
+    "hanja": "右淚囊"
   },
   "FMA59546": {
     "sourceNameEn": "left lacrimal sac",
-    "unresolvedTokens": [
-      "sac"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼눈물주머니",
+    "legacyKo": "좌누낭",
+    "hanja": "左淚囊"
   },
   "FMA59555": {
     "sourceNameEn": "right nasolacrimal duct",
@@ -16098,10 +16086,10 @@
   },
   "FMA61708": {
     "sourceNameEn": "subdivision of auriculotemporal part of head",
-    "unresolvedTokens": [
-      "auriculotemporal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "머리 귓바퀴관자부분의 세부분",
+    "legacyKo": "두부 이개측두부 분할",
+    "hanja": "頭部耳介側頭部分割"
   },
   "FMA61775": {
     "sourceNameEn": "physical anatomical entity",
@@ -16252,11 +16240,10 @@
   },
   "FMA61934": {
     "sourceNameEn": "choroid plexus of cerebral hemisphere",
-    "unresolvedTokens": [
-      "choroid",
-      "plexus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "대뇌반구 맥락얼기",
+    "legacyKo": "대뇌반구 맥락총",
+    "hanja": "大腦半球脈絡叢"
   },
   "FMA61950": {
     "nameKo": "속주머니",
@@ -16617,10 +16604,10 @@
   },
   "FMA64990": {
     "sourceNameEn": "organ part cluster",
-    "unresolvedTokens": [
-      "cluster"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "기관부분 무리",
+    "legacyKo": "기관부 군",
+    "hanja": "器官部群"
   },
   "FMA65004": {
     "nameKo": "종아리뒤칸얕은근육",
@@ -16918,11 +16905,10 @@
   },
   "FMA67112": {
     "sourceNameEn": "immaterial anatomical entity",
-    "unresolvedTokens": [
-      "immaterial",
-      "entity"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "비물질적 해부학 개체",
+    "legacyKo": "비물질 해부학 개체",
+    "hanja": "非物質解剖學個體"
   },
   "FMA67135": {
     "sourceNameEn": "anatomical structure",
@@ -16975,10 +16961,10 @@
   },
   "FMA67504": {
     "sourceNameEn": "subdivision of cardinal body part",
-    "unresolvedTokens": [
-      "cardinal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "주요몸부분의 세부분",
+    "legacyKo": "주요 신체부 분할",
+    "hanja": "主要身體部分割"
   },
   "FMA67536": {
     "sourceNameEn": "cardinal tissue part",
@@ -19701,10 +19687,10 @@
   },
   "FMA82500": {
     "sourceNameEn": "membranous layer",
-    "unresolvedTokens": [
-      "membranous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "막성층",
+    "legacyKo": "막성층",
+    "hanja": "膜性層"
   },
   "FMA82594": {
     "nameKo": "빗장밑동맥구역",
@@ -20501,10 +20487,10 @@
   },
   "FMA265400": {
     "sourceNameEn": "region of vascular layer of eyeball",
-    "unresolvedTokens": [
-      "vascular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "안구혈관층 부위",
+    "legacyKo": "안구혈관막 영역",
+    "hanja": "眼球血管膜領域"
   },
   "FMA266054": {
     "sourceNameEn": "subdivision of cranial dura mater",
@@ -21032,10 +21018,10 @@
   },
   "FMA7482": {
     "sourceNameEn": "musculoskeletal system",
-    "unresolvedTokens": [
-      "musculoskeletal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "근골격계통",
+    "legacyKo": "근골격계",
+    "hanja": "筋骨格系"
   },
   "FMA7483": {
     "sourceNameEn": "axial skeletal system",
@@ -21856,11 +21842,10 @@
   },
   "FMA23876": {
     "sourceNameEn": "skeleton (in vivo)",
-    "unresolvedTokens": [
-      "in",
-      "vivo"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "생체 뼈대",
+    "legacyKo": "생체 골격",
+    "hanja": "生體骨格"
   },
   "FMA23881": {
     "sourceNameEn": "skeletal system",
@@ -22396,10 +22381,10 @@
   },
   "FMA46565": {
     "sourceNameEn": "skull",
-    "unresolvedTokens": [
-      "skull"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "머리뼈",
+    "legacyKo": "두개골",
+    "hanja": "頭蓋骨"
   },
   "FMA49177": {
     "sourceNameEn": "upper gastrointestinal tract",
@@ -22595,17 +22580,17 @@
   },
   "FMA53082": {
     "sourceNameEn": "right orbit",
-    "unresolvedTokens": [
-      "orbit"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른눈확",
+    "legacyKo": "우안와",
+    "hanja": "右眼窩"
   },
   "FMA53083": {
     "sourceNameEn": "left orbit",
-    "unresolvedTokens": [
-      "orbit"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼눈확",
+    "legacyKo": "좌안와",
+    "hanja": "左眼窩"
   },
   "FMA53637": {
     "sourceNameEn": "right cheek",
@@ -22630,10 +22615,10 @@
   },
   "FMA53673": {
     "sourceNameEn": "viscerocranium",
-    "unresolvedTokens": [
-      "viscerocranium"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "얼굴머리뼈",
+    "legacyKo": "안면두개",
+    "hanja": "顔面頭蓋"
   },
   "FMA54375": {
     "sourceNameEn": "nasal septum",
@@ -22756,31 +22741,31 @@
   },
   "FMA58105": {
     "sourceNameEn": "fibrous layer of right eyeball",
-    "unresolvedTokens": [
-      "fibrous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른안구섬유층",
+    "legacyKo": "우안구섬유막",
+    "hanja": "右眼球纖維膜"
   },
   "FMA58106": {
     "sourceNameEn": "fibrous layer of left eyeball",
-    "unresolvedTokens": [
-      "fibrous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼안구섬유층",
+    "legacyKo": "좌안구섬유막",
+    "hanja": "左眼球纖維膜"
   },
   "FMA58107": {
     "sourceNameEn": "vascular layer of right eyeball",
-    "unresolvedTokens": [
-      "vascular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른안구혈관층",
+    "legacyKo": "우안구혈관막",
+    "hanja": "右眼球血管膜"
   },
   "FMA58108": {
     "sourceNameEn": "vascular layer of left eyeball",
-    "unresolvedTokens": [
-      "vascular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼안구혈관층",
+    "legacyKo": "좌안구혈관막",
+    "hanja": "左眼球血管膜"
   },
   "FMA58401": {
     "nameKo": "오른위팔다리둘러싸는근막",
@@ -22833,17 +22818,17 @@
   },
   "FMA58448": {
     "sourceNameEn": "investing fascia of right wrist",
-    "unresolvedTokens": [
-      "wrist"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른손목싸개근막",
+    "legacyKo": "우완부 피복근막",
+    "hanja": "右腕部被覆筋膜"
   },
   "FMA58449": {
     "sourceNameEn": "investing fascia of left wrist",
-    "unresolvedTokens": [
-      "wrist"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼손목싸개근막",
+    "legacyKo": "좌완부 피복근막",
+    "hanja": "左腕部被覆筋膜"
   },
   "FMA58575": {
     "nameKo": "오른아래팔둘러싸는근막",
@@ -22875,17 +22860,17 @@
   },
   "FMA59368": {
     "sourceNameEn": "right lacrimal apparatus",
-    "unresolvedTokens": [
-      "apparatus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른눈물기관",
+    "legacyKo": "우누기",
+    "hanja": "右淚器"
   },
   "FMA59369": {
     "sourceNameEn": "left lacrimal apparatus",
-    "unresolvedTokens": [
-      "apparatus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼눈물기관",
+    "legacyKo": "좌누기",
+    "hanja": "左淚器"
   },
   "FMA59398": {
     "sourceNameEn": "mandibular part of mouth",
@@ -23667,17 +23652,17 @@
   },
   "FMA72952": {
     "sourceNameEn": "orbital part of right eye",
-    "unresolvedTokens": [
-      "eye"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른눈의 눈확부분",
+    "legacyKo": "우안 안와부",
+    "hanja": "右眼眼窩部"
   },
   "FMA72953": {
     "sourceNameEn": "orbital part of left eye",
-    "unresolvedTokens": [
-      "eye"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼눈의 눈확부분",
+    "legacyKo": "좌안 안와부",
+    "hanja": "左眼眼窩部"
   },
   "FMA72969": {
     "nameKo": "오른이마엽",
