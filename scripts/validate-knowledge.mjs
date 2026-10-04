@@ -20,16 +20,24 @@ const meridianIds=new Set(['LU','LI','ST','SP','HT','SI','BL','KI','PC','TE','GB
 const sinewMeridianIds=new Set(['LU','LI','ST','SP','HT','SI','BL','KI','PC','TE','GB','LR']);
 const expectedPointCounts={LU:11,LI:20,ST:45,SP:21,HT:9,SI:19,BL:67,KI:27,PC:9,TE:23,GB:44,LR:14,GV:28,CV:24};
 
-assert.ok(Object.keys(anatomyKo).length>0,'Korean anatomy localization is empty.');
+assert.equal(Object.keys(anatomyKo).length,atlas.concepts.length,'Every atlas concept must have a localization record.');
+let verifiedLocalizations=0,derivedLocalizations=0,reviewNeededLocalizations=0;
 
 for(const [conceptId,entry] of Object.entries(anatomyKo)){
   assert.ok(concepts.has(conceptId),`${conceptId}: localization points to a missing atlas concept`);
-  assert.equal(typeof entry.nameKo,'string',`${conceptId}: nameKo must be a string`);
-  assert.ok(entry.nameKo.trim(),`${conceptId}: nameKo is empty`);
-  if(entry.legacyKo!==undefined)assert.ok(typeof entry.legacyKo==='string'&&entry.legacyKo.trim(),`${conceptId}: legacyKo is invalid`);
-  if(entry.hanja!==undefined)assert.ok(typeof entry.hanja==='string'&&entry.hanja.trim(),`${conceptId}: hanja is invalid`);
+  assert.ok(['verified','derived','review-needed'].includes(entry.status),`${conceptId}: invalid localization status`);
+  if(entry.status==='review-needed'){
+    reviewNeededLocalizations++;
+    assert.ok(Array.isArray(entry.unresolvedTokens)&&entry.unresolvedTokens.length,`${conceptId}: review-needed localization must identify unresolved tokens`);
+  }else{
+    if(entry.status==='verified')verifiedLocalizations++;else derivedLocalizations++;
+    assert.equal(typeof entry.nameKo,'string',`${conceptId}: resolved localization requires nameKo`);
+    assert.ok(entry.nameKo.trim(),`${conceptId}: nameKo is empty`);
+    assert.ok(typeof entry.legacyKo==='string'&&entry.legacyKo.trim(),`${conceptId}: resolved localization requires legacyKo`);
+    assert.ok(typeof entry.hanja==='string'&&entry.hanja.trim(),`${conceptId}: resolved localization requires hanja`);
+  }
+  if(entry.sourceNameEn!==undefined)assert.equal(entry.sourceNameEn,concepts.get(conceptId).name,`${conceptId}: source English name drift`);
   if(entry.descriptionKo!==undefined)assert.ok(typeof entry.descriptionKo==='string'&&entry.descriptionKo.trim(),`${conceptId}: descriptionKo is invalid`);
-  assert.ok(['verified','derived','review-needed'].includes(entry.status??'verified'),`${conceptId}: invalid localization status`);
   for(const id of entry.sourceIds??[])assert.ok(sourceIds.has(id),`${conceptId}: missing localization source ${id}`);
   if(entry.aliases!==undefined){
     assert.ok(Array.isArray(entry.aliases),`${conceptId}: aliases must be an array`);
@@ -37,6 +45,7 @@ for(const [conceptId,entry] of Object.entries(anatomyKo)){
     assert.equal(new Set(normalized).size,normalized.length,`${conceptId}: aliases contain duplicates`);
   }
 }
+assert.equal(verifiedLocalizations+derivedLocalizations+reviewNeededLocalizations,atlas.concepts.length,'Localization status counts must cover the atlas.');
 
 for(const [sourceId,source] of Object.entries(sources)){
   assert.equal(source.id,sourceId,`${sourceId}: source id must match its object key`);
@@ -103,4 +112,4 @@ for(const relation of anatomyMeridianSinewRelations){
   for(const id of relation.sourceIds??[])assert.ok(sourceIds.has(id),`sinew relation: missing source ${id}`);
 }
 
-console.log(`Verified ${Object.keys(anatomyKo).length} Korean anatomy localizations, ${acupointIds.size} standard acupoints, ${sinewIds.size} meridian sinews, ${anatomyAcupointRelations.length} anatomy-acupoint relations, and ${anatomyMeridianSinewRelations.length} anatomy-sinew relations, plus ${acupointCoordinateRegistry.points.length} validated BodyParts3D acupoint coordinates against ${atlas.concepts.length} atlas concepts.`);
+console.log(`Verified ${Object.keys(anatomyKo).length} anatomy localization records (${verifiedLocalizations} verified, ${derivedLocalizations} derived, ${reviewNeededLocalizations} review-needed), ${acupointIds.size} standard acupoints, ${sinewIds.size} meridian sinews, ${anatomyAcupointRelations.length} anatomy-acupoint relations, and ${anatomyMeridianSinewRelations.length} anatomy-sinew relations, plus ${acupointCoordinateRegistry.points.length} validated BodyParts3D acupoint coordinates against ${atlas.concepts.length} atlas concepts.`);
