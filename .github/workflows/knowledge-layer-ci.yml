@@ -22,4 +22,5 @@ jobs:
       - run: node scripts/validate-atlas.mjs
       - run: node --experimental-strip-types scripts/validate-interactions.mjs
       - run: npm run validate:knowledge
+      - run: npm run audit:korean
       - run: npm run build
