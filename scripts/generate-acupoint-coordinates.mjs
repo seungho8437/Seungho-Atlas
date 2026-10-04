@@ -133,6 +133,12 @@ const cunY=extent[supAxis]/75;
 const ordinalIntercostal={첫째:1,둘째:2,셋째:3,넷째:4,다섯째:5,여섯째:6,일곱째:7};
 function applyWhoConstraints(input,text,side){
   const t=[...input]; let count=0;
+  const explicitFoot=/발등|발바닥|발가락|발허리|발꿈치|복사|발목/.test(text) && !/아래다리|넓적다리|무릎/.test(text);
+  if(explicitFoot){
+    const ceiling=norm(supAxis,.115), floor=norm(supAxis,.008);
+    t[supAxis]=Math.max(floor,Math.min(ceiling,t[supAxis]));
+    count++;
+  }
   const sideSign=side==='left'?leftSign:side==='right'?-leftSign:0;
   const lateral=text.match(/정중선[^,.]{0,45}?가쪽(?:으로)?\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(lateral&&sideSign){
@@ -291,9 +297,9 @@ function project(target, side, locks={}){
   const scorePoint=q=>{
     const d=dist2(target,q);
     let score=d;
-    if(locks.sup) score+=420*(q[supAxis]-target[supAxis])**2;
-    if(locks.lr) score+=220*(q[lrAxis]-target[lrAxis])**2;
-    if(locks.ap) score+=55*(q[apAxis]-target[apAxis])**2;
+    if(locks.sup) score+=5200*(q[supAxis]-target[supAxis])**2;
+    if(locks.lr) score+=2400*(q[lrAxis]-target[lrAxis])**2;
+    if(locks.ap) score+=420*(q[apAxis]-target[apAxis])**2;
     return {d,score};
   };
   for(let r=0;r<=8;r++){
@@ -309,7 +315,7 @@ function project(target, side, locks={}){
         if(side==='right' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) continue;
         const {d,score}=scorePoint(q);if(score<bestScore){bestScore=score;bestD=d;best=q;bestPart=T.part;}}
     }
-    if(found && best && Math.sqrt(bestD) < (r+1)*cell) break;
+    if(!locks.sup&&!locks.lr&&!locks.ap && found && best && Math.sqrt(bestD) < (r+1)*cell) break;
   }
   if(!best){for(const T of surfaceTriangles){
     if(side==='left' && Math.sign((T.c[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) continue;
@@ -465,8 +471,8 @@ for(const p of acupoints){
     if(side==='midline') target[lrAxis]=bodyCenter[lrAxis];
     const locText=p.locationKo||'';
     const locks={
-      sup:/B-cun/.test(locText)&&/(위로|아래로|위쪽으로|아래쪽으로|몸쪽으로|먼쪽으로|머리선|갈비사이공간|같은 높이|뒤엉치뼈구멍)/.test(locText),
-      lr:/가쪽(?:으로)?\s*\d+(?:\.\d+)?\s*B-cun|노뼈와\s*자뼈\s*사이|자뼈\s*바로\s*노쪽|동공|귀구슬|귓바퀴|가쪽눈구석|손허리|손가락|발허리|발가락/.test(locText),
+      sup:(/B-cun/.test(locText)&&/(위로|아래로|위쪽으로|아래쪽으로|몸쪽으로|먼쪽으로|머리선|갈비사이공간|같은 높이|뒤엉치뼈구멍)/.test(locText))||/F-cun/.test(locText)||/발등|발바닥|발가락|발허리|발꿈치|복사|발목/.test(locText),
+      lr:/앞정중선\s*위|가쪽(?:으로)?\s*\d+(?:\.\d+)?\s*B-cun|노뼈와\s*자뼈\s*사이|자뼈\s*바로\s*노쪽|동공|귀구슬|귓바퀴|가쪽눈구석|손허리|손가락|발허리|발가락/.test(locText),
       ap:/손바닥|손등|발바닥|발등|손허리|손가락|발허리|발가락|어깨뼈\s*부위|어깨세모근|가쪽눈구석|관자부/.test(locText)
     };
     const projected=project(target,side,locks);
