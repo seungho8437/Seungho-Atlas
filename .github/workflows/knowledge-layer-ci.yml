@@ -23,4 +23,5 @@ jobs:
       - run: node --experimental-strip-types scripts/validate-interactions.mjs
       - run: npm run validate:knowledge
       - run: npm run audit:korean
+      - run: npm run audit:terminology
       - run: npm run build
