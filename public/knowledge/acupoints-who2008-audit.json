@@ -1,0 +1,2543 @@
+{
+  "source": "TARA Acupoints Ontology curated acupoints.csv, cross-checked to WHO Standard Acupuncture Point Locations in the Western Pacific Region (2008)",
+  "generatedAt": "2026-10-04",
+  "standardPointCount": 361,
+  "mappedPointCount": 361,
+  "allPinyinMatched": true,
+  "allHanjaSupported": true,
+  "allWhoLocationsAvailable": true,
+  "idNormalization": {
+    "Du": "GV",
+    "RN": "CV",
+    "note": "Sex-specific RN 1 M/F rows are excluded; canonical RN 1 is mapped to CV1."
+  },
+  "records": [
+    {
+      "id": "LU1",
+      "who2008Page": 26,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LU2",
+      "who2008Page": 26,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LU3",
+      "who2008Page": 27,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LU4",
+      "who2008Page": 27,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LU5",
+      "who2008Page": 28,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LU6",
+      "who2008Page": 28,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LU7",
+      "who2008Page": 29,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LU8",
+      "who2008Page": 29,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LU9",
+      "who2008Page": 30,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LU10",
+      "who2008Page": 30,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LU11",
+      "who2008Page": 31,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI1",
+      "who2008Page": 34,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI2",
+      "who2008Page": 34,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI3",
+      "who2008Page": 35,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI4",
+      "who2008Page": 35,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI5",
+      "who2008Page": 36,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI6",
+      "who2008Page": 36,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI7",
+      "who2008Page": 37,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI8",
+      "who2008Page": 37,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI9",
+      "who2008Page": 38,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI10",
+      "who2008Page": 38,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI11",
+      "who2008Page": 39,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI12",
+      "who2008Page": 39,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI13",
+      "who2008Page": 40,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI14",
+      "who2008Page": 40,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI15",
+      "who2008Page": 41,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI16",
+      "who2008Page": 41,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI17",
+      "who2008Page": 42,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI18",
+      "who2008Page": 42,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI19",
+      "who2008Page": 43,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LI20",
+      "who2008Page": 43,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST1",
+      "who2008Page": 46,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST2",
+      "who2008Page": 46,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST3",
+      "who2008Page": 47,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST4",
+      "who2008Page": 47,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST5",
+      "who2008Page": 48,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST6",
+      "who2008Page": 48,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST7",
+      "who2008Page": 49,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST8",
+      "who2008Page": 49,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST9",
+      "who2008Page": 50,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST10",
+      "who2008Page": 50,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST11",
+      "who2008Page": 51,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST12",
+      "who2008Page": 51,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST13",
+      "who2008Page": 52,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST14",
+      "who2008Page": 52,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST15",
+      "who2008Page": 53,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST16",
+      "who2008Page": 53,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST17",
+      "who2008Page": 54,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST18",
+      "who2008Page": 54,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST19",
+      "who2008Page": 55,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST20",
+      "who2008Page": 55,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST21",
+      "who2008Page": 56,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST22",
+      "who2008Page": 56,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST23",
+      "who2008Page": 57,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST24",
+      "who2008Page": 57,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST25",
+      "who2008Page": 58,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST26",
+      "who2008Page": 58,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST27",
+      "who2008Page": 59,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST28",
+      "who2008Page": 59,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST29",
+      "who2008Page": 60,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST30",
+      "who2008Page": 60,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST31",
+      "who2008Page": 61,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST32",
+      "who2008Page": 62,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST33",
+      "who2008Page": 62,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST34",
+      "who2008Page": 63,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST35",
+      "who2008Page": 63,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST36",
+      "who2008Page": 64,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST37",
+      "who2008Page": 64,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST38",
+      "who2008Page": 65,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST39",
+      "who2008Page": 65,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST40",
+      "who2008Page": 66,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST41",
+      "who2008Page": 66,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST42",
+      "who2008Page": 67,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST43",
+      "who2008Page": 67,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST44",
+      "who2008Page": 68,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "ST45",
+      "who2008Page": 68,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP1",
+      "who2008Page": 70,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP2",
+      "who2008Page": 70,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP3",
+      "who2008Page": 71,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP4",
+      "who2008Page": 71,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP5",
+      "who2008Page": 72,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP6",
+      "who2008Page": 72,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP7",
+      "who2008Page": 73,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP8",
+      "who2008Page": 73,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP9",
+      "who2008Page": 74,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP10",
+      "who2008Page": 74,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP11",
+      "who2008Page": 75,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP12",
+      "who2008Page": 75,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP13",
+      "who2008Page": 76,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP14",
+      "who2008Page": 76,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP15",
+      "who2008Page": 77,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP16",
+      "who2008Page": 77,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP17",
+      "who2008Page": 78,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP18",
+      "who2008Page": 78,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP19",
+      "who2008Page": 79,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP20",
+      "who2008Page": 79,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SP21",
+      "who2008Page": 80,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "HT1",
+      "who2008Page": 82,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "HT2",
+      "who2008Page": 82,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "HT3",
+      "who2008Page": 83,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "HT4",
+      "who2008Page": 83,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "HT5",
+      "who2008Page": 84,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "HT6",
+      "who2008Page": 84,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "HT7",
+      "who2008Page": 85,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "HT8",
+      "who2008Page": 85,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "HT9",
+      "who2008Page": 86,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI1",
+      "who2008Page": 88,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI2",
+      "who2008Page": 88,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI3",
+      "who2008Page": 89,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI4",
+      "who2008Page": 89,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI5",
+      "who2008Page": 90,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI6",
+      "who2008Page": 90,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI7",
+      "who2008Page": 91,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI8",
+      "who2008Page": 91,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI9",
+      "who2008Page": 92,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI10",
+      "who2008Page": 92,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI11",
+      "who2008Page": 93,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI12",
+      "who2008Page": 93,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI13",
+      "who2008Page": 94,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI14",
+      "who2008Page": 94,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI15",
+      "who2008Page": 95,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI16",
+      "who2008Page": 95,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI17",
+      "who2008Page": 96,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI18",
+      "who2008Page": 96,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "SI19",
+      "who2008Page": 97,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL1",
+      "who2008Page": 100,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL2",
+      "who2008Page": 100,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL3",
+      "who2008Page": 101,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL4",
+      "who2008Page": 101,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL5",
+      "who2008Page": 102,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL6",
+      "who2008Page": 102,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL7",
+      "who2008Page": 103,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL8",
+      "who2008Page": 103,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL9",
+      "who2008Page": 104,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL10",
+      "who2008Page": 104,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL11",
+      "who2008Page": 105,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL12",
+      "who2008Page": 105,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL13",
+      "who2008Page": 106,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL14",
+      "who2008Page": 106,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL15",
+      "who2008Page": 107,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL16",
+      "who2008Page": 107,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL17",
+      "who2008Page": 108,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL18",
+      "who2008Page": 108,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL19",
+      "who2008Page": 109,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL20",
+      "who2008Page": 109,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL21",
+      "who2008Page": 110,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL22",
+      "who2008Page": 110,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL23",
+      "who2008Page": 111,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL24",
+      "who2008Page": 111,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL25",
+      "who2008Page": 112,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL26",
+      "who2008Page": 112,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL27",
+      "who2008Page": 113,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL28",
+      "who2008Page": 113,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL29",
+      "who2008Page": 114,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL30",
+      "who2008Page": 114,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL31",
+      "who2008Page": 115,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL32",
+      "who2008Page": 115,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL33",
+      "who2008Page": 116,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL34",
+      "who2008Page": 116,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL35",
+      "who2008Page": 117,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL36",
+      "who2008Page": 117,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL37",
+      "who2008Page": 118,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL38",
+      "who2008Page": 118,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL39",
+      "who2008Page": 119,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL40",
+      "who2008Page": 119,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL41",
+      "who2008Page": 120,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL42",
+      "who2008Page": 120,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL43",
+      "who2008Page": 121,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL44",
+      "who2008Page": 121,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL45",
+      "who2008Page": 122,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL46",
+      "who2008Page": 122,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL47",
+      "who2008Page": 123,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL48",
+      "who2008Page": 123,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL49",
+      "who2008Page": 124,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL50",
+      "who2008Page": 124,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL51",
+      "who2008Page": 125,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL52",
+      "who2008Page": 125,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL53",
+      "who2008Page": 126,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL54",
+      "who2008Page": 126,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL55",
+      "who2008Page": 127,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL56",
+      "who2008Page": 127,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL57",
+      "who2008Page": 128,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL58",
+      "who2008Page": 128,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL59",
+      "who2008Page": 129,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL60",
+      "who2008Page": 129,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL61",
+      "who2008Page": 130,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL62",
+      "who2008Page": 130,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL63",
+      "who2008Page": 131,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL64",
+      "who2008Page": 131,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL65",
+      "who2008Page": 132,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL66",
+      "who2008Page": 132,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "BL67",
+      "who2008Page": 133,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI1",
+      "who2008Page": 136,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI2",
+      "who2008Page": 136,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI3",
+      "who2008Page": 137,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI4",
+      "who2008Page": 137,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI5",
+      "who2008Page": 138,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI6",
+      "who2008Page": 138,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI7",
+      "who2008Page": 139,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI8",
+      "who2008Page": 139,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI9",
+      "who2008Page": 140,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI10",
+      "who2008Page": 140,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI11",
+      "who2008Page": 141,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI12",
+      "who2008Page": 141,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI13",
+      "who2008Page": 142,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI14",
+      "who2008Page": 142,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI15",
+      "who2008Page": 143,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI16",
+      "who2008Page": 143,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI17",
+      "who2008Page": 144,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI18",
+      "who2008Page": 144,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI19",
+      "who2008Page": 145,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI20",
+      "who2008Page": 145,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI21",
+      "who2008Page": 146,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI22",
+      "who2008Page": 146,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI23",
+      "who2008Page": 147,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI24",
+      "who2008Page": 147,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI25",
+      "who2008Page": 148,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI26",
+      "who2008Page": 148,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "KI27",
+      "who2008Page": 149,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "PC1",
+      "who2008Page": 152,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "PC2",
+      "who2008Page": 152,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "PC3",
+      "who2008Page": 153,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "PC4",
+      "who2008Page": 153,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "PC5",
+      "who2008Page": 154,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "PC6",
+      "who2008Page": 154,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "PC7",
+      "who2008Page": 155,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "PC8",
+      "who2008Page": 155,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "PC9",
+      "who2008Page": 156,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE1",
+      "who2008Page": 158,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE2",
+      "who2008Page": 158,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE3",
+      "who2008Page": 159,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE4",
+      "who2008Page": 159,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE5",
+      "who2008Page": 160,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE6",
+      "who2008Page": 160,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE7",
+      "who2008Page": 161,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE8",
+      "who2008Page": 161,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE9",
+      "who2008Page": 162,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE10",
+      "who2008Page": 162,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE11",
+      "who2008Page": 163,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE12",
+      "who2008Page": 163,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE13",
+      "who2008Page": 164,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE14",
+      "who2008Page": 164,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE15",
+      "who2008Page": 165,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE16",
+      "who2008Page": 165,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE17",
+      "who2008Page": 166,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE18",
+      "who2008Page": 166,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE19",
+      "who2008Page": 167,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE20",
+      "who2008Page": 167,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE21",
+      "who2008Page": 168,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE22",
+      "who2008Page": 168,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "TE23",
+      "who2008Page": 169,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB1",
+      "who2008Page": 172,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB2",
+      "who2008Page": 172,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB3",
+      "who2008Page": 173,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB4",
+      "who2008Page": 173,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB5",
+      "who2008Page": 174,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB6",
+      "who2008Page": 174,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB7",
+      "who2008Page": 175,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB8",
+      "who2008Page": 175,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB9",
+      "who2008Page": 176,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB10",
+      "who2008Page": 176,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB11",
+      "who2008Page": 177,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB12",
+      "who2008Page": 177,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB13",
+      "who2008Page": 178,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB14",
+      "who2008Page": 178,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB15",
+      "who2008Page": 179,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB16",
+      "who2008Page": 179,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB17",
+      "who2008Page": 180,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB18",
+      "who2008Page": 180,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB19",
+      "who2008Page": 181,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB20",
+      "who2008Page": 181,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB21",
+      "who2008Page": 182,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB22",
+      "who2008Page": 182,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB23",
+      "who2008Page": 183,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB24",
+      "who2008Page": 183,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB25",
+      "who2008Page": 184,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB26",
+      "who2008Page": 184,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB27",
+      "who2008Page": 185,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB28",
+      "who2008Page": 185,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB29",
+      "who2008Page": 186,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB30",
+      "who2008Page": 186,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB31",
+      "who2008Page": 187,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB32",
+      "who2008Page": 187,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB33",
+      "who2008Page": 188,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB34",
+      "who2008Page": 188,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB35",
+      "who2008Page": 189,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB36",
+      "who2008Page": 189,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB37",
+      "who2008Page": 190,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB38",
+      "who2008Page": 190,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB39",
+      "who2008Page": 191,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB40",
+      "who2008Page": 191,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB41",
+      "who2008Page": 192,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB42",
+      "who2008Page": 192,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB43",
+      "who2008Page": 193,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GB44",
+      "who2008Page": 193,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LR1",
+      "who2008Page": 196,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LR2",
+      "who2008Page": 196,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LR3",
+      "who2008Page": 197,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LR4",
+      "who2008Page": 197,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LR5",
+      "who2008Page": 198,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LR6",
+      "who2008Page": 198,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LR7",
+      "who2008Page": 199,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LR8",
+      "who2008Page": 199,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LR9",
+      "who2008Page": 200,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LR10",
+      "who2008Page": 200,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LR11",
+      "who2008Page": 201,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LR12",
+      "who2008Page": 201,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LR13",
+      "who2008Page": 202,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "LR14",
+      "who2008Page": 202,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV1",
+      "who2008Page": 204,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV2",
+      "who2008Page": 204,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV3",
+      "who2008Page": 205,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV4",
+      "who2008Page": 205,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV5",
+      "who2008Page": 206,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV6",
+      "who2008Page": 206,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV7",
+      "who2008Page": 207,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV8",
+      "who2008Page": 207,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV9",
+      "who2008Page": 208,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV10",
+      "who2008Page": 208,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV11",
+      "who2008Page": 209,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV12",
+      "who2008Page": 209,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV13",
+      "who2008Page": 210,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV14",
+      "who2008Page": 210,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV15",
+      "who2008Page": 211,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV16",
+      "who2008Page": 211,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV17",
+      "who2008Page": 212,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV18",
+      "who2008Page": 212,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV19",
+      "who2008Page": 213,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV20",
+      "who2008Page": 213,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV21",
+      "who2008Page": 214,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV22",
+      "who2008Page": 214,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV23",
+      "who2008Page": 215,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV24",
+      "who2008Page": 215,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV25",
+      "who2008Page": 216,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV26",
+      "who2008Page": 216,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV27",
+      "who2008Page": 217,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "GV28",
+      "who2008Page": 217,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV1",
+      "who2008Page": 220,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV2",
+      "who2008Page": 220,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV3",
+      "who2008Page": 221,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV4",
+      "who2008Page": 221,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV5",
+      "who2008Page": 222,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV6",
+      "who2008Page": 222,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV7",
+      "who2008Page": 223,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV8",
+      "who2008Page": 223,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV9",
+      "who2008Page": 224,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV10",
+      "who2008Page": 224,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV11",
+      "who2008Page": 225,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV12",
+      "who2008Page": 225,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV13",
+      "who2008Page": 226,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV14",
+      "who2008Page": 226,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV15",
+      "who2008Page": 227,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV16",
+      "who2008Page": 227,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV17",
+      "who2008Page": 228,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV18",
+      "who2008Page": 228,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV19",
+      "who2008Page": 229,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV20",
+      "who2008Page": 229,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV21",
+      "who2008Page": 230,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV22",
+      "who2008Page": 230,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV23",
+      "who2008Page": 231,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    },
+    {
+      "id": "CV24",
+      "who2008Page": 231,
+      "pinyinMatch": true,
+      "hanjaSupported": true,
+      "whoLocationAvailable": true
+    }
+  ]
+}
