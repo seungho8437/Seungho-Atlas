@@ -62,6 +62,10 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
   // causing distant acupoints to visually pile up when zoomed out.
   const acupointMaterial=new T.PointsMaterial({map:acupointTexture,color:0xffffff,size:.035,sizeAttenuation:true,transparent:true,alphaTest:.18,opacity:1,depthTest:true,depthWrite:false,toneMapped:false});
   const acupointMarkers=new T.Points(acupointGeometry,acupointMaterial);acupointMarkers.frustumCulled=false;acupointMarkers.renderOrder=20;acupointMarkers.visible=false;scene.add(acupointMarkers);
+  const anchorMarkerMaterial=new T.MeshBasicMaterial({color:0x16a34a,depthTest:true,depthWrite:false,toneMapped:false});
+  const anchorMarker=new T.Mesh(new T.SphereGeometry(.012,20,20),anchorMarkerMaterial);anchorMarker.visible=false;anchorMarker.renderOrder=25;scene.add(anchorMarker);
+  const proposalMarkerMaterial=new T.MeshBasicMaterial({color:0xf59e0b,depthTest:true,depthWrite:false,toneMapped:false,transparent:true,opacity:.95});
+  const proposalMarker=new T.Mesh(new T.SphereGeometry(.014,20,20),proposalMarkerMaterial);proposalMarker.visible=false;proposalMarker.renderOrder=24;scene.add(proposalMarker);
   const hover=document.createElement('div');hover.className='part-hover';hover.setAttribute('role','tooltip');hover.hidden=true;el.appendChild(hover);
   type Target={index:number;x:number;y:number;left:number;right:number;top:number;bottom:number};let targets:Target[]=[];
   const projected=new T.Vector3();
