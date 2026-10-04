@@ -6,54 +6,324 @@
     "descriptionKo": "어깨뼈는 어깨이음뼈를 이루는 납작한 삼각형 모양의 뼈로, 위팔뼈 및 빗장뼈와 연결되어 어깨의 움직임과 안정성에 관여한다.",
     "aliases": [
       "견갑"
+    ],
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
     ]
   },
   "FMA9611": {
     "nameKo": "넙다리뼈",
     "legacyKo": "대퇴골",
     "hanja": "大腿骨",
-    "descriptionKo": "넙다리뼈는 넙다리에 위치하는 긴뼈로, 몸쪽에서는 엉덩관절을 이루고 먼쪽에서는 정강뼈 및 무릎뼈와 함께 무릎관절을 구성한다."
+    "descriptionKo": "넙다리뼈는 넙다리에 위치하는 긴뼈로, 몸쪽에서는 엉덩관절을 이루고 먼쪽에서는 정강뼈 및 무릎뼈와 함께 무릎관절을 구성한다.",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
   },
   "FMA7088": {
     "nameKo": "심장",
     "legacyKo": "심장",
     "hanja": "心臟",
-    "descriptionKo": "심장은 가슴안에 위치한 근육성 기관으로, 수축과 이완을 반복해 폐순환과 온몸순환으로 혈액을 보낸다."
+    "descriptionKo": "심장은 가슴안에 위치한 근육성 기관으로, 수축과 이완을 반복해 폐순환과 온몸순환으로 혈액을 보낸다.",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
   },
   "FMA7197": {
     "nameKo": "간",
     "legacyKo": "간장",
     "hanja": "肝臟",
-    "descriptionKo": "간은 오른쪽 윗배에 주로 위치하는 큰 장기로, 영양소 대사와 저장, 담즙 생성, 혈장 단백질 합성 등 여러 기능을 수행한다."
+    "descriptionKo": "간은 오른쪽 윗배에 주로 위치하는 큰 장기로, 영양소 대사와 저장, 담즙 생성, 혈장 단백질 합성 등 여러 기능을 수행한다.",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
   },
   "FMA22532": {
     "nameKo": "앞정강근",
     "legacyKo": "전경골근",
     "hanja": "前脛骨筋",
-    "descriptionKo": "앞정강근은 종아리 앞칸에 위치하며 발목관절에서 발등굽힘을 일으키고 발의 안쪽번짐에 기여한다."
+    "descriptionKo": "앞정강근은 종아리 앞칸에 위치하며 발목관절에서 발등굽힘을 일으키고 발의 안쪽번짐에 기여한다.",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
   },
   "FMA23463": {
     "nameKo": "노뼈",
     "legacyKo": "요골",
     "hanja": "橈骨",
-    "descriptionKo": "노뼈는 아래팔의 두 긴뼈 중 해부학적 자세에서 가쪽에 위치하며, 팔꿈치와 손목의 움직임에 관여한다."
+    "descriptionKo": "노뼈는 아래팔의 두 긴뼈 중 해부학적 자세에서 가쪽에 위치하며, 팔꿈치와 손목의 움직임에 관여한다.",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
   },
   "FMA23466": {
     "nameKo": "자뼈",
     "legacyKo": "척골",
     "hanja": "尺骨",
-    "descriptionKo": "자뼈는 아래팔의 두 긴뼈 중 해부학적 자세에서 안쪽에 위치하며, 위팔뼈와 함께 팔꿈치관절의 주요 골격을 이룬다."
+    "descriptionKo": "자뼈는 아래팔의 두 긴뼈 중 해부학적 자세에서 안쪽에 위치하며, 위팔뼈와 함께 팔꿈치관절의 주요 골격을 이룬다.",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
   },
   "FMA13321": {
     "nameKo": "빗장뼈",
     "legacyKo": "쇄골",
     "hanja": "鎖骨",
-    "descriptionKo": "빗장뼈는 복장뼈와 어깨뼈를 연결하는 S자 모양의 긴뼈로, 위팔이 몸통에서 적절한 위치를 유지하도록 지지한다."
+    "descriptionKo": "빗장뼈는 복장뼈와 어깨뼈를 연결하는 S자 모양의 긴뼈로, 위팔이 몸통에서 적절한 위치를 유지하도록 지지한다.",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
   },
   "FMA24485": {
     "nameKo": "무릎뼈",
     "legacyKo": "슬개골",
     "hanja": "膝蓋骨",
-    "descriptionKo": "무릎뼈는 넙다리네갈래근 힘줄 안에 위치하는 종자뼈로, 무릎 앞쪽을 보호하고 무릎 폄의 역학적 효율을 높인다."
+    "descriptionKo": "무릎뼈는 넙다리네갈래근 힘줄 안에 위치하는 종자뼈로, 무릎 앞쪽을 보호하고 무릎 폄의 역학적 효율을 높인다.",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA52734": {
+    "nameKo": "이마뼈",
+    "legacyKo": "전두골",
+    "hanja": "前頭骨",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA9613": {
+    "nameKo": "마루뼈",
+    "legacyKo": "두정골",
+    "hanja": "頭頂骨",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA52737": {
+    "nameKo": "관자뼈",
+    "legacyKo": "측두골",
+    "hanja": "側頭骨",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA52748": {
+    "nameKo": "아래턱뼈",
+    "legacyKo": "하악골",
+    "hanja": "下顎骨",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA9914": {
+    "nameKo": "척추뼈",
+    "legacyKo": "추골",
+    "hanja": "椎骨",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA7574": {
+    "nameKo": "갈비뼈",
+    "legacyKo": "늑골",
+    "hanja": "肋骨",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA13303": {
+    "nameKo": "위팔뼈",
+    "legacyKo": "상완골",
+    "hanja": "上腕骨",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA24476": {
+    "nameKo": "정강뼈",
+    "legacyKo": "경골",
+    "hanja": "脛骨",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA24479": {
+    "nameKo": "종아리뼈",
+    "legacyKo": "비골",
+    "hanja": "腓骨",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA23889": {
+    "nameKo": "손목뼈",
+    "legacyKo": "수근골",
+    "hanja": "手根骨",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA24491": {
+    "nameKo": "발목뼈",
+    "legacyKo": "족근골",
+    "hanja": "足根骨",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA50801": {
+    "nameKo": "뇌",
+    "legacyKo": "뇌",
+    "hanja": "腦",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA7148": {
+    "nameKo": "위",
+    "legacyKo": "위",
+    "hanja": "胃",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA7203": {
+    "nameKo": "콩팥",
+    "legacyKo": "신장",
+    "hanja": "腎臟",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA7204": {
+    "nameKo": "오른콩팥",
+    "legacyKo": "우신",
+    "hanja": "右腎",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA7205": {
+    "nameKo": "왼콩팥",
+    "legacyKo": "좌신",
+    "hanja": "左腎",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA7198": {
+    "nameKo": "이자",
+    "legacyKo": "췌장",
+    "hanja": "膵臟",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA7196": {
+    "nameKo": "지라",
+    "legacyKo": "비장",
+    "hanja": "脾臟",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA15900": {
+    "nameKo": "방광",
+    "legacyKo": "방광",
+    "hanja": "膀胱",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA7394": {
+    "nameKo": "기관",
+    "legacyKo": "기관",
+    "hanja": "氣管",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA13295": {
+    "nameKo": "가로막",
+    "legacyKo": "횡격막",
+    "hanja": "橫膈膜",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA7200": {
+    "nameKo": "작은창자",
+    "legacyKo": "소장",
+    "hanja": "小腸",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA7201": {
+    "nameKo": "큰창자",
+    "legacyKo": "대장",
+    "hanja": "大腸",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA7131": {
+    "nameKo": "식도",
+    "legacyKo": "식도",
+    "hanja": "食道",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA7309": {
+    "nameKo": "오른허파",
+    "legacyKo": "우폐",
+    "hanja": "右肺",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
+  },
+  "FMA7310": {
+    "nameKo": "왼허파",
+    "legacyKo": "좌폐",
+    "hanja": "左肺",
+    "status": "verified",
+    "sourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ]
   }
 }
