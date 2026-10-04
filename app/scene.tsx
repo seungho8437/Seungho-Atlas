@@ -41,9 +41,13 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
   const markers=new T.Points(markerGeometry,markerMaterial);markers.frustumCulled=false;markers.renderOrder=10;markers.visible=false;scene.add(markers);
   const acupointPositions=new Float32Array(acupointCoordinates.length*3);acupointCoordinates.forEach((point,i)=>acupointPositions.set(point.position,i*3));
   const acupointGeometry=new T.BufferGeometry();acupointGeometry.setAttribute('position',new T.BufferAttribute(acupointPositions,3));
-  const acupointMaterial=new T.PointsMaterial({color:0xb43f3f,size:9,sizeAttenuation:false,transparent:true,opacity:.95,depthTest:false});
-  acupointMaterial.onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <clipping_planes_fragment>','#include <clipping_planes_fragment>\nif (distance(gl_PointCoord, vec2(0.5)) > 0.5) discard;');};
-  const acupointMarkers=new T.Points(acupointGeometry,acupointMaterial);acupointMarkers.frustumCulled=false;acupointMarkers.renderOrder=20;acupointMarkers.visible=false;scene.add(acupointMarkers);
+  const markerCanvas=document.createElement('canvas');markerCanvas.width=markerCanvas.height=64;
+  const markerCtx=markerCanvas.getContext('2d')!;
+  markerCtx.clearRect(0,0,64,64);markerCtx.beginPath();markerCtx.arc(32,32,25,0,Math.PI*2);markerCtx.fillStyle='#ff2d55';markerCtx.fill();
+  markerCtx.lineWidth=8;markerCtx.strokeStyle='#ffffff';markerCtx.stroke();
+  const acupointTexture=new T.CanvasTexture(markerCanvas);acupointTexture.colorSpace=T.SRGBColorSpace;acupointTexture.needsUpdate=true;
+  const acupointMaterial=new T.PointsMaterial({map:acupointTexture,color:0xffffff,size:15,sizeAttenuation:false,transparent:true,alphaTest:.18,opacity:1,depthTest:false,depthWrite:false,toneMapped:false});
+  const acupointMarkers=new T.Points(acupointGeometry,acupointMaterial);acupointMarkers.frustumCulled=false;acupointMarkers.renderOrder=999;acupointMarkers.visible=false;scene.add(acupointMarkers);
   const hover=document.createElement('div');hover.className='part-hover';hover.setAttribute('role','tooltip');hover.hidden=true;el.appendChild(hover);
   type Target={index:number;x:number;y:number;left:number;right:number;top:number;bottom:number};let targets:Target[]=[];
   const projected=new T.Vector3();
@@ -135,7 +139,7 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
 
   };animate();
   const contextLost=(e:Event)=>{e.preventDefault();onError('The 3D session was paused by your device. Reload to continue.');};renderer.domElement.addEventListener('webglcontextlost',contextLost);
-  return()=>{disposed=true;abort.abort();cancelAnimationFrame(frame);observer.disconnect();controls.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());scene.traverse(o=>{if(o instanceof T.Mesh&&!geometries.includes(o.geometry)){o.geometry.dispose();const ms=Array.isArray(o.material)?o.material:[o.material];ms.forEach(m=>m.dispose());}});env.dispose();partTexture.dispose();selectionTexture.dispose();markerGeometry.dispose();markerMaterial.dispose();acupointGeometry.dispose();acupointMaterial.dispose();hover.remove();renderer.dispose();renderer.domElement.remove();};
+  return()=>{disposed=true;abort.abort();cancelAnimationFrame(frame);observer.disconnect();controls.dispose();acupointTexture.dispose();acupointGeometry.dispose();acupointMaterial.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());scene.traverse(o=>{if(o instanceof T.Mesh&&!geometries.includes(o.geometry)){o.geometry.dispose();const ms=Array.isArray(o.material)?o.material:[o.material];ms.forEach(m=>m.dispose());}});env.dispose();partTexture.dispose();selectionTexture.dispose();markerGeometry.dispose();markerMaterial.dispose();acupointGeometry.dispose();acupointMaterial.dispose();hover.remove();renderer.dispose();renderer.domElement.remove();};
  },[atlas,acupointCoordinates]);
  return <div className="scene" ref={host}/>;
 }
