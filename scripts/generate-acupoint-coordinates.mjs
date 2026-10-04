@@ -173,16 +173,16 @@ function applyWhoConstraints(input,text,side){
   }
   const refs=[
     [/앞겨드랑주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .735],
-    [/손바닥쪽\s*손목주름[^,.]{0,35}?(위|아래|몸쪽|먼쪽)으로\s*(\d+(?:\.\d+)?)\s*B-cun/, .385],
-    [/손등쪽\s*손목주름[^,.]{0,35}?(위|아래|몸쪽|먼쪽)으로\s*(\d+(?:\.\d+)?)\s*B-cun/, .385],
+    [/손바닥쪽\s*손목주름[^,.]{0,35}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/, .385],
+    [/손등쪽\s*손목주름[^,.]{0,35}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/, .385],
     [/팔오금주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .55],
     [/무릎뼈바닥[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .215],
-    [/ST35[^,.]{0,35}?(위|아래)(?:쪽)?으로\s*(\d+(?:\.\d+)?)\s*B-cun/, .20],
+    [/ST35[^,.]{0,35}?(위로|위쪽으로|아래로|아래쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/, .20],
     [/팔꿈치머리\s*융기[^,.]{0,35}?(몸쪽|먼쪽|위|아래)으로\s*(\d+(?:\.\d+)?)\s*B-cun/, .55],
   ];
   for(const [re,base] of refs){
     const m=text.match(re); if(!m)continue;
-    const n=Number(m[2]), up=(m[1]==='위'||m[1]==='몸쪽');
+    const n=Number(m[2]), up=(m[1].startsWith('위')||m[1].startsWith('몸쪽'));
     t[supAxis]=norm(supAxis,base)+(up?1:-1)*n*cunY; count++; break;
   }
   const sacLat=text.match(/정중엉치뼈능선[^,.]{0,30}?가쪽으로\s*(\d+(?:\.\d+)?)\s*B-cun/);
@@ -191,19 +191,19 @@ function applyWhoConstraints(input,text,side){
     t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*Math.min(.92,n/3*.7);
     count++;
   }
-  const malleolus=text.match(/(안쪽|가쪽)복사(?:\s*융기)?에서[^,.]{0,30}?(위|아래|몸쪽|먼쪽)으로\s*(\d+(?:\.\d+)?)\s*B-cun/);
+  const malleolus=text.match(/(안쪽|가쪽)복사(?:\s*융기)?에서[^,.]{0,30}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(malleolus){
-    const up=(malleolus[2]==='위'||malleolus[2]==='몸쪽');
+    const up=(malleolus[2].startsWith('위')||malleolus[2].startsWith('몸쪽'));
     t[supAxis]=norm(supAxis,.055)+(up?1:-1)*Number(malleolus[3])*cunY;count++;
   }
-  const popliteal=text.match(/오금주름에서[^,.]{0,30}?(위|아래|몸쪽|먼쪽)으로\s*(\d+(?:\.\d+)?)\s*B-cun/);
+  const popliteal=text.match(/(?<!팔)오금주름에서[^,.]{0,30}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(popliteal){
-    const up=(popliteal[1]==='위'||popliteal[1]==='몸쪽');
+    const up=(popliteal[1].startsWith('위')||popliteal[1].startsWith('몸쪽'));
     t[supAxis]=norm(supAxis,.20)+(up?1:-1)*Number(popliteal[2])*cunY;count++;
   }
   if(/팔오금주름\s*위/.test(text)&&!/[0-9]\s*B-cun/.test(text)){t[supAxis]=norm(supAxis,.55);count++;}
   if(/손바닥쪽\s*손목주름\s*위에/.test(text)){t[supAxis]=norm(supAxis,.385);count++;}
-  if(/오금주름의\s*가운데|오금주름\s*위/.test(text)){t[supAxis]=norm(supAxis,.20);count++;}
+  if(!/팔오금주름/.test(text)&&/오금주름의\s*가운데|오금주름\s*위/.test(text)){t[supAxis]=norm(supAxis,.20);count++;}
   if(/코끝/.test(text)){t[supAxis]=norm(supAxis,.865);t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.46;count+=2;}
   if(/인중(?:의)?\s*정중선|인중의\s*중점/.test(text)){t[supAxis]=norm(supAxis,.835);count++;}
   if(/윗입술결절/.test(text)){t[supAxis]=norm(supAxis,.82);count++;}
