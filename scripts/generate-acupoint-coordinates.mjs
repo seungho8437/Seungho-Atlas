@@ -257,7 +257,9 @@ function applyWhoConstraints(input,text,side){
   if(/앞위쪽/.test(text)){t[supAxis]+=cunY*.7;count++;}
   if(/배꼽\s*중심과\s*같은\s*높이/.test(text)){t[supAxis]=norm(supAxis,.455);count++;}
   if(/가쪽배/.test(text)&&sideSign){
-    t[lrAxis]=localSideLateral(t[supAxis],sideSign,.78);
+    // Keep lateral abdominal points on the torso rather than allowing a
+    // same-height arm/hand surface to dominate the cross-section sampler.
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*extent[lrAxis]*.18;
     count++;
   }
   if(/무릎뼈의\s*아래가쪽\s*오목|무릎인대\s*가쪽의\s*오목/.test(text)&&sideSign){
@@ -762,6 +764,17 @@ function applyReviewedExceptionProjection(item){
     item.validation.preProjectionTarget=target.map(v=>+v.toFixed(4));
     item.validation.reviewedException=rule;
   };
+
+  if(item.acupointId==='CV1'){
+    const anus=conceptStats('FMA21930',0,lrAxis,leftSign);
+    const perineal=conceptStats('FMA19728',0,lrAxis,leftSign)||conceptStats('FMA9623',0,lrAxis,leftSign);
+    if(anus&&perineal){
+      const target=anus.center.map((v,i)=>(v+perineal.center[i])/2);
+      target[lrAxis]=bodyCenter[lrAxis];
+      mark(target,{lr:true},'reviewed-CV1-external-anal-sphincter-perineal-muscle-midpoint');
+      return true;
+    }
+  }
 
   if(item.acupointId==='BL67'){
     const p1=resultByKey.get('BL66:'+item.side),p2=resultByKey.get('BL65:'+item.side);
