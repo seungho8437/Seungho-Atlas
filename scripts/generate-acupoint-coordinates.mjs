@@ -787,16 +787,20 @@ function applyReviewedExceptionProjection(item){
       return true;
     }
   }
-  if(item.acupointId==='GB41' || item.acupointId==='GB42'){
-    const ankle=resultByKey.get('GB40:'+item.side), web=resultByKey.get('GB43:'+item.side);
+  if(item.acupointId==='GB41'){
+    const ankle=resultByKey.get('GB40:'+item.side),web=resultByKey.get('GB43:'+item.side);
     if(ankle&&web){
-      const f=item.acupointId==='GB41'?.38:.68;
-      const target=ankle.position.map((v,i)=>v*(1-f)+web.position[i]*f);
-      if(item.acupointId==='GB42'){
-        const st43=resultByKey.get('ST43:'+item.side);
-        if(st43) target[lrAxis]=st43.position[lrAxis]+sideSign*extent[lrAxis]*.060;
-      }
-      mark(target,{sup:true,lr:true},item.acupointId==='GB41'?'reviewed-GB41-between-GB40-GB43':'reviewed-GB42-lateral-to-ST43');
+      const target=ankle.position.map((v,i)=>v*.62+web.position[i]*.38);
+      mark(target,{sup:true,lr:true},'reviewed-GB41-between-GB40-GB43');
+      return true;
+    }
+  }
+  if(item.acupointId==='GB42'){
+    const gb41=resultByKey.get('GB41:'+item.side),gb43=resultByKey.get('GB43:'+item.side);
+    if(gb41&&gb43){
+      const f=.70;
+      const target=gb41.position.map((v,i)=>v*(1-f)+gb43.position[i]*f);
+      mark(target,{sup:true,lr:true},'reviewed-GB42-between-GB41-GB43');
       return true;
     }
   }
