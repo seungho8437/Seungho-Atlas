@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T10:39:13.581Z",
+  "generatedAt": "2026-10-04T10:42:18.235Z",
   "logicalAcupoints": 361,
   "physicalCoordinates": 670,
   "expectedPhysicalCoordinates": 670,
@@ -42,12 +42,6 @@
       "TE2"
     ],
     [
-      "LI5",
-      "GB7",
-      "GB9",
-      "GB19"
-    ],
-    [
       "LI6",
       "LI7"
     ],
@@ -108,6 +102,30 @@
     [
       "ST5",
       "ST6"
+    ],
+    [
+      "ST26",
+      "SP14",
+      "KI15"
+    ],
+    [
+      "ST26",
+      "KI15"
+    ],
+    [
+      "ST27",
+      "ST28",
+      "KI13",
+      "KI14",
+      "GB27"
+    ],
+    [
+      "ST27",
+      "SP14"
+    ],
+    [
+      "ST29",
+      "KI12"
     ],
     [
       "ST30",
@@ -237,13 +255,11 @@
     ],
     [
       "BL3",
-      "TE22",
-      "GB13",
-      "GB15",
-      "GB16"
+      "BL4"
     ],
     [
       "BL3",
+      "TE22",
       "GB13",
       "GB15"
     ],
@@ -252,12 +268,8 @@
       "BL5"
     ],
     [
-      "BL6",
-      "BL7"
-    ],
-    [
-      "BL6",
-      "BL7"
+      "BL5",
+      "TE22"
     ],
     [
       "BL28",
@@ -356,13 +368,20 @@
       "GB19"
     ],
     [
-      "GB9",
+      "GB7",
+      "GB19"
+    ],
+    [
       "GB10",
       "GB11"
     ],
     [
       "GB10",
       "GB11"
+    ],
+    [
+      "GB13",
+      "GB15"
     ],
     [
       "GB26",
@@ -410,8 +429,8 @@
     "low": 90
   },
   "projectionDistance": {
-    "max": 0.1796,
-    "mean": 0.04669253731343282
+    "max": 0.1532,
+    "mean": 0.04089417910447762
   },
   "axes": {
     "source": "native BodyParts3D 4.0 atlas coordinates",
