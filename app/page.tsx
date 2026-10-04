@@ -71,8 +71,33 @@ export default function Home(){
  useEffect(()=>{if(!atlas)return;return registerAtlasTools(atlas,c=>flushSync(()=>choose(c)));},[atlas]);
  const choosePart=(id:string)=>{const p=parts.get(id);if(!p)return;setChosen({id:p.conceptId,name:p.name,elements:[id]});setState(s=>({...s,selected:[id],isolate:false,rotate:false}));setDetails(true);setPanel(null);};
  const toggle=(id:SystemId)=>{setDetails(false);setState(s=>({...s,selected:[],isolate:false,visible:s.visible.includes(id)?s.visible.filter(x=>x!==id):[...s.visible,id]}));};
- const reset=()=>{setState(s=>({...initial,visible:DEFAULT_VISIBLE,reset:s.reset+1}));setChosen(null);setDetails(false);setPanel(null);};
- const openPanel=(next:'layers'|'search')=>{setDetails(false);setPanel(p=>p===next?null:next);};
+ const reset=()=>{setState(s=>({...initial,visible:DEFAULT_VISIBLE,reset:s.reset+1}));setChosen(null);setDetails(false);setPanel(null);setAnchorTarget(null);setAnchorDraft(null);setDetectorProposal(null);};
+ const openPanel=(next:'layers'|'search'|'anchors')=>{setDetails(false);setPanel(p=>p===next?null:next);};
+ const beginAnchor=(landmarkId:string)=>{
+  setAnchorTarget(landmarkId);setAnchorDraft(null);setDetectorProposal(null);setShowAcupoints(false);setKnowledge(null);setDetails(false);setPanel('anchors');
+  setState(s=>({...s,explode:0,visible:['integumentary'],selected:[],isolate:false,rotate:false,reset:s.reset+1}));
+ };
+ const useDetectorProposal=()=>{if(!detectorProposal)return;setAnchorDraft({...detectorProposal,method:'specialized-detector+manual-confirmation'});};
+ const acceptAnchor=()=>{
+  if(!atlas||!anchorTarget||!anchorDraft)return;
+  const record:SpecializedLandmarkAnchorRecord={
+   ...anchorDraft,landmarkId:anchorTarget,modelRevision:atlas.version,reviewStatus:'accepted',
+   evidence:{views:[state.view],definitionCheck:true,detectorMetrics:anchorDraft.detectorId?{detectorId:anchorDraft.detectorId,detectorConfidence:anchorDraft.detectorConfidence??'moderate'}:undefined},
+   provenance:{createdBy:'interactive-reviewer',createdAt:new Date().toISOString(),sourceSpecVersion:1}
+  };
+  setLandmarkAnchors(current=>{
+   const next=[...current.filter(x=>x.landmarkId!==anchorTarget),record];
+   try{localStorage.setItem(`seungho-atlas-specialized-landmark-anchors:v1:${atlas.version}`,JSON.stringify(next));}catch{}
+   return next;
+  });
+  setAnchorDraft(null);setDetectorProposal(null);
+ };
+ const exportAnchors=()=>{
+  if(!atlas)return;
+  const payload={schemaVersion:1,title:'Manual/specialized acupoint landmark anchor registry',modelRevision:atlas.version,records:landmarkAnchors};
+  const blob=new Blob([JSON.stringify(payload,null,2)+'\n'],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+  a.href=url;a.download='acupoint-specialized-landmark-anchors.json';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+ };
  return <main className="studio">
   {atlas&&<AnatomyScene atlas={atlas} state={{...state,inspectorOpen:details&&selectedParts.length>0}} acupointCoordinates={acupointCoordinates} showAcupoints={showAcupoints} onSelect={choosePart} onSelectAcupoint={id=>{const point=acupoints.find(item=>item.id===id);if(point)chooseAcupoint(point);}} onProgress={n=>{setProgress(n);if(n===100)setError('');}} onError={setError}/>}
   <div className="vignette"/>
