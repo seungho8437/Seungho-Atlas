@@ -45,7 +45,7 @@ for(const [id,entry] of Object.entries(anatomy)){
   if(!base||!sourceBacked.has(kaaAudit.records?.[base.id]?.result))continue;
   lateralCandidates++;
 
-  const expected=(m[1].toLowerCase()==='right'?'오른쪽 ':'왼쪽 ')+base.nameKo;
+  const expected=(m[1].toLowerCase()==='right'?'오른':'왼')+base.nameKo;
   if(entry.nameKo!==expected){
     changed.push({id,field:'nameKo',from:entry.nameKo,to:expected,rule:'KAA-safe-lateral-base',baseId:base.id});
     entry.nameKo=expected;
@@ -61,7 +61,7 @@ for(const [id,entry] of Object.entries(anatomy)){
   rec.nameKo=entry.nameKo;
   rec.result='derived-from-KAA-lateral-base';
   rec.baseId=base.id;
-  rec.note='Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른쪽/왼쪽 + space + base Korean.';
+  rec.note='Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.';
   if(pages?.length)rec.pages=pages;
   kaaAudit.records[id]=rec;
 }
@@ -87,7 +87,7 @@ kaaAudit.method=[
   'Preserve BodyParts3D/FMA sourceNameEn as the immutable English identity.',
   'Use direct KAA Korean-English matches as authoritative for nameKo.',
   'Allow automatic laterality only for ^(right|left) + exact standalone base English concept with direct/component KAA support.',
-  'Derive Korean laterality as 오른쪽/왼쪽 + one space + the KAA-supported base Korean name.',
+  'Derive Korean laterality as 오른/왼 + the KAA-supported base Korean name.',
   'Exclude nested laterality phrases from automatic rewriting.',
   'Do not modify or claim verification of legacyKo or hanja in this Korean-English normalization pass.'
 ];
@@ -112,7 +112,7 @@ for(const [id,entry] of Object.entries(anatomy)){
   if(!m||/\b(?:right|left)\b/i.test(m[2]))continue;
   const base=byEnglish.get(norm(m[2]));
   if(!base||!sourceBacked.has(kaaAudit.records?.[base.id]?.result)||protectedDirect.has(id)||entry.status==='verified')continue;
-  const expected=(m[1].toLowerCase()==='right'?'오른쪽 ':'왼쪽 ')+base.nameKo;
+  const expected=(m[1].toLowerCase()==='right'?'오른':'왼')+base.nameKo;
   if(entry.nameKo!==expected)hard.push({id,type:'safe-lateral-nameKo-drift',baseId:base.id,expected,actual:entry.nameKo});
   if(base.nameKo?.endsWith('근')&&!entry.nameKo?.endsWith('근'))hard.push({id,type:'muscle-head-loss',baseId:base.id,base:base.nameKo,actual:entry.nameKo});
 }
