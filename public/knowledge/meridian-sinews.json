@@ -8,8 +8,10 @@
       "en": "Lung Meridian Sinew"
     },
     "sourceIds": [
-      "WHO_TCM_TERMS_2022"
-    ]
+      "WHO_TCM_TERMS_2022",
+      "LINGSHU_JINGJIN"
+    ],
+    "overviewKo": "엄지에서 시작해 손바닥의 엄지두덩과 손목 가쪽을 지나 아래팔·팔꿈치·위팔 안쪽과 겨드랑이로 이어지고, 앞어깨와 빗장뼈 위쪽에서 결속한다. 몸통 쪽으로는 가슴과 갈비부위로 이어지는 고전적 주행으로 설명된다."
   },
   {
     "id": "LI-JINGJIN",
@@ -20,8 +22,10 @@
       "en": "Large Intestine Meridian Sinew"
     },
     "sourceIds": [
-      "WHO_TCM_TERMS_2022"
-    ]
+      "WHO_TCM_TERMS_2022",
+      "LINGSHU_JINGJIN"
+    ],
+    "overviewKo": "집게손가락에서 시작해 손목·아래팔 가쪽·팔꿈치·위팔 가쪽과 어깨로 올라가며, 어깨뼈 주변과 목을 거쳐 볼·광대·머리와 턱 부위로 이어지는 고전적 주행으로 설명된다."
   },
   {
     "id": "ST-JINGJIN",
@@ -32,8 +36,10 @@
       "en": "Stomach Meridian Sinew"
     },
     "sourceIds": [
-      "WHO_TCM_TERMS_2022"
-    ]
+      "WHO_TCM_TERMS_2022",
+      "LINGSHU_JINGJIN"
+    ],
+    "overviewKo": "가운데 발가락 쪽에서 시작해 발등·정강이 앞쪽·무릎·넙다리 앞가쪽과 엉덩관절 부위를 지나 배·가슴으로 올라가며, 목과 입·볼·코·눈 주위 및 귀 앞쪽으로 이어지는 고전적 주행으로 설명된다."
   },
   {
     "id": "SP-JINGJIN",
@@ -44,8 +50,10 @@
       "en": "Spleen Meridian Sinew"
     },
     "sourceIds": [
-      "WHO_TCM_TERMS_2022"
-    ]
+      "WHO_TCM_TERMS_2022",
+      "LINGSHU_JINGJIN"
+    ],
+    "overviewKo": "엄지발가락 안쪽에서 시작해 발목 안쪽·무릎 안쪽·넙다리 안쪽을 거쳐 생식기 부위에 모이고, 배꼽과 배·갈비부위 및 가슴으로 이어지며 일부는 척주와 연결되는 것으로 설명된다."
   },
   {
     "id": "HT-JINGJIN",
@@ -56,8 +64,10 @@
       "en": "Heart Meridian Sinew"
     },
     "sourceIds": [
-      "WHO_TCM_TERMS_2022"
-    ]
+      "WHO_TCM_TERMS_2022",
+      "LINGSHU_JINGJIN"
+    ],
+    "overviewKo": "새끼손가락 안쪽에서 시작해 손목·팔꿈치 안쪽·위팔 안쪽을 지나 겨드랑이와 가슴으로 이어지며, 몸통 내부에서는 가슴과 횡격막 부위를 지나 배꼽 방향으로 연결되는 고전적 주행으로 설명된다."
   },
   {
     "id": "SI-JINGJIN",
@@ -68,8 +78,10 @@
       "en": "Small Intestine Meridian Sinew"
     },
     "sourceIds": [
-      "WHO_TCM_TERMS_2022"
-    ]
+      "WHO_TCM_TERMS_2022",
+      "LINGSHU_JINGJIN"
+    ],
+    "overviewKo": "새끼손가락에서 시작해 손목·아래팔 뒤안쪽·팔꿈치·위팔 뒤쪽과 겨드랑이·어깨뼈 주변을 지나 목으로 올라가며, 귀 뒤와 턱·눈가 주변으로 갈라지는 고전적 주행으로 설명된다."
   },
   {
     "id": "BL-JINGJIN",
@@ -80,8 +92,10 @@
       "en": "Bladder Meridian Sinew"
     },
     "sourceIds": [
-      "WHO_TCM_TERMS_2022"
-    ]
+      "WHO_TCM_TERMS_2022",
+      "LINGSHU_JINGJIN"
+    ],
+    "overviewKo": "새끼발가락 쪽에서 시작해 발목 가쪽과 발꿈치·종아리 뒤쪽·오금·넙다리 뒤쪽·볼기부위를 지나 척주 양옆과 목덜미·뒤통수·머리로 올라가며, 눈과 코·어깨 주변으로 분지하는 것으로 설명된다."
   },
   {
     "id": "KI-JINGJIN",
@@ -92,8 +106,10 @@
       "en": "Kidney Meridian Sinew"
     },
     "sourceIds": [
-      "WHO_TCM_TERMS_2022"
-    ]
+      "WHO_TCM_TERMS_2022",
+      "LINGSHU_JINGJIN"
+    ],
+    "overviewKo": "새끼발가락 아래와 발바닥에서 시작해 발목 안쪽과 발꿈치·무릎 안쪽·넙다리 안쪽을 지나 생식기 부위에 모이고, 척주 안쪽을 따라 목덜미와 뒤통수 방향으로 이어지는 고전적 주행으로 설명된다."
   },
   {
     "id": "PC-JINGJIN",
@@ -104,8 +120,10 @@
       "en": "Pericardium Meridian Sinew"
     },
     "sourceIds": [
-      "WHO_TCM_TERMS_2022"
-    ]
+      "WHO_TCM_TERMS_2022",
+      "LINGSHU_JINGJIN"
+    ],
+    "overviewKo": "가운데손가락에서 시작해 손바닥·손목·아래팔·팔꿈치 안쪽과 위팔 안쪽을 지나 겨드랑이로 올라가며, 가슴 앞뒤와 옆구리로 퍼지고 가슴 내부와 횡격막 부위로 연결되는 것으로 설명된다."
   },
   {
     "id": "TE-JINGJIN",
@@ -116,8 +134,10 @@
       "en": "Triple Energizer Meridian Sinew"
     },
     "sourceIds": [
-      "WHO_TCM_TERMS_2022"
-    ]
+      "WHO_TCM_TERMS_2022",
+      "LINGSHU_JINGJIN"
+    ],
+    "overviewKo": "넷째손가락에서 시작해 손목·아래팔·팔꿈치·위팔 가쪽을 지나 어깨와 목으로 올라가며, 볼과 혀뿌리 쪽 및 귀 주변·관자·눈가 쪽으로 분지하는 고전적 주행으로 설명된다."
   },
   {
     "id": "GB-JINGJIN",
@@ -128,8 +148,10 @@
       "en": "Gallbladder Meridian Sinew"
     },
     "sourceIds": [
-      "WHO_TCM_TERMS_2022"
-    ]
+      "WHO_TCM_TERMS_2022",
+      "LINGSHU_JINGJIN"
+    ],
+    "overviewKo": "넷째발가락에서 시작해 발목 가쪽·무릎 가쪽·넙다리 가쪽·엉덩이와 옆구리를 지나 갈비와 겨드랑이·가슴·빗장뼈 위쪽으로 이어지고, 목과 귀 뒤·관자·정수리·턱·광대·눈가로 올라가는 것으로 설명된다."
   },
   {
     "id": "LR-JINGJIN",
@@ -140,7 +162,9 @@
       "en": "Liver Meridian Sinew"
     },
     "sourceIds": [
-      "WHO_TCM_TERMS_2022"
-    ]
+      "WHO_TCM_TERMS_2022",
+      "LINGSHU_JINGJIN"
+    ],
+    "overviewKo": "엄지발가락 발등 쪽에서 시작해 발목 앞안쪽과 정강이 안쪽·무릎 안쪽·넙다리 안쪽을 지나 생식기 부위에 모이며, 다른 경근과 결속하는 고전적 주행으로 설명된다."
   }
 ]
