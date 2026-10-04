@@ -1221,7 +1221,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "right kidney"
+    "sourceNameEn": "right kidney",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "direct-existing-KAA"
   },
   "FMA7205": {
     "nameKo": "왼콩팥",
@@ -1231,7 +1235,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "left kidney"
+    "sourceNameEn": "left kidney",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "direct-existing-KAA"
   },
   "FMA7206": {
     "sourceNameEn": "duodenum",
@@ -3707,7 +3715,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "right clavicle"
+    "sourceNameEn": "right clavicle",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13323": {
     "nameKo": "왼쪽 빗장뼈",
@@ -3717,7 +3729,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "left clavicle"
+    "sourceNameEn": "left clavicle",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13324": {
     "sourceNameEn": "cephalic vein",
@@ -4119,7 +4135,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "right scapula"
+    "sourceNameEn": "right scapula",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13396": {
     "nameKo": "왼쪽 어깨뼈",
@@ -4129,7 +4149,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "left scapula"
+    "sourceNameEn": "left scapula",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13397": {
     "nameKo": "앞톱니근",
@@ -7880,7 +7904,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "right tibialis anterior"
+    "sourceNameEn": "right tibialis anterior",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22545": {
     "nameKo": "왼쪽 앞정강근",
@@ -7890,7 +7918,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "left tibialis anterior"
+    "sourceNameEn": "left tibialis anterior",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22546": {
     "nameKo": "오른폄근엄지발가락긴",
@@ -9692,7 +9724,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "right humerus"
+    "sourceNameEn": "right humerus",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA23131": {
     "nameKo": "왼쪽 위팔뼈",
@@ -9702,7 +9738,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "left humerus"
+    "sourceNameEn": "left humerus",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA23179": {
     "nameKo": "어깨휘돌이동맥",
@@ -9758,7 +9798,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "right radius"
+    "sourceNameEn": "right radius",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA23465": {
     "nameKo": "왼쪽 노뼈",
@@ -9768,7 +9812,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "left radius"
+    "sourceNameEn": "left radius",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA23466": {
     "nameKo": "자뼈",
@@ -9796,7 +9844,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "right ulna"
+    "sourceNameEn": "right ulna",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA23468": {
     "nameKo": "왼쪽 자뼈",
@@ -9806,7 +9858,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "left ulna"
+    "sourceNameEn": "left ulna",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA23706": {
     "nameKo": "아래팔뼈사이막",
@@ -9956,7 +10012,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "carpal bone"
+    "sourceNameEn": "carpal bone",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "direct-existing-KAA"
   },
   "FMA23899": {
     "nameKo": "첫째손허리뼈",
@@ -10456,7 +10516,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "right femur"
+    "sourceNameEn": "right femur",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA24475": {
     "nameKo": "왼쪽 넙다리뼈",
@@ -10466,7 +10530,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "left femur"
+    "sourceNameEn": "left femur",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA24476": {
     "nameKo": "정강뼈",
@@ -10493,7 +10561,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "right tibia"
+    "sourceNameEn": "right tibia",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA24478": {
     "nameKo": "왼쪽 정강뼈",
@@ -10503,7 +10575,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "left tibia"
+    "sourceNameEn": "left tibia",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA24479": {
     "nameKo": "종아리뼈",
@@ -10530,7 +10606,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "right fibula"
+    "sourceNameEn": "right fibula",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA24481": {
     "nameKo": "왼쪽 종아리뼈",
@@ -10540,7 +10620,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "left fibula"
+    "sourceNameEn": "left fibula",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA24482": {
     "sourceNameEn": "right talus",
@@ -10582,7 +10666,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "right patella"
+    "sourceNameEn": "right patella",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA24487": {
     "nameKo": "왼쪽 무릎뼈",
@@ -10592,7 +10680,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "left patella"
+    "sourceNameEn": "left patella",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA24491": {
     "nameKo": "발목뼈",
@@ -10602,7 +10694,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "tarsal bone"
+    "sourceNameEn": "tarsal bone",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "direct-existing-KAA"
   },
   "FMA24492": {
     "nameKo": "발허리뼈",
@@ -17698,7 +17794,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "right temporal bone"
+    "sourceNameEn": "right temporal bone",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA52739": {
     "nameKo": "왼쪽 관자뼈",
@@ -17708,7 +17808,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "left temporal bone"
+    "sourceNameEn": "left temporal bone",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA52740": {
     "sourceNameEn": "ethmoid",
@@ -17833,7 +17937,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "right parietal bone"
+    "sourceNameEn": "right parietal bone",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA52789": {
     "nameKo": "왼쪽 마루뼈",
@@ -17843,7 +17951,11 @@
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "sourceNameEn": "left parietal bone"
+    "sourceNameEn": "left parietal bone",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA52892": {
     "sourceNameEn": "right zygomatic bone",
