@@ -87,11 +87,14 @@ function findAll(re,text,mapper){
  while((m=rx.exec(text))){out.push(mapper(m));if(m[0].length===0)rx.lastIndex++;}
  return out;
 }
-function nearestDirection(text,index){
+function nearestDirection(text,index,length=0){
  // Korean location statements usually place the anatomical direction either
  // immediately before "...으로 N B-cun" or just after "N B-cun 아래/위".
  // Select the closest directional token to the measurement rather than the
  // first direction in a broad window (which can describe the region/aspect).
+ const suffix=text.slice(index+length,index+length+14);
+ const suffixMatch=suffix.match(/^\s*(위|아래)(?:쪽)?(?:에|로|으로|이다|해당|높이)?/);
+ if(suffixMatch)return {id:suffixMatch[1]==='위'?'superior':'inferior',evidence:suffixMatch[1]};
  const lo=Math.max(0,index-28),hi=Math.min(text.length,index+28),window=text.slice(lo,hi),relative=index-lo;
  const candidates=[];
  for(const [id,re] of DIR_RULES){
@@ -112,7 +115,7 @@ function build(point){
  const region=regionOf(text);
  const ss=statements(text);
  const measurements=findAll(/(\d+(?:\.\d+)?)\s*(B-cun|F-cun)/g,text,m=>({
-   value:Number(m[1]),unit:m[2],text:m[0],start:m.index,end:m.index+m[0].length,direction:nearestDirection(text,m.index)
+   value:Number(m[1]),unit:m[2],text:m[0],start:m.index,end:m.index+m[0].length,direction:nearestDirection(text,m.index,m[0].length)
  }));
  const fractions=findAll(/(\d+)\s*\/\s*(\d+)/g,text,m=>({
    numerator:Number(m[1]),denominator:Number(m[2]),value:Number(m[1])/Number(m[2]),text:m[0],start:m.index,end:m.index+m[0].length
