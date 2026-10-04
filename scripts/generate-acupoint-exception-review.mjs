@@ -82,4 +82,6 @@ svg+=`<text x="70" y="970" class="t" style="font-size:22px">Group findings</text
 for(const r of reviews){const ds=r.pairDistances.length?' · d='+r.pairDistances.map(x=>x.side+':'+x.distance).join(', '):'';svg+=`<text x="70" y="${y}" class="r b">${esc(r.key)} — ${esc(r.status)}${esc(ds)}</text>`;y+=22;svg+=`<text x="92" y="${y}" class="r">${esc(r.expected)}</text>`;y+=26;}
 svg+=`<text x="70" y="${H-55}" class="s">Global QC: near clusters ${audit.duplicateClusters.length}; exact duplicates ${audit.exactDuplicateClusters.length}; invalid geometry/laterality ${audit.invalidGeometryOrLaterality.length}. Model-level anatomical QC; not cadaveric/imaging validation.</text></svg>`;
 fs.writeFileSync(new URL('public/knowledge/acupoint-coordinate-exception-review.svg',root),svg);
+const reviewRequired=report.reviews.filter(r=>r.status==='review-required');
+if(reviewRequired.length)throw new Error('Focused acupoint exception review failed: '+JSON.stringify(reviewRequired.map(r=>r.key)));
 console.log(JSON.stringify({reviewedGroups:reviews.length,statuses:reviews.reduce((m,r)=>(m[r.status]=(m[r.status]||0)+1,m),{})},null,2));
