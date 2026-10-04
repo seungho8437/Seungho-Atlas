@@ -19736,19 +19736,17 @@
   },
   "FMA83115": {
     "sourceNameEn": "cell part cluster",
-    "unresolvedTokens": [
-      "cell",
-      "cluster"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "세포부분 무리",
+    "legacyKo": "세포부 군",
+    "hanja": "細胞部群"
   },
   "FMA83143": {
     "sourceNameEn": "cell part cluster of neuraxis",
-    "unresolvedTokens": [
-      "cell",
-      "cluster"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "신경축의 세포부분 무리",
+    "legacyKo": "신경축 세포부 군",
+    "hanja": "神經軸細胞部群"
   },
   "FMA83153": {
     "nameKo": "신경축기관구성요소",
@@ -19787,10 +19785,10 @@
   },
   "FMA83740": {
     "sourceNameEn": "interpeduncular fossa",
-    "unresolvedTokens": [
-      "interpeduncular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "다리사이오목",
+    "legacyKo": "각간와",
+    "hanja": "脚間窩"
   },
   "FMA83840": {
     "sourceNameEn": "nucleus of brain",
@@ -24241,9 +24239,9 @@
   },
   "FMA270201": {
     "sourceNameEn": "basicranial part of head proper",
-    "unresolvedTokens": [
-      "basicranial"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "고유머리의 머리바닥부분",
+    "legacyKo": "고유두부 두개저부",
+    "hanja": "固有頭部頭蓋底部"
   }
 }
