@@ -185,6 +185,35 @@ function applyWhoConstraints(input,text,side){
     const n=Number(m[2]), up=(m[1]==='위'||m[1]==='몸쪽');
     t[supAxis]=norm(supAxis,base)+(up?1:-1)*n*cunY; count++; break;
   }
+  const sacLat=text.match(/정중엉치뼈능선[^,.]{0,30}?가쪽으로\s*(\d+(?:\.\d+)?)\s*B-cun/);
+  if(sacLat&&sideSign){
+    const n=Number(sacLat[1]);
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*Math.min(.92,n/3*.7);
+    count++;
+  }
+  const malleolus=text.match(/(안쪽|가쪽)복사(?:\s*융기)?에서[^,.]{0,30}?(위|아래|몸쪽|먼쪽)으로\s*(\d+(?:\.\d+)?)\s*B-cun/);
+  if(malleolus){
+    const up=(malleolus[2]==='위'||malleolus[2]==='몸쪽');
+    t[supAxis]=norm(supAxis,.055)+(up?1:-1)*Number(malleolus[3])*cunY;count++;
+  }
+  const popliteal=text.match(/오금주름에서[^,.]{0,30}?(위|아래|몸쪽|먼쪽)으로\s*(\d+(?:\.\d+)?)\s*B-cun/);
+  if(popliteal){
+    const up=(popliteal[1]==='위'||popliteal[1]==='몸쪽');
+    t[supAxis]=norm(supAxis,.20)+(up?1:-1)*Number(popliteal[2])*cunY;count++;
+  }
+  if(/팔오금주름\s*위/.test(text)&&!/[0-9]\s*B-cun/.test(text)){t[supAxis]=norm(supAxis,.55);count++;}
+  if(/손바닥쪽\s*손목주름\s*위에/.test(text)){t[supAxis]=norm(supAxis,.385);count++;}
+  if(/오금주름의\s*가운데|오금주름\s*위/.test(text)){t[supAxis]=norm(supAxis,.20);count++;}
+  if(/코끝/.test(text)){t[supAxis]=norm(supAxis,.865);t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.46;count+=2;}
+  if(/인중(?:의)?\s*정중선|인중의\s*중점/.test(text)){t[supAxis]=norm(supAxis,.835);count++;}
+  if(/윗입술결절/.test(text)){t[supAxis]=norm(supAxis,.82);count++;}
+  if(/윗입술소대/.test(text)){t[supAxis]=norm(supAxis,.808);count++;}
+  if(/턱입술고랑/.test(text)){t[supAxis]=norm(supAxis,.785);count++;}
+  if(/안쪽눈구석/.test(text)&&sideSign){t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*.16;count++;}
+  if(/눈확아래구멍/.test(text)){t[supAxis]-=2.0*cunY;count++;}
+  if(/콧방울\s*아래모서리와\s*같은\s*높이/.test(text)){t[supAxis]=norm(supAxis,.855);count++;}
+  if(/목빗근[^,.]{0,18}?뒤/.test(text)){t[apAxis]-=anteriorSign*extent[apAxis]*.035;count++;}
+  if(/목빗근[^,.]{0,18}?앞/.test(text)){t[apAxis]+=anteriorSign*extent[apAxis]*.035;count++;}
   if(side==='midline'){t[lrAxis]=bodyCenter[lrAxis];count++;}
   return {target:t,count};
 }
@@ -274,6 +303,38 @@ function whoTextLandmarks(text,sideSign){
   hits.sort((a,b)=>b.score-a.score||b.term.length-a.term.length);
   return hits.slice(0,6);
 }
+function semanticConceptHits(text,side){
+  const sideWord=side==='left'?'left':side==='right'?'right':null;
+  const patterns=[];
+  if(/엄지(?:손가락)?[^,.]{0,12}끝마디뼈/.test(text))patterns.push(/distal phalanx of (?:left |right )?thumb/i);
+  if(/집게손가락[^,.]{0,12}끝마디뼈/.test(text))patterns.push(/distal phalanx of (?:left |right )?index finger/i);
+  if(/새끼손가락[^,.]{0,12}끝마디뼈/.test(text))patterns.push(/distal phalanx of (?:left |right )?little finger/i);
+  if(/넷째손가락[^,.]{0,12}끝마디뼈/.test(text))patterns.push(/distal phalanx of (?:left |right )?(?:ring|fourth) finger/i);
+  if(/가운데손가락\s*끝/.test(text))patterns.push(/(?:left |right )?middle finger$/i);
+  if(/둘째발가락[^,.]{0,12}끝마디뼈/.test(text))patterns.push(/distal phalanx of (?:left |right )?(?:second|2nd) toe/i);
+  if(/새끼발가락[^,.]{0,12}끝마디뼈/.test(text))patterns.push(/distal phalanx of (?:left |right )?(?:little|fifth|5th) toe/i);
+  if(/넷째발가락[^,.]{0,12}끝마디뼈/.test(text))patterns.push(/distal phalanx of (?:left |right )?(?:fourth|4th) toe/i);
+  if(/둘째\s*손허리손가락관절/.test(text))patterns.push(/(?:second|2nd).*metacarpophalangeal|metacarpophalangeal.*(?:index|second)/i);
+  if(/다섯째\s*손허리손가락관절/.test(text))patterns.push(/(?:fifth|5th).*metacarpophalangeal|metacarpophalangeal.*(?:little|fifth)/i);
+  if(/첫째\s*발허리발가락관절/.test(text))patterns.push(/(?:first|1st).*metatarsophalangeal|metatarsophalangeal.*(?:big|first)/i);
+  if(/다섯째\s*발허리발가락관절/.test(text))patterns.push(/(?:fifth|5th).*metatarsophalangeal|metatarsophalangeal.*(?:little|fifth)/i);
+  const hits=[];
+  for(const re of patterns){
+    let best=null;
+    for(const [id,loc] of Object.entries(anatomyKo)){
+      const en=loc.sourceNameEn||''; if(!re.test(en)||!partsByConcept.has(id))continue;
+      const enLower=en.toLowerCase();
+      if(sideWord && /(left|right)/.test(enLower) && !enLower.includes(sideWord))continue;
+      const st=conceptStats(id,side==='left'?1:side==='right'?-1:0,lrAxis,leftSign)||conceptStats(id,0,lrAxis,leftSign);
+      if(!st)continue;
+      const sideBonus=sideWord&&enLower.includes(sideWord)?3:0;
+      const score=sideBonus+Math.max(.1,Math.min(4,bodyDiag/(st.diag*7+1)));
+      if(!best||score>best.score)best={id,st,score};
+    }
+    if(best)hits.push(best);
+  }
+  return hits;
+}
 function relationTarget(point, side){
   const rels=relByPoint.get(point.id)||[]; const text=point.locationKo||''; const rt=regionTarget(text,side);
   let acc=[0,0,0], wsum=0, specific=0, textLandmarkCount=0;
@@ -292,6 +353,12 @@ function relationTarget(point, side){
   const textHits=whoTextLandmarks(text,sideSign);
   for(const hit of textHits){
     const w=Math.max(.6,Math.min(4,hit.score/4));
+    for(let k=0;k<3;k++)acc[k]+=hit.st.center[k]*w;
+    wsum+=w;textLandmarkCount++;
+  }
+  const semanticHits=semanticConceptHits(text,side);
+  for(const hit of semanticHits){
+    const w=3.2;
     for(let k=0;k<3;k++)acc[k]+=hit.st.center[k]*w;
     wsum+=w;textLandmarkCount++;
   }
