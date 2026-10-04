@@ -39,11 +39,9 @@ for(const [id,entry] of Object.entries(anatomy)){
   if(!base){review.push({id,type:'no-exact-base-concept',sourceNameEn:entry.sourceNameEn});continue;}
   if(!sourceBacked.has(kaaAudit.records?.[base.id]?.result)){review.push({id,type:'base-not-KAA-backed',baseId:base.id,sourceNameEn:entry.sourceNameEn});continue;}
   lateralSafe++;
-  const expected=(m[1].toLowerCase()==='right'?'오른쪽 ':'왼쪽 ')+base.nameKo;
+  const expected=(m[1].toLowerCase()==='right'?'오른':'왼')+base.nameKo;
   if(entry.nameKo!==expected)hard.push({id,type:'safe-lateral-nameKo-drift',baseId:base.id,expected,actual:entry.nameKo});
   if(base.nameKo?.endsWith('근')&&!entry.nameKo?.endsWith('근'))hard.push({id,type:'muscle-head-loss',baseId:base.id,base:base.nameKo,actual:entry.nameKo});
-  const prefix=m[1].toLowerCase()==='right'?'오른쪽 ':'왼쪽 ';
-  if(!entry.nameKo.startsWith(prefix))hard.push({id,type:'laterality-spacing-drift',baseId:base.id,expectedPrefix:prefix,actual:entry.nameKo});
 }
 
 console.log(JSON.stringify({
