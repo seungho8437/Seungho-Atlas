@@ -1,7 +1,7 @@
 import {flushSync} from 'react-dom';
 import {registerAtlasTools} from './agent-tools';
 import {useEffect,useMemo,useRef,useState} from 'react';
-import {Activity,ArrowUpRight,ChevronRight,Focus,Info,Layers3,Pause,RotateCcw,RotateCw,Search,X} from 'lucide-react';
+import {Activity,ArrowUpRight,Check,ChevronRight,Crosshair,Download,Focus,Info,Layers3,Pause,RotateCcw,RotateCw,Search,X} from 'lucide-react';
 import {Button} from '@/components/ui/button';
 import {Badge} from '@/components/ui/badge';
 import {Slider} from '@/components/ui/slider';
@@ -12,6 +12,7 @@ import AnatomyScene from './scene';
 import {DEFAULT_VISIBLE,SYSTEMS,EXPLANATIONS,explanation,type Atlas,type Concept,type SceneState,type SystemId,type View} from './anatomy';
 import {MERIDIAN_INFO,anatomySearchTerms} from '@/lib/anatomy-knowledge';
 import type {Acupoint,AcupointCoordinate,AnatomyAcupointRelation,AnatomyLocalizationMap,AnatomyMeridianSinewRelation,MeridianSinew} from '@/lib/anatomy-knowledge/types';
+import type {LandmarkAnchorCandidate,LandmarkAnchorSide,SpecializedLandmarkAnchorRecord,SpecializedLandmarkSpec} from '@/lib/anatomy-knowledge/landmark-anchors';
 type SearchItem = {kind:'anatomy';id:string;label:string;secondary:string;concept:Concept}|{kind:'acupoint';id:string;label:string;secondary:string;point:Acupoint}|{kind:'sinew';id:string;label:string;secondary:string;sinew:MeridianSinew};
 type KnowledgeSelection = {kind:'acupoint';point:Acupoint}|{kind:'sinew';sinew:MeridianSinew}|null;
 const initial:SceneState={explode:0,visible:DEFAULT_VISIBLE,selected:[],isolate:false,view:'three-quarter',rotate:false,reset:0};
