@@ -192,7 +192,7 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
    if(found<0&&amount>.45)found=findTarget(e.clientX-rect.left,e.clientY-rect.top,e.pointerType==='touch'?24:16);if(found>=0){hover.hidden=true;select.current(atlas.parts[found].id);}
   };
   renderer.domElement.addEventListener('pointerdown',down);renderer.domElement.addEventListener('pointermove',move);renderer.domElement.addEventListener('pointerup',up);renderer.domElement.addEventListener('pointercancel',cancel);
-  const clock=new T.Clock();let lastExtent=-1,lastShowAcupoints=showAcupointsRef.current;
+  const clock=new T.Clock();let lastExtent=-1,lastShowAcupoints=showAcupointsRef.current,lastDetectorKey='';
   const animate=()=>{
    if(disposed)return;frame=requestAnimationFrame(animate);const dt=Math.min(clock.getDelta(),.05),s=latest.current;
    const changed=lastState?.visible!==s.visible||lastState?.selected!==s.selected||lastState?.isolate!==s.isolate;
@@ -221,7 +221,18 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
     }else if(lastIsolate){camera.clearViewOffset();fit(s.view,amount);}
     lastIsolate=isolateKey;
    }
-   controls.enableRotate=amount<.8;controls.mouseButtons.LEFT=amount<.8?T.MOUSE.ROTATE:T.MOUSE.PAN;controls.touches.ONE=amount<.8?T.TOUCH.ROTATE:T.TOUCH.PAN;ground.visible=platform.visible=ring.visible=innerRing.visible=amount<.5&&!s.isolate;markers.visible=amount>.75;const nextShowAcupoints=showAcupointsRef.current&&acupointCoordinates.length>0&&amount<.45&&!s.isolate;if(nextShowAcupoints!==lastShowAcupoints){lastShowAcupoints=nextShowAcupoints;dirty=true;}acupointMarkers.visible=nextShowAcupoints;controls.autoRotate=s.rotate&&!s.isolate&&amount<.4;controls.autoRotateSpeed=.65;controls.update();if(controls.autoRotate)dirty=true;
+   const detectorKey=ready&&anchorTargetRef.current?`${anchorTargetRef.current}:${detectorSideRef.current}`:'';
+   if(detectorKey!==lastDetectorKey){
+    lastDetectorKey=detectorKey;
+    const proposal=detectorKey?computeFingerProposal(anchorTargetRef.current!,detectorSideRef.current):null;
+    detectorProposalRef.current(proposal);
+    dirty=true;
+   }
+   const draft=anchorDraftRef.current,proposalState=detectorProposalStateRef.current;
+   anchorMarker.visible=!!draft&&!!anchorTargetRef.current;proposalMarker.visible=!!proposalState&&!!anchorTargetRef.current;
+   if(draft)anchorMarker.position.fromArray(draft.position);
+   if(proposalState)proposalMarker.position.fromArray(proposalState.position);
+   controls.enableRotate=amount<.8;controls.mouseButtons.LEFT=amount<.8?T.MOUSE.ROTATE:T.MOUSE.PAN;controls.touches.ONE=amount<.8?T.TOUCH.ROTATE:T.TOUCH.PAN;ground.visible=platform.visible=ring.visible=innerRing.visible=amount<.5&&!s.isolate;markers.visible=amount>.75;const nextShowAcupoints=showAcupointsRef.current&&acupointCoordinates.length>0&&amount<.45&&!s.isolate&&!anchorTargetRef.current;if(nextShowAcupoints!==lastShowAcupoints){lastShowAcupoints=nextShowAcupoints;dirty=true;}acupointMarkers.visible=nextShowAcupoints;controls.autoRotate=s.rotate&&!s.isolate&&amount<.4&&!anchorTargetRef.current;controls.autoRotateSpeed=.65;controls.update();if(controls.autoRotate)dirty=true;
    if(dirty){renderer.render(scene,camera);targets=[];if(amount>.45){const hasSolid=atlas.parts.some((p,i)=>p.system!=='integumentary'&&data[i*4+3]>.5);atlas.parts.forEach((p,i)=>{if(data[i*4+3]<.5||(hasSolid&&p.system==='integumentary'))return;let left=Infinity,right=-Infinity,top=Infinity,bottom=-Infinity;for(let corner=0;corner<8;corner++){projected.set(p.bounds[(corner&1)?1:0][0]+data[i*4],p.bounds[(corner&2)?1:0][1]+data[i*4+1],p.bounds[(corner&4)?1:0][2]+data[i*4+2]).project(camera);const x=(projected.x+1)*el.clientWidth/2,y=(1-projected.y)*el.clientHeight/2;left=Math.min(left,x);right=Math.max(right,x);top=Math.min(top,y);bottom=Math.max(bottom,y);}projected.copy(centers[i]).add(new T.Vector3(data[i*4],data[i*4+1],data[i*4+2])).project(camera);if(projected.z< -1||projected.z>1)return;targets.push({index:i,x:(projected.x+1)*el.clientWidth/2,y:(1-projected.y)*el.clientHeight/2,left,right,top,bottom});});}dirty=false;}
 
   };animate();
