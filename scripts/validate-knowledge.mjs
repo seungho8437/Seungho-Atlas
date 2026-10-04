@@ -62,6 +62,8 @@ for(const sinew of meridianSinews){
   sinewIds.add(sinew.id);
   assert.ok(sinewMeridianIds.has(sinew.meridian),`${sinew.id}: invalid meridian sinew channel`);
   assert.ok(sinew.name?.ko?.trim()&&sinew.name?.hanja?.trim()&&sinew.name?.en?.trim(),`${sinew.id}: names are incomplete`);
+  assert.ok(typeof sinew.overviewKo==='string'&&sinew.overviewKo.trim(),`${sinew.id}: classical pathway summary is missing`);
+  assert.ok((sinew.sourceIds??[]).includes('LINGSHU_JINGJIN'),`${sinew.id}: classical Jingjin source is required`);
   for(const id of sinew.sourceIds??[])assert.ok(sourceIds.has(id),`${sinew.id}: missing source ${id}`);
 }
 assert.equal(sinewIds.size,12,'Expected all twelve meridian sinews.');
