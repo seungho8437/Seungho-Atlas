@@ -98,6 +98,20 @@ function sweepSvg(meridian){
 }
 const sweepFiles=[];for(const m of meridians){const name=`sweep-${m}.svg`;fs.writeFileSync(new URL(name,outDir),sweepSvg(m));sweepFiles.push(name);}
 
-const manifest={generatedAt:new Date().toISOString(),coordinateGeneratedAt:coords.generatedAt,highRiskCount:high.length,detailFiles,sweepFiles,coverage:{physicalCoordinates:coords.points.length,logicalAcupoints:acupoints.length,meridians}};
+const contactFiles=[];
+for(let i=0;i<high.length;i+=4){
+  const batch=high.slice(i,i+4);
+  let svg=`<svg xmlns="http://www.w3.org/2000/svg" width="3200" height="2400" viewBox="0 0 3200 2400"><rect width="100%" height="100%" fill="white"/>`;
+  batch.forEach((p,j)=>{
+    const inner=detailSvg(p,i+j).replace(/^<svg[^>]*>/,'').replace(/<\/svg>$/,'');
+    const x=(j%2)*1600,y=Math.floor(j/2)*1200;
+    svg+=`<g transform="translate(${x} ${y})">${inner}</g>`;
+  });
+  svg+='</svg>';
+  const name=`contact-high-risk-${String(i/4+1).padStart(2,'0')}.svg`;
+  fs.writeFileSync(new URL(name,outDir),svg);contactFiles.push(name);
+}
+
+const manifest={generatedAt:new Date().toISOString(),coordinateGeneratedAt:coords.generatedAt,highRiskCount:high.length,detailFiles,contactFiles,sweepFiles,coverage:{physicalCoordinates:coords.points.length,logicalAcupoints:acupoints.length,meridians}};
 fs.writeFileSync(new URL('manifest.json',outDir),JSON.stringify(manifest,null,2)+'\n');
 console.log(JSON.stringify({highRisk:detailFiles.length,sweeps:sweepFiles.length,outDir:'artifacts/acupoint-visual-audit'},null,2));
