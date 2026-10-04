@@ -56,6 +56,7 @@ for(const point of acupoints){
   acupointIds.add(point.id);
   assert.ok(meridianIds.has(point.meridian),`${point.id}: invalid meridian`);
   assert.ok(point.name?.ko?.trim()&&point.name?.hanja?.trim(),`${point.id}: Korean/Hanja name is required`);
+  assert.ok(typeof point.locationKo==='string'&&point.locationKo.trim(),`${point.id}: Korean location summary is required`);
   const numericId=Number(point.id.match(/\d+$/)?.[0]);
   assert.equal(point.number,numericId,`${point.id}: point number must match id`);
   assert.ok(Number.isInteger(point.who2008Page)&&point.who2008Page>0,`${point.id}: WHO 2008 page index is required`);
