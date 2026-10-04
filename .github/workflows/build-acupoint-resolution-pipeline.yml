@@ -46,4 +46,4 @@ jobs:
             git push
           fi
 
-# semantic pipeline v1.2
+# semantic pipeline v1.3
