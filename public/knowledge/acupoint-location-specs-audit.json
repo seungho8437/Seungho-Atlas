@@ -1,0 +1,3642 @@
+{
+  "schemaVersion": 1,
+  "standardAcupointCount": 361,
+  "specificationCount": 361,
+  "sourceCoverage": {
+    "missingAcupoints": [],
+    "duplicateAcupoints": [],
+    "all361Covered": true
+  },
+  "losslessVerification": {
+    "exactSourceTextMatch": true,
+    "exactSha256Match": true,
+    "contiguousSpanCoverage": true,
+    "exactReconstruction": true,
+    "measurementTokensPreserved": true,
+    "fractionTokensPreserved": true,
+    "referencedAcupointTokensPreserved": true,
+    "conditionalSexSemanticsPreserved": true,
+    "postureSemanticsPreserved": true,
+    "lossyTransformationCount": 0,
+    "uncoveredCharacterCount": 0
+  },
+  "counts": {
+    "statementCount": 387,
+    "measurementCount": 237,
+    "fractionCount": 20,
+    "pointReferenceCount": 60,
+    "unspecifiedRegionCount": 4
+  },
+  "perPoint": [
+    {
+      "id": "LU1",
+      "sourceCharacters": 81,
+      "reconstructedCharacters": 81,
+      "statements": 2,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "LU2",
+      "sourceCharacters": 68,
+      "reconstructedCharacters": 68,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LU3",
+      "sourceCharacters": 63,
+      "reconstructedCharacters": 63,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LU4",
+      "sourceCharacters": 63,
+      "reconstructedCharacters": 63,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LU5",
+      "sourceCharacters": 39,
+      "reconstructedCharacters": 39,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LU6",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 2,
+      "lossless": true
+    },
+    {
+      "id": "LU7",
+      "sourceCharacters": 82,
+      "reconstructedCharacters": 82,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LU8",
+      "sourceCharacters": 61,
+      "reconstructedCharacters": 61,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LU9",
+      "sourceCharacters": 65,
+      "reconstructedCharacters": 65,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LU10",
+      "sourceCharacters": 47,
+      "reconstructedCharacters": 47,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LU11",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LI1",
+      "sourceCharacters": 92,
+      "reconstructedCharacters": 92,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LI2",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LI3",
+      "sourceCharacters": 34,
+      "reconstructedCharacters": 34,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LI4",
+      "sourceCharacters": 26,
+      "reconstructedCharacters": 26,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LI5",
+      "sourceCharacters": 96,
+      "reconstructedCharacters": 96,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LI6",
+      "sourceCharacters": 59,
+      "reconstructedCharacters": 59,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 2,
+      "lossless": true
+    },
+    {
+      "id": "LI7",
+      "sourceCharacters": 59,
+      "reconstructedCharacters": 59,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 2,
+      "lossless": true
+    },
+    {
+      "id": "LI8",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 2,
+      "lossless": true
+    },
+    {
+      "id": "LI9",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 2,
+      "lossless": true
+    },
+    {
+      "id": "LI10",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 2,
+      "lossless": true
+    },
+    {
+      "id": "LI11",
+      "sourceCharacters": 74,
+      "reconstructedCharacters": 74,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "LI12",
+      "sourceCharacters": 44,
+      "reconstructedCharacters": 44,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LI13",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 2,
+      "lossless": true
+    },
+    {
+      "id": "LI14",
+      "sourceCharacters": 50,
+      "reconstructedCharacters": 50,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "LI15",
+      "sourceCharacters": 91,
+      "reconstructedCharacters": 91,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "LI16",
+      "sourceCharacters": 63,
+      "reconstructedCharacters": 63,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LI17",
+      "sourceCharacters": 67,
+      "reconstructedCharacters": 67,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 2,
+      "lossless": true
+    },
+    {
+      "id": "LI18",
+      "sourceCharacters": 50,
+      "reconstructedCharacters": 50,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LI19",
+      "sourceCharacters": 69,
+      "reconstructedCharacters": 69,
+      "statements": 2,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "LI20",
+      "sourceCharacters": 36,
+      "reconstructedCharacters": 36,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST1",
+      "sourceCharacters": 34,
+      "reconstructedCharacters": 34,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST2",
+      "sourceCharacters": 15,
+      "reconstructedCharacters": 15,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST3",
+      "sourceCharacters": 84,
+      "reconstructedCharacters": 84,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST4",
+      "sourceCharacters": 58,
+      "reconstructedCharacters": 58,
+      "statements": 2,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST5",
+      "sourceCharacters": 45,
+      "reconstructedCharacters": 45,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST6",
+      "sourceCharacters": 87,
+      "reconstructedCharacters": 87,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST7",
+      "sourceCharacters": 75,
+      "reconstructedCharacters": 75,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "ST8",
+      "sourceCharacters": 63,
+      "reconstructedCharacters": 63,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST9",
+      "sourceCharacters": 46,
+      "reconstructedCharacters": 46,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST10",
+      "sourceCharacters": 39,
+      "reconstructedCharacters": 39,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST11",
+      "sourceCharacters": 54,
+      "reconstructedCharacters": 54,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST12",
+      "sourceCharacters": 51,
+      "reconstructedCharacters": 51,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST13",
+      "sourceCharacters": 42,
+      "reconstructedCharacters": 42,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST14",
+      "sourceCharacters": 41,
+      "reconstructedCharacters": 41,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST15",
+      "sourceCharacters": 41,
+      "reconstructedCharacters": 41,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST16",
+      "sourceCharacters": 41,
+      "reconstructedCharacters": 41,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST17",
+      "sourceCharacters": 44,
+      "reconstructedCharacters": 44,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST18",
+      "sourceCharacters": 98,
+      "reconstructedCharacters": 98,
+      "statements": 2,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST19",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST20",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST21",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST22",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST23",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST24",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST25",
+      "sourceCharacters": 36,
+      "reconstructedCharacters": 36,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST26",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST27",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST28",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST29",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST30",
+      "sourceCharacters": 65,
+      "reconstructedCharacters": 65,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST31",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST32",
+      "sourceCharacters": 66,
+      "reconstructedCharacters": 66,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST33",
+      "sourceCharacters": 51,
+      "reconstructedCharacters": 51,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST34",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST35",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST36",
+      "sourceCharacters": 73,
+      "reconstructedCharacters": 73,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 3,
+      "lossless": true
+    },
+    {
+      "id": "ST37",
+      "sourceCharacters": 68,
+      "reconstructedCharacters": 68,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 3,
+      "lossless": true
+    },
+    {
+      "id": "ST38",
+      "sourceCharacters": 68,
+      "reconstructedCharacters": 68,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 3,
+      "lossless": true
+    },
+    {
+      "id": "ST39",
+      "sourceCharacters": 68,
+      "reconstructedCharacters": 68,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 3,
+      "lossless": true
+    },
+    {
+      "id": "ST40",
+      "sourceCharacters": 86,
+      "reconstructedCharacters": 86,
+      "statements": 2,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "ST41",
+      "sourceCharacters": 87,
+      "reconstructedCharacters": 87,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST42",
+      "sourceCharacters": 45,
+      "reconstructedCharacters": 45,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST43",
+      "sourceCharacters": 44,
+      "reconstructedCharacters": 44,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST44",
+      "sourceCharacters": 45,
+      "reconstructedCharacters": 45,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "ST45",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP1",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP2",
+      "sourceCharacters": 50,
+      "reconstructedCharacters": 50,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP3",
+      "sourceCharacters": 49,
+      "reconstructedCharacters": 49,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP4",
+      "sourceCharacters": 43,
+      "reconstructedCharacters": 43,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP5",
+      "sourceCharacters": 50,
+      "reconstructedCharacters": 50,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP6",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP7",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP8",
+      "sourceCharacters": 52,
+      "reconstructedCharacters": 52,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "SP9",
+      "sourceCharacters": 52,
+      "reconstructedCharacters": 52,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP10",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP11",
+      "sourceCharacters": 86,
+      "reconstructedCharacters": 86,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 2,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "SP12",
+      "sourceCharacters": 29,
+      "reconstructedCharacters": 29,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP13",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP14",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP15",
+      "sourceCharacters": 36,
+      "reconstructedCharacters": 36,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP16",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP17",
+      "sourceCharacters": 42,
+      "reconstructedCharacters": 42,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP18",
+      "sourceCharacters": 41,
+      "reconstructedCharacters": 41,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP19",
+      "sourceCharacters": 41,
+      "reconstructedCharacters": 41,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP20",
+      "sourceCharacters": 41,
+      "reconstructedCharacters": 41,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SP21",
+      "sourceCharacters": 35,
+      "reconstructedCharacters": 35,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "HT1",
+      "sourceCharacters": 29,
+      "reconstructedCharacters": 29,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "HT2",
+      "sourceCharacters": 49,
+      "reconstructedCharacters": 49,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "HT3",
+      "sourceCharacters": 47,
+      "reconstructedCharacters": 47,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "HT4",
+      "sourceCharacters": 62,
+      "reconstructedCharacters": 62,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "HT5",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "HT6",
+      "sourceCharacters": 59,
+      "reconstructedCharacters": 59,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "HT7",
+      "sourceCharacters": 56,
+      "reconstructedCharacters": 56,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "HT8",
+      "sourceCharacters": 75,
+      "reconstructedCharacters": 75,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "HT9",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI1",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI2",
+      "sourceCharacters": 54,
+      "reconstructedCharacters": 54,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI3",
+      "sourceCharacters": 51,
+      "reconstructedCharacters": 51,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI4",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI5",
+      "sourceCharacters": 32,
+      "reconstructedCharacters": 32,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI6",
+      "sourceCharacters": 58,
+      "reconstructedCharacters": 58,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI7",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI8",
+      "sourceCharacters": 51,
+      "reconstructedCharacters": 51,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI9",
+      "sourceCharacters": 47,
+      "reconstructedCharacters": 47,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI10",
+      "sourceCharacters": 37,
+      "reconstructedCharacters": 37,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI11",
+      "sourceCharacters": 62,
+      "reconstructedCharacters": 62,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 2,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI12",
+      "sourceCharacters": 35,
+      "reconstructedCharacters": 35,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI13",
+      "sourceCharacters": 30,
+      "reconstructedCharacters": 30,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI14",
+      "sourceCharacters": 63,
+      "reconstructedCharacters": 63,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI15",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI16",
+      "sourceCharacters": 36,
+      "reconstructedCharacters": 36,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI17",
+      "sourceCharacters": 33,
+      "reconstructedCharacters": 33,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI18",
+      "sourceCharacters": 37,
+      "reconstructedCharacters": 37,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "SI19",
+      "sourceCharacters": 73,
+      "reconstructedCharacters": 73,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL1",
+      "sourceCharacters": 79,
+      "reconstructedCharacters": 79,
+      "statements": 2,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL2",
+      "sourceCharacters": 23,
+      "reconstructedCharacters": 23,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL3",
+      "sourceCharacters": 42,
+      "reconstructedCharacters": 42,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL4",
+      "sourceCharacters": 56,
+      "reconstructedCharacters": 56,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL5",
+      "sourceCharacters": 54,
+      "reconstructedCharacters": 54,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL6",
+      "sourceCharacters": 56,
+      "reconstructedCharacters": 56,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL7",
+      "sourceCharacters": 54,
+      "reconstructedCharacters": 54,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL8",
+      "sourceCharacters": 56,
+      "reconstructedCharacters": 56,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL9",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL10",
+      "sourceCharacters": 51,
+      "reconstructedCharacters": 51,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL11",
+      "sourceCharacters": 65,
+      "reconstructedCharacters": 65,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL12",
+      "sourceCharacters": 65,
+      "reconstructedCharacters": 65,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL13",
+      "sourceCharacters": 65,
+      "reconstructedCharacters": 65,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL14",
+      "sourceCharacters": 65,
+      "reconstructedCharacters": 65,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL15",
+      "sourceCharacters": 66,
+      "reconstructedCharacters": 66,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL16",
+      "sourceCharacters": 66,
+      "reconstructedCharacters": 66,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL17",
+      "sourceCharacters": 66,
+      "reconstructedCharacters": 66,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL18",
+      "sourceCharacters": 66,
+      "reconstructedCharacters": 66,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL19",
+      "sourceCharacters": 66,
+      "reconstructedCharacters": 66,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL20",
+      "sourceCharacters": 67,
+      "reconstructedCharacters": 67,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL21",
+      "sourceCharacters": 67,
+      "reconstructedCharacters": 67,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL22",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL23",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL24",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL25",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL26",
+      "sourceCharacters": 65,
+      "reconstructedCharacters": 65,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL27",
+      "sourceCharacters": 59,
+      "reconstructedCharacters": 59,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL28",
+      "sourceCharacters": 59,
+      "reconstructedCharacters": 59,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL29",
+      "sourceCharacters": 59,
+      "reconstructedCharacters": 59,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL30",
+      "sourceCharacters": 59,
+      "reconstructedCharacters": 59,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL31",
+      "sourceCharacters": 21,
+      "reconstructedCharacters": 21,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL32",
+      "sourceCharacters": 21,
+      "reconstructedCharacters": 21,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL33",
+      "sourceCharacters": 21,
+      "reconstructedCharacters": 21,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL34",
+      "sourceCharacters": 21,
+      "reconstructedCharacters": 21,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL35",
+      "sourceCharacters": 48,
+      "reconstructedCharacters": 48,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL36",
+      "sourceCharacters": 21,
+      "reconstructedCharacters": 21,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL37",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL38",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL39",
+      "sourceCharacters": 37,
+      "reconstructedCharacters": 37,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL40",
+      "sourceCharacters": 24,
+      "reconstructedCharacters": 24,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL41",
+      "sourceCharacters": 63,
+      "reconstructedCharacters": 63,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL42",
+      "sourceCharacters": 63,
+      "reconstructedCharacters": 63,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL43",
+      "sourceCharacters": 63,
+      "reconstructedCharacters": 63,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL44",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL45",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL46",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL47",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL48",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL49",
+      "sourceCharacters": 65,
+      "reconstructedCharacters": 65,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL50",
+      "sourceCharacters": 65,
+      "reconstructedCharacters": 65,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL51",
+      "sourceCharacters": 62,
+      "reconstructedCharacters": 62,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL52",
+      "sourceCharacters": 62,
+      "reconstructedCharacters": 62,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL53",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL54",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL55",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL56",
+      "sourceCharacters": 52,
+      "reconstructedCharacters": 52,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL57",
+      "sourceCharacters": 45,
+      "reconstructedCharacters": 45,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL58",
+      "sourceCharacters": 65,
+      "reconstructedCharacters": 65,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "BL59",
+      "sourceCharacters": 54,
+      "reconstructedCharacters": 54,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "BL60",
+      "sourceCharacters": 36,
+      "reconstructedCharacters": 36,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL61",
+      "sourceCharacters": 44,
+      "reconstructedCharacters": 44,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "BL62",
+      "sourceCharacters": 51,
+      "reconstructedCharacters": 51,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL63",
+      "sourceCharacters": 51,
+      "reconstructedCharacters": 51,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL64",
+      "sourceCharacters": 40,
+      "reconstructedCharacters": 40,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL65",
+      "sourceCharacters": 49,
+      "reconstructedCharacters": 49,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL66",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "BL67",
+      "sourceCharacters": 50,
+      "reconstructedCharacters": 50,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI1",
+      "sourceCharacters": 90,
+      "reconstructedCharacters": 90,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 2,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI2",
+      "sourceCharacters": 38,
+      "reconstructedCharacters": 38,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI3",
+      "sourceCharacters": 36,
+      "reconstructedCharacters": 36,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI4",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI5",
+      "sourceCharacters": 46,
+      "reconstructedCharacters": 46,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "KI6",
+      "sourceCharacters": 47,
+      "reconstructedCharacters": 47,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI7",
+      "sourceCharacters": 50,
+      "reconstructedCharacters": 50,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI8",
+      "sourceCharacters": 60,
+      "reconstructedCharacters": 60,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI9",
+      "sourceCharacters": 56,
+      "reconstructedCharacters": 56,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI10",
+      "sourceCharacters": 34,
+      "reconstructedCharacters": 34,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI11",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI12",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI13",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI14",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI15",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI16",
+      "sourceCharacters": 38,
+      "reconstructedCharacters": 38,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI17",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI18",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI19",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI20",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI21",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI22",
+      "sourceCharacters": 42,
+      "reconstructedCharacters": 42,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI23",
+      "sourceCharacters": 41,
+      "reconstructedCharacters": 41,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI24",
+      "sourceCharacters": 41,
+      "reconstructedCharacters": 41,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI25",
+      "sourceCharacters": 41,
+      "reconstructedCharacters": 41,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI26",
+      "sourceCharacters": 41,
+      "reconstructedCharacters": 41,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "KI27",
+      "sourceCharacters": 45,
+      "reconstructedCharacters": 45,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "PC1",
+      "sourceCharacters": 41,
+      "reconstructedCharacters": 41,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "PC2",
+      "sourceCharacters": 58,
+      "reconstructedCharacters": 58,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "PC3",
+      "sourceCharacters": 39,
+      "reconstructedCharacters": 39,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "PC4",
+      "sourceCharacters": 65,
+      "reconstructedCharacters": 65,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "PC5",
+      "sourceCharacters": 65,
+      "reconstructedCharacters": 65,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "PC6",
+      "sourceCharacters": 65,
+      "reconstructedCharacters": 65,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "PC7",
+      "sourceCharacters": 47,
+      "reconstructedCharacters": 47,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "PC8",
+      "sourceCharacters": 42,
+      "reconstructedCharacters": 42,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "PC9",
+      "sourceCharacters": 17,
+      "reconstructedCharacters": 17,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE1",
+      "sourceCharacters": 50,
+      "reconstructedCharacters": 50,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE2",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE3",
+      "sourceCharacters": 45,
+      "reconstructedCharacters": 45,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE4",
+      "sourceCharacters": 42,
+      "reconstructedCharacters": 42,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE5",
+      "sourceCharacters": 62,
+      "reconstructedCharacters": 62,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE6",
+      "sourceCharacters": 62,
+      "reconstructedCharacters": 62,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE7",
+      "sourceCharacters": 51,
+      "reconstructedCharacters": 51,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE8",
+      "sourceCharacters": 62,
+      "reconstructedCharacters": 62,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE9",
+      "sourceCharacters": 62,
+      "reconstructedCharacters": 62,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE10",
+      "sourceCharacters": 67,
+      "reconstructedCharacters": 67,
+      "statements": 2,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE11",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE12",
+      "sourceCharacters": 64,
+      "reconstructedCharacters": 64,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE13",
+      "sourceCharacters": 51,
+      "reconstructedCharacters": 51,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE14",
+      "sourceCharacters": 63,
+      "reconstructedCharacters": 63,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE15",
+      "sourceCharacters": 28,
+      "reconstructedCharacters": 28,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE16",
+      "sourceCharacters": 37,
+      "reconstructedCharacters": 37,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE17",
+      "sourceCharacters": 35,
+      "reconstructedCharacters": 35,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE18",
+      "sourceCharacters": 56,
+      "reconstructedCharacters": 56,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 2,
+      "pointReferences": 2,
+      "lossless": true
+    },
+    {
+      "id": "TE19",
+      "sourceCharacters": 47,
+      "reconstructedCharacters": 47,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 2,
+      "pointReferences": 2,
+      "lossless": true
+    },
+    {
+      "id": "TE20",
+      "sourceCharacters": 22,
+      "reconstructedCharacters": 22,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE21",
+      "sourceCharacters": 71,
+      "reconstructedCharacters": 71,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "TE22",
+      "sourceCharacters": 42,
+      "reconstructedCharacters": 42,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "TE23",
+      "sourceCharacters": 23,
+      "reconstructedCharacters": 23,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB1",
+      "sourceCharacters": 43,
+      "reconstructedCharacters": 43,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB2",
+      "sourceCharacters": 65,
+      "reconstructedCharacters": 65,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB3",
+      "sourceCharacters": 26,
+      "reconstructedCharacters": 26,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB4",
+      "sourceCharacters": 45,
+      "reconstructedCharacters": 45,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 2,
+      "pointReferences": 2,
+      "lossless": true
+    },
+    {
+      "id": "GB5",
+      "sourceCharacters": 29,
+      "reconstructedCharacters": 29,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 2,
+      "lossless": true
+    },
+    {
+      "id": "GB6",
+      "sourceCharacters": 45,
+      "reconstructedCharacters": 45,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 2,
+      "pointReferences": 2,
+      "lossless": true
+    },
+    {
+      "id": "GB7",
+      "sourceCharacters": 46,
+      "reconstructedCharacters": 46,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB8",
+      "sourceCharacters": 50,
+      "reconstructedCharacters": 50,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB9",
+      "sourceCharacters": 47,
+      "reconstructedCharacters": 47,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB10",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 2,
+      "pointReferences": 2,
+      "lossless": true
+    },
+    {
+      "id": "GB11",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 2,
+      "pointReferences": 2,
+      "lossless": true
+    },
+    {
+      "id": "GB12",
+      "sourceCharacters": 26,
+      "reconstructedCharacters": 26,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB13",
+      "sourceCharacters": 54,
+      "reconstructedCharacters": 54,
+      "statements": 1,
+      "measurements": 2,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB14",
+      "sourceCharacters": 37,
+      "reconstructedCharacters": 37,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB15",
+      "sourceCharacters": 41,
+      "reconstructedCharacters": 41,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB16",
+      "sourceCharacters": 41,
+      "reconstructedCharacters": 41,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB17",
+      "sourceCharacters": 41,
+      "reconstructedCharacters": 41,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB18",
+      "sourceCharacters": 39,
+      "reconstructedCharacters": 39,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB19",
+      "sourceCharacters": 41,
+      "reconstructedCharacters": 41,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "GB20",
+      "sourceCharacters": 42,
+      "reconstructedCharacters": 42,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB21",
+      "sourceCharacters": 45,
+      "reconstructedCharacters": 45,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB22",
+      "sourceCharacters": 34,
+      "reconstructedCharacters": 34,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB23",
+      "sourceCharacters": 48,
+      "reconstructedCharacters": 48,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB24",
+      "sourceCharacters": 42,
+      "reconstructedCharacters": 42,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB25",
+      "sourceCharacters": 28,
+      "reconstructedCharacters": 28,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB26",
+      "sourceCharacters": 39,
+      "reconstructedCharacters": 39,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB27",
+      "sourceCharacters": 43,
+      "reconstructedCharacters": 43,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB28",
+      "sourceCharacters": 43,
+      "reconstructedCharacters": 43,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB29",
+      "sourceCharacters": 38,
+      "reconstructedCharacters": 38,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB30",
+      "sourceCharacters": 51,
+      "reconstructedCharacters": 51,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 2,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB31",
+      "sourceCharacters": 65,
+      "reconstructedCharacters": 65,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB32",
+      "sourceCharacters": 46,
+      "reconstructedCharacters": 46,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB33",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB34",
+      "sourceCharacters": 35,
+      "reconstructedCharacters": 35,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB35",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB36",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB37",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB38",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB39",
+      "sourceCharacters": 53,
+      "reconstructedCharacters": 53,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB40",
+      "sourceCharacters": 45,
+      "reconstructedCharacters": 45,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB41",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB42",
+      "sourceCharacters": 45,
+      "reconstructedCharacters": 45,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB43",
+      "sourceCharacters": 46,
+      "reconstructedCharacters": 46,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GB44",
+      "sourceCharacters": 50,
+      "reconstructedCharacters": 50,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LR1",
+      "sourceCharacters": 50,
+      "reconstructedCharacters": 50,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LR2",
+      "sourceCharacters": 45,
+      "reconstructedCharacters": 45,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LR3",
+      "sourceCharacters": 58,
+      "reconstructedCharacters": 58,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LR4",
+      "sourceCharacters": 39,
+      "reconstructedCharacters": 39,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LR5",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LR6",
+      "sourceCharacters": 55,
+      "reconstructedCharacters": 55,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LR7",
+      "sourceCharacters": 54,
+      "reconstructedCharacters": 54,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "LR8",
+      "sourceCharacters": 42,
+      "reconstructedCharacters": 42,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LR9",
+      "sourceCharacters": 56,
+      "reconstructedCharacters": 56,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LR10",
+      "sourceCharacters": 43,
+      "reconstructedCharacters": 43,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "LR11",
+      "sourceCharacters": 50,
+      "reconstructedCharacters": 50,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 1,
+      "lossless": true
+    },
+    {
+      "id": "LR12",
+      "sourceCharacters": 57,
+      "reconstructedCharacters": 57,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LR13",
+      "sourceCharacters": 25,
+      "reconstructedCharacters": 25,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "LR14",
+      "sourceCharacters": 42,
+      "reconstructedCharacters": 42,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV1",
+      "sourceCharacters": 37,
+      "reconstructedCharacters": 37,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV2",
+      "sourceCharacters": 26,
+      "reconstructedCharacters": 26,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV3",
+      "sourceCharacters": 42,
+      "reconstructedCharacters": 42,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV4",
+      "sourceCharacters": 42,
+      "reconstructedCharacters": 42,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV5",
+      "sourceCharacters": 42,
+      "reconstructedCharacters": 42,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV6",
+      "sourceCharacters": 45,
+      "reconstructedCharacters": 45,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV7",
+      "sourceCharacters": 44,
+      "reconstructedCharacters": 44,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV8",
+      "sourceCharacters": 44,
+      "reconstructedCharacters": 44,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV9",
+      "sourceCharacters": 44,
+      "reconstructedCharacters": 44,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV10",
+      "sourceCharacters": 44,
+      "reconstructedCharacters": 44,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV11",
+      "sourceCharacters": 44,
+      "reconstructedCharacters": 44,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV12",
+      "sourceCharacters": 43,
+      "reconstructedCharacters": 43,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV13",
+      "sourceCharacters": 43,
+      "reconstructedCharacters": 43,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV14",
+      "sourceCharacters": 44,
+      "reconstructedCharacters": 44,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV15",
+      "sourceCharacters": 42,
+      "reconstructedCharacters": 42,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV16",
+      "sourceCharacters": 45,
+      "reconstructedCharacters": 45,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV17",
+      "sourceCharacters": 36,
+      "reconstructedCharacters": 36,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV18",
+      "sourceCharacters": 35,
+      "reconstructedCharacters": 35,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV19",
+      "sourceCharacters": 37,
+      "reconstructedCharacters": 37,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV20",
+      "sourceCharacters": 63,
+      "reconstructedCharacters": 63,
+      "statements": 2,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV21",
+      "sourceCharacters": 37,
+      "reconstructedCharacters": 37,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV22",
+      "sourceCharacters": 35,
+      "reconstructedCharacters": 35,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV23",
+      "sourceCharacters": 35,
+      "reconstructedCharacters": 35,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV24",
+      "sourceCharacters": 37,
+      "reconstructedCharacters": 37,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV25",
+      "sourceCharacters": 12,
+      "reconstructedCharacters": 12,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV26",
+      "sourceCharacters": 20,
+      "reconstructedCharacters": 20,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV27",
+      "sourceCharacters": 19,
+      "reconstructedCharacters": 19,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "GV28",
+      "sourceCharacters": 27,
+      "reconstructedCharacters": 27,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV1",
+      "sourceCharacters": 74,
+      "reconstructedCharacters": 74,
+      "statements": 2,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV2",
+      "sourceCharacters": 26,
+      "reconstructedCharacters": 26,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV3",
+      "sourceCharacters": 38,
+      "reconstructedCharacters": 38,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV4",
+      "sourceCharacters": 38,
+      "reconstructedCharacters": 38,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV5",
+      "sourceCharacters": 38,
+      "reconstructedCharacters": 38,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV6",
+      "sourceCharacters": 40,
+      "reconstructedCharacters": 40,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV7",
+      "sourceCharacters": 38,
+      "reconstructedCharacters": 38,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV8",
+      "sourceCharacters": 15,
+      "reconstructedCharacters": 15,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV9",
+      "sourceCharacters": 36,
+      "reconstructedCharacters": 36,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV10",
+      "sourceCharacters": 36,
+      "reconstructedCharacters": 36,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV11",
+      "sourceCharacters": 36,
+      "reconstructedCharacters": 36,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV12",
+      "sourceCharacters": 66,
+      "reconstructedCharacters": 66,
+      "statements": 2,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV13",
+      "sourceCharacters": 36,
+      "reconstructedCharacters": 36,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV14",
+      "sourceCharacters": 36,
+      "reconstructedCharacters": 36,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV15",
+      "sourceCharacters": 37,
+      "reconstructedCharacters": 37,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV16",
+      "sourceCharacters": 28,
+      "reconstructedCharacters": 28,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV17",
+      "sourceCharacters": 35,
+      "reconstructedCharacters": 35,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV18",
+      "sourceCharacters": 35,
+      "reconstructedCharacters": 35,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV19",
+      "sourceCharacters": 35,
+      "reconstructedCharacters": 35,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV20",
+      "sourceCharacters": 35,
+      "reconstructedCharacters": 35,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV21",
+      "sourceCharacters": 38,
+      "reconstructedCharacters": 38,
+      "statements": 1,
+      "measurements": 1,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV22",
+      "sourceCharacters": 29,
+      "reconstructedCharacters": 29,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV23",
+      "sourceCharacters": 49,
+      "reconstructedCharacters": 49,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    },
+    {
+      "id": "CV24",
+      "sourceCharacters": 25,
+      "reconstructedCharacters": 25,
+      "statements": 1,
+      "measurements": 0,
+      "fractions": 0,
+      "pointReferences": 0,
+      "lossless": true
+    }
+  ]
+}
