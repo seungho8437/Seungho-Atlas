@@ -1,6 +1,7 @@
 name: Generate Acupoint Coordinates
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - feature/korean-tcm-knowledge
