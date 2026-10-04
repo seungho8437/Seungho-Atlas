@@ -292,55 +292,73 @@ function closestOnTri(p,a,b,c){
   const denom=1/(va+vb+vc), v=vb*denom, w=vc*denom; return a.map((x,i)=>x+ab[i]*v+ac[i]*w);
 }
 function dist2(a,b){return (a[0]-b[0])**2+(a[1]-b[1])**2+(a[2]-b[2])**2}
+function barycentric2D(px,py,a,b,c,ax1,ax2){
+  const x1=a[ax1],y1=a[ax2],x2=b[ax1],y2=b[ax2],x3=c[ax1],y3=c[ax2];
+  const den=(y2-y3)*(x1-x3)+(x3-x2)*(y1-y3);
+  if(Math.abs(den)<1e-12)return null;
+  const u=((y2-y3)*(px-x3)+(x3-x2)*(py-y3))/den;
+  const v=((y3-y1)*(px-x3)+(x1-x3)*(py-y3))/den;
+  const w=1-u-v;
+  if(u < -1e-5 || v < -1e-5 || w < -1e-5)return null;
+  return [u,v,w];
+}
+function constrainedSurfaceProjection(target,side,locks){
+  const locked=[];
+  if(locks.lr)locked.push(lrAxis);
+  if(locks.sup)locked.push(supAxis);
+  if(locks.ap)locked.push(apAxis);
+  if(locked.length<2)return null;
+  // Preserve the two strongest WHO axes exactly through the final skin projection.
+  // sup+lr is preferred for torso/head; sup+ap for hands/feet; lr+ap otherwise.
+  let ax1,ax2;
+  if(locks.sup&&locks.lr){ax1=supAxis;ax2=lrAxis;}
+  else if(locks.sup&&locks.ap){ax1=supAxis;ax2=apAxis;}
+  else {ax1=lrAxis;ax2=apAxis;}
+  const free=[0,1,2].find(a=>a!==ax1&&a!==ax2);
+  let best=null,bestD=Infinity,bestPart=null;
+  for(const T of surfaceTriangles){
+    const bc=barycentric2D(target[ax1],target[ax2],T.tri[0],T.tri[1],T.tri[2],ax1,ax2);
+    if(!bc)continue;
+    const q=[0,0,0];
+    for(let k=0;k<3;k++)q[k]=bc[0]*T.tri[0][k]+bc[1]*T.tri[1][k]+bc[2]*T.tri[2][k];
+    const sideCoord=q[lrAxis]-bodyCenter[lrAxis];
+    if(side==='left' && Math.sign(sideCoord||0)!==leftSign)continue;
+    if(side==='right' && Math.sign(sideCoord||0)!==-leftSign)continue;
+    if(side==='midline' && Math.abs(sideCoord)>extent[lrAxis]*.12)continue;
+    const d=Math.abs(q[free]-target[free]);
+    if(d<bestD){bestD=d;best=q;bestPart=T.part;}
+  }
+  return best?{point:best,distance:Math.sqrt(dist2(target,best)),part:bestPart,constrained:true}:null;
+}
 function project(target, side, locks={}){
+  const exact=constrainedSurfaceProjection(target,side,locks);
+  if(exact)return exact;
   const base=target.map(v=>Math.floor(v/cell)); let best=null,bestD=Infinity,bestScore=Infinity,bestPart=null;
-  const scorePoint=q=>{
-    const d=dist2(target,q);
-    let score=d;
+  const consider=T=>{
+    const q=closestOnTri(target,...T.tri);
+    const sideCoord=q[lrAxis]-bodyCenter[lrAxis];
+    if(side==='left' && Math.sign(sideCoord||0)!==leftSign)return;
+    if(side==='right' && Math.sign(sideCoord||0)!==-leftSign)return;
+    if(side==='midline' && Math.abs(sideCoord)>extent[lrAxis]*.12)return;
+    const d=dist2(target,q); let score=d;
     if(locks.sup) score+=5200*(q[supAxis]-target[supAxis])**2;
     if(locks.lr) score+=2400*(q[lrAxis]-target[lrAxis])**2;
     if(locks.ap) score+=420*(q[apAxis]-target[apAxis])**2;
-    return {d,score};
+    if(score<bestScore){bestScore=score;bestD=d;best=q;bestPart=T.part;}
   };
   for(let r=0;r<=8;r++){
     let found=false;
     for(let x=-r;x<=r;x++)for(let y=-r;y<=r;y++)for(let z=-r;z<=r;z++){
       if(Math.max(Math.abs(x),Math.abs(y),Math.abs(z))!==r)continue;
-      const ids=grid.get([base[0]+x,base[1]+y,base[2]+z].join(',')); if(!ids)continue; found=true;
-      for(const id of ids){const T=surfaceTriangles[id];
-        if(side==='left' && Math.sign((T.c[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) continue;
-        if(side==='right' && Math.sign((T.c[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) continue;
-        const q=closestOnTri(target,...T.tri);
-        if(side==='left' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) continue;
-        if(side==='right' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) continue;
-        const {d,score}=scorePoint(q);if(score<bestScore){bestScore=score;bestD=d;best=q;bestPart=T.part;}}
+      const ids=grid.get([base[0]+x,base[1]+y,base[2]+z].join(','));if(!ids)continue;found=true;
+      for(const id of ids)consider(surfaceTriangles[id]);
     }
-    if(!locks.sup&&!locks.lr&&!locks.ap && found && best && Math.sqrt(bestD) < (r+1)*cell) break;
+    if(found&&best&&Math.sqrt(bestD)<(r+1)*cell)break;
   }
-  if(!best){for(const T of surfaceTriangles){
-    if(side==='left' && Math.sign((T.c[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) continue;
-    if(side==='right' && Math.sign((T.c[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) continue;
-    const q=closestOnTri(target,...T.tri);
-    if(side==='left' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) continue;
-    if(side==='right' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) continue;
-    const {d,score}=scorePoint(q);if(score<bestScore){bestScore=score;bestD=d;best=q;bestPart=T.part;}}}
-  return {point:best,distance:Math.sqrt(bestD),part:bestPart};
+  if(!best)for(const T of surfaceTriangles)consider(T);
+  return {point:best,distance:Math.sqrt(bestD),part:bestPart,constrained:false};
 }
 
-const relByPoint=new Map();
-for(const r of relations){if(!relByPoint.has(r.acupointId))relByPoint.set(r.acupointId,[]);relByPoint.get(r.acupointId).push(r);}
-const broad=/muscle of upper limb|muscle of lower limb|neck$|abdomen$|chest$|back$|head$|pelvis$|hand$|foot$/i;
-const genericKoTerms=new Set(['근육','뼈','관절','머리','얼굴','목','가슴','복부','배꼽','팔꿈치','손목','손등','손바닥','손가락','발목','발등','발바닥','발가락','무릎','엉치','볼기','오목한곳','중심','중점']);
-const localizationTerms=[];
-for(const [id,loc] of Object.entries(anatomyKo)){
-  if(!partsByConcept.has(id))continue;
-  const terms=[loc.nameKo,loc.legacyKo,...(loc.aliases??[])].filter(Boolean);
-  for(const raw of new Set(terms)){
-    const term=String(raw).replace(/\s+/g,'').replace(/[()]/g,'');
-    if(term.length<3||genericKoTerms.has(term))continue;
-    localizationTerms.push({id,term});
-  }
-}
 function whoTextLandmarks(text,sideSign){
   const compact=text.replace(/\s+/g,'');
   const hits=[],seen=new Set();
