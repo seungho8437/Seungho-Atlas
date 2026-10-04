@@ -8,21 +8,21 @@ const acupoints=readJson('public/knowledge/acupoints.json');
 const sha256=s=>crypto.createHash('sha256').update(s,'utf8').digest('hex');
 
 const REGION_RULES=[
- ['head',/머리|두피|얼굴|이마|눈썹|눈구석|눈확|코|인중|입술|턱|귀|관자|꼭지돌기|뒤통수/],
- ['neck',/목|경부|목덜미/],
- ['chest',/가슴|흉부|갈비사이|젖꼭지/],
- ['abdomen',/배꼽|복부|아랫배|윗배|가쪽배|배 부위|명치/],
- ['back',/등쪽|등 부위|등뼈|뒤정중선/],
- ['pelvis-perineum',/볼기|엉덩|엉치|회음|샅고랑|항문|음낭|대음순|두덩|골반/],
- ['shoulder',/어깨|견갑|빗장|쇄골/],
+ ['forearm',/아래팔|전완/],
  ['upper-arm',/위팔|상완|겨드랑/],
  ['elbow',/팔꿈치|팔오금/],
- ['forearm',/아래팔|전완/],
  ['wrist-hand',/손목|손바닥|손등|손가락|손허리|손톱|엄지|집게손가락|새끼손가락/],
- ['thigh',/넓적다리|대퇴/],
- ['knee',/무릎|오금/],
- ['leg',/아래다리|하퇴|종아리|정강/],
  ['ankle-foot',/발목|복사|발등|발바닥|발가락|발허리|발꿈치|발톱/],
+ ['leg',/아래다리|하퇴|종아리|정강/],
+ ['knee',/무릎|(?<!팔)오금/],
+ ['thigh',/넓적다리|대퇴/],
+ ['shoulder',/어깨|견갑|빗장|쇄골/],
+ ['pelvis-perineum',/볼기|엉덩|엉치|회음|샅고랑|항문|음낭|대음순|두덩|골반/],
+ ['chest',/앞가슴|가슴|흉부|갈비사이|젖꼭지/],
+ ['abdomen',/배꼽|복부|아랫배|윗배|가쪽배|배 부위|명치/],
+ ['back',/등쪽|등 부위|등뼈|허리|뒤정중선/],
+ ['neck',/(?:^|\s)목(?:에서|\s|앞|뒤|부위|덜미)|경부|목덜미/],
+ ['head',/(?:^|\s)머리(?:에서|\s|부위|위)|두피|얼굴|이마|눈썹|눈구석|눈확|콧|코끝|인중|입술|턱|귀|관자|꼭지돌기|뒤통수/],
 ];
 const TAG_RULES=[
  ['REGION_CONTEXT',/앞가슴|가슴|흉부|배|복부|아랫배|윗배|등|목|머리|얼굴|어깨|위팔|팔꿈치|아래팔|손목|손바닥|손등|손가락|볼기|회음|넓적다리|무릎|아래다리|종아리|발목|발등|발바닥|발가락/],
@@ -70,8 +70,17 @@ function statements(text){
  return out;
 }
 function regionOf(text){
- for(const [id,re] of REGION_RULES){const m=text.match(re);if(m)return {id,evidence:m[0]};}
- return {id:'unspecified',evidence:null};
+ // Body-region context is normally stated near the beginning. Choose the
+ // earliest explicit regional expression rather than whichever regex is listed
+ // first; this prevents false matches such as 팔꿈치머리 -> 머리 or 오목 -> 목.
+ let best=null;
+ for(const [id,re] of REGION_RULES){
+   const m=text.match(re); if(!m)continue;
+   const index=m.index??0;
+   if(index>32)continue;
+   if(!best||index<best.index)best={id,evidence:m[0].trim(),index};
+ }
+ return best?{id:best.id,evidence:best.evidence}:{id:'unspecified',evidence:null};
 }
 function findAll(re,text,mapper){
  const flags=re.flags.includes('g')?re.flags:re.flags+'g',rx=new RegExp(re.source,flags),out=[];let m;
