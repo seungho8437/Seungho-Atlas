@@ -12,6 +12,7 @@ const acupoints=read('acupoints.json');
 const meridianSinews=read('meridian-sinews.json');
 const anatomyAcupointRelations=read('anatomy-acupoint-relations.json');
 const anatomyMeridianSinewRelations=read('anatomy-meridian-sinew-relations.json');
+const acupointCoordinateRegistry=read('acupoint-coordinates.json');
 
 const concepts=new Map(atlas.concepts.map(concept=>[concept.id,concept]));
 const sourceIds=new Set(Object.keys(sources));
@@ -74,6 +75,18 @@ for(const relation of anatomyAcupointRelations){
   for(const id of relation.sourceIds??[])assert.ok(sourceIds.has(id),`acupoint relation: missing source ${id}`);
 }
 
+assert.equal(acupointCoordinateRegistry.version,1,'Unsupported acupoint coordinate registry version');
+assert.equal(acupointCoordinateRegistry.model,'BodyParts3D-4.0','Acupoint coordinates must be model-specific to BodyParts3D 4.0');
+assert.ok(Array.isArray(acupointCoordinateRegistry.points),'Acupoint coordinate points must be an array');
+for(const coordinate of acupointCoordinateRegistry.points){
+  assert.ok(acupointIds.has(coordinate.acupointId),`${coordinate.acupointId}: coordinate points to missing acupoint`);
+  assert.ok(['left','right','midline'].includes(coordinate.side),`${coordinate.acupointId}: invalid coordinate side`);
+  assert.ok(Array.isArray(coordinate.position)&&coordinate.position.length===3&&coordinate.position.every(Number.isFinite),`${coordinate.acupointId}: invalid 3D coordinate`);
+  assert.equal(coordinate.model,'BodyParts3D-4.0',`${coordinate.acupointId}: coordinate model mismatch`);
+  assert.equal(coordinate.status,'validated',`${coordinate.acupointId}: only validated coordinates may render`);
+  for(const id of coordinate.sourceIds??[])assert.ok(sourceIds.has(id),`${coordinate.acupointId}: missing coordinate source ${id}`);
+}
+
 const pointById=new Map(acupoints.map(point=>[point.id,point]));
 assert.equal(pointById.get('ST36')?.name.ko,'족삼리','ST36 Korean name regression');
 assert.equal(pointById.get('LI4')?.name.ko,'합곡','LI4 Korean name regression');
@@ -90,4 +103,4 @@ for(const relation of anatomyMeridianSinewRelations){
   for(const id of relation.sourceIds??[])assert.ok(sourceIds.has(id),`sinew relation: missing source ${id}`);
 }
 
-console.log(`Verified ${Object.keys(anatomyKo).length} Korean anatomy localizations, ${acupointIds.size} standard acupoints, ${sinewIds.size} meridian sinews, ${anatomyAcupointRelations.length} anatomy-acupoint relations, and ${anatomyMeridianSinewRelations.length} anatomy-sinew relations against ${atlas.concepts.length} atlas concepts.`);
+console.log(`Verified ${Object.keys(anatomyKo).length} Korean anatomy localizations, ${acupointIds.size} standard acupoints, ${sinewIds.size} meridian sinews, ${anatomyAcupointRelations.length} anatomy-acupoint relations, and ${anatomyMeridianSinewRelations.length} anatomy-sinew relations, plus ${acupointCoordinateRegistry.points.length} validated BodyParts3D acupoint coordinates against ${atlas.concepts.length} atlas concepts.`);
