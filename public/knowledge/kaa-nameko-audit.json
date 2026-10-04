@@ -2001,7 +2001,8 @@
       "result": "direct-verified",
       "pages": [
         54
-      ]
+      ],
+      "note": "KAA: Stylohyoid muscle; manually re-checked against the source PDF during semantic re-audit."
     },
     "FMA9629": {
       "sourceNameEn": "supraspinatus",
@@ -2763,7 +2764,8 @@
       "result": "direct-verified",
       "pages": [
         54
-      ]
+      ],
+      "note": "KAA: Thyrohyoid muscle; manually re-checked against the source PDF during semantic re-audit."
     },
     "FMA13346": {
       "sourceNameEn": "right sternohyoid",
@@ -5420,9 +5422,12 @@
     },
     "FMA22431": {
       "sourceNameEn": "vastus lateralis",
-      "nameKo": "넓은가쪽",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "가쪽넓은근",
+      "result": "direct-verified",
+      "note": "KAA: Vastus lateralis muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        63
+      ]
     },
     "FMA22432": {
       "sourceNameEn": "vastus medialis",
@@ -5865,9 +5870,12 @@
     },
     "FMA22653": {
       "sourceNameEn": "splenius capitis",
-      "nameKo": "널판머리",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "머리널판근",
+      "result": "direct-verified",
+      "note": "KAA: Splenius capitis muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        55
+      ]
     },
     "FMA22654": {
       "sourceNameEn": "axillary artery",
@@ -6026,21 +6034,30 @@
     },
     "FMA22702": {
       "sourceNameEn": "iliocostalis lumborum",
-      "nameKo": "엉덩갈비허리",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "허리엉덩갈비근",
+      "result": "direct-verified",
+      "note": "KAA: Iliocostalis lumborum muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        55
+      ]
     },
     "FMA22703": {
       "sourceNameEn": "iliocostalis thoracis",
-      "nameKo": "엉덩갈비가슴",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "등엉덩갈비근",
+      "result": "direct-verified",
+      "note": "KAA: Iliocostalis thoracis muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        55
+      ]
     },
     "FMA22704": {
       "sourceNameEn": "iliocostalis cervicis",
-      "nameKo": "엉덩갈비목",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "목엉덩갈비근",
+      "result": "direct-verified",
+      "note": "KAA: Iliocostalis cervicis muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        55
+      ]
     },
     "FMA22706": {
       "sourceNameEn": "superior ulnar collateral artery",
@@ -6064,9 +6081,12 @@
     },
     "FMA22709": {
       "sourceNameEn": "longissimus thoracis",
-      "nameKo": "가장긴가슴",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "등가장긴근",
+      "result": "direct-verified",
+      "note": "KAA: Longissimus thoracis muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        55
+      ]
     },
     "FMA22710": {
       "sourceNameEn": "inferior ulnar collateral artery",
@@ -6078,9 +6098,12 @@
     },
     "FMA22711": {
       "sourceNameEn": "longissimus cervicis",
-      "nameKo": "가장긴목",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "목가장긴근",
+      "result": "direct-verified",
+      "note": "KAA: Longissimus cervicis muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        55
+      ]
     },
     "FMA22712": {
       "sourceNameEn": "right inferior ulnar collateral artery",
@@ -6096,9 +6119,12 @@
     },
     "FMA22714": {
       "sourceNameEn": "longissimus capitis",
-      "nameKo": "가장긴머리",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "머리가장긴근",
+      "result": "direct-verified",
+      "note": "KAA: Longissimus capitis muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        55
+      ]
     },
     "FMA22726": {
       "sourceNameEn": "right splenius cervicis",
@@ -6441,21 +6467,30 @@
     },
     "FMA22828": {
       "sourceNameEn": "semispinalis thoracis",
-      "nameKo": "반가시가슴",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "등반가시근",
+      "result": "direct-verified",
+      "note": "KAA: Semispinalis thoracis muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        55
+      ]
     },
     "FMA22829": {
       "sourceNameEn": "semispinalis cervicis",
-      "nameKo": "반가시목",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "목반가시근",
+      "result": "direct-verified",
+      "note": "KAA: Semispinalis cervicis muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        55
+      ]
     },
     "FMA22830": {
       "sourceNameEn": "semispinalis capitis",
-      "nameKo": "반가시머리",
-      "result": "not-directly-listed-in-KAA-PDF",
-      "note": "No exact KAA table row was identified for this FMA/BodyParts3D concept; existing derived mapping retained."
+      "nameKo": "머리반가시근",
+      "result": "direct-verified",
+      "note": "KAA: Semispinalis capitis muscle; manually re-checked against the source PDF during semantic re-audit.",
+      "pages": [
+        55
+      ]
     },
     "FMA22834": {
       "sourceNameEn": "superficial palmar arterial arch",
@@ -12810,7 +12845,8 @@
       "result": "direct-verified",
       "pages": [
         140
-      ]
+      ],
+      "note": "KAA: Hepatic portal vein; manually re-checked against the source PDF during semantic re-audit."
     },
     "FMA50736": {
       "sourceNameEn": "subdivision of pre-hepatic portal vein",
