@@ -28,3 +28,4 @@ jobs:
       - run: npm run audit:korean
       - run: npm run audit:terminology
       - run: npm run build
+      - run: npm run validate:cloudflare

@@ -55,7 +55,31 @@ The repository includes browser-ready geometry. Rebuilding it is optional: obtai
 
 ## Deploy
 
-Import this repository into Vercel as a Vite project. The included `vercel.json` configures `npm ci`, `npm run build`, and the `dist` output directory. It can also be served by a static host.
+### Cloudflare Pages
+
+This repository is Cloudflare Pages-ready. Connect `seungho8437/Seungho-Atlas` through **Workers & Pages → Create application → Pages → Import an existing Git repository**.
+
+Use these settings:
+
+- Framework preset: **React (Vite)** or no preset
+- Production branch: `feature/korean-tcm-knowledge` while the landmark-QC work is being reviewed (switch to `main` later if desired)
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Root directory: repository root
+- Node.js: pinned by `.node-version` to `22.13.0`
+
+Cloudflare Pages will create a `*.pages.dev` deployment and Git-connected branch/PR previews. The CI also validates the generated `dist` against the Cloudflare Pages Free-plan static limits before accepting changes.
+
+For a local Cloudflare-style preview:
+
+```sh
+npm ci
+npm run preview:cloudflare
+```
+
+### Vercel
+
+Vercel remains supported. The included `vercel.json` configures `npm ci`, `npm run build`, and the `dist` output directory.
 
 ## License
 

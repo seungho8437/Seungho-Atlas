@@ -12,7 +12,9 @@
     "check": "tsc --noEmit",
     "validate:knowledge": "node scripts/validate-knowledge.mjs",
     "audit:korean": "node scripts/audit-korean-coverage.mjs",
-    "audit:terminology": "node scripts/audit-anatomy-terminology-semantics.mjs"
+    "audit:terminology": "node scripts/audit-anatomy-terminology-semantics.mjs",
+    "validate:cloudflare": "node scripts/validate-cloudflare-pages.mjs",
+    "preview:cloudflare": "npm run build && wrangler pages dev dist"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
