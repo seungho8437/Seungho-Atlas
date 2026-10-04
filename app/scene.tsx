@@ -128,10 +128,15 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
     method,side,detectorId,detectorConfidence:detectorId?'moderate':undefined
    };
   };
-  const nearestSkinHit=(rc:T.Raycaster)=>{
-   let best:{partIndex:number;hit:T.Intersection<T.Object3D>}|null=null;
-   atlas.parts.forEach((p,i)=>{if(p.system!=='integumentary')return;const mesh=pickers[i];if(!mesh)return;const hit=rc.intersectObject(mesh,false)[0];if(hit&&(!best||hit.distance<best.hit.distance))best={partIndex:i,hit};});
-   return best;
+  const nearestSkinHit=(rc:T.Raycaster):{partIndex:number;hit:T.Intersection<T.Object3D>}|null=>{
+   let bestPartIndex=-1,bestHit:T.Intersection<T.Object3D>|null=null;
+   for(let i=0;i<atlas.parts.length;i++){
+    const p=atlas.parts[i];if(p.system!=='integumentary')continue;
+    const mesh=pickers[i];if(!mesh)continue;
+    const hit=rc.intersectObject(mesh,false)[0];
+    if(hit&&(!bestHit||hit.distance<bestHit.distance)){bestPartIndex=i;bestHit=hit;}
+   }
+   return bestHit&&bestPartIndex>=0?{partIndex:bestPartIndex,hit:bestHit}:null;
   };
   const partSearchText=(i:number)=>`${atlas.parts[i].name} ${atlas.concepts.find(c=>c.id===atlas.parts[i].conceptId)?.name??''}`.toLowerCase();
   const findPhalanxPart=(side:LandmarkAnchorSide,segment:'proximal'|'middle'|'distal')=>{
