@@ -14,6 +14,10 @@ on:
       - public/knowledge/acupoints.json
       - public/knowledge/anatomy-ko.json
 
+concurrency:
+  group: acupoint-visual-audit-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -33,21 +37,14 @@ jobs:
       - name: Rasterize review plates
         run: |
           mkdir -p artifacts/acupoint-visual-audit/png
-          for f in artifacts/acupoint-visual-audit/*.svg; do
+          for f in artifacts/acupoint-visual-audit/contact-high-risk-*.svg artifacts/acupoint-visual-audit/sweep-*.svg; do
             b=$(basename "$f" .svg)
-            rsvg-convert -w 1600 "$f" -o "artifacts/acupoint-visual-audit/png/$b.png"
+            if [[ "$b" == contact-high-risk-* ]]; then
+              rsvg-convert -w 3200 "$f" -o "artifacts/acupoint-visual-audit/png/$b.png"
+            else
+              rsvg-convert -w 1600 "$f" -o "artifacts/acupoint-visual-audit/png/$b.png"
+            fi
           done
-      - name: Build high-risk contact sheets
-        run: |
-          mkdir -p artifacts/acupoint-visual-audit/contact
-          python3 - <<'PY'
-          import glob, os, subprocess
-          files=sorted(glob.glob('artifacts/acupoint-visual-audit/png/detail-*.png'))
-          for i in range(0,len(files),4):
-              batch=files[i:i+4]
-              out=f'artifacts/acupoint-visual-audit/contact/high-risk-{i//4+1:02d}.png'
-              subprocess.run(['montage',*batch,'-tile','2x2','-geometry','800x600+4+4',out],check=True)
-          PY
       - name: Upload visual audit artifact
         uses: actions/upload-artifact@v4
         with:
