@@ -1,0 +1,37 @@
+name: Generate Acupoint Coordinates
+
+on:
+  push:
+    branches:
+      - feature/korean-tcm-knowledge
+    paths:
+      - scripts/generate-acupoint-coordinates.mjs
+      - .github/workflows/generate-acupoint-coordinates.yml
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/korean-tcm-knowledge
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.0'
+      - run: node scripts/generate-acupoint-coordinates.mjs
+      - run: node scripts/validate-atlas.mjs
+      - run: node scripts/validate-knowledge.mjs
+      - name: Commit generated coordinate registry
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/knowledge/acupoint-coordinates.json public/knowledge/acupoint-coordinates-audit.json
+          if git diff --cached --quiet; then
+            echo "No generated coordinate changes."
+          else
+            git commit -m "data: generate BodyParts3D acupoint coordinates"
+            git push
+          fi
