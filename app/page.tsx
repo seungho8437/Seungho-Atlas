@@ -98,6 +98,9 @@ export default function Home(){
   const blob=new Blob([JSON.stringify(payload,null,2)+'\n'],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
   a.href=url;a.download='acupoint-specialized-landmark-anchors.json';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
  };
+ const activeLandmarkSpec=anchorTarget?landmarkSpecs.find(x=>x.landmarkId===anchorTarget):undefined;
+ const acceptedLandmarkCount=landmarkSpecs.filter(spec=>landmarkAnchors.some(anchor=>anchor.landmarkId===spec.landmarkId&&anchor.reviewStatus==='accepted')).length;
+ const detectorCapable=anchorTarget==='radial-crease-proximal-interphalangeal-middle-finger'||anchorTarget==='radial-crease-distal-interphalangeal-middle-finger';
  return <main className="studio">
   {atlas&&<AnatomyScene atlas={atlas} state={{...state,inspectorOpen:details&&selectedParts.length>0}} acupointCoordinates={acupointCoordinates} showAcupoints={showAcupoints} anchorTarget={anchorTarget} anchorDraft={anchorDraft} detectorProposal={detectorProposal} detectorSide={detectorSide} onAnchorPick={candidate=>setAnchorDraft(candidate)} onDetectorProposal={setDetectorProposal} onSelect={choosePart} onSelectAcupoint={id=>{const point=acupoints.find(item=>item.id===id);if(point)chooseAcupoint(point);}} onProgress={n=>{setProgress(n);if(n===100)setError('');}} onError={setError}/>}
   <div className="vignette"/>
