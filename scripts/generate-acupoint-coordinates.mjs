@@ -794,7 +794,7 @@ function applyReviewedExceptionProjection(item){
       const target=ankle.position.map((v,i)=>v*(1-f)+web.position[i]*f);
       if(item.acupointId==='GB42'){
         const st43=resultByKey.get('ST43:'+item.side);
-        if(st43) target[lrAxis]=st43.position[lrAxis]+sideSign*extent[lrAxis]*.018;
+        if(st43) target[lrAxis]=st43.position[lrAxis]+sideSign*extent[lrAxis]*.040;
       }
       mark(target,{sup:true,lr:true},item.acupointId==='GB41'?'reviewed-GB41-between-GB40-GB43':'reviewed-GB42-lateral-to-ST43');
       return true;
