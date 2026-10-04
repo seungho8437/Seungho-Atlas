@@ -26759,7 +26759,13 @@
     "nameKo": "목젖",
     "legacyKo": "구개수",
     "hanja": "口蓋垂",
-    "nameKoVerification": "homonym-needs-context"
+    "nameKoVerification": "direct-manual",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      73
+    ]
   },
   "FMA55675": {
     "nameKo": "신경축",
