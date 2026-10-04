@@ -1,0 +1,146 @@
+[
+  {
+    "id": "LU-JINGJIN",
+    "meridian": "LU",
+    "name": {
+      "ko": "수태음폐경근",
+      "hanja": "手太陰肺經筋",
+      "en": "Lung Meridian Sinew"
+    },
+    "sourceIds": [
+      "WHO_TCM_TERMS_2022"
+    ]
+  },
+  {
+    "id": "LI-JINGJIN",
+    "meridian": "LI",
+    "name": {
+      "ko": "수양명대장경근",
+      "hanja": "手陽明大腸經筋",
+      "en": "Large Intestine Meridian Sinew"
+    },
+    "sourceIds": [
+      "WHO_TCM_TERMS_2022"
+    ]
+  },
+  {
+    "id": "ST-JINGJIN",
+    "meridian": "ST",
+    "name": {
+      "ko": "족양명위경근",
+      "hanja": "足陽明胃經筋",
+      "en": "Stomach Meridian Sinew"
+    },
+    "sourceIds": [
+      "WHO_TCM_TERMS_2022"
+    ]
+  },
+  {
+    "id": "SP-JINGJIN",
+    "meridian": "SP",
+    "name": {
+      "ko": "족태음비경근",
+      "hanja": "足太陰脾經筋",
+      "en": "Spleen Meridian Sinew"
+    },
+    "sourceIds": [
+      "WHO_TCM_TERMS_2022"
+    ]
+  },
+  {
+    "id": "HT-JINGJIN",
+    "meridian": "HT",
+    "name": {
+      "ko": "수소음심경근",
+      "hanja": "手少陰心經筋",
+      "en": "Heart Meridian Sinew"
+    },
+    "sourceIds": [
+      "WHO_TCM_TERMS_2022"
+    ]
+  },
+  {
+    "id": "SI-JINGJIN",
+    "meridian": "SI",
+    "name": {
+      "ko": "수태양소장경근",
+      "hanja": "手太陽小腸經筋",
+      "en": "Small Intestine Meridian Sinew"
+    },
+    "sourceIds": [
+      "WHO_TCM_TERMS_2022"
+    ]
+  },
+  {
+    "id": "BL-JINGJIN",
+    "meridian": "BL",
+    "name": {
+      "ko": "족태양방광경근",
+      "hanja": "足太陽膀胱經筋",
+      "en": "Bladder Meridian Sinew"
+    },
+    "sourceIds": [
+      "WHO_TCM_TERMS_2022"
+    ]
+  },
+  {
+    "id": "KI-JINGJIN",
+    "meridian": "KI",
+    "name": {
+      "ko": "족소음신경근",
+      "hanja": "足少陰腎經筋",
+      "en": "Kidney Meridian Sinew"
+    },
+    "sourceIds": [
+      "WHO_TCM_TERMS_2022"
+    ]
+  },
+  {
+    "id": "PC-JINGJIN",
+    "meridian": "PC",
+    "name": {
+      "ko": "수궐음심포경근",
+      "hanja": "手厥陰心包經筋",
+      "en": "Pericardium Meridian Sinew"
+    },
+    "sourceIds": [
+      "WHO_TCM_TERMS_2022"
+    ]
+  },
+  {
+    "id": "TE-JINGJIN",
+    "meridian": "TE",
+    "name": {
+      "ko": "수소양삼초경근",
+      "hanja": "手少陽三焦經筋",
+      "en": "Triple Energizer Meridian Sinew"
+    },
+    "sourceIds": [
+      "WHO_TCM_TERMS_2022"
+    ]
+  },
+  {
+    "id": "GB-JINGJIN",
+    "meridian": "GB",
+    "name": {
+      "ko": "족소양담경근",
+      "hanja": "足少陽膽經筋",
+      "en": "Gallbladder Meridian Sinew"
+    },
+    "sourceIds": [
+      "WHO_TCM_TERMS_2022"
+    ]
+  },
+  {
+    "id": "LR-JINGJIN",
+    "meridian": "LR",
+    "name": {
+      "ko": "족궐음간경근",
+      "hanja": "足厥陰肝經筋",
+      "en": "Liver Meridian Sinew"
+    },
+    "sourceIds": [
+      "WHO_TCM_TERMS_2022"
+    ]
+  }
+]
