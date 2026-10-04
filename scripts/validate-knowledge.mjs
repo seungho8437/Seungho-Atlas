@@ -13,6 +13,7 @@ const acupointWhoAudit=read('acupoints-who2008-audit.json');
 const meridianSinews=read('meridian-sinews.json');
 const anatomyAcupointRelations=read('anatomy-acupoint-relations.json');
 const anatomyMeridianSinewRelations=read('anatomy-meridian-sinew-relations.json');
+const anatomyMeridianSinewAudit=read('anatomy-meridian-sinew-audit.json');
 const acupointCoordinateRegistry=read('acupoint-coordinates.json');
 
 const concepts=new Map(atlas.concepts.map(concept=>[concept.id,concept]));
@@ -118,11 +119,21 @@ const sinewById=new Map(meridianSinews.map(sinew=>[sinew.id,sinew]));
 assert.equal(sinewById.get('ST-JINGJIN')?.name.ko,'족양명위경근','ST meridian sinew name regression');
 assert.ok(sinewById.get('ST-JINGJIN')?.overviewKo?.includes('정강이'),'ST meridian sinew pathway regression');
 
+const sinewRelationKeys=new Set();
 for(const relation of anatomyMeridianSinewRelations){
   assert.ok(concepts.has(relation.anatomyId),`${relation.anatomyId}: sinew relation points to missing anatomy concept`);
   assert.ok(sinewIds.has(relation.meridianSinewId),`${relation.meridianSinewId}: missing meridian sinew`);
+  assert.ok(['course-region','binding-region','branch-region','termination-region'].includes(relation.relation),`${relation.anatomyId}: invalid sinew relation type`);
   assert.ok(['direct-landmark','regional','interpretive'].includes(relation.correspondence),`${relation.anatomyId}: invalid correspondence`);
-  for(const id of relation.sourceIds??[])assert.ok(sourceIds.has(id),`sinew relation: missing source ${id}`);
+  assert.ok(typeof relation.noteKo==='string'&&relation.noteKo.trim(),`${relation.anatomyId}: sinew relation noteKo is required`);
+  assert.ok(Array.isArray(relation.sourceIds)&&relation.sourceIds.length,`${relation.anatomyId}: sinew relation sourceIds are required`);
+  for(const id of relation.sourceIds)assert.ok(sourceIds.has(id),`sinew relation: missing source ${id}`);
+  const key=`${relation.meridianSinewId}|${relation.anatomyId}|${relation.relation}`;
+  assert.ok(!sinewRelationKeys.has(key),`${key}: duplicate sinew relation`);
+  sinewRelationKeys.add(key);
 }
+for(const sinewId of sinewIds)assert.ok(anatomyMeridianSinewRelations.some(relation=>relation.meridianSinewId===sinewId),`${sinewId}: no anatomy mappings`);
+assert.equal(anatomyMeridianSinewAudit.totalRelationCount,anatomyMeridianSinewRelations.length,'Sinew audit relation count mismatch');
+assert.deepEqual(anatomyMeridianSinewAudit.missingSinews,[],'Sinew audit reports missing channels');
 
 console.log(`Verified ${Object.keys(anatomyKo).length} anatomy localization records (${verifiedLocalizations} verified, ${derivedLocalizations} derived, ${reviewNeededLocalizations} review-needed), ${acupointIds.size} standard acupoints, ${sinewIds.size} meridian sinews, ${anatomyAcupointRelations.length} anatomy-acupoint relations, and ${anatomyMeridianSinewRelations.length} anatomy-sinew relations, plus ${acupointCoordinateRegistry.points.length} validated BodyParts3D acupoint coordinates against ${atlas.concepts.length} atlas concepts.`);
