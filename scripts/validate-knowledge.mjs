@@ -74,6 +74,15 @@ for(const relation of anatomyAcupointRelations){
   for(const id of relation.sourceIds??[])assert.ok(sourceIds.has(id),`acupoint relation: missing source ${id}`);
 }
 
+const pointById=new Map(acupoints.map(point=>[point.id,point]));
+assert.equal(pointById.get('ST36')?.name.ko,'족삼리','ST36 Korean name regression');
+assert.equal(pointById.get('LI4')?.name.ko,'합곡','LI4 Korean name regression');
+assert.equal(pointById.get('GV20')?.name.ko,'백회','GV20 Korean name regression');
+assert.equal(pointById.get('CV17')?.name.ko,'전중','CV17 Korean name regression');
+const sinewById=new Map(meridianSinews.map(sinew=>[sinew.id,sinew]));
+assert.equal(sinewById.get('ST-JINGJIN')?.name.ko,'족양명위경근','ST meridian sinew name regression');
+assert.ok(sinewById.get('ST-JINGJIN')?.overviewKo?.includes('정강이'),'ST meridian sinew pathway regression');
+
 for(const relation of anatomyMeridianSinewRelations){
   assert.ok(concepts.has(relation.anatomyId),`${relation.anatomyId}: sinew relation points to missing anatomy concept`);
   assert.ok(sinewIds.has(relation.meridianSinewId),`${relation.meridianSinewId}: missing meridian sinew`);
