@@ -1,0 +1,22 @@
+[
+  {
+    "anatomyId": "FMA22532",
+    "meridianSinewId": "ST-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와의 비교 연구에서 앞정강근이 족양명경근의 대응 근육 중 하나로 제시되었다. 경근과 현대 근육을 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "KJA_ST_JINGJIN_2006"
+    ]
+  },
+  {
+    "anatomyId": "FMA22534",
+    "meridianSinewId": "ST-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와의 비교 연구에서 긴발가락폄근이 족양명경근의 대응 근육 중 하나로 제시되었다.",
+    "sourceIds": [
+      "KJA_ST_JINGJIN_2006"
+    ]
+  }
+]
