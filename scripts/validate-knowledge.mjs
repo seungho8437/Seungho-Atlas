@@ -26,6 +26,8 @@ for(const [conceptId,entry] of Object.entries(anatomyKo)){
   if(entry.legacyKo!==undefined)assert.ok(typeof entry.legacyKo==='string'&&entry.legacyKo.trim(),`${conceptId}: legacyKo is invalid`);
   if(entry.hanja!==undefined)assert.ok(typeof entry.hanja==='string'&&entry.hanja.trim(),`${conceptId}: hanja is invalid`);
   if(entry.descriptionKo!==undefined)assert.ok(typeof entry.descriptionKo==='string'&&entry.descriptionKo.trim(),`${conceptId}: descriptionKo is invalid`);
+  assert.ok(['verified','derived','review-needed'].includes(entry.status??'verified'),`${conceptId}: invalid localization status`);
+  for(const id of entry.sourceIds??[])assert.ok(sourceIds.has(id),`${conceptId}: missing localization source ${id}`);
   if(entry.aliases!==undefined){
     assert.ok(Array.isArray(entry.aliases),`${conceptId}: aliases must be an array`);
     const normalized=entry.aliases.map(value=>String(value).trim()).filter(Boolean);
