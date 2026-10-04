@@ -2136,10 +2136,10 @@
   },
   "FMA9623": {
     "sourceNameEn": "perineal muscle",
-    "unresolvedTokens": [
-      "perineal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "샅근육",
+    "legacyKo": "회음근",
+    "hanja": "會陰筋"
   },
   "FMA9625": {
     "sourceNameEn": "stylohyoid",
@@ -2255,24 +2255,24 @@
   },
   "FMA9760": {
     "sourceNameEn": "transversus thoracis",
-    "unresolvedTokens": [
-      "transversus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가슴가로근",
+    "legacyKo": "흉횡근",
+    "hanja": "胸橫筋"
   },
   "FMA9761": {
     "sourceNameEn": "right transversus thoracis",
-    "unresolvedTokens": [
-      "transversus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른가슴가로근",
+    "legacyKo": "우흉횡근",
+    "hanja": "右胸橫筋"
   },
   "FMA9762": {
     "sourceNameEn": "left transversus thoracis",
-    "unresolvedTokens": [
-      "transversus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼가슴가로근",
+    "legacyKo": "좌흉횡근",
+    "hanja": "左胸橫筋"
   },
   "FMA9914": {
     "nameKo": "척추뼈",
@@ -2911,10 +2911,10 @@
   },
   "FMA13338": {
     "sourceNameEn": "infrahyoid muscle",
-    "unresolvedTokens": [
-      "infrahyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "목뿔아래근육",
+    "legacyKo": "설골하근",
+    "hanja": "舌骨下筋"
   },
   "FMA13341": {
     "sourceNameEn": "sternohyoid",
@@ -3079,10 +3079,10 @@
   },
   "FMA13386": {
     "sourceNameEn": "scalenus medius",
-    "unresolvedTokens": [
-      "medius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "중간목갈비근",
+    "legacyKo": "중사각근",
+    "hanja": "中斜角筋"
   },
   "FMA13387": {
     "nameKo": "목갈비뒤",
@@ -3107,17 +3107,17 @@
   },
   "FMA13390": {
     "sourceNameEn": "right scalenus medius",
-    "unresolvedTokens": [
-      "medius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른중간목갈비근",
+    "legacyKo": "우중사각근",
+    "hanja": "右中斜角筋"
   },
   "FMA13391": {
     "sourceNameEn": "left scalenus medius",
-    "unresolvedTokens": [
-      "medius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼중간목갈비근",
+    "legacyKo": "좌중사각근",
+    "hanja": "左中斜角筋"
   },
   "FMA13392": {
     "nameKo": "오른목갈비앞",
@@ -5694,45 +5694,45 @@
   },
   "FMA22353": {
     "sourceNameEn": "sartorius",
-    "unresolvedTokens": [
-      "sartorius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "넙다리빗근",
+    "legacyKo": "봉공근",
+    "hanja": "縫工筋"
   },
   "FMA22354": {
     "sourceNameEn": "right sartorius",
-    "unresolvedTokens": [
-      "sartorius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른넙다리빗근",
+    "legacyKo": "우봉공근",
+    "hanja": "右縫工筋"
   },
   "FMA22355": {
     "sourceNameEn": "left sartorius",
-    "unresolvedTokens": [
-      "sartorius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼넙다리빗근",
+    "legacyKo": "좌봉공근",
+    "hanja": "左縫工筋"
   },
   "FMA22357": {
     "sourceNameEn": "semitendinosus",
-    "unresolvedTokens": [
-      "semitendinosus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "반힘줄근",
+    "legacyKo": "반건양근",
+    "hanja": "半腱樣筋"
   },
   "FMA22358": {
     "sourceNameEn": "right semitendinosus",
-    "unresolvedTokens": [
-      "semitendinosus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른반힘줄근",
+    "legacyKo": "우반건양근",
+    "hanja": "右半腱樣筋"
   },
   "FMA22359": {
     "sourceNameEn": "left semitendinosus",
-    "unresolvedTokens": [
-      "semitendinosus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼반힘줄근",
+    "legacyKo": "좌반건양근",
+    "hanja": "左半腱樣筋"
   },
   "FMA22423": {
     "sourceNameEn": "tensor fasciae latae",
@@ -5792,26 +5792,24 @@
   },
   "FMA22432": {
     "sourceNameEn": "vastus medialis",
-    "unresolvedTokens": [
-      "vastus",
-      "medialis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "안쪽넓은근",
+    "legacyKo": "내측광근",
+    "hanja": "內側廣筋"
   },
   "FMA22433": {
     "sourceNameEn": "vastus intermedius",
-    "unresolvedTokens": [
-      "vastus",
-      "intermedius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "중간넓은근",
+    "legacyKo": "중간광근",
+    "hanja": "中間廣筋"
   },
   "FMA22438": {
     "sourceNameEn": "semimembranosus",
-    "unresolvedTokens": [
-      "semimembranosus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "반막근",
+    "legacyKo": "반막양근",
+    "hanja": "半膜樣筋"
   },
   "FMA22439": {
     "nameKo": "넙다리안쪽칸근육",
@@ -5822,10 +5820,10 @@
   },
   "FMA22440": {
     "sourceNameEn": "pectineus",
-    "unresolvedTokens": [
-      "pectineus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "두덩근",
+    "legacyKo": "치골근",
+    "hanja": "恥骨筋"
   },
   "FMA22441": {
     "nameKo": "모음근긴",
@@ -5843,38 +5841,38 @@
   },
   "FMA22443": {
     "sourceNameEn": "adductor magnus",
-    "unresolvedTokens": [
-      "magnus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "큰모음근",
+    "legacyKo": "대내전근",
+    "hanja": "大內轉筋"
   },
   "FMA22448": {
     "sourceNameEn": "right semimembranosus",
-    "unresolvedTokens": [
-      "semimembranosus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른반막근",
+    "legacyKo": "우반막양근",
+    "hanja": "右半膜樣筋"
   },
   "FMA22449": {
     "sourceNameEn": "left semimembranosus",
-    "unresolvedTokens": [
-      "semimembranosus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼반막근",
+    "legacyKo": "좌반막양근",
+    "hanja": "左半膜樣筋"
   },
   "FMA22450": {
     "sourceNameEn": "right pectineus",
-    "unresolvedTokens": [
-      "pectineus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른두덩근",
+    "legacyKo": "우치골근",
+    "hanja": "右恥骨筋"
   },
   "FMA22451": {
     "sourceNameEn": "left pectineus",
-    "unresolvedTokens": [
-      "pectineus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼두덩근",
+    "legacyKo": "좌치골근",
+    "hanja": "左恥骨筋"
   },
   "FMA22452": {
     "nameKo": "오른모음근짧은",
@@ -5906,17 +5904,17 @@
   },
   "FMA22459": {
     "sourceNameEn": "right adductor magnus",
-    "unresolvedTokens": [
-      "magnus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른큰모음근",
+    "legacyKo": "우대내전근",
+    "hanja": "右大內轉筋"
   },
   "FMA22460": {
     "sourceNameEn": "left adductor magnus",
-    "unresolvedTokens": [
-      "magnus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼큰모음근",
+    "legacyKo": "좌대내전근",
+    "hanja": "左大內轉筋"
   },
   "FMA22470": {
     "nameKo": "넙다리근육",
@@ -6043,17 +6041,17 @@
   },
   "FMA22542": {
     "sourceNameEn": "soleus",
-    "unresolvedTokens": [
-      "soleus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가자미근",
+    "legacyKo": "비근",
+    "hanja": "比筋"
   },
   "FMA22543": {
     "sourceNameEn": "plantaris",
-    "unresolvedTokens": [
-      "plantaris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "장딴지빗근",
+    "legacyKo": "족저근",
+    "hanja": "足底筋"
   },
   "FMA22544": {
     "nameKo": "오른쪽 앞정강근",
@@ -6147,31 +6145,31 @@
   },
   "FMA22558": {
     "sourceNameEn": "right soleus",
-    "unresolvedTokens": [
-      "soleus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른가자미근",
+    "legacyKo": "우비근",
+    "hanja": "右比筋"
   },
   "FMA22559": {
     "sourceNameEn": "left soleus",
-    "unresolvedTokens": [
-      "soleus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼가자미근",
+    "legacyKo": "좌비근",
+    "hanja": "左比筋"
   },
   "FMA22560": {
     "sourceNameEn": "right plantaris",
-    "unresolvedTokens": [
-      "plantaris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른장딴지빗근",
+    "legacyKo": "우족저근",
+    "hanja": "右足底筋"
   },
   "FMA22561": {
     "sourceNameEn": "left plantaris",
-    "unresolvedTokens": [
-      "plantaris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼장딴지빗근",
+    "legacyKo": "좌족저근",
+    "hanja": "左足底筋"
   },
   "FMA22562": {
     "nameKo": "오른중간무릎동맥",
@@ -6231,24 +6229,24 @@
   },
   "FMA22590": {
     "sourceNameEn": "popliteus",
-    "unresolvedTokens": [
-      "popliteus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오금근",
+    "legacyKo": "슬와근",
+    "hanja": "膝窩筋"
   },
   "FMA22591": {
     "sourceNameEn": "right popliteus",
-    "unresolvedTokens": [
-      "popliteus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른오금근",
+    "legacyKo": "우슬와근",
+    "hanja": "右膝窩筋"
   },
   "FMA22592": {
     "sourceNameEn": "left popliteus",
-    "unresolvedTokens": [
-      "popliteus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼오금근",
+    "legacyKo": "좌슬와근",
+    "hanja": "左膝窩筋"
   },
   "FMA22593": {
     "nameKo": "굽힘근엄지발가락긴",
@@ -6343,10 +6341,10 @@
   },
   "FMA22681": {
     "sourceNameEn": "splenius cervicis",
-    "unresolvedTokens": [
-      "splenius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "목널판근",
+    "legacyKo": "경판상근",
+    "hanja": "頸板狀筋"
   },
   "FMA22682": {
     "nameKo": "오른앞휘돌이위팔뼈동맥",
@@ -6518,17 +6516,17 @@
   },
   "FMA22726": {
     "sourceNameEn": "right splenius cervicis",
-    "unresolvedTokens": [
-      "splenius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른목널판근",
+    "legacyKo": "우경판상근",
+    "hanja": "右頸板狀筋"
   },
   "FMA22727": {
     "sourceNameEn": "left splenius cervicis",
-    "unresolvedTokens": [
-      "splenius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼목널판근",
+    "legacyKo": "좌경판상근",
+    "hanja": "左頸板狀筋"
   },
   "FMA22728": {
     "sourceNameEn": "right splenius capitis",
@@ -6693,10 +6691,10 @@
   },
   "FMA22765": {
     "sourceNameEn": "spinalis thoracis",
-    "unresolvedTokens": [
-      "spinalis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가슴가시근",
+    "legacyKo": "흉극근",
+    "hanja": "胸棘筋"
   },
   "FMA22766": {
     "nameKo": "왼노쪽되돌이동맥",
@@ -6735,17 +6733,17 @@
   },
   "FMA22779": {
     "sourceNameEn": "right spinalis thoracis",
-    "unresolvedTokens": [
-      "spinalis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른가슴가시근",
+    "legacyKo": "우흉극근",
+    "hanja": "右胸棘筋"
   },
   "FMA22780": {
     "sourceNameEn": "left spinalis thoracis",
-    "unresolvedTokens": [
-      "spinalis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼가슴가시근",
+    "legacyKo": "좌흉극근",
+    "hanja": "左胸棘筋"
   },
   "FMA22796": {
     "nameKo": "자동맥",
@@ -6959,10 +6957,10 @@
   },
   "FMA22841": {
     "sourceNameEn": "interspinalis muscle",
-    "unresolvedTokens": [
-      "interspinalis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가시사이근",
+    "legacyKo": "극간근",
+    "hanja": "棘間筋"
   },
   "FMA22842": {
     "sourceNameEn": "branch of arterial anastomosis",
@@ -6987,17 +6985,17 @@
   },
   "FMA22846": {
     "sourceNameEn": "interspinalis thoracis",
-    "unresolvedTokens": [
-      "interspinalis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가슴가시사이근",
+    "legacyKo": "흉극간근",
+    "hanja": "胸棘間筋"
   },
   "FMA22848": {
     "sourceNameEn": "intertransversarius muscle",
-    "unresolvedTokens": [
-      "intertransversarius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가로돌기사이근",
+    "legacyKo": "횡돌기간근",
+    "hanja": "橫突起間筋"
   },
   "FMA22849": {
     "sourceNameEn": "lumbar intertransversarius",
@@ -7127,17 +7125,17 @@
   },
   "FMA22890": {
     "sourceNameEn": "right interspinalis thoracis",
-    "unresolvedTokens": [
-      "interspinalis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른가슴가시사이근",
+    "legacyKo": "우흉극간근",
+    "hanja": "右胸棘間筋"
   },
   "FMA22891": {
     "sourceNameEn": "left interspinalis thoracis",
-    "unresolvedTokens": [
-      "interspinalis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼가슴가시사이근",
+    "legacyKo": "좌흉극간근",
+    "hanja": "左胸棘間筋"
   },
   "FMA22905": {
     "sourceNameEn": "right arteria princeps pollicis",
@@ -7553,38 +7551,38 @@
   },
   "FMA23082": {
     "sourceNameEn": "cervical rotator",
-    "unresolvedTokens": [
-      "rotator"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "목돌림근",
+    "legacyKo": "경회선근",
+    "hanja": "頸回旋筋"
   },
   "FMA23083": {
     "sourceNameEn": "thoracic rotator",
-    "unresolvedTokens": [
-      "rotator"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가슴돌림근",
+    "legacyKo": "흉회선근",
+    "hanja": "胸回旋筋"
   },
   "FMA23084": {
     "sourceNameEn": "lumbar rotator",
-    "unresolvedTokens": [
-      "rotator"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "허리돌림근",
+    "legacyKo": "요회선근",
+    "hanja": "腰回旋筋"
   },
   "FMA23089": {
     "sourceNameEn": "right lumbar rotator",
-    "unresolvedTokens": [
-      "rotator"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른허리돌림근",
+    "legacyKo": "우요회선근",
+    "hanja": "右腰回旋筋"
   },
   "FMA23090": {
     "sourceNameEn": "left lumbar rotator",
-    "unresolvedTokens": [
-      "rotator"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼허리돌림근",
+    "legacyKo": "좌요회선근",
+    "hanja": "左腰回旋筋"
   },
   "FMA23113": {
     "sourceNameEn": "subscapular vein",
@@ -8788,17 +8786,17 @@
   },
   "FMA32514": {
     "sourceNameEn": "prevertebral muscle",
-    "unresolvedTokens": [
-      "prevertebral"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "척추앞근육",
+    "legacyKo": "추전근",
+    "hanja": "椎前筋"
   },
   "FMA32515": {
     "sourceNameEn": "postvertebral muscle",
-    "unresolvedTokens": [
-      "postvertebral"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "척추뒤근육",
+    "legacyKo": "추후근",
+    "hanja": "椎後筋"
   },
   "FMA32516": {
     "sourceNameEn": "extrinsic muscle of shoulder",
@@ -8847,19 +8845,17 @@
   },
   "FMA32527": {
     "sourceNameEn": "obliquus capitis superior",
-    "unresolvedTokens": [
-      "obliquus",
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "위머리빗근",
+    "legacyKo": "상두사근",
+    "hanja": "上頭斜筋"
   },
   "FMA32528": {
     "sourceNameEn": "obliquus capitis inferior",
-    "unresolvedTokens": [
-      "obliquus",
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "아래머리빗근",
+    "legacyKo": "하두사근",
+    "hanja": "下頭斜筋"
   },
   "FMA32529": {
     "nameKo": "등세모구역",
@@ -8898,35 +8894,31 @@
   },
   "FMA32534": {
     "sourceNameEn": "right obliquus capitis superior",
-    "unresolvedTokens": [
-      "obliquus",
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른위머리빗근",
+    "legacyKo": "우상두사근",
+    "hanja": "右上頭斜筋"
   },
   "FMA32535": {
     "sourceNameEn": "left obliquus capitis superior",
-    "unresolvedTokens": [
-      "obliquus",
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼위머리빗근",
+    "legacyKo": "좌상두사근",
+    "hanja": "左上頭斜筋"
   },
   "FMA32536": {
     "sourceNameEn": "right obliquus capitis inferior",
-    "unresolvedTokens": [
-      "obliquus",
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른아래머리빗근",
+    "legacyKo": "우하두사근",
+    "hanja": "右下頭斜筋"
   },
   "FMA32537": {
     "sourceNameEn": "left obliquus capitis inferior",
-    "unresolvedTokens": [
-      "obliquus",
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼아래머리빗근",
+    "legacyKo": "좌하두사근",
+    "hanja": "左下頭斜筋"
   },
   "FMA32540": {
     "sourceNameEn": "right levator scapulae",
@@ -8958,10 +8950,10 @@
   },
   "FMA32546": {
     "sourceNameEn": "infraspinatus",
-    "unresolvedTokens": [
-      "infraspinatus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가시아래근",
+    "legacyKo": "극하근",
+    "hanja": "棘下筋"
   },
   "FMA32547": {
     "sourceNameEn": "right infraspinatus muscle",
@@ -9442,10 +9434,10 @@
   },
   "FMA34677": {
     "sourceNameEn": "clavicular part of deltoid",
-    "unresolvedTokens": [
-      "clavicular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "어깨세모근의 빗장부분",
+    "legacyKo": "삼각근 쇄골부",
+    "hanja": "三角筋鎖骨部"
   },
   "FMA34678": {
     "nameKo": "어깨세모봉우리부분",
@@ -9512,10 +9504,10 @@
   },
   "FMA34687": {
     "sourceNameEn": "clavicular part of pectoralis major",
-    "unresolvedTokens": [
-      "clavicular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "큰가슴근의 빗장부분",
+    "legacyKo": "대흉근 쇄골부",
+    "hanja": "大胸筋鎖骨部"
   },
   "FMA34690": {
     "sourceNameEn": "clavicular part of right pectoralis major",
@@ -9533,10 +9525,10 @@
   },
   "FMA34696": {
     "sourceNameEn": "sternocostal part of pectoralis major",
-    "unresolvedTokens": [
-      "sternocostal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "큰가슴근의 복장갈비부분",
+    "legacyKo": "대흉근 흉늑부",
+    "hanja": "大胸筋胸肋部"
   },
   "FMA34699": {
     "nameKo": "큰가슴근배부분",
@@ -9680,10 +9672,10 @@
   },
   "FMA37379": {
     "sourceNameEn": "opponens pollicis",
-    "unresolvedTokens": [
-      "opponens"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "엄지맞섬근",
+    "legacyKo": "무지대립근",
+    "hanja": "拇指對立筋"
   },
   "FMA37382": {
     "nameKo": "손벌림근손가락새끼",
@@ -9701,10 +9693,10 @@
   },
   "FMA37384": {
     "sourceNameEn": "opponens digiti minimi of hand",
-    "unresolvedTokens": [
-      "opponens"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "새끼맞섬근",
+    "legacyKo": "소지대립근",
+    "hanja": "小指對立筋"
   },
   "FMA37386": {
     "nameKo": "오른벌림근엄지손가락짧은",
@@ -9736,17 +9728,17 @@
   },
   "FMA37390": {
     "sourceNameEn": "right opponens pollicis",
-    "unresolvedTokens": [
-      "opponens"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른엄지맞섬근",
+    "legacyKo": "우무지대립근",
+    "hanja": "右拇指對立筋"
   },
   "FMA37391": {
     "sourceNameEn": "left opponens pollicis",
-    "unresolvedTokens": [
-      "opponens"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼엄지맞섬근",
+    "legacyKo": "좌무지대립근",
+    "hanja": "左拇指對立筋"
   },
   "FMA37396": {
     "nameKo": "오른손벌림근손가락새끼",
@@ -9813,10 +9805,10 @@
   },
   "FMA37452": {
     "sourceNameEn": "flexor accessorius",
-    "unresolvedTokens": [
-      "accessorius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "덧굽힘근",
+    "legacyKo": "부굴근",
+    "hanja": "副屈筋"
   },
   "FMA37453": {
     "nameKo": "발벌레근",
@@ -9890,17 +9882,17 @@
   },
   "FMA37465": {
     "sourceNameEn": "right flexor accessorius",
-    "unresolvedTokens": [
-      "accessorius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른덧굽힘근",
+    "legacyKo": "우부굴근",
+    "hanja": "右副屈筋"
   },
   "FMA37466": {
     "sourceNameEn": "left flexor accessorius",
-    "unresolvedTokens": [
-      "accessorius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼덧굽힘근",
+    "legacyKo": "좌부굴근",
+    "hanja": "左副屈筋"
   },
   "FMA37471": {
     "nameKo": "오른발굽힘근손가락새끼짧은",
@@ -9974,45 +9966,45 @@
   },
   "FMA37664": {
     "sourceNameEn": "coracobrachialis",
-    "unresolvedTokens": [
-      "coracobrachialis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "부리위팔근",
+    "legacyKo": "오훼완근",
+    "hanja": "烏喙腕筋"
   },
   "FMA37665": {
     "sourceNameEn": "right coracobrachialis",
-    "unresolvedTokens": [
-      "coracobrachialis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른부리위팔근",
+    "legacyKo": "우오훼완근",
+    "hanja": "右烏喙腕筋"
   },
   "FMA37666": {
     "sourceNameEn": "left coracobrachialis",
-    "unresolvedTokens": [
-      "coracobrachialis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼부리위팔근",
+    "legacyKo": "좌오훼완근",
+    "hanja": "左烏喙腕筋"
   },
   "FMA37667": {
     "sourceNameEn": "brachialis",
-    "unresolvedTokens": [
-      "brachialis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "위팔근",
+    "legacyKo": "상완근",
+    "hanja": "上腕筋"
   },
   "FMA37668": {
     "sourceNameEn": "right brachialis",
-    "unresolvedTokens": [
-      "brachialis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른위팔근",
+    "legacyKo": "우상완근",
+    "hanja": "右上腕筋"
   },
   "FMA37669": {
     "sourceNameEn": "left brachialis",
-    "unresolvedTokens": [
-      "brachialis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼위팔근",
+    "legacyKo": "좌상완근",
+    "hanja": "左上腕筋"
   },
   "FMA37682": {
     "nameKo": "두갈래위팔짧은머리",
@@ -10058,24 +10050,24 @@
   },
   "FMA37692": {
     "sourceNameEn": "long head of triceps brachii",
-    "unresolvedTokens": [
-      "triceps"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "긴갈래 위팔세갈래근",
+    "legacyKo": "장두 상완삼두근",
+    "hanja": "長頭上腕三頭筋"
   },
   "FMA37693": {
     "sourceNameEn": "medial head of triceps brachii",
-    "unresolvedTokens": [
-      "triceps"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "안쪽갈래 위팔세갈래근",
+    "legacyKo": "내측두 상완삼두근",
+    "hanja": "內側頭上腕三頭筋"
   },
   "FMA37694": {
     "sourceNameEn": "lateral head of triceps brachii",
-    "unresolvedTokens": [
-      "triceps"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가쪽갈래 위팔세갈래근",
+    "legacyKo": "외측두 상완삼두근",
+    "hanja": "外側頭上腕三頭筋"
   },
   "FMA37695": {
     "sourceNameEn": "medial head of right triceps brachii",
@@ -10121,24 +10113,24 @@
   },
   "FMA37704": {
     "sourceNameEn": "anconeus",
-    "unresolvedTokens": [
-      "anconeus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "팔꿈치근",
+    "legacyKo": "주근",
+    "hanja": "肘筋"
   },
   "FMA37705": {
     "sourceNameEn": "right anconeus",
-    "unresolvedTokens": [
-      "anconeus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른팔꿈치근",
+    "legacyKo": "우주근",
+    "hanja": "右肘筋"
   },
   "FMA37706": {
     "sourceNameEn": "left anconeus",
-    "unresolvedTokens": [
-      "anconeus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼팔꿈치근",
+    "legacyKo": "좌주근",
+    "hanja": "左肘筋"
   },
   "FMA37711": {
     "sourceNameEn": "muscle of anterior compartment of arm",
@@ -10296,45 +10288,45 @@
   },
   "FMA38462": {
     "sourceNameEn": "palmaris longus",
-    "unresolvedTokens": [
-      "palmaris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "긴손바닥근",
+    "legacyKo": "장장근",
+    "hanja": "長掌筋"
   },
   "FMA38463": {
     "sourceNameEn": "right palmaris longus",
-    "unresolvedTokens": [
-      "palmaris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른긴손바닥근",
+    "legacyKo": "우장장근",
+    "hanja": "右長掌筋"
   },
   "FMA38464": {
     "sourceNameEn": "left palmaris longus",
-    "unresolvedTokens": [
-      "palmaris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼긴손바닥근",
+    "legacyKo": "좌장장근",
+    "hanja": "左長掌筋"
   },
   "FMA38469": {
     "sourceNameEn": "flexor digitorum superficialis",
-    "unresolvedTokens": [
-      "superficialis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "얕은손가락굽힘근",
+    "legacyKo": "천지굴근",
+    "hanja": "淺指屈筋"
   },
   "FMA38470": {
     "sourceNameEn": "right flexor digitorum superficialis",
-    "unresolvedTokens": [
-      "superficialis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른얕은손가락굽힘근",
+    "legacyKo": "우천지굴근",
+    "hanja": "右淺指屈筋"
   },
   "FMA38471": {
     "sourceNameEn": "left flexor digitorum superficialis",
-    "unresolvedTokens": [
-      "superficialis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼얕은손가락굽힘근",
+    "legacyKo": "좌천지굴근",
+    "hanja": "左淺指屈筋"
   },
   "FMA38472": {
     "nameKo": "아래팔앞칸얕은근육",
@@ -10352,24 +10344,24 @@
   },
   "FMA38478": {
     "sourceNameEn": "flexor digitorum profundus",
-    "unresolvedTokens": [
-      "profundus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "깊은손가락굽힘근",
+    "legacyKo": "심지굴근",
+    "hanja": "深指屈筋"
   },
   "FMA38479": {
     "sourceNameEn": "right flexor digitorum profundus",
-    "unresolvedTokens": [
-      "profundus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른깊은손가락굽힘근",
+    "legacyKo": "우심지굴근",
+    "hanja": "右深指屈筋"
   },
   "FMA38480": {
     "sourceNameEn": "left flexor digitorum profundus",
-    "unresolvedTokens": [
-      "profundus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼깊은손가락굽힘근",
+    "legacyKo": "좌심지굴근",
+    "hanja": "左深指屈筋"
   },
   "FMA38481": {
     "nameKo": "굽힘근엄지손가락긴",
@@ -10394,24 +10386,24 @@
   },
   "FMA38485": {
     "sourceNameEn": "brachioradialis",
-    "unresolvedTokens": [
-      "brachioradialis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "위팔노근",
+    "legacyKo": "상완요골근",
+    "hanja": "上腕橈骨筋"
   },
   "FMA38486": {
     "sourceNameEn": "right brachioradialis",
-    "unresolvedTokens": [
-      "brachioradialis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른위팔노근",
+    "legacyKo": "우상완요골근",
+    "hanja": "右上腕橈骨筋"
   },
   "FMA38487": {
     "sourceNameEn": "left brachioradialis",
-    "unresolvedTokens": [
-      "brachioradialis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼위팔노근",
+    "legacyKo": "좌상완요골근",
+    "hanja": "左上腕橈骨筋"
   },
   "FMA38488": {
     "nameKo": "아래팔뒤칸근육",
@@ -10513,24 +10505,24 @@
   },
   "FMA38506": {
     "sourceNameEn": "extensor carpi ulnaris",
-    "unresolvedTokens": [
-      "ulnaris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "자쪽손목폄근",
+    "legacyKo": "척측수근신근",
+    "hanja": "尺側手根伸筋"
   },
   "FMA38507": {
     "sourceNameEn": "right extensor carpi ulnaris",
-    "unresolvedTokens": [
-      "ulnaris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른자쪽손목폄근",
+    "legacyKo": "우척측수근신근",
+    "hanja": "右尺側手根伸筋"
   },
   "FMA38508": {
     "sourceNameEn": "left extensor carpi ulnaris",
-    "unresolvedTokens": [
-      "ulnaris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼자쪽손목폄근",
+    "legacyKo": "좌척측수근신근",
+    "hanja": "左尺側手根伸筋"
   },
   "FMA38509": {
     "nameKo": "아래팔뒤칸깊은근육",
@@ -10541,24 +10533,24 @@
   },
   "FMA38512": {
     "sourceNameEn": "supinator",
-    "unresolvedTokens": [
-      "supinator"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뒤침근",
+    "legacyKo": "회외근",
+    "hanja": "回外筋"
   },
   "FMA38513": {
     "sourceNameEn": "right supinator",
-    "unresolvedTokens": [
-      "supinator"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른뒤침근",
+    "legacyKo": "우회외근",
+    "hanja": "右回外筋"
   },
   "FMA38514": {
     "sourceNameEn": "left supinator",
-    "unresolvedTokens": [
-      "supinator"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼뒤침근",
+    "legacyKo": "좌회외근",
+    "hanja": "左回外筋"
   },
   "FMA38515": {
     "nameKo": "벌림근엄지손가락긴",
@@ -10646,17 +10638,17 @@
   },
   "FMA38558": {
     "sourceNameEn": "humeral head of pronator teres",
-    "unresolvedTokens": [
-      "pronator"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "위팔갈래 원엎침근",
+    "legacyKo": "상완두 원회내근",
+    "hanja": "上腕頭圓回內筋"
   },
   "FMA38559": {
     "sourceNameEn": "ulnar head of pronator teres",
-    "unresolvedTokens": [
-      "pronator"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "자갈래 원엎침근",
+    "legacyKo": "척골두 원회내근",
+    "hanja": "尺骨頭圓回內筋"
   },
   "FMA38560": {
     "sourceNameEn": "humeral head of right pronator teres",
@@ -10688,17 +10680,17 @@
   },
   "FMA38615": {
     "sourceNameEn": "humeral head of flexor carpi ulnaris",
-    "unresolvedTokens": [
-      "ulnaris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "위팔갈래 자쪽손목굽힘근",
+    "legacyKo": "상완두 척측수근굴근",
+    "hanja": "上腕頭尺側手根屈筋"
   },
   "FMA38616": {
     "sourceNameEn": "ulnar head of flexor carpi ulnaris",
-    "unresolvedTokens": [
-      "ulnaris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "자갈래 자쪽손목굽힘근",
+    "legacyKo": "척골두 척측수근굴근",
+    "hanja": "尺骨頭尺側手根屈筋"
   },
   "FMA38617": {
     "sourceNameEn": "humeral head of right flexor carpi ulnaris",
@@ -10758,35 +10750,31 @@
   },
   "FMA38932": {
     "sourceNameEn": "right vastus medialis",
-    "unresolvedTokens": [
-      "vastus",
-      "medialis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른안쪽넓은근",
+    "legacyKo": "우내측광근",
+    "hanja": "右內側廣筋"
   },
   "FMA38933": {
     "sourceNameEn": "left vastus medialis",
-    "unresolvedTokens": [
-      "vastus",
-      "medialis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼안쪽넓은근",
+    "legacyKo": "좌내측광근",
+    "hanja": "左內側廣筋"
   },
   "FMA38934": {
     "sourceNameEn": "right vastus intermedius",
-    "unresolvedTokens": [
-      "vastus",
-      "intermedius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른중간넓은근",
+    "legacyKo": "우중간광근",
+    "hanja": "右中間廣筋"
   },
   "FMA38935": {
     "sourceNameEn": "left vastus intermedius",
-    "unresolvedTokens": [
-      "vastus",
-      "intermedius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼중간넓은근",
+    "legacyKo": "좌중간광근",
+    "hanja": "左中間廣筋"
   },
   "FMA39988": {
     "sourceNameEn": "flexor retinaculum of wrist",
@@ -10891,24 +10879,24 @@
   },
   "FMA43882": {
     "sourceNameEn": "gracilis",
-    "unresolvedTokens": [
-      "gracilis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "두덩정강근",
+    "legacyKo": "박근",
+    "hanja": "薄筋"
   },
   "FMA43883": {
     "sourceNameEn": "right gracilis",
-    "unresolvedTokens": [
-      "gracilis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른두덩정강근",
+    "legacyKo": "우박근",
+    "hanja": "右薄筋"
   },
   "FMA43884": {
     "sourceNameEn": "left gracilis",
-    "unresolvedTokens": [
-      "gracilis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼두덩정강근",
+    "legacyKo": "좌박근",
+    "hanja": "左薄筋"
   },
   "FMA43885": {
     "sourceNameEn": "adductor minimus",
@@ -11549,24 +11537,24 @@
   },
   "FMA45738": {
     "sourceNameEn": "platysma",
-    "unresolvedTokens": [
-      "platysma"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "넓은목근",
+    "legacyKo": "광경근",
+    "hanja": "廣頸筋"
   },
   "FMA45739": {
     "sourceNameEn": "right platysma",
-    "unresolvedTokens": [
-      "platysma"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른넓은목근",
+    "legacyKo": "우광경근",
+    "hanja": "右廣頸筋"
   },
   "FMA45740": {
     "sourceNameEn": "left platysma",
-    "unresolvedTokens": [
-      "platysma"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼넓은목근",
+    "legacyKo": "좌광경근",
+    "hanja": "左廣頸筋"
   },
   "FMA45826": {
     "sourceNameEn": "right stylohyoid",
@@ -11892,26 +11880,24 @@
   },
   "FMA46280": {
     "sourceNameEn": "superior oblique part of longus colli",
-    "unresolvedTokens": [
-      "colli"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "위빗부분 긴목근",
+    "legacyKo": "상사부 경장근",
+    "hanja": "上斜部頸長筋"
   },
   "FMA46281": {
     "sourceNameEn": "inferior oblique part of longus colli",
-    "unresolvedTokens": [
-      "colli"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "아래빗부분 긴목근",
+    "legacyKo": "하사부 경장근",
+    "hanja": "下斜部頸長筋"
   },
   "FMA46282": {
     "sourceNameEn": "vertical intermediate part of longus colli",
-    "unresolvedTokens": [
-      "vertical",
-      "intermediate",
-      "colli"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "수직중간부분 긴목근",
+    "legacyKo": "수직중간부 경장근",
+    "hanja": "垂直中間部頸長筋"
   },
   "FMA46284": {
     "sourceNameEn": "superior oblique part of left longus colli",
@@ -11938,31 +11924,31 @@
   },
   "FMA46290": {
     "sourceNameEn": "suprahyoid muscle",
-    "unresolvedTokens": [
-      "suprahyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "목뿔위근육",
+    "legacyKo": "설골상근",
+    "hanja": "舌骨上筋"
   },
   "FMA46291": {
     "sourceNameEn": "digastric",
-    "unresolvedTokens": [
-      "digastric"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "두힘살근",
+    "legacyKo": "이복근",
+    "hanja": "二腹筋"
   },
   "FMA46292": {
     "sourceNameEn": "right digastric",
-    "unresolvedTokens": [
-      "digastric"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른두힘살근",
+    "legacyKo": "우이복근",
+    "hanja": "右二腹筋"
   },
   "FMA46293": {
     "sourceNameEn": "left digastric",
-    "unresolvedTokens": [
-      "digastric"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼두힘살근",
+    "legacyKo": "좌이복근",
+    "hanja": "左二腹筋"
   },
   "FMA46308": {
     "sourceNameEn": "longus capitis",
@@ -12029,45 +12015,45 @@
   },
   "FMA46320": {
     "sourceNameEn": "mylohyoid",
-    "unresolvedTokens": [
-      "mylohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "턱목뿔근",
+    "legacyKo": "악설골근",
+    "hanja": "顎舌骨筋"
   },
   "FMA46321": {
     "sourceNameEn": "right mylohyoid",
-    "unresolvedTokens": [
-      "mylohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른턱목뿔근",
+    "legacyKo": "우악설골근",
+    "hanja": "右顎舌骨筋"
   },
   "FMA46322": {
     "sourceNameEn": "left mylohyoid",
-    "unresolvedTokens": [
-      "mylohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼턱목뿔근",
+    "legacyKo": "좌악설골근",
+    "hanja": "左顎舌骨筋"
   },
   "FMA46325": {
     "sourceNameEn": "geniohyoid",
-    "unresolvedTokens": [
-      "geniohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "턱끝목뿔근",
+    "legacyKo": "이설골근",
+    "hanja": "頤舌骨筋"
   },
   "FMA46326": {
     "sourceNameEn": "right geniohyoid",
-    "unresolvedTokens": [
-      "geniohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른턱끝목뿔근",
+    "legacyKo": "우이설골근",
+    "hanja": "右頤舌骨筋"
   },
   "FMA46327": {
     "sourceNameEn": "left geniohyoid",
-    "unresolvedTokens": [
-      "geniohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼턱끝목뿔근",
+    "legacyKo": "좌이설골근",
+    "hanja": "左頤舌骨筋"
   },
   "FMA46442": {
     "sourceNameEn": "tendinous arch of levator ani",
@@ -12107,45 +12093,45 @@
   },
   "FMA46576": {
     "sourceNameEn": "posterior crico-arytenoid",
-    "unresolvedTokens": [
-      "crico"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뒤반지모뿔근",
+    "legacyKo": "후윤상피열근",
+    "hanja": "後輪狀披裂筋"
   },
   "FMA46577": {
     "sourceNameEn": "right posterior crico-arytenoid",
-    "unresolvedTokens": [
-      "crico"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른뒤반지모뿔근",
+    "legacyKo": "우후윤상피열근",
+    "hanja": "右後輪狀披裂筋"
   },
   "FMA46578": {
     "sourceNameEn": "left posterior crico-arytenoid",
-    "unresolvedTokens": [
-      "crico"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼뒤반지모뿔근",
+    "legacyKo": "좌후윤상피열근",
+    "hanja": "左後輪狀披裂筋"
   },
   "FMA46579": {
     "sourceNameEn": "lateral crico-arytenoid",
-    "unresolvedTokens": [
-      "crico"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가쪽반지모뿔근",
+    "legacyKo": "외측윤상피열근",
+    "hanja": "外側輪狀披裂筋"
   },
   "FMA46580": {
     "sourceNameEn": "right lateral crico-arytenoid",
-    "unresolvedTokens": [
-      "crico"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른가쪽반지모뿔근",
+    "legacyKo": "우외측윤상피열근",
+    "hanja": "右外側輪狀披裂筋"
   },
   "FMA46581": {
     "sourceNameEn": "left lateral crico-arytenoid",
-    "unresolvedTokens": [
-      "crico"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼가쪽반지모뿔근",
+    "legacyKo": "좌외측윤상피열근",
+    "hanja": "左外側輪狀披裂筋"
   },
   "FMA46582": {
     "nameKo": "가로모뿔",
@@ -12177,45 +12163,45 @@
   },
   "FMA46588": {
     "sourceNameEn": "thyro-arytenoid",
-    "unresolvedTokens": [
-      "thyro"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "방패모뿔근",
+    "legacyKo": "갑상피열근",
+    "hanja": "甲狀披裂筋"
   },
   "FMA46589": {
     "sourceNameEn": "right thyro-arytenoid",
-    "unresolvedTokens": [
-      "thyro"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른방패모뿔근",
+    "legacyKo": "우갑상피열근",
+    "hanja": "右甲狀披裂筋"
   },
   "FMA46590": {
     "sourceNameEn": "left thyro-arytenoid",
-    "unresolvedTokens": [
-      "thyro"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼방패모뿔근",
+    "legacyKo": "좌갑상피열근",
+    "hanja": "左甲狀披裂筋"
   },
   "FMA46591": {
     "sourceNameEn": "vocalis",
-    "unresolvedTokens": [
-      "vocalis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "성대근",
+    "legacyKo": "성대근",
+    "hanja": "聲帶筋"
   },
   "FMA46592": {
     "sourceNameEn": "right vocalis",
-    "unresolvedTokens": [
-      "vocalis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른성대근",
+    "legacyKo": "우성대근",
+    "hanja": "右聲帶筋"
   },
   "FMA46593": {
     "sourceNameEn": "left vocalis",
-    "unresolvedTokens": [
-      "vocalis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼성대근",
+    "legacyKo": "좌성대근",
+    "hanja": "左聲帶筋"
   },
   "FMA46601": {
     "nameKo": "빗모뿔구역",
@@ -12226,24 +12212,24 @@
   },
   "FMA46602": {
     "sourceNameEn": "aryepiglotticus",
-    "unresolvedTokens": [
-      "aryepiglotticus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "모뿔덮개근",
+    "legacyKo": "피열후두개근",
+    "hanja": "披裂喉頭蓋筋"
   },
   "FMA46604": {
     "sourceNameEn": "right aryepiglotticus",
-    "unresolvedTokens": [
-      "aryepiglotticus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른모뿔덮개근",
+    "legacyKo": "우피열후두개근",
+    "hanja": "右披裂喉頭蓋筋"
   },
   "FMA46605": {
     "sourceNameEn": "left aryepiglotticus",
-    "unresolvedTokens": [
-      "aryepiglotticus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼모뿔덮개근",
+    "legacyKo": "좌피열후두개근",
+    "hanja": "左披裂喉頭蓋筋"
   },
   "FMA46608": {
     "sourceNameEn": "zone of cricothyroid",
@@ -12254,18 +12240,17 @@
   },
   "FMA46609": {
     "sourceNameEn": "straight part of cricothyroid",
-    "unresolvedTokens": [
-      "straight",
-      "cricothyroid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "곧은부분 반지방패근",
+    "legacyKo": "직부 윤상갑상근",
+    "hanja": "直部輪狀甲狀筋"
   },
   "FMA46610": {
     "sourceNameEn": "oblique part of cricothyroid",
-    "unresolvedTokens": [
-      "cricothyroid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "빗부분 반지방패근",
+    "legacyKo": "사부 윤상갑상근",
+    "hanja": "斜部輪狀甲狀筋"
   },
   "FMA46611": {
     "sourceNameEn": "straight part of right cricothyroid",
@@ -12446,24 +12431,24 @@
   },
   "FMA46690": {
     "sourceNameEn": "genioglossus",
-    "unresolvedTokens": [
-      "genioglossus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "턱끝혀근",
+    "legacyKo": "이설근",
+    "hanja": "頤舌筋"
   },
   "FMA46691": {
     "sourceNameEn": "hyoglossus",
-    "unresolvedTokens": [
-      "hyoglossus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "목뿔혀근",
+    "legacyKo": "설골설근",
+    "hanja": "舌骨舌筋"
   },
   "FMA46698": {
     "sourceNameEn": "right genioglossus",
-    "unresolvedTokens": [
-      "genioglossus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른턱끝혀근",
+    "legacyKo": "우이설근",
+    "hanja": "右頤舌筋"
   },
   "FMA46699": {
     "sourceNameEn": "extrinsic muscle of tongue",
@@ -12475,24 +12460,24 @@
   },
   "FMA46702": {
     "sourceNameEn": "left genioglossus",
-    "unresolvedTokens": [
-      "genioglossus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼턱끝혀근",
+    "legacyKo": "좌이설근",
+    "hanja": "左頤舌筋"
   },
   "FMA46703": {
     "sourceNameEn": "right hyoglossus",
-    "unresolvedTokens": [
-      "hyoglossus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른목뿔혀근",
+    "legacyKo": "우설골설근",
+    "hanja": "右舌骨舌筋"
   },
   "FMA46704": {
     "sourceNameEn": "left hyoglossus",
-    "unresolvedTokens": [
-      "hyoglossus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼목뿔혀근",
+    "legacyKo": "좌설골설근",
+    "hanja": "左舌骨舌筋"
   },
   "FMA46726": {
     "sourceNameEn": "muscle of palate",
@@ -12503,61 +12488,52 @@
   },
   "FMA46727": {
     "sourceNameEn": "levator veli palatini",
-    "unresolvedTokens": [
-      "veli",
-      "palatini"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "입천장올림근",
+    "legacyKo": "구개거근",
+    "hanja": "口蓋擧筋"
   },
   "FMA46728": {
     "sourceNameEn": "right levator veli palatini",
-    "unresolvedTokens": [
-      "veli",
-      "palatini"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른입천장올림근",
+    "legacyKo": "우구개거근",
+    "hanja": "右口蓋擧筋"
   },
   "FMA46729": {
     "sourceNameEn": "left levator veli palatini",
-    "unresolvedTokens": [
-      "veli",
-      "palatini"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼입천장올림근",
+    "legacyKo": "좌구개거근",
+    "hanja": "左口蓋擧筋"
   },
   "FMA46730": {
     "sourceNameEn": "tensor veli palatini",
-    "unresolvedTokens": [
-      "tensor",
-      "veli",
-      "palatini"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "입천장긴장근",
+    "legacyKo": "구개긴장근",
+    "hanja": "口蓋緊張筋"
   },
   "FMA46731": {
     "sourceNameEn": "right tensor veli palatini",
-    "unresolvedTokens": [
-      "tensor",
-      "veli",
-      "palatini"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른입천장긴장근",
+    "legacyKo": "우구개긴장근",
+    "hanja": "右口蓋緊張筋"
   },
   "FMA46732": {
     "sourceNameEn": "left tensor veli palatini",
-    "unresolvedTokens": [
-      "tensor",
-      "veli",
-      "palatini"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼입천장긴장근",
+    "legacyKo": "좌구개긴장근",
+    "hanja": "左口蓋緊張筋"
   },
   "FMA46733": {
     "sourceNameEn": "uvular muscle",
-    "unresolvedTokens": [
-      "uvular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "목젖근",
+    "legacyKo": "구개수근",
+    "hanja": "口蓋垂筋"
   },
   "FMA46751": {
     "sourceNameEn": "muscle of face",
@@ -12618,11 +12594,10 @@
   },
   "FMA49041": {
     "sourceNameEn": "levator palpebrae superioris",
-    "unresolvedTokens": [
-      "palpebrae",
-      "superioris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "위눈꺼풀올림근",
+    "legacyKo": "상안검거근",
+    "hanja": "上眼瞼擧筋"
   },
   "FMA49044": {
     "nameKo": "오른위곧은",
@@ -12654,19 +12629,17 @@
   },
   "FMA49048": {
     "sourceNameEn": "right levator palpebrae superioris",
-    "unresolvedTokens": [
-      "palpebrae",
-      "superioris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른위눈꺼풀올림근",
+    "legacyKo": "우상안검거근",
+    "hanja": "右上眼瞼擧筋"
   },
   "FMA49049": {
     "sourceNameEn": "left levator palpebrae superioris",
-    "unresolvedTokens": [
-      "palpebrae",
-      "superioris"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼위눈꺼풀올림근",
+    "legacyKo": "좌상안검거근",
+    "hanja": "左上眼瞼擧筋"
   },
   "FMA49050": {
     "nameKo": "오른아래빗",
@@ -16675,10 +16648,10 @@
   },
   "FMA64829": {
     "sourceNameEn": "scalene muscle",
-    "unresolvedTokens": [
-      "scalene"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "목갈비근",
+    "legacyKo": "사각근",
+    "hanja": "斜角筋"
   },
   "FMA64875": {
     "sourceNameEn": "anterior suboccipital muscle",
@@ -16689,17 +16662,17 @@
   },
   "FMA64916": {
     "sourceNameEn": "thenar muscle",
-    "unresolvedTokens": [
-      "thenar"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "엄지두덩근육",
+    "legacyKo": "무지구근",
+    "hanja": "拇指球筋"
   },
   "FMA64917": {
     "sourceNameEn": "hypothenar muscle",
-    "unresolvedTokens": [
-      "hypothenar"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "새끼두덩근육",
+    "legacyKo": "소지구근",
+    "hanja": "小指球筋"
   },
   "FMA64922": {
     "sourceNameEn": "gluteal muscle",
@@ -19787,17 +19760,17 @@
   },
   "FMA81752": {
     "sourceNameEn": "right cervical rotator",
-    "unresolvedTokens": [
-      "rotator"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른목돌림근",
+    "legacyKo": "우경회선근",
+    "hanja": "右頸回旋筋"
   },
   "FMA81753": {
     "sourceNameEn": "left cervical rotator",
-    "unresolvedTokens": [
-      "rotator"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼목돌림근",
+    "legacyKo": "좌경회선근",
+    "hanja": "左頸回旋筋"
   },
   "FMA82472": {
     "sourceNameEn": "cardinal organ part",
@@ -20306,10 +20279,10 @@
   },
   "FMA86033": {
     "sourceNameEn": "opponens digiti minimi of foot",
-    "unresolvedTokens": [
-      "opponens"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "새끼발가락맞섬근",
+    "legacyKo": "소지대립근",
+    "hanja": "小趾對立筋"
   },
   "FMA86034": {
     "sourceNameEn": "opponens digiti minimi of right foot",
@@ -21508,10 +21481,10 @@
   },
   "FMA9579": {
     "sourceNameEn": "perineum",
-    "unresolvedTokens": [
-      "perineum"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "샅",
+    "legacyKo": "회음",
+    "hanja": "會陰"
   },
   "FMA9584": {
     "sourceNameEn": "peritoneum",
@@ -22871,18 +22844,17 @@
   },
   "FMA55021": {
     "sourceNameEn": "soft palate",
-    "unresolvedTokens": [
-      "soft",
-      "palate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "물렁입천장",
+    "legacyKo": "연구개",
+    "hanja": "軟口蓋"
   },
   "FMA55022": {
     "sourceNameEn": "uvula",
-    "unresolvedTokens": [
-      "uvula"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "목젖",
+    "legacyKo": "구개수",
+    "hanja": "口蓋垂"
   },
   "FMA55675": {
     "nameKo": "신경축",
