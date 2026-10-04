@@ -36,7 +36,7 @@
     {
       "acupointId": "LU2",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "chest",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -112,7 +112,7 @@
     {
       "acupointId": "LU5",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "elbow",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -134,7 +134,7 @@
     {
       "acupointId": "LU6",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -161,7 +161,7 @@
     {
       "acupointId": "LU7",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -187,7 +187,7 @@
     {
       "acupointId": "LU8",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -213,7 +213,7 @@
     {
       "acupointId": "LU9",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -306,7 +306,7 @@
     {
       "acupointId": "LI2",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -328,7 +328,7 @@
     {
       "acupointId": "LI3",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -371,7 +371,7 @@
     {
       "acupointId": "LI5",
       "canonicalSurface": "body-surface",
-      "localRegion": "head",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -396,7 +396,7 @@
     {
       "acupointId": "LI6",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -423,7 +423,7 @@
     {
       "acupointId": "LI7",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -450,7 +450,7 @@
     {
       "acupointId": "LI8",
       "canonicalSurface": "body-surface",
-      "localRegion": "elbow",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -477,7 +477,7 @@
     {
       "acupointId": "LI9",
       "canonicalSurface": "body-surface",
-      "localRegion": "elbow",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -504,7 +504,7 @@
     {
       "acupointId": "LI10",
       "canonicalSurface": "body-surface",
-      "localRegion": "elbow",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -531,7 +531,7 @@
     {
       "acupointId": "LI11",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "elbow",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -558,7 +558,7 @@
     {
       "acupointId": "LI12",
       "canonicalSurface": "body-surface",
-      "localRegion": "upper-arm",
+      "localRegion": "elbow",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION"
@@ -606,7 +606,7 @@
     {
       "acupointId": "LI14",
       "canonicalSurface": "body-surface",
-      "localRegion": "shoulder",
+      "localRegion": "upper-arm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -632,7 +632,7 @@
     {
       "acupointId": "LI15",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "shoulder",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -656,7 +656,7 @@
     {
       "acupointId": "LI16",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "shoulder",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -1490,7 +1490,7 @@
     {
       "acupointId": "ST31",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "thigh",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -1513,7 +1513,7 @@
     {
       "acupointId": "ST32",
       "canonicalSurface": "body-surface",
-      "localRegion": "pelvis-perineum",
+      "localRegion": "thigh",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -1589,7 +1589,7 @@
     {
       "acupointId": "ST35",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "knee",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -1717,7 +1717,7 @@
     {
       "acupointId": "ST40",
       "canonicalSurface": "body-surface",
-      "localRegion": "wrist-hand",
+      "localRegion": "leg",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -1744,7 +1744,7 @@
     {
       "acupointId": "ST41",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -1790,7 +1790,7 @@
     {
       "acupointId": "ST43",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -1884,7 +1884,7 @@
     {
       "acupointId": "SP2",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -1906,7 +1906,7 @@
     {
       "acupointId": "SP3",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -1950,7 +1950,7 @@
     {
       "acupointId": "SP5",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2050,7 +2050,7 @@
     {
       "acupointId": "SP9",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "leg",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2375,7 +2375,7 @@
     {
       "acupointId": "HT1",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "upper-arm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2422,7 +2422,7 @@
     {
       "acupointId": "HT3",
       "canonicalSurface": "body-surface",
-      "localRegion": "upper-arm",
+      "localRegion": "elbow",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2445,7 +2445,7 @@
     {
       "acupointId": "HT4",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2470,7 +2470,7 @@
     {
       "acupointId": "HT5",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2495,7 +2495,7 @@
     {
       "acupointId": "HT6",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2520,7 +2520,7 @@
     {
       "acupointId": "HT7",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2542,7 +2542,7 @@
     {
       "acupointId": "HT8",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2615,7 +2615,7 @@
     {
       "acupointId": "SI2",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2637,7 +2637,7 @@
     {
       "acupointId": "SI3",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2659,7 +2659,7 @@
     {
       "acupointId": "SI4",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2682,7 +2682,7 @@
     {
       "acupointId": "SI5",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2705,7 +2705,7 @@
     {
       "acupointId": "SI6",
       "canonicalSurface": "body-surface",
-      "localRegion": "head",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2730,7 +2730,7 @@
     {
       "acupointId": "SI7",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2756,7 +2756,7 @@
     {
       "acupointId": "SI8",
       "canonicalSurface": "body-surface",
-      "localRegion": "head",
+      "localRegion": "elbow",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2804,7 +2804,7 @@
     {
       "acupointId": "SI10",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "shoulder",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2826,7 +2826,7 @@
     {
       "acupointId": "SI11",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "shoulder",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2851,7 +2851,7 @@
     {
       "acupointId": "SI12",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "shoulder",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2874,7 +2874,7 @@
     {
       "acupointId": "SI13",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "shoulder",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2923,7 +2923,7 @@
     {
       "acupointId": "SI15",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "back",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -2971,7 +2971,7 @@
     {
       "acupointId": "SI17",
       "canonicalSurface": "body-surface",
-      "localRegion": "head",
+      "localRegion": "neck",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -3866,7 +3866,7 @@
     {
       "acupointId": "BL35",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "pelvis-perineum",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -3914,7 +3914,7 @@
     {
       "acupointId": "BL37",
       "canonicalSurface": "body-surface",
-      "localRegion": "pelvis-perineum",
+      "localRegion": "thigh",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -4382,7 +4382,7 @@
     {
       "acupointId": "BL55",
       "canonicalSurface": "body-surface",
-      "localRegion": "knee",
+      "localRegion": "leg",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -4408,7 +4408,7 @@
     {
       "acupointId": "BL56",
       "canonicalSurface": "body-surface",
-      "localRegion": "knee",
+      "localRegion": "leg",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -4434,7 +4434,7 @@
     {
       "acupointId": "BL57",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "leg",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -4510,7 +4510,7 @@
     {
       "acupointId": "BL60",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -4556,7 +4556,7 @@
     {
       "acupointId": "BL62",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -4579,7 +4579,7 @@
     {
       "acupointId": "BL63",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -4623,7 +4623,7 @@
     {
       "acupointId": "BL65",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -4645,7 +4645,7 @@
     {
       "acupointId": "BL66",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -4691,7 +4691,7 @@
     {
       "acupointId": "KI1",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -4740,7 +4740,7 @@
     {
       "acupointId": "KI3",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -4763,7 +4763,7 @@
     {
       "acupointId": "KI4",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -4785,7 +4785,7 @@
     {
       "acupointId": "KI5",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -4811,7 +4811,7 @@
     {
       "acupointId": "KI6",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -4860,7 +4860,7 @@
     {
       "acupointId": "KI8",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "leg",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5419,7 +5419,7 @@
     {
       "acupointId": "PC3",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "elbow",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5441,7 +5441,7 @@
     {
       "acupointId": "PC4",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5467,7 +5467,7 @@
     {
       "acupointId": "PC5",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5493,7 +5493,7 @@
     {
       "acupointId": "PC6",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5519,7 +5519,7 @@
     {
       "acupointId": "PC7",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5542,7 +5542,7 @@
     {
       "acupointId": "PC8",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5612,7 +5612,7 @@
     {
       "acupointId": "TE2",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5635,7 +5635,7 @@
     {
       "acupointId": "TE3",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5658,7 +5658,7 @@
     {
       "acupointId": "TE4",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "wrist-hand",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5680,7 +5680,7 @@
     {
       "acupointId": "TE5",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5707,7 +5707,7 @@
     {
       "acupointId": "TE6",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5734,7 +5734,7 @@
     {
       "acupointId": "TE7",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5759,7 +5759,7 @@
     {
       "acupointId": "TE8",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5786,7 +5786,7 @@
     {
       "acupointId": "TE9",
       "canonicalSurface": "body-surface",
-      "localRegion": "head",
+      "localRegion": "forearm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5812,7 +5812,7 @@
     {
       "acupointId": "TE10",
       "canonicalSurface": "body-surface",
-      "localRegion": "head",
+      "localRegion": "elbow",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5839,7 +5839,7 @@
     {
       "acupointId": "TE11",
       "canonicalSurface": "body-surface",
-      "localRegion": "head",
+      "localRegion": "upper-arm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5864,7 +5864,7 @@
     {
       "acupointId": "TE12",
       "canonicalSurface": "body-surface",
-      "localRegion": "head",
+      "localRegion": "upper-arm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5889,7 +5889,7 @@
     {
       "acupointId": "TE13",
       "canonicalSurface": "body-surface",
-      "localRegion": "shoulder",
+      "localRegion": "upper-arm",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5914,7 +5914,7 @@
     {
       "acupointId": "TE14",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "shoulder",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5937,7 +5937,7 @@
     {
       "acupointId": "TE15",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "shoulder",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5959,7 +5959,7 @@
     {
       "acupointId": "TE16",
       "canonicalSurface": "body-surface",
-      "localRegion": "head",
+      "localRegion": "neck",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -5980,7 +5980,7 @@
     {
       "acupointId": "TE17",
       "canonicalSurface": "body-surface",
-      "localRegion": "head",
+      "localRegion": "neck",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -6373,7 +6373,7 @@
     {
       "acupointId": "GB12",
       "canonicalSurface": "body-surface",
-      "localRegion": "head",
+      "localRegion": "neck",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -6554,7 +6554,7 @@
     {
       "acupointId": "GB20",
       "canonicalSurface": "body-surface",
-      "localRegion": "head",
+      "localRegion": "neck",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -6810,7 +6810,7 @@
     {
       "acupointId": "GB31",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "thigh",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -6833,7 +6833,7 @@
     {
       "acupointId": "GB32",
       "canonicalSurface": "body-surface",
-      "localRegion": "pelvis-perineum",
+      "localRegion": "thigh",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -6858,7 +6858,7 @@
     {
       "acupointId": "GB33",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "knee",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -6881,7 +6881,7 @@
     {
       "acupointId": "GB34",
       "canonicalSurface": "body-surface",
-      "localRegion": "head",
+      "localRegion": "leg",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7023,7 +7023,7 @@
     {
       "acupointId": "GB40",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7045,7 +7045,7 @@
     {
       "acupointId": "GB41",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7067,7 +7067,7 @@
     {
       "acupointId": "GB42",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7184,7 +7184,7 @@
     {
       "acupointId": "LR3",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7207,7 +7207,7 @@
     {
       "acupointId": "LR4",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "ankle-foot",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7302,7 +7302,7 @@
     {
       "acupointId": "LR8",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "knee",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7324,7 +7324,7 @@
     {
       "acupointId": "LR9",
       "canonicalSurface": "body-surface",
-      "localRegion": "pelvis-perineum",
+      "localRegion": "thigh",
       "laterality": "bilateral",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7496,7 +7496,7 @@
     {
       "acupointId": "GV2",
       "canonicalSurface": "body-surface",
-      "localRegion": "back",
+      "localRegion": "pelvis-perineum",
       "laterality": "midline",
       "primitives": [
         "MIDLINE_CONSTRAINT",
@@ -7519,7 +7519,7 @@
     {
       "acupointId": "GV3",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "back",
       "laterality": "midline",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7543,7 +7543,7 @@
     {
       "acupointId": "GV4",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "back",
       "laterality": "midline",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7567,7 +7567,7 @@
     {
       "acupointId": "GV5",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "back",
       "laterality": "midline",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7591,7 +7591,7 @@
     {
       "acupointId": "GV6",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "back",
       "laterality": "midline",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7615,7 +7615,7 @@
     {
       "acupointId": "GV7",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "back",
       "laterality": "midline",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7639,7 +7639,7 @@
     {
       "acupointId": "GV8",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "back",
       "laterality": "midline",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7663,7 +7663,7 @@
     {
       "acupointId": "GV9",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "back",
       "laterality": "midline",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7687,7 +7687,7 @@
     {
       "acupointId": "GV10",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "back",
       "laterality": "midline",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7711,7 +7711,7 @@
     {
       "acupointId": "GV11",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "back",
       "laterality": "midline",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7735,7 +7735,7 @@
     {
       "acupointId": "GV12",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "back",
       "laterality": "midline",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7759,7 +7759,7 @@
     {
       "acupointId": "GV13",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "back",
       "laterality": "midline",
       "primitives": [
         "REGION_RESTRICTION",
@@ -7827,7 +7827,7 @@
     {
       "acupointId": "GV16",
       "canonicalSurface": "body-surface",
-      "localRegion": "head",
+      "localRegion": "neck",
       "laterality": "midline",
       "primitives": [
         "REGION_RESTRICTION",
@@ -8636,7 +8636,7 @@
     {
       "acupointId": "CV21",
       "canonicalSurface": "body-surface",
-      "localRegion": "neck",
+      "localRegion": "chest",
       "laterality": "midline",
       "primitives": [
         "REGION_RESTRICTION",
