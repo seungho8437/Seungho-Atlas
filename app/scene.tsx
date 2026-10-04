@@ -46,8 +46,11 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
   markerCtx.clearRect(0,0,64,64);markerCtx.beginPath();markerCtx.arc(32,32,25,0,Math.PI*2);markerCtx.fillStyle='#ff2d55';markerCtx.fill();
   markerCtx.lineWidth=8;markerCtx.strokeStyle='#ffffff';markerCtx.stroke();
   const acupointTexture=new T.CanvasTexture(markerCanvas);acupointTexture.colorSpace=T.SRGBColorSpace;acupointTexture.needsUpdate=true;
-  const acupointMaterial=new T.PointsMaterial({map:acupointTexture,color:0xffffff,size:15,sizeAttenuation:false,transparent:true,alphaTest:.18,opacity:1,depthTest:false,depthWrite:false,toneMapped:false});
-  const acupointMarkers=new T.Points(acupointGeometry,acupointMaterial);acupointMarkers.frustumCulled=false;acupointMarkers.renderOrder=999;acupointMarkers.visible=false;scene.add(acupointMarkers);
+  // Acupoints must obey the anatomy depth buffer. Keeping depthWrite off avoids
+  // markers occluding one another, while depthTest hides points on the far side
+  // of the body as the camera orbits.
+  const acupointMaterial=new T.PointsMaterial({map:acupointTexture,color:0xffffff,size:15,sizeAttenuation:false,transparent:true,alphaTest:.18,opacity:1,depthTest:true,depthWrite:false,toneMapped:false});
+  const acupointMarkers=new T.Points(acupointGeometry,acupointMaterial);acupointMarkers.frustumCulled=false;acupointMarkers.renderOrder=20;acupointMarkers.visible=false;scene.add(acupointMarkers);
   const hover=document.createElement('div');hover.className='part-hover';hover.setAttribute('role','tooltip');hover.hidden=true;el.appendChild(hover);
   type Target={index:number;x:number;y:number;left:number;right:number;top:number;bottom:number};let targets:Target[]=[];
   const projected=new T.Vector3();
@@ -99,9 +102,18 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
   const cancel=(e:PointerEvent)=>tap.cancel(e.pointerId);
   const up=(e:PointerEvent)=>{
    const validTap=tap.up(e.pointerId,e.clientX,e.clientY);if(!validTap||!ready)return;const rect=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);
-   if(acupointMarkers.visible){const acupointHit=raycaster.intersectObject(acupointMarkers,false)[0];if(acupointHit&&acupointHit.index!==undefined){const point=acupointCoordinates[acupointHit.index];if(point){hover.hidden=true;selectAcupoint.current(point.acupointId);return;}}}
    let nearest=Infinity,found=-1;const hasSolid=atlas.parts.some((p,i)=>p.system!=='integumentary'&&data[i*4+3]>.5);
    pickers.forEach((mesh,i)=>{if(!mesh||data[i*4+3]<.5||(hasSolid&&atlas.parts[i].system==='integumentary'))return;worldBox.copy(bounds[i]).translate(mesh.position);if(!raycaster.ray.intersectBox(worldBox,hitPoint))return;const hits=raycaster.intersectObject(mesh,false);if(hits[0]&&hits[0].distance<nearest){nearest=hits[0].distance;found=i;}});
+   if(acupointMarkers.visible){
+    const acupointHit=raycaster.intersectObject(acupointMarkers,false)[0];
+    // Match visual occlusion for picking: a point hidden behind anatomy must not
+    // be selectable through the body. A small tolerance accounts for a marker
+    // sitting immediately outside the visible surface.
+    if(acupointHit&&acupointHit.index!==undefined&&acupointHit.distance<=nearest+.018){
+     const point=acupointCoordinates[acupointHit.index];
+     if(point){hover.hidden=true;selectAcupoint.current(point.acupointId);return;}
+    }
+   }
    if(found<0&&amount>.45)found=findTarget(e.clientX-rect.left,e.clientY-rect.top,e.pointerType==='touch'?24:16);if(found>=0){hover.hidden=true;select.current(atlas.parts[found].id);}
   };
   renderer.domElement.addEventListener('pointerdown',down);renderer.domElement.addEventListener('pointermove',move);renderer.domElement.addEventListener('pointerup',up);renderer.domElement.addEventListener('pointercancel',cancel);
