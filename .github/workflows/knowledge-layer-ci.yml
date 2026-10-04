@@ -22,6 +22,7 @@ jobs:
       - run: node scripts/validate-atlas.mjs
       - run: node --experimental-strip-types scripts/validate-interactions.mjs
       - run: npm run validate:knowledge
+      - run: node scripts/validate-acupoint-location-specs.mjs
       - run: npm run audit:korean
       - run: npm run audit:terminology
       - run: npm run build
