@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "title": "Manual/specialized acupoint landmark anchor registry",
+  "records": [],
+  "recordContract": {
+    "required": [
+      "landmarkId",
+      "modelRevision",
+      "method",
+      "position",
+      "surfaceProjection",
+      "reviewStatus",
+      "evidence",
+      "provenance"
+    ],
+    "method": [
+      "manual-anchor",
+      "specialized-detector",
+      "specialized-detector+manual-confirmation"
+    ],
+    "reviewStatus": [
+      "proposed",
+      "reviewed",
+      "accepted",
+      "rejected"
+    ],
+    "surfaceProjection": {
+      "required": [
+        "meshId",
+        "triangleIndex",
+        "barycentric",
+        "distance"
+      ],
+      "rule": "accepted anchors must resolve to the exact body-surface mesh revision"
+    },
+    "evidence": {
+      "required": [
+        "views",
+        "definitionCheck"
+      ],
+      "optional": [
+        "screenshotIds",
+        "reviewerNote",
+        "detectorMetrics"
+      ]
+    },
+    "provenance": {
+      "required": [
+        "createdBy",
+        "createdAt",
+        "sourceSpecVersion"
+      ]
+    }
+  }
+}
