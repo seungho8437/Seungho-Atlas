@@ -44,10 +44,34 @@ for(const [id,entry] of Object.entries(anatomy)){
   if(base.nameKo?.endsWith('근')&&!entry.nameKo?.endsWith('근'))hard.push({id,type:'muscle-head-loss',baseId:base.id,base:base.nameKo,actual:entry.nameKo});
 }
 
+// Display-contract audit: presentation may separate laterality, but canonical
+// KAA-backed nameKo must remain unchanged. Nested laterality is never rewritten.
+let displaySeparated=0,displayNestedPreserved=0;
+for(const [id,entry] of Object.entries(anatomy)){
+  const english=String(entry.sourceNameEn??'');
+  const m=english.match(/^(right|left)\s+(.+)$/i);
+  if(!m)continue;
+  if(/\b(?:right|left)\b/i.test(m[2])){
+    displayNestedPreserved++;
+    continue;
+  }
+  const side=m[1].toLowerCase();
+  const prefix=side==='left'?'왼쪽':'오른쪽';
+  let base=String(entry.nameKo??'').replace(/^(왼쪽|오른쪽)\s*/,'');
+  if(side==='left')base=base.replace(/^왼(?=\S)/,'');
+  else base=base.replace(/^오른(?=\S)/,'');
+  const display=(prefix+' '+base).replace(/\s+/g,' ').trim();
+  displaySeparated++;
+  if(!display.startsWith(prefix+' '))hard.push({id,type:'display-laterality-prefix-failure',sourceNameEn:english,nameKo:entry.nameKo,display});
+  if(/^(왼쪽|오른쪽)\s+(왼|오른)(?=\S)/.test(display))hard.push({id,type:'display-double-laterality',sourceNameEn:english,nameKo:entry.nameKo,display});
+  if(!base)hard.push({id,type:'display-empty-base-name',sourceNameEn:english,nameKo:entry.nameKo});
+}
+
 console.log(JSON.stringify({
   totalRecords:ids.length,
   directVerified,
   lateral:{total:lateralTotal,safeKaaBacked:lateralSafe},
+  display:{separated:displaySeparated,nestedPreserved:displayNestedPreserved},
   hardFailureCount:hard.length,
   reviewQueueCount:review.length
 },null,2));
