@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "standardAcupointCount": 361,
+  "coverage": {
+    "entityResolutionRecords": 361,
+    "measurementFrameRecords": 361,
+    "constraintAtomRecords": 361,
+    "solverPlanRecords": 361,
+    "all361Covered": true
+  },
+  "counts": {
+    "atlasSupportedEntities": 297,
+    "atlasProxyEntities": 281,
+    "virtualDerivedEntities": 391,
+    "measurementFrames": 237,
+    "constraintAtoms": 1790,
+    "solverReadyPlans": 53,
+    "reviewRequiredPlans": 308
+  },
+  "invariants": {
+    "canonicalSurfaceBodySurface": true,
+    "everySpecHasVerbatimAtom": true,
+    "everyMeasurementHasFrame": true,
+    "noGlobalBodyHeightCun": true,
+    "hardConstraintsGateValidation": true
+  }
+}
