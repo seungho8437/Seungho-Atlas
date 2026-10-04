@@ -170,9 +170,9 @@
   "FMA3868": {
     "sourceNameEn": "conus branch of anterior interventricular branch of left coronary artery",
     "status": "derived",
-    "nameKo": "원뿔왼관상동맥앞심실사이가지가지",
-    "legacyKo": "원추좌관상동맥전심실간지지",
-    "hanja": "圓錐左冠狀動脈前心室間枝枝"
+    "nameKo": "왼관상동맥 앞심실사이가지의 원뿔가지",
+    "legacyKo": "좌관상동맥 전심실간지의 원추지",
+    "hanja": "左冠狀動脈前心室間枝圓錐枝"
   },
   "FMA3870": {
     "nameKo": "왼관상동맥앞심실사이가지오른앞가지",
@@ -224,30 +224,30 @@
     "hanja": "上腕頭動脈"
   },
   "FMA3939": {
-    "nameKo": "온목동맥동맥",
-    "legacyKo": "총경동맥동맥",
-    "hanja": "總頸動脈動脈",
+    "nameKo": "온목동맥",
+    "legacyKo": "총경동맥",
+    "hanja": "總頸動脈",
     "sourceNameEn": "common carotid artery",
     "status": "derived"
   },
   "FMA3941": {
-    "nameKo": "오른온목동맥동맥",
-    "legacyKo": "우총경동맥동맥",
-    "hanja": "右總頸動脈動脈",
+    "nameKo": "오른온목동맥",
+    "legacyKo": "우총경동맥",
+    "hanja": "右總頸動脈",
     "sourceNameEn": "right common carotid artery",
     "status": "derived"
   },
   "FMA3947": {
-    "nameKo": "속목동맥동맥",
-    "legacyKo": "내경동맥동맥",
-    "hanja": "內頸動脈動脈",
+    "nameKo": "속목동맥",
+    "legacyKo": "내경동맥",
+    "hanja": "內頸動脈",
     "sourceNameEn": "internal carotid artery",
     "status": "derived"
   },
   "FMA3949": {
-    "nameKo": "오른속목동맥동맥",
-    "legacyKo": "우내경동맥동맥",
-    "hanja": "右內頸動脈動脈",
+    "nameKo": "오른속목동맥",
+    "legacyKo": "우내경동맥",
+    "hanja": "右內頸動脈",
     "sourceNameEn": "right internal carotid artery",
     "status": "derived"
   },
@@ -294,9 +294,9 @@
     "status": "derived"
   },
   "FMA3988": {
-    "nameKo": "오른위윗배동맥",
-    "legacyKo": "우상상복동맥",
-    "hanja": "右上上腹動脈",
+    "nameKo": "오른위배벽동맥",
+    "legacyKo": "우상복벽동맥",
+    "hanja": "右上腹壁動脈",
     "sourceNameEn": "right superior epigastric artery",
     "status": "derived"
   },
@@ -329,16 +329,16 @@
     "status": "derived"
   },
   "FMA4058": {
-    "nameKo": "왼온목동맥동맥",
-    "legacyKo": "좌총경동맥동맥",
-    "hanja": "左總頸動脈動脈",
+    "nameKo": "왼온목동맥",
+    "legacyKo": "좌총경동맥",
+    "hanja": "左總頸動脈",
     "sourceNameEn": "left common carotid artery",
     "status": "derived"
   },
   "FMA4062": {
-    "nameKo": "왼속목동맥동맥",
-    "legacyKo": "좌내경동맥동맥",
-    "hanja": "左內頸動脈動脈",
+    "nameKo": "왼속목동맥",
+    "legacyKo": "좌내경동맥",
+    "hanja": "左內頸動脈",
     "sourceNameEn": "left internal carotid artery",
     "status": "derived"
   },
@@ -364,9 +364,9 @@
     "hanja": "左筋橫隔動脈"
   },
   "FMA4083": {
-    "nameKo": "왼위윗배동맥",
-    "legacyKo": "좌상상복동맥",
-    "hanja": "左上上腹動脈",
+    "nameKo": "왼위배벽동맥",
+    "legacyKo": "좌상복벽동맥",
+    "hanja": "左上腹壁動脈",
     "sourceNameEn": "left superior epigastric artery",
     "status": "derived"
   },
@@ -539,9 +539,9 @@
     "status": "derived"
   },
   "FMA4731": {
-    "nameKo": "위윗배정맥",
-    "legacyKo": "상상복정맥",
-    "hanja": "上上腹靜脈",
+    "nameKo": "위배벽정맥",
+    "legacyKo": "상복벽정맥",
+    "hanja": "上腹壁靜脈",
     "sourceNameEn": "superior epigastric vein",
     "status": "derived"
   },
@@ -602,9 +602,9 @@
     "status": "derived"
   },
   "FMA4771": {
-    "nameKo": "오른위윗배정맥",
-    "legacyKo": "우상상복정맥",
-    "hanja": "右上上腹靜脈",
+    "nameKo": "오른위배벽정맥",
+    "legacyKo": "우상복벽정맥",
+    "hanja": "右上腹壁靜脈",
     "sourceNameEn": "right superior epigastric vein",
     "status": "derived"
   },
@@ -616,9 +616,9 @@
     "hanja": "右筋橫隔靜脈"
   },
   "FMA4785": {
-    "nameKo": "왼위윗배정맥",
-    "legacyKo": "좌상상복정맥",
-    "hanja": "左上上腹靜脈",
+    "nameKo": "왼위배벽정맥",
+    "legacyKo": "좌상복벽정맥",
+    "hanja": "左上腹壁靜脈",
     "sourceNameEn": "left superior epigastric vein",
     "status": "derived"
   },
@@ -2410,9 +2410,9 @@
     "hanja": "筋橫隔動脈"
   },
   "FMA10646": {
-    "nameKo": "위윗배동맥",
-    "legacyKo": "상상복동맥",
-    "hanja": "上上腹動脈",
+    "nameKo": "위배벽동맥",
+    "legacyKo": "상복벽동맥",
+    "hanja": "上腹壁動脈",
     "sourceNameEn": "superior epigastric artery",
     "status": "derived"
   },
@@ -3475,8 +3475,8 @@
     "status": "derived"
   },
   "FMA13921": {
-    "nameKo": "왼관상동맥앞심실사이가지가지",
-    "legacyKo": "좌관상동맥전심실간지지",
+    "nameKo": "왼관상동맥 앞심실사이가지의 가지",
+    "legacyKo": "좌관상동맥 전심실간지의 지",
     "hanja": "左冠狀動脈前心室間枝枝",
     "sourceNameEn": "branch of anterior interventricular branch of left coronary artery",
     "status": "derived"
@@ -4072,9 +4072,9 @@
   "FMA14819": {
     "sourceNameEn": "ileal branch of inferior branch of ileocolic artery",
     "status": "derived",
-    "nameKo": "돌창자돌막창자동맥아래가지가지",
-    "legacyKo": "회장회결장동맥하지지",
-    "hanja": "回腸回結腸動脈下枝枝"
+    "nameKo": "돌막창자동맥 아래가지의 돌창자가지",
+    "legacyKo": "회결장동맥 하지의 회장지",
+    "hanja": "回結腸動脈下枝回腸枝"
   },
   "FMA14820": {
     "sourceNameEn": "ascending branch of inferior branch of ileocolic artery",
@@ -5179,23 +5179,23 @@
     "status": "derived"
   },
   "FMA20686": {
-    "nameKo": "아래윗배동맥",
-    "legacyKo": "하상복동맥",
-    "hanja": "下上腹動脈",
+    "nameKo": "아래배벽동맥",
+    "legacyKo": "하복벽동맥",
+    "hanja": "下腹壁動脈",
     "sourceNameEn": "inferior epigastric artery",
     "status": "derived"
   },
   "FMA20688": {
-    "nameKo": "오른아래윗배동맥",
-    "legacyKo": "우하상복동맥",
-    "hanja": "右下上腹動脈",
+    "nameKo": "오른아래배벽동맥",
+    "legacyKo": "우하복벽동맥",
+    "hanja": "右下腹壁動脈",
     "sourceNameEn": "right inferior epigastric artery",
     "status": "derived"
   },
   "FMA20689": {
-    "nameKo": "왼아래윗배동맥",
-    "legacyKo": "좌하상복동맥",
-    "hanja": "左下上腹動脈",
+    "nameKo": "왼아래배벽동맥",
+    "legacyKo": "좌하복벽동맥",
+    "hanja": "左下腹壁動脈",
     "sourceNameEn": "left inferior epigastric artery",
     "status": "derived"
   },
@@ -5270,23 +5270,23 @@
     "status": "derived"
   },
   "FMA21162": {
-    "nameKo": "아래윗배정맥",
-    "legacyKo": "하상복정맥",
-    "hanja": "下上腹靜脈",
+    "nameKo": "아래배벽정맥",
+    "legacyKo": "하복벽정맥",
+    "hanja": "下腹壁靜脈",
     "sourceNameEn": "inferior epigastric vein",
     "status": "derived"
   },
   "FMA21163": {
-    "nameKo": "오른아래윗배정맥",
-    "legacyKo": "우하상복정맥",
-    "hanja": "右下上腹靜脈",
+    "nameKo": "오른아래배벽정맥",
+    "legacyKo": "우하복벽정맥",
+    "hanja": "右下腹壁靜脈",
     "sourceNameEn": "right inferior epigastric vein",
     "status": "derived"
   },
   "FMA21164": {
-    "nameKo": "왼아래윗배정맥",
-    "legacyKo": "좌하상복정맥",
-    "hanja": "左下上腹靜脈",
+    "nameKo": "왼아래배벽정맥",
+    "legacyKo": "좌하복벽정맥",
+    "hanja": "左下腹壁靜脈",
     "sourceNameEn": "left inferior epigastric vein",
     "status": "derived"
   },
@@ -5419,8 +5419,8 @@
   "FMA21520": {
     "sourceNameEn": "branch of inferior branch of ileocolic artery",
     "status": "derived",
-    "nameKo": "돌막창자동맥아래가지가지",
-    "legacyKo": "회결장동맥하지지",
+    "nameKo": "돌막창자동맥 아래가지의 가지",
+    "legacyKo": "회결장동맥 하지의 지",
     "hanja": "回結腸動脈下枝枝"
   },
   "FMA21521": {
@@ -7508,9 +7508,9 @@
   "FMA23081": {
     "sourceNameEn": "rotator muscle",
     "status": "derived",
-    "nameKo": "돌림근근육",
-    "legacyKo": "회선근근",
-    "hanja": "回旋筋筋"
+    "nameKo": "돌림근",
+    "legacyKo": "회선근",
+    "hanja": "回旋筋"
   },
   "FMA23082": {
     "sourceNameEn": "cervical rotator",
@@ -13921,8 +13921,8 @@
     "hanja": "左膨大動脈"
   },
   "FMA50694": {
-    "nameKo": "위소뇌동맥안쪽가지가지",
-    "legacyKo": "상소뇌동맥내측지지",
+    "nameKo": "위소뇌동맥 안쪽가지의 가지",
+    "legacyKo": "상소뇌동맥 내측지의 지",
     "hanja": "上小腦動脈內側枝枝",
     "sourceNameEn": "branch of medial branch of superior cerebellar artery",
     "status": "derived"
@@ -18170,23 +18170,23 @@
     "status": "derived"
   },
   "FMA70504": {
-    "nameKo": "온목동맥동맥세부분",
-    "legacyKo": "총경동맥동맥분할",
-    "hanja": "總頸動脈動脈分割",
+    "nameKo": "온목동맥 세부분",
+    "legacyKo": "총경동맥 분할",
+    "hanja": "總頸動脈分割",
     "sourceNameEn": "subdivision of common carotid artery",
     "status": "derived"
   },
   "FMA70506": {
-    "nameKo": "속목동맥동맥세부분",
-    "legacyKo": "내경동맥동맥분할",
-    "hanja": "內頸動脈動脈分割",
+    "nameKo": "속목동맥 세부분",
+    "legacyKo": "내경동맥 분할",
+    "hanja": "內頸動脈分割",
     "sourceNameEn": "subdivision of internal carotid artery",
     "status": "derived"
   },
   "FMA70523": {
-    "nameKo": "속목동맥동맥대뇌부분세부분",
-    "legacyKo": "내경동맥동맥대뇌부분할",
-    "hanja": "內頸動脈動脈大腦部分割",
+    "nameKo": "속목동맥 대뇌부분의 세부분",
+    "legacyKo": "내경동맥 대뇌부 분할",
+    "hanja": "內頸動脈大腦部分割",
     "sourceNameEn": "subdivision of cerebral part of internal carotid artery",
     "status": "derived"
   },
@@ -18382,9 +18382,9 @@
   "FMA71235": {
     "sourceNameEn": "region of dura mater",
     "status": "derived",
-    "nameKo": "경막막부위",
-    "legacyKo": "경막막영역",
-    "hanja": "硬膜膜領域"
+    "nameKo": "경막부위",
+    "legacyKo": "경막영역",
+    "hanja": "硬膜領域"
   },
   "FMA71307": {
     "sourceNameEn": "set of interspinales lumborum",
@@ -19220,9 +19220,9 @@
     "status": "derived"
   },
   "FMA75865": {
-    "nameKo": "속목동맥동맥가지줄기",
-    "legacyKo": "내경동맥동맥지간",
-    "hanja": "內頸動脈動脈枝幹",
+    "nameKo": "속목동맥 가지의 줄기",
+    "legacyKo": "내경동맥 지간",
+    "hanja": "內頸動脈枝幹",
     "sourceNameEn": "trunk of branch of internal carotid artery",
     "status": "derived"
   },
@@ -20468,9 +20468,9 @@
   "FMA266054": {
     "sourceNameEn": "subdivision of cranial dura mater",
     "status": "derived",
-    "nameKo": "머리뼈경막막세부분",
-    "legacyKo": "두개경막막분할",
-    "hanja": "頭蓋硬膜膜分割"
+    "nameKo": "머리경막의 세부분",
+    "legacyKo": "두개경막 분할",
+    "hanja": "頭蓋硬膜分割"
   },
   "FMA268667": {
     "nameKo": "오른되돌이뼈사이동맥",
