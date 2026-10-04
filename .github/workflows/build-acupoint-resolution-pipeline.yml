@@ -41,3 +41,5 @@ jobs:
             git pull --rebase origin feature/korean-tcm-knowledge
             git push
           fi
+
+# semantic pipeline v1
