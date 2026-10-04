@@ -1322,7 +1322,15 @@
     "legacyKo": "모양신경절지",
     "hanja": "毛樣神經節枝",
     "sourceNameEn": "branch of ciliary ganglion",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      200
+    ],
+    "nameKoDerivation": "branch of FMA6964"
   },
   "FMA7041": {
     "nameKo": "짧은섬모체신경",
@@ -9788,7 +9796,15 @@
     "legacyKo": "상완동맥지",
     "hanja": "上腕動脈枝",
     "sourceNameEn": "branch of brachial artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      123
+    ],
+    "nameKoDerivation": "branch of FMA22689"
   },
   "FMA22695": {
     "nameKo": "깊은위팔동맥",
@@ -10041,7 +10057,15 @@
     "legacyKo": "요골동맥지",
     "hanja": "橈骨動脈枝",
     "sourceNameEn": "branch of radial artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      123
+    ],
+    "nameKoDerivation": "branch of FMA22730"
   },
   "FMA22740": {
     "sourceNameEn": "right iliocostalis lumborum",
@@ -10290,7 +10314,15 @@
     "legacyKo": "척골동맥지",
     "hanja": "尺骨動脈枝",
     "sourceNameEn": "branch of ulnar artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      123
+    ],
+    "nameKoDerivation": "branch of FMA22796"
   },
   "FMA22800": {
     "nameKo": "앞자쪽되돌이동맥",
@@ -10383,7 +10415,15 @@
     "legacyKo": "총골간동맥지",
     "hanja": "總骨間動脈枝",
     "sourceNameEn": "branch of common interosseous artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      124
+    ],
+    "nameKoDerivation": "branch of FMA22806"
   },
   "FMA22810": {
     "nameKo": "앞뼈사이동맥",
@@ -11381,7 +11421,15 @@
     "legacyKo": "심상완동맥지",
     "hanja": "深上腕動脈枝",
     "sourceNameEn": "branch of deep brachial artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      123
+    ],
+    "nameKoDerivation": "branch of FMA22695"
   },
   "FMA23119": {
     "nameKo": "안쪽곁동맥",
@@ -15839,14 +15887,30 @@
     "legacyKo": "외측족저동맥지",
     "hanja": "外側足底動脈枝",
     "sourceNameEn": "branch of lateral plantar artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      130
+    ],
+    "nameKoDerivation": "branch of FMA43926"
   },
   "FMA43941": {
     "nameKo": "안쪽발바닥동맥가지",
     "legacyKo": "내측족저동맥지",
     "hanja": "內側足底動脈枝",
     "sourceNameEn": "branch of medial plantar artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      130
+    ],
+    "nameKoDerivation": "branch of FMA43925"
   },
   "FMA43942": {
     "nameKo": "발바닥동맥활",
@@ -18339,7 +18403,15 @@
     "legacyKo": "전대뇌동맥지",
     "hanja": "前大腦動脈枝",
     "sourceNameEn": "branch of anterior cerebral artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      118
+    ],
+    "nameKoDerivation": "branch of FMA50028"
   },
   "FMA50080": {
     "nameKo": "중간대뇌동맥구역",
@@ -18464,7 +18536,16 @@
     "legacyKo": "후교통동맥지",
     "hanja": "後交通動脈枝",
     "sourceNameEn": "branch of posterior communicating artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      117,
+      120
+    ],
+    "nameKoDerivation": "branch of FMA50084"
   },
   "FMA50169": {
     "nameKo": "앞교통동맥",
@@ -18527,7 +18608,15 @@
     "status": "derived",
     "nameKo": "뇌들보모서리동맥가지",
     "legacyKo": "뇌량변연동맥지",
-    "hanja": "腦梁邊緣動脈枝"
+    "hanja": "腦梁邊緣動脈枝",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      119
+    ],
+    "nameKoDerivation": "branch of FMA50330"
   },
   "FMA50333": {
     "sourceNameEn": "intermediomedial branch of callosomarginal artery",
@@ -18569,7 +18658,15 @@
     "status": "derived",
     "nameKo": "뇌들보주위동맥가지",
     "legacyKo": "뇌량주위동맥지",
-    "hanja": "腦梁周圍動脈枝"
+    "hanja": "腦梁周圍動脈枝",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      119
+    ],
+    "nameKoDerivation": "branch of FMA50337"
   },
   "FMA50339": {
     "sourceNameEn": "precuneal branch of pericallosal artery",
@@ -19391,7 +19488,15 @@
     "legacyKo": "상소뇌동맥지",
     "hanja": "上小腦動脈枝",
     "sourceNameEn": "branch of superior cerebellar artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      121
+    ],
+    "nameKoDerivation": "branch of FMA50573"
   },
   "FMA50577": {
     "nameKo": "가쪽위소뇌동맥",
@@ -19626,7 +19731,15 @@
     "legacyKo": "외측후두동맥지",
     "hanja": "外側後頭動脈枝",
     "sourceNameEn": "branch of lateral occipital artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      120
+    ],
+    "nameKoDerivation": "branch of FMA50633"
   },
   "FMA50648": {
     "nameKo": "가쪽뒤통수동맥앞관자가지",
@@ -19647,7 +19760,15 @@
     "legacyKo": "내측후두동맥지",
     "hanja": "內側後頭動脈枝",
     "sourceNameEn": "branch of medial occipital artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      121
+    ],
+    "nameKoDerivation": "branch of FMA50638"
   },
   "FMA50652": {
     "sourceNameEn": "splenial artery",
@@ -20168,7 +20289,15 @@
     "status": "derived",
     "nameKo": "대뇌동맥고리가지",
     "legacyKo": "대뇌동맥륜지",
-    "hanja": "大腦動脈輪枝"
+    "hanja": "大腦動脈輪枝",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      120
+    ],
+    "nameKoDerivation": "branch of FMA50454"
   },
   "FMA52570": {
     "nameKo": "머리신경가지",
@@ -20282,7 +20411,15 @@
     "status": "derived",
     "nameKo": "눈신경가지",
     "legacyKo": "안신경지",
-    "hanja": "眼神經枝"
+    "hanja": "眼神經枝",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      188
+    ],
+    "nameKoDerivation": "branch of FMA52621"
   },
   "FMA52628": {
     "nameKo": "눈물샘신경",
@@ -20361,7 +20498,15 @@
     "legacyKo": "전두신경지",
     "hanja": "前頭神經枝",
     "sourceNameEn": "branch of frontal nerve",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      188
+    ],
+    "nameKoDerivation": "branch of FMA52638"
   },
   "FMA52642": {
     "sourceNameEn": "supratrochlear nerve",
@@ -20477,7 +20622,15 @@
     "status": "derived",
     "nameKo": "코섬모체신경가지",
     "legacyKo": "비모양신경지",
-    "hanja": "鼻毛樣神經枝"
+    "hanja": "鼻毛樣神經枝",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      188
+    ],
+    "nameKoDerivation": "branch of FMA52668"
   },
   "FMA52672": {
     "sourceNameEn": "communicating branch of nasociliary nerve with ciliary ganglion",
@@ -24108,14 +24261,30 @@
     "legacyKo": "우관상동맥지",
     "hanja": "右冠狀動脈枝",
     "sourceNameEn": "branch of right coronary artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      113
+    ],
+    "nameKoDerivation": "branch of FMA50039"
   },
   "FMA66328": {
     "nameKo": "왼관상동맥가지",
     "legacyKo": "좌관상동맥지",
     "hanja": "左冠狀動脈枝",
     "sourceNameEn": "branch of left coronary artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      114
+    ],
+    "nameKoDerivation": "branch of FMA50040"
   },
   "FMA66332": {
     "nameKo": "동맥구역",
@@ -25268,7 +25437,15 @@
     "legacyKo": "후경골동맥지",
     "hanja": "後脛骨動脈枝",
     "sourceNameEn": "branch of posterior tibial artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      130
+    ],
+    "nameKoDerivation": "branch of FMA43895"
   },
   "FMA69796": {
     "nameKo": "속엉덩동맥세부분",
@@ -27178,7 +27355,15 @@
     "legacyKo": "추골동맥지",
     "hanja": "椎骨動脈枝",
     "sourceNameEn": "branch of vertebral artery",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      121
+    ],
+    "nameKoDerivation": "branch of FMA3956"
   },
   "FMA76264": {
     "sourceNameEn": "intracranial branch of vertebral artery",
@@ -27192,7 +27377,16 @@
     "status": "derived",
     "nameKo": "뇌바닥동맥가지",
     "legacyKo": "기저동맥지",
-    "hanja": "基底動脈枝"
+    "hanja": "基底動脈枝",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      120,
+      121
+    ],
+    "nameKoDerivation": "branch of FMA50542"
   },
   "FMA76301": {
     "nameKo": "빗장밑동맥가지줄기",
