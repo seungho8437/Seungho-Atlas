@@ -42,7 +42,7 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
   const acupointPositions=new Float32Array(acupointCoordinates.length*3);acupointCoordinates.forEach((point,i)=>acupointPositions.set(point.position,i*3));
   const acupointGeometry=new T.BufferGeometry();acupointGeometry.setAttribute('position',new T.BufferAttribute(acupointPositions,3));
   const acupointMaterial=new T.PointsMaterial({color:0xb43f3f,size:9,sizeAttenuation:false,transparent:true,opacity:.95,depthTest:false});
-  acupointMaterial.onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <clipping_planes_fragment>','#include <clipping_planes_fragment>\\nif (distance(gl_PointCoord, vec2(0.5)) > 0.5) discard;');};
+  acupointMaterial.onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <clipping_planes_fragment>','#include <clipping_planes_fragment>\nif (distance(gl_PointCoord, vec2(0.5)) > 0.5) discard;');};
   const acupointMarkers=new T.Points(acupointGeometry,acupointMaterial);acupointMarkers.frustumCulled=false;acupointMarkers.renderOrder=20;acupointMarkers.visible=false;scene.add(acupointMarkers);
   const hover=document.createElement('div');hover.className='part-hover';hover.setAttribute('role','tooltip');hover.hidden=true;el.appendChild(hover);
   type Target={index:number;x:number;y:number;left:number;right:number;top:number;bottom:number};let targets:Target[]=[];
