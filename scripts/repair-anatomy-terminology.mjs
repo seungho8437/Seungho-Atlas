@@ -33,7 +33,21 @@ const sourceConfirmedBases={
   FMA46621:{nameKo:'위인두수축근',pages:[74],result:'direct-verified',evidence:'KAA: Superior pharyngeal constrictor muscle'},
   FMA46622:{nameKo:'중간인두수축근',pages:[75],result:'direct-verified',evidence:'KAA: Middle pharyngeal constrictor muscle'},
   FMA46623:{nameKo:'아래인두수축근',pages:[75],result:'direct-verified',evidence:'KAA: Inferior pharyngeal constrictor muscle'},
-  FMA23082:{nameKo:'목돌림근',pages:[55],result:'derived-from-KAA-component',evidence:'KAA: Rotatores cervicis muscles'}
+  FMA23082:{nameKo:'목돌림근',pages:[55],result:'derived-from-KAA-component',evidence:'KAA: Rotatores cervicis muscles'},
+  FMA22431:{nameKo:'가쪽넓은근',legacyKo:'외측광근',hanja:'外側廣筋',pages:[63],result:'direct-verified',evidence:'KAA: Vastus lateralis muscle'},
+  FMA22653:{nameKo:'머리널판근',legacyKo:'두판상근',hanja:'頭板狀筋',pages:[55],result:'direct-verified',evidence:'KAA: Splenius capitis muscle'},
+  FMA22702:{nameKo:'허리엉덩갈비근',legacyKo:'요장늑근',hanja:'腰腸肋筋',pages:[55],result:'direct-verified',evidence:'KAA: Iliocostalis lumborum muscle'},
+  FMA22703:{nameKo:'등엉덩갈비근',legacyKo:'흉장늑근',hanja:'胸腸肋筋',pages:[55],result:'direct-verified',evidence:'KAA: Iliocostalis thoracis muscle'},
+  FMA22704:{nameKo:'목엉덩갈비근',legacyKo:'경장늑근',hanja:'頸腸肋筋',pages:[55],result:'direct-verified',evidence:'KAA: Iliocostalis cervicis muscle'},
+  FMA22709:{nameKo:'등가장긴근',legacyKo:'흉최장근',hanja:'胸最長筋',pages:[55],result:'direct-verified',evidence:'KAA: Longissimus thoracis muscle'},
+  FMA22711:{nameKo:'목가장긴근',legacyKo:'경최장근',hanja:'頸最長筋',pages:[55],result:'direct-verified',evidence:'KAA: Longissimus cervicis muscle'},
+  FMA22714:{nameKo:'머리가장긴근',legacyKo:'두최장근',hanja:'頭最長筋',pages:[55],result:'direct-verified',evidence:'KAA: Longissimus capitis muscle'},
+  FMA22828:{nameKo:'등반가시근',legacyKo:'흉반극근',hanja:'胸半棘筋',pages:[55],result:'direct-verified',evidence:'KAA: Semispinalis thoracis muscle'},
+  FMA22829:{nameKo:'목반가시근',legacyKo:'경반극근',hanja:'頸半棘筋',pages:[55],result:'direct-verified',evidence:'KAA: Semispinalis cervicis muscle'},
+  FMA22830:{nameKo:'머리반가시근',legacyKo:'두반극근',hanja:'頭半棘筋',pages:[55],result:'direct-verified',evidence:'KAA: Semispinalis capitis muscle'},
+  FMA9625:{nameKo:'붓목뿔근',legacyKo:'경상설골근',hanja:'莖狀舌骨筋',pages:[54],result:'direct-verified',evidence:'KAA: Stylohyoid muscle'},
+  FMA13344:{nameKo:'방패목뿔근',legacyKo:'갑상설골근',hanja:'甲狀舌骨筋',pages:[54],result:'direct-verified',evidence:'KAA: Thyrohyoid muscle'},
+  FMA50735:{nameKo:'간문맥',legacyKo:'간문맥',hanja:'肝門脈',pages:[140],result:'direct-verified',evidence:'KAA: Hepatic portal vein'}
 };
 
 const changes=[];
