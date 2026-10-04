@@ -78,8 +78,8 @@
           "start": 64,
           "end": 71,
           "direction": {
-            "id": "lateral",
-            "evidence": "가쪽"
+            "id": "inferior",
+            "evidence": "아래"
           }
         }
       ],
