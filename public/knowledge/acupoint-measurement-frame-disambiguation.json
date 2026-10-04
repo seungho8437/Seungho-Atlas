@@ -683,7 +683,7 @@
             "HEAD_MASTOID_TO_MASTOID"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "adjacent-anterior-trunk-reference",
           "evidence": "목 앞쪽·빗장뼈 부위 횡방향",
           "rationale": "The source is at the anterior root of the neck adjacent to the thorax; WHO anterior thoracic transverse reference is the non-contradictory proportional frame.",
@@ -872,7 +872,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -922,7 +922,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -972,7 +972,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -1022,7 +1022,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -1072,7 +1072,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -1122,7 +1122,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -1149,7 +1149,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -1199,7 +1199,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -1249,7 +1249,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -1299,7 +1299,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -1349,7 +1349,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -1376,7 +1376,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "샅고랑/앞정중선 가쪽",
           "rationale": "Anterior pelvic offset from the anterior median line uses the WHO anterior-trunk transverse B-cun reference.",
@@ -1884,7 +1884,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -1934,7 +1934,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -1961,7 +1961,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -2011,7 +2011,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -2406,7 +2406,7 @@
             "UPPER_ARM_AXILLARY_TO_CUBITAL"
           ],
           "selectedCalibrationId": "UPPER_ARM_AXILLARY_TO_CUBITAL",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "adjacent-upper-limb-reference",
           "evidence": "어깨/상완 이행부",
           "rationale": "Use the WHO axillary-fold to cubital-crease upper-limb proportional frame; source meaning is longitudinal upper-limb distance.",
@@ -3298,7 +3298,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "posterior-trunk-transverse-reference",
           "evidence": "엉치/뒤정중계열 가쪽",
           "rationale": "Posterior pelvic offsets continue the posterior trunk transverse B-cun convention; WHO back/lumbar table supplies the 6 B-cun transverse reference.",
@@ -3325,7 +3325,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "posterior-trunk-transverse-reference",
           "evidence": "엉치/뒤정중계열 가쪽",
           "rationale": "Posterior pelvic offsets continue the posterior trunk transverse B-cun convention; WHO back/lumbar table supplies the 6 B-cun transverse reference.",
@@ -3352,7 +3352,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "posterior-trunk-transverse-reference",
           "evidence": "엉치/뒤정중계열 가쪽",
           "rationale": "Posterior pelvic offsets continue the posterior trunk transverse B-cun convention; WHO back/lumbar table supplies the 6 B-cun transverse reference.",
@@ -3379,7 +3379,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "posterior-trunk-transverse-reference",
           "evidence": "엉치/뒤정중계열 가쪽",
           "rationale": "Posterior pelvic offsets continue the posterior trunk transverse B-cun convention; WHO back/lumbar table supplies the 6 B-cun transverse reference.",
@@ -3422,7 +3422,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "posterior-trunk-transverse-reference",
           "evidence": "엉치/뒤정중계열 가쪽",
           "rationale": "Posterior pelvic offsets continue the posterior trunk transverse B-cun convention; WHO back/lumbar table supplies the 6 B-cun transverse reference.",
@@ -3488,7 +3488,7 @@
             "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
           ],
           "selectedCalibrationId": "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "knee-leg-reference",
           "evidence": "오금주름에서 몸쪽/먼쪽",
           "rationale": "WHO lower-limb table uses the popliteal crease as the proximal anchor of the 16 B-cun lateral-leg interval.",
@@ -3847,7 +3847,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "posterior-trunk-transverse-reference",
           "evidence": "엉치/뒤정중계열 가쪽",
           "rationale": "Posterior pelvic offsets continue the posterior trunk transverse B-cun convention; WHO back/lumbar table supplies the 6 B-cun transverse reference.",
@@ -3874,7 +3874,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "posterior-trunk-transverse-reference",
           "evidence": "엉치/뒤정중계열 가쪽",
           "rationale": "Posterior pelvic offsets continue the posterior trunk transverse B-cun convention; WHO back/lumbar table supplies the 6 B-cun transverse reference.",
@@ -4094,7 +4094,7 @@
             "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE"
           ],
           "selectedCalibrationId": "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "regional-WHO-reference",
           "evidence": "발목/발의 짧은 국소 B-cun",
           "rationale": "WHO lower-limb table supplies medial malleolus to sole as the explicit ankle-foot proportional interval.",
@@ -4262,7 +4262,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -4312,7 +4312,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -4362,7 +4362,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -4412,7 +4412,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -4462,7 +4462,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -4489,7 +4489,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -4539,7 +4539,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -4589,7 +4589,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -4639,7 +4639,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -4689,7 +4689,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -4739,7 +4739,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "앞정중선/배꼽에서 가쪽",
           "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval.",
@@ -5256,7 +5256,7 @@
             "FOREARM_CUBITAL_TO_WRIST"
           ],
           "selectedCalibrationId": "UPPER_ARM_AXILLARY_TO_CUBITAL",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "adjacent-upper-limb-reference",
           "evidence": "팔꿈치에서 몸쪽/위팔 방향",
           "rationale": "The source moves from the elbow into the upper arm, matching the WHO 9 B-cun upper-arm interval.",
@@ -6304,7 +6304,7 @@
             "CHEST_NIPPLE_TO_NIPPLE"
           ],
           "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
-          "status": "disambiguated",
+          "status": "provisional-regional-reference",
           "basis": "anterior-trunk-transverse-reference",
           "evidence": "샅고랑/앞정중선 가쪽",
           "rationale": "Anterior pelvic offset from the anterior median line uses the WHO anterior-trunk transverse B-cun reference.",
