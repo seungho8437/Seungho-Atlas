@@ -129,18 +129,24 @@ function closestOnTri(p,a,b,c){
   const denom=1/(va+vb+vc), v=vb*denom, w=vc*denom; return a.map((x,i)=>x+ab[i]*v+ac[i]*w);
 }
 function dist2(a,b){return (a[0]-b[0])**2+(a[1]-b[1])**2+(a[2]-b[2])**2}
-function project(target){
+function project(target, side){
   const base=target.map(v=>Math.floor(v/cell)); let best=null,bestD=Infinity,bestPart=null;
   for(let r=0;r<=8;r++){
     let found=false;
     for(let x=-r;x<=r;x++)for(let y=-r;y<=r;y++)for(let z=-r;z<=r;z++){
       if(Math.max(Math.abs(x),Math.abs(y),Math.abs(z))!==r)continue;
       const ids=grid.get([base[0]+x,base[1]+y,base[2]+z].join(',')); if(!ids)continue; found=true;
-      for(const id of ids){const T=surfaceTriangles[id];const q=closestOnTri(target,...T.tri),d=dist2(target,q);if(d<bestD){bestD=d;best=q;bestPart=T.part;}}
+      for(const id of ids){const T=surfaceTriangles[id];
+        if(side==='left' && Math.sign((T.c[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) continue;
+        if(side==='right' && Math.sign((T.c[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) continue;
+        const q=closestOnTri(target,...T.tri),d=dist2(target,q);if(d<bestD){bestD=d;best=q;bestPart=T.part;}}
     }
     if(found && best && Math.sqrt(bestD) < (r+1)*cell) break;
   }
-  if(!best){for(const T of surfaceTriangles){const q=closestOnTri(target,...T.tri),d=dist2(target,q);if(d<bestD){bestD=d;best=q;bestPart=T.part;}}}
+  if(!best){for(const T of surfaceTriangles){
+    if(side==='left' && Math.sign((T.c[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) continue;
+    if(side==='right' && Math.sign((T.c[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) continue;
+    const q=closestOnTri(target,...T.tri),d=dist2(target,q);if(d<bestD){bestD=d;best=q;bestPart=T.part;}}}
   return {point:best,distance:Math.sqrt(bestD),part:bestPart};
 }
 
@@ -173,7 +179,10 @@ for(const p of acupoints){
   const sides=p.laterality==='midline'?['midline']:['left','right'];
   for(const side of sides){
     const {target,specific,rels}=relationTarget(p,side);
-    const projected=project(target);
+    if(side==='left' && Math.sign((target[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) target[lrAxis]=bodyCenter[lrAxis]+leftSign*Math.abs(target[lrAxis]-bodyCenter[lrAxis]);
+    if(side==='right' && Math.sign((target[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) target[lrAxis]=bodyCenter[lrAxis]-leftSign*Math.abs(target[lrAxis]-bodyCenter[lrAxis]);
+    if(side==='midline') target[lrAxis]=bodyCenter[lrAxis];
+    const projected=project(target,side);
     const sideExpected=side==='left'?leftSign:side==='right'?-leftSign:0;
     const lateral=(projected.point[lrAxis]-bodyCenter[lrAxis]);
     const sideOk=side==='midline'?Math.abs(lateral)<=extent[lrAxis]*.12:Math.sign(lateral||0)===sideExpected;
