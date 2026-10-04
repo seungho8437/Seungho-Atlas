@@ -2716,7 +2716,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "인중",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -2838,7 +2838,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "코",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -2914,7 +2914,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "눈확",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": []
@@ -2984,7 +2984,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "눈확",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": []
@@ -3146,7 +3146,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "코",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -3254,7 +3254,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "턱",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -3326,7 +3326,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "턱",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -3426,7 +3426,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "턱",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": []
@@ -5607,7 +5607,7 @@
       },
       "context": {
         "bodyRegion": "pelvis-perineum",
-        "regionEvidence": "두덩",
+        "regionEvidence": "샅고랑",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -11047,7 +11047,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "눈구석",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -11119,7 +11119,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "귀",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -11219,7 +11219,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "눈구석",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -21932,7 +21932,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "귀",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -22265,7 +22265,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "귀",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -24323,7 +24323,7 @@
       },
       "context": {
         "bodyRegion": "abdomen",
-        "regionEvidence": "배꼽",
+        "regionEvidence": "가쪽배",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -26774,7 +26774,7 @@
       },
       "context": {
         "bodyRegion": "pelvis-perineum",
-        "regionEvidence": "두덩",
+        "regionEvidence": "샅고랑",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -28918,7 +28918,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "코",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": []
@@ -28986,7 +28986,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "인중",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": []
@@ -29054,7 +29054,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "입술",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": []
@@ -29122,7 +29122,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "입술",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": []
@@ -31140,7 +31140,7 @@
       },
       "context": {
         "bodyRegion": "head",
-        "regionEvidence": "턱",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "midline",
         "aspectEvidence": []
