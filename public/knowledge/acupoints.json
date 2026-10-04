@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ST36",
+    "meridian": "ST",
+    "name": {
+      "ko": "족삼리",
+      "hanja": "足三里",
+      "pinyin": "Zúsānlǐ",
+      "en": "Zusanli"
+    },
+    "locationKo": "아래다리 앞쪽에서 ST35와 ST41을 잇는 선 위에 있으며, ST35에서 아래쪽으로 3 B-cun 떨어진 위치로 표준화되어 있다.",
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_2008"
+    ]
+  },
+  {
+    "id": "BL40",
+    "meridian": "BL",
+    "name": {
+      "ko": "위중",
+      "hanja": "委中",
+      "pinyin": "Wěizhōng",
+      "en": "Weizhong"
+    },
+    "locationKo": "무릎 뒤쪽에서 오금주름의 가운데에 위치한다.",
+    "laterality": "bilateral",
+    "sourceIds": [
+      "WHO_ACUPOINT_2008"
+    ]
+  }
+]
