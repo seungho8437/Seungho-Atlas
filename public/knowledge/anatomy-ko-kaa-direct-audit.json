@@ -1,0 +1,5038 @@
+{
+  "source": "대한해부학회 해부학용어 제6판 (user-provided anatomy.pdf)",
+  "generatedAt": "2026-10-04",
+  "sourceRows": 7802,
+  "atlasRecords": 3432,
+  "directVerified": 551,
+  "notDirectVerified": 2881,
+  "rules": {
+    "exactNormalizedEnglishHeadwordOnly": true,
+    "substringMatching": false,
+    "lexicalWordInsertionOrDeletion": false,
+    "normalizedPluralPairs": [
+      "muscle/muscles",
+      "artery/arteries",
+      "vein/veins",
+      "ligament/ligaments",
+      "nerve/nerves",
+      "rib/ribs",
+      "vertebra/vertebrae",
+      "branch/branches",
+      "foramen/foramina",
+      "sinus/sinuses",
+      "ganglion/ganglia",
+      "gyrus/gyri",
+      "sulcus/sulci",
+      "canal/canals",
+      "duct/ducts",
+      "valve/valves"
+    ],
+    "notes": "Case, Unicode hyphen/apostrophe, whitespace, and bracketed index annotations are normalized. A direct verification requires the normalized English headword to match and the Korean term to be supported by the same source row; extraction-corrupt rows were checked against the PDF text."
+  },
+  "direct": [
+    {
+      "id": "FMA3736",
+      "sourceNameEn": "ascending aorta",
+      "nameKo": "오름대동맥",
+      "pages": [
+        113
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA3768",
+      "sourceNameEn": "arch of aorta",
+      "nameKo": "대동맥활",
+      "pages": [
+        114
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA3784",
+      "sourceNameEn": "descending aorta",
+      "nameKo": "내림대동맥",
+      "pages": [
+        124
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA3789",
+      "sourceNameEn": "abdominal aorta",
+      "nameKo": "배대동맥",
+      "pages": [
+        125
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA3939",
+      "sourceNameEn": "common carotid artery",
+      "nameKo": "온목동맥",
+      "pages": [
+        114
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA3947",
+      "sourceNameEn": "internal carotid artery",
+      "nameKo": "속목동맥",
+      "pages": [
+        117,
+        120
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA3951",
+      "sourceNameEn": "subclavian artery",
+      "nameKo": "빗장밑동맥",
+      "pages": [
+        121
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA3956",
+      "sourceNameEn": "vertebral artery",
+      "nameKo": "척추동맥",
+      "pages": [
+        121
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA3960",
+      "sourceNameEn": "internal thoracic artery",
+      "nameKo": "속가슴동맥",
+      "pages": [
+        122
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA3990",
+      "sourceNameEn": "thyrocervical trunk",
+      "nameKo": "갑상목동맥",
+      "pages": [
+        122
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA3994",
+      "sourceNameEn": "second posterior intercostal artery",
+      "nameKo": "둘째뒤갈비사이동맥",
+      "pages": [
+        122
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA4176",
+      "sourceNameEn": "posterior intercostal artery",
+      "nameKo": "뒤갈비사이동맥",
+      "pages": [
+        124
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4613",
+      "sourceNameEn": "subcostal artery",
+      "nameKo": "갈비밑동맥",
+      "pages": [
+        124
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4706",
+      "sourceNameEn": "coronary sinus",
+      "nameKo": "심장정맥굴",
+      "pages": [
+        130
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4707",
+      "sourceNameEn": "great cardiac vein",
+      "nameKo": "큰심장정맥",
+      "pages": [
+        130
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4708",
+      "sourceNameEn": "left marginal vein",
+      "nameKo": "왼모서리정맥",
+      "pages": [
+        130
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA4712",
+      "sourceNameEn": "posterior vein of left ventricle",
+      "nameKo": "왼심실뒤정맥",
+      "pages": [
+        130
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4713",
+      "sourceNameEn": "middle cardiac vein",
+      "nameKo": "중간심장정맥",
+      "pages": [
+        130
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4714",
+      "sourceNameEn": "small cardiac vein",
+      "nameKo": "작은심장정맥",
+      "pages": [
+        130
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4716",
+      "sourceNameEn": "right marginal vein",
+      "nameKo": "오른모서리정맥",
+      "pages": [
+        130
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA4720",
+      "sourceNameEn": "superior vena cava",
+      "nameKo": "위대정맥",
+      "pages": [
+        132
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4723",
+      "sourceNameEn": "brachiocephalic vein",
+      "nameKo": "팔머리정맥",
+      "pages": [
+        132
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4724",
+      "sourceNameEn": "internal jugular vein",
+      "nameKo": "속목정맥",
+      "pages": [
+        132
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4725",
+      "sourceNameEn": "subclavian vein",
+      "nameKo": "빗장밑정맥",
+      "pages": [
+        137
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4729",
+      "sourceNameEn": "internal thoracic vein",
+      "nameKo": "속가슴정맥",
+      "pages": [
+        132
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4731",
+      "sourceNameEn": "superior epigastric vein",
+      "nameKo": "위배벽정맥",
+      "pages": [
+        132
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA4732",
+      "sourceNameEn": "musculophrenic vein",
+      "nameKo": "근육가로막정맥",
+      "pages": [
+        132
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA4751",
+      "sourceNameEn": "right brachiocephalic vein",
+      "nameKo": "오른팔머리정맥",
+      "pages": [
+        132
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4761",
+      "sourceNameEn": "left brachiocephalic vein",
+      "nameKo": "왼팔머리정맥",
+      "pages": [
+        132
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4797",
+      "sourceNameEn": "left superior intercostal vein",
+      "nameKo": "왼위갈비사이정맥",
+      "pages": [
+        132
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4838",
+      "sourceNameEn": "azygos vein",
+      "nameKo": "홀정맥",
+      "pages": [
+        137
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4877",
+      "sourceNameEn": "right superior intercostal vein",
+      "nameKo": "오른위갈비사이정맥",
+      "pages": [
+        137
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA4944",
+      "sourceNameEn": "hemiazygos vein",
+      "nameKo": "반홀정맥",
+      "pages": [
+        137
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA5011",
+      "sourceNameEn": "accessory hemiazygos vein",
+      "nameKo": "덧반홀정맥",
+      "pages": [
+        137
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA5865",
+      "sourceNameEn": "cranial nerve",
+      "nameKo": "뇌신경",
+      "pages": [
+        187
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA5884",
+      "sourceNameEn": "ganglion",
+      "nameKo": "신경절",
+      "pages": [
+        186
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA5889",
+      "sourceNameEn": "autonomic ganglion",
+      "nameKo": "자율신경절",
+      "pages": [
+        186
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA5894",
+      "sourceNameEn": "parasympathetic ganglion",
+      "nameKo": "부교감신경절",
+      "pages": [
+        186
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA6964",
+      "sourceNameEn": "ciliary ganglion",
+      "nameKo": "섬모체신경절",
+      "pages": [
+        200
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7041",
+      "sourceNameEn": "short ciliary nerve",
+      "nameKo": "짧은섬모체신경",
+      "pages": [
+        200
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA7131",
+      "sourceNameEn": "esophagus",
+      "nameKo": "식도",
+      "pages": [
+        75
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7148",
+      "sourceNameEn": "stomach",
+      "nameKo": "위",
+      "pages": [
+        75
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7163",
+      "sourceNameEn": "skin",
+      "nameKo": "피부",
+      "pages": [
+        217
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7196",
+      "sourceNameEn": "spleen",
+      "nameKo": "지라",
+      "pages": [
+        143
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7198",
+      "sourceNameEn": "pancreas",
+      "nameKo": "이자",
+      "pages": [
+        82
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7202",
+      "sourceNameEn": "gallbladder",
+      "nameKo": "쓸개",
+      "pages": [
+        81
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7203",
+      "sourceNameEn": "kidney",
+      "nameKo": "콩팥",
+      "pages": [
+        91
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7206",
+      "sourceNameEn": "duodenum",
+      "nameKo": "샘창자",
+      "pages": [
+        77
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7210",
+      "sourceNameEn": "testis",
+      "nameKo": "고환",
+      "pages": [
+        97
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7394",
+      "sourceNameEn": "trachea",
+      "nameKo": "기관",
+      "pages": [
+        87
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7396",
+      "sourceNameEn": "left main bronchus",
+      "nameKo": "왼기관지",
+      "pages": [
+        87
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7474",
+      "sourceNameEn": "long bone",
+      "nameKo": "긴뼈",
+      "pages": [
+        12
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7475",
+      "sourceNameEn": "short bone",
+      "nameKo": "짧은뼈",
+      "pages": [
+        12
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7476",
+      "sourceNameEn": "flat bone",
+      "nameKo": "납작뼈",
+      "pages": [
+        12
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7477",
+      "sourceNameEn": "irregular bone",
+      "nameKo": "불규칙뼈",
+      "pages": [
+        12
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7487",
+      "sourceNameEn": "body of sternum",
+      "nameKo": "복장뼈몸통",
+      "pages": [
+        29
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7488",
+      "sourceNameEn": "xiphoid process",
+      "nameKo": "칼돌기",
+      "pages": [
+        29
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7574",
+      "sourceNameEn": "rib",
+      "nameKo": "갈비뼈",
+      "pages": [
+        28
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7591",
+      "sourceNameEn": "costal cartilage",
+      "nameKo": "갈비연골",
+      "pages": [
+        28
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7592",
+      "sourceNameEn": "true rib",
+      "nameKo": "참갈비뼈",
+      "pages": [
+        28
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7594",
+      "sourceNameEn": "false rib",
+      "nameKo": "거짓갈비뼈",
+      "pages": [
+        28
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7595",
+      "sourceNameEn": "floating rib",
+      "nameKo": "뜬갈비뼈",
+      "pages": [
+        28
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA7597",
+      "sourceNameEn": "first rib",
+      "nameKo": "첫째갈비뼈",
+      "pages": [
+        29
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7620",
+      "sourceNameEn": "second rib",
+      "nameKo": "둘째갈비뼈",
+      "pages": [
+        29
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA8612",
+      "sourceNameEn": "pulmonary trunk",
+      "nameKo": "허파동맥",
+      "pages": [
+        112
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA8639",
+      "sourceNameEn": "superior lingular artery",
+      "nameKo": "위혀구역동맥",
+      "pages": [
+        113
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA8640",
+      "sourceNameEn": "inferior lingular artery",
+      "nameKo": "아래혀구역동맥",
+      "pages": [
+        113
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA8707",
+      "sourceNameEn": "apical segmental artery",
+      "nameKo": "꼭대기구역동맥",
+      "pages": [
+        112,
+        113
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA8714",
+      "sourceNameEn": "superior segmental artery",
+      "nameKo": "위구역동맥",
+      "pages": [
+        113,
+        127
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA8716",
+      "sourceNameEn": "medial basal segmental artery",
+      "nameKo": "안쪽바닥구역동맥",
+      "pages": [
+        113
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA8717",
+      "sourceNameEn": "anterior basal segmental artery",
+      "nameKo": "앞바닥구역동맥",
+      "pages": [
+        113
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA8718",
+      "sourceNameEn": "lateral basal segmental artery",
+      "nameKo": "가쪽바닥구역동맥",
+      "pages": [
+        113
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA8719",
+      "sourceNameEn": "posterior basal segmental artery",
+      "nameKo": "뒤바닥구역동맥",
+      "pages": [
+        113
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA9139",
+      "sourceNameEn": "thoracic vertebra",
+      "nameKo": "등(척추)뼈",
+      "pages": [
+        27,
+        29
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9600",
+      "sourceNameEn": "prostate",
+      "nameKo": "전립샘",
+      "pages": [
+        99
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9604",
+      "sourceNameEn": "adrenal gland",
+      "nameKo": "부신",
+      "pages": [
+        106
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9611",
+      "sourceNameEn": "femur",
+      "nameKo": "넙다리뼈",
+      "pages": [
+        35
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9613",
+      "sourceNameEn": "parietal bone",
+      "nameKo": "마루뼈",
+      "pages": [
+        15
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9615",
+      "sourceNameEn": "cricoid cartilage",
+      "nameKo": "반지연골",
+      "pages": [
+        85
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9616",
+      "sourceNameEn": "muscle of head",
+      "nameKo": "머리근육",
+      "pages": [
+        51
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9617",
+      "sourceNameEn": "muscle of neck",
+      "nameKo": "목근육",
+      "pages": [
+        53
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9619",
+      "sourceNameEn": "muscle of thorax",
+      "nameKo": "가슴근육",
+      "pages": [
+        56
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9620",
+      "sourceNameEn": "muscle of abdomen",
+      "nameKo": "배근육",
+      "pages": [
+        57
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9621",
+      "sourceNameEn": "muscle of upper limb",
+      "nameKo": "팔근육",
+      "pages": [
+        60
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9622",
+      "sourceNameEn": "muscle of lower limb",
+      "nameKo": "다리근육",
+      "pages": [
+        62
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9623",
+      "sourceNameEn": "perineal muscle",
+      "nameKo": "샅근육",
+      "pages": [
+        59,
+        101
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9649",
+      "sourceNameEn": "decussation",
+      "nameKo": "교차",
+      "pages": [
+        149
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA9703",
+      "sourceNameEn": "nasolacrimal duct",
+      "nameKo": "코눈물관",
+      "pages": [
+        209
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9704",
+      "sourceNameEn": "ureter",
+      "nameKo": "요관",
+      "pages": [
+        92
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9708",
+      "sourceNameEn": "talus",
+      "nameKo": "목말뼈",
+      "pages": [
+        37
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9710",
+      "sourceNameEn": "vomer",
+      "nameKo": "보습뼈",
+      "pages": [
+        22
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9711",
+      "sourceNameEn": "maxilla",
+      "nameKo": "위턱뼈",
+      "pages": [
+        22
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9721",
+      "sourceNameEn": "tendon",
+      "nameKo": "힘줄",
+      "pages": [
+        51
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9756",
+      "sourceNameEn": "external intercostal muscle",
+      "nameKo": "바깥갈비사이근",
+      "pages": [
+        56
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9757",
+      "sourceNameEn": "internal intercostal muscle",
+      "nameKo": "속갈비사이근",
+      "pages": [
+        56
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9758",
+      "sourceNameEn": "innermost intercostal muscle",
+      "nameKo": "맨속갈비사이근",
+      "pages": [
+        56
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9914",
+      "sourceNameEn": "vertebra",
+      "nameKo": "척추뼈",
+      "pages": [
+        26
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9915",
+      "sourceNameEn": "cervical vertebra",
+      "nameKo": "목척추뼈",
+      "pages": [
+        26
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9921",
+      "sourceNameEn": "lumbar vertebra",
+      "nameKo": "허리척추뼈",
+      "pages": [
+        27
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA10419",
+      "sourceNameEn": "pancreatic duct",
+      "nameKo": "이자관",
+      "pages": [
+        82
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA10636",
+      "sourceNameEn": "costocervical trunk",
+      "nameKo": "목갈비동맥",
+      "pages": [
+        122
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA10645",
+      "sourceNameEn": "musculophrenic artery",
+      "nameKo": "근육가로막동맥",
+      "pages": [
+        122
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA10646",
+      "sourceNameEn": "superior epigastric artery",
+      "nameKo": "위배벽동맥",
+      "pages": [
+        122
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA10659",
+      "sourceNameEn": "deep cervical artery",
+      "nameKo": "깊은목동맥",
+      "pages": [
+        122
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA10662",
+      "sourceNameEn": "inferior thyroid artery",
+      "nameKo": "아래갑상동맥",
+      "pages": [
+        122
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA10663",
+      "sourceNameEn": "suprascapular artery",
+      "nameKo": "어깨위동맥",
+      "pages": [
+        122
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA10664",
+      "sourceNameEn": "transverse cervical artery",
+      "nameKo": "가로목동맥",
+      "pages": [
+        122
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA10665",
+      "sourceNameEn": "superficial cervical artery",
+      "nameKo": "얕은목동맥",
+      "pages": [
+        122
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA10951",
+      "sourceNameEn": "inferior vena cava",
+      "nameKo": "아래대정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA11336",
+      "sourceNameEn": "linea alba",
+      "nameKo": "백색선",
+      "pages": [
+        57
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA12519",
+      "sourceNameEn": "atlas",
+      "nameKo": "고리뼈",
+      "pages": [
+        27
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA12520",
+      "sourceNameEn": "axis",
+      "nameKo": "중쇠뼈",
+      "pages": [
+        27
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA12823",
+      "sourceNameEn": "incisor tooth",
+      "nameKo": "앞니",
+      "pages": [
+        70
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA12845",
+      "sourceNameEn": "subcostal vein",
+      "nameKo": "갈비밑정맥",
+      "pages": [
+        137
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA12858",
+      "sourceNameEn": "ascending lumbar vein",
+      "nameKo": "오름허리정맥",
+      "pages": [
+        137,
+        138
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA13278",
+      "sourceNameEn": "anterior segmental artery",
+      "nameKo": "앞구역동맥",
+      "pages": [
+        112,
+        113,
+        125
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA13280",
+      "sourceNameEn": "posterior segmental artery",
+      "nameKo": "뒤구역동맥",
+      "pages": [
+        112,
+        113,
+        125,
+        127
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA13295",
+      "sourceNameEn": "diaphragm",
+      "nameKo": "가로막",
+      "pages": [
+        56
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA13303",
+      "sourceNameEn": "humerus",
+      "nameKo": "위팔뼈",
+      "pages": [
+        30
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA13321",
+      "sourceNameEn": "clavicle",
+      "nameKo": "빗장뼈",
+      "pages": [
+        30
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA13324",
+      "sourceNameEn": "cephalic vein",
+      "nameKo": "노쪽피부정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA13329",
+      "sourceNameEn": "axillary vein",
+      "nameKo": "겨드랑정맥",
+      "pages": [
+        137
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA13338",
+      "sourceNameEn": "infrahyoid muscle",
+      "nameKo": "목뿔아래근육",
+      "pages": [
+        54
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA13394",
+      "sourceNameEn": "scapula",
+      "nameKo": "어깨뼈",
+      "pages": [
+        29
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA13889",
+      "sourceNameEn": "pituitary gland",
+      "nameKo": "뇌하수체",
+      "pages": [
+        106
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14319",
+      "sourceNameEn": "suprascapular vein",
+      "nameKo": "어깨위정맥",
+      "pages": [
+        134
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14331",
+      "sourceNameEn": "splenic vein",
+      "nameKo": "지라정맥",
+      "pages": [
+        141
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14332",
+      "sourceNameEn": "superior mesenteric vein",
+      "nameKo": "위창자간막정맥",
+      "pages": [
+        141
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14333",
+      "sourceNameEn": "common iliac vein",
+      "nameKo": "온엉덩정맥",
+      "pages": [
+        139
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14334",
+      "sourceNameEn": "renal vein",
+      "nameKo": "콩팥정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14337",
+      "sourceNameEn": "hepatic vein",
+      "nameKo": "간정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14338",
+      "sourceNameEn": "right hepatic vein",
+      "nameKo": "오른간정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA14339",
+      "sourceNameEn": "left hepatic vein",
+      "nameKo": "왼간정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA14340",
+      "sourceNameEn": "middle hepatic vein",
+      "nameKo": "중간간정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA14341",
+      "sourceNameEn": "right testicular vein",
+      "nameKo": "오른고환정맥",
+      "pages": [
+        139
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14343",
+      "sourceNameEn": "right suprarenal vein",
+      "nameKo": "오른부신정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14345",
+      "sourceNameEn": "left testicular vein",
+      "nameKo": "왼고환정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA14349",
+      "sourceNameEn": "left suprarenal vein",
+      "nameKo": "왼부신정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA14539",
+      "sourceNameEn": "cystic duct",
+      "nameKo": "쓸개주머니관",
+      "pages": [
+        81
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14542",
+      "sourceNameEn": "appendix",
+      "nameKo": "막창자꼬리",
+      "pages": [
+        78
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14544",
+      "sourceNameEn": "rectum",
+      "nameKo": "곧창자",
+      "pages": [
+        78
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14545",
+      "sourceNameEn": "ascending colon",
+      "nameKo": "오름잘록창자",
+      "pages": [
+        78
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14546",
+      "sourceNameEn": "transverse colon",
+      "nameKo": "가로잘록창자",
+      "pages": [
+        78
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14547",
+      "sourceNameEn": "descending colon",
+      "nameKo": "내림잘록창자",
+      "pages": [
+        78
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14647",
+      "sourceNameEn": "transverse mesocolon",
+      "nameKo": "가로잘록창자간막",
+      "pages": [
+        103
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14668",
+      "sourceNameEn": "common hepatic duct",
+      "nameKo": "온간관",
+      "pages": [
+        81
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14669",
+      "sourceNameEn": "right hepatic duct",
+      "nameKo": "오른간관",
+      "pages": [
+        81
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14670",
+      "sourceNameEn": "left hepatic duct",
+      "nameKo": "왼간관",
+      "pages": [
+        81
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14734",
+      "sourceNameEn": "inferior phrenic artery",
+      "nameKo": "아래가로막동맥",
+      "pages": [
+        125
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14735",
+      "sourceNameEn": "lumbar artery",
+      "nameKo": "허리동맥",
+      "pages": [
+        125
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14749",
+      "sourceNameEn": "superior mesenteric artery",
+      "nameKo": "위창자간막동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14750",
+      "sourceNameEn": "inferior mesenteric artery",
+      "nameKo": "아래창자간막동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14751",
+      "sourceNameEn": "renal artery",
+      "nameKo": "콩팥동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14754",
+      "sourceNameEn": "middle suprarenal artery",
+      "nameKo": "중간부신동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14758",
+      "sourceNameEn": "testicular artery",
+      "nameKo": "고환동맥",
+      "pages": [
+        127
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14764",
+      "sourceNameEn": "common iliac artery",
+      "nameKo": "온엉덩동맥",
+      "pages": [
+        127
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14768",
+      "sourceNameEn": "left gastric artery",
+      "nameKo": "왼위동맥",
+      "pages": [
+        125
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14771",
+      "sourceNameEn": "common hepatic artery",
+      "nameKo": "온간동맥",
+      "pages": [
+        125
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14773",
+      "sourceNameEn": "splenic artery",
+      "nameKo": "지라동맥",
+      "pages": [
+        125
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14776",
+      "sourceNameEn": "right gastric artery",
+      "nameKo": "오른위동맥",
+      "pages": [
+        125
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA14787",
+      "sourceNameEn": "dorsal pancreatic artery",
+      "nameKo": "뒤이자동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA14790",
+      "sourceNameEn": "inferior pancreatic artery",
+      "nameKo": "아래이자동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA14792",
+      "sourceNameEn": "great pancreatic artery",
+      "nameKo": "큰이자동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA14805",
+      "sourceNameEn": "inferior pancreaticoduodenal artery",
+      "nameKo": "아래이자샘창자동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14809",
+      "sourceNameEn": "ileal artery",
+      "nameKo": "돌창자동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14810",
+      "sourceNameEn": "middle colic artery",
+      "nameKo": "중간(잘록)창자동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14811",
+      "sourceNameEn": "right colic artery",
+      "nameKo": "오른(잘록)창자동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14812",
+      "sourceNameEn": "celiac trunk",
+      "nameKo": "복강동맥",
+      "pages": [
+        125
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14815",
+      "sourceNameEn": "ileocolic artery",
+      "nameKo": "돌잘록창자동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14816",
+      "sourceNameEn": "anterior cecal artery",
+      "nameKo": "앞막창자동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA14817",
+      "sourceNameEn": "posterior cecal artery",
+      "nameKo": "뒤막창자동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA14818",
+      "sourceNameEn": "appendicular artery",
+      "nameKo": "막창자꼬리동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA14826",
+      "sourceNameEn": "left colic artery",
+      "nameKo": "왼(잘록)창자동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14830",
+      "sourceNameEn": "sigmoid artery",
+      "nameKo": "구불잘록창자동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14832",
+      "sourceNameEn": "superior rectal artery",
+      "nameKo": "위곧창자동맥",
+      "pages": [
+        126
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA15370",
+      "sourceNameEn": "lumbar vein",
+      "nameKo": "허리정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA15391",
+      "sourceNameEn": "inferior mesenteric vein",
+      "nameKo": "아래창자간막정맥",
+      "pages": [
+        141
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA15393",
+      "sourceNameEn": "superior rectal vein",
+      "nameKo": "위곧창자정맥",
+      "pages": [
+        141
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA15394",
+      "sourceNameEn": "left colic vein",
+      "nameKo": "왼(잘록)창자정맥",
+      "pages": [
+        141
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA15395",
+      "sourceNameEn": "sigmoid vein",
+      "nameKo": "구불잘록창자정맥",
+      "pages": [
+        141
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA15398",
+      "sourceNameEn": "pancreaticoduodenal vein",
+      "nameKo": "이자샘창자정맥",
+      "pages": [
+        141
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA15399",
+      "sourceNameEn": "left gastric vein",
+      "nameKo": "왼위정맥",
+      "pages": [
+        141
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA15400",
+      "sourceNameEn": "right gastric vein",
+      "nameKo": "오른위정맥",
+      "pages": [
+        141
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA15405",
+      "sourceNameEn": "ileal vein",
+      "nameKo": "돌창자정맥",
+      "pages": [
+        141
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA15406",
+      "sourceNameEn": "middle colic vein",
+      "nameKo": "중간(잘록)창자정맥",
+      "pages": [
+        141
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA15407",
+      "sourceNameEn": "right colic vein",
+      "nameKo": "오른(잘록)창자정맥",
+      "pages": [
+        141
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA15408",
+      "sourceNameEn": "ileocolic vein",
+      "nameKo": "돌잘록창자정맥",
+      "pages": [
+        141
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA15900",
+      "sourceNameEn": "urinary bladder",
+      "nameKo": "방광",
+      "pages": [
+        92
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA16202",
+      "sourceNameEn": "sacrum",
+      "nameKo": "엉치뼈",
+      "pages": [
+        27,
+        33
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA16549",
+      "sourceNameEn": "mesoappendix",
+      "nameKo": "막창자꼬리간막",
+      "pages": [
+        103
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA16585",
+      "sourceNameEn": "hip bone",
+      "nameKo": "볼기뼈",
+      "pages": [
+        33
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA18247",
+      "sourceNameEn": "glans penis",
+      "nameKo": "음경귀두",
+      "pages": [
+        100
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA18255",
+      "sourceNameEn": "epididymis",
+      "nameKo": "부고환",
+      "pages": [
+        98
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA18805",
+      "sourceNameEn": "external iliac artery",
+      "nameKo": "바깥엉덩동맥",
+      "pages": [
+        128
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA18808",
+      "sourceNameEn": "internal iliac artery",
+      "nameKo": "속엉덩동맥",
+      "pages": [
+        127
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA18883",
+      "sourceNameEn": "external iliac vein",
+      "nameKo": "바깥엉덩정맥",
+      "pages": [
+        139
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA18884",
+      "sourceNameEn": "internal iliac vein",
+      "nameKo": "속엉덩정맥",
+      "pages": [
+        139
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA18902",
+      "sourceNameEn": "iliolumbar vein",
+      "nameKo": "엉덩허리정맥",
+      "pages": [
+        139
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA18905",
+      "sourceNameEn": "lateral sacral vein",
+      "nameKo": "가쪽엉치정맥",
+      "pages": [
+        139
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA18908",
+      "sourceNameEn": "superior gluteal vein",
+      "nameKo": "위볼기정맥",
+      "pages": [
+        139
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA18911",
+      "sourceNameEn": "inferior gluteal vein",
+      "nameKo": "아래볼기정맥",
+      "pages": [
+        139
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA18914",
+      "sourceNameEn": "obturator vein",
+      "nameKo": "폐쇄정맥",
+      "pages": [
+        139
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA18917",
+      "sourceNameEn": "internal pudendal vein",
+      "nameKo": "속음부정맥",
+      "pages": [
+        139
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA19386",
+      "sourceNameEn": "seminal vesicle",
+      "nameKo": "정낭",
+      "pages": [
+        99
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA19617",
+      "sourceNameEn": "corpus spongiosum of penis",
+      "nameKo": "요도해면체",
+      "pages": [
+        100
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA19618",
+      "sourceNameEn": "corpus cavernosum of penis",
+      "nameKo": "음경해면체",
+      "pages": [
+        100
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA19783",
+      "sourceNameEn": "loose connective tissue",
+      "nameKo": "성긴결합조직",
+      "pages": [
+        58,
+        218
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA19795",
+      "sourceNameEn": "dorsal artery of penis",
+      "nameKo": "음경등동맥",
+      "pages": [
+        128
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA20289",
+      "sourceNameEn": "lacrimal sac",
+      "nameKo": "눈물주머니",
+      "pages": [
+        208
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA20686",
+      "sourceNameEn": "inferior epigastric artery",
+      "nameKo": "아래배벽동맥",
+      "pages": [
+        128
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA20734",
+      "sourceNameEn": "superficial epigastric artery",
+      "nameKo": "얕은배벽동맥",
+      "pages": [
+        128
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA20798",
+      "sourceNameEn": "lateral circumflex femoral artery",
+      "nameKo": "가쪽넙다리휘돌이동맥",
+      "pages": [
+        129
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA21162",
+      "sourceNameEn": "inferior epigastric vein",
+      "nameKo": "아래배벽정맥",
+      "pages": [
+        139
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA21185",
+      "sourceNameEn": "femoral vein",
+      "nameKo": "넙다리정맥",
+      "pages": [
+        140
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA21354",
+      "sourceNameEn": "deep dorsal vein of penis",
+      "nameKo": "깊은음경등정맥",
+      "pages": [
+        139
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA21376",
+      "sourceNameEn": "great saphenous vein",
+      "nameKo": "큰두렁정맥",
+      "pages": [
+        139
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA21384",
+      "sourceNameEn": "superficial dorsal vein of penis",
+      "nameKo": "얕은음경등정맥",
+      "pages": [
+        140
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22506",
+      "sourceNameEn": "descending genicular artery",
+      "nameKo": "무릎내림동맥",
+      "pages": [
+        129
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22536",
+      "sourceNameEn": "middle genicular artery",
+      "nameKo": "중간무릎동맥",
+      "pages": [
+        129
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22584",
+      "sourceNameEn": "superior medial genicular artery",
+      "nameKo": "안쪽위무릎동맥",
+      "pages": [
+        129
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22585",
+      "sourceNameEn": "superior lateral genicular artery",
+      "nameKo": "가쪽위무릎동맥",
+      "pages": [
+        129
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22654",
+      "sourceNameEn": "axillary artery",
+      "nameKo": "겨드랑동맥",
+      "pages": [
+        122
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22674",
+      "sourceNameEn": "lateral thoracic artery",
+      "nameKo": "가쪽가슴동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22677",
+      "sourceNameEn": "subscapular artery",
+      "nameKo": "어깨밑동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22680",
+      "sourceNameEn": "anterior circumflex humeral artery",
+      "nameKo": "앞위팔휘돌이동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22684",
+      "sourceNameEn": "posterior circumflex humeral artery",
+      "nameKo": "뒤위팔휘돌이동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22689",
+      "sourceNameEn": "brachial artery",
+      "nameKo": "위팔동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22695",
+      "sourceNameEn": "deep brachial artery",
+      "nameKo": "깊은위팔동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22706",
+      "sourceNameEn": "superior ulnar collateral artery",
+      "nameKo": "위자쪽곁동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22710",
+      "sourceNameEn": "inferior ulnar collateral artery",
+      "nameKo": "아래자쪽곁동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22730",
+      "sourceNameEn": "radial artery",
+      "nameKo": "노동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22748",
+      "sourceNameEn": "radial recurrent artery",
+      "nameKo": "노쪽되돌이동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22796",
+      "sourceNameEn": "ulnar artery",
+      "nameKo": "자동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22806",
+      "sourceNameEn": "common interosseous artery",
+      "nameKo": "온뼈사이동맥",
+      "pages": [
+        124
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22810",
+      "sourceNameEn": "anterior interosseous artery",
+      "nameKo": "앞뼈사이동맥",
+      "pages": [
+        124
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA22863",
+      "sourceNameEn": "palmar metacarpal artery",
+      "nameKo": "바닥쪽손허리동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA22908",
+      "sourceNameEn": "basilic vein",
+      "nameKo": "자쪽피부정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22919",
+      "sourceNameEn": "palmar metacarpal vein",
+      "nameKo": "바닥쪽손허리정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA22934",
+      "sourceNameEn": "brachial vein",
+      "nameKo": "위팔정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22947",
+      "sourceNameEn": "radial vein",
+      "nameKo": "노정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22950",
+      "sourceNameEn": "ulnar vein",
+      "nameKo": "자정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22954",
+      "sourceNameEn": "dorsal metacarpal vein",
+      "nameKo": "등쪽손허리정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA22963",
+      "sourceNameEn": "median cubital vein",
+      "nameKo": "팔오금중간정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA22967",
+      "sourceNameEn": "median antebrachial vein",
+      "nameKo": "아래팔중간정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA23081",
+      "sourceNameEn": "rotator muscle",
+      "nameKo": "돌림근육",
+      "pages": [
+        50
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA23113",
+      "sourceNameEn": "subscapular vein",
+      "nameKo": "어깨밑정맥",
+      "pages": [
+        137
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA23120",
+      "sourceNameEn": "radial collateral artery",
+      "nameKo": "노쪽곁동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA23179",
+      "sourceNameEn": "circumflex scapular artery",
+      "nameKo": "어깨휘돌이동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA23463",
+      "sourceNameEn": "radius",
+      "nameKo": "노뼈",
+      "pages": [
+        31
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA23466",
+      "sourceNameEn": "ulna",
+      "nameKo": "자뼈",
+      "pages": [
+        31
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA23706",
+      "sourceNameEn": "interosseous membrane of forearm",
+      "nameKo": "아래팔뼈사이막",
+      "pages": [
+        44
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA23709",
+      "sourceNameEn": "scaphoid",
+      "nameKo": "손배뼈",
+      "pages": [
+        32
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA23712",
+      "sourceNameEn": "lunate",
+      "nameKo": "반달뼈",
+      "pages": [
+        32
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA23718",
+      "sourceNameEn": "pisiform",
+      "nameKo": "콩알뼈",
+      "pages": [
+        32
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA23721",
+      "sourceNameEn": "trapezium",
+      "nameKo": "큰마름뼈",
+      "pages": [
+        32
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA23724",
+      "sourceNameEn": "trapezoid",
+      "nameKo": "작은마름뼈",
+      "pages": [
+        32
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA23727",
+      "sourceNameEn": "capitate",
+      "nameKo": "알머리뼈",
+      "pages": [
+        32
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA23730",
+      "sourceNameEn": "hamate",
+      "nameKo": "갈고리뼈",
+      "pages": [
+        32
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA24476",
+      "sourceNameEn": "tibia",
+      "nameKo": "정강뼈",
+      "pages": [
+        36
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA24479",
+      "sourceNameEn": "fibula",
+      "nameKo": "종아리뼈",
+      "pages": [
+        36
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA24485",
+      "sourceNameEn": "patella",
+      "nameKo": "무릎뼈",
+      "pages": [
+        35
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA24496",
+      "sourceNameEn": "calcaneus",
+      "nameKo": "발꿈치뼈",
+      "pages": [
+        37
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA32672",
+      "sourceNameEn": "sesamoid bone",
+      "nameKo": "종자뼈",
+      "pages": [
+        12
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA35187",
+      "sourceNameEn": "interosseous membrane of leg",
+      "nameKo": "종아리뼈사이막",
+      "pages": [
+        46
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA43888",
+      "sourceNameEn": "inferior lateral genicular artery",
+      "nameKo": "가쪽아래무릎동맥",
+      "pages": [
+        129
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA43889",
+      "sourceNameEn": "inferior medial genicular artery",
+      "nameKo": "안쪽아래무릎동맥",
+      "pages": [
+        129
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA43894",
+      "sourceNameEn": "anterior tibial artery",
+      "nameKo": "앞정강동맥",
+      "pages": [
+        129
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA43895",
+      "sourceNameEn": "posterior tibial artery",
+      "nameKo": "뒤정강동맥",
+      "pages": [
+        130
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA43902",
+      "sourceNameEn": "anterior tibial recurrent artery",
+      "nameKo": "앞정강되돌이동맥",
+      "pages": [
+        129
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA43915",
+      "sourceNameEn": "dorsalis pedis artery",
+      "nameKo": "발등동맥",
+      "pages": [
+        129
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA43925",
+      "sourceNameEn": "medial plantar artery",
+      "nameKo": "안쪽발바닥동맥",
+      "pages": [
+        130
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA43926",
+      "sourceNameEn": "lateral plantar artery",
+      "nameKo": "가쪽발바닥동맥",
+      "pages": [
+        130
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA43942",
+      "sourceNameEn": "plantar arch",
+      "nameKo": "발바닥동맥활",
+      "pages": [
+        130
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA43956",
+      "sourceNameEn": "plantar metatarsal artery",
+      "nameKo": "바닥쪽발허리동맥",
+      "pages": [
+        130
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA44197",
+      "sourceNameEn": "tarsal ligament",
+      "nameKo": "발목인대",
+      "pages": [
+        48
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA44245",
+      "sourceNameEn": "plantar tarsal ligament",
+      "nameKo": "바닥쪽발목인대",
+      "pages": [
+        48
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA44248",
+      "sourceNameEn": "long plantar ligament",
+      "nameKo": "긴발바닥인대",
+      "pages": [
+        48
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA44318",
+      "sourceNameEn": "superficial epigastric vein",
+      "nameKo": "얕은배벽정맥",
+      "pages": [
+        140
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA44325",
+      "sourceNameEn": "medial circumflex femoral vein",
+      "nameKo": "안쪽넙다리휘돌이정맥",
+      "pages": [
+        140
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA44326",
+      "sourceNameEn": "lateral circumflex femoral vein",
+      "nameKo": "가쪽넙다리휘돌이정맥",
+      "pages": [
+        140
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA44327",
+      "sourceNameEn": "popliteal vein",
+      "nameKo": "오금정맥",
+      "pages": [
+        140
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA44331",
+      "sourceNameEn": "anterior tibial vein",
+      "nameKo": "앞정강정맥",
+      "pages": [
+        140
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA44332",
+      "sourceNameEn": "posterior tibial vein",
+      "nameKo": "뒤정강정맥",
+      "pages": [
+        140
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA44333",
+      "sourceNameEn": "small saphenous vein",
+      "nameKo": "작은두렁정맥",
+      "pages": [
+        140
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA44356",
+      "sourceNameEn": "dorsal venous arch of foot",
+      "nameKo": "발등정맥활",
+      "pages": [
+        140
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA44504",
+      "sourceNameEn": "plantar metatarsal vein",
+      "nameKo": "바닥쪽발허리정맥",
+      "pages": [
+        140
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA44558",
+      "sourceNameEn": "fibular vein",
+      "nameKo": "종아리정맥",
+      "pages": [
+        140
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA44559",
+      "sourceNameEn": "genicular vein",
+      "nameKo": "무릎정맥",
+      "pages": [
+        140
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA44594",
+      "sourceNameEn": "arcuate artery",
+      "nameKo": "활꼴동맥",
+      "pages": [
+        92
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA44595",
+      "sourceNameEn": "lateral tarsal artery",
+      "nameKo": "가쪽발목동맥",
+      "pages": [
+        129
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA45732",
+      "sourceNameEn": "parenchyma",
+      "nameKo": "실질",
+      "pages": [
+        99,
+        106
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA45738",
+      "sourceNameEn": "platysma",
+      "nameKo": "넓은목근",
+      "pages": [
+        53
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA46290",
+      "sourceNameEn": "suprahyoid muscle",
+      "nameKo": "목뿔위근육",
+      "pages": [
+        53
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA46442",
+      "sourceNameEn": "tendinous arch of levator ani",
+      "nameKo": "항문올림근 힘줄활",
+      "pages": [
+        59
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA46689",
+      "sourceNameEn": "muscle of tongue",
+      "nameKo": "혀근육",
+      "pages": [
+        53,
+        73
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA49071",
+      "sourceNameEn": "common tendinous ring",
+      "nameKo": "온힘줄고리",
+      "pages": [
+        207
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA49868",
+      "sourceNameEn": "ophthalmic artery",
+      "nameKo": "눈동맥",
+      "pages": [
+        117
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA49911",
+      "sourceNameEn": "right inferior pulmonary vein",
+      "nameKo": "아래오른허파정맥",
+      "pages": [
+        131
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA49913",
+      "sourceNameEn": "left inferior pulmonary vein",
+      "nameKo": "아래왼허파정맥",
+      "pages": [
+        132
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA49914",
+      "sourceNameEn": "right superior pulmonary vein",
+      "nameKo": "위오른허파정맥",
+      "pages": [
+        131
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA49916",
+      "sourceNameEn": "left superior pulmonary vein",
+      "nameKo": "위왼허파정맥",
+      "pages": [
+        131
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50028",
+      "sourceNameEn": "anterior cerebral artery",
+      "nameKo": "앞대뇌동맥",
+      "pages": [
+        118
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50084",
+      "sourceNameEn": "posterior communicating artery",
+      "nameKo": "뒤교통동맥",
+      "pages": [
+        117,
+        120
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50087",
+      "sourceNameEn": "anterior choroidal artery",
+      "nameKo": "앞맥락동맥",
+      "pages": [
+        117,
+        118
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50169",
+      "sourceNameEn": "anterior communicating artery",
+      "nameKo": "앞교통동맥",
+      "pages": [
+        119
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50328",
+      "sourceNameEn": "medial frontobasal artery",
+      "nameKo": "안쪽눈확이마동맥",
+      "pages": [
+        119
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA50330",
+      "sourceNameEn": "callosomarginal artery",
+      "nameKo": "뇌들보모서리동맥",
+      "pages": [
+        119
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA50337",
+      "sourceNameEn": "pericallosal artery",
+      "nameKo": "뇌들보주위동맥",
+      "pages": [
+        119
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA50379",
+      "sourceNameEn": "polar temporal artery",
+      "nameKo": "관자극동맥",
+      "pages": [
+        119
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA50382",
+      "sourceNameEn": "anterior temporal artery",
+      "nameKo": "앞관자동맥",
+      "pages": [
+        119
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA50437",
+      "sourceNameEn": "prefrontal artery",
+      "nameKo": "이마앞동맥",
+      "pages": [
+        120
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA50442",
+      "sourceNameEn": "lateral frontobasal artery",
+      "nameKo": "가쪽눈확이마동맥",
+      "pages": [
+        119
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA50479",
+      "sourceNameEn": "artery of precentral sulcus",
+      "nameKo": "중심앞고랑동맥",
+      "pages": [
+        120
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA50482",
+      "sourceNameEn": "artery of postcentral sulcus",
+      "nameKo": "중심뒤고랑동맥",
+      "pages": [
+        120
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA50485",
+      "sourceNameEn": "anterior parietal artery",
+      "nameKo": "앞마루동맥",
+      "pages": [
+        120
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA50488",
+      "sourceNameEn": "posterior parietal artery",
+      "nameKo": "뒤마루동맥",
+      "pages": [
+        120
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA50518",
+      "sourceNameEn": "posterior inferior cerebellar artery",
+      "nameKo": "뒤아래소뇌동맥",
+      "pages": [
+        121
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA50531",
+      "sourceNameEn": "anterior spinal artery",
+      "nameKo": "앞척수동맥",
+      "pages": [
+        121
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA50542",
+      "sourceNameEn": "basilar artery",
+      "nameKo": "뇌바닥동맥",
+      "pages": [
+        120,
+        121
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50544",
+      "sourceNameEn": "anterior inferior cerebellar artery",
+      "nameKo": "앞아래소뇌동맥",
+      "pages": [
+        121
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50573",
+      "sourceNameEn": "superior cerebellar artery",
+      "nameKo": "위소뇌동맥",
+      "pages": [
+        121
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50624",
+      "sourceNameEn": "thalamoperforating artery",
+      "nameKo": "시상관통동맥",
+      "pages": [
+        120
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA50629",
+      "sourceNameEn": "thalamogeniculate artery",
+      "nameKo": "시상무릎동맥",
+      "pages": [
+        120
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA50633",
+      "sourceNameEn": "lateral occipital artery",
+      "nameKo": "가쪽뒤통수동맥",
+      "pages": [
+        120
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50638",
+      "sourceNameEn": "medial occipital artery",
+      "nameKo": "안쪽뒤통수동맥",
+      "pages": [
+        121
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50720",
+      "sourceNameEn": "artery",
+      "nameKo": "동맥",
+      "pages": [
+        108,
+        112
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50723",
+      "sourceNameEn": "vein",
+      "nameKo": "정맥",
+      "pages": [
+        109,
+        130
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50735",
+      "sourceNameEn": "hepatic portal vein",
+      "nameKo": "간문맥",
+      "pages": [
+        140
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50863",
+      "sourceNameEn": "optic nerve",
+      "nameKo": "시각신경",
+      "pages": [
+        187,
+        205
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50865",
+      "sourceNameEn": "trochlear nerve",
+      "nameKo": "도르래신경",
+      "pages": [
+        188
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50872",
+      "sourceNameEn": "right pulmonary artery",
+      "nameKo": "오른허파동맥",
+      "pages": [
+        112
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50873",
+      "sourceNameEn": "left pulmonary artery",
+      "nameKo": "왼허파동맥",
+      "pages": [
+        113
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA51041",
+      "sourceNameEn": "deep femoral vein",
+      "nameKo": "깊은넙다리정맥",
+      "pages": [
+        140
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA51048",
+      "sourceNameEn": "iliotibial tract",
+      "nameKo": "엉덩정강띠",
+      "pages": [
+        64
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA51061",
+      "sourceNameEn": "calcaneal tendon",
+      "nameKo": "발꿈치힘줄",
+      "pages": [
+        64
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA52621",
+      "sourceNameEn": "ophthalmic nerve",
+      "nameKo": "눈신경",
+      "pages": [
+        188
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA52628",
+      "sourceNameEn": "lacrimal nerve",
+      "nameKo": "눈물샘신경",
+      "pages": [
+        188
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA52638",
+      "sourceNameEn": "frontal nerve",
+      "nameKo": "이마신경",
+      "pages": [
+        188
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA52642",
+      "sourceNameEn": "supratrochlear nerve",
+      "nameKo": "도르래위신경",
+      "pages": [
+        188
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA52668",
+      "sourceNameEn": "nasociliary nerve",
+      "nameKo": "코섬모체신경",
+      "pages": [
+        188
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA52675",
+      "sourceNameEn": "anterior ethmoidal nerve",
+      "nameKo": "앞벌집신경",
+      "pages": [
+        188
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA52691",
+      "sourceNameEn": "long ciliary nerve",
+      "nameKo": "긴섬모체신경",
+      "pages": [
+        188
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA52693",
+      "sourceNameEn": "infratrochlear nerve",
+      "nameKo": "도르래아래신경",
+      "pages": [
+        188
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA52714",
+      "sourceNameEn": "posterior ethmoidal nerve",
+      "nameKo": "뒤벌집신경",
+      "pages": [
+        188
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA52734",
+      "sourceNameEn": "frontal bone",
+      "nameKo": "이마뼈",
+      "pages": [
+        16
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA52735",
+      "sourceNameEn": "occipital bone",
+      "nameKo": "뒤통수뼈",
+      "pages": [
+        17
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA52736",
+      "sourceNameEn": "sphenoid bone",
+      "nameKo": "나비뼈",
+      "pages": [
+        17
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA52737",
+      "sourceNameEn": "temporal bone",
+      "nameKo": "관자뼈",
+      "pages": [
+        19
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA52741",
+      "sourceNameEn": "lacrimal bone",
+      "nameKo": "눈물뼈",
+      "pages": [
+        21
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA52745",
+      "sourceNameEn": "nasal bone",
+      "nameKo": "코뼈",
+      "pages": [
+        21
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA52746",
+      "sourceNameEn": "palatine bone",
+      "nameKo": "입천장뼈",
+      "pages": [
+        23
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA52747",
+      "sourceNameEn": "zygomatic bone",
+      "nameKo": "광대뼈",
+      "pages": [
+        23
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA52748",
+      "sourceNameEn": "mandible",
+      "nameKo": "아래턱뼈",
+      "pages": [
+        23
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA52749",
+      "sourceNameEn": "hyoid bone",
+      "nameKo": "목뿔뼈",
+      "pages": [
+        24
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA52781",
+      "sourceNameEn": "external ear",
+      "nameKo": "바깥귀",
+      "pages": [
+        209
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA54237",
+      "sourceNameEn": "eyebrow",
+      "nameKo": "눈썹",
+      "pages": [
+        207
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA54640",
+      "sourceNameEn": "tongue",
+      "nameKo": "혀",
+      "pages": [
+        72
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA54736",
+      "sourceNameEn": "inferior nasal concha",
+      "nameKo": "아래코선반",
+      "pages": [
+        83
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA54839",
+      "sourceNameEn": "interosseous membrane",
+      "nameKo": "뼈사이막",
+      "pages": [
+        39
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA55077",
+      "sourceNameEn": "pharyngeal raphe",
+      "nameKo": "인두솔기",
+      "pages": [
+        74
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA55093",
+      "sourceNameEn": "submandibular gland",
+      "nameKo": "턱밑샘",
+      "pages": [
+        70
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA55099",
+      "sourceNameEn": "thyroid cartilage",
+      "nameKo": "방패연골",
+      "pages": [
+        84
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA55109",
+      "sourceNameEn": "arytenoid cartilage",
+      "nameKo": "모뿔연골",
+      "pages": [
+        85
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA55110",
+      "sourceNameEn": "corniculate cartilage",
+      "nameKo": "잔뿔연골",
+      "pages": [
+        85
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA55111",
+      "sourceNameEn": "cuneiform cartilage",
+      "nameKo": "쐐기연골",
+      "pages": [
+        85
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA55130",
+      "sourceNameEn": "epiglottis",
+      "nameKo": "후두덮개",
+      "pages": [
+        85
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA55132",
+      "sourceNameEn": "thyrohyoid membrane",
+      "nameKo": "방패목뿔막",
+      "pages": [
+        84
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA55138",
+      "sourceNameEn": "median thyrohyoid ligament",
+      "nameKo": "정중방패목뿔인대",
+      "pages": [
+        84
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA55139",
+      "sourceNameEn": "lateral thyrohyoid ligament",
+      "nameKo": "가쪽방패목뿔인대",
+      "pages": [
+        84
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA55237",
+      "sourceNameEn": "median cricothyroid ligament",
+      "nameKo": "정중반지방패인대",
+      "pages": [
+        85
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA55244",
+      "sourceNameEn": "vocal ligament",
+      "nameKo": "성대인대",
+      "pages": [
+        87
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA55250",
+      "sourceNameEn": "conus elasticus",
+      "nameKo": "탄력원뿔",
+      "pages": [
+        87
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA55618",
+      "sourceNameEn": "pterygomandibular raphe",
+      "nameKo": "날개아래턱솔기",
+      "pages": [
+        74
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA55636",
+      "sourceNameEn": "canine tooth",
+      "nameKo": "송곳니",
+      "pages": [
+        70
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA55637",
+      "sourceNameEn": "premolar tooth",
+      "nameKo": "작은어금니",
+      "pages": [
+        70
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA55638",
+      "sourceNameEn": "molar tooth",
+      "nameKo": "큰어금니",
+      "pages": [
+        70
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA58102",
+      "sourceNameEn": "fibrous layer of eyeball",
+      "nameKo": "안구섬유층",
+      "pages": [
+        203
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA58235",
+      "sourceNameEn": "iris",
+      "nameKo": "홍채",
+      "pages": [
+        204
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA58238",
+      "sourceNameEn": "cornea",
+      "nameKo": "각막",
+      "pages": [
+        203
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA58241",
+      "sourceNameEn": "lens",
+      "nameKo": "수정체",
+      "pages": [
+        206
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA58245",
+      "sourceNameEn": "lacrimal canaliculus",
+      "nameKo": "눈물소관",
+      "pages": [
+        208
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA58269",
+      "sourceNameEn": "sclera",
+      "nameKo": "공막",
+      "pages": [
+        203
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA58298",
+      "sourceNameEn": "choroid",
+      "nameKo": "맥락막",
+      "pages": [
+        204
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA58431",
+      "sourceNameEn": "corona ciliaris",
+      "nameKo": "섬모체관",
+      "pages": [
+        204
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA58604",
+      "sourceNameEn": "optic part of retina",
+      "nameKo": "망막시각부분",
+      "pages": [
+        205
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA58827",
+      "sourceNameEn": "vitreous body",
+      "nameKo": "유리체",
+      "pages": [
+        207
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA59101",
+      "sourceNameEn": "lacrimal gland",
+      "nameKo": "눈물샘",
+      "pages": [
+        208
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA59402",
+      "sourceNameEn": "lacrimal lake",
+      "nameKo": "눈물못",
+      "pages": [
+        208
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA59503",
+      "sourceNameEn": "septal nasal cartilage",
+      "nameKo": "코중격연골",
+      "pages": [
+        83
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA59504",
+      "sourceNameEn": "major alar cartilage",
+      "nameKo": "큰콧방울연골",
+      "pages": [
+        83
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA59762",
+      "sourceNameEn": "gingiva",
+      "nameKo": "잇몸",
+      "pages": [
+        41,
+        69
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA59791",
+      "sourceNameEn": "sublingual gland",
+      "nameKo": "혀밑샘",
+      "pages": [
+        70
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61833",
+      "sourceNameEn": "caudate nucleus",
+      "nameKo": "꼬리핵",
+      "pages": [
+        183
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61834",
+      "sourceNameEn": "putamen",
+      "nameKo": "조가비핵",
+      "pages": [
+        183
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61857",
+      "sourceNameEn": "superior frontal gyrus",
+      "nameKo": "위이마이랑",
+      "pages": [
+        177
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61859",
+      "sourceNameEn": "middle frontal gyrus",
+      "nameKo": "중간이마이랑",
+      "pages": [
+        176
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61860",
+      "sourceNameEn": "inferior frontal gyrus",
+      "nameKo": "아래이마이랑",
+      "pages": [
+        176
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61894",
+      "sourceNameEn": "precentral gyrus",
+      "nameKo": "중심앞이랑",
+      "pages": [
+        176
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61896",
+      "sourceNameEn": "postcentral gyrus",
+      "nameKo": "중심뒤이랑",
+      "pages": [
+        177
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61897",
+      "sourceNameEn": "supramarginal gyrus",
+      "nameKo": "모서리위이랑",
+      "pages": [
+        177
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61898",
+      "sourceNameEn": "angular gyrus",
+      "nameKo": "모이랑",
+      "pages": [
+        177
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61899",
+      "sourceNameEn": "superior parietal lobule",
+      "nameKo": "위마루소엽",
+      "pages": [
+        177
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61906",
+      "sourceNameEn": "middle temporal gyrus",
+      "nameKo": "중간관자이랑",
+      "pages": [
+        177
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61907",
+      "sourceNameEn": "inferior temporal gyrus",
+      "nameKo": "아래관자이랑",
+      "pages": [
+        177,
+        179
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61908",
+      "sourceNameEn": "fusiform gyrus",
+      "nameKo": "방추이랑",
+      "pages": [
+        179
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61918",
+      "sourceNameEn": "parahippocampal gyrus",
+      "nameKo": "해마곁이랑",
+      "pages": [
+        179
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61950",
+      "sourceNameEn": "internal capsule",
+      "nameKo": "속섬유막",
+      "pages": [
+        183
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61961",
+      "sourceNameEn": "anterior commissure",
+      "nameKo": "앞맞교차",
+      "pages": [
+        171,
+        179,
+        184,
+        185
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61974",
+      "sourceNameEn": "stria terminalis",
+      "nameKo": "분계섬유줄",
+      "pages": [
+        180
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61975",
+      "sourceNameEn": "lamina terminalis",
+      "nameKo": "종말판",
+      "pages": [
+        171,
+        179
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61993",
+      "sourceNameEn": "midbrain",
+      "nameKo": "중간뇌",
+      "pages": [
+        154,
+        155,
+        164
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62004",
+      "sourceNameEn": "medulla oblongata",
+      "nameKo": "숨뇌",
+      "pages": [
+        155
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62007",
+      "sourceNameEn": "thalamus",
+      "nameKo": "시상",
+      "pages": [
+        170,
+        172
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62008",
+      "sourceNameEn": "hypothalamus",
+      "nameKo": "시상하부",
+      "pages": [
+        170,
+        174
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62032",
+      "sourceNameEn": "habenula",
+      "nameKo": "고삐",
+      "pages": [
+        170
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62033",
+      "sourceNameEn": "pineal body",
+      "nameKo": "솔방울샘",
+      "pages": [
+        106,
+        170
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62045",
+      "sourceNameEn": "optic chiasm",
+      "nameKo": "시각교차",
+      "pages": [
+        170
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62046",
+      "sourceNameEn": "optic tract",
+      "nameKo": "시각로",
+      "pages": [
+        171
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62072",
+      "sourceNameEn": "posterior commissure",
+      "nameKo": "뒤맞교차",
+      "pages": [
+        171
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62080",
+      "sourceNameEn": "stria medullaris of thalamus",
+      "nameKo": "시상섬유줄",
+      "pages": [
+        170
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62209",
+      "sourceNameEn": "lateral geniculate body",
+      "nameKo": "가쪽무릎체",
+      "pages": [
+        170
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62211",
+      "sourceNameEn": "medial geniculate body",
+      "nameKo": "안쪽무릎체",
+      "pages": [
+        170
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62327",
+      "sourceNameEn": "tuber cinereum",
+      "nameKo": "회색융기",
+      "pages": [
+        171
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62403",
+      "sourceNameEn": "superior colliculus",
+      "nameKo": "위둔덕",
+      "pages": [
+        167
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62404",
+      "sourceNameEn": "inferior colliculus",
+      "nameKo": "아래둔덕",
+      "pages": [
+        167
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62434",
+      "sourceNameEn": "cingulate gyrus",
+      "nameKo": "띠이랑",
+      "pages": [
+        179
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62493",
+      "sourceNameEn": "hippocampus",
+      "nameKo": "해마",
+      "pages": [
+        181
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA63822",
+      "sourceNameEn": "posterior intercostal arteries",
+      "nameKo": "뒤갈비사이동맥",
+      "pages": [
+        124
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA65132",
+      "sourceNameEn": "nerve",
+      "nameKo": "신경",
+      "pages": [
+        186
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA65410",
+      "sourceNameEn": "intermediate tendon",
+      "nameKo": "중간힘줄",
+      "pages": [
+        51
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA66241",
+      "sourceNameEn": "first posterior intercostal artery",
+      "nameKo": "첫째뒤갈비사이동맥",
+      "pages": [
+        122
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA66320",
+      "sourceNameEn": "thoracodorsal artery",
+      "nameKo": "가슴등동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA66403",
+      "sourceNameEn": "anterior interventricular vein",
+      "nameKo": "앞심실사이정맥",
+      "pages": [
+        130
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA66643",
+      "sourceNameEn": "pulmonary vein",
+      "nameKo": "허파정맥",
+      "pages": [
+        131
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA67325",
+      "sourceNameEn": "occipital lobe",
+      "nameKo": "뒤통수엽",
+      "pages": [
+        177,
+        178
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA67329",
+      "sourceNameEn": "insula",
+      "nameKo": "대뇌섬",
+      "pages": [
+        177
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA67943",
+      "sourceNameEn": "pons",
+      "nameKo": "다리뇌",
+      "pages": [
+        155,
+        159
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA67944",
+      "sourceNameEn": "cerebellum",
+      "nameKo": "소뇌",
+      "pages": [
+        168
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA67977",
+      "sourceNameEn": "dorsal venous network of hand",
+      "nameKo": "손등정맥그물",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA68068",
+      "sourceNameEn": "inferior phrenic vein",
+      "nameKo": "아래가로막정맥",
+      "pages": [
+        138
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA69264",
+      "sourceNameEn": "inferior suprarenal artery",
+      "nameKo": "아래부신동맥",
+      "pages": [
+        127
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA69513",
+      "sourceNameEn": "deep plantar artery",
+      "nameKo": "깊은발바닥동맥",
+      "pages": [
+        130
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA70248",
+      "sourceNameEn": "femoral artery",
+      "nameKo": "넙다리동맥",
+      "pages": [
+        128
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA71114",
+      "sourceNameEn": "brachium of inferior colliculus",
+      "nameKo": "아래둔덕팔",
+      "pages": [
+        167,
+        173
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA71210",
+      "sourceNameEn": "lateral thoracic vein",
+      "nameKo": "가쪽가슴정맥",
+      "pages": [
+        137
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA71213",
+      "sourceNameEn": "thoracodorsal vein",
+      "nameKo": "가슴등정맥",
+      "pages": [
+        137
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA72308",
+      "sourceNameEn": "stylohyoid ligament",
+      "nameKo": "붓목뿔인대",
+      "pages": [
+        40
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA72417",
+      "sourceNameEn": "brachium of superior colliculus",
+      "nameKo": "위둔덕팔",
+      "pages": [
+        167,
+        173
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA74877",
+      "sourceNameEn": "mammillary body",
+      "nameKo": "유두체",
+      "pages": [
+        170
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA75351",
+      "sourceNameEn": "interventricular foramen",
+      "nameKo": "뇌실사이구멍",
+      "pages": [
+        171,
+        180
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA76998",
+      "sourceNameEn": "supreme intercostal artery",
+      "nameKo": "맨위갈비사이동맥",
+      "pages": [
+        122
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA77140",
+      "sourceNameEn": "ulnar recurrent artery",
+      "nameKo": "자쪽되돌이동맥",
+      "pages": [
+        123
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA77144",
+      "sourceNameEn": "recurrent interosseous artery",
+      "nameKo": "되돌이뼈사이동맥",
+      "pages": [
+        124
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA77155",
+      "sourceNameEn": "popliteal artery",
+      "nameKo": "오금동맥",
+      "pages": [
+        129
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA77168",
+      "sourceNameEn": "median sacral vein",
+      "nameKo": "정중엉치정맥",
+      "pages": [
+        139
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA77439",
+      "sourceNameEn": "artery of central sulcus",
+      "nameKo": "중심고랑동맥",
+      "pages": [
+        120
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA77498",
+      "sourceNameEn": "circumflex scapular vein",
+      "nameKo": "어깨휘돌이정맥",
+      "pages": [
+        137
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA77499",
+      "sourceNameEn": "anterior circumflex humeral vein",
+      "nameKo": "앞위팔휘돌이정맥",
+      "pages": [
+        137
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA78121",
+      "sourceNameEn": "superior phrenic vein",
+      "nameKo": "위가로막정맥",
+      "pages": [
+        137
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA78448",
+      "sourceNameEn": "lateral ventricle",
+      "nameKo": "가쪽뇌실",
+      "pages": [
+        180
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA78454",
+      "sourceNameEn": "third ventricle",
+      "nameKo": "셋째뇌실",
+      "pages": [
+        171
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA78467",
+      "sourceNameEn": "cerebral aqueduct",
+      "nameKo": "중간뇌수도관",
+      "pages": [
+        167
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA78469",
+      "sourceNameEn": "fourth ventricle",
+      "nameKo": "넷째뇌실",
+      "pages": [
+        163
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA79658",
+      "sourceNameEn": "dorsal scapular artery",
+      "nameKo": "등쪽어깨동맥",
+      "pages": [
+        122
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA82500",
+      "sourceNameEn": "membranous layer",
+      "nameKo": "막층",
+      "pages": [
+        218
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA83740",
+      "sourceNameEn": "interpeduncular fossa",
+      "nameKo": "대뇌다리사이오목",
+      "pages": [
+        164
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA83930",
+      "sourceNameEn": "white matter of telencephalon",
+      "nameKo": "끝뇌백색질",
+      "pages": [
+        185
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA83966",
+      "sourceNameEn": "tentorium cerebelli",
+      "nameKo": "소뇌천막",
+      "pages": [
+        150
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA86464",
+      "sourceNameEn": "corpus callosum",
+      "nameKo": "뇌들보",
+      "pages": [
+        179
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA87217",
+      "sourceNameEn": "descending thoracic aorta",
+      "nameKo": "내림가슴대동맥",
+      "pages": [
+        124
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA256194",
+      "sourceNameEn": "orbital gyrus",
+      "nameKo": "눈확이랑",
+      "pages": [
+        178
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA3734",
+      "sourceNameEn": "aorta",
+      "nameKo": "대동맥",
+      "pages": [
+        113
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7088",
+      "sourceNameEn": "heart",
+      "nameKo": "심장",
+      "pages": [
+        109
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7096",
+      "sourceNameEn": "right atrium",
+      "nameKo": "오른심방",
+      "pages": [
+        109,
+        110
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7097",
+      "sourceNameEn": "left atrium",
+      "nameKo": "왼심방",
+      "pages": [
+        109,
+        111
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7098",
+      "sourceNameEn": "right ventricle",
+      "nameKo": "오른심실",
+      "pages": [
+        109,
+        110
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7101",
+      "sourceNameEn": "left ventricle",
+      "nameKo": "왼심실",
+      "pages": [
+        109,
+        111
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7154",
+      "sourceNameEn": "head",
+      "nameKo": "머리",
+      "pages": [
+        5,
+        183
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7155",
+      "sourceNameEn": "neck",
+      "nameKo": "목",
+      "pages": [
+        5
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7157",
+      "sourceNameEn": "nervous system",
+      "nameKo": "신경계통",
+      "pages": [
+        149
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7158",
+      "sourceNameEn": "respiratory system",
+      "nameKo": "호흡계통",
+      "pages": [
+        83
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7159",
+      "sourceNameEn": "urinary system",
+      "nameKo": "비뇨계통",
+      "pages": [
+        91
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7161",
+      "sourceNameEn": "cardiovascular system",
+      "nameKo": "심장혈관계통",
+      "pages": [
+        108
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7181",
+      "sourceNameEn": "trunk",
+      "nameKo": "줄기",
+      "pages": [
+        179
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7184",
+      "sourceNameEn": "lower limb",
+      "nameKo": "다리",
+      "pages": [
+        6
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7197",
+      "sourceNameEn": "liver",
+      "nameKo": "간",
+      "pages": [
+        79
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7200",
+      "sourceNameEn": "small intestine",
+      "nameKo": "작은창자",
+      "pages": [
+        76
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7201",
+      "sourceNameEn": "large intestine",
+      "nameKo": "큰창자",
+      "pages": [
+        77
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7207",
+      "sourceNameEn": "jejunum",
+      "nameKo": "빈창자",
+      "pages": [
+        77
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7208",
+      "sourceNameEn": "ileum",
+      "nameKo": "돌창자",
+      "pages": [
+        77
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7234",
+      "sourceNameEn": "tricuspid valve",
+      "nameKo": "삼첨판막",
+      "pages": [
+        110
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7235",
+      "sourceNameEn": "mitral valve",
+      "nameKo": "승모판막",
+      "pages": [
+        111
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7236",
+      "sourceNameEn": "aortic valve",
+      "nameKo": "대동맥판막",
+      "pages": [
+        111
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7246",
+      "sourceNameEn": "pulmonary valve",
+      "nameKo": "허파동맥판막",
+      "pages": [
+        110
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7309",
+      "sourceNameEn": "right lung",
+      "nameKo": "오른허파",
+      "pages": [
+        88
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7310",
+      "sourceNameEn": "left lung",
+      "nameKo": "왼허파",
+      "pages": [
+        88
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7395",
+      "sourceNameEn": "right main bronchus",
+      "nameKo": "오른기관지",
+      "pages": [
+        87
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7485",
+      "sourceNameEn": "sternum",
+      "nameKo": "복장뼈",
+      "pages": [
+        29
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA7647",
+      "sourceNameEn": "spinal cord",
+      "nameKo": "척수",
+      "pages": [
+        151
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA8658",
+      "sourceNameEn": "lingular vein",
+      "nameKo": "혀구역정맥",
+      "pages": [
+        131
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9496",
+      "sourceNameEn": "fibrous skeleton of heart",
+      "nameKo": "심장뼈대",
+      "pages": [
+        112
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9576",
+      "sourceNameEn": "thorax",
+      "nameKo": "가슴",
+      "pages": [
+        5
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA9577",
+      "sourceNameEn": "abdomen",
+      "nameKo": "배",
+      "pages": [
+        5
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA9578",
+      "sourceNameEn": "pelvis",
+      "nameKo": "골반",
+      "pages": [
+        34
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9579",
+      "sourceNameEn": "perineum",
+      "nameKo": "샅",
+      "pages": [
+        101
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9584",
+      "sourceNameEn": "peritoneum",
+      "nameKo": "배막",
+      "pages": [
+        103
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9607",
+      "sourceNameEn": "thymus",
+      "nameKo": "가슴샘",
+      "pages": [
+        143
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9826",
+      "sourceNameEn": "mediastinum",
+      "nameKo": "가슴세로칸",
+      "pages": [
+        90
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9827",
+      "sourceNameEn": "superior mediastinum",
+      "nameKo": "위세로칸",
+      "pages": [
+        90
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9828",
+      "sourceNameEn": "inferior mediastinum",
+      "nameKo": "아래세로칸",
+      "pages": [
+        90
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA9838",
+      "sourceNameEn": "anterior mediastinum",
+      "nameKo": "앞세로칸",
+      "pages": [
+        90
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA9839",
+      "sourceNameEn": "middle mediastinum",
+      "nameKo": "중간세로칸",
+      "pages": [
+        90
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA9840",
+      "sourceNameEn": "posterior mediastinum",
+      "nameKo": "뒤세로칸",
+      "pages": [
+        90
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA13362",
+      "sourceNameEn": "right lobe of liver",
+      "nameKo": "오른간엽",
+      "pages": [
+        80
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA13363",
+      "sourceNameEn": "left lobe of liver",
+      "nameKo": "왼간엽",
+      "pages": [
+        80
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA13478",
+      "sourceNameEn": "vertebral column",
+      "nameKo": "척주",
+      "pages": [
+        26
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14541",
+      "sourceNameEn": "cecum",
+      "nameKo": "막창자",
+      "pages": [
+        78
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14703",
+      "sourceNameEn": "visceral peritoneum",
+      "nameKo": "내장배막",
+      "pages": [
+        103
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA14775",
+      "sourceNameEn": "gastroduodenal artery",
+      "nameKo": "위샘창자동맥",
+      "pages": [
+        125
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA16581",
+      "sourceNameEn": "pelvic girdle",
+      "nameKo": "다리이음부위",
+      "pages": [
+        6
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA20218",
+      "sourceNameEn": "mons pubis",
+      "nameKo": "불두덩",
+      "pages": [
+        96
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA23881",
+      "sourceNameEn": "skeletal system",
+      "nameKo": "뼈대계통",
+      "pages": [
+        12
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA24728",
+      "sourceNameEn": "face",
+      "nameKo": "얼굴",
+      "pages": [
+        5
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA46472",
+      "sourceNameEn": "nose",
+      "nameKo": "코",
+      "pages": [
+        83
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA46565",
+      "sourceNameEn": "skull",
+      "nameKo": "머리뼈",
+      "pages": [
+        13
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA49184",
+      "sourceNameEn": "mouth",
+      "nameKo": "입",
+      "pages": [
+        69
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50039",
+      "sourceNameEn": "right coronary artery",
+      "nameKo": "오른관상동맥",
+      "pages": [
+        113
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50040",
+      "sourceNameEn": "left coronary artery",
+      "nameKo": "왼관상동맥",
+      "pages": [
+        114
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50454",
+      "sourceNameEn": "cerebral arterial circle",
+      "nameKo": "대뇌동맥고리",
+      "pages": [
+        120
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA50801",
+      "sourceNameEn": "brain",
+      "nameKo": "뇌",
+      "pages": [
+        154
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA52801",
+      "sourceNameEn": "basicranium",
+      "nameKo": "머리뼈바닥",
+      "pages": [
+        14
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA53672",
+      "sourceNameEn": "neurocranium",
+      "nameKo": "뇌머리뼈",
+      "pages": [
+        13
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA53673",
+      "sourceNameEn": "viscerocranium",
+      "nameKo": "얼굴머리뼈",
+      "pages": [
+        13
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA54375",
+      "sourceNameEn": "nasal septum",
+      "nameKo": "코중격",
+      "pages": [
+        83
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA55021",
+      "sourceNameEn": "soft palate",
+      "nameKo": "물렁입천장",
+      "pages": [
+        73
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA55022",
+      "sourceNameEn": "uvula",
+      "nameKo": "목젖",
+      "pages": [
+        73
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA59516",
+      "sourceNameEn": "root of nose",
+      "nameKo": "코뿌리",
+      "pages": [
+        83
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA59517",
+      "sourceNameEn": "dorsum of nose",
+      "nameKo": "콧등",
+      "pages": [
+        83
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA61992",
+      "sourceNameEn": "forebrain",
+      "nameKo": "앞뇌",
+      "pages": [
+        154
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62000",
+      "sourceNameEn": "telencephalon",
+      "nameKo": "끝뇌",
+      "pages": [
+        176
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62001",
+      "sourceNameEn": "diencephalon",
+      "nameKo": "사이뇌",
+      "pages": [
+        170
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA62003",
+      "sourceNameEn": "metencephalon",
+      "nameKo": "뒤뇌",
+      "pages": [
+        154
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA62009",
+      "sourceNameEn": "epithalamus",
+      "nameKo": "시상상부",
+      "pages": [
+        170,
+        171
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA67687",
+      "sourceNameEn": "hindbrain",
+      "nameKo": "후뇌",
+      "pages": [
+        154
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA68193",
+      "sourceNameEn": "medial segmental artery",
+      "nameKo": "안쪽구역동맥",
+      "pages": [
+        113,
+        125
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA68194",
+      "sourceNameEn": "lateral segmental artery",
+      "nameKo": "가쪽구역동맥",
+      "pages": [
+        113,
+        125
+      ],
+      "method": "exact-headword-normalized+manual-pdf"
+    },
+    {
+      "id": "FMA68196",
+      "sourceNameEn": "middle lobar artery",
+      "nameKo": "중간엽동맥",
+      "pages": [
+        113
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA71132",
+      "sourceNameEn": "gastrointestinal tract",
+      "nameKo": "위창자길",
+      "pages": [
+        69
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA71221",
+      "sourceNameEn": "axial skeleton",
+      "nameKo": "몸통뼈대",
+      "pages": [
+        12
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA74657",
+      "sourceNameEn": "integument",
+      "nameKo": "외피",
+      "pages": [
+        217
+      ],
+      "method": "exact-headword-normalized"
+    },
+    {
+      "id": "FMA79876",
+      "sourceNameEn": "brainstem",
+      "nameKo": "뇌줄기",
+      "pages": [
+        154
+      ],
+      "method": "exact-headword-normalized"
+    }
+  ]
+}
