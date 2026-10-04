@@ -12,7 +12,7 @@ export type AnatomyLocalizationMap = Record<string, AnatomyLocalization>;
 
 export type MeridianId =
   | 'LU' | 'LI' | 'ST' | 'SP' | 'HT' | 'SI'
-  | 'BL' | 'KI' | 'PC' | 'TE' | 'GB' | 'LR';
+  | 'BL' | 'KI' | 'PC' | 'TE' | 'GB' | 'LR' | 'GV' | 'CV';
 
 export type KnowledgeSource = {
   id: string;
