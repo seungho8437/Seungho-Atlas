@@ -247,9 +247,36 @@ function project(target, side){
 const relByPoint=new Map();
 for(const r of relations){if(!relByPoint.has(r.acupointId))relByPoint.set(r.acupointId,[]);relByPoint.get(r.acupointId).push(r);}
 const broad=/muscle of upper limb|muscle of lower limb|neck$|abdomen$|chest$|back$|head$|pelvis$|hand$|foot$/i;
+const genericKoTerms=new Set(['근육','뼈','관절','머리','얼굴','목','가슴','복부','배꼽','팔꿈치','손목','손등','손바닥','손가락','발목','발등','발바닥','발가락','무릎','엉치','볼기','오목한곳','중심','중점']);
+const localizationTerms=[];
+for(const [id,loc] of Object.entries(anatomyKo)){
+  if(!partsByConcept.has(id))continue;
+  const terms=[loc.nameKo,loc.legacyKo,...(loc.aliases??[])].filter(Boolean);
+  for(const raw of new Set(terms)){
+    const term=String(raw).replace(/\s+/g,'').replace(/[()]/g,'');
+    if(term.length<3||genericKoTerms.has(term))continue;
+    localizationTerms.push({id,term});
+  }
+}
+function whoTextLandmarks(text,sideSign){
+  const compact=text.replace(/\s+/g,'');
+  const hits=[],seen=new Set();
+  for(const item of localizationTerms){
+    if(seen.has(item.id)||!compact.includes(item.term))continue;
+    const st=conceptStats(item.id,sideSign,lrAxis,leftSign)||conceptStats(item.id,0,lrAxis,leftSign);
+    if(!st)continue;
+    const en=anatomyKo[item.id]?.sourceNameEn||'';
+    if(broad.test(en))continue;
+    const specificity=Math.max(.2,Math.min(5,bodyDiag/(st.diag*8+1)));
+    hits.push({...item,st,score:item.term.length*specificity});
+    seen.add(item.id);
+  }
+  hits.sort((a,b)=>b.score-a.score||b.term.length-a.term.length);
+  return hits.slice(0,6);
+}
 function relationTarget(point, side){
   const rels=relByPoint.get(point.id)||[]; const text=point.locationKo||''; const rt=regionTarget(text,side);
-  let acc=[0,0,0], wsum=0, specific=0;
+  let acc=[0,0,0], wsum=0, specific=0, textLandmarkCount=0;
   const sideSign=side==='left'?1:side==='right'?-1:0;
   for(const r of rels){
     const st=conceptStats(r.anatomyId,sideSign,lrAxis,leftSign)||conceptStats(r.anatomyId,0,lrAxis,leftSign); if(!st)continue;
@@ -262,16 +289,22 @@ function relationTarget(point, side){
     for(let k=0;k<3;k++)acc[k]+=st.center[k]*w; wsum+=w;
     specific++;
   }
+  const textHits=whoTextLandmarks(text,sideSign);
+  for(const hit of textHits){
+    const w=Math.max(.6,Math.min(4,hit.score/4));
+    for(let k=0;k<3;k++)acc[k]+=hit.st.center[k]*w;
+    wsum+=w;textLandmarkCount++;
+  }
   const blended=wsum ? (()=>{const g=acc.map(v=>v/wsum),alpha=specific>=2?.82:.68;return g.map((v,i)=>v*alpha+rt[i]*(1-alpha));})() : rt;
   const who=applyWhoConstraints(blended,text,side);
-  return {target:who.target,specific,rels:rels.length,whoConstraints:who.count};
+  return {target:who.target,specific,rels:rels.length,whoConstraints:who.count,textLandmarkCount};
 }
 
 const results=[];
 for(const p of acupoints){
   const sides=p.laterality==='midline'?['midline']:['left','right'];
   for(const side of sides){
-    const {target,specific,rels,whoConstraints}=relationTarget(p,side);
+    const {target,specific,rels,whoConstraints,textLandmarkCount}=relationTarget(p,side);
     if(side==='left' && Math.sign((target[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) target[lrAxis]=bodyCenter[lrAxis]+leftSign*Math.abs(target[lrAxis]-bodyCenter[lrAxis]);
     if(side==='right' && Math.sign((target[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) target[lrAxis]=bodyCenter[lrAxis]-leftSign*Math.abs(target[lrAxis]-bodyCenter[lrAxis]);
     if(side==='midline') target[lrAxis]=bodyCenter[lrAxis];
@@ -280,11 +313,11 @@ for(const p of acupoints){
     const lateral=(projected.point[lrAxis]-bodyCenter[lrAxis]);
     const sideOk=side==='midline'?Math.abs(lateral)<=extent[lrAxis]*.12:Math.sign(lateral||0)===sideExpected;
     const surfaceOk=Number.isFinite(projected.distance);
-    const confidence=(specific>=2||whoConstraints>=2)?'high':(specific===1||whoConstraints===1)?'moderate':'low';
+    const evidence=specific+whoConstraints+Math.min(2,textLandmarkCount); const confidence=evidence>=3?'high':evidence>=1?'moderate':'low';
     results.push({
       acupointId:p.id,side,position:projected.point.map(v=>+v.toFixed(4)),model:'BodyParts3D-4.0',status:'validated',
       method:'WHO+B-landmarks+laterality+surface-projection',confidence,
-      validation:{surfaceProjected:surfaceOk,lateralityConsistent:sideOk,projectionDistance:+projected.distance.toFixed(4),surfacePartId:projected.part,relationCount:rels,specificLandmarkCount:specific,whoConstraintCount:whoConstraints},
+      validation:{surfaceProjected:surfaceOk,lateralityConsistent:sideOk,projectionDistance:+projected.distance.toFixed(4),surfacePartId:projected.part,relationCount:rels,specificLandmarkCount:specific,whoConstraintCount:whoConstraints,whoTextLandmarkCount:textLandmarkCount},
       sourceIds:['WHO_ACUPOINT_2008','BODY_PARTS_3D_4','TARA_ACUPOINT_CURATED']
     });
   }
