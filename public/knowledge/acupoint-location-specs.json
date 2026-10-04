@@ -3049,8 +3049,8 @@
         "who2008Page": 47
       },
       "context": {
-        "bodyRegion": "unspecified",
-        "regionEvidence": null,
+        "bodyRegion": "head",
+        "regionEvidence": "얼굴",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": []
@@ -8005,8 +8005,8 @@
         "who2008Page": 75
       },
       "context": {
-        "bodyRegion": "unspecified",
-        "regionEvidence": null,
+        "bodyRegion": "pelvis-perineum",
+        "regionEvidence": "샅고랑",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -24250,8 +24250,8 @@
         "who2008Page": 184
       },
       "context": {
-        "bodyRegion": "unspecified",
-        "regionEvidence": null,
+        "bodyRegion": "abdomen",
+        "regionEvidence": "가쪽배",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
@@ -26861,8 +26861,8 @@
         "who2008Page": 202
       },
       "context": {
-        "bodyRegion": "unspecified",
-        "regionEvidence": null,
+        "bodyRegion": "abdomen",
+        "regionEvidence": "가쪽배",
         "surface": "body-surface",
         "laterality": "bilateral",
         "aspectEvidence": [
