@@ -169,6 +169,14 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
   const cancel=(e:PointerEvent)=>tap.cancel(e.pointerId);
   const up=(e:PointerEvent)=>{
    const validTap=tap.up(e.pointerId,e.clientX,e.clientY);if(!validTap||!ready)return;const rect=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);
+   const activeAnchor=anchorTargetRef.current;
+   if(activeAnchor){
+    const skinHit=nearestSkinHit(raycaster);
+    if(skinHit){
+     const candidate=candidateFromHit(activeAnchor,skinHit.partIndex,skinHit.hit,'manual-anchor');
+     if(candidate){hover.hidden=true;anchorPickRef.current(candidate);return;}
+    }
+   }
    let nearest=Infinity,found=-1;const hasSolid=atlas.parts.some((p,i)=>p.system!=='integumentary'&&data[i*4+3]>.5);
    pickers.forEach((mesh,i)=>{if(!mesh||data[i*4+3]<.5||(hasSolid&&atlas.parts[i].system==='integumentary'))return;worldBox.copy(bounds[i]).translate(mesh.position);if(!raycaster.ray.intersectBox(worldBox,hitPoint))return;const hits=raycaster.intersectObject(mesh,false);if(hits[0]&&hits[0].distance<nearest){nearest=hits[0].distance;found=i;}});
    if(acupointMarkers.visible){
