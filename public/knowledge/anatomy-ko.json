@@ -13212,7 +13212,7 @@
   "FMA32514": {
     "sourceNameEn": "prevertebral muscle",
     "status": "derived",
-    "nameKo": "척추앞근육",
+    "nameKo": "척주앞근육",
     "legacyKo": "추전근",
     "hanja": "椎前筋"
   },
@@ -18492,9 +18492,9 @@
   "FMA49143": {
     "sourceNameEn": "check ligament of lateral rectus",
     "status": "derived",
-    "nameKo": "가쪽곧은근 제동인대",
-    "legacyKo": "외직근 체크인대",
-    "hanja": "外直筋制動靭帶"
+    "nameKo": "가쪽곧은근제한인대",
+    "legacyKo": "외직근제한인대",
+    "hanja": "外直筋制限靭帶"
   },
   "FMA49144": {
     "sourceNameEn": "check ligament of right lateral rectus",
@@ -33853,9 +33853,9 @@
   "FMA265130": {
     "sourceNameEn": "respiratory tract",
     "status": "derived",
-    "nameKo": "호흡길",
-    "legacyKo": "호흡기",
-    "hanja": "呼吸器"
+    "nameKo": "기도",
+    "legacyKo": "기도",
+    "hanja": "氣道"
   },
   "FMA265228": {
     "sourceNameEn": "pancreaticobiliary system",
