@@ -69,6 +69,25 @@ if(sternum&&vertebra) anteriorSign=Math.sign((sternum[apAxis]-vertebra[apAxis])|
 const bodyCenter=allStats.center, bodyMin=allStats.min, bodyMax=allStats.max;
 const bodyDiag=allStats.diag;
 const norm=(axis,t)=>bodyMin[axis]+extent[axis]*t;
+const surfaceCrossSectionSamples=[];
+for(const p of surfaceParts){
+  const a=positionsOfPart(p);
+  for(let i=0;i<a.length;i+=3)surfaceCrossSectionSamples.push([a[lrAxis],a[supAxis]]);
+}
+const widthCache=new Map();
+function localHalfWidth(y){
+  const step=extent[supAxis]*.012, bucket=Math.round((y-bodyMin[supAxis])/step);
+  if(widthCache.has(bucket))return widthCache.get(bucket);
+  let band=extent[supAxis]*.018,vals=[];
+  for(let pass=0;pass<3&&!vals.length;pass++,band*=1.8){
+    vals=surfaceCrossSectionSamples.filter(v=>Math.abs(v[1]-y)<=band).map(v=>Math.abs(v[0]-bodyCenter[lrAxis]));
+  }
+  if(!vals.length)return extent[lrAxis]/2;
+  vals.sort((a,b)=>a-b);
+  const q=vals[Math.min(vals.length-1,Math.floor(vals.length*.72))];
+  const value=Math.max(extent[lrAxis]*.035,Math.min(extent[lrAxis]/2,q));
+  widthCache.set(bucket,value);return value;
+}
 
 const regionRules = [
   [/vertex|머리꼭대기|정수리|두정부|머리 위/, .97, .50],
@@ -104,7 +123,9 @@ function regionTarget(text, side){
   if(/앞|anterior|배쪽|손바닥쪽/.test(text)) t[apAxis]=bodyCenter[apAxis]+anteriorSign*apHalf*.72;
   const lateralFrac = /정중|median|midline/.test(text) ? 0 : (/가쪽|lateral|외측/.test(text)?.62:.43);
   const s=side==='left'?leftSign:side==='right'?-leftSign:0;
-  t[lrAxis]=bodyCenter[lrAxis]+s*(extent[lrAxis]/2)*lateralFrac;
+  const coreRegion=/머리|두피|얼굴|이마|눈|귀|코|입술|턱|목|가슴|흉부|갈비|배|복부|배꼽|엉치|볼기|골반|등|천골|pelvis|chest|abdomen|head|face|neck|back/i.test(text);
+  const half=coreRegion?localHalfWidth(t[supAxis]):extent[lrAxis]/2;
+  t[lrAxis]=bodyCenter[lrAxis]+s*half*lateralFrac;
   return t;
 }
 
@@ -117,7 +138,7 @@ function applyWhoConstraints(input,text,side){
   if(lateral&&sideSign){
     const n=Number(lateral[1]);
     const frac=Math.min(.92,n/6*.84);
-    t[lrAxis]=bodyCenter[lrAxis]+sideSign*(extent[lrAxis]/2)*frac;
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*frac;
     count++;
   }
   const nav=text.match(/배꼽(?:\s*중심)?(?:보다|에서)?\s*(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/);
@@ -130,7 +151,7 @@ function applyWhoConstraints(input,text,side){
   if(navLat&&sideSign){
     const n=Number(navLat[1]);
     t[supAxis]=norm(supAxis,.455);
-    t[lrAxis]=bodyCenter[lrAxis]+sideSign*(extent[lrAxis]/2)*Math.min(.82,n/4*.62);
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*Math.min(.82,n/4*.62);
     count+=2;
   }
   const sacral=text.match(/(첫째|둘째|셋째|넷째)\s*뒤엉치뼈구멍/);
