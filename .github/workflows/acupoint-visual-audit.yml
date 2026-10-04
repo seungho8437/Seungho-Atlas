@@ -37,14 +37,12 @@ jobs:
       - name: Rasterize review plates
         run: |
           mkdir -p artifacts/acupoint-visual-audit/png
-          for f in artifacts/acupoint-visual-audit/contact-high-risk-*.svg artifacts/acupoint-visual-audit/sweep-*.svg; do
-            b=$(basename "$f" .svg)
-            if [[ "$b" == contact-high-risk-* ]]; then
-              rsvg-convert -w 3200 "$f" -o "artifacts/acupoint-visual-audit/png/$b.png"
-            else
-              rsvg-convert -w 1600 "$f" -o "artifacts/acupoint-visual-audit/png/$b.png"
-            fi
-          done
+          find artifacts/acupoint-visual-audit -maxdepth 1 \( -name 'contact-high-risk-*.svg' -o -name 'sweep-*.svg' \) -print0 |
+          xargs -0 -n1 -P4 bash -c '
+            f="$0"; b=$(basename "$f" .svg)
+            if [[ "$b" == contact-high-risk-* ]]; then w=3200; else w=1600; fi
+            rsvg-convert -w "$w" "$f" -o "artifacts/acupoint-visual-audit/png/$b.png"
+          '
       - name: Upload visual audit artifact
         uses: actions/upload-artifact@v4
         with:
