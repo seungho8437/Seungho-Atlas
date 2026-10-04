@@ -68,5 +68,11 @@
     "publisher": "Korean Journal of Acupuncture",
     "year": 2008,
     "note": "Interpretive comparison between Foot Three Yang meridian-sinews and modern muscular anatomy; not treated as one-to-one anatomical identity."
+  },
+  "TARA_ACUPOINT_CURATED": {
+    "id": "TARA_ACUPOINT_CURATED",
+    "title": "TARA Acupoints Ontology curated acupoint data",
+    "publisher": "SciCrunch / TARA ontology curation team",
+    "note": "Secondary cross-check used to index each of the 361 standard acupoints to the corresponding WHO 2008 source page and to confirm Pinyin/Chinese labels. WHO 2008 remains the primary location standard."
   }
 }
