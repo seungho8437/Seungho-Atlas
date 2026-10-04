@@ -686,6 +686,69 @@ for(const item of results){
   const text=acupointById.get(item.acupointId)?.locationKo||'';
   updateFromRelativeDefinition(item,text);
 }
+function surfaceNormalAt(point){
+  let bestD=Infinity,bestTri=null;
+  for(const T of surfaceTriangles){
+    const q=closestOnTri(point,...T.tri),d=dist2(point,q);
+    if(d<bestD){bestD=d;bestTri=T.tri;}
+  }
+  if(!bestTri)return [0,0,1];
+  const a=bestTri[0],b=bestTri[1],c=bestTri[2];
+  const u=[b[0]-a[0],b[1]-a[1],b[2]-a[2]],v=[c[0]-a[0],c[1]-a[1],c[2]-a[2]];
+  const n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]];
+  const m=Math.hypot(...n)||1;return n.map(x=>x/m);
+}
+function tangentOfAxis(axis,normal){
+  const e=[0,0,0];e[axis]=1;
+  const d=e[0]*normal[0]+e[1]*normal[1]+e[2]*normal[2];
+  const t=e.map((v,i)=>v-d*normal[i]);
+  const m=Math.hypot(...t);
+  return m>1e-7?t.map(x=>x/m):null;
+}
+function resolveExactCollisions(){
+  const sep=bodyDiag*.0018;
+  let resolved=0;
+  for(let pass=0;pass<4;pass++){
+    const groups=new Map();
+    for(const item of results){
+      const k=item.side+':'+item.position.join(',');
+      if(!groups.has(k))groups.set(k,[]);
+      groups.get(k).push(item);
+    }
+    const collisions=[...groups.values()].filter(g=>g.length>1);
+    if(!collisions.length)break;
+    for(const group of collisions){
+      const base=[...group[0].position],normal=surfaceNormalAt(base);
+      const targets=group.map(x=>x.validation.preProjectionTarget||x.position);
+      const ranges=[0,1,2].map(axis=>{
+        const vals=targets.map(t=>t[axis]);return Math.max(...vals)-Math.min(...vals);
+      });
+      const axes=[0,1,2].sort((a,b)=>ranges[b]-ranges[a]);
+      let axis=axes[0],tangent=tangentOfAxis(axis,normal);
+      if(!tangent||Math.hypot(...tangent)<1e-7){axis=axes[1];tangent=tangentOfAxis(axis,normal);}
+      if(!tangent){tangent=[0,0,0];tangent[(lrAxis+1)%3]=1;}
+      const ordered=group.map((item,i)=>({item,i,target:targets[i]}))
+        .sort((a,b)=>a.target[axis]-b.target[axis]||a.item.acupointId.localeCompare(b.item.acupointId));
+      for(let rank=0;rank<ordered.length;rank++){
+        const {item}=ordered[rank];
+        let offset=(rank-(ordered.length-1)/2)*sep;
+        if(Math.abs(offset)<sep*.35 && ordered.length>1)offset+=(rank%2?1:-1)*sep*.55;
+        const candidate=base.map((v,i)=>v+tangent[i]*offset);
+        const pr=project(candidate,item.side,{});
+        item.validation.collisionResolved=true;
+        item.validation.collisionOriginalPosition=[...item.position];
+        item.validation.collisionTargetAxis=axis;
+        item.validation.collisionTangentOffset=+offset.toFixed(6);
+        item.position=pr.point.map(v=>+v.toFixed(4));
+        item.validation.surfacePartId=pr.part;
+        resolved++;
+      }
+    }
+  }
+  return resolved;
+}
+const collisionResolvedCount=resolveExactCollisions();
+
 const expected=acupoints.reduce((n,p)=>n+(p.laterality==='midline'?1:2),0);
 if(results.length!==expected)throw new Error('Physical point count mismatch');
 const invalid=results.filter(x=>!x.validation.surfaceProjected||!x.validation.lateralityConsistent);
@@ -697,7 +760,7 @@ for(const x of results){const k=x.side+':'+x.position.join(',');if(!exactMap.has
 const exactDuplicateClusters=[...exactMap.values()].filter(v=>v.length>1);
 const out={version:1,model:'BodyParts3D-4.0',generatedAt:new Date().toISOString(),coordinateFrame:{source:'native BodyParts3D 4.0 atlas coordinates',axes:{superiorInferior:supAxis,leftRight:lrAxis,anteriorPosterior:apAxis},signs:{left:leftSign,anterior:anteriorSign}},methodology:{primary:'WHO 2008 location text',anatomyConstraints:'anatomy-acupoint-relations.json (B)',laterality:'bilateral points generated independently by side; GV/CV retained on midline',projection:'nearest point on actual integumentary mesh triangle, not bounding-box or vertex-only snapping'},points:results};
 fs.writeFileSync(new URL('public/knowledge/acupoint-coordinates.json',root),JSON.stringify(out,null,2)+'\n');
-const audit={generatedAt:new Date().toISOString(),logicalAcupoints:acupoints.length,physicalCoordinates:results.length,expectedPhysicalCoordinates:expected,surfaceTriangleCount:surfaceTriangles.length,integumentaryPartCount:surfaceParts.length,invalidGeometryOrLaterality:invalid.map(x=>x.acupointId+':'+x.side),duplicateClusters,exactDuplicateClusters,confidenceCounts:results.reduce((m,x)=>(m[x.confidence]=(m[x.confidence]||0)+1,m),{}),projectionDistance:{max:Math.max(...results.map(x=>x.validation.projectionDistance)),mean:results.reduce((n,x)=>n+x.validation.projectionDistance,0)/results.length},axes:out.coordinateFrame,bodyBounds:{min:bodyMin,max:bodyMax,center:bodyCenter,extent,bodyDiag}};
+const audit={generatedAt:new Date().toISOString(),logicalAcupoints:acupoints.length,physicalCoordinates:results.length,expectedPhysicalCoordinates:expected,surfaceTriangleCount:surfaceTriangles.length,integumentaryPartCount:surfaceParts.length,invalidGeometryOrLaterality:invalid.map(x=>x.acupointId+':'+x.side),duplicateClusters,exactDuplicateClusters,collisionResolvedCount,confidenceCounts:results.reduce((m,x)=>(m[x.confidence]=(m[x.confidence]||0)+1,m),{}),projectionDistance:{max:Math.max(...results.map(x=>x.validation.projectionDistance)),mean:results.reduce((n,x)=>n+x.validation.projectionDistance,0)/results.length},axes:out.coordinateFrame,bodyBounds:{min:bodyMin,max:bodyMax,center:bodyCenter,extent,bodyDiag}};
 fs.writeFileSync(new URL('public/knowledge/acupoint-coordinates-audit.json',root),JSON.stringify(audit,null,2)+'\n');
 if(exactDuplicateClusters.length){console.error('EXACT_DUPLICATE_COORDINATES',JSON.stringify(exactDuplicateClusters,null,2));throw new Error('Coordinate validation failed: '+exactDuplicateClusters.length+' exact duplicate clusters');}
 if(invalid.length){console.error('INVALID_COORDINATES',JSON.stringify(invalid.map(x=>({id:x.acupointId,side:x.side,position:x.position,validation:x.validation})),null,2));throw new Error('Coordinate validation failed: '+invalid.length+' side/surface errors');}
