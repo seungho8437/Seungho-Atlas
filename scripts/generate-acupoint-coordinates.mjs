@@ -330,7 +330,54 @@ function constrainedSurfaceProjection(target,side,locks){
   }
   return best?{point:best,distance:Math.sqrt(dist2(target,best)),part:bestPart,constrained:true}:null;
 }
+function weightedClosestOnSegment(target,a,b,weights){
+  const d=b.map((v,i)=>v-a[i]);
+  let num=0,den=0;
+  for(let i=0;i<3;i++){num+=weights[i]*d[i]*(target[i]-a[i]);den+=weights[i]*d[i]*d[i];}
+  const u=den>1e-15?Math.max(0,Math.min(1,num/den)):0;
+  return a.map((v,i)=>v+d[i]*u);
+}
+function trianglePlaneIntersection(tri,axis,value){
+  const eps=1e-8, pts=[];
+  const add=p=>{if(!pts.some(q=>dist2(p,q)<1e-14))pts.push(p);};
+  for(const p of tri)if(Math.abs(p[axis]-value)<=eps)add([...p]);
+  for(const [i,j] of [[0,1],[1,2],[2,0]]){
+    const a=tri[i],b=tri[j],da=a[axis]-value,db=b[axis]-value;
+    if(da*db<0){
+      const u=(value-a[axis])/(b[axis]-a[axis]);
+      add(a.map((v,k)=>v+(b[k]-v)*u));
+    }
+  }
+  return pts;
+}
+function projectLockedToSurface(target,side,locks){
+  const primary=locks.sup?supAxis:locks.lr?lrAxis:locks.ap?apAxis:null;
+  if(primary===null)return null;
+  const weights=[1,1,1];
+  if(locks.sup)weights[supAxis]=180;
+  if(locks.lr)weights[lrAxis]=120;
+  if(locks.ap)weights[apAxis]=45;
+  let best=null,bestScore=Infinity,bestD=Infinity,bestPart=null;
+  for(const T of surfaceTriangles){
+    const vals=T.tri.map(p=>p[primary]);
+    if(target[primary]<Math.min(...vals)-1e-8||target[primary]>Math.max(...vals)+1e-8)continue;
+    const ints=trianglePlaneIntersection(T.tri,primary,target[primary]);
+    if(!ints.length)continue;
+    let q;
+    if(ints.length===1)q=ints[0];
+    else q=weightedClosestOnSegment(target,ints[0],ints[1],weights);
+    if(side==='left' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign)continue;
+    if(side==='right' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign)continue;
+    let score=0;
+    for(let i=0;i<3;i++)score+=weights[i]*(q[i]-target[i])**2;
+    const d=dist2(q,target);
+    if(score<bestScore){bestScore=score;bestD=d;best=q;bestPart=T.part;}
+  }
+  return best?{point:best,distance:Math.sqrt(bestD),part:bestPart}:null;
+}
 function project(target, side, locks={}){
+  const locked=projectLockedToSurface(target,side,locks);
+  if(locked)return locked;
   const exact=constrainedSurfaceProjection(target,side,locks);
   if(exact)return exact;
   const base=target.map(v=>Math.floor(v/cell)); let best=null,bestD=Infinity,bestScore=Infinity,bestPart=null;
@@ -491,7 +538,7 @@ for(const p of acupoints){
     const locks={
       sup:(/B-cun/.test(locText)&&/(위로|아래로|위쪽으로|아래쪽으로|몸쪽으로|먼쪽으로|머리선|갈비사이공간|같은 높이|뒤엉치뼈구멍)/.test(locText))||/F-cun/.test(locText)||/발등|발바닥|발가락|발허리|발꿈치|복사|발목/.test(locText),
       lr:/앞정중선\s*위|가쪽(?:으로)?\s*\d+(?:\.\d+)?\s*B-cun|노뼈와\s*자뼈\s*사이|자뼈\s*바로\s*노쪽|동공|귀구슬|귓바퀴|가쪽눈구석|손허리|손가락|발허리|발가락/.test(locText),
-      ap:/손바닥|손등|발바닥|발등|손허리|손가락|발허리|발가락|어깨뼈\s*부위|어깨세모근|가쪽눈구석|관자부/.test(locText)
+      ap:/손바닥|손등|발바닥|발등|손허리|손가락|발허리|발가락|어깨뼈\s*부위|어깨세모근|가쪽눈구석|관자부|앞가슴|아랫배|복부|배꼽|앞정중선/.test(locText)
     };
     const projected=project(target,side,locks);
     const sideExpected=side==='left'?leftSign:side==='right'?-leftSign:0;
