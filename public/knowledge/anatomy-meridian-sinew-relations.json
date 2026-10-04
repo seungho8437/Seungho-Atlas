@@ -1,236 +1,237 @@
 [
   {
-    "anatomyId": "FMA22532",
-    "meridianSinewId": "ST-JINGJIN",
+    "anatomyId": "FMA13109",
+    "meridianSinewId": "LU-JINGJIN",
     "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와의 비교 연구에서 앞정강근이 족양명경근의 대응 근육 중 하나로 제시되었다. 경근과 현대 근육을 1:1로 동일시하지 않는다.",
+    "correspondence": "regional",
+    "noteKo": "작은가슴근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
     "sourceIds": [
-      "KJA_ST_JINGJIN_2006"
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   },
   {
-    "anatomyId": "FMA22534",
-    "meridianSinewId": "ST-JINGJIN",
+    "anatomyId": "FMA13385",
+    "meridianSinewId": "LU-JINGJIN",
     "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와의 비교 연구에서 긴발가락폄근이 족양명경근의 대응 근육 중 하나로 제시되었다.",
+    "correspondence": "regional",
+    "noteKo": "앞목갈비근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
     "sourceIds": [
-      "KJA_ST_JINGJIN_2006"
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   },
   {
-    "anatomyId": "FMA37451",
-    "meridianSinewId": "BL-JINGJIN",
+    "anatomyId": "FMA34686",
+    "meridianSinewId": "LU-JINGJIN",
     "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "correspondence": "regional",
+    "noteKo": "큰가슴근구역은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
     "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   },
   {
-    "anatomyId": "FMA45950",
-    "meridianSinewId": "BL-JINGJIN",
+    "anatomyId": "FMA37373",
+    "meridianSinewId": "LU-JINGJIN",
     "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "correspondence": "regional",
+    "noteKo": "짧은엄지벌림근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
     "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   },
   {
-    "anatomyId": "FMA45881",
-    "meridianSinewId": "BL-JINGJIN",
+    "anatomyId": "FMA37378",
+    "meridianSinewId": "LU-JINGJIN",
     "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "correspondence": "regional",
+    "noteKo": "짧은엄지굽힘근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
     "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   },
   {
-    "anatomyId": "FMA77178",
-    "meridianSinewId": "BL-JINGJIN",
+    "anatomyId": "FMA37664",
+    "meridianSinewId": "LU-JINGJIN",
     "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "correspondence": "regional",
+    "noteKo": "부리위팔근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
     "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   },
   {
-    "anatomyId": "FMA13342",
-    "meridianSinewId": "BL-JINGJIN",
+    "anatomyId": "FMA37682",
+    "meridianSinewId": "LU-JINGJIN",
     "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "correspondence": "regional",
+    "noteKo": "두갈래위팔짧은머리은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
     "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA37683",
+    "meridianSinewId": "LU-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "두갈래위팔긴머리은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA38459",
+    "meridianSinewId": "LU-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "노쪽손목굽힘근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA38485",
+    "meridianSinewId": "LU-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "위팔노근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA64916",
+    "meridianSinewId": "LU-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "엄지두덩근육은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13407",
+    "meridianSinewId": "LI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "목빗근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA32546",
+    "meridianSinewId": "LI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "가시아래근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   },
   {
     "anatomyId": "FMA32556",
-    "meridianSinewId": "BL-JINGJIN",
+    "meridianSinewId": "LI-JINGJIN",
     "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "correspondence": "regional",
+    "noteKo": "등세모가로부분은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
     "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   },
   {
-    "anatomyId": "FMA32557",
-    "meridianSinewId": "BL-JINGJIN",
+    "anatomyId": "FMA34678",
+    "meridianSinewId": "LI-JINGJIN",
     "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "correspondence": "regional",
+    "noteKo": "어깨세모봉우리부분은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
     "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   },
   {
-    "anatomyId": "FMA32555",
-    "meridianSinewId": "BL-JINGJIN",
+    "anatomyId": "FMA37694",
+    "meridianSinewId": "LI-JINGJIN",
     "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "correspondence": "regional",
+    "noteKo": "가쪽갈래 위팔세갈래근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
     "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   },
   {
-    "anatomyId": "FMA13407",
-    "meridianSinewId": "BL-JINGJIN",
+    "anatomyId": "FMA38485",
+    "meridianSinewId": "LI-JINGJIN",
     "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "correspondence": "regional",
+    "noteKo": "위팔노근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
     "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   },
   {
-    "anatomyId": "FMA13341",
-    "meridianSinewId": "BL-JINGJIN",
+    "anatomyId": "FMA38494",
+    "meridianSinewId": "LI-JINGJIN",
     "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "correspondence": "regional",
+    "noteKo": "긴노쪽손목폄근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
     "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   },
   {
-    "anatomyId": "FMA22534",
-    "meridianSinewId": "GB-JINGJIN",
+    "anatomyId": "FMA38497",
+    "meridianSinewId": "LI-JINGJIN",
     "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "correspondence": "regional",
+    "noteKo": "짧은노쪽손목폄근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
     "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   },
   {
-    "anatomyId": "FMA22431",
-    "meridianSinewId": "GB-JINGJIN",
+    "anatomyId": "FMA45738",
+    "meridianSinewId": "LI-JINGJIN",
     "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "correspondence": "regional",
+    "noteKo": "넓은목근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
     "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   },
   {
-    "anatomyId": "FMA19082",
-    "meridianSinewId": "GB-JINGJIN",
+    "anatomyId": "FMA9629",
+    "meridianSinewId": "LI-JINGJIN",
     "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "correspondence": "regional",
+    "noteKo": "가시위근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
     "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
-    ]
-  },
-  {
-    "anatomyId": "FMA22423",
-    "meridianSinewId": "GB-JINGJIN",
-    "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
-    "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   },
   {
     "anatomyId": "FMA13335",
-    "meridianSinewId": "GB-JINGJIN",
-    "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
-    "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
-    ]
-  },
-  {
-    "anatomyId": "FMA13354",
-    "meridianSinewId": "GB-JINGJIN",
-    "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
-    "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
-    ]
-  },
-  {
-    "anatomyId": "FMA34686",
-    "meridianSinewId": "GB-JINGJIN",
-    "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
-    "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
-    ]
-  },
-  {
-    "anatomyId": "FMA13407",
-    "meridianSinewId": "GB-JINGJIN",
-    "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
-    "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
-    ]
-  },
-  {
-    "anatomyId": "FMA22429",
-    "meridianSinewId": "ST-JINGJIN",
-    "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
-    "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
-    ]
-  },
-  {
-    "anatomyId": "FMA22430",
-    "meridianSinewId": "ST-JINGJIN",
-    "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
-    "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
-    ]
-  },
-  {
-    "anatomyId": "FMA22353",
-    "meridianSinewId": "ST-JINGJIN",
-    "relation": "course-region",
-    "correspondence": "interpretive",
-    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
-    "sourceIds": [
-      "KJA_FOOT_THREE_YANG_2008"
-    ]
-  },
-  {
-    "anatomyId": "FMA34686",
     "meridianSinewId": "ST-JINGJIN",
     "relation": "course-region",
     "correspondence": "interpretive",
@@ -260,13 +261,1310 @@
     ]
   },
   {
-    "anatomyId": "FMA13335",
+    "anatomyId": "FMA22353",
     "meridianSinewId": "ST-JINGJIN",
     "relation": "course-region",
     "correspondence": "interpretive",
     "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
     "sourceIds": [
       "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA22423",
+    "meridianSinewId": "ST-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "넙다리근막긴장근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22429",
+    "meridianSinewId": "ST-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA22430",
+    "meridianSinewId": "ST-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA22431",
+    "meridianSinewId": "ST-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "넓은가쪽은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22532",
+    "meridianSinewId": "ST-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와의 비교 연구에서 앞정강근이 족양명경근의 대응 근육 중 하나로 제시되었다. 경근과 현대 근육을 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "KJA_ST_JINGJIN_2006"
+    ]
+  },
+  {
+    "anatomyId": "FMA22534",
+    "meridianSinewId": "ST-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와의 비교 연구에서 긴발가락폄근이 족양명경근의 대응 근육 중 하나로 제시되었다.",
+    "sourceIds": [
+      "KJA_ST_JINGJIN_2006"
+    ]
+  },
+  {
+    "anatomyId": "FMA34686",
+    "meridianSinewId": "ST-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA45738",
+    "meridianSinewId": "ST-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "넓은목근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13295",
+    "meridianSinewId": "SP-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "가로막은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13335",
+    "meridianSinewId": "SP-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "배바깥빗근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13354",
+    "meridianSinewId": "SP-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "갈비사이근육은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA19089",
+    "meridianSinewId": "SP-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "항문올림근 부위은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22353",
+    "meridianSinewId": "SP-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "넙다리빗근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22441",
+    "meridianSinewId": "SP-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "긴모음근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22443",
+    "meridianSinewId": "SP-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "큰모음근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22593",
+    "meridianSinewId": "SP-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "긴엄지굽힘근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA37448",
+    "meridianSinewId": "SP-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "엄지벌림근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA43882",
+    "meridianSinewId": "SP-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "두덩정강근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA45956",
+    "meridianSinewId": "SP-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "장딴지안쪽머리은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA51099",
+    "meridianSinewId": "SP-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "뒤정강근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13109",
+    "meridianSinewId": "HT-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "작은가슴근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13295",
+    "meridianSinewId": "HT-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "가로막은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13354",
+    "meridianSinewId": "HT-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "갈비사이근육은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA34686",
+    "meridianSinewId": "HT-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "큰가슴근구역은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA37664",
+    "meridianSinewId": "HT-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "부리위팔근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA37682",
+    "meridianSinewId": "HT-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "두갈래위팔짧은머리은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA38469",
+    "meridianSinewId": "HT-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "얕은손가락굽힘근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA38615",
+    "meridianSinewId": "HT-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "위팔갈래 자쪽손목굽힘근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA38616",
+    "meridianSinewId": "HT-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "자갈래 자쪽손목굽힘근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA64917",
+    "meridianSinewId": "HT-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "새끼두덩근육은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13407",
+    "meridianSinewId": "SI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "목빗근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22653",
+    "meridianSinewId": "SI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "널판머리은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA32519",
+    "meridianSinewId": "SI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "어깨올림근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA32546",
+    "meridianSinewId": "SI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "가시아래근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA32549",
+    "meridianSinewId": "SI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "큰원근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA32550",
+    "meridianSinewId": "SI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "작은원근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA32556",
+    "meridianSinewId": "SI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "등세모가로부분은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA34679",
+    "meridianSinewId": "SI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "어깨세모척수부분은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA37692",
+    "meridianSinewId": "SI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "긴갈래 위팔세갈래근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA37693",
+    "meridianSinewId": "SI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "안쪽갈래 위팔세갈래근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA38506",
+    "meridianSinewId": "SI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "자쪽손목폄근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA64917",
+    "meridianSinewId": "SI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "새끼두덩근육은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13341",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA13342",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA13407",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA22314",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "큰볼기근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22357",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "반힘줄근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22438",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "반막근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22542",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "가자미근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22653",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "널판머리은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22681",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "목널판근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA32555",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA32556",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA32557",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA37450",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "짧은발가락굽힘근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA37451",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA45881",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA45887",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "넙다리두갈래근긴머리은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA45950",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA45956",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "장딴지안쪽머리은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA45959",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "장딴지가쪽머리은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA77178",
+    "meridianSinewId": "BL-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA13295",
+    "meridianSinewId": "KI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "가로막은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA19089",
+    "meridianSinewId": "KI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "항문올림근 부위은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22441",
+    "meridianSinewId": "KI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "긴모음근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22443",
+    "meridianSinewId": "KI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "큰모음근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22542",
+    "meridianSinewId": "KI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "가자미근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22593",
+    "meridianSinewId": "KI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "긴엄지굽힘근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22653",
+    "meridianSinewId": "KI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "널판머리은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA37448",
+    "meridianSinewId": "KI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "엄지벌림근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA43882",
+    "meridianSinewId": "KI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "두덩정강근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA45956",
+    "meridianSinewId": "KI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "장딴지안쪽머리은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA51099",
+    "meridianSinewId": "KI-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "뒤정강근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13109",
+    "meridianSinewId": "PC-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "작은가슴근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13295",
+    "meridianSinewId": "PC-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "가로막은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13354",
+    "meridianSinewId": "PC-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "갈비사이근육은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA34686",
+    "meridianSinewId": "PC-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "큰가슴근구역은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA37664",
+    "meridianSinewId": "PC-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "부리위팔근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA37682",
+    "meridianSinewId": "PC-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "두갈래위팔짧은머리은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA37683",
+    "meridianSinewId": "PC-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "두갈래위팔긴머리은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA38459",
+    "meridianSinewId": "PC-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "노쪽손목굽힘근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA38462",
+    "meridianSinewId": "PC-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "긴손바닥근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA38469",
+    "meridianSinewId": "PC-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "얕은손가락굽힘근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13407",
+    "meridianSinewId": "TE-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "목빗근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22653",
+    "meridianSinewId": "TE-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "널판머리은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA32556",
+    "meridianSinewId": "TE-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "등세모가로부분은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA34678",
+    "meridianSinewId": "TE-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "어깨세모봉우리부분은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA34679",
+    "meridianSinewId": "TE-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "어깨세모척수부분은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA37692",
+    "meridianSinewId": "TE-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "긴갈래 위팔세갈래근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA37694",
+    "meridianSinewId": "TE-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "가쪽갈래 위팔세갈래근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA37704",
+    "meridianSinewId": "TE-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "팔꿈치근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA38494",
+    "meridianSinewId": "TE-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "긴노쪽손목폄근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA38497",
+    "meridianSinewId": "TE-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "짧은노쪽손목폄근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA38500",
+    "meridianSinewId": "TE-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "손가락폄근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA38506",
+    "meridianSinewId": "TE-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "자쪽손목폄근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13335",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA13354",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA13397",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "앞톱니근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13407",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA19082",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA22315",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "중간볼기근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22317",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "작은볼기근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22423",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA22431",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA22534",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA22539",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "긴종아리근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22540",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "짧은종아리근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22653",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "널판머리은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA32557",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "등세모내림부분은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA34686",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "interpretive",
+    "noteKo": "현대 근육계와 경근의 상관성을 비교한 문헌에서 대응 근육으로 제시된 항목이다. 고전의 경근과 현대의 개별 근육을 해부학적으로 동일한 구조로 간주하지 않는다.",
+    "sourceIds": [
+      "KJA_FOOT_THREE_YANG_2008"
+    ]
+  },
+  {
+    "anatomyId": "FMA51048",
+    "meridianSinewId": "GB-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "엉덩정강띠은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA13335",
+    "meridianSinewId": "LR-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "배바깥빗근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA19089",
+    "meridianSinewId": "LR-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "항문올림근 부위은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22353",
+    "meridianSinewId": "LR-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "넙다리빗근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22441",
+    "meridianSinewId": "LR-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "긴모음근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22443",
+    "meridianSinewId": "LR-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "큰모음근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22532",
+    "meridianSinewId": "LR-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "앞정강근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA22533",
+    "meridianSinewId": "LR-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "긴엄지폄근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA43882",
+    "meridianSinewId": "LR-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "두덩정강근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
+    ]
+  },
+  {
+    "anatomyId": "FMA51099",
+    "meridianSinewId": "LR-JINGJIN",
+    "relation": "course-region",
+    "correspondence": "regional",
+    "noteKo": "뒤정강근은(는) 『靈樞·經筋』의 해당 경근 주행이 지나가는 해부학적 영역에 위치하므로 지역적 대응 구조로 연결하였다. 경근과 이 현대 해부 구조를 1:1로 동일시하지 않는다.",
+    "sourceIds": [
+      "LINGSHU_JINGJIN",
+      "BODY_PARTS_3D_4"
     ]
   }
 ]
