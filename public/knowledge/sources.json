@@ -43,5 +43,18 @@
     "publisher": "대한해부학회",
     "year": 2014,
     "note": "Reference standard for Korean anatomical terminology. The atlas stores independently curated mappings rather than reproducing the terminology book."
+  },
+  "WHO_ACUPOINT_NOMENCLATURE_1993": {
+    "id": "WHO_ACUPOINT_NOMENCLATURE_1993",
+    "title": "Standard acupuncture nomenclature: a brief explanation of 361 classical acupuncture point names and their multilingual comparative list",
+    "publisher": "World Health Organization Regional Office for the Western Pacific",
+    "year": 1993,
+    "note": "Reference for the standardized 361-point identifiers, Pinyin names, and Han-character nomenclature."
+  },
+  "UNICODE_UNIHAN": {
+    "id": "UNICODE_UNIHAN",
+    "title": "Unicode Han Database (Unihan) readings",
+    "publisher": "Unicode Consortium",
+    "note": "Used to cross-check Korean readings of Han characters; point-name readings are normalized separately."
   }
 }
