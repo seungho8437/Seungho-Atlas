@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T10:58:10.723Z",
+  "generatedAt": "2026-10-04T11:00:14.196Z",
   "logicalAcupoints": 361,
   "physicalCoordinates": 670,
   "expectedPhysicalCoordinates": 670,
@@ -8,8 +8,28 @@
   "invalidGeometryOrLaterality": [],
   "duplicateClusters": [
     [
-      "ST6",
-      "GB13"
+      "LU7",
+      "HT4"
+    ],
+    [
+      "LU8",
+      "HT5"
+    ],
+    [
+      "LU8",
+      "HT5"
+    ],
+    [
+      "LI2",
+      "LI3"
+    ],
+    [
+      "LI2",
+      "LI3"
+    ],
+    [
+      "LI6",
+      "TE7"
     ],
     [
       "ST27",
@@ -24,72 +44,92 @@
       "KI12"
     ],
     [
-      "ST29",
-      "SP13"
-    ],
-    [
-      "ST42",
-      "BL61"
-    ],
-    [
       "ST45",
-      "BL67",
-      "GB44"
+      "GB40"
+    ],
+    [
+      "SP2",
+      "SP3"
+    ],
+    [
+      "SP5",
+      "BL65",
+      "BL66"
+    ],
+    [
+      "SP5",
+      "KI4"
     ],
     [
       "SI19",
       "GB2"
     ],
     [
-      "BL4",
-      "GB15"
-    ],
-    [
-      "BL4",
-      "GB15"
-    ],
-    [
       "BL6",
       "GB17"
+    ],
+    [
+      "BL63",
+      "GB42"
     ],
     [
       "BL63",
       "GB41"
     ],
     [
-      "KI5",
-      "LR9"
-    ],
-    [
-      "GV13",
-      "GV15"
-    ],
-    [
-      "CV6",
-      "CV7"
-    ]
-  ],
-  "exactDuplicateClusters": [
-    [
-      "ST6",
-      "GB13"
-    ],
-    [
-      "ST42",
-      "BL61"
-    ],
-    [
-      "ST45",
       "BL67",
       "GB44"
     ],
     [
-      "BL4",
-      "GB15"
+      "KI1",
+      "KI4"
     ],
     [
-      "BL4",
-      "GB15"
+      "GV13",
+      "GV15"
+    ]
+  ],
+  "exactDuplicateClusters": [
+    [
+      "LU7",
+      "HT4"
+    ],
+    [
+      "LU8",
+      "HT5"
+    ],
+    [
+      "LU8",
+      "HT5"
+    ],
+    [
+      "LI2",
+      "LI3"
+    ],
+    [
+      "LI2",
+      "LI3"
+    ],
+    [
+      "ST28",
+      "KI13"
+    ],
+    [
+      "ST29",
+      "KI12"
+    ],
+    [
+      "ST45",
+      "GB40"
+    ],
+    [
+      "SP2",
+      "SP3"
+    ],
+    [
+      "SP5",
+      "BL65",
+      "BL66"
     ],
     [
       "BL6",
@@ -100,22 +140,18 @@
       "GB41"
     ],
     [
-      "KI5",
-      "LR9"
-    ],
-    [
-      "CV6",
-      "CV7"
+      "BL67",
+      "GB44"
     ]
   ],
   "confidenceCounts": {
-    "moderate": 321,
-    "high": 341,
+    "moderate": 307,
+    "high": 355,
     "low": 8
   },
   "projectionDistance": {
-    "max": 0.1207,
-    "mean": 0.03488910447761192
+    "max": 0.2242,
+    "mean": 0.05098507462686572
   },
   "axes": {
     "source": "native BodyParts3D 4.0 atlas coordinates",
