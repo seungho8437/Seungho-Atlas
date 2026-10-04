@@ -8520,17 +8520,17 @@
   },
   "FMA24500": {
     "sourceNameEn": "navicular bone of right foot",
-    "unresolvedTokens": [
-      "navicular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른발배뼈",
+    "legacyKo": "우족주상골",
+    "hanja": "右足舟狀骨"
   },
   "FMA24501": {
     "sourceNameEn": "navicular bone of left foot",
-    "unresolvedTokens": [
-      "navicular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼발배뼈",
+    "legacyKo": "좌족주상골",
+    "hanja": "左足舟狀骨"
   },
   "FMA24502": {
     "nameKo": "첫째발허리뼈",
@@ -11477,24 +11477,24 @@
   },
   "FMA45096": {
     "sourceNameEn": "sesamoid bone of foot",
-    "unresolvedTokens": [
-      "sesamoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "발의 종자뼈",
+    "legacyKo": "족 종자골",
+    "hanja": "足種子骨"
   },
   "FMA45097": {
     "sourceNameEn": "sesamoid bone of right foot",
-    "unresolvedTokens": [
-      "sesamoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른발 종자뼈",
+    "legacyKo": "우족 종자골",
+    "hanja": "右足種子骨"
   },
   "FMA45098": {
     "sourceNameEn": "sesamoid bone of left foot",
-    "unresolvedTokens": [
-      "sesamoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼발 종자뼈",
+    "legacyKo": "좌족 종자골",
+    "hanja": "左足種子骨"
   },
   "FMA45638": {
     "sourceNameEn": "subdivision of nervous system",
@@ -15195,10 +15195,10 @@
   },
   "FMA55672": {
     "sourceNameEn": "organ with organ cavity",
-    "unresolvedTokens": [
-      "with"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "기관강을 가진 기관",
+    "legacyKo": "기관강 보유 기관",
+    "hanja": "器官腔保有器官"
   },
   "FMA55673": {
     "sourceNameEn": "organ with cavitated organ parts",
@@ -15251,17 +15251,17 @@
   },
   "FMA55686": {
     "sourceNameEn": "right lower secondary canine tooth",
-    "unresolvedTokens": [
-      "canine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른아래 이차 송곳니",
+    "legacyKo": "우하 이차 견치",
+    "hanja": "右下二次犬齒"
   },
   "FMA55687": {
     "sourceNameEn": "left lower secondary canine tooth",
-    "unresolvedTokens": [
-      "canine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼아래 이차 송곳니",
+    "legacyKo": "좌하 이차 견치",
+    "hanja": "左下二次犬齒"
   },
   "FMA55688": {
     "nameKo": "오른위둘째이차작은어금니치아",
@@ -15391,17 +15391,17 @@
   },
   "FMA55714": {
     "sourceNameEn": "upper secondary canine tooth",
-    "unresolvedTokens": [
-      "canine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "위 이차 송곳니",
+    "legacyKo": "상 이차 견치",
+    "hanja": "上二次犬齒"
   },
   "FMA55715": {
     "sourceNameEn": "lower secondary canine tooth",
-    "unresolvedTokens": [
-      "canine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "아래 이차 송곳니",
+    "legacyKo": "하 이차 견치",
+    "hanja": "下二次犬齒"
   },
   "FMA55716": {
     "nameKo": "위이차작은어금니치아",
@@ -15461,17 +15461,17 @@
   },
   "FMA55798": {
     "sourceNameEn": "right upper secondary canine tooth",
-    "unresolvedTokens": [
-      "canine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른위 이차 송곳니",
+    "legacyKo": "우상 이차 견치",
+    "hanja": "右上二次犬齒"
   },
   "FMA55799": {
     "sourceNameEn": "left upper secondary canine tooth",
-    "unresolvedTokens": [
-      "canine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼위 이차 송곳니",
+    "legacyKo": "좌상 이차 견치",
+    "hanja": "左上二次犬齒"
   },
   "FMA55801": {
     "nameKo": "위첫째이차작은어금니치아",
@@ -16153,11 +16153,10 @@
   },
   "FMA61775": {
     "sourceNameEn": "physical anatomical entity",
-    "unresolvedTokens": [
-      "physical",
-      "entity"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "물리적 해부학 개체",
+    "legacyKo": "물리적 해부학 개체",
+    "hanja": "物理解剖學個體"
   },
   "FMA61815": {
     "sourceNameEn": "cardinal segment of brain",
@@ -16577,10 +16576,10 @@
   },
   "FMA62955": {
     "sourceNameEn": "anatomical entity",
-    "unresolvedTokens": [
-      "entity"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "해부학 개체",
+    "legacyKo": "해부학 개체",
+    "hanja": "解剖學個體"
   },
   "FMA63103": {
     "sourceNameEn": "pancreatic duct tree",
@@ -16988,18 +16987,17 @@
   },
   "FMA67135": {
     "sourceNameEn": "anatomical structure",
-    "unresolvedTokens": [
-      "structure"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "해부학 구조",
+    "legacyKo": "해부학 구조",
+    "hanja": "解剖學構造"
   },
   "FMA67165": {
     "sourceNameEn": "material anatomical entity",
-    "unresolvedTokens": [
-      "material",
-      "entity"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "물질적 해부학 개체",
+    "legacyKo": "물질적 해부학 개체",
+    "hanja": "物質解剖學個體"
   },
   "FMA67242": {
     "sourceNameEn": "gray matter of neuraxis",
@@ -17024,10 +17022,10 @@
   },
   "FMA67396": {
     "sourceNameEn": "articular disk of symphysis",
-    "unresolvedTokens": [
-      "articular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "결합의 관절원반",
+    "legacyKo": "결합 관절원반",
+    "hanja": "結合關節圓盤"
   },
   "FMA67498": {
     "nameKo": "기관",
@@ -20019,10 +20017,10 @@
   },
   "FMA84203": {
     "sourceNameEn": "secondary canine tooth",
-    "unresolvedTokens": [
-      "canine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "이차 송곳니",
+    "legacyKo": "이차 견치",
+    "hanja": "二次犬齒"
   },
   "FMA84207": {
     "nameKo": "이차어금니치아",
@@ -21979,10 +21977,10 @@
   },
   "FMA24189": {
     "sourceNameEn": "back of neck",
-    "unresolvedTokens": [
-      "back"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "목 뒤",
+    "legacyKo": "경부 후면",
+    "hanja": "頸部後面"
   },
   "FMA24217": {
     "sourceNameEn": "back of thorax",
@@ -21993,10 +21991,10 @@
   },
   "FMA24228": {
     "sourceNameEn": "posterior part of pelvis",
-    "unresolvedTokens": [
-      "pelvis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "골반 뒤부분",
+    "legacyKo": "골반 후부",
+    "hanja": "骨盤後部"
   },
   "FMA24728": {
     "sourceNameEn": "face",
@@ -22161,17 +22159,17 @@
   },
   "FMA25572": {
     "sourceNameEn": "right bony pectoral girdle",
-    "unresolvedTokens": [
-      "bony"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른골성어깨이음뼈",
+    "legacyKo": "우골성견갑대",
+    "hanja": "右骨性肩胛帶"
   },
   "FMA25573": {
     "sourceNameEn": "left bony pectoral girdle",
-    "unresolvedTokens": [
-      "bony"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼골성어깨이음뼈",
+    "legacyKo": "좌골성견갑대",
+    "hanja": "左骨性肩胛帶"
   },
   "FMA26078": {
     "nameKo": "셋째목척추사이결합",
@@ -22259,31 +22257,31 @@
   },
   "FMA26100": {
     "sourceNameEn": "eighth thoracic intervertebral symphysis",
-    "unresolvedTokens": [
-      "eighth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "제8가슴척추사이결합",
+    "legacyKo": "제8흉추 추간결합",
+    "hanja": "第八胸椎椎間結合"
   },
   "FMA26101": {
     "sourceNameEn": "ninth thoracic intervertebral symphysis",
-    "unresolvedTokens": [
-      "ninth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "제9가슴척추사이결합",
+    "legacyKo": "제9흉추 추간결합",
+    "hanja": "第九胸椎椎間結合"
   },
   "FMA26102": {
     "sourceNameEn": "tenth thoracic intervertebral symphysis",
-    "unresolvedTokens": [
-      "tenth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "제10가슴척추사이결합",
+    "legacyKo": "제10흉추 추간결합",
+    "hanja": "第十胸椎椎間結合"
   },
   "FMA26103": {
     "sourceNameEn": "eleventh thoracic intervertebral symphysis",
-    "unresolvedTokens": [
-      "eleventh"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "제11가슴척추사이결합",
+    "legacyKo": "제11흉추 추간결합",
+    "hanja": "第十一胸椎椎間結合"
   },
   "FMA26105": {
     "nameKo": "첫째허리척추사이결합",
@@ -22661,17 +22659,17 @@
   },
   "FMA51044": {
     "sourceNameEn": "fascia lata of right thigh",
-    "unresolvedTokens": [
-      "lata"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른넙다리근막",
+    "legacyKo": "우대퇴근막",
+    "hanja": "右大腿筋膜"
   },
   "FMA51045": {
     "sourceNameEn": "fascia lata of left thigh",
-    "unresolvedTokens": [
-      "lata"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼넙다리근막",
+    "legacyKo": "좌대퇴근막",
+    "hanja": "左大腿筋膜"
   },
   "FMA52801": {
     "sourceNameEn": "basicranium",
@@ -22976,17 +22974,17 @@
   },
   "FMA59398": {
     "sourceNameEn": "mandibular part of mouth",
-    "unresolvedTokens": [
-      "mouth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "입의 아래턱부분",
+    "legacyKo": "구강 하악부",
+    "hanja": "口腔下顎部"
   },
   "FMA59399": {
     "sourceNameEn": "maxillary part of mouth",
-    "unresolvedTokens": [
-      "mouth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "입의 위턱부분",
+    "legacyKo": "구강 상악부",
+    "hanja": "口腔上顎部"
   },
   "FMA59515": {
     "nameKo": "바깥코",
@@ -23011,10 +23009,10 @@
   },
   "FMA59538": {
     "sourceNameEn": "cartilaginous skeleton of nose",
-    "unresolvedTokens": [
-      "cartilaginous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "코의 연골성 뼈대",
+    "legacyKo": "비 연골성 골격",
+    "hanja": "鼻軟骨性骨格"
   },
   "FMA59637": {
     "nameKo": "속코",
@@ -23032,10 +23030,10 @@
   },
   "FMA59655": {
     "sourceNameEn": "osseous skeleton of external nose",
-    "unresolvedTokens": [
-      "osseous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "바깥코의 골성 뼈대",
+    "legacyKo": "외비 골성 골격",
+    "hanja": "外鼻骨性骨格"
   },
   "FMA59656": {
     "sourceNameEn": "osseous skeleton of internal nose",
@@ -23102,18 +23100,17 @@
   },
   "FMA59836": {
     "sourceNameEn": "cartilaginous skeleton of external nose",
-    "unresolvedTokens": [
-      "cartilaginous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "바깥코의 연골성 뼈대",
+    "legacyKo": "외비 연골성 골격",
+    "hanja": "外鼻軟骨性骨格"
   },
   "FMA59837": {
     "sourceNameEn": "bony part of nasal septum",
-    "unresolvedTokens": [
-      "bony",
-      "septum"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "코사이막의 골성부분",
+    "legacyKo": "비중격 골성부",
+    "hanja": "鼻中隔骨性部"
   },
   "FMA59838": {
     "sourceNameEn": "cartilaginous part of nasal septum",
@@ -23328,10 +23325,10 @@
   },
   "FMA61670": {
     "sourceNameEn": "skeleton of mouth",
-    "unresolvedTokens": [
-      "mouth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "입의 뼈대",
+    "legacyKo": "구강 골격",
+    "hanja": "口腔骨格"
   },
   "FMA61680": {
     "nameKo": "배고유",
@@ -23342,10 +23339,10 @@
   },
   "FMA61681": {
     "sourceNameEn": "back of abdomen",
-    "unresolvedTokens": [
-      "back"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "배 뒤",
+    "legacyKo": "복부 후면",
+    "hanja": "腹部後面"
   },
   "FMA61732": {
     "nameKo": "머리오른마루부분",
@@ -23735,24 +23732,24 @@
   },
   "FMA72063": {
     "sourceNameEn": "set of cervical vertebrae",
-    "unresolvedTokens": [
-      "vertebrae"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "목척추뼈 집합",
+    "legacyKo": "경추군",
+    "hanja": "頸椎群"
   },
   "FMA72064": {
     "sourceNameEn": "set of thoracic vertebrae",
-    "unresolvedTokens": [
-      "vertebrae"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가슴척추뼈 집합",
+    "legacyKo": "흉추군",
+    "hanja": "胸椎群"
   },
   "FMA72065": {
     "sourceNameEn": "set of lumbar vertebrae",
-    "unresolvedTokens": [
-      "vertebrae"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "허리척추뼈 집합",
+    "legacyKo": "요추군",
+    "hanja": "腰椎群"
   },
   "FMA72952": {
     "sourceNameEn": "orbital part of right eye",
@@ -23833,17 +23830,17 @@
   },
   "FMA73055": {
     "sourceNameEn": "anterior part of right knee",
-    "unresolvedTokens": [
-      "knee"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른무릎 앞부분",
+    "legacyKo": "우슬 전부",
+    "hanja": "右膝前部"
   },
   "FMA73056": {
     "sourceNameEn": "anterior part of left knee",
-    "unresolvedTokens": [
-      "knee"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼무릎 앞부분",
+    "legacyKo": "좌슬 전부",
+    "hanja": "左膝前部"
   },
   "FMA73086": {
     "nameKo": "오른발고유",
@@ -24164,10 +24161,10 @@
   },
   "FMA87598": {
     "sourceNameEn": "skeletal system of trunk",
-    "unresolvedTokens": [
-      "skeletal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "몸통 골격계통",
+    "legacyKo": "체간 골격계",
+    "hanja": "體幹骨格系"
   },
   "FMA228642": {
     "sourceNameEn": "vasculature of body",
