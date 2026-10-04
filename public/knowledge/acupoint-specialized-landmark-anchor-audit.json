@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "unresolvedLandmarkCount": 9,
+  "specializedSpecCount": 9,
+  "anchorRecordCount": 0,
+  "acceptedAnchorCount": 0,
+  "pendingLandmarkCount": 9,
+  "coverage": {
+    "exactUnresolvedSetCovered": true,
+    "missingSpecializedSpecs": [],
+    "extraSpecializedSpecs": []
+  },
+  "policies": {
+    "noDetectorOnlyCalibration": true,
+    "acceptedRequiresSurfaceProjection": true,
+    "acceptedRequiresModelRevision": true,
+    "acceptedRequiresEvidenceAndDefinitionCheck": true,
+    "bilateralPairCheckEnabled": true,
+    "symmetrySupportingOnly": true
+  },
+  "pairChecks": [
+    {
+      "left": "left-anterior-hairline-corner",
+      "right": "right-anterior-hairline-corner",
+      "status": "not-yet-anchored"
+    },
+    {
+      "left": "left-nipple-center",
+      "right": "right-nipple-center",
+      "status": "not-yet-anchored"
+    }
+  ],
+  "readiness": "manual-or-specialized-anchoring-pending"
+}
