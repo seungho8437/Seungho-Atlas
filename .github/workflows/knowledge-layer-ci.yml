@@ -20,6 +20,6 @@ jobs:
       - run: npm ci
       - run: npm run check
       - run: node scripts/validate-atlas.mjs
-      - run: node scripts/validate-interactions.mjs
+      - run: node --experimental-strip-types scripts/validate-interactions.mjs
       - run: npm run validate:knowledge
       - run: npm run build
