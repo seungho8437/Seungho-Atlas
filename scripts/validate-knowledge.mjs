@@ -26,16 +26,12 @@ let verifiedLocalizations=0,derivedLocalizations=0,reviewNeededLocalizations=0;
 for(const [conceptId,entry] of Object.entries(anatomyKo)){
   assert.ok(concepts.has(conceptId),`${conceptId}: localization points to a missing atlas concept`);
   assert.ok(['verified','derived','review-needed'].includes(entry.status),`${conceptId}: invalid localization status`);
-  if(entry.status==='review-needed'){
-    reviewNeededLocalizations++;
-    assert.ok(Array.isArray(entry.unresolvedTokens)&&entry.unresolvedTokens.length,`${conceptId}: review-needed localization must identify unresolved tokens`);
-  }else{
-    if(entry.status==='verified')verifiedLocalizations++;else derivedLocalizations++;
-    assert.equal(typeof entry.nameKo,'string',`${conceptId}: resolved localization requires nameKo`);
-    assert.ok(entry.nameKo.trim(),`${conceptId}: nameKo is empty`);
-    assert.ok(typeof entry.legacyKo==='string'&&entry.legacyKo.trim(),`${conceptId}: resolved localization requires legacyKo`);
-    assert.ok(typeof entry.hanja==='string'&&entry.hanja.trim(),`${conceptId}: resolved localization requires hanja`);
-  }
+  if(entry.status==='review-needed')reviewNeededLocalizations++;
+  else if(entry.status==='verified')verifiedLocalizations++;else derivedLocalizations++;
+  assert.equal(typeof entry.nameKo,'string',`${conceptId}: localization requires nameKo`);
+  assert.ok(entry.nameKo.trim(),`${conceptId}: nameKo is empty`);
+  assert.ok(typeof entry.legacyKo==='string'&&entry.legacyKo.trim(),`${conceptId}: localization requires legacyKo`);
+  assert.ok(typeof entry.hanja==='string'&&entry.hanja.trim(),`${conceptId}: localization requires hanja`);
   if(entry.sourceNameEn!==undefined)assert.equal(entry.sourceNameEn,concepts.get(conceptId).name,`${conceptId}: source English name drift`);
   if(entry.descriptionKo!==undefined)assert.ok(typeof entry.descriptionKo==='string'&&entry.descriptionKo.trim(),`${conceptId}: descriptionKo is invalid`);
   for(const id of entry.sourceIds??[])assert.ok(sourceIds.has(id),`${conceptId}: missing localization source ${id}`);
@@ -46,6 +42,7 @@ for(const [conceptId,entry] of Object.entries(anatomyKo)){
   }
 }
 assert.equal(verifiedLocalizations+derivedLocalizations+reviewNeededLocalizations,atlas.concepts.length,'Localization status counts must cover the atlas.');
+assert.equal(reviewNeededLocalizations,0,'All 3,432 anatomy concepts must be resolved; review-needed entries are not allowed.');
 
 for(const [sourceId,source] of Object.entries(sources)){
   assert.equal(source.id,sourceId,`${sourceId}: source id must match its object key`);
