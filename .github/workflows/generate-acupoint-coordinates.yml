@@ -8,6 +8,7 @@ on:
     paths:
       - scripts/generate-acupoint-coordinates.mjs
       - scripts/generate-acupoint-exception-review.mjs
+      - scripts/validate-acupoint-spatial.mjs
       - .github/workflows/generate-acupoint-coordinates.yml
 
 concurrency:
@@ -29,6 +30,7 @@ jobs:
           node-version: '22.13.0'
       - run: node scripts/generate-acupoint-coordinates.mjs
       - run: node scripts/generate-acupoint-exception-review.mjs
+      - run: node scripts/validate-acupoint-spatial.mjs
       - run: node scripts/validate-atlas.mjs
       - run: node scripts/validate-knowledge.mjs
       - name: Commit generated coordinate registry
