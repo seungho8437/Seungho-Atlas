@@ -27,7 +27,7 @@ for(const r of relations){const a=relMap.get(r.acupointId)??[];a.push(r);relMap.
 
 const surfaceParts=atlas.parts.filter(p=>p.system==='integumentary');
 const surfaceSamples=[];
-for(const p of surfaceParts){const a=pos(p),step=Math.max(3,Math.floor((a.length/3)/8000)*3);for(let i=0;i<a.length;i+=step)surfaceSamples.push([a[i],a[i+1],a[i+2]]);}
+for(const p of surfaceParts){const a=pos(p),step=Math.max(3,Math.floor((a.length/3)/1200)*3);for(let i=0;i<a.length;i+=step)surfaceSamples.push([a[i],a[i+1],a[i+2]]);}
 
 function conceptSamples(id,limit=1000){
  const out=[];for(const p of partsByConcept.get(id)??[]){const a=pos(p),step=Math.max(3,Math.floor((a.length/3)/Math.max(50,limit/(partsByConcept.get(id)?.length||1)))*3);for(let i=0;i<a.length;i+=step)out.push([a[i],a[i+1],a[i+2]]);}return out.slice(0,limit);
