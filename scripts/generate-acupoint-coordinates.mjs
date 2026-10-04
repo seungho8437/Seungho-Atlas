@@ -139,14 +139,20 @@ function project(target, side){
       for(const id of ids){const T=surfaceTriangles[id];
         if(side==='left' && Math.sign((T.c[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) continue;
         if(side==='right' && Math.sign((T.c[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) continue;
-        const q=closestOnTri(target,...T.tri),d=dist2(target,q);if(d<bestD){bestD=d;best=q;bestPart=T.part;}}
+        const q=closestOnTri(target,...T.tri);
+        if(side==='left' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) continue;
+        if(side==='right' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) continue;
+        const d=dist2(target,q);if(d<bestD){bestD=d;best=q;bestPart=T.part;}}
     }
     if(found && best && Math.sqrt(bestD) < (r+1)*cell) break;
   }
   if(!best){for(const T of surfaceTriangles){
     if(side==='left' && Math.sign((T.c[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) continue;
     if(side==='right' && Math.sign((T.c[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) continue;
-    const q=closestOnTri(target,...T.tri),d=dist2(target,q);if(d<bestD){bestD=d;best=q;bestPart=T.part;}}}
+    const q=closestOnTri(target,...T.tri);
+    if(side==='left' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) continue;
+    if(side==='right' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) continue;
+    const d=dist2(target,q);if(d<bestD){bestD=d;best=q;bestPart=T.part;}}}
   return {point:best,distance:Math.sqrt(bestD),part:bestPart};
 }
 
