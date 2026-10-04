@@ -647,7 +647,7 @@ function relationTarget(point, side){
     const st=conceptStats(r.anatomyId,sideSign,lrAxis,leftSign)||conceptStats(r.anatomyId,0,lrAxis,leftSign); if(!st)continue;
     const en=anatomyKo[r.anatomyId]?.sourceNameEn || '';
     const isBroad=broad.test(en);
-    if(/(?:thoracic|cervical) vertebra$/i.test(en)) vertebralSup.push(st.center[supAxis]);
+    if(/^(?:GV9|GV10|GV13|GV15)$/.test(point.id) && /(?:thoracic|cervical) vertebra$/i.test(en)) vertebralSup.push(st.center[supAxis]);
     if(r.relation==='surface-landmark'&&isBroad){
       for(let k=0;k<3;k++)broadAcc[k]+=st.center[k];
       broadN++;continue;
@@ -675,7 +675,7 @@ function relationTarget(point, side){
     for(let k=0;k<3;k++)acc[k]+=hit.st.center[k]*w;
     wsum+=w;textLandmarkCount++;
     const en=anatomyKo[hit.id]?.sourceNameEn||'';
-    if(/(?:thoracic|cervical) vertebra$/i.test(en)) vertebralSup.push(hit.st.center[supAxis]);
+    if(/^(?:GV9|GV10|GV13|GV15)$/.test(point.id) && /(?:thoracic|cervical) vertebra$/i.test(en)) vertebralSup.push(hit.st.center[supAxis]);
   }
   const blended=wsum ? (()=>{const g=acc.map(v=>v/wsum),alpha=specific>=2?.82:.68;return g.map((v,i)=>v*alpha+rt[i]*(1-alpha));})() : rt;
   if(vertebralSup.length) blended[supAxis]=vertebralSup.reduce((a,b)=>a+b,0)/vertebralSup.length;
