@@ -112,11 +112,12 @@ const regionRules = [
   [/forehead|이마|눈썹|미간|코|입술|턱|얼굴|눈|귀|관자/, .91, .82],
   [/occip|뒤통수|후두|뒷머리/, .91, .18],
   [/head|머리|두피/, .93, .55],
-  [/neck|목|경부|목덜미/, .82, .52],
+  [/neck|목\s*(?:앞쪽|뒤쪽|가쪽|부위|정중선)|경부|목덜미/, .82, .52],
   [/shoulder|어깨|견갑|빗장|쇄골/, .76, .58],
   [/chest|가슴|흉부|갈비|늑간|유두/, .69, .78],
   [/upper abdomen|윗배|상복부|명치/, .59, .76],
-  [/abdomen|배꼽|복부|배 부위|아랫배/, .50, .77],
+  [/lower abdomen|아랫배|하복부/, .40, .77],
+  [/abdomen|배꼽|복부|배 부위/, .50, .77],
   [/pelvis|샅|회음|두덩|치골|엉덩|볼기|천골|엉치/, .38, .50],
   [/upper arm|위팔|상완/, .66, .60],
   [/elbow|팔꿈치|주와/, .55, .58],
@@ -259,6 +260,44 @@ function applyWhoConstraints(input,text,side){
   if(/눈썹\s*안쪽끝/.test(text)){t[supAxis]=norm(supAxis,.885);count++;}
   if(/앞위쪽/.test(text)){t[supAxis]+=cunY*.7;count++;}
   if(/배꼽\s*중심과\s*같은\s*높이/.test(text)){t[supAxis]=norm(supAxis,.455);count++;}
+  if(/꼬리뼈\s*끝/.test(text)&&sideSign){
+    t[supAxis]=norm(supAxis,.38);
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localCoreHalfWidth(t[supAxis])*.18;
+    t[apAxis]=bodyCenter[apAxis]-anteriorSign*extent[apAxis]*.18;
+    count+=3;
+  }
+  if(/볼기주름의\s*중점/.test(text)&&sideSign){
+    t[supAxis]=norm(supAxis,.38);
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localCoreHalfWidth(t[supAxis])*.38;
+    t[apAxis]=bodyCenter[apAxis]-anteriorSign*extent[apAxis]*.16;
+    count+=3;
+  }
+  if(/위앞엉덩뼈가시보다\s*안쪽[·ㆍ]?아래쪽으로\s*0\.5\s*B-cun/.test(text)&&sideSign){
+    t[supAxis]=norm(supAxis,.405);
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localCoreHalfWidth(t[supAxis])*.70;
+    t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.18;
+    count+=3;
+  }
+  if(/위앞엉덩뼈가시와\s*큰돌기\s*융기를\s*잇는\s*선의\s*중점/.test(text)&&sideSign){
+    t[supAxis]=norm(supAxis,.37);
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localCoreHalfWidth(t[supAxis])*.78;
+    t[apAxis]=bodyCenter[apAxis]-anteriorSign*extent[apAxis]*.02;
+    count+=3;
+  }
+  if(/중간겨드랑선보다\s*앞쪽으로\s*1\s*B-cun/.test(text)&&sideSign){
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localCoreHalfWidth(t[supAxis])*.88;
+    t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.12;
+    count+=2;
+  }
+  if(/가쪽복사\s*융기\s*바로\s*아래/.test(text)&&sideSign){
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*.88;
+    count++;
+  }
+  if(/안쪽복사의\s*뒤아래쪽/.test(text)&&sideSign){
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*.52;
+    t[apAxis]-=anteriorSign*extent[apAxis]*.035;
+    count+=2;
+  }
   if(/발목/.test(text)&&!/B-cun/.test(text)){t[supAxis]=norm(supAxis,.06);count++;}
   if(/발허리발가락관절[^,.]{0,12}먼쪽/.test(text)){t[apAxis]+=anteriorSign*extent[apAxis]*.045;count++;}
   if(/발허리발가락관절[^,.]{0,12}몸쪽/.test(text)){t[apAxis]-=anteriorSign*extent[apAxis]*.035;count++;}
@@ -573,6 +612,7 @@ function semanticConceptHits(text,side){
   if(/위앞엉덩뼈가시/.test(text))patterns.push(/anterior superior iliac spine/i);
   if(/큰돌기/.test(text))patterns.push(/greater trochanter/i);
   if(/꼬리뼈/.test(text))patterns.push(/coccyx/i);
+  if(/(?:둘째목뼈|C2)/.test(text))patterns.push(/second cervical vertebra|C2 vertebra/i);
   if(/무릎뼈/.test(text))patterns.push(/(?:left |right )?patella/i);
   if(/발꿈치뼈/.test(text))patterns.push(/(?:left |right )?calcaneus/i);
   if(/눈확/.test(text))patterns.push(/(?:left |right )?orbit$/i);
@@ -595,12 +635,13 @@ function semanticConceptHits(text,side){
 }
 function relationTarget(point, side){
   const rels=relByPoint.get(point.id)||[]; const text=point.locationKo||''; let rt=regionTarget(text,side);
-  let acc=[0,0,0], wsum=0, specific=0, textLandmarkCount=0, broadAcc=[0,0,0], broadN=0;
+  let acc=[0,0,0], wsum=0, specific=0, textLandmarkCount=0, broadAcc=[0,0,0], broadN=0, vertebralSup=[];
   const sideSign=side==='left'?1:side==='right'?-1:0;
   for(const r of rels){
     const st=conceptStats(r.anatomyId,sideSign,lrAxis,leftSign)||conceptStats(r.anatomyId,0,lrAxis,leftSign); if(!st)continue;
     const en=anatomyKo[r.anatomyId]?.sourceNameEn || '';
     const isBroad=broad.test(en);
+    if(/(?:thoracic|cervical) vertebra$/i.test(en)) vertebralSup.push(st.center[supAxis]);
     if(r.relation==='surface-landmark'&&isBroad){
       for(let k=0;k<3;k++)broadAcc[k]+=st.center[k];
       broadN++;continue;
@@ -627,9 +668,11 @@ function relationTarget(point, side){
     const w=3.2;
     for(let k=0;k<3;k++)acc[k]+=hit.st.center[k]*w;
     wsum+=w;textLandmarkCount++;
+    const en=anatomyKo[hit.id]?.sourceNameEn||'';
+    if(/(?:thoracic|cervical) vertebra$/i.test(en)) vertebralSup.push(hit.st.center[supAxis]);
   }
   const blended=wsum ? (()=>{const g=acc.map(v=>v/wsum),alpha=specific>=2?.82:.68;return g.map((v,i)=>v*alpha+rt[i]*(1-alpha));})() : [...rt];
-  blended[supAxis]=rt[supAxis];
+  blended[supAxis]=vertebralSup.length ? vertebralSup.reduce((a,b)=>a+b,0)/vertebralSup.length : rt[supAxis];
   const who=applyWhoConstraints(blended,text,side);
   return {target:who.target,specific,rels:rels.length,whoConstraints:who.count,textLandmarkCount};
 }
