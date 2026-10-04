@@ -8,12 +8,12 @@ const acupoints=readJson('public/knowledge/acupoints.json');
 const sha256=s=>crypto.createHash('sha256').update(s,'utf8').digest('hex');
 
 const REGION_RULES=[
- ['head',/머리|두피|이마|눈썹|눈구석|눈확|코|인중|입술|턱|귀|관자|꼭지돌기|뒤통수/],
+ ['head',/머리|두피|얼굴|이마|눈썹|눈구석|눈확|코|인중|입술|턱|귀|관자|꼭지돌기|뒤통수/],
  ['neck',/목|경부|목덜미/],
  ['chest',/가슴|흉부|갈비사이|젖꼭지/],
- ['abdomen',/배꼽|복부|아랫배|윗배|배 부위|명치/],
+ ['abdomen',/배꼽|복부|아랫배|윗배|가쪽배|배 부위|명치/],
  ['back',/등쪽|등 부위|등뼈|뒤정중선/],
- ['pelvis-perineum',/볼기|엉덩|엉치|회음|항문|음낭|대음순|두덩|골반/],
+ ['pelvis-perineum',/볼기|엉덩|엉치|회음|샅고랑|항문|음낭|대음순|두덩|골반/],
  ['shoulder',/어깨|견갑|빗장|쇄골/],
  ['upper-arm',/위팔|상완|겨드랑/],
  ['elbow',/팔꿈치|팔오금/],
