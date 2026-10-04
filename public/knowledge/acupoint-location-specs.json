@@ -77,7 +77,10 @@
           "text": "1 B-cun",
           "start": 64,
           "end": 71,
-          "direction": null
+          "direction": {
+            "id": "lateral",
+            "evidence": "가쪽"
+          }
         }
       ],
       "fractions": [],
@@ -188,8 +191,8 @@
           "start": 52,
           "end": 59,
           "direction": {
-            "id": "medial",
-            "evidence": "안쪽"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -3892,8 +3895,8 @@
           "start": 27,
           "end": 34,
           "direction": {
-            "id": "superior",
-            "evidence": "위쪽"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -4586,8 +4589,8 @@
           "start": 37,
           "end": 44,
           "direction": {
-            "id": "superior",
-            "evidence": "위로"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -4684,8 +4687,8 @@
           "start": 37,
           "end": 44,
           "direction": {
-            "id": "superior",
-            "evidence": "위로"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -4782,8 +4785,8 @@
           "start": 37,
           "end": 44,
           "direction": {
-            "id": "superior",
-            "evidence": "위로"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -4880,8 +4883,8 @@
           "start": 37,
           "end": 44,
           "direction": {
-            "id": "superior",
-            "evidence": "위로"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -4978,8 +4981,8 @@
           "start": 37,
           "end": 44,
           "direction": {
-            "id": "superior",
-            "evidence": "위로"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -5076,8 +5079,8 @@
           "start": 37,
           "end": 44,
           "direction": {
-            "id": "superior",
-            "evidence": "위로"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -8399,8 +8402,8 @@
           "start": 37,
           "end": 44,
           "direction": {
-            "id": "superior",
-            "evidence": "위로"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -11435,7 +11438,7 @@
           "end": 33,
           "direction": {
             "id": "superior",
-            "evidence": "위쪽"
+            "evidence": "위로"
           }
         }
       ],
@@ -11625,8 +11628,8 @@
           "start": 36,
           "end": 45,
           "direction": {
-            "id": "superior",
-            "evidence": "위로"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -11817,8 +11820,8 @@
           "start": 36,
           "end": 45,
           "direction": {
-            "id": "superior",
-            "evidence": "위로"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -14447,8 +14450,8 @@
           "start": 37,
           "end": 44,
           "direction": {
-            "id": "medial",
-            "evidence": "안쪽"
+            "id": "proximal",
+            "evidence": "몸쪽"
           }
         }
       ],
@@ -16910,8 +16913,8 @@
           "start": 32,
           "end": 41,
           "direction": {
-            "id": "lateral",
-            "evidence": "가쪽"
+            "id": "proximal",
+            "evidence": "몸쪽"
           }
         }
       ],
@@ -18452,8 +18455,8 @@
           "start": 37,
           "end": 46,
           "direction": {
-            "id": "superior",
-            "evidence": "위로"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -18550,8 +18553,8 @@
           "start": 37,
           "end": 46,
           "direction": {
-            "id": "superior",
-            "evidence": "위로"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -18648,8 +18651,8 @@
           "start": 37,
           "end": 46,
           "direction": {
-            "id": "superior",
-            "evidence": "위로"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -18746,8 +18749,8 @@
           "start": 37,
           "end": 46,
           "direction": {
-            "id": "superior",
-            "evidence": "위로"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -18844,8 +18847,8 @@
           "start": 37,
           "end": 46,
           "direction": {
-            "id": "superior",
-            "evidence": "위로"
+            "id": "lateral",
+            "evidence": "가쪽"
           }
         }
       ],
@@ -20993,8 +20996,8 @@
           "start": 25,
           "end": 32,
           "direction": {
-            "id": "posterior",
-            "evidence": "뒤쪽"
+            "id": "proximal",
+            "evidence": "몸쪽"
           }
         }
       ],
@@ -21278,7 +21281,7 @@
           "end": 42,
           "direction": {
             "id": "inferior",
-            "evidence": "아래쪽"
+            "evidence": "아래로"
           }
         }
       ],
@@ -25079,8 +25082,8 @@
           "start": 37,
           "end": 44,
           "direction": {
-            "id": "posterior",
-            "evidence": "뒤쪽"
+            "id": "proximal",
+            "evidence": "몸쪽"
           }
         }
       ],
@@ -25165,8 +25168,8 @@
           "start": 37,
           "end": 44,
           "direction": {
-            "id": "anterior",
-            "evidence": "앞쪽"
+            "id": "proximal",
+            "evidence": "몸쪽"
           }
         }
       ],
@@ -25251,8 +25254,8 @@
           "start": 37,
           "end": 44,
           "direction": {
-            "id": "anterior",
-            "evidence": "앞쪽"
+            "id": "proximal",
+            "evidence": "몸쪽"
           }
         }
       ],
@@ -25337,8 +25340,8 @@
           "start": 37,
           "end": 44,
           "direction": {
-            "id": "anterior",
-            "evidence": "앞쪽"
+            "id": "proximal",
+            "evidence": "몸쪽"
           }
         }
       ],
@@ -25423,8 +25426,8 @@
           "start": 37,
           "end": 44,
           "direction": {
-            "id": "anterior",
-            "evidence": "앞쪽"
+            "id": "proximal",
+            "evidence": "몸쪽"
           }
         }
       ],
@@ -25803,8 +25806,8 @@
           "start": 32,
           "end": 41,
           "direction": {
-            "id": "lateral",
-            "evidence": "가쪽"
+            "id": "proximal",
+            "evidence": "몸쪽"
           }
         }
       ],
@@ -25892,8 +25895,8 @@
           "start": 32,
           "end": 41,
           "direction": {
-            "id": "lateral",
-            "evidence": "가쪽"
+            "id": "proximal",
+            "evidence": "몸쪽"
           }
         }
       ],
@@ -26198,8 +26201,8 @@
           "start": 39,
           "end": 46,
           "direction": {
-            "id": "medial",
-            "evidence": "안쪽"
+            "id": "proximal",
+            "evidence": "몸쪽"
           }
         }
       ],
@@ -26283,8 +26286,8 @@
           "start": 39,
           "end": 46,
           "direction": {
-            "id": "medial",
-            "evidence": "안쪽"
+            "id": "proximal",
+            "evidence": "몸쪽"
           }
         }
       ],
@@ -26622,8 +26625,8 @@
           "start": 22,
           "end": 29,
           "direction": {
-            "id": "medial",
-            "evidence": "안쪽"
+            "id": "distal",
+            "evidence": "먼쪽"
           }
         }
       ],
@@ -26714,8 +26717,8 @@
           "start": 22,
           "end": 29,
           "direction": {
-            "id": "medial",
-            "evidence": "안쪽"
+            "id": "distal",
+            "evidence": "먼쪽"
           }
         }
       ],
