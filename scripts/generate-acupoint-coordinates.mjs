@@ -107,6 +107,48 @@ function regionTarget(text, side){
   return t;
 }
 
+const cunY=extent[supAxis]/75;
+const ordinalIntercostal={첫째:1,둘째:2,셋째:3,넷째:4,다섯째:5,여섯째:6,일곱째:7};
+function applyWhoConstraints(input,text,side){
+  const t=[...input]; let count=0;
+  const sideSign=side==='left'?leftSign:side==='right'?-leftSign:0;
+  const lateral=text.match(/정중선[^,.]{0,45}?가쪽(?:으로)?\s*(\d+(?:\.\d+)?)\s*B-cun/);
+  if(lateral&&sideSign){
+    const n=Number(lateral[1]);
+    const frac=Math.min(.92,n/6*.84);
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*(extent[lrAxis]/2)*frac;
+    count++;
+  }
+  const nav=text.match(/배꼽(?:\s*중심)?(?:보다|에서)?\s*(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/);
+  if(nav){
+    const n=Number(nav[2]), navel=norm(supAxis,.455);
+    t[supAxis]=nav[1]==='위'?navel+n*cunY:navel-n*cunY;
+    count++;
+  }
+  const ic=text.match(/(첫째|둘째|셋째|넷째|다섯째|여섯째|일곱째)\s*갈비사이공간/);
+  if(ic){
+    const n=ordinalIntercostal[ic[1]];
+    t[supAxis]=norm(supAxis,.735-(n-1)*.027);
+    count++;
+  }
+  const refs=[
+    [/앞겨드랑주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .735],
+    [/손바닥쪽\s*손목주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .385],
+    [/손등쪽\s*손목주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .385],
+    [/팔오금주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .55],
+    [/무릎뼈바닥[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .215],
+    [/ST35[^,.]{0,35}?(위|아래)(?:쪽)?으로\s*(\d+(?:\.\d+)?)\s*B-cun/, .20],
+    [/팔꿈치머리\s*융기[^,.]{0,35}?(몸쪽|먼쪽|위|아래)으로\s*(\d+(?:\.\d+)?)\s*B-cun/, .55],
+  ];
+  for(const [re,base] of refs){
+    const m=text.match(re); if(!m)continue;
+    const n=Number(m[2]), up=(m[1]==='위'||m[1]==='몸쪽');
+    t[supAxis]=norm(supAxis,base)+(up?1:-1)*n*cunY; count++; break;
+  }
+  if(side==='midline'){t[lrAxis]=bodyCenter[lrAxis];count++;}
+  return {target:t,count};
+}
+
 const surfaceTriangles=[];
 for(const p of surfaceParts){
   const pos=positionsOfPart(p), ind=indicesOfPart(p);
@@ -172,25 +214,24 @@ function relationTarget(point, side){
   for(const r of rels){
     const st=conceptStats(r.anatomyId,sideSign,lrAxis,leftSign)||conceptStats(r.anatomyId,0,lrAxis,leftSign); if(!st)continue;
     const en=anatomyKo[r.anatomyId]?.sourceNameEn || '';
+    const isBroad=broad.test(en);
+    if(r.relation==='surface-landmark'&&isBroad) continue;
     const relationWeight={adjacent:4,between:4,'deep-to':3.5,overlies:3.5,'reference-landmark':3,'surface-landmark':1}[r.relation]||1;
     const specificity=Math.max(.25,Math.min(4,bodyDiag/(st.diag*9+1)));
-    const bw=broad.test(en)?0.35:1;
-    const w=relationWeight*specificity*bw;
+    const w=relationWeight*specificity;
     for(let k=0;k<3;k++)acc[k]+=st.center[k]*w; wsum+=w;
-    if(r.relation!=='surface-landmark'||bw===1)specific++;
+    specific++;
   }
-  if(wsum){
-    const g=acc.map(v=>v/wsum), alpha=specific?0.84:0.42;
-    return {target:g.map((v,i)=>v*alpha+rt[i]*(1-alpha)),specific,rels:rels.length};
-  }
-  return {target:rt,specific:0,rels:rels.length};
+  const blended=wsum ? (()=>{const g=acc.map(v=>v/wsum),alpha=specific>=2?.82:.68;return g.map((v,i)=>v*alpha+rt[i]*(1-alpha));})() : rt;
+  const who=applyWhoConstraints(blended,text,side);
+  return {target:who.target,specific,rels:rels.length,whoConstraints:who.count};
 }
 
 const results=[];
 for(const p of acupoints){
   const sides=p.laterality==='midline'?['midline']:['left','right'];
   for(const side of sides){
-    const {target,specific,rels}=relationTarget(p,side);
+    const {target,specific,rels,whoConstraints}=relationTarget(p,side);
     if(side==='left' && Math.sign((target[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) target[lrAxis]=bodyCenter[lrAxis]+leftSign*Math.abs(target[lrAxis]-bodyCenter[lrAxis]);
     if(side==='right' && Math.sign((target[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) target[lrAxis]=bodyCenter[lrAxis]-leftSign*Math.abs(target[lrAxis]-bodyCenter[lrAxis]);
     if(side==='midline') target[lrAxis]=bodyCenter[lrAxis];
@@ -199,11 +240,11 @@ for(const p of acupoints){
     const lateral=(projected.point[lrAxis]-bodyCenter[lrAxis]);
     const sideOk=side==='midline'?Math.abs(lateral)<=extent[lrAxis]*.12:Math.sign(lateral||0)===sideExpected;
     const surfaceOk=Number.isFinite(projected.distance);
-    const confidence=specific>=2?'high':specific===1?'moderate':'low';
+    const confidence=(specific>=2||whoConstraints>=2)?'high':(specific===1||whoConstraints===1)?'moderate':'low';
     results.push({
       acupointId:p.id,side,position:projected.point.map(v=>+v.toFixed(4)),model:'BodyParts3D-4.0',status:'validated',
       method:'WHO+B-landmarks+laterality+surface-projection',confidence,
-      validation:{surfaceProjected:surfaceOk,lateralityConsistent:sideOk,projectionDistance:+projected.distance.toFixed(4),surfacePartId:projected.part,relationCount:rels,specificLandmarkCount:specific},
+      validation:{surfaceProjected:surfaceOk,lateralityConsistent:sideOk,projectionDistance:+projected.distance.toFixed(4),surfacePartId:projected.part,relationCount:rels,specificLandmarkCount:specific,whoConstraintCount:whoConstraints},
       sourceIds:['WHO_ACUPOINT_2008','BODY_PARTS_3D_4','TARA_ACUPOINT_CURATED']
     });
   }
