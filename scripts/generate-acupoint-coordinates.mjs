@@ -368,6 +368,7 @@ function projectLockedToSurface(target,side,locks){
     else q=weightedClosestOnSegment(target,ints[0],ints[1],weights);
     if(side==='left' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign)continue;
     if(side==='right' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign)continue;
+    if(side==='midline' && Math.abs(q[lrAxis]-bodyCenter[lrAxis])>extent[lrAxis]*.035)continue;
     let score=0;
     for(let i=0;i<3;i++)score+=weights[i]*(q[i]-target[i])**2;
     const d=dist2(q,target);
@@ -376,10 +377,10 @@ function projectLockedToSurface(target,side,locks){
   return best?{point:best,distance:Math.sqrt(bestD),part:bestPart}:null;
 }
 function project(target, side, locks={}){
-  const locked=projectLockedToSurface(target,side,locks);
-  if(locked)return locked;
   const exact=constrainedSurfaceProjection(target,side,locks);
   if(exact)return exact;
+  const locked=projectLockedToSurface(target,side,locks);
+  if(locked)return locked;
   const base=target.map(v=>Math.floor(v/cell)); let best=null,bestD=Infinity,bestScore=Infinity,bestPart=null;
   const consider=T=>{
     const q=closestOnTri(target,...T.tri);
