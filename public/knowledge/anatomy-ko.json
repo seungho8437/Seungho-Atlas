@@ -1954,7 +1954,15 @@
     "legacyKo": "제1늑연골",
     "hanja": "第一肋軟骨",
     "sourceNameEn": "first costal cartilage",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "first + FMA7591"
   },
   "FMA7620": {
     "nameKo": "둘째갈비뼈",
@@ -1975,7 +1983,15 @@
     "legacyKo": "제3늑골",
     "hanja": "第三肋骨",
     "sourceNameEn": "third rib",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "third + FMA7574"
   },
   "FMA7646": {
     "sourceNameEn": "retinaculum",
@@ -1989,63 +2005,135 @@
     "legacyKo": "제2늑연골",
     "hanja": "第二肋軟骨",
     "sourceNameEn": "second costal cartilage",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "second + FMA7591"
   },
   "FMA7741": {
     "nameKo": "셋째갈비연골",
     "legacyKo": "제3늑연골",
     "hanja": "第三肋軟骨",
     "sourceNameEn": "third costal cartilage",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "third + FMA7591"
   },
   "FMA7749": {
     "nameKo": "넷째갈비뼈",
     "legacyKo": "제4늑골",
     "hanja": "第四肋骨",
     "sourceNameEn": "fourth rib",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "fourth + FMA7574"
   },
   "FMA7768": {
     "nameKo": "넷째갈비연골",
     "legacyKo": "제4늑연골",
     "hanja": "第四肋軟骨",
     "sourceNameEn": "fourth costal cartilage",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "fourth + FMA7591"
   },
   "FMA7776": {
     "nameKo": "다섯째갈비뼈",
     "legacyKo": "제5늑골",
     "hanja": "第五肋骨",
     "sourceNameEn": "fifth rib",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "fifth + FMA7574"
   },
   "FMA7795": {
     "nameKo": "다섯째갈비연골",
     "legacyKo": "제5늑연골",
     "hanja": "第五肋軟骨",
     "sourceNameEn": "fifth costal cartilage",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "fifth + FMA7591"
   },
   "FMA7822": {
     "nameKo": "여섯째갈비연골",
     "legacyKo": "제6늑연골",
     "hanja": "第六肋軟骨",
     "sourceNameEn": "sixth costal cartilage",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "sixth + FMA7591"
   },
   "FMA7830": {
     "nameKo": "일곱째갈비뼈",
     "legacyKo": "제7늑골",
     "hanja": "第七肋骨",
     "sourceNameEn": "seventh rib",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "seventh + FMA7574"
   },
   "FMA7849": {
     "nameKo": "일곱째갈비연골",
     "legacyKo": "제7늑연골",
     "hanja": "第七肋軟骨",
     "sourceNameEn": "seventh costal cartilage",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "seventh + FMA7591"
   },
   "FMA7857": {
     "nameKo": "오른첫째갈비뼈",
@@ -2210,14 +2298,30 @@
     "status": "derived",
     "nameKo": "여덟째갈비뼈",
     "legacyKo": "제8늑골",
-    "hanja": "第八肋骨"
+    "hanja": "第八肋骨",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "eighth + FMA7574"
   },
   "FMA8147": {
     "nameKo": "여섯째갈비뼈",
     "legacyKo": "제6늑골",
     "hanja": "第六肋骨",
     "sourceNameEn": "sixth rib",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "sixth + FMA7574"
   },
   "FMA8148": {
     "nameKo": "왼넷째갈비뼈",
@@ -2308,7 +2412,15 @@
     "status": "derived",
     "nameKo": "아홉째갈비뼈",
     "legacyKo": "제9늑골",
-    "hanja": "第九肋骨"
+    "hanja": "第九肋骨",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "ninth + FMA7574"
   },
   "FMA8364": {
     "sourceNameEn": "right ninth rib",
@@ -2329,7 +2441,15 @@
     "status": "derived",
     "nameKo": "열째갈비뼈",
     "legacyKo": "제10늑골",
-    "hanja": "第十肋骨"
+    "hanja": "第十肋骨",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "tenth + FMA7574"
   },
   "FMA8445": {
     "sourceNameEn": "right tenth rib",
@@ -2350,14 +2470,30 @@
     "status": "derived",
     "nameKo": "열한째갈비뼈",
     "legacyKo": "제11늑골",
-    "hanja": "第十一肋骨"
+    "hanja": "第十一肋骨",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "eleventh + FMA7574"
   },
   "FMA8515": {
     "sourceNameEn": "twelfth rib",
     "status": "derived",
     "nameKo": "열두째갈비뼈",
     "legacyKo": "제12늑골",
-    "hanja": "第十二肋骨"
+    "hanja": "第十二肋骨",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      28
+    ],
+    "nameKoDerivation": "twelfth + FMA7574"
   },
   "FMA8531": {
     "sourceNameEn": "right eleventh rib",
@@ -3810,35 +3946,75 @@
     "legacyKo": "제3경추골",
     "hanja": "第三頸椎骨",
     "sourceNameEn": "third cervical vertebra",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      26
+    ],
+    "nameKoDerivation": "third + FMA9915"
   },
   "FMA12522": {
     "nameKo": "넷째목척추뼈",
     "legacyKo": "제4경추골",
     "hanja": "第四頸椎骨",
     "sourceNameEn": "fourth cervical vertebra",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      26
+    ],
+    "nameKoDerivation": "fourth + FMA9915"
   },
   "FMA12523": {
     "nameKo": "다섯째목척추뼈",
     "legacyKo": "제5경추골",
     "hanja": "第五頸椎骨",
     "sourceNameEn": "fifth cervical vertebra",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      26
+    ],
+    "nameKoDerivation": "fifth + FMA9915"
   },
   "FMA12524": {
     "nameKo": "여섯째목척추뼈",
     "legacyKo": "제6경추골",
     "hanja": "第六頸椎骨",
     "sourceNameEn": "sixth cervical vertebra",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      26
+    ],
+    "nameKoDerivation": "sixth + FMA9915"
   },
   "FMA12525": {
     "nameKo": "일곱째목척추뼈",
     "legacyKo": "제7경추골",
     "hanja": "第七頸椎骨",
     "sourceNameEn": "seventh cervical vertebra",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      26
+    ],
+    "nameKoDerivation": "seventh + FMA9915"
   },
   "FMA12823": {
     "nameKo": "앞니",
@@ -3895,35 +4071,75 @@
     "legacyKo": "제1요추골",
     "hanja": "第一腰椎骨",
     "sourceNameEn": "first lumbar vertebra",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      27
+    ],
+    "nameKoDerivation": "first + FMA9921"
   },
   "FMA13073": {
     "nameKo": "둘째허리척추뼈",
     "legacyKo": "제2요추골",
     "hanja": "第二腰椎骨",
     "sourceNameEn": "second lumbar vertebra",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      27
+    ],
+    "nameKoDerivation": "second + FMA9921"
   },
   "FMA13074": {
     "nameKo": "셋째허리척추뼈",
     "legacyKo": "제3요추골",
     "hanja": "第三腰椎骨",
     "sourceNameEn": "third lumbar vertebra",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      27
+    ],
+    "nameKoDerivation": "third + FMA9921"
   },
   "FMA13075": {
     "nameKo": "넷째허리척추뼈",
     "legacyKo": "제4요추골",
     "hanja": "第四腰椎骨",
     "sourceNameEn": "fourth lumbar vertebra",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      27
+    ],
+    "nameKoDerivation": "fourth + FMA9921"
   },
   "FMA13076": {
     "nameKo": "다섯째허리척추뼈",
     "legacyKo": "제5요추골",
     "hanja": "第五腰椎骨",
     "sourceNameEn": "fifth lumbar vertebra",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "derived-from-KAA-component",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      27
+    ],
+    "nameKoDerivation": "fifth + FMA9921"
   },
   "FMA13087": {
     "nameKo": "대동맥구역",
