@@ -50,3 +50,8 @@ assert.match(sceneSource,/controls\.touches\.TWO=T\.TOUCH\.DOLLY_PAN/,'Mobile tw
 assert.match(sceneSource,/computeHairlineProposal/,'Hairline segmentation proposal code missing');
 assert.match(sceneSource,/focusLandmark/,'Landmark auto-focus code missing');
 assert.match(sceneSource,/p\.name!==['"]Skin['"]/,'Canonical anchor raycasts must be restricted to Skin');
+
+assert.match(sceneSource,/middle-finger-pip-radial-joint-surface-local/,'PIP detector must use local middle-finger surface search');
+assert.match(sceneSource,/middle-finger-dip-radial-joint-surface-local/,'DIP detector must use local middle-finger surface search');
+assert.match(sceneSource,/originOffset=Math\.max\(\.014,radialHalf\+\.01\)/,'Finger detector origin must remain local to the target digit');
+assert.match(sceneSource,/jointDistance>maxTravel\+\.006\|\|axialError>\.018/,'Finger detector must reject nonlocal or off-joint skin hits');

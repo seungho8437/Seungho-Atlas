@@ -193,19 +193,22 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
    const dip=landmarkId==='radial-crease-distal-interphalangeal-middle-finger';
    if(!pip&&!dip)return null;
    const a=findPhalanxPart(side,pip?'proximal':'middle'),b=findPhalanxPart(side,pip?'middle':'distal');if(a<0||b<0)return null;
-   const ca=centers[a].clone(),cb=centers[b].clone(),joint=ca.add(cb).multiplyScalar(.5);
+   const ca=centers[a].clone(),cb=centers[b].clone(),axis=cb.clone().sub(ca);if(axis.lengthSq()<1e-8)return null;axis.normalize();
+   const halfA=bounds[a].getSize(new T.Vector3()).multiplyScalar(.5),halfB=bounds[b].getSize(new T.Vector3()).multiplyScalar(.5);
+   const support=(half:T.Vector3,dir:T.Vector3)=>Math.abs(dir.x)*half.x+Math.abs(dir.y)*half.y+Math.abs(dir.z)*half.z;
+   const jointA=ca.clone().addScaledVector(axis,support(halfA,axis)),jointB=cb.clone().addScaledVector(axis,-support(halfB,axis)),joint=jointA.add(jointB).multiplyScalar(.5);
    let leftMean=0,rightMean=0,leftN=0,rightN=0;
    atlas.parts.forEach((p,i)=>{const txt=partSearchText(i);if(/left/.test(txt)){leftMean+=centers[i].x;leftN++;}if(/right/.test(txt)){rightMean+=centers[i].x;rightN++;}});
    const leftX=leftN?leftMean/leftN:-1,rightX=rightN?rightMean/rightN:1,leftPositive=leftX>rightX;
-   const outward=(side==='left'?(leftPositive?1:-1):(leftPositive?-1:1));
-   const radial=new T.Vector3(outward,0,0),outside=joint.clone().addScaledVector(radial,.18);
-   const detectorRay=new T.Raycaster(outside,radial.clone().multiplyScalar(-1),0,.36);
-   let hit=nearestSkinHit(detectorRay);
-   if(!hit){
-    outside.z+=.035;detectorRay.ray.origin.copy(outside);detectorRay.ray.direction.set(-outward,0,-.12).normalize();hit=nearestSkinHit(detectorRay);
-   }
-   if(!hit)return null;
-   return candidateFromHit(landmarkId,hit.partIndex,hit.hit,'specialized-detector',side,pip?'middle-finger-pip-radial-joint-surface':'middle-finger-dip-radial-joint-surface');
+   const outward=(side==='left'?(leftPositive?1:-1):(leftPositive?-1:1)),radial=new T.Vector3(outward,0,0);
+   const radialHalf=Math.max(halfA.x,halfB.x),originOffset=Math.max(.014,radialHalf+.01),maxTravel=Math.max(.035,radialHalf*2+.018);
+   const outside=joint.clone().addScaledVector(radial,originOffset),detectorRay=new T.Raycaster(outside,radial.clone().multiplyScalar(-1),0,maxTravel);
+   const hit=nearestSkinHit(detectorRay);if(!hit)return null;
+   const candidate=candidateFromHit(landmarkId,hit.partIndex,hit.hit,'specialized-detector',side,pip?'middle-finger-pip-radial-joint-surface-local':'middle-finger-dip-radial-joint-surface-local');
+   if(!candidate)return null;
+   const hitPoint=new T.Vector3().fromArray(candidate.position),jointDistance=hitPoint.distanceTo(joint),axialError=Math.abs(hitPoint.clone().sub(joint).dot(axis));
+   if(jointDistance>maxTravel+.006||axialError>.018)return null;
+   return {...candidate,detectorConfidence:'high'};
   };
   const computeLandmarkProposal=(landmarkId:string,side:LandmarkAnchorSide)=>computeFingerProposal(landmarkId,side)??computeHairlineProposal(landmarkId);
   const focusLandmark=(landmarkId:string,side:LandmarkAnchorSide,proposal:LandmarkAnchorCandidate|null)=>{
@@ -294,6 +297,7 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
    anchorMarker.visible=!!draft&&!!anchorTargetRef.current;proposalMarker.visible=!!proposalState&&!!anchorTargetRef.current;
    if(draft)anchorMarker.position.fromArray(draft.position);
    if(proposalState)proposalMarker.position.fromArray(proposalState.position);
+   const fingerQc=!!anchorTargetRef.current?.includes('middle-finger');anchorMarker.scale.setScalar(fingerQc?.55:1);proposalMarker.scale.setScalar(fingerQc?.5:1);
    controls.enableRotate=amount<.8;controls.mouseButtons.LEFT=amount<.8?T.MOUSE.ROTATE:T.MOUSE.PAN;controls.touches.ONE=amount<.8?T.TOUCH.ROTATE:T.TOUCH.PAN;ground.visible=platform.visible=ring.visible=innerRing.visible=amount<.5&&!s.isolate;markers.visible=amount>.75;const nextShowAcupoints=showAcupointsRef.current&&acupointCoordinates.length>0&&amount<.45&&!s.isolate&&!anchorTargetRef.current;if(nextShowAcupoints!==lastShowAcupoints){lastShowAcupoints=nextShowAcupoints;dirty=true;}acupointMarkers.visible=nextShowAcupoints;controls.autoRotate=s.rotate&&!s.isolate&&amount<.4&&!anchorTargetRef.current;controls.autoRotateSpeed=.65;controls.update();if(controls.autoRotate)dirty=true;
    if(dirty){renderer.render(scene,camera);targets=[];if(amount>.45){const hasSolid=atlas.parts.some((p,i)=>p.system!=='integumentary'&&data[i*4+3]>.5);atlas.parts.forEach((p,i)=>{if(data[i*4+3]<.5||(hasSolid&&p.system==='integumentary'))return;let left=Infinity,right=-Infinity,top=Infinity,bottom=-Infinity;for(let corner=0;corner<8;corner++){projected.set(p.bounds[(corner&1)?1:0][0]+data[i*4],p.bounds[(corner&2)?1:0][1]+data[i*4+1],p.bounds[(corner&4)?1:0][2]+data[i*4+2]).project(camera);const x=(projected.x+1)*el.clientWidth/2,y=(1-projected.y)*el.clientHeight/2;left=Math.min(left,x);right=Math.max(right,x);top=Math.min(top,y);bottom=Math.max(bottom,y);}projected.copy(centers[i]).add(new T.Vector3(data[i*4],data[i*4+1],data[i*4+2])).project(camera);if(projected.z< -1||projected.z>1)return;targets.push({index:i,x:(projected.x+1)*el.clientWidth/2,y:(1-projected.y)*el.clientHeight/2,left,right,top,bottom});});}dirty=false;}
 
