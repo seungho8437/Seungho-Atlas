@@ -764,10 +764,19 @@ function applyReviewedExceptionProjection(item){
       return true;
     }
   }
-  if(item.acupointId==='GB7' || item.acupointId==='GB8'){
+  if(item.acupointId==='GB7'){
     const target=[...item.validation.preProjectionTarget];
-    mark(target,{sup:true,ap:true},item.acupointId==='GB7'?'reviewed-GB7-temporal-hairline':'reviewed-GB8-temporal-hairline-1.5-cun');
+    mark(target,{sup:true,ap:true},'reviewed-GB7-temporal-hairline');
     return true;
+  }
+  if(item.acupointId==='GB8'){
+    const gb7=resultByKey.get('GB7:'+item.side);
+    if(gb7){
+      const target=[...gb7.position];
+      target[supAxis]+=1.5*cunY;
+      mark(target,{sup:true,ap:true},'reviewed-GB8-1.5-cun-superior-to-GB7-hairline-level');
+      return true;
+    }
   }
 
   if(item.acupointId==='ST43'){
