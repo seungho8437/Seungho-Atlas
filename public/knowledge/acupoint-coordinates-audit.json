@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T10:49:18.282Z",
+  "generatedAt": "2026-10-04T10:50:25.354Z",
   "logicalAcupoints": 361,
   "physicalCoordinates": 670,
   "expectedPhysicalCoordinates": 670,
@@ -22,14 +22,6 @@
       "TE2"
     ],
     [
-      "LI6",
-      "LI7"
-    ],
-    [
-      "LI6",
-      "LI7"
-    ],
-    [
       "ST5",
       "ST6"
     ],
@@ -38,14 +30,8 @@
       "ST6"
     ],
     [
-      "ST37",
-      "ST38",
-      "ST39"
-    ],
-    [
-      "ST37",
-      "ST38",
-      "ST39"
+      "ST36",
+      "ST40"
     ],
     [
       "SP2",
@@ -56,14 +42,6 @@
       "SP2",
       "SP3",
       "KI6"
-    ],
-    [
-      "SP6",
-      "SP7"
-    ],
-    [
-      "SP6",
-      "SP7"
     ],
     [
       "HT8",
@@ -189,13 +167,13 @@
     ]
   ],
   "confidenceCounts": {
-    "moderate": 335,
-    "low": 50,
-    "high": 285
+    "moderate": 337,
+    "high": 289,
+    "low": 44
   },
   "projectionDistance": {
     "max": 0.099,
-    "mean": 0.03039477611940299
+    "mean": 0.030204179104477626
   },
   "axes": {
     "source": "native BodyParts3D 4.0 atlas coordinates",
