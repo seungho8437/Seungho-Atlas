@@ -1,7 +1,7 @@
 {
   "version": 1,
   "model": "BodyParts3D-4.0",
-  "generatedAt": "2026-10-04T11:34:50.920Z",
+  "generatedAt": "2026-10-04T11:37:52.929Z",
   "coordinateFrame": {
     "source": "native BodyParts3D 4.0 atlas coordinates",
     "axes": {
@@ -19319,9 +19319,9 @@
       "acupointId": "GB42",
       "side": "left",
       "position": [
-        0.1092,
+        0.1107,
         0.0807,
-        -0.0341
+        -0.0429
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -19330,10 +19330,10 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0437,
+        "projectionDistance": 0.0535,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.1092,
+          0.1212,
           0.0807,
           0.0096
         ],
@@ -19341,7 +19341,7 @@
         "specificLandmarkCount": 3,
         "whoConstraintCount": 8,
         "whoTextLandmarkCount": 2,
-        "reviewedException": "reviewed-GB42-between-GB40-GB43"
+        "reviewedException": "reviewed-GB42-lateral-to-ST43"
       },
       "sourceIds": [
         "WHO_ACUPOINT_2008",
@@ -19353,9 +19353,9 @@
       "acupointId": "GB42",
       "side": "right",
       "position": [
-        -0.1096,
+        -0.1119,
         0.0807,
-        -0.0309
+        -0.0425
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -19364,10 +19364,10 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0422,
+        "projectionDistance": 0.0549,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.1096,
+          -0.1234,
           0.0807,
           0.0112
         ],
@@ -19375,7 +19375,7 @@
         "specificLandmarkCount": 3,
         "whoConstraintCount": 8,
         "whoTextLandmarkCount": 2,
-        "reviewedException": "reviewed-GB42-between-GB40-GB43"
+        "reviewedException": "reviewed-GB42-lateral-to-ST43"
       },
       "sourceIds": [
         "WHO_ACUPOINT_2008",

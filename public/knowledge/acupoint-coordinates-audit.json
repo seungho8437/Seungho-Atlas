@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T11:34:50.923Z",
+  "generatedAt": "2026-10-04T11:37:52.932Z",
   "logicalAcupoints": 361,
   "physicalCoordinates": 670,
   "expectedPhysicalCoordinates": 670,
@@ -14,7 +14,7 @@
   },
   "projectionDistance": {
     "max": 0.4965,
-    "mean": 0.05101164179104473
+    "mean": 0.05104522388059697
   },
   "axes": {
     "source": "native BodyParts3D 4.0 atlas coordinates",
