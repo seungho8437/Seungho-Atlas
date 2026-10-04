@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "landmarkCount": 32,
+  "statusCounts": {
+    "constructed-surface-geometry": 13,
+    "resolved-atlas-geometry": 6,
+    "constructed-atlas-geometry": 3,
+    "manual-or-specialized-detection-required": 9,
+    "constructed-surface-region": 1
+  },
+  "resolvedOrConstructed": 23,
+  "unresolved": 9,
+  "invariants": {
+    "noAnthropometricGuessForHairlineNippleUmbilicus": true,
+    "allConstructedCoordinatesFinite": true,
+    "derivedSoftLandmarksLabeledByConfidence": true,
+    "unresolvedLandmarksHaveNoFabricatedGeometry": true
+  }
+}

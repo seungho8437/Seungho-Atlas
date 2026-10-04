@@ -1,0 +1,763 @@
+{
+  "schemaVersion": 1,
+  "coordinateFrame": {
+    "superiorInferiorAxis": 1,
+    "leftRightAxis": 0,
+    "anteriorPosteriorAxis": 2,
+    "leftSign": 1,
+    "anteriorSign": 1
+  },
+  "landmarks": [
+    {
+      "landmarkId": "anterior-axillary-fold",
+      "status": "constructed-surface-geometry",
+      "geometry": {
+        "type": "bilateral-surface-landmark",
+        "sides": {
+          "left": {
+            "status": "constructed",
+            "position": [
+              0.15321199595928192,
+              1.3815412521362305,
+              0.035110000520944595
+            ],
+            "method": "proximal-humerus-level surface projection",
+            "aspect": "anterior"
+          },
+          "right": {
+            "status": "constructed",
+            "position": [
+              -0.16339200735092163,
+              1.3652712106704712,
+              0.03736700117588043
+            ],
+            "method": "proximal-humerus-level surface projection",
+            "aspect": "anterior"
+          }
+        }
+      },
+      "confidence": "moderate",
+      "construction": "proximal-humerus level surface fold proxy"
+    },
+    {
+      "landmarkId": "apex-of-patella",
+      "status": "resolved-atlas-geometry",
+      "geometry": {
+        "type": "bilateral-feature",
+        "sides": {
+          "left": {
+            "status": "exact",
+            "conceptId": "FMA24487",
+            "conceptName": "left patella",
+            "feature": "inferior",
+            "position": [
+              0.08358640223741531,
+              0.4396081864833832,
+              0.009895999915897846
+            ]
+          },
+          "right": {
+            "status": "exact",
+            "conceptId": "FMA24486",
+            "conceptName": "right patella",
+            "feature": "inferior",
+            "position": [
+              -0.08472660183906555,
+              0.4395971894264221,
+              0.008371000178158283
+            ]
+          }
+        }
+      },
+      "definition": {
+        "kind": "bilateral-concept-feature",
+        "aliasesLeft": [
+          "left patella"
+        ],
+        "aliasesRight": [
+          "right patella"
+        ],
+        "feature": "inferior"
+      }
+    },
+    {
+      "landmarkId": "base-of-patella",
+      "status": "resolved-atlas-geometry",
+      "geometry": {
+        "type": "bilateral-feature",
+        "sides": {
+          "left": {
+            "status": "exact",
+            "conceptId": "FMA24487",
+            "conceptName": "left patella",
+            "feature": "superior",
+            "position": [
+              0.08558809757232666,
+              0.47887420654296875,
+              0.013186999596655369
+            ]
+          },
+          "right": {
+            "status": "exact",
+            "conceptId": "FMA24486",
+            "conceptName": "right patella",
+            "feature": "superior",
+            "position": [
+              -0.08526229858398438,
+              0.47890719771385193,
+              0.012672999873757362
+            ]
+          }
+        }
+      },
+      "definition": {
+        "kind": "bilateral-concept-feature",
+        "aliasesLeft": [
+          "left patella"
+        ],
+        "aliasesRight": [
+          "right patella"
+        ],
+        "feature": "superior"
+      }
+    },
+    {
+      "landmarkId": "center-popliteal-fossa",
+      "status": "constructed-surface-geometry",
+      "geometry": {
+        "type": "bilateral-surface-landmark",
+        "sides": {
+          "left": {
+            "status": "constructed",
+            "position": [
+              0.11694200336933136,
+              0.44768020510673523,
+              0.004513000138103962
+            ],
+            "method": "joint-level surface projection",
+            "aspect": "posterior"
+          },
+          "right": {
+            "status": "constructed",
+            "position": [
+              -0.06911259889602661,
+              0.4316631853580475,
+              0.017479000613093376
+            ],
+            "method": "joint-level surface projection",
+            "aspect": "posterior"
+          }
+        }
+      },
+      "confidence": "moderate"
+    },
+    {
+      "landmarkId": "cubital-crease",
+      "status": "constructed-surface-geometry",
+      "geometry": {
+        "type": "bilateral-surface-landmark",
+        "sides": {
+          "left": {
+            "status": "constructed",
+            "position": [
+              0.14215900003910065,
+              1.1434011459350586,
+              0.03876499831676483
+            ],
+            "method": "joint-level surface projection",
+            "aspect": "anterior"
+          },
+          "right": {
+            "status": "constructed",
+            "position": [
+              -0.13561099767684937,
+              1.1039111614227295,
+              0.03626000136137009
+            ],
+            "method": "joint-level surface projection",
+            "aspect": "anterior"
+          }
+        }
+      },
+      "confidence": "moderate"
+    },
+    {
+      "landmarkId": "dorsal-wrist-crease",
+      "status": "constructed-surface-geometry",
+      "geometry": {
+        "type": "bilateral-surface-landmark",
+        "sides": {
+          "left": {
+            "status": "constructed",
+            "position": [
+              0.2576870024204254,
+              0.878267228603363,
+              -0.002426000079140067
+            ],
+            "method": "joint-level surface projection",
+            "aspect": "posterior"
+          },
+          "right": {
+            "status": "constructed",
+            "position": [
+              -0.2583250105381012,
+              0.8783591985702515,
+              -0.002612499985843897
+            ],
+            "method": "joint-level surface projection",
+            "aspect": "posterior"
+          }
+        }
+      },
+      "confidence": "moderate"
+    },
+    {
+      "landmarkId": "glabella",
+      "status": "constructed-surface-geometry",
+      "geometry": {
+        "type": "bone-guided-surface-point",
+        "position": [
+          -0.0043836599215865135,
+          1.6300312280654907,
+          0.08176399767398834
+        ]
+      },
+      "confidence": "moderate",
+      "construction": "inferomedial frontal-bone guided anterior surface projection"
+    },
+    {
+      "landmarkId": "gluteal-fold",
+      "status": "constructed-surface-geometry",
+      "geometry": {
+        "type": "bilateral-surface-landmark",
+        "sides": {
+          "left": {
+            "status": "constructed",
+            "position": [
+              0.149044007062912,
+              0.8273711800575256,
+              -0.05646330118179321
+            ],
+            "method": "proximal-femur-level posterior surface projection"
+          },
+          "right": {
+            "status": "constructed",
+            "position": [
+              -0.15050700306892395,
+              0.8291882276535034,
+              -0.056237898766994476
+            ],
+            "method": "proximal-femur-level posterior surface projection"
+          }
+        }
+      },
+      "confidence": "moderate",
+      "construction": "proximal-femur posterior surface fold proxy"
+    },
+    {
+      "landmarkId": "inferior-border-medial-condyle-tibia",
+      "status": "resolved-atlas-geometry",
+      "geometry": {
+        "type": "bilateral-feature",
+        "sides": {
+          "left": {
+            "status": "unique-fuzzy",
+            "conceptId": "FMA24476",
+            "conceptName": "tibia",
+            "feature": "inferior",
+            "position": [
+              0.05520709976553917,
+              0.07201586663722992,
+              -0.01443410012871027
+            ]
+          },
+          "right": {
+            "status": "unique-fuzzy",
+            "conceptId": "FMA24476",
+            "conceptName": "tibia",
+            "feature": "inferior",
+            "position": [
+              0.05520709976553917,
+              0.07201586663722992,
+              -0.01443410012871027
+            ]
+          }
+        }
+      },
+      "definition": {
+        "kind": "bilateral-concept-feature",
+        "aliasesLeft": [
+          "left medial condyle of tibia",
+          "medial condyle of left tibia"
+        ],
+        "aliasesRight": [
+          "right medial condyle of tibia",
+          "medial condyle of right tibia"
+        ],
+        "feature": "inferior"
+      }
+    },
+    {
+      "landmarkId": "lateral-prominence-greater-trochanter",
+      "status": "constructed-atlas-geometry",
+      "geometry": {
+        "type": "bilateral-bone-feature",
+        "sides": {
+          "left": {
+            "status": "resolved",
+            "conceptId": "FMA24475",
+            "conceptName": "left femur",
+            "position": [
+              0.15023699402809143,
+              0.8621141910552979,
+              -0.023910699412226677
+            ]
+          },
+          "right": {
+            "status": "resolved",
+            "conceptId": "FMA24474",
+            "conceptName": "right femur",
+            "position": [
+              -0.14996400475502014,
+              0.8606011867523193,
+              -0.023131700232625008
+            ]
+          }
+        }
+      },
+      "confidence": "moderate",
+      "construction": "model-specific bone extremum constrained to relevant segment"
+    },
+    {
+      "landmarkId": "left-anterior-hairline-corner",
+      "status": "manual-or-specialized-detection-required",
+      "geometry": null,
+      "definition": {
+        "kind": "derived-soft-landmark",
+        "construction": "hairline-corner",
+        "side": "left"
+      },
+      "confidence": "unresolved",
+      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+    },
+    {
+      "landmarkId": "left-mastoid-process",
+      "status": "constructed-surface-geometry",
+      "geometry": {
+        "type": "bone-guided-surface-point",
+        "position": [
+          0.0514908991754055,
+          1.5614612102508545,
+          -0.058374401181936264
+        ]
+      },
+      "confidence": "moderate",
+      "construction": "inferoposterior temporal-bone guided surface projection"
+    },
+    {
+      "landmarkId": "left-medial-border-scapula",
+      "status": "resolved-atlas-geometry",
+      "geometry": {
+        "type": "concept-feature",
+        "conceptId": "FMA13396",
+        "conceptName": "left scapula",
+        "feature": "medial",
+        "side": "left",
+        "position": [
+          0.05710789933800697,
+          1.3778811693191528,
+          -0.08884160220623016
+        ],
+        "match": "exact"
+      },
+      "definition": {
+        "kind": "concept-feature",
+        "aliases": [
+          "left scapula"
+        ],
+        "feature": "medial",
+        "side": "left"
+      }
+    },
+    {
+      "landmarkId": "left-nipple-center",
+      "status": "manual-or-specialized-detection-required",
+      "geometry": null,
+      "definition": {
+        "kind": "concept-or-surface-feature",
+        "aliases": [
+          "left nipple",
+          "nipple of left breast"
+        ],
+        "feature": "center",
+        "side": "left"
+      },
+      "confidence": "unresolved",
+      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+    },
+    {
+      "landmarkId": "midpoint-anterior-hairline",
+      "status": "manual-or-specialized-detection-required",
+      "geometry": null,
+      "definition": {
+        "kind": "derived-soft-landmark",
+        "construction": "hairline-midpoint",
+        "reason": "Hairline is a surface landmark not reliably represented as a discrete BodyParts3D concept."
+      },
+      "confidence": "unresolved",
+      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+    },
+    {
+      "landmarkId": "midpoint-posterior-hairline",
+      "status": "manual-or-specialized-detection-required",
+      "geometry": null,
+      "definition": {
+        "kind": "derived-soft-landmark",
+        "construction": "hairline-midpoint",
+        "reason": "Hairline is a surface landmark not reliably represented as a discrete BodyParts3D concept."
+      },
+      "confidence": "unresolved",
+      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+    },
+    {
+      "landmarkId": "midpoint-xiphisternal-junction",
+      "status": "constructed-surface-geometry",
+      "geometry": {
+        "type": "bone-guided-surface-point",
+        "position": [
+          -0.007325700018554926,
+          1.2653712034225464,
+          0.11114799976348877
+        ]
+      },
+      "confidence": "high",
+      "construction": "superior xiphoid guided anterior surface projection"
+    },
+    {
+      "landmarkId": "palmar-wrist-crease",
+      "status": "constructed-surface-geometry",
+      "geometry": {
+        "type": "bilateral-surface-landmark",
+        "sides": {
+          "left": {
+            "status": "constructed",
+            "position": [
+              0.2588669955730438,
+              0.8945121765136719,
+              0.03639199957251549
+            ],
+            "method": "joint-level surface projection",
+            "aspect": "anterior"
+          },
+          "right": {
+            "status": "constructed",
+            "position": [
+              -0.2561190128326416,
+              0.8913851976394653,
+              0.03786100074648857
+            ],
+            "method": "joint-level surface projection",
+            "aspect": "anterior"
+          }
+        }
+      },
+      "confidence": "moderate"
+    },
+    {
+      "landmarkId": "popliteal-crease",
+      "status": "constructed-surface-geometry",
+      "geometry": {
+        "type": "bilateral-surface-landmark",
+        "sides": {
+          "left": {
+            "status": "constructed",
+            "position": [
+              0.11694200336933136,
+              0.44768020510673523,
+              0.004513000138103962
+            ],
+            "method": "joint-level surface projection",
+            "aspect": "posterior"
+          },
+          "right": {
+            "status": "constructed",
+            "position": [
+              -0.06911259889602661,
+              0.4316631853580475,
+              0.017479000613093376
+            ],
+            "method": "joint-level surface projection",
+            "aspect": "posterior"
+          }
+        }
+      },
+      "confidence": "moderate"
+    },
+    {
+      "landmarkId": "posterior-axillary-fold",
+      "status": "constructed-surface-geometry",
+      "geometry": {
+        "type": "bilateral-surface-landmark",
+        "sides": {
+          "left": {
+            "status": "constructed",
+            "position": [
+              0.21280799806118011,
+              1.3981212377548218,
+              -0.011446700431406498
+            ],
+            "method": "proximal-humerus-level surface projection",
+            "aspect": "posterior"
+          },
+          "right": {
+            "status": "constructed",
+            "position": [
+              -0.1977970004081726,
+              1.411601185798645,
+              -0.008754399605095387
+            ],
+            "method": "proximal-humerus-level surface projection",
+            "aspect": "posterior"
+          }
+        }
+      },
+      "confidence": "moderate",
+      "construction": "proximal-humerus level surface fold proxy"
+    },
+    {
+      "landmarkId": "prominence-lateral-malleolus",
+      "status": "constructed-atlas-geometry",
+      "geometry": {
+        "type": "bilateral-bone-feature",
+        "sides": {
+          "left": {
+            "status": "resolved",
+            "conceptId": "FMA24481",
+            "conceptName": "left fibula",
+            "position": [
+              0.09878209978342056,
+              0.0531327985227108,
+              -0.044682398438453674
+            ]
+          },
+          "right": {
+            "status": "resolved",
+            "conceptId": "FMA24480",
+            "conceptName": "right fibula",
+            "position": [
+              -0.0973862037062645,
+              0.05283129960298538,
+              -0.04576769843697548
+            ]
+          }
+        }
+      },
+      "confidence": "moderate",
+      "construction": "model-specific bone extremum constrained to relevant segment"
+    },
+    {
+      "landmarkId": "prominence-medial-malleolus",
+      "status": "constructed-atlas-geometry",
+      "geometry": {
+        "type": "bilateral-bone-feature",
+        "sides": {
+          "left": {
+            "status": "resolved",
+            "conceptId": "FMA24478",
+            "conceptName": "left tibia",
+            "position": [
+              0.044721800833940506,
+              0.08634377270936966,
+              -0.020071599632501602
+            ]
+          },
+          "right": {
+            "status": "resolved",
+            "conceptId": "FMA24477",
+            "conceptName": "right tibia",
+            "position": [
+              -0.04493439942598343,
+              0.08590435236692429,
+              -0.018172800540924072
+            ]
+          }
+        }
+      },
+      "confidence": "moderate",
+      "construction": "model-specific bone extremum constrained to relevant segment"
+    },
+    {
+      "landmarkId": "radial-crease-distal-interphalangeal-middle-finger",
+      "status": "manual-or-specialized-detection-required",
+      "geometry": null,
+      "definition": {
+        "kind": "derived-soft-landmark",
+        "construction": "finger-crease"
+      },
+      "confidence": "unresolved",
+      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+    },
+    {
+      "landmarkId": "radial-crease-proximal-interphalangeal-middle-finger",
+      "status": "manual-or-specialized-detection-required",
+      "geometry": null,
+      "definition": {
+        "kind": "derived-soft-landmark",
+        "construction": "finger-crease"
+      },
+      "confidence": "unresolved",
+      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+    },
+    {
+      "landmarkId": "right-anterior-hairline-corner",
+      "status": "manual-or-specialized-detection-required",
+      "geometry": null,
+      "definition": {
+        "kind": "derived-soft-landmark",
+        "construction": "hairline-corner",
+        "side": "right"
+      },
+      "confidence": "unresolved",
+      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+    },
+    {
+      "landmarkId": "right-mastoid-process",
+      "status": "constructed-surface-geometry",
+      "geometry": {
+        "type": "bone-guided-surface-point",
+        "position": [
+          -0.05440479889512062,
+          1.5654511451721191,
+          -0.05897130072116852
+        ]
+      },
+      "confidence": "moderate",
+      "construction": "inferoposterior temporal-bone guided surface projection"
+    },
+    {
+      "landmarkId": "right-medial-border-scapula",
+      "status": "resolved-atlas-geometry",
+      "geometry": {
+        "type": "concept-feature",
+        "conceptId": "FMA13395",
+        "conceptName": "right scapula",
+        "feature": "medial",
+        "side": "right",
+        "position": [
+          -0.05706530064344406,
+          1.3778412342071533,
+          -0.08855120092630386
+        ],
+        "match": "exact"
+      },
+      "definition": {
+        "kind": "concept-feature",
+        "aliases": [
+          "right scapula"
+        ],
+        "feature": "medial",
+        "side": "right"
+      }
+    },
+    {
+      "landmarkId": "right-nipple-center",
+      "status": "manual-or-specialized-detection-required",
+      "geometry": null,
+      "definition": {
+        "kind": "concept-or-surface-feature",
+        "aliases": [
+          "right nipple",
+          "nipple of right breast"
+        ],
+        "feature": "center",
+        "side": "right"
+      },
+      "confidence": "unresolved",
+      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+    },
+    {
+      "landmarkId": "sole",
+      "status": "constructed-surface-region",
+      "geometry": {
+        "type": "bilateral-surface-region-anchor",
+        "sides": {
+          "left": {
+            "status": "constructed",
+            "position": [
+              0.13936500251293182,
+              1.3877787807814457e-17,
+              0.0746769979596138
+            ],
+            "method": "inferior plantar skin extremum"
+          },
+          "right": {
+            "status": "constructed",
+            "position": [
+              -0.13708999752998352,
+              0.000028000000384054147,
+              0.07323800027370453
+            ],
+            "method": "inferior plantar skin extremum"
+          }
+        }
+      },
+      "confidence": "high",
+      "construction": "inferior plantar skin extremum"
+    },
+    {
+      "landmarkId": "superior-border-pubic-symphysis",
+      "status": "constructed-surface-geometry",
+      "geometry": {
+        "type": "bone-guided-surface-point",
+        "position": [
+          0.08211909979581833,
+          1.0090532302856445,
+          0.08333799988031387
+        ]
+      },
+      "confidence": "moderate",
+      "construction": "superomedial pubic-bone guided anterior surface projection"
+    },
+    {
+      "landmarkId": "suprasternal-notch",
+      "status": "resolved-atlas-geometry",
+      "geometry": {
+        "type": "concept-feature",
+        "conceptId": "FMA7485",
+        "conceptName": "sternum",
+        "feature": "center",
+        "side": null,
+        "position": [
+          0.0009273688491848132,
+          1.3162882934480313,
+          0.08471770976887753
+        ],
+        "match": "unique-fuzzy"
+      },
+      "definition": {
+        "kind": "concept-feature",
+        "aliases": [
+          "jugular notch of sternum",
+          "jugular notch",
+          "suprasternal notch"
+        ],
+        "feature": "center"
+      }
+    },
+    {
+      "landmarkId": "umbilicus-center",
+      "status": "manual-or-specialized-detection-required",
+      "geometry": null,
+      "definition": {
+        "kind": "concept-or-surface-feature",
+        "aliases": [
+          "umbilicus",
+          "navel"
+        ],
+        "feature": "center"
+      },
+      "confidence": "unresolved",
+      "constructionNote": "Not recoverable reliably from the current unsegmented BodyParts3D geometry without inventing anthropometric coordinates."
+    }
+  ]
+}
