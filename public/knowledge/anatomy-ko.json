@@ -60,7 +60,8 @@
     "nameKoSourcePages": [
       113
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA3768": {
     "nameKo": "대동맥활",
@@ -74,7 +75,8 @@
     "nameKoSourcePages": [
       114
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA3784": {
     "nameKo": "내림대동맥",
@@ -88,7 +90,8 @@
     "nameKoSourcePages": [
       124
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA3789": {
     "nameKo": "배대동맥",
@@ -102,7 +105,8 @@
     "nameKoSourcePages": [
       125
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA3802": {
     "nameKo": "오른관상동맥줄기",
@@ -263,7 +267,8 @@
     "nameKoSourcePages": [
       114
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA3941": {
     "nameKo": "오른온목동맥",
@@ -293,7 +298,8 @@
       117,
       120
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA3949": {
     "nameKo": "오른속목동맥",
@@ -323,7 +329,8 @@
     "nameKoSourcePages": [
       121
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA3953": {
     "nameKo": "오른빗장밑동맥",
@@ -352,7 +359,8 @@
     "nameKoSourcePages": [
       121
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA3958": {
     "nameKo": "오른척추동맥",
@@ -381,7 +389,8 @@
     "nameKoSourcePages": [
       122
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA3969": {
     "nameKo": "오른속가슴동맥",
@@ -425,7 +434,8 @@
     "nameKoSourcePages": [
       122
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA3992": {
     "sourceNameEn": "right thyrocervical trunk",
@@ -446,7 +456,8 @@
     "nameKoSourcePages": [
       122
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA4057": {
     "nameKo": "오른등쪽어깨뼈동맥",
@@ -616,7 +627,8 @@
     "nameKoSourcePages": [
       124
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4613": {
     "sourceNameEn": "subcostal artery",
@@ -630,7 +642,8 @@
     "nameKoSourcePages": [
       124
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4634": {
     "sourceNameEn": "right subcostal artery",
@@ -696,7 +709,8 @@
     "nameKoSourcePages": [
       130
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4707": {
     "sourceNameEn": "great cardiac vein",
@@ -710,7 +724,8 @@
     "nameKoSourcePages": [
       130
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4708": {
     "sourceNameEn": "left marginal vein",
@@ -724,7 +739,8 @@
     "nameKoSourcePages": [
       130
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA4712": {
     "nameKo": "왼심실뒤정맥",
@@ -738,7 +754,8 @@
     "nameKoSourcePages": [
       130
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4713": {
     "nameKo": "중간심장정맥",
@@ -752,7 +769,8 @@
     "nameKoSourcePages": [
       130
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4714": {
     "sourceNameEn": "small cardiac vein",
@@ -766,7 +784,8 @@
     "nameKoSourcePages": [
       130
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4716": {
     "sourceNameEn": "right marginal vein",
@@ -780,7 +799,8 @@
     "nameKoSourcePages": [
       130
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA4720": {
     "sourceNameEn": "superior vena cava",
@@ -794,7 +814,8 @@
     "nameKoSourcePages": [
       132
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4723": {
     "sourceNameEn": "brachiocephalic vein",
@@ -808,7 +829,8 @@
     "nameKoSourcePages": [
       132
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4724": {
     "sourceNameEn": "internal jugular vein",
@@ -822,7 +844,8 @@
     "nameKoSourcePages": [
       132
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4725": {
     "nameKo": "빗장밑정맥",
@@ -836,7 +859,8 @@
     "nameKoSourcePages": [
       137
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4729": {
     "nameKo": "속가슴정맥",
@@ -850,7 +874,8 @@
     "nameKoSourcePages": [
       132
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4731": {
     "nameKo": "위배벽정맥",
@@ -864,7 +889,8 @@
     "nameKoSourcePages": [
       132
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA4732": {
     "sourceNameEn": "musculophrenic vein",
@@ -878,7 +904,8 @@
     "nameKoSourcePages": [
       132
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA4751": {
     "sourceNameEn": "right brachiocephalic vein",
@@ -892,7 +919,8 @@
     "nameKoSourcePages": [
       132
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4754": {
     "sourceNameEn": "right internal jugular vein",
@@ -951,7 +979,8 @@
     "nameKoSourcePages": [
       132
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4762": {
     "sourceNameEn": "left internal jugular vein",
@@ -1055,7 +1084,8 @@
     "nameKoSourcePages": [
       132
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4838": {
     "sourceNameEn": "azygos vein",
@@ -1069,7 +1099,8 @@
     "nameKoSourcePages": [
       137
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4843": {
     "nameKo": "오른오름허리정맥",
@@ -1114,7 +1145,8 @@
     "nameKoSourcePages": [
       137
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4944": {
     "sourceNameEn": "hemiazygos vein",
@@ -1128,7 +1160,8 @@
     "nameKoSourcePages": [
       137
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA4950": {
     "nameKo": "왼오름허리정맥",
@@ -1173,7 +1206,8 @@
     "nameKoSourcePages": [
       137
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA5018": {
     "nameKo": "뼈기관",
@@ -1230,7 +1264,8 @@
     "nameKoSourcePages": [
       187
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA5884": {
     "nameKo": "신경절",
@@ -1242,10 +1277,10 @@
       "KAA_TERMINOLOGY_6"
     ],
     "nameKoSourcePages": [
-      186,
-      201
+      186
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA5889": {
     "sourceNameEn": "autonomic ganglion",
@@ -1259,7 +1294,8 @@
     "nameKoSourcePages": [
       186
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA5894": {
     "sourceNameEn": "parasympathetic ganglion",
@@ -1273,7 +1309,8 @@
     "nameKoSourcePages": [
       186
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA5895": {
     "sourceNameEn": "cranial parasympathetic ganglion",
@@ -1315,7 +1352,8 @@
     "nameKoSourcePages": [
       200
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7037": {
     "nameKo": "섬모체신경절가지",
@@ -1344,7 +1382,8 @@
     "nameKoSourcePages": [
       200
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA7131": {
     "nameKo": "식도",
@@ -1361,7 +1400,8 @@
     "nameKoSourcePages": [
       75
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7145": {
     "nameKo": "막기관",
@@ -1392,7 +1432,8 @@
     "nameKoSourcePages": [
       75
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7163": {
     "sourceNameEn": "skin",
@@ -1406,7 +1447,8 @@
     "nameKoSourcePages": [
       217
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7196": {
     "nameKo": "지라",
@@ -1423,7 +1465,8 @@
     "nameKoSourcePages": [
       143
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7198": {
     "nameKo": "이자",
@@ -1440,7 +1483,8 @@
     "nameKoSourcePages": [
       82
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7202": {
     "sourceNameEn": "gallbladder",
@@ -1454,7 +1498,8 @@
     "nameKoSourcePages": [
       81
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7203": {
     "nameKo": "콩팥",
@@ -1471,7 +1516,8 @@
     "nameKoSourcePages": [
       91
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7204": {
     "nameKo": "오른콩팥",
@@ -1485,7 +1531,7 @@
     "nameKoSourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "nameKoVerification": "direct-existing-KAA"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA7205": {
     "nameKo": "왼콩팥",
@@ -1499,7 +1545,7 @@
     "nameKoSourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "nameKoVerification": "direct-existing-KAA"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA7206": {
     "sourceNameEn": "duodenum",
@@ -1513,7 +1559,8 @@
     "nameKoSourcePages": [
       77
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7210": {
     "sourceNameEn": "testis",
@@ -1527,7 +1574,8 @@
     "nameKoSourcePages": [
       97
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7211": {
     "sourceNameEn": "right testis",
@@ -1721,7 +1769,8 @@
     "nameKoSourcePages": [
       87
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7396": {
     "sourceNameEn": "left main bronchus",
@@ -1735,7 +1784,8 @@
     "nameKoSourcePages": [
       87
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7405": {
     "sourceNameEn": "main bronchus",
@@ -1763,7 +1813,8 @@
     "nameKoSourcePages": [
       12
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7475": {
     "nameKo": "짧은뼈",
@@ -1777,7 +1828,8 @@
     "nameKoSourcePages": [
       12
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7476": {
     "sourceNameEn": "flat bone",
@@ -1791,7 +1843,8 @@
     "nameKoSourcePages": [
       12
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7477": {
     "sourceNameEn": "irregular bone",
@@ -1805,7 +1858,8 @@
     "nameKoSourcePages": [
       12
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7478": {
     "sourceNameEn": "pneumatized bone",
@@ -1833,7 +1887,8 @@
     "nameKoSourcePages": [
       29
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7488": {
     "sourceNameEn": "xiphoid process",
@@ -1847,7 +1902,8 @@
     "nameKoSourcePages": [
       29
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7538": {
     "nameKo": "연골기관구성요소",
@@ -1871,7 +1927,8 @@
     "nameKoSourcePages": [
       28
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7591": {
     "nameKo": "갈비연골",
@@ -1885,7 +1942,8 @@
     "nameKoSourcePages": [
       28
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7592": {
     "sourceNameEn": "true rib",
@@ -1899,7 +1957,8 @@
     "nameKoSourcePages": [
       28
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7593": {
     "sourceNameEn": "typical rib",
@@ -1920,7 +1979,8 @@
     "nameKoSourcePages": [
       28
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7595": {
     "sourceNameEn": "floating rib",
@@ -1934,7 +1994,8 @@
     "nameKoSourcePages": [
       28
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA7596": {
     "sourceNameEn": "atypical rib",
@@ -1955,7 +2016,8 @@
     "nameKoSourcePages": [
       29
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7603": {
     "nameKo": "첫째갈비연골",
@@ -1984,7 +2046,8 @@
     "nameKoSourcePages": [
       29
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7638": {
     "nameKo": "셋째갈비뼈",
@@ -2543,7 +2606,8 @@
     "nameKoSourcePages": [
       112
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA8615": {
     "nameKo": "허파동맥줄기",
@@ -2585,7 +2649,8 @@
     "nameKoSourcePages": [
       113
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA8640": {
     "nameKo": "아래혀구역동맥",
@@ -2599,7 +2664,8 @@
     "nameKoSourcePages": [
       113
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA8642": {
     "nameKo": "왼위분절동맥",
@@ -2740,7 +2806,8 @@
       112,
       113
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA8714": {
     "nameKo": "위구역동맥",
@@ -2755,7 +2822,8 @@
       113,
       127
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA8716": {
     "nameKo": "안쪽바닥구역동맥",
@@ -2769,7 +2837,8 @@
     "nameKoSourcePages": [
       113
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA8717": {
     "nameKo": "앞바닥구역동맥",
@@ -2783,7 +2852,8 @@
     "nameKoSourcePages": [
       113
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA8718": {
     "nameKo": "가쪽바닥구역동맥",
@@ -2797,7 +2867,8 @@
     "nameKoSourcePages": [
       113
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA8719": {
     "nameKo": "뒤바닥구역동맥",
@@ -2811,7 +2882,8 @@
     "nameKoSourcePages": [
       113
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA8755": {
     "nameKo": "분절허파동맥",
@@ -2833,7 +2905,8 @@
       27,
       29
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9165": {
     "nameKo": "첫째가슴척추뼈",
@@ -3040,7 +3113,8 @@
     "nameKoSourcePages": [
       99
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9604": {
     "sourceNameEn": "adrenal gland",
@@ -3054,7 +3128,8 @@
     "nameKoSourcePages": [
       106
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9611": {
     "nameKo": "넙다리뼈",
@@ -3072,7 +3147,8 @@
     "nameKoSourcePages": [
       35
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9612": {
     "nameKo": "손허리뼈",
@@ -3096,7 +3172,8 @@
     "nameKoSourcePages": [
       15
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9615": {
     "sourceNameEn": "cricoid cartilage",
@@ -3110,7 +3187,8 @@
     "nameKoSourcePages": [
       85
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9616": {
     "nameKo": "머리근육",
@@ -3124,7 +3202,8 @@
     "nameKoSourcePages": [
       51
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9617": {
     "nameKo": "목근육",
@@ -3138,7 +3217,8 @@
     "nameKoSourcePages": [
       53
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9619": {
     "sourceNameEn": "muscle of thorax",
@@ -3152,7 +3232,8 @@
     "nameKoSourcePages": [
       56
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9620": {
     "nameKo": "배근육",
@@ -3166,7 +3247,8 @@
     "nameKoSourcePages": [
       57
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9621": {
     "nameKo": "팔근육",
@@ -3180,7 +3262,8 @@
     "nameKoSourcePages": [
       60
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9622": {
     "nameKo": "다리근육",
@@ -3194,7 +3277,8 @@
     "nameKoSourcePages": [
       62
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9623": {
     "sourceNameEn": "perineal muscle",
@@ -3209,7 +3293,8 @@
       59,
       101
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9625": {
     "sourceNameEn": "stylohyoid",
@@ -3223,7 +3308,7 @@
     "nameKoSourcePages": [
       54
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA9629": {
     "sourceNameEn": "supraspinatus",
@@ -3237,7 +3322,7 @@
     "nameKoSourcePages": [
       60
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA9637": {
     "sourceNameEn": "portion of tissue",
@@ -3265,7 +3350,8 @@
     "nameKoSourcePages": [
       149
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA9657": {
     "nameKo": "해부학적선",
@@ -3286,7 +3372,8 @@
     "nameKoSourcePages": [
       209
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9704": {
     "nameKo": "요관",
@@ -3300,7 +3387,8 @@
     "nameKoSourcePages": [
       92
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9706": {
     "nameKo": "쓸개관",
@@ -3321,7 +3409,8 @@
     "nameKoSourcePages": [
       37
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9710": {
     "sourceNameEn": "vomer",
@@ -3335,7 +3424,8 @@
     "nameKoSourcePages": [
       22
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9711": {
     "sourceNameEn": "maxilla",
@@ -3349,7 +3439,8 @@
     "nameKoSourcePages": [
       22
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9721": {
     "nameKo": "힘줄",
@@ -3363,7 +3454,8 @@
     "nameKoSourcePages": [
       51
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9756": {
     "nameKo": "바깥갈비사이근",
@@ -3377,7 +3469,8 @@
     "nameKoSourcePages": [
       56
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9757": {
     "nameKo": "속갈비사이근",
@@ -3391,7 +3484,8 @@
     "nameKoSourcePages": [
       56
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9758": {
     "sourceNameEn": "innermost intercostal muscle",
@@ -3405,7 +3499,8 @@
     "nameKoSourcePages": [
       56
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9760": {
     "sourceNameEn": "transversus thoracis",
@@ -3419,7 +3514,7 @@
     "nameKoSourcePages": [
       56
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA9761": {
     "sourceNameEn": "right transversus thoracis",
@@ -3466,7 +3561,8 @@
     "nameKoSourcePages": [
       26
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9915": {
     "nameKo": "목척추뼈",
@@ -3480,7 +3576,8 @@
     "nameKoSourcePages": [
       26
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9921": {
     "nameKo": "허리척추뼈",
@@ -3494,7 +3591,8 @@
     "nameKoSourcePages": [
       27
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9922": {
     "nameKo": "다섯째가슴척추뼈",
@@ -3564,7 +3662,8 @@
     "nameKoSourcePages": [
       82
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA10446": {
     "nameKo": "척추사이원반",
@@ -3620,7 +3719,8 @@
     "nameKoSourcePages": [
       122
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA10645": {
     "sourceNameEn": "musculophrenic artery",
@@ -3634,7 +3734,8 @@
     "nameKoSourcePages": [
       122
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA10646": {
     "nameKo": "위배벽동맥",
@@ -3648,7 +3749,8 @@
     "nameKoSourcePages": [
       122
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA10659": {
     "nameKo": "깊은목동맥",
@@ -3662,7 +3764,8 @@
     "nameKoSourcePages": [
       122
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA10660": {
     "nameKo": "오른깊은목동맥",
@@ -3691,7 +3794,8 @@
     "nameKoSourcePages": [
       122
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA10663": {
     "sourceNameEn": "suprascapular artery",
@@ -3705,7 +3809,8 @@
     "nameKoSourcePages": [
       122
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA10664": {
     "nameKo": "가로목동맥",
@@ -3719,7 +3824,8 @@
     "nameKoSourcePages": [
       122
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA10665": {
     "nameKo": "얕은목동맥",
@@ -3733,7 +3839,8 @@
     "nameKoSourcePages": [
       122
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA10680": {
     "sourceNameEn": "left inferior thyroid artery",
@@ -3873,7 +3980,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA11195": {
     "sourceNameEn": "segment of neural tree organ",
@@ -3894,7 +4002,8 @@
     "nameKoSourcePages": [
       57
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA11337": {
     "sourceNameEn": "zone of continuity",
@@ -3950,7 +4059,8 @@
     "nameKoSourcePages": [
       27
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA12520": {
     "sourceNameEn": "axis",
@@ -3962,10 +4072,10 @@
       "KAA_TERMINOLOGY_6"
     ],
     "nameKoSourcePages": [
-      27,
-      206
+      27
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA12521": {
     "nameKo": "셋째목척추뼈",
@@ -4054,7 +4164,8 @@
     "nameKoSourcePages": [
       70
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA12845": {
     "sourceNameEn": "subcostal vein",
@@ -4068,7 +4179,8 @@
     "nameKoSourcePages": [
       137
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA12846": {
     "nameKo": "심장정맥",
@@ -4090,7 +4202,8 @@
       137,
       138
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA13072": {
     "nameKo": "첫째허리척추뼈",
@@ -4186,7 +4299,7 @@
     "nameKoSourcePages": [
       56
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13237": {
     "nameKo": "심방공간",
@@ -4223,7 +4336,8 @@
       113,
       125
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA13279": {
     "nameKo": "왼앞분절동맥",
@@ -4247,7 +4361,8 @@
       125,
       127
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA13289": {
     "nameKo": "안쪽바닥분절정맥",
@@ -4292,7 +4407,8 @@
     "nameKoSourcePages": [
       56
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA13303": {
     "nameKo": "위팔뼈",
@@ -4309,7 +4425,8 @@
     "nameKoSourcePages": [
       30
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA13321": {
     "nameKo": "빗장뼈",
@@ -4327,7 +4444,8 @@
     "nameKoSourcePages": [
       30
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA13322": {
     "nameKo": "오른쪽 빗장뼈",
@@ -4369,7 +4487,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA13325": {
     "sourceNameEn": "right cephalic vein",
@@ -4413,7 +4532,8 @@
     "nameKoSourcePages": [
       137
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA13330": {
     "sourceNameEn": "right axillary vein",
@@ -4478,7 +4598,8 @@
     "nameKoSourcePages": [
       54
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA13341": {
     "sourceNameEn": "sternohyoid",
@@ -4492,7 +4613,7 @@
     "nameKoSourcePages": [
       54
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13342": {
     "sourceNameEn": "omohyoid",
@@ -4506,7 +4627,7 @@
     "nameKoSourcePages": [
       54
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13343": {
     "sourceNameEn": "sternothyroid",
@@ -4520,7 +4641,7 @@
     "nameKoSourcePages": [
       54
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13344": {
     "sourceNameEn": "thyrohyoid",
@@ -4534,7 +4655,7 @@
     "nameKoSourcePages": [
       54
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13346": {
     "sourceNameEn": "right sternohyoid",
@@ -4680,7 +4801,7 @@
     "nameKoSourcePages": [
       54
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13380": {
     "sourceNameEn": "rhomboid minor",
@@ -4694,7 +4815,7 @@
     "nameKoSourcePages": [
       54
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13381": {
     "sourceNameEn": "right rhomboid major",
@@ -4736,7 +4857,7 @@
     "nameKoSourcePages": [
       53
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13386": {
     "sourceNameEn": "scalenus medius",
@@ -4750,7 +4871,7 @@
     "nameKoSourcePages": [
       53
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13387": {
     "nameKo": "뒤목갈비근",
@@ -4764,7 +4885,7 @@
     "nameKoSourcePages": [
       53
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13388": {
     "nameKo": "오른목갈비뒤",
@@ -4843,7 +4964,8 @@
     "nameKoSourcePages": [
       29
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA13395": {
     "nameKo": "오른쪽 어깨뼈",
@@ -4885,7 +5007,7 @@
     "nameKoSourcePages": [
       56
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13398": {
     "nameKo": "오른톱니앞",
@@ -4920,7 +5042,7 @@
     "nameKoSourcePages": [
       54
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13402": {
     "nameKo": "아래뒤톱니근",
@@ -4934,7 +5056,7 @@
     "nameKoSourcePages": [
       54
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13403": {
     "nameKo": "오른톱니뒤위",
@@ -4976,7 +5098,7 @@
     "nameKoSourcePages": [
       53
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13408": {
     "sourceNameEn": "right sternocleidomastoid",
@@ -5020,7 +5142,7 @@
     "nameKoSourcePages": [
       56
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13411": {
     "sourceNameEn": "left subclavius",
@@ -5064,7 +5186,7 @@
     "nameKoSourcePages": [
       60
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA13414": {
     "sourceNameEn": "right subscapularis",
@@ -5220,7 +5342,8 @@
     "nameKoSourcePages": [
       106
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA13894": {
     "nameKo": "허리척추뼈척추사이원반",
@@ -5367,7 +5490,8 @@
     "nameKoSourcePages": [
       134
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14329": {
     "nameKo": "문맥줄기",
@@ -5388,7 +5512,8 @@
     "nameKoSourcePages": [
       141
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14332": {
     "nameKo": "위창자간막정맥",
@@ -5402,7 +5527,8 @@
     "nameKoSourcePages": [
       141
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14333": {
     "nameKo": "온엉덩정맥",
@@ -5416,7 +5542,8 @@
     "nameKoSourcePages": [
       139
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14334": {
     "nameKo": "콩팥정맥",
@@ -5430,7 +5557,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14335": {
     "nameKo": "오른콩팥정맥",
@@ -5474,7 +5602,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14338": {
     "nameKo": "오른간정맥",
@@ -5488,7 +5617,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA14339": {
     "nameKo": "왼간정맥",
@@ -5502,7 +5632,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA14340": {
     "nameKo": "중간간정맥",
@@ -5516,7 +5647,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA14341": {
     "sourceNameEn": "right testicular vein",
@@ -5530,7 +5662,8 @@
     "nameKoSourcePages": [
       139
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14343": {
     "nameKo": "오른부신정맥",
@@ -5544,7 +5677,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14344": {
     "sourceNameEn": "testicular vein",
@@ -5565,7 +5699,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA14348": {
     "nameKo": "부신정맥",
@@ -5586,7 +5721,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA14495": {
     "nameKo": "간구역",
@@ -5607,7 +5743,8 @@
     "nameKoSourcePages": [
       81
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14540": {
     "nameKo": "큰창자구역",
@@ -5628,7 +5765,8 @@
     "nameKoSourcePages": [
       78
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14544": {
     "sourceNameEn": "rectum",
@@ -5642,7 +5780,8 @@
     "nameKoSourcePages": [
       78
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14545": {
     "sourceNameEn": "ascending colon",
@@ -5656,7 +5795,8 @@
     "nameKoSourcePages": [
       78
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14546": {
     "sourceNameEn": "transverse colon",
@@ -5670,7 +5810,8 @@
     "nameKoSourcePages": [
       78
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14547": {
     "sourceNameEn": "descending colon",
@@ -5684,7 +5825,8 @@
     "nameKoSourcePages": [
       78
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14643": {
     "sourceNameEn": "mesentery of small intestine",
@@ -5712,7 +5854,8 @@
     "nameKoSourcePages": [
       103
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14668": {
     "nameKo": "온간관",
@@ -5726,7 +5869,8 @@
     "nameKoSourcePages": [
       81
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14669": {
     "nameKo": "오른간관",
@@ -5740,7 +5884,8 @@
     "nameKoSourcePages": [
       81
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14670": {
     "nameKo": "왼간관",
@@ -5754,7 +5899,8 @@
     "nameKoSourcePages": [
       81
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14678": {
     "sourceNameEn": "extrahepatic bile duct",
@@ -5775,7 +5921,8 @@
     "nameKoSourcePages": [
       125
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14735": {
     "nameKo": "허리동맥",
@@ -5789,7 +5936,8 @@
     "nameKoSourcePages": [
       125
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14746": {
     "sourceNameEn": "right inferior phrenic artery",
@@ -5833,7 +5981,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14750": {
     "nameKo": "아래창자간막동맥",
@@ -5847,7 +5996,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14751": {
     "nameKo": "콩팥동맥",
@@ -5861,7 +6011,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14752": {
     "nameKo": "오른콩팥동맥",
@@ -5905,7 +6056,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14755": {
     "nameKo": "오른중간부신동맥",
@@ -5949,7 +6101,8 @@
     "nameKoSourcePages": [
       127
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14759": {
     "sourceNameEn": "right testicular artery",
@@ -5993,7 +6146,8 @@
     "nameKoSourcePages": [
       127
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14765": {
     "nameKo": "오른온엉덩동맥",
@@ -6044,7 +6198,8 @@
     "nameKoSourcePages": [
       125
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14769": {
     "nameKo": "간동맥",
@@ -6065,7 +6220,8 @@
     "nameKoSourcePages": [
       125
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14772": {
     "nameKo": "간동맥고유",
@@ -6086,7 +6242,8 @@
     "nameKoSourcePages": [
       125
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14776": {
     "sourceNameEn": "right gastric artery",
@@ -6100,7 +6257,8 @@
     "nameKoSourcePages": [
       125
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA14781": {
     "sourceNameEn": "right gastro-epiploic artery",
@@ -6135,7 +6293,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA14790": {
     "sourceNameEn": "inferior pancreatic artery",
@@ -6149,7 +6308,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA14792": {
     "sourceNameEn": "great pancreatic artery",
@@ -6163,7 +6323,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA14793": {
     "sourceNameEn": "caudal pancreatic artery",
@@ -6191,7 +6352,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14809": {
     "sourceNameEn": "ileal artery",
@@ -6205,7 +6367,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14810": {
     "nameKo": "중간(잘록)창자동맥",
@@ -6219,7 +6382,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14811": {
     "nameKo": "오른(잘록)창자동맥",
@@ -6233,7 +6397,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14812": {
     "sourceNameEn": "celiac trunk",
@@ -6247,7 +6412,8 @@
     "nameKoSourcePages": [
       125
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14815": {
     "sourceNameEn": "ileocolic artery",
@@ -6261,7 +6427,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14816": {
     "sourceNameEn": "anterior cecal artery",
@@ -6275,7 +6442,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA14817": {
     "sourceNameEn": "posterior cecal artery",
@@ -6289,7 +6457,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA14818": {
     "sourceNameEn": "appendicular artery",
@@ -6303,7 +6472,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA14819": {
     "sourceNameEn": "ileal branch of inferior branch of ileocolic artery",
@@ -6352,7 +6522,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14828": {
     "nameKo": "왼결장동맥오름가지",
@@ -6380,7 +6551,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14831": {
     "sourceNameEn": "marginal artery of colon",
@@ -6401,7 +6573,8 @@
     "nameKoSourcePages": [
       126
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14837": {
     "nameKo": "간동맥고유세부분",
@@ -6478,7 +6651,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA15387": {
     "sourceNameEn": "tributary of splenic vein",
@@ -6506,7 +6680,8 @@
     "nameKoSourcePages": [
       141
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA15392": {
     "nameKo": "아래창자간막정맥지류",
@@ -6527,7 +6702,8 @@
     "nameKoSourcePages": [
       141
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA15394": {
     "nameKo": "왼(잘록)창자정맥",
@@ -6541,7 +6717,8 @@
     "nameKoSourcePages": [
       141
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA15395": {
     "sourceNameEn": "sigmoid vein",
@@ -6555,7 +6732,8 @@
     "nameKoSourcePages": [
       141
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA15396": {
     "nameKo": "위창자간막정맥지류",
@@ -6583,7 +6761,8 @@
     "nameKoSourcePages": [
       141
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA15399": {
     "sourceNameEn": "left gastric vein",
@@ -6597,7 +6776,8 @@
     "nameKoSourcePages": [
       141
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA15400": {
     "sourceNameEn": "right gastric vein",
@@ -6611,7 +6791,8 @@
     "nameKoSourcePages": [
       141
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA15405": {
     "sourceNameEn": "ileal vein",
@@ -6625,7 +6806,8 @@
     "nameKoSourcePages": [
       141
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA15406": {
     "nameKo": "중간(잘록)창자정맥",
@@ -6639,7 +6821,8 @@
     "nameKoSourcePages": [
       141
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA15407": {
     "nameKo": "오른(잘록)창자정맥",
@@ -6653,7 +6836,8 @@
     "nameKoSourcePages": [
       141
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA15408": {
     "sourceNameEn": "ileocolic vein",
@@ -6667,7 +6851,8 @@
     "nameKoSourcePages": [
       141
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA15414": {
     "nameKo": "오른문맥정맥",
@@ -6982,7 +7167,8 @@
     "nameKoSourcePages": [
       92
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA16033": {
     "nameKo": "첫째허리척추뼈척추사이원반",
@@ -7032,7 +7218,8 @@
       27,
       33
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA16549": {
     "sourceNameEn": "mesoappendix",
@@ -7046,7 +7233,8 @@
     "nameKoSourcePages": [
       103
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA16585": {
     "sourceNameEn": "hip bone",
@@ -7060,7 +7248,8 @@
     "nameKoSourcePages": [
       33
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA16586": {
     "sourceNameEn": "right hip bone",
@@ -7146,7 +7335,8 @@
     "nameKoSourcePages": [
       100
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA18255": {
     "sourceNameEn": "epididymis",
@@ -7160,7 +7350,8 @@
     "nameKoSourcePages": [
       98
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA18256": {
     "sourceNameEn": "right epididymis",
@@ -7204,7 +7395,8 @@
     "nameKoSourcePages": [
       128
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA18806": {
     "nameKo": "오른바깥엉덩동맥",
@@ -7248,7 +7440,8 @@
     "nameKoSourcePages": [
       127
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA18809": {
     "nameKo": "오른속엉덩동맥",
@@ -7292,7 +7485,8 @@
     "nameKoSourcePages": [
       139
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA18884": {
     "nameKo": "속엉덩정맥",
@@ -7306,7 +7500,8 @@
     "nameKoSourcePages": [
       139
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA18885": {
     "nameKo": "오른바깥엉덩정맥",
@@ -7387,7 +7582,8 @@
     "nameKoSourcePages": [
       139
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA18903": {
     "sourceNameEn": "right iliolumbar vein",
@@ -7431,7 +7627,8 @@
     "nameKoSourcePages": [
       139
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA18906": {
     "nameKo": "오른가쪽엉치정맥",
@@ -7475,7 +7672,8 @@
     "nameKoSourcePages": [
       139
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA18909": {
     "sourceNameEn": "right superior gluteal vein",
@@ -7519,7 +7717,8 @@
     "nameKoSourcePages": [
       139
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA18912": {
     "sourceNameEn": "right inferior gluteal vein",
@@ -7563,7 +7762,8 @@
     "nameKoSourcePages": [
       139
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA18915": {
     "nameKo": "오른폐쇄정맥",
@@ -7607,7 +7807,8 @@
     "nameKoSourcePages": [
       139
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA18918": {
     "sourceNameEn": "right internal pudendal vein",
@@ -7651,7 +7852,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA19083": {
     "nameKo": "폐쇄근육",
@@ -7679,7 +7880,7 @@
     "nameKoSourcePages": [
       59
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA19089": {
     "sourceNameEn": "zone of levator ani",
@@ -7742,7 +7943,8 @@
     "nameKoSourcePages": [
       99
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA19387": {
     "sourceNameEn": "right seminal vesicle",
@@ -7786,7 +7988,8 @@
     "nameKoSourcePages": [
       100
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA19618": {
     "sourceNameEn": "corpus cavernosum of penis",
@@ -7800,7 +8003,8 @@
     "nameKoSourcePages": [
       100
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA19667": {
     "nameKo": "요도",
@@ -7844,7 +8048,8 @@
       58,
       218
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA19795": {
     "nameKo": "음경등동맥",
@@ -7858,7 +8063,8 @@
     "nameKoSourcePages": [
       128
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA20107": {
     "sourceNameEn": "irregular connective tissue",
@@ -7914,7 +8120,8 @@
     "nameKoSourcePages": [
       208
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA20570": {
     "sourceNameEn": "peritoneal mesentery",
@@ -7949,7 +8156,8 @@
     "nameKoSourcePages": [
       128
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA20688": {
     "nameKo": "오른아래배벽동맥",
@@ -7993,7 +8201,8 @@
     "nameKoSourcePages": [
       128
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA20735": {
     "nameKo": "오른얕은윗배동맥",
@@ -8021,7 +8230,8 @@
     "nameKoSourcePages": [
       129
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA20801": {
     "nameKo": "오른가쪽휘돌이넙다리동맥",
@@ -8077,7 +8287,8 @@
     "nameKoSourcePages": [
       139
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA21163": {
     "nameKo": "오른아래배벽정맥",
@@ -8121,7 +8332,8 @@
     "nameKoSourcePages": [
       140
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA21188": {
     "nameKo": "오른넙다리정맥",
@@ -8172,7 +8384,8 @@
     "nameKoSourcePages": [
       139
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA21376": {
     "sourceNameEn": "great saphenous vein",
@@ -8186,7 +8399,8 @@
     "nameKoSourcePages": [
       139
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA21378": {
     "sourceNameEn": "tributary of great saphenous vein",
@@ -8244,7 +8458,8 @@
     "nameKoSourcePages": [
       140
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA21385": {
     "nameKo": "음경오른얕은등쪽정맥",
@@ -8338,7 +8553,7 @@
       59,
       79
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22298": {
     "sourceNameEn": "obturator internus",
@@ -8352,7 +8567,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22299": {
     "sourceNameEn": "obturator externus",
@@ -8366,7 +8581,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22310": {
     "sourceNameEn": "iliacus",
@@ -8387,7 +8602,7 @@
     "nameKoSourcePages": [
       62
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22315": {
     "sourceNameEn": "gluteus medius",
@@ -8401,7 +8616,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22317": {
     "sourceNameEn": "gluteus minimus",
@@ -8415,7 +8630,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22318": {
     "sourceNameEn": "gemellus superior",
@@ -8450,7 +8665,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22322": {
     "sourceNameEn": "right iliacus",
@@ -8698,7 +8913,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22354": {
     "sourceNameEn": "right sartorius",
@@ -8742,7 +8957,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22358": {
     "sourceNameEn": "right semitendinosus",
@@ -8786,7 +9001,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22424": {
     "nameKo": "넙다리앞칸근육",
@@ -8879,7 +9094,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22439": {
     "nameKo": "넙다리안쪽칸근육",
@@ -8900,7 +9115,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22441": {
     "nameKo": "긴모음근",
@@ -8914,7 +9129,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22442": {
     "nameKo": "짧은모음근",
@@ -8928,7 +9143,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22443": {
     "sourceNameEn": "adductor magnus",
@@ -8942,7 +9157,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22448": {
     "sourceNameEn": "right semimembranosus",
@@ -9109,7 +9324,8 @@
     "nameKoSourcePages": [
       129
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22507": {
     "nameKo": "오른내림무릎동맥",
@@ -9141,7 +9357,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22533": {
     "nameKo": "긴엄지폄근",
@@ -9155,7 +9371,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22534": {
     "nameKo": "긴발가락폄근",
@@ -9169,7 +9385,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22535": {
     "nameKo": "위무릎동맥",
@@ -9190,7 +9406,8 @@
     "nameKoSourcePages": [
       129
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22537": {
     "nameKo": "아래무릎동맥",
@@ -9211,7 +9428,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22539": {
     "sourceNameEn": "fibularis longus",
@@ -9225,7 +9442,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22540": {
     "sourceNameEn": "fibularis brevis",
@@ -9239,7 +9456,7 @@
     "nameKoSourcePages": [
       64
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22542": {
     "sourceNameEn": "soleus",
@@ -9260,7 +9477,7 @@
     "nameKoSourcePages": [
       64
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22544": {
     "nameKo": "오른쪽 앞정강근",
@@ -9462,7 +9679,8 @@
     "nameKoSourcePages": [
       129
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22585": {
     "nameKo": "가쪽위무릎동맥",
@@ -9476,7 +9694,8 @@
     "nameKoSourcePages": [
       129
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22586": {
     "nameKo": "오른안쪽위무릎동맥",
@@ -9518,7 +9737,7 @@
     "nameKoSourcePages": [
       64
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22591": {
     "sourceNameEn": "right popliteus",
@@ -9562,7 +9781,7 @@
     "nameKoSourcePages": [
       64
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22594": {
     "sourceNameEn": "muscle of vertebral column",
@@ -9590,7 +9809,8 @@
     "nameKoSourcePages": [
       122
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22655": {
     "sourceNameEn": "right axillary artery",
@@ -9634,7 +9854,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22675": {
     "nameKo": "오른가쪽가슴동맥",
@@ -9678,7 +9899,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22678": {
     "sourceNameEn": "right subscapular artery",
@@ -9722,7 +9944,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22681": {
     "sourceNameEn": "splenius cervicis",
@@ -9757,7 +9980,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22685": {
     "nameKo": "오른뒤휘돌이위팔뼈동맥",
@@ -9785,7 +10009,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22691": {
     "nameKo": "오른위팔동맥",
@@ -9844,7 +10069,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22696": {
     "nameKo": "오른깊은위팔동맥",
@@ -9909,7 +10135,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22707": {
     "nameKo": "오른위자쪽곁동맥",
@@ -9960,7 +10187,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22711": {
     "nameKo": "가장긴목",
@@ -10046,7 +10274,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22733": {
     "nameKo": "오른노쪽동맥",
@@ -10147,7 +10376,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22751": {
     "nameKo": "오른가장긴가슴",
@@ -10303,7 +10533,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22797": {
     "nameKo": "오른자쪽동맥",
@@ -10404,7 +10635,8 @@
     "nameKoSourcePages": [
       124
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22807": {
     "nameKo": "오른온뼈사이동맥",
@@ -10463,7 +10695,8 @@
     "nameKoSourcePages": [
       124
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA22812": {
     "nameKo": "오른앞뼈사이동맥",
@@ -10528,7 +10761,7 @@
     "nameKoSourcePages": [
       55
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA22828": {
     "nameKo": "반가시가슴",
@@ -10710,7 +10943,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA22864": {
     "nameKo": "오른손바닥손허리동맥",
@@ -10824,7 +11058,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22909": {
     "sourceNameEn": "right basilic vein",
@@ -10917,7 +11152,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA22920": {
     "nameKo": "오른손바닥손허리정맥",
@@ -11010,7 +11246,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22935": {
     "nameKo": "오른안쪽위팔정맥",
@@ -11045,7 +11282,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22948": {
     "nameKo": "오른노쪽정맥",
@@ -11089,7 +11327,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22951": {
     "nameKo": "오른자쪽정맥",
@@ -11140,7 +11379,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA22963": {
     "sourceNameEn": "median cubital vein",
@@ -11154,7 +11394,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22964": {
     "sourceNameEn": "right median cubital vein",
@@ -11198,7 +11439,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22968": {
     "sourceNameEn": "right median antebrachial vein",
@@ -11361,7 +11603,8 @@
     "nameKoSourcePages": [
       50
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA23082": {
     "sourceNameEn": "cervical rotator",
@@ -11410,7 +11653,8 @@
     "nameKoSourcePages": [
       137
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA23114": {
     "sourceNameEn": "right subscapular vein",
@@ -11476,7 +11720,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA23124": {
     "nameKo": "오른깊은위팔동맥중간곁가지",
@@ -11546,7 +11791,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA23180": {
     "nameKo": "오른휘돌이어깨뼈동맥",
@@ -11578,7 +11824,8 @@
     "nameKoSourcePages": [
       31
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA23464": {
     "nameKo": "오른쪽 노뼈",
@@ -11624,7 +11871,8 @@
     "nameKoSourcePages": [
       31
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA23467": {
     "nameKo": "오른쪽 자뼈",
@@ -11666,7 +11914,8 @@
     "nameKoSourcePages": [
       44
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA23707": {
     "nameKo": "오른아래팔뼈사이막",
@@ -11694,7 +11943,8 @@
     "nameKoSourcePages": [
       32
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA23712": {
     "sourceNameEn": "lunate",
@@ -11708,7 +11958,8 @@
     "nameKoSourcePages": [
       32
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA23715": {
     "sourceNameEn": "triquetral",
@@ -11729,7 +11980,8 @@
     "nameKoSourcePages": [
       32
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA23721": {
     "sourceNameEn": "trapezium",
@@ -11743,7 +11995,8 @@
     "nameKoSourcePages": [
       32
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA23724": {
     "sourceNameEn": "trapezoid",
@@ -11757,7 +12010,8 @@
     "nameKoSourcePages": [
       32
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA23725": {
     "sourceNameEn": "right trapezoid",
@@ -11786,7 +12040,8 @@
     "nameKoSourcePages": [
       32
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA23730": {
     "sourceNameEn": "hamate",
@@ -11800,7 +12055,8 @@
     "nameKoSourcePages": [
       32
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA23889": {
     "nameKo": "손목뼈",
@@ -11814,7 +12070,7 @@
     "nameKoSourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "nameKoVerification": "direct-existing-KAA"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA23899": {
     "nameKo": "첫째손허리뼈",
@@ -12453,7 +12709,8 @@
     "nameKoSourcePages": [
       36
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA24477": {
     "nameKo": "오른쪽 정강뼈",
@@ -12498,7 +12755,8 @@
     "nameKoSourcePages": [
       36
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA24480": {
     "nameKo": "오른쪽 종아리뼈",
@@ -12574,7 +12832,8 @@
     "nameKoSourcePages": [
       35
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA24486": {
     "nameKo": "오른쪽 무릎뼈",
@@ -12616,7 +12875,7 @@
     "nameKoSourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
-    "nameKoVerification": "direct-existing-KAA"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA24492": {
     "nameKo": "발허리뼈",
@@ -12644,7 +12903,8 @@
     "nameKoSourcePages": [
       37
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA24497": {
     "sourceNameEn": "right calcaneus",
@@ -12989,7 +13249,7 @@
     "nameKoSourcePages": [
       54
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA32520": {
     "sourceNameEn": "intrinsic muscle of shoulder",
@@ -13010,7 +13270,7 @@
     "nameKoSourcePages": [
       53
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA32526": {
     "sourceNameEn": "rectus capitis posterior minor",
@@ -13024,7 +13284,7 @@
     "nameKoSourcePages": [
       53
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA32527": {
     "sourceNameEn": "obliquus capitis superior",
@@ -13038,7 +13298,7 @@
     "nameKoSourcePages": [
       53
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA32528": {
     "sourceNameEn": "obliquus capitis inferior",
@@ -13052,7 +13312,7 @@
     "nameKoSourcePages": [
       53
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA32529": {
     "nameKo": "등세모구역",
@@ -13221,7 +13481,7 @@
     "nameKoSourcePages": [
       60
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA32547": {
     "sourceNameEn": "right infraspinatus muscle",
@@ -13249,7 +13509,7 @@
     "nameKoSourcePages": [
       60
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA32550": {
     "nameKo": "작은원근",
@@ -13263,7 +13523,7 @@
     "nameKoSourcePages": [
       60
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA32551": {
     "nameKo": "오른원큰",
@@ -13613,7 +13873,8 @@
     "nameKoSourcePages": [
       12
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA32884": {
     "sourceNameEn": "phalanx of big toe",
@@ -13837,7 +14098,8 @@
     "nameKoSourcePages": [
       46
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA35192": {
     "nameKo": "오른종아리뼈사이막",
@@ -13963,7 +14225,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA37378": {
     "nameKo": "짧은엄지굽힘근",
@@ -13977,7 +14239,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA37379": {
     "sourceNameEn": "opponens pollicis",
@@ -13991,7 +14253,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA37382": {
     "nameKo": "손벌림근손가락새끼",
@@ -14126,7 +14388,7 @@
     "nameKoSourcePages": [
       64
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA37450": {
     "nameKo": "짧은발가락굽힘근",
@@ -14140,7 +14402,7 @@
     "nameKoSourcePages": [
       64
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA37451": {
     "nameKo": "발벌림근손가락새끼",
@@ -14322,7 +14584,7 @@
     "nameKoSourcePages": [
       60
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA37665": {
     "sourceNameEn": "right coracobrachialis",
@@ -14366,7 +14628,7 @@
     "nameKoSourcePages": [
       60
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA37668": {
     "sourceNameEn": "right brachialis",
@@ -14515,7 +14777,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA37705": {
     "sourceNameEn": "right anconeus",
@@ -14664,7 +14926,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38454": {
     "sourceNameEn": "right pronator quadratus",
@@ -14699,7 +14961,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38460": {
     "nameKo": "오른굽힘근손목노쪽",
@@ -14727,7 +14989,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38463": {
     "sourceNameEn": "right palmaris longus",
@@ -14771,7 +15033,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38470": {
     "sourceNameEn": "right flexor digitorum superficialis",
@@ -14829,7 +15091,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38479": {
     "sourceNameEn": "right flexor digitorum profundus",
@@ -14873,7 +15135,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38482": {
     "nameKo": "오른굽힘근엄지손가락긴",
@@ -14901,7 +15163,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38486": {
     "sourceNameEn": "right brachioradialis",
@@ -14959,7 +15221,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38495": {
     "nameKo": "오른폄근손목노쪽긴",
@@ -14987,7 +15249,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38498": {
     "nameKo": "오른폄근손목노쪽짧은",
@@ -15015,7 +15277,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38501": {
     "nameKo": "오른폄근손가락",
@@ -15043,7 +15305,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38504": {
     "nameKo": "오른폄근손가락새끼",
@@ -15071,7 +15333,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38507": {
     "sourceNameEn": "right extensor carpi ulnaris",
@@ -15122,7 +15384,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38513": {
     "sourceNameEn": "right supinator",
@@ -15150,7 +15412,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38516": {
     "nameKo": "오른벌림근엄지손가락긴",
@@ -15178,7 +15440,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38519": {
     "nameKo": "오른폄근엄지손가락짧은",
@@ -15206,7 +15468,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38522": {
     "nameKo": "오른폄근엄지손가락긴",
@@ -15234,7 +15496,7 @@
     "nameKoSourcePages": [
       61
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA38525": {
     "sourceNameEn": "right extensor indicis",
@@ -15500,7 +15762,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA43883": {
     "sourceNameEn": "right gracilis",
@@ -15544,7 +15806,7 @@
     "nameKoSourcePages": [
       63
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA43886": {
     "sourceNameEn": "right adductor minimus",
@@ -15572,7 +15834,8 @@
     "nameKoSourcePages": [
       129
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA43889": {
     "nameKo": "안쪽아래무릎동맥",
@@ -15586,7 +15849,8 @@
     "nameKoSourcePages": [
       129
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA43890": {
     "nameKo": "오른아래안쪽무릎동맥",
@@ -15628,7 +15892,8 @@
     "nameKoSourcePages": [
       129
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA43895": {
     "nameKo": "뒤정강동맥",
@@ -15642,7 +15907,8 @@
     "nameKoSourcePages": [
       130
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA43896": {
     "nameKo": "오른앞정강동맥",
@@ -15723,7 +15989,8 @@
     "nameKoSourcePages": [
       129
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA43907": {
     "nameKo": "오른앞정강되돌이동맥",
@@ -15767,7 +16034,8 @@
     "nameKoSourcePages": [
       129
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA43916": {
     "sourceNameEn": "right dorsalis pedis artery",
@@ -15811,7 +16079,8 @@
     "nameKoSourcePages": [
       130
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA43926": {
     "nameKo": "가쪽발바닥동맥",
@@ -15825,7 +16094,8 @@
     "nameKoSourcePages": [
       130
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA43929": {
     "nameKo": "오른안쪽발바닥동맥",
@@ -15950,7 +16220,8 @@
     "nameKoSourcePages": [
       130
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA43943": {
     "nameKo": "오른발바닥활",
@@ -15978,7 +16249,8 @@
     "nameKoSourcePages": [
       130
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA44197": {
     "nameKo": "발목인대",
@@ -15992,7 +16264,8 @@
     "nameKoSourcePages": [
       48
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA44245": {
     "nameKo": "바닥쪽발목인대",
@@ -16006,7 +16279,8 @@
     "nameKoSourcePages": [
       48
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA44248": {
     "nameKo": "긴발바닥인대",
@@ -16020,7 +16294,8 @@
     "nameKoSourcePages": [
       48
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA44249": {
     "nameKo": "오른긴발바닥인대",
@@ -16064,7 +16339,8 @@
     "nameKoSourcePages": [
       140
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA44323": {
     "nameKo": "넙다리정맥지류",
@@ -16092,7 +16368,8 @@
     "nameKoSourcePages": [
       140
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA44326": {
     "nameKo": "가쪽넙다리휘돌이정맥",
@@ -16106,7 +16383,8 @@
     "nameKoSourcePages": [
       140
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA44327": {
     "sourceNameEn": "popliteal vein",
@@ -16120,7 +16398,8 @@
     "nameKoSourcePages": [
       140
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA44328": {
     "sourceNameEn": "right popliteal vein",
@@ -16171,7 +16450,8 @@
     "nameKoSourcePages": [
       140
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA44332": {
     "nameKo": "뒤정강정맥",
@@ -16185,7 +16465,8 @@
     "nameKoSourcePages": [
       140
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA44333": {
     "sourceNameEn": "small saphenous vein",
@@ -16199,7 +16480,8 @@
     "nameKoSourcePages": [
       140
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA44334": {
     "sourceNameEn": "right small saphenous vein",
@@ -16317,7 +16599,8 @@
     "nameKoSourcePages": [
       140
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA44489": {
     "nameKo": "발발바닥정맥활",
@@ -16345,7 +16628,8 @@
     "nameKoSourcePages": [
       140
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA44558": {
     "nameKo": "종아리정맥",
@@ -16359,7 +16643,8 @@
     "nameKoSourcePages": [
       140
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA44559": {
     "nameKo": "무릎정맥",
@@ -16373,7 +16658,8 @@
     "nameKoSourcePages": [
       140
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA44594": {
     "sourceNameEn": "arcuate artery",
@@ -16385,10 +16671,10 @@
       "KAA_TERMINOLOGY_6"
     ],
     "nameKoSourcePages": [
-      92,
-      129
+      92
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA44595": {
     "nameKo": "가쪽발목동맥",
@@ -16402,7 +16688,8 @@
     "nameKoSourcePages": [
       129
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA44660": {
     "nameKo": "발등쪽손발가락동맥",
@@ -16582,7 +16869,8 @@
       99,
       106
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA45734": {
     "nameKo": "기관몸통",
@@ -16603,7 +16891,8 @@
     "nameKoSourcePages": [
       53
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA45739": {
     "sourceNameEn": "right platysma",
@@ -17011,7 +17300,8 @@
     "nameKoSourcePages": [
       53
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA46291": {
     "sourceNameEn": "digastric",
@@ -17025,7 +17315,7 @@
     "nameKoSourcePages": [
       53
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46292": {
     "sourceNameEn": "right digastric",
@@ -17053,7 +17343,7 @@
     "nameKoSourcePages": [
       53
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46309": {
     "sourceNameEn": "right longus capitis",
@@ -17081,7 +17371,7 @@
     "nameKoSourcePages": [
       53
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46313": {
     "sourceNameEn": "right rectus capitis anterior",
@@ -17109,7 +17399,7 @@
     "nameKoSourcePages": [
       53
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46317": {
     "sourceNameEn": "right rectus capitis lateralis",
@@ -17137,7 +17427,7 @@
     "nameKoSourcePages": [
       54
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46321": {
     "sourceNameEn": "right mylohyoid",
@@ -17181,7 +17471,7 @@
     "nameKoSourcePages": [
       54
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46326": {
     "sourceNameEn": "right geniohyoid",
@@ -17225,7 +17515,8 @@
     "nameKoSourcePages": [
       59
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA46443": {
     "sourceNameEn": "right coccygeus",
@@ -17325,7 +17616,7 @@
     "nameKoSourcePages": [
       86
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46583": {
     "nameKo": "빗모뿔근",
@@ -17339,7 +17630,7 @@
     "nameKoSourcePages": [
       86
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46584": {
     "nameKo": "오른빗모뿔",
@@ -17388,7 +17679,7 @@
     "nameKoSourcePages": [
       86
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46592": {
     "sourceNameEn": "right vocalis",
@@ -17586,7 +17877,7 @@
     "nameKoSourcePages": [
       75
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46665": {
     "sourceNameEn": "salpingopharyngeus",
@@ -17600,7 +17891,7 @@
     "nameKoSourcePages": [
       75
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46666": {
     "sourceNameEn": "palatopharyngeus",
@@ -17615,7 +17906,7 @@
       73,
       75
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46667": {
     "sourceNameEn": "right stylopharyngeus",
@@ -17706,7 +17997,8 @@
       53,
       73
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA46690": {
     "sourceNameEn": "genioglossus",
@@ -17720,7 +18012,7 @@
     "nameKoSourcePages": [
       73
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46691": {
     "sourceNameEn": "hyoglossus",
@@ -17734,7 +18026,7 @@
     "nameKoSourcePages": [
       73
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46698": {
     "sourceNameEn": "right genioglossus",
@@ -17822,7 +18114,7 @@
     "nameKoSourcePages": [
       73
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46728": {
     "sourceNameEn": "right levator veli palatini",
@@ -17866,7 +18158,7 @@
     "nameKoSourcePages": [
       73
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA46731": {
     "sourceNameEn": "right tensor veli palatini",
@@ -17931,7 +18223,7 @@
     "nameKoSourcePages": [
       207
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA49036": {
     "nameKo": "아래곧은근",
@@ -17945,7 +18237,7 @@
     "nameKoSourcePages": [
       207
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA49037": {
     "nameKo": "안쪽곧은근",
@@ -17959,7 +18251,7 @@
     "nameKoSourcePages": [
       207
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA49038": {
     "nameKo": "가쪽곧은근",
@@ -17973,7 +18265,7 @@
     "nameKoSourcePages": [
       207
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA49039": {
     "nameKo": "위빗근",
@@ -17987,7 +18279,7 @@
     "nameKoSourcePages": [
       207
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA49040": {
     "nameKo": "아래빗근",
@@ -18001,7 +18293,7 @@
     "nameKoSourcePages": [
       207
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA49041": {
     "sourceNameEn": "levator palpebrae superioris",
@@ -18015,7 +18307,7 @@
     "nameKoSourcePages": [
       207
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA49044": {
     "nameKo": "오른위곧은",
@@ -18164,7 +18456,8 @@
     "nameKoSourcePages": [
       207
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA49072": {
     "sourceNameEn": "right common tendinous ring",
@@ -18257,7 +18550,8 @@
     "nameKoSourcePages": [
       117
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA49869": {
     "sourceNameEn": "right ophthalmic artery",
@@ -18329,7 +18623,8 @@
     "nameKoSourcePages": [
       131
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA49913": {
     "nameKo": "아래왼허파정맥",
@@ -18343,7 +18638,8 @@
     "nameKoSourcePages": [
       132
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA49914": {
     "nameKo": "위오른허파정맥",
@@ -18357,7 +18653,8 @@
     "nameKoSourcePages": [
       131
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA49916": {
     "nameKo": "위왼허파정맥",
@@ -18371,7 +18668,8 @@
     "nameKoSourcePages": [
       131
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA49918": {
     "nameKo": "온몸동맥줄기",
@@ -18392,7 +18690,8 @@
     "nameKoSourcePages": [
       118
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50029": {
     "nameKo": "오른앞대뇌동맥",
@@ -18466,7 +18765,8 @@
       117,
       120
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50085": {
     "nameKo": "오른뒤교통동맥",
@@ -18513,7 +18813,8 @@
       117,
       118
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50088": {
     "nameKo": "오른앞맥락막동맥",
@@ -18585,7 +18886,8 @@
     "nameKoSourcePages": [
       119
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50185": {
     "sourceNameEn": "musculature of subdivision of trunk",
@@ -18613,7 +18915,8 @@
     "nameKoSourcePages": [
       119
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA50330": {
     "sourceNameEn": "callosomarginal artery",
@@ -18627,7 +18930,8 @@
     "nameKoSourcePages": [
       119
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA50331": {
     "sourceNameEn": "branch of callosomarginal artery",
@@ -18677,7 +18981,8 @@
     "nameKoSourcePages": [
       119
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA50338": {
     "sourceNameEn": "branch of pericallosal artery",
@@ -18906,7 +19211,8 @@
     "nameKoSourcePages": [
       119
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA50380": {
     "sourceNameEn": "right polar temporal artery",
@@ -18934,7 +19240,8 @@
     "nameKoSourcePages": [
       119
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA50383": {
     "nameKo": "오른앞관자동맥",
@@ -19013,7 +19320,8 @@
     "nameKoSourcePages": [
       120
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA50438": {
     "nameKo": "관자동맥",
@@ -19041,7 +19349,8 @@
     "nameKoSourcePages": [
       119
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA50443": {
     "sourceNameEn": "right lateral frontobasal artery",
@@ -19167,7 +19476,8 @@
     "nameKoSourcePages": [
       120
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA50480": {
     "sourceNameEn": "artery of right precentral sulcus",
@@ -19195,7 +19505,8 @@
     "nameKoSourcePages": [
       120
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA50483": {
     "sourceNameEn": "artery of right postcentral sulcus",
@@ -19223,7 +19534,8 @@
     "nameKoSourcePages": [
       120
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA50486": {
     "nameKo": "오른앞마루동맥",
@@ -19267,7 +19579,8 @@
     "nameKoSourcePages": [
       120
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA50489": {
     "nameKo": "오른뒤마루동맥",
@@ -19311,7 +19624,8 @@
     "nameKoSourcePages": [
       121
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA50519": {
     "nameKo": "오른뒤아래소뇌동맥",
@@ -19355,7 +19669,8 @@
     "nameKoSourcePages": [
       121
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA50532": {
     "nameKo": "오른앞척수동맥",
@@ -19400,7 +19715,8 @@
       120,
       121
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50544": {
     "nameKo": "앞아래소뇌동맥",
@@ -19414,7 +19730,8 @@
     "nameKoSourcePages": [
       121
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50563": {
     "sourceNameEn": "branch of pontine artery",
@@ -19477,7 +19794,8 @@
     "nameKoSourcePages": [
       121
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50574": {
     "nameKo": "오른위소뇌동맥",
@@ -19613,7 +19931,8 @@
     "nameKoSourcePages": [
       120
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA50629": {
     "sourceNameEn": "thalamogeniculate artery",
@@ -19627,7 +19946,8 @@
     "nameKoSourcePages": [
       120
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA50630": {
     "nameKo": "뒤안쪽맥락막동맥",
@@ -19648,7 +19968,8 @@
     "nameKoSourcePages": [
       120
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50638": {
     "nameKo": "안쪽뒤통수동맥",
@@ -19662,7 +19983,8 @@
     "nameKoSourcePages": [
       121
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50639": {
     "sourceNameEn": "precommunicating part of right posterior cerebral artery",
@@ -19981,7 +20303,8 @@
       108,
       112
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50722": {
     "sourceNameEn": "region of vascular tree organ",
@@ -20003,7 +20326,8 @@
       109,
       130
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50735": {
     "nameKo": "간문맥",
@@ -20017,7 +20341,8 @@
     "nameKoSourcePages": [
       140
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50736": {
     "sourceNameEn": "subdivision of pre-hepatic portal vein",
@@ -20076,7 +20401,8 @@
       187,
       205
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50865": {
     "sourceNameEn": "trochlear nerve",
@@ -20090,7 +20416,8 @@
     "nameKoSourcePages": [
       188
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50872": {
     "nameKo": "오른허파동맥",
@@ -20104,7 +20431,8 @@
     "nameKoSourcePages": [
       112
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50873": {
     "nameKo": "왼허파동맥",
@@ -20118,7 +20446,8 @@
     "nameKoSourcePages": [
       113
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50875": {
     "nameKo": "오른시각신경",
@@ -20194,7 +20523,8 @@
     "nameKoSourcePages": [
       140
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA51042": {
     "nameKo": "오른깊은넙다리정맥",
@@ -20238,7 +20568,8 @@
     "nameKoSourcePages": [
       64
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA51061": {
     "sourceNameEn": "calcaneal tendon",
@@ -20252,7 +20583,8 @@
     "nameKoSourcePages": [
       64
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA51071": {
     "nameKo": "긴발가락굽힘근",
@@ -20266,7 +20598,7 @@
     "nameKoSourcePages": [
       64
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA51099": {
     "sourceNameEn": "tibialis posterior",
@@ -20280,7 +20612,7 @@
     "nameKoSourcePages": [
       64
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA51141": {
     "nameKo": "짧은엄지폄근",
@@ -20294,7 +20626,7 @@
     "nameKoSourcePages": [
       64
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA51144": {
     "nameKo": "오른폄근엄지발가락짧은",
@@ -20400,7 +20732,8 @@
     "nameKoSourcePages": [
       188
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52622": {
     "sourceNameEn": "right ophthalmic nerve",
@@ -20459,7 +20792,8 @@
     "nameKoSourcePages": [
       188
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52629": {
     "nameKo": "오른눈물신경",
@@ -20487,7 +20821,8 @@
     "nameKoSourcePages": [
       188
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52639": {
     "nameKo": "오른이마신경",
@@ -20546,7 +20881,8 @@
     "nameKoSourcePages": [
       188
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA52643": {
     "sourceNameEn": "right supratrochlear nerve",
@@ -20611,7 +20947,8 @@
     "nameKoSourcePages": [
       188
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52669": {
     "sourceNameEn": "right nasociliary nerve",
@@ -20691,7 +21028,8 @@
     "nameKoSourcePages": [
       188
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA52676": {
     "sourceNameEn": "right anterior ethmoidal nerve",
@@ -20719,7 +21057,8 @@
     "nameKoSourcePages": [
       188
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA52693": {
     "sourceNameEn": "infratrochlear nerve",
@@ -20733,7 +21072,8 @@
     "nameKoSourcePages": [
       188
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA52698": {
     "sourceNameEn": "right infratrochlear nerve",
@@ -20777,7 +21117,8 @@
     "nameKoSourcePages": [
       188
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA52715": {
     "sourceNameEn": "right posterior ethmoidal nerve",
@@ -20808,7 +21149,8 @@
     "nameKoSourcePages": [
       16
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52735": {
     "nameKo": "뒤통수뼈",
@@ -20822,7 +21164,8 @@
     "nameKoSourcePages": [
       17
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52736": {
     "sourceNameEn": "sphenoid bone",
@@ -20836,7 +21179,8 @@
     "nameKoSourcePages": [
       17
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52737": {
     "nameKo": "관자뼈",
@@ -20853,7 +21197,8 @@
     "nameKoSourcePages": [
       19
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52738": {
     "nameKo": "오른쪽 관자뼈",
@@ -20895,7 +21240,7 @@
     "nameKoSourcePages": [
       21
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA52741": {
     "nameKo": "눈물뼈",
@@ -20909,7 +21254,8 @@
     "nameKoSourcePages": [
       21
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52745": {
     "nameKo": "코뼈",
@@ -20923,7 +21269,8 @@
     "nameKoSourcePages": [
       21
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52746": {
     "sourceNameEn": "palatine bone",
@@ -20937,7 +21284,8 @@
     "nameKoSourcePages": [
       23
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52747": {
     "sourceNameEn": "zygomatic bone",
@@ -20951,7 +21299,8 @@
     "nameKoSourcePages": [
       23
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52748": {
     "nameKo": "아래턱뼈",
@@ -20968,7 +21317,8 @@
     "nameKoSourcePages": [
       23
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52749": {
     "sourceNameEn": "hyoid bone",
@@ -20982,7 +21332,8 @@
     "nameKoSourcePages": [
       24
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52781": {
     "sourceNameEn": "external ear",
@@ -20996,7 +21347,8 @@
     "nameKoSourcePages": [
       209
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52788": {
     "nameKo": "오른쪽 마루뼈",
@@ -21239,7 +21591,8 @@
     "nameKoSourcePages": [
       207
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA54241": {
     "sourceNameEn": "hair of head",
@@ -21281,7 +21634,8 @@
     "nameKoSourcePages": [
       72
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA54736": {
     "sourceNameEn": "inferior nasal concha",
@@ -21293,10 +21647,10 @@
       "KAA_TERMINOLOGY_6"
     ],
     "nameKoSourcePages": [
-      21,
       83
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA54737": {
     "sourceNameEn": "right inferior nasal concha",
@@ -21342,7 +21696,8 @@
     "nameKoSourcePages": [
       39
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA54877": {
     "sourceNameEn": "subdivision of pharynx",
@@ -21377,7 +21732,8 @@
     "nameKoSourcePages": [
       74
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA55093": {
     "sourceNameEn": "submandibular gland",
@@ -21391,7 +21747,8 @@
     "nameKoSourcePages": [
       70
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA55099": {
     "sourceNameEn": "thyroid cartilage",
@@ -21405,7 +21762,8 @@
     "nameKoSourcePages": [
       84
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA55107": {
     "nameKo": "연골기관",
@@ -21433,7 +21791,8 @@
     "nameKoSourcePages": [
       85
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA55110": {
     "sourceNameEn": "corniculate cartilage",
@@ -21447,7 +21806,8 @@
     "nameKoSourcePages": [
       85
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA55111": {
     "nameKo": "쐐기연골",
@@ -21461,7 +21821,8 @@
     "nameKoSourcePages": [
       85
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA55113": {
     "nameKo": "오른모뿔연골",
@@ -21565,7 +21926,8 @@
     "nameKoSourcePages": [
       85
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA55131": {
     "sourceNameEn": "ligament of larynx",
@@ -21586,7 +21948,8 @@
     "nameKoSourcePages": [
       84
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA55133": {
     "sourceNameEn": "right thyrohyoid membrane",
@@ -21637,7 +22000,8 @@
     "nameKoSourcePages": [
       84
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA55139": {
     "sourceNameEn": "lateral thyrohyoid ligament",
@@ -21651,7 +22015,8 @@
     "nameKoSourcePages": [
       84
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA55140": {
     "sourceNameEn": "right lateral thyrohyoid ligament",
@@ -21723,7 +22088,8 @@
     "nameKoSourcePages": [
       85
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA55244": {
     "sourceNameEn": "vocal ligament",
@@ -21737,7 +22103,8 @@
     "nameKoSourcePages": [
       87
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA55245": {
     "sourceNameEn": "right vocal ligament",
@@ -21781,7 +22148,8 @@
     "nameKoSourcePages": [
       87
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA55251": {
     "sourceNameEn": "right conus elasticus",
@@ -21832,7 +22200,8 @@
     "nameKoSourcePages": [
       74
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA55619": {
     "sourceNameEn": "right pterygomandibular raphe",
@@ -21876,7 +22245,8 @@
     "nameKoSourcePages": [
       70
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA55637": {
     "nameKo": "작은어금니",
@@ -21890,7 +22260,8 @@
     "nameKoSourcePages": [
       70
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA55638": {
     "nameKo": "큰어금니",
@@ -21904,7 +22275,8 @@
     "nameKoSourcePages": [
       70
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA55652": {
     "nameKo": "해부학적집합",
@@ -22373,7 +22745,8 @@
     "nameKoSourcePages": [
       203
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA58235": {
     "sourceNameEn": "iris",
@@ -22387,7 +22760,8 @@
     "nameKoSourcePages": [
       204
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA58236": {
     "sourceNameEn": "right iris",
@@ -22431,7 +22805,8 @@
     "nameKoSourcePages": [
       203
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA58239": {
     "sourceNameEn": "right cornea",
@@ -22475,7 +22850,8 @@
     "nameKoSourcePages": [
       206
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA58242": {
     "sourceNameEn": "right lens",
@@ -22519,7 +22895,8 @@
     "nameKoSourcePages": [
       208
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA58269": {
     "sourceNameEn": "sclera",
@@ -22533,7 +22910,8 @@
     "nameKoSourcePages": [
       203
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA58271": {
     "sourceNameEn": "right sclera",
@@ -22584,7 +22962,8 @@
     "nameKoSourcePages": [
       204
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA58299": {
     "sourceNameEn": "right choroid",
@@ -22642,7 +23021,8 @@
     "nameKoSourcePages": [
       204
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA58479": {
     "nameKo": "섬모체몸통부위",
@@ -22700,7 +23080,8 @@
     "nameKoSourcePages": [
       205
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA58607": {
     "sourceNameEn": "optic part of right retina",
@@ -22779,7 +23160,8 @@
     "nameKoSourcePages": [
       207
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA58828": {
     "sourceNameEn": "right vitreous body",
@@ -22893,7 +23275,8 @@
     "nameKoSourcePages": [
       208
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA59102": {
     "nameKo": "오른눈물샘",
@@ -22937,7 +23320,8 @@
     "nameKoSourcePages": [
       208
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA59502": {
     "nameKo": "코연골",
@@ -22958,7 +23342,8 @@
     "nameKoSourcePages": [
       83
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA59504": {
     "sourceNameEn": "major alar cartilage",
@@ -22972,7 +23357,8 @@
     "nameKoSourcePages": [
       83
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA59505": {
     "sourceNameEn": "right major alar cartilage",
@@ -23126,7 +23512,8 @@
       41,
       69
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA59763": {
     "sourceNameEn": "gingiva of upper jaw",
@@ -23161,7 +23548,8 @@
     "nameKoSourcePages": [
       70
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA59802": {
     "sourceNameEn": "right submandibular gland",
@@ -23284,7 +23672,8 @@
     "nameKoSourcePages": [
       183
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61834": {
     "sourceNameEn": "putamen",
@@ -23298,7 +23687,8 @@
     "nameKoSourcePages": [
       183
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61835": {
     "sourceNameEn": "globus pallidus",
@@ -23333,7 +23723,8 @@
     "nameKoSourcePages": [
       177
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61859": {
     "nameKo": "중간이마이랑",
@@ -23347,7 +23738,8 @@
     "nameKoSourcePages": [
       176
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61860": {
     "nameKo": "아래이마이랑",
@@ -23361,7 +23753,8 @@
     "nameKoSourcePages": [
       176
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61894": {
     "sourceNameEn": "precentral gyrus",
@@ -23375,7 +23768,8 @@
     "nameKoSourcePages": [
       176
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61896": {
     "sourceNameEn": "postcentral gyrus",
@@ -23389,7 +23783,8 @@
     "nameKoSourcePages": [
       177
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61897": {
     "sourceNameEn": "supramarginal gyrus",
@@ -23403,7 +23798,8 @@
     "nameKoSourcePages": [
       177
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61898": {
     "sourceNameEn": "angular gyrus",
@@ -23417,7 +23813,8 @@
     "nameKoSourcePages": [
       177
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61899": {
     "nameKo": "위마루소엽",
@@ -23431,7 +23828,8 @@
     "nameKoSourcePages": [
       177
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61906": {
     "nameKo": "중간관자이랑",
@@ -23445,7 +23843,8 @@
     "nameKoSourcePages": [
       177
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61907": {
     "nameKo": "아래관자이랑",
@@ -23460,7 +23859,8 @@
       177,
       179
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61908": {
     "sourceNameEn": "fusiform gyrus",
@@ -23474,7 +23874,8 @@
     "nameKoSourcePages": [
       179
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61918": {
     "sourceNameEn": "parahippocampal gyrus",
@@ -23488,7 +23889,8 @@
     "nameKoSourcePages": [
       179
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61934": {
     "sourceNameEn": "choroid plexus of cerebral hemisphere",
@@ -23509,7 +23911,8 @@
     "nameKoSourcePages": [
       183
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61961": {
     "sourceNameEn": "anterior commissure",
@@ -23526,7 +23929,8 @@
       184,
       185
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61965": {
     "sourceNameEn": "fornix of forebrain",
@@ -23554,7 +23958,8 @@
     "nameKoSourcePages": [
       180
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61975": {
     "sourceNameEn": "lamina terminalis",
@@ -23569,7 +23974,8 @@
       171,
       179
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61993": {
     "sourceNameEn": "midbrain",
@@ -23585,7 +23991,8 @@
       155,
       164
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA61996": {
     "sourceNameEn": "segment of forebrain",
@@ -23620,7 +24027,8 @@
     "nameKoSourcePages": [
       155
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62007": {
     "sourceNameEn": "thalamus",
@@ -23635,7 +24043,8 @@
       170,
       172
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62008": {
     "sourceNameEn": "hypothalamus",
@@ -23650,7 +24059,8 @@
       170,
       174
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62032": {
     "sourceNameEn": "habenula",
@@ -23664,7 +24074,8 @@
     "nameKoSourcePages": [
       170
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62033": {
     "sourceNameEn": "pineal body",
@@ -23679,7 +24090,8 @@
       106,
       170
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62045": {
     "sourceNameEn": "optic chiasm",
@@ -23693,7 +24105,8 @@
     "nameKoSourcePages": [
       170
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62046": {
     "nameKo": "시각로",
@@ -23707,7 +24120,8 @@
     "nameKoSourcePages": [
       171
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62072": {
     "sourceNameEn": "posterior commissure",
@@ -23721,7 +24135,8 @@
     "nameKoSourcePages": [
       171
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62080": {
     "sourceNameEn": "stria medullaris of thalamus",
@@ -23735,7 +24150,8 @@
     "nameKoSourcePages": [
       170
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62209": {
     "sourceNameEn": "lateral geniculate body",
@@ -23749,7 +24165,8 @@
     "nameKoSourcePages": [
       170
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62211": {
     "sourceNameEn": "medial geniculate body",
@@ -23763,7 +24180,8 @@
     "nameKoSourcePages": [
       170
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62327": {
     "sourceNameEn": "tuber cinereum",
@@ -23777,7 +24195,8 @@
     "nameKoSourcePages": [
       171
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62374": {
     "sourceNameEn": "segment of telencephalon",
@@ -23819,7 +24238,8 @@
     "nameKoSourcePages": [
       167
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62404": {
     "nameKo": "아래둔덕",
@@ -23833,7 +24253,8 @@
     "nameKoSourcePages": [
       167
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62434": {
     "sourceNameEn": "cingulate gyrus",
@@ -23847,7 +24268,8 @@
     "nameKoSourcePages": [
       179
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62445": {
     "sourceNameEn": "commissure of diencephalon",
@@ -23875,7 +24297,8 @@
     "nameKoSourcePages": [
       181
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62504": {
     "nameKo": "깊은손바닥정맥활지류",
@@ -23959,7 +24382,8 @@
     "nameKoSourcePages": [
       124
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA64796": {
     "sourceNameEn": "region of serous membrane",
@@ -24129,7 +24553,8 @@
     "nameKoSourcePages": [
       186
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA65198": {
     "nameKo": "오른굽힘근엄지손가락짧은얕은머리",
@@ -24157,7 +24582,8 @@
     "nameKoSourcePages": [
       51
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA65470": {
     "sourceNameEn": "proximal phalanx of left thumb",
@@ -24192,7 +24618,8 @@
     "nameKoSourcePages": [
       122
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA66242": {
     "nameKo": "오른첫째뒤갈비사이동맥",
@@ -24243,7 +24670,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA66321": {
     "sourceNameEn": "right thoracodorsal artery",
@@ -24359,7 +24787,8 @@
     "nameKoSourcePages": [
       130
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA66464": {
     "nameKo": "온몸동맥",
@@ -24401,7 +24830,8 @@
     "nameKoSourcePages": [
       131
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA66644": {
     "nameKo": "온몸정맥",
@@ -24473,7 +24903,8 @@
       177,
       178
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA67329": {
     "sourceNameEn": "insula",
@@ -24487,7 +24918,8 @@
     "nameKoSourcePages": [
       177
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA67396": {
     "sourceNameEn": "articular disk of symphysis",
@@ -24579,7 +25011,8 @@
       155,
       159
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA67944": {
     "sourceNameEn": "cerebellum",
@@ -24593,7 +25026,8 @@
     "nameKoSourcePages": [
       168
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA67950": {
     "sourceNameEn": "stria of telencephalon",
@@ -24628,7 +25062,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA68045": {
     "nameKo": "가슴대동맥구역",
@@ -24649,7 +25084,8 @@
     "nameKoSourcePages": [
       138
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA68109": {
     "nameKo": "기관지동맥",
@@ -25279,7 +25715,8 @@
     "nameKoSourcePages": [
       127
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA69265": {
     "nameKo": "오른아래부신동맥",
@@ -25413,7 +25850,8 @@
     "nameKoSourcePages": [
       130
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA69514": {
     "nameKo": "오른깊은발바닥동맥",
@@ -25521,7 +25959,8 @@
     "nameKoSourcePages": [
       128
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA70249": {
     "nameKo": "오른넙다리동맥",
@@ -26021,7 +26460,8 @@
       167,
       173
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA71193": {
     "sourceNameEn": "lobe of thymus",
@@ -26063,7 +26503,8 @@
     "nameKoSourcePages": [
       137
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA71211": {
     "nameKo": "오른가쪽가슴정맥",
@@ -26107,7 +26548,8 @@
     "nameKoSourcePages": [
       137
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA71214": {
     "sourceNameEn": "right thoracodorsal vein",
@@ -26438,7 +26880,8 @@
     "nameKoSourcePages": [
       40
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA72309": {
     "sourceNameEn": "right stylohyoid ligament",
@@ -26467,7 +26910,8 @@
       167,
       173
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA72653": {
     "nameKo": "오른위이마이랑",
@@ -27318,7 +27762,8 @@
     "nameKoSourcePages": [
       170
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA74912": {
     "nameKo": "왼관상동맥앞심실사이가지줄기",
@@ -27340,7 +27785,8 @@
       171,
       180
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA75445": {
     "nameKo": "막기관구성요소",
@@ -27476,7 +27922,8 @@
     "nameKoSourcePages": [
       122
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA77140": {
     "nameKo": "자쪽되돌이동맥",
@@ -27490,7 +27937,8 @@
     "nameKoSourcePages": [
       123
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA77144": {
     "nameKo": "되돌이뼈사이동맥",
@@ -27504,7 +27952,8 @@
     "nameKoSourcePages": [
       124
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA77155": {
     "sourceNameEn": "popliteal artery",
@@ -27518,7 +27967,8 @@
     "nameKoSourcePages": [
       129
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA77168": {
     "sourceNameEn": "median sacral vein",
@@ -27532,7 +27982,8 @@
     "nameKoSourcePages": [
       139
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA77177": {
     "nameKo": "엉덩갈비근",
@@ -27546,7 +27997,7 @@
     "nameKoSourcePages": [
       55
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA77178": {
     "nameKo": "가장긴근",
@@ -27560,7 +28011,7 @@
     "nameKoSourcePages": [
       55
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA77179": {
     "sourceNameEn": "spinalis",
@@ -27574,7 +28025,7 @@
     "nameKoSourcePages": [
       55
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA77180": {
     "sourceNameEn": "splenius",
@@ -27588,7 +28039,7 @@
     "nameKoSourcePages": [
       55
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "derived-from-KAA-component"
   },
   "FMA77380": {
     "sourceNameEn": "right popliteal artery",
@@ -27632,7 +28083,8 @@
     "nameKoSourcePages": [
       120
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA77498": {
     "nameKo": "어깨휘돌이정맥",
@@ -27646,7 +28098,8 @@
     "nameKoSourcePages": [
       137
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA77499": {
     "nameKo": "앞위팔휘돌이정맥",
@@ -27660,7 +28113,8 @@
     "nameKoSourcePages": [
       137
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA77883": {
     "sourceNameEn": "subdivision of brachiocephalic vein",
@@ -27737,7 +28191,8 @@
     "nameKoSourcePages": [
       137
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA78204": {
     "nameKo": "바깥엉덩정맥세부분",
@@ -27772,7 +28227,8 @@
     "nameKoSourcePages": [
       180
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA78449": {
     "nameKo": "오른가쪽심실",
@@ -27800,7 +28256,8 @@
     "nameKoSourcePages": [
       171
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA78467": {
     "sourceNameEn": "cerebral aqueduct",
@@ -27814,7 +28271,8 @@
     "nameKoSourcePages": [
       167
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA78469": {
     "nameKo": "넷째뇌실",
@@ -27828,7 +28286,8 @@
     "nameKoSourcePages": [
       163
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA78497": {
     "nameKo": "척수중심관",
@@ -27877,7 +28336,8 @@
     "nameKoSourcePages": [
       122
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA79979": {
     "sourceNameEn": "sternocostal part of right pectoralis major",
@@ -27961,7 +28421,8 @@
     "nameKoSourcePages": [
       218
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA82594": {
     "nameKo": "빗장밑동맥구역",
@@ -28089,7 +28550,8 @@
     "nameKoSourcePages": [
       164
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA83840": {
     "sourceNameEn": "nucleus of brain",
@@ -28210,7 +28672,8 @@
     "nameKoSourcePages": [
       185
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA83966": {
     "sourceNameEn": "tentorium cerebelli",
@@ -28224,7 +28687,8 @@
     "nameKoSourcePages": [
       150
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA84054": {
     "nameKo": "신경축구역",
@@ -28630,7 +29094,8 @@
     "nameKoSourcePages": [
       179
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA86565": {
     "nameKo": "왼심실꼭지근육부위",
@@ -28658,7 +29123,8 @@
     "nameKoSourcePages": [
       124
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA87218": {
     "nameKo": "관상동맥줄기",
@@ -28778,7 +29244,15 @@
     "legacyKo": "안와회",
     "hanja": "眼窩回",
     "sourceNameEn": "orbital gyrus",
-    "status": "derived"
+    "status": "derived",
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized",
+    "nameKoSourceIds": [
+      "KAA_TERMINOLOGY_6"
+    ],
+    "nameKoSourcePages": [
+      178
+    ]
   },
   "FMA256237": {
     "nameKo": "신경축구역",
@@ -28983,7 +29457,8 @@
     "nameKoSourcePages": [
       113
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA3862": {
     "nameKo": "왼관상동맥앞심실사이가지",
@@ -29015,7 +29490,8 @@
     "nameKoSourcePages": [
       109
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7096": {
     "nameKo": "오른심방",
@@ -29030,7 +29506,8 @@
       109,
       110
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7097": {
     "nameKo": "왼심방",
@@ -29045,7 +29522,8 @@
       109,
       111
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7098": {
     "nameKo": "오른심실",
@@ -29060,7 +29538,8 @@
       109,
       110
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7101": {
     "nameKo": "왼심실",
@@ -29075,7 +29554,8 @@
       109,
       111
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7152": {
     "sourceNameEn": "alimentary system",
@@ -29095,10 +29575,10 @@
     ],
     "nameKoSourcePages": [
       5,
-      50,
       183
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7155": {
     "nameKo": "목",
@@ -29110,10 +29590,10 @@
       "KAA_TERMINOLOGY_6"
     ],
     "nameKoSourcePages": [
-      5,
-      71
+      5
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7157": {
     "sourceNameEn": "nervous system",
@@ -29127,7 +29607,8 @@
     "nameKoSourcePages": [
       149
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7158": {
     "sourceNameEn": "respiratory system",
@@ -29141,7 +29622,8 @@
     "nameKoSourcePages": [
       83
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7159": {
     "sourceNameEn": "urinary system",
@@ -29155,7 +29637,8 @@
     "nameKoSourcePages": [
       91
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7160": {
     "sourceNameEn": "genital system",
@@ -29176,7 +29659,8 @@
     "nameKoSourcePages": [
       108
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7165": {
     "nameKo": "심장오른쪽",
@@ -29202,10 +29686,10 @@
       "KAA_TERMINOLOGY_6"
     ],
     "nameKoSourcePages": [
-      5,
       179
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7184": {
     "nameKo": "다리",
@@ -29219,7 +29703,8 @@
     "nameKoSourcePages": [
       6
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7185": {
     "nameKo": "오른위팔다리",
@@ -29281,7 +29766,8 @@
     "nameKoSourcePages": [
       79
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7200": {
     "nameKo": "작은창자",
@@ -29298,7 +29784,8 @@
     "nameKoSourcePages": [
       76
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7201": {
     "nameKo": "큰창자",
@@ -29315,7 +29802,8 @@
     "nameKoSourcePages": [
       77
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7207": {
     "sourceNameEn": "jejunum",
@@ -29329,7 +29817,8 @@
     "nameKoSourcePages": [
       77
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7208": {
     "sourceNameEn": "ileum",
@@ -29343,7 +29832,8 @@
     "nameKoSourcePages": [
       77
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7216": {
     "sourceNameEn": "outflow part of right ventricle",
@@ -29364,7 +29854,8 @@
     "nameKoSourcePages": [
       110
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7235": {
     "sourceNameEn": "mitral valve",
@@ -29378,7 +29869,8 @@
     "nameKoSourcePages": [
       111
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7236": {
     "sourceNameEn": "aortic valve",
@@ -29392,7 +29884,8 @@
     "nameKoSourcePages": [
       111
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7246": {
     "nameKo": "허파동맥판막",
@@ -29406,7 +29899,8 @@
     "nameKoSourcePages": [
       110
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7259": {
     "nameKo": "오른심실꼭지근육",
@@ -29430,7 +29924,8 @@
     "nameKoSourcePages": [
       88
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7310": {
     "nameKo": "왼허파",
@@ -29447,7 +29942,8 @@
     "nameKoSourcePages": [
       88
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7333": {
     "nameKo": "오른허파위엽",
@@ -29650,7 +30146,8 @@
     "nameKoSourcePages": [
       87
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7480": {
     "sourceNameEn": "rib cage",
@@ -29692,7 +30189,8 @@
     "nameKoSourcePages": [
       29
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7563": {
     "nameKo": "몸통칸",
@@ -29713,7 +30211,8 @@
     "nameKoSourcePages": [
       151
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA8617": {
     "nameKo": "오른끝분절동맥",
@@ -29790,7 +30289,8 @@
     "nameKoSourcePages": [
       131
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA8661": {
     "nameKo": "오른끝분절정맥",
@@ -29902,7 +30402,8 @@
     "nameKoSourcePages": [
       112
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9498": {
     "sourceNameEn": "fibrous ring of mitral valve",
@@ -30032,7 +30533,8 @@
     "nameKoSourcePages": [
       5
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA9577": {
     "nameKo": "배",
@@ -30046,7 +30548,8 @@
     "nameKoSourcePages": [
       5
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA9578": {
     "sourceNameEn": "pelvis",
@@ -30060,7 +30563,8 @@
     "nameKoSourcePages": [
       34
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9579": {
     "sourceNameEn": "perineum",
@@ -30074,7 +30578,8 @@
     "nameKoSourcePages": [
       101
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9584": {
     "sourceNameEn": "peritoneum",
@@ -30088,7 +30593,8 @@
     "nameKoSourcePages": [
       103
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9607": {
     "sourceNameEn": "thymus",
@@ -30102,7 +30608,8 @@
     "nameKoSourcePages": [
       143
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9668": {
     "sourceNameEn": "endocrine system",
@@ -30137,7 +30644,8 @@
     "nameKoSourcePages": [
       90
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9827": {
     "nameKo": "위세로칸",
@@ -30151,7 +30659,8 @@
     "nameKoSourcePages": [
       90
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9828": {
     "nameKo": "아래세로칸",
@@ -30165,7 +30674,8 @@
     "nameKoSourcePages": [
       90
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA9838": {
     "nameKo": "앞세로칸",
@@ -30179,7 +30689,8 @@
     "nameKoSourcePages": [
       90
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA9839": {
     "nameKo": "중간세로칸",
@@ -30193,7 +30704,8 @@
     "nameKoSourcePages": [
       90
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA9840": {
     "nameKo": "뒤세로칸",
@@ -30207,7 +30719,8 @@
     "nameKoSourcePages": [
       90
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA9908": {
     "sourceNameEn": "peritoneal sac",
@@ -30298,7 +30811,8 @@
     "nameKoSourcePages": [
       80
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA13363": {
     "nameKo": "왼간엽",
@@ -30312,7 +30826,8 @@
     "nameKoSourcePages": [
       80
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA13373": {
     "nameKo": "오른가슴큰",
@@ -30340,7 +30855,8 @@
     "nameKoSourcePages": [
       26
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14541": {
     "sourceNameEn": "cecum",
@@ -30354,7 +30870,8 @@
     "nameKoSourcePages": [
       78
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14615": {
     "nameKo": "작은창자벽",
@@ -30434,7 +30951,8 @@
     "nameKoSourcePages": [
       103
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14775": {
     "sourceNameEn": "gastroduodenal artery",
@@ -30448,7 +30966,8 @@
     "nameKoSourcePages": [
       125
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA14778": {
     "nameKo": "오른간동맥",
@@ -30574,7 +31093,8 @@
     "nameKoSourcePages": [
       6
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA16582": {
     "nameKo": "오른골반이음",
@@ -30609,7 +31129,8 @@
     "nameKoSourcePages": [
       96
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA20224": {
     "sourceNameEn": "right side of rib cage",
@@ -30714,7 +31235,8 @@
     "nameKoSourcePages": [
       12
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA24138": {
     "sourceNameEn": "cervical vertebral column",
@@ -30770,7 +31292,8 @@
     "nameKoSourcePages": [
       5
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA24816": {
     "sourceNameEn": "anterior chest",
@@ -31253,7 +31776,8 @@
     "nameKoSourcePages": [
       83
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA46565": {
     "sourceNameEn": "skull",
@@ -31267,7 +31791,8 @@
     "nameKoSourcePages": [
       13
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA49177": {
     "sourceNameEn": "upper gastrointestinal tract",
@@ -31295,7 +31820,8 @@
     "nameKoSourcePages": [
       69
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA49187": {
     "nameKo": "머리뒤통수부분",
@@ -31337,7 +31863,8 @@
     "nameKoSourcePages": [
       113
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50040": {
     "nameKo": "왼관상동맥",
@@ -31351,7 +31878,8 @@
     "nameKoSourcePages": [
       114
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50060": {
     "sourceNameEn": "chest wall",
@@ -31414,7 +31942,8 @@
     "nameKoSourcePages": [
       120
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA50561": {
     "sourceNameEn": "right pontine artery",
@@ -31473,7 +32002,8 @@
     "nameKoSourcePages": [
       154
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA51044": {
     "sourceNameEn": "fascia lata of right thigh",
@@ -31501,7 +32031,8 @@
     "nameKoSourcePages": [
       14
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA53082": {
     "sourceNameEn": "right orbit",
@@ -31543,7 +32074,8 @@
     "nameKoSourcePages": [
       13
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA53673": {
     "sourceNameEn": "viscerocranium",
@@ -31557,7 +32089,8 @@
     "nameKoSourcePages": [
       13
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA54375": {
     "sourceNameEn": "nasal septum",
@@ -31571,7 +32104,8 @@
     "nameKoSourcePages": [
       83
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA54397": {
     "sourceNameEn": "upper jaw",
@@ -31662,7 +32196,8 @@
     "nameKoSourcePages": [
       73
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA55022": {
     "sourceNameEn": "uvula",
@@ -31670,13 +32205,14 @@
     "nameKo": "목젖",
     "legacyKo": "구개수",
     "hanja": "口蓋垂",
-    "nameKoVerification": "direct-manual",
+    "nameKoVerification": "direct",
     "nameKoSourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
     "nameKoSourcePages": [
       73
-    ]
+    ],
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA55675": {
     "nameKo": "신경축",
@@ -31865,7 +32401,8 @@
     "nameKoSourcePages": [
       83
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA59517": {
     "sourceNameEn": "dorsum of nose",
@@ -31879,7 +32416,8 @@
     "nameKoSourcePages": [
       83
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA59538": {
     "sourceNameEn": "cartilaginous skeleton of nose",
@@ -32257,7 +32795,8 @@
     "nameKoSourcePages": [
       154
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62000": {
     "sourceNameEn": "telencephalon",
@@ -32271,7 +32810,8 @@
     "nameKoSourcePages": [
       176
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62001": {
     "sourceNameEn": "diencephalon",
@@ -32285,7 +32825,8 @@
     "nameKoSourcePages": [
       170
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62003": {
     "sourceNameEn": "metencephalon",
@@ -32299,7 +32840,8 @@
     "nameKoSourcePages": [
       154
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA62009": {
     "sourceNameEn": "epithalamus",
@@ -32314,7 +32856,8 @@
       170,
       171
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA62028": {
     "sourceNameEn": "intermediate hypothalamic region",
@@ -32342,7 +32885,8 @@
     "nameKoSourcePages": [
       154
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA67994": {
     "sourceNameEn": "intrapulmonary part of right pulmonary artery",
@@ -32406,7 +32950,8 @@
       113,
       125
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA68194": {
     "nameKo": "가쪽구역동맥",
@@ -32421,7 +32966,8 @@
       113,
       125
     ],
-    "nameKoVerification": "direct-manual"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized+manual-pdf"
   },
   "FMA68196": {
     "nameKo": "중간엽동맥",
@@ -32435,7 +32981,8 @@
     "nameKoSourcePages": [
       113
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA68198": {
     "nameKo": "왼위엽동맥",
@@ -32610,7 +33157,8 @@
     "nameKoSourcePages": [
       69
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA71221": {
     "sourceNameEn": "axial skeleton",
@@ -32624,7 +33172,8 @@
     "nameKoSourcePages": [
       12
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA71857": {
     "nameKo": "오른간쓸개나무",
@@ -32841,7 +33390,8 @@
     "nameKoSourcePages": [
       217
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA75007": {
     "nameKo": "신경축공간",
@@ -32953,7 +33503,8 @@
     "nameKoSourcePages": [
       154
     ],
-    "nameKoVerification": "direct"
+    "nameKoVerification": "direct",
+    "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA82672": {
     "nameKo": "위온몸정맥나무",
