@@ -22,18 +22,17 @@
   },
   "FMA3726": {
     "sourceNameEn": "anastomosis",
-    "unresolvedTokens": [
-      "anastomosis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "문합",
+    "legacyKo": "문합",
+    "hanja": "吻合"
   },
   "FMA3727": {
     "sourceNameEn": "vascular anastomosis",
-    "unresolvedTokens": [
-      "vascular",
-      "anastomosis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "혈관문합",
+    "legacyKo": "혈관문합",
+    "hanja": "血管吻合"
   },
   "FMA3728": {
     "sourceNameEn": "arterial anastomosis",
@@ -303,17 +302,17 @@
   },
   "FMA3990": {
     "sourceNameEn": "thyrocervical trunk",
-    "unresolvedTokens": [
-      "thyrocervical"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "갑상목줄기",
+    "legacyKo": "갑상경간",
+    "hanja": "甲狀頸幹"
   },
   "FMA3992": {
     "sourceNameEn": "right thyrocervical trunk",
-    "unresolvedTokens": [
-      "thyrocervical"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른갑상목줄기",
+    "legacyKo": "우갑상경간",
+    "hanja": "右甲狀頸幹"
   },
   "FMA3994": {
     "nameKo": "둘째뒤갈비사이동맥",
@@ -359,10 +358,10 @@
   },
   "FMA4077": {
     "sourceNameEn": "left musculophrenic artery",
-    "unresolvedTokens": [
-      "musculophrenic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼근육가로막동맥",
+    "legacyKo": "좌근횡격동맥",
+    "hanja": "左筋橫隔動脈"
   },
   "FMA4083": {
     "nameKo": "왼위윗배동맥",
@@ -373,17 +372,17 @@
   },
   "FMA4084": {
     "sourceNameEn": "left thyrocervical trunk",
-    "unresolvedTokens": [
-      "thyrocervical"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼갑상목줄기",
+    "legacyKo": "좌갑상경간",
+    "hanja": "左甲狀頸幹"
   },
   "FMA4086": {
     "sourceNameEn": "left costocervical trunk",
-    "unresolvedTokens": [
-      "costocervical"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼갈비목줄기",
+    "legacyKo": "좌늑경간",
+    "hanja": "左肋頸幹"
   },
   "FMA4088": {
     "nameKo": "왼위갈비사이동맥",
@@ -422,24 +421,24 @@
   },
   "FMA4613": {
     "sourceNameEn": "subcostal artery",
-    "unresolvedTokens": [
-      "subcostal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "갈비밑동맥",
+    "legacyKo": "늑하동맥",
+    "hanja": "肋下動脈"
   },
   "FMA4634": {
     "sourceNameEn": "right subcostal artery",
-    "unresolvedTokens": [
-      "subcostal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른갈비밑동맥",
+    "legacyKo": "우늑하동맥",
+    "hanja": "右肋下動脈"
   },
   "FMA4654": {
     "sourceNameEn": "left subcostal artery",
-    "unresolvedTokens": [
-      "subcostal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼갈비밑동맥",
+    "legacyKo": "좌늑하동맥",
+    "hanja": "左肋下動脈"
   },
   "FMA4677": {
     "nameKo": "관상동맥가지줄기",
@@ -464,10 +463,10 @@
   },
   "FMA4707": {
     "sourceNameEn": "great cardiac vein",
-    "unresolvedTokens": [
-      "great"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "큰심장정맥",
+    "legacyKo": "대심장정맥",
+    "hanja": "大心臟靜脈"
   },
   "FMA4708": {
     "sourceNameEn": "left marginal vein",
@@ -492,10 +491,10 @@
   },
   "FMA4714": {
     "sourceNameEn": "small cardiac vein",
-    "unresolvedTokens": [
-      "small"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "작은심장정맥",
+    "legacyKo": "소심장정맥",
+    "hanja": "小心臟靜脈"
   },
   "FMA4716": {
     "sourceNameEn": "right marginal vein",
@@ -549,10 +548,10 @@
   },
   "FMA4732": {
     "sourceNameEn": "musculophrenic vein",
-    "unresolvedTokens": [
-      "musculophrenic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "근육가로막정맥",
+    "legacyKo": "근횡격정맥",
+    "hanja": "筋橫隔靜脈"
   },
   "FMA4751": {
     "sourceNameEn": "right brachiocephalic vein",
@@ -612,10 +611,10 @@
   },
   "FMA4772": {
     "sourceNameEn": "right musculophrenic vein",
-    "unresolvedTokens": [
-      "musculophrenic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른근육가로막정맥",
+    "legacyKo": "우근횡격정맥",
+    "hanja": "右筋橫隔靜脈"
   },
   "FMA4785": {
     "nameKo": "왼위윗배정맥",
@@ -626,10 +625,10 @@
   },
   "FMA4786": {
     "sourceNameEn": "left musculophrenic vein",
-    "unresolvedTokens": [
-      "musculophrenic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼근육가로막정맥",
+    "legacyKo": "좌근횡격정맥",
+    "hanja": "左筋橫隔靜脈"
   },
   "FMA4797": {
     "nameKo": "왼위갈비사이정맥",
@@ -654,10 +653,10 @@
   },
   "FMA4844": {
     "sourceNameEn": "right subcostal vein",
-    "unresolvedTokens": [
-      "subcostal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른갈비밑정맥",
+    "legacyKo": "우늑하정맥",
+    "hanja": "右肋下靜脈"
   },
   "FMA4877": {
     "nameKo": "오른위갈비사이정맥",
@@ -682,10 +681,10 @@
   },
   "FMA4951": {
     "sourceNameEn": "left subcostal vein",
-    "unresolvedTokens": [
-      "subcostal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼갈비밑정맥",
+    "legacyKo": "좌늑하정맥",
+    "hanja": "左肋下靜脈"
   },
   "FMA5011": {
     "sourceNameEn": "accessory hemiazygos vein",
@@ -711,10 +710,10 @@
   },
   "FMA5039": {
     "sourceNameEn": "right costocervical trunk",
-    "unresolvedTokens": [
-      "costocervical"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른갈비목줄기",
+    "legacyKo": "우늑경간",
+    "hanja": "右肋頸幹"
   },
   "FMA5041": {
     "nameKo": "오른둘째뒤갈비사이동맥",
@@ -1069,10 +1068,10 @@
   },
   "FMA7262": {
     "sourceNameEn": "septal papillary muscle of right ventricle",
-    "unresolvedTokens": [
-      "septal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "사이막오른심실꼭지근육",
+    "legacyKo": "중격우심실유두근",
+    "hanja": "中隔右心室乳頭筋"
   },
   "FMA7264": {
     "nameKo": "왼심실가쪽꼭지근육",
@@ -1460,10 +1459,10 @@
   },
   "FMA8120": {
     "sourceNameEn": "eighth rib",
-    "unresolvedTokens": [
-      "eighth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "여덟째갈비뼈",
+    "legacyKo": "제8늑골",
+    "hanja": "第八肋骨"
   },
   "FMA8147": {
     "nameKo": "여섯째갈비뼈",
@@ -1544,101 +1543,101 @@
   },
   "FMA8283": {
     "sourceNameEn": "right eighth rib",
-    "unresolvedTokens": [
-      "eighth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른여덟째갈비뼈",
+    "legacyKo": "우제8늑골",
+    "hanja": "右第八肋骨"
   },
   "FMA8310": {
     "sourceNameEn": "left eighth rib",
-    "unresolvedTokens": [
-      "eighth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼여덟째갈비뼈",
+    "legacyKo": "좌제8늑골",
+    "hanja": "左第八肋骨"
   },
   "FMA8337": {
     "sourceNameEn": "ninth rib",
-    "unresolvedTokens": [
-      "ninth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "아홉째갈비뼈",
+    "legacyKo": "제9늑골",
+    "hanja": "第九肋骨"
   },
   "FMA8364": {
     "sourceNameEn": "right ninth rib",
-    "unresolvedTokens": [
-      "ninth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른아홉째갈비뼈",
+    "legacyKo": "우제9늑골",
+    "hanja": "右第九肋骨"
   },
   "FMA8391": {
     "sourceNameEn": "left ninth rib",
-    "unresolvedTokens": [
-      "ninth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼아홉째갈비뼈",
+    "legacyKo": "좌제9늑골",
+    "hanja": "左第九肋骨"
   },
   "FMA8418": {
     "sourceNameEn": "tenth rib",
-    "unresolvedTokens": [
-      "tenth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "열째갈비뼈",
+    "legacyKo": "제10늑골",
+    "hanja": "第十肋骨"
   },
   "FMA8445": {
     "sourceNameEn": "right tenth rib",
-    "unresolvedTokens": [
-      "tenth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른열째갈비뼈",
+    "legacyKo": "우제10늑골",
+    "hanja": "右第十肋骨"
   },
   "FMA8472": {
     "sourceNameEn": "left tenth rib",
-    "unresolvedTokens": [
-      "tenth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼열째갈비뼈",
+    "legacyKo": "좌제10늑골",
+    "hanja": "左第十肋骨"
   },
   "FMA8499": {
     "sourceNameEn": "eleventh rib",
-    "unresolvedTokens": [
-      "eleventh"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "열한째갈비뼈",
+    "legacyKo": "제11늑골",
+    "hanja": "第十一肋骨"
   },
   "FMA8515": {
     "sourceNameEn": "twelfth rib",
-    "unresolvedTokens": [
-      "twelfth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "열두째갈비뼈",
+    "legacyKo": "제12늑골",
+    "hanja": "第十二肋骨"
   },
   "FMA8531": {
     "sourceNameEn": "right eleventh rib",
-    "unresolvedTokens": [
-      "eleventh"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른열한째갈비뼈",
+    "legacyKo": "우제11늑골",
+    "hanja": "右第十一肋骨"
   },
   "FMA8532": {
     "sourceNameEn": "left eleventh rib",
-    "unresolvedTokens": [
-      "eleventh"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼열한째갈비뼈",
+    "legacyKo": "좌제11늑골",
+    "hanja": "左第十一肋骨"
   },
   "FMA8533": {
     "sourceNameEn": "right twelfth rib",
-    "unresolvedTokens": [
-      "twelfth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른열두째갈비뼈",
+    "legacyKo": "우제12늑골",
+    "hanja": "右第十二肋骨"
   },
   "FMA8534": {
     "sourceNameEn": "left twelfth rib",
-    "unresolvedTokens": [
-      "twelfth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼열두째갈비뼈",
+    "legacyKo": "좌제12늑골",
+    "hanja": "左第十二肋骨"
   },
   "FMA8612": {
     "nameKo": "허파줄기",
@@ -2111,10 +2110,10 @@
   },
   "FMA9619": {
     "sourceNameEn": "muscle of thorax",
-    "unresolvedTokens": [
-      "thorax"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가슴근육",
+    "legacyKo": "흉곽근",
+    "hanja": "胸廓筋"
   },
   "FMA9620": {
     "nameKo": "배근육",
@@ -2146,10 +2145,10 @@
   },
   "FMA9625": {
     "sourceNameEn": "stylohyoid",
-    "unresolvedTokens": [
-      "stylohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "붓돌기목뿔",
+    "legacyKo": "경상설골",
+    "hanja": "莖狀舌骨"
   },
   "FMA9629": {
     "sourceNameEn": "supraspinatus",
@@ -2327,45 +2326,45 @@
   },
   "FMA9991": {
     "sourceNameEn": "eighth thoracic vertebra",
-    "unresolvedTokens": [
-      "eighth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "여덟째가슴척추뼈",
+    "legacyKo": "제8흉추골",
+    "hanja": "第八胸椎骨"
   },
   "FMA10014": {
     "sourceNameEn": "ninth thoracic vertebra",
-    "unresolvedTokens": [
-      "ninth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "아홉째가슴척추뼈",
+    "legacyKo": "제9흉추골",
+    "hanja": "第九胸椎骨"
   },
   "FMA10037": {
     "sourceNameEn": "tenth thoracic vertebra",
-    "unresolvedTokens": [
-      "tenth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "열째가슴척추뼈",
+    "legacyKo": "제10흉추골",
+    "hanja": "第十胸椎骨"
   },
   "FMA10059": {
     "sourceNameEn": "eleventh thoracic vertebra",
-    "unresolvedTokens": [
-      "eleventh"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "열한째가슴척추뼈",
+    "legacyKo": "제11흉추골",
+    "hanja": "第十一胸椎骨"
   },
   "FMA10081": {
     "sourceNameEn": "twelfth thoracic vertebra",
-    "unresolvedTokens": [
-      "twelfth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "열두째가슴척추뼈",
+    "legacyKo": "제12흉추골",
+    "hanja": "第十二胸椎骨"
   },
   "FMA10419": {
     "sourceNameEn": "pancreatic duct",
-    "unresolvedTokens": [
-      "pancreatic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "이자관",
+    "legacyKo": "췌관",
+    "hanja": "膵管"
   },
   "FMA10446": {
     "nameKo": "척추사이원반",
@@ -2411,17 +2410,17 @@
   },
   "FMA10636": {
     "sourceNameEn": "costocervical trunk",
-    "unresolvedTokens": [
-      "costocervical"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "갈비목줄기",
+    "legacyKo": "늑경간",
+    "hanja": "肋頸幹"
   },
   "FMA10645": {
     "sourceNameEn": "musculophrenic artery",
-    "unresolvedTokens": [
-      "musculophrenic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "근육가로막동맥",
+    "legacyKo": "근횡격동맥",
+    "hanja": "筋橫隔動脈"
   },
   "FMA10646": {
     "nameKo": "위윗배동맥",
@@ -2453,10 +2452,10 @@
   },
   "FMA10663": {
     "sourceNameEn": "suprascapular artery",
-    "unresolvedTokens": [
-      "suprascapular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "어깨위동맥",
+    "legacyKo": "견갑상동맥",
+    "hanja": "肩胛上動脈"
   },
   "FMA10664": {
     "nameKo": "가로목동맥",
@@ -2481,10 +2480,10 @@
   },
   "FMA10681": {
     "sourceNameEn": "left suprascapular artery",
-    "unresolvedTokens": [
-      "suprascapular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼어깨위동맥",
+    "legacyKo": "좌견갑상동맥",
+    "hanja": "左肩胛上動脈"
   },
   "FMA10682": {
     "nameKo": "왼가로목동맥",
@@ -2502,10 +2501,10 @@
   },
   "FMA10692": {
     "sourceNameEn": "right musculophrenic artery",
-    "unresolvedTokens": [
-      "musculophrenic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른근육가로막동맥",
+    "legacyKo": "우근횡격동맥",
+    "hanja": "右筋橫隔動脈"
   },
   "FMA10697": {
     "sourceNameEn": "right inferior thyroid artery",
@@ -2516,10 +2515,10 @@
   },
   "FMA10698": {
     "sourceNameEn": "right suprascapular artery",
-    "unresolvedTokens": [
-      "suprascapular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른어깨위동맥",
+    "legacyKo": "우견갑상동맥",
+    "hanja": "右肩胛上動脈"
   },
   "FMA10699": {
     "nameKo": "오른가로목동맥",
@@ -2666,10 +2665,10 @@
   },
   "FMA12845": {
     "sourceNameEn": "subcostal vein",
-    "unresolvedTokens": [
-      "subcostal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "갈비밑정맥",
+    "legacyKo": "늑하정맥",
+    "hanja": "肋下靜脈"
   },
   "FMA12846": {
     "nameKo": "심장정맥",
@@ -2878,24 +2877,24 @@
   },
   "FMA13329": {
     "sourceNameEn": "axillary vein",
-    "unresolvedTokens": [
-      "axillary"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "겨드랑정맥",
+    "legacyKo": "액와정맥",
+    "hanja": "腋窩靜脈"
   },
   "FMA13330": {
     "sourceNameEn": "right axillary vein",
-    "unresolvedTokens": [
-      "axillary"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른겨드랑정맥",
+    "legacyKo": "우액와정맥",
+    "hanja": "右腋窩靜脈"
   },
   "FMA13331": {
     "sourceNameEn": "left axillary vein",
-    "unresolvedTokens": [
-      "axillary"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼겨드랑정맥",
+    "legacyKo": "좌액와정맥",
+    "hanja": "左腋窩靜脈"
   },
   "FMA13335": {
     "nameKo": "배바깥빗근",
@@ -2948,10 +2947,10 @@
   },
   "FMA13344": {
     "sourceNameEn": "thyrohyoid",
-    "unresolvedTokens": [
-      "thyrohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "방패목뿔",
+    "legacyKo": "갑상설골",
+    "hanja": "甲狀舌骨"
   },
   "FMA13346": {
     "sourceNameEn": "right sternohyoid",
@@ -2997,17 +2996,17 @@
   },
   "FMA13352": {
     "sourceNameEn": "right thyrohyoid",
-    "unresolvedTokens": [
-      "thyrohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른방패목뿔",
+    "legacyKo": "우갑상설골",
+    "hanja": "右甲狀舌骨"
   },
   "FMA13353": {
     "sourceNameEn": "left thyrohyoid",
-    "unresolvedTokens": [
-      "thyrohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼방패목뿔",
+    "legacyKo": "좌갑상설골",
+    "hanja": "左甲狀舌骨"
   },
   "FMA13354": {
     "nameKo": "갈비사이근육",
@@ -3039,45 +3038,45 @@
   },
   "FMA13379": {
     "sourceNameEn": "rhomboid major",
-    "unresolvedTokens": [
-      "rhomboid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "마름모큰",
+    "legacyKo": "능형대",
+    "hanja": "菱形大"
   },
   "FMA13380": {
     "sourceNameEn": "rhomboid minor",
-    "unresolvedTokens": [
-      "rhomboid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "마름모작은",
+    "legacyKo": "능형소",
+    "hanja": "菱形小"
   },
   "FMA13381": {
     "sourceNameEn": "right rhomboid major",
-    "unresolvedTokens": [
-      "rhomboid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른마름모큰",
+    "legacyKo": "우능형대",
+    "hanja": "右菱形大"
   },
   "FMA13382": {
     "sourceNameEn": "left rhomboid major",
-    "unresolvedTokens": [
-      "rhomboid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼마름모큰",
+    "legacyKo": "좌능형대",
+    "hanja": "左菱形大"
   },
   "FMA13383": {
     "sourceNameEn": "right rhomboid minor",
-    "unresolvedTokens": [
-      "rhomboid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른마름모작은",
+    "legacyKo": "우능형소",
+    "hanja": "右菱形小"
   },
   "FMA13384": {
     "sourceNameEn": "left rhomboid minor",
-    "unresolvedTokens": [
-      "rhomboid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼마름모작은",
+    "legacyKo": "좌능형소",
+    "hanja": "左菱形小"
   },
   "FMA13385": {
     "nameKo": "목갈비앞",
@@ -3381,31 +3380,31 @@
   },
   "FMA13505": {
     "sourceNameEn": "intervertebral disk of eighth thoracic vertebra",
-    "unresolvedTokens": [
-      "eighth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "여덟째가슴척추뼈척추사이원반",
+    "legacyKo": "제8흉추골추간판",
+    "hanja": "第八胸椎骨椎間盤"
   },
   "FMA13506": {
     "sourceNameEn": "intervertebral disk of ninth thoracic vertebra",
-    "unresolvedTokens": [
-      "ninth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "아홉째가슴척추뼈척추사이원반",
+    "legacyKo": "제9흉추골추간판",
+    "hanja": "第九胸椎骨椎間盤"
   },
   "FMA13507": {
     "sourceNameEn": "intervertebral disk of tenth thoracic vertebra",
-    "unresolvedTokens": [
-      "tenth"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "열째가슴척추뼈척추사이원반",
+    "legacyKo": "제10흉추골추간판",
+    "hanja": "第十胸椎骨椎間盤"
   },
   "FMA13508": {
     "sourceNameEn": "intervertebral disk of eleventh thoracic vertebra",
-    "unresolvedTokens": [
-      "eleventh"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "열한째가슴척추뼈척추사이원반",
+    "legacyKo": "제11흉추골추간판",
+    "hanja": "第十一胸椎骨椎間盤"
   },
   "FMA13883": {
     "nameKo": "심방벽",
@@ -3563,10 +3562,10 @@
   },
   "FMA14319": {
     "sourceNameEn": "suprascapular vein",
-    "unresolvedTokens": [
-      "suprascapular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "어깨위정맥",
+    "legacyKo": "견갑상정맥",
+    "hanja": "肩胛上靜脈"
   },
   "FMA14329": {
     "nameKo": "문맥줄기",
@@ -3647,10 +3646,10 @@
   },
   "FMA14341": {
     "sourceNameEn": "right testicular vein",
-    "unresolvedTokens": [
-      "testicular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른고환정맥",
+    "legacyKo": "우고환정맥",
+    "hanja": "右睾丸靜脈"
   },
   "FMA14343": {
     "nameKo": "오른부신정맥",
@@ -3661,17 +3660,17 @@
   },
   "FMA14344": {
     "sourceNameEn": "testicular vein",
-    "unresolvedTokens": [
-      "testicular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "고환정맥",
+    "legacyKo": "고환정맥",
+    "hanja": "睾丸靜脈"
   },
   "FMA14345": {
     "sourceNameEn": "left testicular vein",
-    "unresolvedTokens": [
-      "testicular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼고환정맥",
+    "legacyKo": "좌고환정맥",
+    "hanja": "左睾丸靜脈"
   },
   "FMA14348": {
     "nameKo": "부신정맥",
@@ -3879,24 +3878,24 @@
   },
   "FMA14758": {
     "sourceNameEn": "testicular artery",
-    "unresolvedTokens": [
-      "testicular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "고환동맥",
+    "legacyKo": "고환동맥",
+    "hanja": "睾丸動脈"
   },
   "FMA14759": {
     "sourceNameEn": "right testicular artery",
-    "unresolvedTokens": [
-      "testicular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른고환동맥",
+    "legacyKo": "우고환동맥",
+    "hanja": "右睾丸動脈"
   },
   "FMA14760": {
     "sourceNameEn": "left testicular artery",
-    "unresolvedTokens": [
-      "testicular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼고환동맥",
+    "legacyKo": "좌고환동맥",
+    "hanja": "左睾丸動脈"
   },
   "FMA14764": {
     "nameKo": "온엉덩동맥",
@@ -3978,17 +3977,17 @@
   },
   "FMA14782": {
     "sourceNameEn": "anterior superior pancreaticoduodenal artery",
-    "unresolvedTokens": [
-      "pancreaticoduodenal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "앞위이자샘창자동맥",
+    "legacyKo": "전상췌십이지장동맥",
+    "hanja": "前上膵十二指腸動脈"
   },
   "FMA14784": {
     "sourceNameEn": "posterior superior pancreaticoduodenal artery",
-    "unresolvedTokens": [
-      "pancreaticoduodenal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뒤위이자샘창자동맥",
+    "legacyKo": "후상췌십이지장동맥",
+    "hanja": "後上膵十二指腸動脈"
   },
   "FMA14787": {
     "sourceNameEn": "dorsal pancreatic artery",
@@ -3999,18 +3998,17 @@
   },
   "FMA14790": {
     "sourceNameEn": "inferior pancreatic artery",
-    "unresolvedTokens": [
-      "pancreatic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "아래이자동맥",
+    "legacyKo": "하췌동맥",
+    "hanja": "下膵動脈"
   },
   "FMA14792": {
     "sourceNameEn": "great pancreatic artery",
-    "unresolvedTokens": [
-      "great",
-      "pancreatic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "큰이자동맥",
+    "legacyKo": "대췌동맥",
+    "hanja": "大膵動脈"
   },
   "FMA14793": {
     "sourceNameEn": "caudal pancreatic artery",
@@ -4030,10 +4028,10 @@
   },
   "FMA14805": {
     "sourceNameEn": "inferior pancreaticoduodenal artery",
-    "unresolvedTokens": [
-      "pancreaticoduodenal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "아래이자샘창자동맥",
+    "legacyKo": "하췌십이지장동맥",
+    "hanja": "下膵十二指腸動脈"
   },
   "FMA14809": {
     "sourceNameEn": "ileal artery",
@@ -4065,10 +4063,10 @@
   },
   "FMA14815": {
     "sourceNameEn": "ileocolic artery",
-    "unresolvedTokens": [
-      "ileocolic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "돌막창자동맥",
+    "legacyKo": "회결장동맥",
+    "hanja": "回結腸動脈"
   },
   "FMA14816": {
     "sourceNameEn": "anterior cecal artery",
@@ -4108,10 +4106,10 @@
   },
   "FMA14821": {
     "sourceNameEn": "branch of ileocolic artery",
-    "unresolvedTokens": [
-      "ileocolic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "돌막창자동맥가지",
+    "legacyKo": "회결장동맥지",
+    "hanja": "回結腸動脈枝"
   },
   "FMA14824": {
     "sourceNameEn": "marginal colic artery",
@@ -4309,10 +4307,10 @@
   },
   "FMA15398": {
     "sourceNameEn": "pancreaticoduodenal vein",
-    "unresolvedTokens": [
-      "pancreaticoduodenal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "이자샘창자정맥",
+    "legacyKo": "췌십이지장정맥",
+    "hanja": "膵十二指腸靜脈"
   },
   "FMA15399": {
     "sourceNameEn": "left gastric vein",
@@ -4351,10 +4349,10 @@
   },
   "FMA15408": {
     "sourceNameEn": "ileocolic vein",
-    "unresolvedTokens": [
-      "ileocolic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "돌막창자정맥",
+    "legacyKo": "회결장정맥",
+    "hanja": "回結腸靜脈"
   },
   "FMA15414": {
     "nameKo": "오른문맥정맥",
@@ -4922,45 +4920,45 @@
   },
   "FMA18908": {
     "sourceNameEn": "superior gluteal vein",
-    "unresolvedTokens": [
-      "gluteal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "위볼기정맥",
+    "legacyKo": "상둔정맥",
+    "hanja": "上臀靜脈"
   },
   "FMA18909": {
     "sourceNameEn": "right superior gluteal vein",
-    "unresolvedTokens": [
-      "gluteal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른위볼기정맥",
+    "legacyKo": "우상둔정맥",
+    "hanja": "右上臀靜脈"
   },
   "FMA18910": {
     "sourceNameEn": "left superior gluteal vein",
-    "unresolvedTokens": [
-      "gluteal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼위볼기정맥",
+    "legacyKo": "좌상둔정맥",
+    "hanja": "左上臀靜脈"
   },
   "FMA18911": {
     "sourceNameEn": "inferior gluteal vein",
-    "unresolvedTokens": [
-      "gluteal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "아래볼기정맥",
+    "legacyKo": "하둔정맥",
+    "hanja": "下臀靜脈"
   },
   "FMA18912": {
     "sourceNameEn": "right inferior gluteal vein",
-    "unresolvedTokens": [
-      "gluteal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른아래볼기정맥",
+    "legacyKo": "우하둔정맥",
+    "hanja": "右下臀靜脈"
   },
   "FMA18913": {
     "sourceNameEn": "left inferior gluteal vein",
-    "unresolvedTokens": [
-      "gluteal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼아래볼기정맥",
+    "legacyKo": "좌하둔정맥",
+    "hanja": "左下臀靜脈"
   },
   "FMA18914": {
     "nameKo": "폐쇄정맥",
@@ -4985,24 +4983,24 @@
   },
   "FMA18917": {
     "sourceNameEn": "internal pudendal vein",
-    "unresolvedTokens": [
-      "pudendal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "속음부정맥",
+    "legacyKo": "내음부정맥",
+    "hanja": "內陰部靜脈"
   },
   "FMA18918": {
     "sourceNameEn": "right internal pudendal vein",
-    "unresolvedTokens": [
-      "pudendal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른속음부정맥",
+    "legacyKo": "우내음부정맥",
+    "hanja": "右內陰部靜脈"
   },
   "FMA18919": {
     "sourceNameEn": "left internal pudendal vein",
-    "unresolvedTokens": [
-      "pudendal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼속음부정맥",
+    "legacyKo": "좌내음부정맥",
+    "hanja": "左內陰部靜脈"
   },
   "FMA19082": {
     "sourceNameEn": "piriformis",
@@ -5020,10 +5018,10 @@
   },
   "FMA19086": {
     "sourceNameEn": "muscle of pelvis",
-    "unresolvedTokens": [
-      "pelvis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "골반근육",
+    "legacyKo": "골반근",
+    "hanja": "骨盤筋"
   },
   "FMA19088": {
     "sourceNameEn": "coccygeus",
@@ -5369,10 +5367,10 @@
   },
   "FMA21240": {
     "sourceNameEn": "tributary of internal pudendal vein",
-    "unresolvedTokens": [
-      "pudendal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "속음부정맥지류",
+    "legacyKo": "내음부정맥지류",
+    "hanja": "內陰部靜脈支流"
   },
   "FMA21354": {
     "nameKo": "음경깊은등쪽정맥",
@@ -5383,42 +5381,38 @@
   },
   "FMA21376": {
     "sourceNameEn": "great saphenous vein",
-    "unresolvedTokens": [
-      "great",
-      "saphenous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "큰두렁정맥",
+    "legacyKo": "대복재정맥",
+    "hanja": "大伏在靜脈"
   },
   "FMA21378": {
     "sourceNameEn": "tributary of great saphenous vein",
-    "unresolvedTokens": [
-      "great",
-      "saphenous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "큰두렁정맥지류",
+    "legacyKo": "대복재정맥지류",
+    "hanja": "大伏在靜脈支流"
   },
   "FMA21379": {
     "sourceNameEn": "right great saphenous vein",
-    "unresolvedTokens": [
-      "great",
-      "saphenous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른큰두렁정맥",
+    "legacyKo": "우대복재정맥",
+    "hanja": "右大伏在靜脈"
   },
   "FMA21380": {
     "sourceNameEn": "left great saphenous vein",
-    "unresolvedTokens": [
-      "great",
-      "saphenous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼큰두렁정맥",
+    "legacyKo": "좌대복재정맥",
+    "hanja": "左大伏在靜脈"
   },
   "FMA21383": {
     "sourceNameEn": "tributary of superficial external pudendal vein",
-    "unresolvedTokens": [
-      "pudendal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "얕은바깥음부정맥지류",
+    "legacyKo": "천외음부정맥지류",
+    "hanja": "淺外陰部靜脈支流"
   },
   "FMA21384": {
     "nameKo": "음경얕은등쪽정맥",
@@ -5478,10 +5472,10 @@
   },
   "FMA21520": {
     "sourceNameEn": "branch of inferior branch of ileocolic artery",
-    "unresolvedTokens": [
-      "ileocolic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "돌막창자동맥아래가지가지",
+    "legacyKo": "회결장동맥하지지",
+    "hanja": "回結腸動脈下枝枝"
   },
   "FMA21521": {
     "nameKo": "왼결장동맥가지줄기",
@@ -5529,40 +5523,38 @@
   },
   "FMA22315": {
     "sourceNameEn": "gluteus medius",
-    "unresolvedTokens": [
-      "gluteus",
-      "medius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "볼기중간",
+    "legacyKo": "둔중",
+    "hanja": "臀中"
   },
   "FMA22317": {
     "sourceNameEn": "gluteus minimus",
-    "unresolvedTokens": [
-      "gluteus",
-      "minimus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "볼기최소",
+    "legacyKo": "둔소",
+    "hanja": "臀小"
   },
   "FMA22318": {
     "sourceNameEn": "gemellus superior",
-    "unresolvedTokens": [
-      "gemellus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "쌍둥이위",
+    "legacyKo": "쌍자상",
+    "hanja": "雙子上"
   },
   "FMA22319": {
     "sourceNameEn": "gemellus",
-    "unresolvedTokens": [
-      "gemellus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "쌍둥이",
+    "legacyKo": "쌍자",
+    "hanja": "雙子"
   },
   "FMA22320": {
     "sourceNameEn": "gemellus inferior",
-    "unresolvedTokens": [
-      "gemellus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "쌍둥이아래",
+    "legacyKo": "쌍자하",
+    "hanja": "雙子下"
   },
   "FMA22321": {
     "sourceNameEn": "quadratus femoris",
@@ -5631,63 +5623,59 @@
   },
   "FMA22330": {
     "sourceNameEn": "right gluteus medius",
-    "unresolvedTokens": [
-      "gluteus",
-      "medius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른볼기중간",
+    "legacyKo": "우둔중",
+    "hanja": "右臀中"
   },
   "FMA22331": {
     "sourceNameEn": "left gluteus medius",
-    "unresolvedTokens": [
-      "gluteus",
-      "medius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼볼기중간",
+    "legacyKo": "좌둔중",
+    "hanja": "左臀中"
   },
   "FMA22332": {
     "sourceNameEn": "right gluteus minimus",
-    "unresolvedTokens": [
-      "gluteus",
-      "minimus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른볼기최소",
+    "legacyKo": "우둔소",
+    "hanja": "右臀小"
   },
   "FMA22333": {
     "sourceNameEn": "left gluteus minimus",
-    "unresolvedTokens": [
-      "gluteus",
-      "minimus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼볼기최소",
+    "legacyKo": "좌둔소",
+    "hanja": "左臀小"
   },
   "FMA22334": {
     "sourceNameEn": "right gemellus superior",
-    "unresolvedTokens": [
-      "gemellus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른쌍둥이위",
+    "legacyKo": "우쌍자상",
+    "hanja": "右雙子上"
   },
   "FMA22335": {
     "sourceNameEn": "left gemellus superior",
-    "unresolvedTokens": [
-      "gemellus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼쌍둥이위",
+    "legacyKo": "좌쌍자상",
+    "hanja": "左雙子上"
   },
   "FMA22336": {
     "sourceNameEn": "right gemellus inferior",
-    "unresolvedTokens": [
-      "gemellus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른쌍둥이아래",
+    "legacyKo": "우쌍자하",
+    "hanja": "右雙子下"
   },
   "FMA22337": {
     "sourceNameEn": "left gemellus inferior",
-    "unresolvedTokens": [
-      "gemellus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼쌍둥이아래",
+    "legacyKo": "좌쌍자하",
+    "hanja": "左雙子下"
   },
   "FMA22338": {
     "sourceNameEn": "right quadratus femoris",
@@ -5830,11 +5818,10 @@
   },
   "FMA22431": {
     "sourceNameEn": "vastus lateralis",
-    "unresolvedTokens": [
-      "vastus",
-      "lateralis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "넓은가쪽",
+    "legacyKo": "광외측",
+    "hanja": "廣外側"
   },
   "FMA22432": {
     "sourceNameEn": "vastus medialis",
@@ -6076,17 +6063,17 @@
   },
   "FMA22539": {
     "sourceNameEn": "fibularis longus",
-    "unresolvedTokens": [
-      "fibularis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "종아리긴",
+    "legacyKo": "비골장",
+    "hanja": "腓骨長"
   },
   "FMA22540": {
     "sourceNameEn": "fibularis brevis",
-    "unresolvedTokens": [
-      "fibularis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "종아리짧은",
+    "legacyKo": "비골단",
+    "hanja": "腓骨短"
   },
   "FMA22542": {
     "sourceNameEn": "soleus",
@@ -6168,31 +6155,31 @@
   },
   "FMA22552": {
     "sourceNameEn": "right fibularis longus",
-    "unresolvedTokens": [
-      "fibularis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른종아리긴",
+    "legacyKo": "우비골장",
+    "hanja": "右腓骨長"
   },
   "FMA22553": {
     "sourceNameEn": "left fibularis longus",
-    "unresolvedTokens": [
-      "fibularis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼종아리긴",
+    "legacyKo": "좌비골장",
+    "hanja": "左腓骨長"
   },
   "FMA22554": {
     "sourceNameEn": "right fibularis brevis",
-    "unresolvedTokens": [
-      "fibularis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른종아리짧은",
+    "legacyKo": "우비골단",
+    "hanja": "右腓骨短"
   },
   "FMA22555": {
     "sourceNameEn": "left fibularis brevis",
-    "unresolvedTokens": [
-      "fibularis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼종아리짧은",
+    "legacyKo": "좌비골단",
+    "hanja": "左腓骨短"
   },
   "FMA22558": {
     "sourceNameEn": "right soleus",
@@ -6315,32 +6302,31 @@
   },
   "FMA22653": {
     "sourceNameEn": "splenius capitis",
-    "unresolvedTokens": [
-      "splenius",
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "널판머리",
+    "legacyKo": "판상두",
+    "hanja": "板狀頭"
   },
   "FMA22654": {
     "sourceNameEn": "axillary artery",
-    "unresolvedTokens": [
-      "axillary"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "겨드랑동맥",
+    "legacyKo": "액와동맥",
+    "hanja": "腋窩動脈"
   },
   "FMA22655": {
     "sourceNameEn": "right axillary artery",
-    "unresolvedTokens": [
-      "axillary"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른겨드랑동맥",
+    "legacyKo": "우액와동맥",
+    "hanja": "右腋窩動脈"
   },
   "FMA22656": {
     "sourceNameEn": "left axillary artery",
-    "unresolvedTokens": [
-      "axillary"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼겨드랑동맥",
+    "legacyKo": "좌액와동맥",
+    "hanja": "左腋窩動脈"
   },
   "FMA22674": {
     "nameKo": "가쪽가슴동맥",
@@ -6365,24 +6351,24 @@
   },
   "FMA22677": {
     "sourceNameEn": "subscapular artery",
-    "unresolvedTokens": [
-      "subscapular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "어깨밑동맥",
+    "legacyKo": "견갑하동맥",
+    "hanja": "肩胛下動脈"
   },
   "FMA22678": {
     "sourceNameEn": "right subscapular artery",
-    "unresolvedTokens": [
-      "subscapular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른어깨밑동맥",
+    "legacyKo": "우견갑하동맥",
+    "hanja": "右肩胛下動脈"
   },
   "FMA22679": {
     "sourceNameEn": "left subscapular artery",
-    "unresolvedTokens": [
-      "subscapular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼어깨밑동맥",
+    "legacyKo": "좌견갑하동맥",
+    "hanja": "左肩胛下動脈"
   },
   "FMA22680": {
     "nameKo": "앞휘돌이위팔뼈동맥",
@@ -6561,10 +6547,10 @@
   },
   "FMA22714": {
     "sourceNameEn": "longissimus capitis",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가장긴머리",
+    "legacyKo": "최장두",
+    "hanja": "最長頭"
   },
   "FMA22726": {
     "sourceNameEn": "right splenius cervicis",
@@ -6582,19 +6568,17 @@
   },
   "FMA22728": {
     "sourceNameEn": "right splenius capitis",
-    "unresolvedTokens": [
-      "splenius",
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른널판머리",
+    "legacyKo": "우판상두",
+    "hanja": "右板狀頭"
   },
   "FMA22729": {
     "sourceNameEn": "left splenius capitis",
-    "unresolvedTokens": [
-      "splenius",
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼널판머리",
+    "legacyKo": "좌판상두",
+    "hanja": "左板狀頭"
   },
   "FMA22730": {
     "nameKo": "노동맥",
@@ -6689,10 +6673,10 @@
   },
   "FMA22754": {
     "sourceNameEn": "right longissimus capitis",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른가장긴머리",
+    "legacyKo": "우최장두",
+    "hanja": "右最長頭"
   },
   "FMA22755": {
     "nameKo": "노동맥등쪽손목가지",
@@ -6703,10 +6687,10 @@
   },
   "FMA22756": {
     "sourceNameEn": "left longissimus capitis",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼가장긴머리",
+    "legacyKo": "좌최장두",
+    "hanja": "左最長頭"
   },
   "FMA22757": {
     "nameKo": "오른가장긴목",
@@ -6966,10 +6950,10 @@
   },
   "FMA22830": {
     "sourceNameEn": "semispinalis capitis",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "반가시머리",
+    "legacyKo": "반극두",
+    "hanja": "半棘頭"
   },
   "FMA22834": {
     "nameKo": "얕은손바닥동맥활",
@@ -7169,17 +7153,17 @@
   },
   "FMA22876": {
     "sourceNameEn": "right semispinalis capitis",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른반가시머리",
+    "legacyKo": "우반극두",
+    "hanja": "右半棘頭"
   },
   "FMA22877": {
     "sourceNameEn": "left semispinalis capitis",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼반가시머리",
+    "legacyKo": "좌반극두",
+    "hanja": "左半棘頭"
   },
   "FMA22890": {
     "sourceNameEn": "right interspinalis thoracis",
@@ -7604,10 +7588,10 @@
   },
   "FMA23081": {
     "sourceNameEn": "rotator muscle",
-    "unresolvedTokens": [
-      "rotator"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "돌림근근육",
+    "legacyKo": "회선근근",
+    "hanja": "回旋筋筋"
   },
   "FMA23082": {
     "sourceNameEn": "cervical rotator",
@@ -7646,24 +7630,24 @@
   },
   "FMA23113": {
     "sourceNameEn": "subscapular vein",
-    "unresolvedTokens": [
-      "subscapular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "어깨밑정맥",
+    "legacyKo": "견갑하정맥",
+    "hanja": "肩胛下靜脈"
   },
   "FMA23114": {
     "sourceNameEn": "right subscapular vein",
-    "unresolvedTokens": [
-      "subscapular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른어깨밑정맥",
+    "legacyKo": "우견갑하정맥",
+    "hanja": "右肩胛下靜脈"
   },
   "FMA23115": {
     "sourceNameEn": "left subscapular vein",
-    "unresolvedTokens": [
-      "subscapular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼어깨밑정맥",
+    "legacyKo": "좌견갑하정맥",
+    "hanja": "左肩胛下靜脈"
   },
   "FMA23117": {
     "nameKo": "깊은위팔동맥가지",
@@ -8713,10 +8697,10 @@
   },
   "FMA24519": {
     "sourceNameEn": "intermediate cuneiform bone",
-    "unresolvedTokens": [
-      "intermediate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "중간쐐기뼈",
+    "legacyKo": "중간설상골",
+    "hanja": "中間楔狀骨"
   },
   "FMA24520": {
     "nameKo": "가쪽쐐기뼈",
@@ -8741,17 +8725,17 @@
   },
   "FMA24523": {
     "sourceNameEn": "right intermediate cuneiform bone",
-    "unresolvedTokens": [
-      "intermediate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른중간쐐기뼈",
+    "legacyKo": "우중간설상골",
+    "hanja": "右中間楔狀骨"
   },
   "FMA24524": {
     "sourceNameEn": "left intermediate cuneiform bone",
-    "unresolvedTokens": [
-      "intermediate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼중간쐐기뼈",
+    "legacyKo": "좌중간설상골",
+    "hanja": "左中間楔狀骨"
   },
   "FMA24525": {
     "nameKo": "오른가쪽쐐기뼈",
@@ -8790,10 +8774,10 @@
   },
   "FMA24551": {
     "sourceNameEn": "trunk of intrapulmonary vein",
-    "unresolvedTokens": [
-      "intrapulmonary"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "허파속정맥줄기",
+    "legacyKo": "폐내정맥간",
+    "hanja": "肺內靜脈幹"
   },
   "FMA25058": {
     "sourceNameEn": "intervertebral disk of axis",
@@ -8891,17 +8875,17 @@
   },
   "FMA32525": {
     "sourceNameEn": "rectus capitis posterior major",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "곧은머리뒤큰",
+    "legacyKo": "직두후대",
+    "hanja": "直頭後大"
   },
   "FMA32526": {
     "sourceNameEn": "rectus capitis posterior minor",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "곧은머리뒤작은",
+    "legacyKo": "직두후소",
+    "hanja": "直頭後小"
   },
   "FMA32527": {
     "sourceNameEn": "obliquus capitis superior",
@@ -8928,31 +8912,31 @@
   },
   "FMA32530": {
     "sourceNameEn": "right rectus capitis posterior major",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른곧은머리뒤큰",
+    "legacyKo": "우직두후대",
+    "hanja": "右直頭後大"
   },
   "FMA32531": {
     "sourceNameEn": "left rectus capitis posterior major",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼곧은머리뒤큰",
+    "legacyKo": "좌직두후대",
+    "hanja": "左直頭後大"
   },
   "FMA32532": {
     "sourceNameEn": "right rectus capitis posterior minor",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른곧은머리뒤작은",
+    "legacyKo": "우직두후소",
+    "hanja": "右直頭後小"
   },
   "FMA32533": {
     "sourceNameEn": "left rectus capitis posterior minor",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼곧은머리뒤작은",
+    "legacyKo": "좌직두후소",
+    "hanja": "左直頭後小"
   },
   "FMA32534": {
     "sourceNameEn": "right obliquus capitis superior",
@@ -9100,10 +9084,10 @@
   },
   "FMA32558": {
     "sourceNameEn": "musculature",
-    "unresolvedTokens": [
-      "musculature"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "근육계",
+    "legacyKo": "근육",
+    "hanja": "筋肉"
   },
   "FMA32559": {
     "sourceNameEn": "superficial postvertebral muscle",
@@ -10305,27 +10289,24 @@
   },
   "FMA38453": {
     "sourceNameEn": "pronator quadratus",
-    "unresolvedTokens": [
-      "pronator",
-      "quadratus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "엎침근네모",
+    "legacyKo": "회내근방형",
+    "hanja": "回內筋方形"
   },
   "FMA38454": {
     "sourceNameEn": "right pronator quadratus",
-    "unresolvedTokens": [
-      "pronator",
-      "quadratus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른엎침근네모",
+    "legacyKo": "우회내근방형",
+    "hanja": "右回內筋方形"
   },
   "FMA38455": {
     "sourceNameEn": "left pronator quadratus",
-    "unresolvedTokens": [
-      "pronator",
-      "quadratus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼엎침근네모",
+    "legacyKo": "좌회내근방형",
+    "hanja": "左回內筋方形"
   },
   "FMA38456": {
     "nameKo": "아래팔앞칸근육",
@@ -10686,24 +10667,24 @@
   },
   "FMA38524": {
     "sourceNameEn": "extensor indicis",
-    "unresolvedTokens": [
-      "indicis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "폄근집게손가락",
+    "legacyKo": "신근시지",
+    "hanja": "伸筋示指"
   },
   "FMA38525": {
     "sourceNameEn": "right extensor indicis",
-    "unresolvedTokens": [
-      "indicis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른폄근집게손가락",
+    "legacyKo": "우신근시지",
+    "hanja": "右伸筋示指"
   },
   "FMA38526": {
     "sourceNameEn": "left extensor indicis",
-    "unresolvedTokens": [
-      "indicis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼폄근집게손가락",
+    "legacyKo": "좌신근시지",
+    "hanja": "左伸筋示指"
   },
   "FMA38558": {
     "sourceNameEn": "humeral head of pronator teres",
@@ -10805,19 +10786,17 @@
   },
   "FMA38930": {
     "sourceNameEn": "right vastus lateralis",
-    "unresolvedTokens": [
-      "vastus",
-      "lateralis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른넓은가쪽",
+    "legacyKo": "우광외측",
+    "hanja": "右廣外側"
   },
   "FMA38931": {
     "sourceNameEn": "left vastus lateralis",
-    "unresolvedTokens": [
-      "vastus",
-      "lateralis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼넓은가쪽",
+    "legacyKo": "좌광외측",
+    "hanja": "左廣外側"
   },
   "FMA38932": {
     "sourceNameEn": "right vastus medialis",
@@ -10877,10 +10856,10 @@
   },
   "FMA42380": {
     "sourceNameEn": "intrinsic muscle of hand",
-    "unresolvedTokens": [
-      "intrinsic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "고유손근육",
+    "legacyKo": "내재수근",
+    "hanja": "內在手筋"
   },
   "FMA42398": {
     "sourceNameEn": "set of lumbricals of right hand",
@@ -10975,24 +10954,24 @@
   },
   "FMA43885": {
     "sourceNameEn": "adductor minimus",
-    "unresolvedTokens": [
-      "minimus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "모음근최소",
+    "legacyKo": "내전근소",
+    "hanja": "內轉筋小"
   },
   "FMA43886": {
     "sourceNameEn": "right adductor minimus",
-    "unresolvedTokens": [
-      "minimus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른모음근최소",
+    "legacyKo": "우내전근소",
+    "hanja": "右內轉筋小"
   },
   "FMA43887": {
     "sourceNameEn": "left adductor minimus",
-    "unresolvedTokens": [
-      "minimus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼모음근최소",
+    "legacyKo": "좌내전근소",
+    "hanja": "左內轉筋小"
   },
   "FMA43888": {
     "nameKo": "아래가쪽무릎동맥",
@@ -11307,31 +11286,31 @@
   },
   "FMA44327": {
     "sourceNameEn": "popliteal vein",
-    "unresolvedTokens": [
-      "popliteal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오금정맥",
+    "legacyKo": "슬와정맥",
+    "hanja": "膝窩靜脈"
   },
   "FMA44328": {
     "sourceNameEn": "right popliteal vein",
-    "unresolvedTokens": [
-      "popliteal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른오금정맥",
+    "legacyKo": "우슬와정맥",
+    "hanja": "右膝窩靜脈"
   },
   "FMA44329": {
     "sourceNameEn": "left popliteal vein",
-    "unresolvedTokens": [
-      "popliteal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼오금정맥",
+    "legacyKo": "좌슬와정맥",
+    "hanja": "左膝窩靜脈"
   },
   "FMA44330": {
     "sourceNameEn": "tributary of popliteal vein",
-    "unresolvedTokens": [
-      "popliteal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오금정맥지류",
+    "legacyKo": "슬와정맥지류",
+    "hanja": "膝窩靜脈支流"
   },
   "FMA44331": {
     "nameKo": "앞정강정맥",
@@ -11349,27 +11328,24 @@
   },
   "FMA44333": {
     "sourceNameEn": "small saphenous vein",
-    "unresolvedTokens": [
-      "small",
-      "saphenous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "작은두렁정맥",
+    "legacyKo": "소복재정맥",
+    "hanja": "小伏在靜脈"
   },
   "FMA44334": {
     "sourceNameEn": "right small saphenous vein",
-    "unresolvedTokens": [
-      "small",
-      "saphenous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른작은두렁정맥",
+    "legacyKo": "우소복재정맥",
+    "hanja": "右小伏在靜脈"
   },
   "FMA44335": {
     "sourceNameEn": "left small saphenous vein",
-    "unresolvedTokens": [
-      "small",
-      "saphenous"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼작은두렁정맥",
+    "legacyKo": "좌소복재정맥",
+    "hanja": "左小伏在靜脈"
   },
   "FMA44336": {
     "nameKo": "오른앞정강정맥",
@@ -11639,17 +11615,17 @@
   },
   "FMA45826": {
     "sourceNameEn": "right stylohyoid",
-    "unresolvedTokens": [
-      "stylohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른붓돌기목뿔",
+    "legacyKo": "우경상설골",
+    "hanja": "右莖狀舌骨"
   },
   "FMA45827": {
     "sourceNameEn": "left stylohyoid",
-    "unresolvedTokens": [
-      "stylohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼붓돌기목뿔",
+    "legacyKo": "좌경상설골",
+    "hanja": "左莖狀舌骨"
   },
   "FMA45854": {
     "sourceNameEn": "right pubococcygeus",
@@ -11758,52 +11734,52 @@
   },
   "FMA45950": {
     "sourceNameEn": "head of gastrocnemius",
-    "unresolvedTokens": [
-      "gastrocnemius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "장딴지머리",
+    "legacyKo": "비복두",
+    "hanja": "腓腹頭"
   },
   "FMA45956": {
     "sourceNameEn": "medial head of gastrocnemius",
-    "unresolvedTokens": [
-      "gastrocnemius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "장딴지안쪽머리",
+    "legacyKo": "비복내측두",
+    "hanja": "腓腹內側頭"
   },
   "FMA45957": {
     "sourceNameEn": "medial head of right gastrocnemius",
-    "unresolvedTokens": [
-      "gastrocnemius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른장딴지안쪽머리",
+    "legacyKo": "우비복내측두",
+    "hanja": "右腓腹內側頭"
   },
   "FMA45958": {
     "sourceNameEn": "medial head of left gastrocnemius",
-    "unresolvedTokens": [
-      "gastrocnemius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼장딴지안쪽머리",
+    "legacyKo": "좌비복내측두",
+    "hanja": "左腓腹內側頭"
   },
   "FMA45959": {
     "sourceNameEn": "lateral head of gastrocnemius",
-    "unresolvedTokens": [
-      "gastrocnemius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "장딴지가쪽머리",
+    "legacyKo": "비복외측두",
+    "hanja": "腓腹外側頭"
   },
   "FMA45960": {
     "sourceNameEn": "lateral head of right gastrocnemius",
-    "unresolvedTokens": [
-      "gastrocnemius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른장딴지가쪽머리",
+    "legacyKo": "우비복외측두",
+    "hanja": "右腓腹外側頭"
   },
   "FMA45961": {
     "sourceNameEn": "lateral head of left gastrocnemius",
-    "unresolvedTokens": [
-      "gastrocnemius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼장딴지가쪽머리",
+    "legacyKo": "좌비복외측두",
+    "hanja": "左腓腹外側頭"
   },
   "FMA45963": {
     "nameKo": "굽힘근엄지발가락짧은머리",
@@ -12035,69 +12011,66 @@
   },
   "FMA46308": {
     "sourceNameEn": "longus capitis",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "긴머리",
+    "legacyKo": "장두",
+    "hanja": "長頭"
   },
   "FMA46309": {
     "sourceNameEn": "right longus capitis",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른긴머리",
+    "legacyKo": "우장두",
+    "hanja": "右長頭"
   },
   "FMA46310": {
     "sourceNameEn": "left longus capitis",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼긴머리",
+    "legacyKo": "좌장두",
+    "hanja": "左長頭"
   },
   "FMA46312": {
     "sourceNameEn": "rectus capitis anterior",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "곧은머리앞",
+    "legacyKo": "직두전",
+    "hanja": "直頭前"
   },
   "FMA46313": {
     "sourceNameEn": "right rectus capitis anterior",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른곧은머리앞",
+    "legacyKo": "우직두전",
+    "hanja": "右直頭前"
   },
   "FMA46314": {
     "sourceNameEn": "left rectus capitis anterior",
-    "unresolvedTokens": [
-      "capitis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼곧은머리앞",
+    "legacyKo": "좌직두전",
+    "hanja": "左直頭前"
   },
   "FMA46316": {
     "sourceNameEn": "rectus capitis lateralis",
-    "unresolvedTokens": [
-      "capitis",
-      "lateralis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "곧은머리가쪽",
+    "legacyKo": "직두외측",
+    "hanja": "直頭外側"
   },
   "FMA46317": {
     "sourceNameEn": "right rectus capitis lateralis",
-    "unresolvedTokens": [
-      "capitis",
-      "lateralis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른곧은머리가쪽",
+    "legacyKo": "우직두외측",
+    "hanja": "右直頭外側"
   },
   "FMA46318": {
     "sourceNameEn": "left rectus capitis lateralis",
-    "unresolvedTokens": [
-      "capitis",
-      "lateralis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼곧은머리가쪽",
+    "legacyKo": "좌직두외측",
+    "hanja": "左直頭外側"
   },
   "FMA46320": {
     "sourceNameEn": "mylohyoid",
@@ -12889,24 +12862,24 @@
   },
   "FMA49868": {
     "sourceNameEn": "ophthalmic artery",
-    "unresolvedTokens": [
-      "ophthalmic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "눈동맥",
+    "legacyKo": "안동맥",
+    "hanja": "眼動脈"
   },
   "FMA49869": {
     "sourceNameEn": "right ophthalmic artery",
-    "unresolvedTokens": [
-      "ophthalmic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른눈동맥",
+    "legacyKo": "우안동맥",
+    "hanja": "右眼動脈"
   },
   "FMA49870": {
     "sourceNameEn": "left ophthalmic artery",
-    "unresolvedTokens": [
-      "ophthalmic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼눈동맥",
+    "legacyKo": "좌안동맥",
+    "hanja": "左眼動脈"
   },
   "FMA49893": {
     "nameKo": "관상동맥",
@@ -13120,17 +13093,17 @@
   },
   "FMA50330": {
     "sourceNameEn": "callosomarginal artery",
-    "unresolvedTokens": [
-      "callosomarginal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뇌들보모서리동맥",
+    "legacyKo": "뇌량변연동맥",
+    "hanja": "腦梁邊緣動脈"
   },
   "FMA50331": {
     "sourceNameEn": "branch of callosomarginal artery",
-    "unresolvedTokens": [
-      "callosomarginal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뇌들보모서리동맥가지",
+    "legacyKo": "뇌량변연동맥지",
+    "hanja": "腦梁邊緣動脈枝"
   },
   "FMA50333": {
     "sourceNameEn": "intermediomedial branch of callosomarginal artery",
@@ -13158,17 +13131,17 @@
   },
   "FMA50337": {
     "sourceNameEn": "pericallosal artery",
-    "unresolvedTokens": [
-      "pericallosal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뇌들보주위동맥",
+    "legacyKo": "뇌량주위동맥",
+    "hanja": "腦梁周圍動脈"
   },
   "FMA50338": {
     "sourceNameEn": "branch of pericallosal artery",
-    "unresolvedTokens": [
-      "pericallosal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뇌들보주위동맥가지",
+    "legacyKo": "뇌량주위동맥지",
+    "hanja": "腦梁周圍動脈枝"
   },
   "FMA50339": {
     "sourceNameEn": "precuneal branch of pericallosal artery",
@@ -13194,17 +13167,17 @@
   },
   "FMA50347": {
     "sourceNameEn": "right callosomarginal artery",
-    "unresolvedTokens": [
-      "callosomarginal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른뇌들보모서리동맥",
+    "legacyKo": "우뇌량변연동맥",
+    "hanja": "右腦梁邊緣動脈"
   },
   "FMA50348": {
     "sourceNameEn": "left callosomarginal artery",
-    "unresolvedTokens": [
-      "callosomarginal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼뇌들보모서리동맥",
+    "legacyKo": "좌뇌량변연동맥",
+    "hanja": "左腦梁邊緣動脈"
   },
   "FMA50351": {
     "sourceNameEn": "intermediomedial branch of right callosomarginal artery",
@@ -13256,17 +13229,17 @@
   },
   "FMA50359": {
     "sourceNameEn": "right pericallosal artery",
-    "unresolvedTokens": [
-      "pericallosal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른뇌들보주위동맥",
+    "legacyKo": "우뇌량주위동맥",
+    "hanja": "右腦梁周圍動脈"
   },
   "FMA50360": {
     "sourceNameEn": "left pericallosal artery",
-    "unresolvedTokens": [
-      "pericallosal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼뇌들보주위동맥",
+    "legacyKo": "좌뇌량주위동맥",
+    "hanja": "左腦梁周圍動脈"
   },
   "FMA50361": {
     "sourceNameEn": "precuneal branch of right pericallosal artery",
@@ -13715,52 +13688,52 @@
   },
   "FMA50563": {
     "sourceNameEn": "branch of pontine artery",
-    "unresolvedTokens": [
-      "pontine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "다리뇌동맥가지",
+    "legacyKo": "교동맥지",
+    "hanja": "橋動脈枝"
   },
   "FMA50564": {
     "sourceNameEn": "medial branch of pontine artery",
-    "unresolvedTokens": [
-      "pontine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "다리뇌동맥안쪽가지",
+    "legacyKo": "교동맥내측지",
+    "hanja": "橋動脈內側枝"
   },
   "FMA50565": {
     "sourceNameEn": "lateral branch of pontine artery",
-    "unresolvedTokens": [
-      "pontine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "다리뇌동맥가쪽가지",
+    "legacyKo": "교동맥외측지",
+    "hanja": "橋動脈外側枝"
   },
   "FMA50566": {
     "sourceNameEn": "medial branch of right pontine artery",
-    "unresolvedTokens": [
-      "pontine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른다리뇌동맥안쪽가지",
+    "legacyKo": "우교동맥내측지",
+    "hanja": "右橋動脈內側枝"
   },
   "FMA50567": {
     "sourceNameEn": "medial branch of left pontine artery",
-    "unresolvedTokens": [
-      "pontine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼다리뇌동맥안쪽가지",
+    "legacyKo": "좌교동맥내측지",
+    "hanja": "左橋動脈內側枝"
   },
   "FMA50568": {
     "sourceNameEn": "lateral branch of right pontine artery",
-    "unresolvedTokens": [
-      "pontine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른다리뇌동맥가쪽가지",
+    "legacyKo": "우교동맥외측지",
+    "hanja": "右橋動脈外側枝"
   },
   "FMA50569": {
     "sourceNameEn": "lateral branch of left pontine artery",
-    "unresolvedTokens": [
-      "pontine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼다리뇌동맥가쪽가지",
+    "legacyKo": "좌교동맥외측지",
+    "hanja": "左橋動脈外側枝"
   },
   "FMA50573": {
     "nameKo": "위소뇌동맥",
@@ -14171,17 +14144,17 @@
   },
   "FMA50859": {
     "sourceNameEn": "right suprascapular vein",
-    "unresolvedTokens": [
-      "suprascapular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른어깨위정맥",
+    "legacyKo": "우견갑상정맥",
+    "hanja": "右肩胛上靜脈"
   },
   "FMA50860": {
     "sourceNameEn": "left suprascapular vein",
-    "unresolvedTokens": [
-      "suprascapular"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼어깨위정맥",
+    "legacyKo": "좌견갑상정맥",
+    "hanja": "左肩胛上靜脈"
   },
   "FMA50863": {
     "nameKo": "시신경",
@@ -14325,52 +14298,52 @@
   },
   "FMA52571": {
     "sourceNameEn": "branch of oculomotor nerve",
-    "unresolvedTokens": [
-      "oculomotor"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "눈돌림신경가지",
+    "legacyKo": "동안신경지",
+    "hanja": "動眼神經枝"
   },
   "FMA52572": {
     "sourceNameEn": "superior branch of oculomotor nerve",
-    "unresolvedTokens": [
-      "oculomotor"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "눈돌림신경위가지",
+    "legacyKo": "동안신경상지",
+    "hanja": "動眼神經上枝"
   },
   "FMA52573": {
     "sourceNameEn": "inferior branch of oculomotor nerve",
-    "unresolvedTokens": [
-      "oculomotor"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "눈돌림신경아래가지",
+    "legacyKo": "동안신경하지",
+    "hanja": "動眼神經下枝"
   },
   "FMA52574": {
     "sourceNameEn": "superior branch of right oculomotor nerve",
-    "unresolvedTokens": [
-      "oculomotor"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른눈돌림신경위가지",
+    "legacyKo": "우동안신경상지",
+    "hanja": "右動眼神經上枝"
   },
   "FMA52575": {
     "sourceNameEn": "superior branch of left oculomotor nerve",
-    "unresolvedTokens": [
-      "oculomotor"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼눈돌림신경위가지",
+    "legacyKo": "좌동안신경상지",
+    "hanja": "左動眼神經上枝"
   },
   "FMA52576": {
     "sourceNameEn": "inferior branch of right oculomotor nerve",
-    "unresolvedTokens": [
-      "oculomotor"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른눈돌림신경아래가지",
+    "legacyKo": "우동안신경하지",
+    "hanja": "右動眼神經下枝"
   },
   "FMA52577": {
     "sourceNameEn": "inferior branch of left oculomotor nerve",
-    "unresolvedTokens": [
-      "oculomotor"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼눈돌림신경아래가지",
+    "legacyKo": "좌동안신경하지",
+    "hanja": "左動眼神經下枝"
   },
   "FMA52607": {
     "nameKo": "삼차신경가지",
@@ -14381,31 +14354,31 @@
   },
   "FMA52621": {
     "sourceNameEn": "ophthalmic nerve",
-    "unresolvedTokens": [
-      "ophthalmic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "눈신경",
+    "legacyKo": "안신경",
+    "hanja": "眼神經"
   },
   "FMA52622": {
     "sourceNameEn": "right ophthalmic nerve",
-    "unresolvedTokens": [
-      "ophthalmic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른눈신경",
+    "legacyKo": "우안신경",
+    "hanja": "右眼神經"
   },
   "FMA52623": {
     "sourceNameEn": "left ophthalmic nerve",
-    "unresolvedTokens": [
-      "ophthalmic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼눈신경",
+    "legacyKo": "좌안신경",
+    "hanja": "左眼神經"
   },
   "FMA52624": {
     "sourceNameEn": "branch of ophthalmic nerve",
-    "unresolvedTokens": [
-      "ophthalmic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "눈신경가지",
+    "legacyKo": "안신경지",
+    "hanja": "眼神經枝"
   },
   "FMA52628": {
     "nameKo": "눈물신경",
@@ -14500,31 +14473,31 @@
   },
   "FMA52668": {
     "sourceNameEn": "nasociliary nerve",
-    "unresolvedTokens": [
-      "nasociliary"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "코섬모체신경",
+    "legacyKo": "비모양신경",
+    "hanja": "鼻毛樣神經"
   },
   "FMA52669": {
     "sourceNameEn": "right nasociliary nerve",
-    "unresolvedTokens": [
-      "nasociliary"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른코섬모체신경",
+    "legacyKo": "우비모양신경",
+    "hanja": "右鼻毛樣神經"
   },
   "FMA52670": {
     "sourceNameEn": "left nasociliary nerve",
-    "unresolvedTokens": [
-      "nasociliary"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼코섬모체신경",
+    "legacyKo": "좌비모양신경",
+    "hanja": "左鼻毛樣神經"
   },
   "FMA52671": {
     "sourceNameEn": "branch of nasociliary nerve",
-    "unresolvedTokens": [
-      "nasociliary"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "코섬모체신경가지",
+    "legacyKo": "비모양신경지",
+    "hanja": "鼻毛樣神經枝"
   },
   "FMA52672": {
     "sourceNameEn": "communicating branch of nasociliary nerve with ciliary ganglion",
@@ -15088,39 +15061,38 @@
   },
   "FMA55135": {
     "sourceNameEn": "thyrohyoid ligament",
-    "unresolvedTokens": [
-      "thyrohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "방패목뿔인대",
+    "legacyKo": "갑상설골인대",
+    "hanja": "甲狀舌骨靭帶"
   },
   "FMA55138": {
     "sourceNameEn": "median thyrohyoid ligament",
-    "unresolvedTokens": [
-      "median",
-      "thyrohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "정중방패목뿔인대",
+    "legacyKo": "정중갑상설골인대",
+    "hanja": "正中甲狀舌骨靭帶"
   },
   "FMA55139": {
     "sourceNameEn": "lateral thyrohyoid ligament",
-    "unresolvedTokens": [
-      "thyrohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가쪽방패목뿔인대",
+    "legacyKo": "외측갑상설골인대",
+    "hanja": "外側甲狀舌骨靭帶"
   },
   "FMA55140": {
     "sourceNameEn": "right lateral thyrohyoid ligament",
-    "unresolvedTokens": [
-      "thyrohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른가쪽방패목뿔인대",
+    "legacyKo": "우외측갑상설골인대",
+    "hanja": "右外側甲狀舌骨靭帶"
   },
   "FMA55141": {
     "sourceNameEn": "left lateral thyrohyoid ligament",
-    "unresolvedTokens": [
-      "thyrohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼가쪽방패목뿔인대",
+    "legacyKo": "좌외측갑상설골인대",
+    "hanja": "左外側甲狀舌骨靭帶"
   },
   "FMA55226": {
     "sourceNameEn": "intrinsic muscle of larynx",
@@ -15148,18 +15120,17 @@
   },
   "FMA55233": {
     "sourceNameEn": "cricothyroid ligament",
-    "unresolvedTokens": [
-      "cricothyroid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "반지방패인대",
+    "legacyKo": "윤상갑상인대",
+    "hanja": "輪狀甲狀靭帶"
   },
   "FMA55237": {
     "sourceNameEn": "median cricothyroid ligament",
-    "unresolvedTokens": [
-      "median",
-      "cricothyroid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "정중반지방패인대",
+    "legacyKo": "정중윤상갑상인대",
+    "hanja": "正中輪狀甲狀靭帶"
   },
   "FMA55244": {
     "sourceNameEn": "vocal ligament",
@@ -15239,10 +15210,10 @@
   },
   "FMA55636": {
     "sourceNameEn": "canine tooth",
-    "unresolvedTokens": [
-      "canine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "송곳니치아",
+    "legacyKo": "견치치아",
+    "hanja": "犬齒齒"
   },
   "FMA55637": {
     "nameKo": "작은어금니치아",
@@ -15696,17 +15667,17 @@
   },
   "FMA58081": {
     "sourceNameEn": "anterior chamber of right eyeball",
-    "unresolvedTokens": [
-      "chamber"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른안구앞방",
+    "legacyKo": "우안구전강",
+    "hanja": "右眼球前腔"
   },
   "FMA58082": {
     "sourceNameEn": "anterior chamber of left eyeball",
-    "unresolvedTokens": [
-      "chamber"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼안구앞방",
+    "legacyKo": "좌안구전강",
+    "hanja": "左眼球前腔"
   },
   "FMA58101": {
     "nameKo": "안구벽층",
@@ -16080,10 +16051,10 @@
   },
   "FMA59503": {
     "sourceNameEn": "septal nasal cartilage",
-    "unresolvedTokens": [
-      "septal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "사이막코연골",
+    "legacyKo": "중격비연골",
+    "hanja": "中隔鼻軟骨"
   },
   "FMA59504": {
     "sourceNameEn": "major alar cartilage",
@@ -16512,10 +16483,10 @@
   },
   "FMA62007": {
     "sourceNameEn": "thalamus",
-    "unresolvedTokens": [
-      "thalamus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "시상",
+    "legacyKo": "시상",
+    "hanja": "視床"
   },
   "FMA62008": {
     "sourceNameEn": "hypothalamus",
@@ -16784,10 +16755,10 @@
   },
   "FMA64922": {
     "sourceNameEn": "gluteal muscle",
-    "unresolvedTokens": [
-      "gluteal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "볼기근육",
+    "legacyKo": "둔근",
+    "hanja": "臀筋"
   },
   "FMA64989": {
     "sourceNameEn": "heterogeneous cluster",
@@ -16862,10 +16833,10 @@
   },
   "FMA65020": {
     "sourceNameEn": "intrinsic muscle of foot",
-    "unresolvedTokens": [
-      "intrinsic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "고유발근육",
+    "legacyKo": "내재족근",
+    "hanja": "內在足筋"
   },
   "FMA65045": {
     "sourceNameEn": "intrinsic muscle of dorsum of foot",
@@ -16905,10 +16876,10 @@
   },
   "FMA65410": {
     "sourceNameEn": "intermediate tendon",
-    "unresolvedTokens": [
-      "intermediate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "중간힘줄",
+    "legacyKo": "중간건",
+    "hanja": "中間腱"
   },
   "FMA65470": {
     "sourceNameEn": "proximal phalanx of left thumb",
@@ -17922,10 +17893,10 @@
   },
   "FMA69418": {
     "sourceNameEn": "trunk of branch of popliteal artery",
-    "unresolvedTokens": [
-      "popliteal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오금동맥가지줄기",
+    "legacyKo": "슬와동맥지간",
+    "hanja": "膝窩動脈枝幹"
   },
   "FMA69458": {
     "nameKo": "바깥엉덩동맥세부분",
@@ -18146,10 +18117,10 @@
   },
   "FMA70437": {
     "sourceNameEn": "superior pancreaticoduodenal artery",
-    "unresolvedTokens": [
-      "pancreaticoduodenal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "위이자샘창자동맥",
+    "legacyKo": "상췌십이지장동맥",
+    "hanja": "上膵十二指腸動脈"
   },
   "FMA70439": {
     "nameKo": "오른간동맥세부분",
@@ -18258,10 +18229,10 @@
   },
   "FMA70471": {
     "sourceNameEn": "pancreatic artery",
-    "unresolvedTokens": [
-      "pancreatic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "이자동맥",
+    "legacyKo": "췌동맥",
+    "hanja": "膵動脈"
   },
   "FMA70478": {
     "nameKo": "위창자간막동맥세부분",
@@ -18272,17 +18243,17 @@
   },
   "FMA70479": {
     "sourceNameEn": "anterior inferior pancreaticoduodenal artery",
-    "unresolvedTokens": [
-      "pancreaticoduodenal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "앞아래이자샘창자동맥",
+    "legacyKo": "전하췌십이지장동맥",
+    "hanja": "前下膵十二指腸動脈"
   },
   "FMA70480": {
     "sourceNameEn": "posterior inferior pancreaticoduodenal artery",
-    "unresolvedTokens": [
-      "pancreaticoduodenal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뒤아래이자샘창자동맥",
+    "legacyKo": "후하췌십이지장동맥",
+    "hanja": "後下膵十二指腸動脈"
   },
   "FMA70481": {
     "sourceNameEn": "subdivision of inferior pancreaticoduodenal artery",
@@ -18534,10 +18505,10 @@
   },
   "FMA71114": {
     "sourceNameEn": "brachium of inferior colliculus",
-    "unresolvedTokens": [
-      "brachium"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "아래둔덕팔",
+    "legacyKo": "하구완",
+    "hanja": "下丘腕"
   },
   "FMA71193": {
     "sourceNameEn": "lobe of thymus",
@@ -18562,10 +18533,10 @@
   },
   "FMA71209": {
     "sourceNameEn": "tributary of axillary vein",
-    "unresolvedTokens": [
-      "axillary"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "겨드랑정맥지류",
+    "legacyKo": "액와정맥지류",
+    "hanja": "腋窩靜脈支流"
   },
   "FMA71210": {
     "nameKo": "가쪽가슴정맥",
@@ -18907,31 +18878,31 @@
   },
   "FMA72308": {
     "sourceNameEn": "stylohyoid ligament",
-    "unresolvedTokens": [
-      "stylohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "붓돌기목뿔인대",
+    "legacyKo": "경상설골인대",
+    "hanja": "莖狀舌骨靭帶"
   },
   "FMA72309": {
     "sourceNameEn": "right stylohyoid ligament",
-    "unresolvedTokens": [
-      "stylohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른붓돌기목뿔인대",
+    "legacyKo": "우경상설골인대",
+    "hanja": "右莖狀舌骨靭帶"
   },
   "FMA72311": {
     "sourceNameEn": "left stylohyoid ligament",
-    "unresolvedTokens": [
-      "stylohyoid"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼붓돌기목뿔인대",
+    "legacyKo": "좌경상설골인대",
+    "hanja": "左莖狀舌骨靭帶"
   },
   "FMA72417": {
     "sourceNameEn": "brachium of superior colliculus",
-    "unresolvedTokens": [
-      "brachium"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "위둔덕팔",
+    "legacyKo": "상구완",
+    "hanja": "上丘腕"
   },
   "FMA72653": {
     "nameKo": "오른위이마이랑",
@@ -19371,31 +19342,31 @@
   },
   "FMA73461": {
     "sourceNameEn": "brachium of right superior colliculus",
-    "unresolvedTokens": [
-      "brachium"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른위둔덕팔",
+    "legacyKo": "우상구완",
+    "hanja": "右上丘腕"
   },
   "FMA73462": {
     "sourceNameEn": "brachium of left superior colliculus",
-    "unresolvedTokens": [
-      "brachium"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼위둔덕팔",
+    "legacyKo": "좌상구완",
+    "hanja": "左上丘腕"
   },
   "FMA73463": {
     "sourceNameEn": "brachium of right inferior colliculus",
-    "unresolvedTokens": [
-      "brachium"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른아래둔덕팔",
+    "legacyKo": "우하구완",
+    "hanja": "右下丘腕"
   },
   "FMA73464": {
     "sourceNameEn": "brachium of left inferior colliculus",
-    "unresolvedTokens": [
-      "brachium"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼아래둔덕팔",
+    "legacyKo": "좌하구완",
+    "hanja": "左下丘腕"
   },
   "FMA74075": {
     "sourceNameEn": "set of right levatores costarum longi",
@@ -19435,11 +19406,10 @@
   },
   "FMA74779": {
     "sourceNameEn": "musculature of chest",
-    "unresolvedTokens": [
-      "musculature",
-      "chest"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가슴근육계",
+    "legacyKo": "흉근육",
+    "hanja": "胸筋肉"
   },
   "FMA74866": {
     "sourceNameEn": "zone of diencephalon",
@@ -19597,10 +19567,10 @@
   },
   "FMA77155": {
     "sourceNameEn": "popliteal artery",
-    "unresolvedTokens": [
-      "popliteal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오금동맥",
+    "legacyKo": "슬와동맥",
+    "hanja": "膝窩動脈"
   },
   "FMA77168": {
     "sourceNameEn": "median sacral vein",
@@ -19632,24 +19602,24 @@
   },
   "FMA77180": {
     "sourceNameEn": "splenius",
-    "unresolvedTokens": [
-      "splenius"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "널판",
+    "legacyKo": "판상",
+    "hanja": "板狀"
   },
   "FMA77380": {
     "sourceNameEn": "right popliteal artery",
-    "unresolvedTokens": [
-      "popliteal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른오금동맥",
+    "legacyKo": "우슬와동맥",
+    "hanja": "右膝窩動脈"
   },
   "FMA77381": {
     "sourceNameEn": "left popliteal artery",
-    "unresolvedTokens": [
-      "popliteal"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼오금동맥",
+    "legacyKo": "좌슬와동맥",
+    "hanja": "左膝窩動脈"
   },
   "FMA77439": {
     "sourceNameEn": "artery of central sulcus",
@@ -19901,10 +19871,10 @@
   },
   "FMA82481": {
     "sourceNameEn": "organ chamber",
-    "unresolvedTokens": [
-      "chamber"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "기관방",
+    "legacyKo": "기관강",
+    "hanja": "器官腔"
   },
   "FMA82485": {
     "nameKo": "기관구성요소층",
@@ -20037,10 +20007,10 @@
   },
   "FMA83854": {
     "sourceNameEn": "stria of neuraxis",
-    "unresolvedTokens": [
-      "stria"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "신경축줄무늬",
+    "legacyKo": "신경축선조",
+    "hanja": "神經軸線條"
   },
   "FMA83856": {
     "sourceNameEn": "lamina of neuraxis",
@@ -20051,10 +20021,10 @@
   },
   "FMA83857": {
     "sourceNameEn": "brachium of neuraxis",
-    "unresolvedTokens": [
-      "brachium"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "신경축팔",
+    "legacyKo": "신경축완",
+    "hanja": "神經軸腕"
   },
   "FMA83860": {
     "sourceNameEn": "peduncle of neuraxis",
@@ -20079,10 +20049,10 @@
   },
   "FMA83904": {
     "sourceNameEn": "septum of neuraxis",
-    "unresolvedTokens": [
-      "septum"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "신경축사이막",
+    "legacyKo": "신경축중격",
+    "hanja": "神經軸中隔"
   },
   "FMA83906": {
     "sourceNameEn": "commissure of neuraxis",
@@ -20667,17 +20637,17 @@
   },
   "FMA258714": {
     "sourceNameEn": "right thalamus",
-    "unresolvedTokens": [
-      "thalamus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른시상",
+    "legacyKo": "우시상",
+    "hanja": "右視床"
   },
   "FMA258716": {
     "sourceNameEn": "left thalamus",
-    "unresolvedTokens": [
-      "thalamus"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼시상",
+    "legacyKo": "좌시상",
+    "hanja": "左視床"
   },
   "FMA258847": {
     "sourceNameEn": "right calcaneal tendon",
@@ -20688,10 +20658,10 @@
   },
   "FMA258850": {
     "sourceNameEn": "right intermediate tendon",
-    "unresolvedTokens": [
-      "intermediate"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른중간힘줄",
+    "legacyKo": "우중간건",
+    "hanja": "右中間腱"
   },
   "FMA260791": {
     "sourceNameEn": "white matter of right cerebral hemisphere",
@@ -20983,10 +20953,10 @@
   },
   "FMA7208": {
     "sourceNameEn": "ileum",
-    "unresolvedTokens": [
-      "ileum"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "돌창자",
+    "legacyKo": "회장",
+    "hanja": "回腸"
   },
   "FMA7216": {
     "sourceNameEn": "outflow part of right ventricle",
@@ -21574,10 +21544,10 @@
   },
   "FMA9576": {
     "sourceNameEn": "thorax",
-    "unresolvedTokens": [
-      "thorax"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "가슴",
+    "legacyKo": "흉곽",
+    "hanja": "胸廓"
   },
   "FMA9577": {
     "nameKo": "배",
@@ -21588,10 +21558,10 @@
   },
   "FMA9578": {
     "sourceNameEn": "pelvis",
-    "unresolvedTokens": [
-      "pelvis"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "골반",
+    "legacyKo": "골반",
+    "hanja": "骨盤"
   },
   "FMA9579": {
     "sourceNameEn": "perineum",
@@ -21870,10 +21840,10 @@
   },
   "FMA14823": {
     "sourceNameEn": "inferior branch of ileocolic artery",
-    "unresolvedTokens": [
-      "ileocolic"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "돌막창자동맥아래가지",
+    "legacyKo": "회결장동맥하지",
+    "hanja": "回結腸動脈下枝"
   },
   "FMA14971": {
     "nameKo": "큰창자근육층",
@@ -21912,31 +21882,31 @@
   },
   "FMA15748": {
     "sourceNameEn": "anterior sector of right liver",
-    "unresolvedTokens": [
-      "sector"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른간앞구역",
+    "legacyKo": "우간장전구역",
+    "hanja": "右肝臟前區域"
   },
   "FMA15749": {
     "sourceNameEn": "posterior sector of right liver",
-    "unresolvedTokens": [
-      "sector"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른간뒤구역",
+    "legacyKo": "우간장후구역",
+    "hanja": "右肝臟後區域"
   },
   "FMA15750": {
     "sourceNameEn": "anterior sector of left liver",
-    "unresolvedTokens": [
-      "sector"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼간앞구역",
+    "legacyKo": "좌간장전구역",
+    "hanja": "左肝臟前區域"
   },
   "FMA15751": {
     "sourceNameEn": "posterior sector of left liver",
-    "unresolvedTokens": [
-      "sector"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼간뒤구역",
+    "legacyKo": "좌간장후구역",
+    "hanja": "左肝臟後區域"
   },
   "FMA15809": {
     "sourceNameEn": "right hemiliver",
@@ -22157,10 +22127,10 @@
   },
   "FMA24816": {
     "sourceNameEn": "anterior chest",
-    "unresolvedTokens": [
-      "chest"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "앞가슴",
+    "legacyKo": "전흉",
+    "hanja": "前胸"
   },
   "FMA24866": {
     "sourceNameEn": "sternal part of chest",
@@ -22214,17 +22184,17 @@
   },
   "FMA24940": {
     "sourceNameEn": "right wrist",
-    "unresolvedTokens": [
-      "wrist"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른손목",
+    "legacyKo": "우완관절",
+    "hanja": "右腕關節"
   },
   "FMA24941": {
     "sourceNameEn": "left wrist",
-    "unresolvedTokens": [
-      "wrist"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼손목",
+    "legacyKo": "좌완관절",
+    "hanja": "左腕關節"
   },
   "FMA24965": {
     "sourceNameEn": "right hip",
@@ -22760,17 +22730,17 @@
   },
   "FMA50561": {
     "sourceNameEn": "right pontine artery",
-    "unresolvedTokens": [
-      "pontine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른다리뇌동맥",
+    "legacyKo": "우교동맥",
+    "hanja": "右橋動脈"
   },
   "FMA50562": {
     "sourceNameEn": "left pontine artery",
-    "unresolvedTokens": [
-      "pontine"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼다리뇌동맥",
+    "legacyKo": "좌교동맥",
+    "hanja": "左橋動脈"
   },
   "FMA50584": {
     "nameKo": "오른뒤대뇌동맥",
@@ -23198,10 +23168,10 @@
   },
   "FMA59665": {
     "sourceNameEn": "septum of internal nose",
-    "unresolvedTokens": [
-      "septum"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "속코사이막",
+    "legacyKo": "내비중격",
+    "hanja": "內鼻中隔"
   },
   "FMA59668": {
     "nameKo": "속코벽",
@@ -23299,17 +23269,17 @@
   },
   "FMA60325": {
     "sourceNameEn": "right thumb",
-    "unresolvedTokens": [
-      "thumb"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른엄지손가락",
+    "legacyKo": "우무지",
+    "hanja": "右拇指"
   },
   "FMA60326": {
     "sourceNameEn": "left thumb",
-    "unresolvedTokens": [
-      "thumb"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼엄지손가락",
+    "legacyKo": "좌무지",
+    "hanja": "左拇指"
   },
   "FMA60327": {
     "nameKo": "오른새끼손가락",
@@ -23748,31 +23718,31 @@
   },
   "FMA70347": {
     "sourceNameEn": "right thyrocervical artery",
-    "unresolvedTokens": [
-      "thyrocervical"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른갑상목동맥",
+    "legacyKo": "우갑상경동맥",
+    "hanja": "右甲狀頸動脈"
   },
   "FMA70348": {
     "sourceNameEn": "left thyrocervical artery",
-    "unresolvedTokens": [
-      "thyrocervical"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼갑상목동맥",
+    "legacyKo": "좌갑상경동맥",
+    "hanja": "左甲狀頸動脈"
   },
   "FMA70351": {
     "sourceNameEn": "right costocervical artery",
-    "unresolvedTokens": [
-      "costocervical"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른갈비목동맥",
+    "legacyKo": "우늑경동맥",
+    "hanja": "右肋頸動脈"
   },
   "FMA70352": {
     "sourceNameEn": "left costocervical artery",
-    "unresolvedTokens": [
-      "costocervical"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼갈비목동맥",
+    "legacyKo": "좌늑경동맥",
+    "hanja": "左肋頸動脈"
   },
   "FMA70441": {
     "nameKo": "앞분절간동맥",
@@ -24049,10 +24019,10 @@
   },
   "FMA78435": {
     "sourceNameEn": "musculature of anterior abdominal wall",
-    "unresolvedTokens": [
-      "musculature"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "앞배벽근육계",
+    "legacyKo": "전복벽근육",
+    "hanja": "前腹壁筋肉"
   },
   "FMA79063": {
     "sourceNameEn": "deep fascial system",
@@ -24279,10 +24249,10 @@
   },
   "FMA86917": {
     "sourceNameEn": "musculature of abdomen",
-    "unresolvedTokens": [
-      "musculature"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "배근육계",
+    "legacyKo": "복근육",
+    "hanja": "腹筋肉"
   },
   "FMA87178": {
     "nameKo": "왼심실가쪽벽심근",
@@ -24314,10 +24284,10 @@
   },
   "FMA87552": {
     "sourceNameEn": "posterior chest",
-    "unresolvedTokens": [
-      "chest"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "뒤가슴",
+    "legacyKo": "후흉",
+    "hanja": "後胸"
   },
   "FMA87598": {
     "sourceNameEn": "skeletal system of trunk",
@@ -24342,17 +24312,17 @@
   },
   "FMA242180": {
     "sourceNameEn": "cortex of right cerebral hemisphere",
-    "unresolvedTokens": [
-      "cortex"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른대뇌반구겉질",
+    "legacyKo": "우대뇌반구피질",
+    "hanja": "右大腦半球皮質"
   },
   "FMA242182": {
     "sourceNameEn": "cortex of left cerebral hemisphere",
-    "unresolvedTokens": [
-      "cortex"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼대뇌반구겉질",
+    "legacyKo": "좌대뇌반구피질",
+    "hanja": "左大腦半球皮質"
   },
   "FMA242184": {
     "sourceNameEn": "subcortex of right cerebral hemisphere",
@@ -24370,17 +24340,17 @@
   },
   "FMA242207": {
     "sourceNameEn": "cortex of right frontal lobe",
-    "unresolvedTokens": [
-      "cortex"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "오른이마엽겉질",
+    "legacyKo": "우전두엽피질",
+    "hanja": "右前頭葉皮質"
   },
   "FMA242209": {
     "sourceNameEn": "cortex of left frontal lobe",
-    "unresolvedTokens": [
-      "cortex"
-    ],
-    "status": "review-needed"
+    "status": "derived",
+    "nameKo": "왼이마엽겉질",
+    "legacyKo": "좌전두엽피질",
+    "hanja": "左前頭葉皮質"
   },
   "FMA242609": {
     "sourceNameEn": "right archicortex",
