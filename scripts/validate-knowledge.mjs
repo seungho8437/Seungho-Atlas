@@ -12,6 +12,7 @@ const acupoints=read('acupoints.json');
 const acupointWhoAudit=read('acupoints-who2008-audit.json');
 const meridianSinews=read('meridian-sinews.json');
 const anatomyAcupointRelations=read('anatomy-acupoint-relations.json');
+const anatomyAcupointAudit=read('anatomy-acupoint-audit.json');
 const anatomyMeridianSinewRelations=read('anatomy-meridian-sinew-relations.json');
 const anatomyMeridianSinewAudit=read('anatomy-meridian-sinew-audit.json');
 const acupointCoordinateRegistry=read('acupoint-coordinates.json');
@@ -92,11 +93,23 @@ for(const sinew of meridianSinews){
 }
 assert.equal(sinewIds.size,12,'Expected all twelve meridian sinews.');
 
+const acupointRelationKeys=new Set();
 for(const relation of anatomyAcupointRelations){
   assert.ok(concepts.has(relation.anatomyId),`${relation.anatomyId}: acupoint relation points to missing anatomy concept`);
   assert.ok(acupointIds.has(relation.acupointId),`${relation.acupointId}: missing acupoint`);
-  for(const id of relation.sourceIds??[])assert.ok(sourceIds.has(id),`acupoint relation: missing source ${id}`);
+  assert.ok(['surface-landmark','overlies','adjacent','between','deep-to','reference-landmark'].includes(relation.relation),`${relation.acupointId}: invalid acupoint relation type`);
+  assert.ok(typeof relation.noteKo==='string'&&relation.noteKo.trim(),`${relation.acupointId}: acupoint relation noteKo is required`);
+  assert.ok(Array.isArray(relation.sourceIds)&&relation.sourceIds.length,`${relation.acupointId}: acupoint relation sourceIds are required`);
+  for(const id of relation.sourceIds)assert.ok(sourceIds.has(id),`acupoint relation: missing source ${id}`);
+  const key=`${relation.acupointId}|${relation.anatomyId}|${relation.relation}`;
+  assert.ok(!acupointRelationKeys.has(key),`${key}: duplicate acupoint relation`);
+  acupointRelationKeys.add(key);
 }
+for(const acupointId of acupointIds)assert.ok(anatomyAcupointRelations.some(relation=>relation.acupointId===acupointId),`${acupointId}: no anatomy relation`);
+assert.equal(anatomyAcupointAudit.standardAcupointCount,361,'Acupoint anatomy audit must target all 361 points');
+assert.equal(anatomyAcupointAudit.coveredAcupointCount,361,'Acupoint anatomy audit must cover all 361 points');
+assert.equal(anatomyAcupointAudit.relationCount,anatomyAcupointRelations.length,'Acupoint anatomy audit relation count mismatch');
+assert.deepEqual(anatomyAcupointAudit.uncoveredAcupoints,[],'Acupoint anatomy audit reports uncovered points');
 
 assert.equal(acupointCoordinateRegistry.version,1,'Unsupported acupoint coordinate registry version');
 assert.equal(acupointCoordinateRegistry.model,'BodyParts3D-4.0','Acupoint coordinates must be model-specific to BodyParts3D 4.0');
