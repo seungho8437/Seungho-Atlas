@@ -282,6 +282,22 @@ function applyWhoConstraints(input,text,side){
     if(/발허리발가락관절[^,.]{0,20}먼쪽/.test(text)){t[supAxis]-=cunY*.65;count++;}
     if(/발허리발가락관절[^,.]{0,20}몸쪽/.test(text)){t[supAxis]+=cunY*.65;count++;}
   }
+  if(/아래팔/.test(text)&&sideSign){
+    const half=localHalfWidth(t[supAxis]);
+    if(/뒤가쪽/.test(text)) {t[lrAxis]=bodyCenter[lrAxis]+sideSign*half*.72;count++;}
+    if(/노뼈와\s*자뼈\s*사이/.test(text)) {t[lrAxis]=bodyCenter[lrAxis]+sideSign*half*.55;count++;}
+    if(/자뼈\s*바로\s*노쪽|뒤안쪽/.test(text)) {t[lrAxis]=bodyCenter[lrAxis]+sideSign*half*.40;count++;}
+  }
+  if(/다섯째\s*손허리손가락관절/.test(text)){
+    if(/먼쪽/.test(text)){t[supAxis]-=cunY*1.4;count++;}
+    if(/몸쪽/.test(text)){t[supAxis]+=cunY*1.4;count++;}
+  }
+  if(/발등/.test(text)&&sideSign){
+    const half=localHalfWidth(t[supAxis]);
+    if(/가쪽복사\s*앞모서리/.test(text)){t[lrAxis]=bodyCenter[lrAxis]+sideSign*half*.72;t[apAxis]-=anteriorSign*extent[apAxis]*.035;count+=2;}
+    if(/넷째와\s*다섯째발허리뼈/.test(text)){t[lrAxis]=bodyCenter[lrAxis]+sideSign*half*.58;t[apAxis]+=anteriorSign*extent[apAxis]*.025;count+=2;}
+  }
+  if(/발바닥/.test(text)&&/앞쪽\s*1\/3/.test(text)){t[supAxis]=norm(supAxis,.018);t[apAxis]+=anteriorSign*extent[apAxis]*.055;count+=2;}
   if(/새끼손가락\s*끝마디뼈/.test(text)&&sideSign){
     const half=localHalfWidth(t[supAxis]);
     if(/노쪽/.test(text)){t[lrAxis]+=sideSign*half*.05;count++;}
@@ -328,6 +344,34 @@ function barycentric2D(px,py,a,b,c,ax1,ax2){
   const w=1-u-v;
   if(u < -1e-5 || v < -1e-5 || w < -1e-5)return null;
   return [u,v,w];
+}
+function midlineSliceProjection(target){
+  let best=null,bestScore=Infinity,bestPart=null;
+  const y=target[supAxis];
+  for(const T of surfaceTriangles){
+    const hits=[];
+    for(const [i,j] of [[0,1],[1,2],[2,0]]){
+      const a=T.tri[i],b=T.tri[j],da=a[supAxis]-y,db=b[supAxis]-y;
+      if(Math.abs(da)<1e-9)hits.push(a);
+      if(da*db<0 || Math.abs(db)<1e-9){
+        const den=b[supAxis]-a[supAxis];
+        if(Math.abs(den)>1e-12){
+          const u=(y-a[supAxis])/den;
+          if(u>=-1e-8&&u<=1+1e-8)hits.push(a.map((v,k)=>v+u*(b[k]-v)));
+        }
+      }
+    }
+    if(!hits.length)continue;
+    const candidates=hits.length===1?[hits[0]]:[hits[0],hits[1],
+      hits[0].map((v,k)=>(v+hits[1][k])/2)];
+    for(const q of candidates){
+      const lateral=q[lrAxis]-bodyCenter[lrAxis];
+      if(Math.abs(lateral)>extent[lrAxis]*.16)continue;
+      const score=1800*lateral*lateral + 12*(q[apAxis]-target[apAxis])**2;
+      if(score<bestScore){bestScore=score;best=q;bestPart=T.part;}
+    }
+  }
+  return best?{point:best,distance:Math.sqrt(dist2(target,best)),part:bestPart,constrained:true,midlineSlice:true}:null;
 }
 function constrainedSurfaceProjection(target,side,locks){
   const locked=[];
@@ -404,6 +448,7 @@ function projectLockedToSurface(target,side,locks){
   return best?{point:best,distance:Math.sqrt(bestD),part:bestPart}:null;
 }
 function project(target, side, locks={}){
+  if(side==='midline'&&locks.sup){const slice=midlineSliceProjection(target);if(slice)return slice;}
   const exact=constrainedSurfaceProjection(target,side,locks);
   if(exact)return exact;
   const locked=projectLockedToSurface(target,side,locks);
