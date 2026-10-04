@@ -260,7 +260,8 @@ const audit={
    noAnthropometricGuessForHairlineNippleUmbilicus:true,
    allConstructedCoordinatesFinite:landmarks.filter(l=>String(l.status).startsWith('constructed')).every(l=>JSON.stringify(l.geometry).match(/null/)===null),
    derivedSoftLandmarksLabeledByConfidence:landmarks.filter(l=>String(l.status).startsWith('constructed')).every(l=>['high','moderate'].includes(l.confidence)),
-   unresolvedLandmarksHaveNoFabricatedGeometry:landmarks.filter(l=>l.status==='manual-or-specialized-detection-required').every(l=>l.geometry===null)
+   unresolvedLandmarksHaveNoFabricatedGeometry:landmarks.filter(l=>l.status==='manual-or-specialized-detection-required').every(l=>l.geometry===null),
+   acceptedSpecializedAnchorsPreserveSurfaceProjection:landmarks.filter(l=>l.status==='accepted-specialized-anchor').every(l=>l.geometry?.type==='accepted-surface-anchor'&&l.geometry?.surfaceProjection?.meshId)
  }
 };
 write('public/knowledge/acupoint-derived-surface-landmarks.json',{schemaVersion:1,coordinateFrame:{superiorInferiorAxis:supAxis,leftRightAxis:lrAxis,anteriorPosteriorAxis:apAxis,leftSign,anteriorSign:antSign},landmarks});
