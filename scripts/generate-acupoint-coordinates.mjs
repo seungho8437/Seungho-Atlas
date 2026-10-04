@@ -725,14 +725,30 @@ function applyReviewedExceptionProjection(item){
     item.validation.reviewedException=rule;
   };
 
-  if(/^(?:ST43|GB42|BL63|GB41)$/.test(item.acupointId) && sideSign){
-    const frac={ST43:.34,GB42:.68,BL63:.88,GB41:.72}[item.acupointId];
-    const target=[...item.validation.preProjectionTarget];
-    target[lrAxis]=localSideLateral(norm(supAxis,.06),sideSign,frac);
-    if(item.acupointId==='BL63') target[apAxis]-=anteriorSign*extent[apAxis]*.035;
-    if(item.acupointId==='GB41') target[apAxis]+=anteriorSign*extent[apAxis]*.020;
-    mark(target,{lr:true,ap:true},'reviewed-foot-lr-ap');
-    return true;
+  if(item.acupointId==='ST43'){
+    const proximal=resultByKey.get('ST42:'+item.side), distal=resultByKey.get('ST44:'+item.side);
+    if(proximal&&distal){
+      const target=proximal.position.map((v,i)=>v*.40+distal.position[i]*.60);
+      mark(target,{sup:true,lr:true},'reviewed-ST43-between-ST42-ST44');
+      return true;
+    }
+  }
+  if(item.acupointId==='GB41' || item.acupointId==='GB42'){
+    const ankle=resultByKey.get('GB40:'+item.side), web=resultByKey.get('GB43:'+item.side);
+    if(ankle&&web){
+      const f=item.acupointId==='GB41'?.38:.68;
+      const target=ankle.position.map((v,i)=>v*(1-f)+web.position[i]*f);
+      mark(target,{sup:true,lr:true},item.acupointId==='GB41'?'reviewed-GB41-between-GB40-GB43':'reviewed-GB42-between-GB40-GB43');
+      return true;
+    }
+  }
+  if(item.acupointId==='BL63'){
+    const ankle=resultByKey.get('BL62:'+item.side), distal=resultByKey.get('BL64:'+item.side);
+    if(ankle&&distal){
+      const target=ankle.position.map((v,i)=>v*.62+distal.position[i]*.38);
+      mark(target,{sup:true,lr:true},'reviewed-BL63-between-BL62-BL64');
+      return true;
+    }
   }
 
   if(item.acupointId==='TE4'){
