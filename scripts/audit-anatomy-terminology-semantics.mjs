@@ -39,10 +39,12 @@ for(const [id,entry] of Object.entries(anatomy)){
   const koPrefix=side==='right'?'오른':'왼';
   const legacyPrefix=side==='right'?'우':'좌';
   const hanjaPrefix=side==='right'?'右':'左';
-  if(!String(entry.nameKo??'').startsWith(koPrefix))hard.push({id,type:'laterality-nameKo-marker-missing',side,actual:entry.nameKo});
-  if(!String(entry.legacyKo??'').startsWith(legacyPrefix))hard.push({id,type:'laterality-legacyKo-marker-missing',side,actual:entry.legacyKo});
-  if(!String(entry.hanja??'').startsWith(hanjaPrefix))hard.push({id,type:'laterality-hanja-marker-missing',side,actual:entry.hanja});
 
+  // English may begin with right/left even when Korean correctly places the
+  // modifier inside a larger anatomical phrase (e.g. 허파판막왼앞첨판,
+  // 아래오른허파정맥). Therefore side-token position is not globally
+  // constrained. Exact equality is enforced only for safe exact-base
+  // inheritance below. Unpaired/nested structures are review items.
   if(/\b(?:right|left)\b/i.test(baseEnglish)){
     review.push({id,type:'nested-laterality',sourceNameEn:en});
     continue;
