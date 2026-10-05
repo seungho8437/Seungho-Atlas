@@ -6,7 +6,10 @@ on:
     branches:
       - feature/korean-tcm-knowledge
     paths:
-      - scripts/build-acupoint-coordinate-solver.mjs\n      - scripts/validate-acupoint-coordinate-solver.mjs\n      - public/knowledge/acupoint-coordinate-review-decisions.json\n      - scripts/generate-acupoint-coordinates.mjs
+      - scripts/build-acupoint-coordinate-solver.mjs
+      - scripts/validate-acupoint-coordinate-solver.mjs
+      - public/knowledge/acupoint-coordinate-review-decisions.json
+      - scripts/generate-acupoint-coordinates.mjs
       - scripts/generate-acupoint-exception-review.mjs
       - scripts/validate-acupoint-spatial.mjs
       - .github/workflows/generate-acupoint-coordinates.yml
@@ -28,7 +31,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22.13.0'
-      - run: node scripts/build-acupoint-coordinate-solver.mjs\n      - run: node scripts/validate-acupoint-coordinate-solver.mjs\n      - run: node scripts/generate-acupoint-coordinates.mjs
+      - run: node scripts/build-acupoint-coordinate-solver.mjs
+      - run: node scripts/validate-acupoint-coordinate-solver.mjs
+      - run: node scripts/generate-acupoint-coordinates.mjs
       - run: node scripts/generate-acupoint-exception-review.mjs
       - run: node scripts/validate-acupoint-spatial.mjs
       - run: node scripts/validate-atlas.mjs

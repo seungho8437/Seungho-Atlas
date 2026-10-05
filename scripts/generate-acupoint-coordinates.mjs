@@ -5,7 +5,9 @@ const readJson = p => JSON.parse(fs.readFileSync(new URL(p, root), 'utf8'));
 const atlas = readJson('public/models/atlas.json');
 const acupoints = readJson('public/knowledge/acupoints.json');
 const relations = readJson('public/knowledge/anatomy-acupoint-relations.json');
-const anatomyKo = readJson('public/knowledge/anatomy-ko.json');\nconst coordinateSolver = readJson('public/knowledge/acupoint-coordinate-solver.json');\nconst solverFramesByPoint = new Map(coordinateSolver.records.map(r => [r.acupointId, r.measurementFrames]));
+const anatomyKo = readJson('public/knowledge/anatomy-ko.json');
+const coordinateSolver = readJson('public/knowledge/acupoint-coordinate-solver.json');
+const solverFramesByPoint = new Map(coordinateSolver.records.map(r => [r.acupointId, r.measurementFrames]));
 
 const chunks = atlas.chunks.map(c => fs.readFileSync(new URL('public/models/' + c.url.split('/').pop(), root)));
 const partsById = new Map(atlas.parts.map(p => [p.id, p]));
@@ -144,6 +146,12 @@ function regionTarget(text, side){
 }
 
 const cunY=extent[supAxis]/75;
+function solverCun(pointId,side,direction,unit='B-cun'){
+  const fs=solverFramesByPoint.get(pointId)||[];
+  const exact=fs.find(f=>f.unit===unit&&f.direction===direction)??fs.find(f=>f.unit===unit);
+  const ss=exact?.sideScales?.find(x=>x.side===side)??exact?.sideScales?.find(x=>x.side==='midline');
+  return Number.isFinite(ss?.chosen?.cunLength)?ss.chosen.cunLength:null;
+}
 const ordinalIntercostal={첫째:1,둘째:2,셋째:3,넷째:4,다섯째:5,여섯째:6,일곱째:7};
 function applyWhoConstraints(input,text,side,pointId){
   const t=[...input]; let count=0;
