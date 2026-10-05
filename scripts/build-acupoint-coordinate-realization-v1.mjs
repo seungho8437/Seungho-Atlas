@@ -72,9 +72,11 @@ function nodeRealization(n){
  if(n.terminal_disposition==='cross_reference'){
    const p=refPoint(n.source_raw);return {...base,realization_status:'reference_acupoint',reference_point_id:p,geometry_source:'reference_acupoint',geometry_available:!!p,unresolved_reason:p?null:'cross_reference_target_not_parseable'};
  }
- if(n.fma_id){const c=conceptById.get(n.fma_id),parts=fmaParts(n.fma_id);base.atlas_concept=c?{concept_id:c.id,name:c.name,element_ids:c.elements??[]}:null;base.object_candidates=parts.map(partSummary);base.selection_policy='preserve_generic_fma_identity; at coordinate solve choose object whose explicit part laterality matches point side; for midline use only unpaired/midline object or a source-backed constructed feature; never fall back contralaterally';
-   if(!c||parts.length===0)return {...base,realization_status:'fma_no_mesh',geometry_source:null,geometry_available:false,unresolved_reason:!c?'fma_missing_from_atlas_concepts':'atlas_concept_has_no_renderable_part'};
-   return {...base,realization_status:'fma_mesh_resolved',geometry_source:'atlas_mesh_object',geometry_available:true,landmark_specificity:['body_region','surface_aspect'].includes(n.semantic_target_type)?'region_or_aggregate_mesh':'entity_mesh'};
+ if(n.fma_id){const c=conceptById.get(n.fma_id),parts=fmaParts(n.fma_id);base.atlas_concept=c?{concept_id:c.id,name:c.name,element_ids:c.elements??[]}:null;base.object_candidates=parts.map(partSummary);base.selection_policy='preserve generic FMA identity; at coordinate solve choose only verified geometry_available objects whose explicit part laterality matches point side; for midline use only verified unpaired/midline object or a source-backed constructed feature; never fall back contralaterally';
+   if(!c||parts.length===0)return {...base,realization_status:'fma_no_mesh',geometry_source:null,geometry_available:false,unresolved_reason:!c?'fma_missing_from_atlas_concepts':'atlas_concept_has_no_part'};
+   const verified=base.object_candidates.filter(x=>x.geometry_available);
+   if(!verified.length)return {...base,realization_status:'fma_no_mesh',geometry_source:null,geometry_available:false,unresolved_reason:'atlas_parts_exist_but_no_verified_chunk_geometry'};
+   return {...base,realization_status:'fma_mesh_resolved',geometry_source:'atlas_mesh_object',geometry_available:true,verified_object_count:verified.length,landmark_specificity:['body_region','surface_aspect'].includes(n.semantic_target_type)?'region_or_aggregate_mesh':'entity_mesh'};
  }
  if(n.terminal_disposition==='specialized_anchor'){
    const cs=specializedCandidates(n.source_raw);return {...base,realization_status:cs.length?'specialized_anchor_resolved':'geometry_unresolved',specialized_anchor_candidates:cs,geometry_source:cs.length?'specialized_anchor_registry':null,geometry_available:cs.length>0,selection_policy:cs.length?'select only by source phrase + point side/relation context; do not infer side in identity layer':null,unresolved_reason:cs.length?null:'no_accepted_specialized_anchor_matching_source_family'};
@@ -101,7 +103,7 @@ const geometryRealizations=graph.geometry_nodes.map(geometryOp);
 const geometryRealizationById=new Map(geometryRealizations.map(x=>[x.node_id,x]));
 
 function selectedObject(real,side){
- const xs=real.object_candidates??[];if(!xs.length)return {status:'none',objects:[]};
+ const xs=(real.object_candidates??[]).filter(x=>x.geometry_available);if(!xs.length)return {status:'none',objects:[]};
  if(side==='left'||side==='right'){
    const matching=xs.filter(x=>x.laterality===side);const unpaired=xs.filter(x=>x.laterality==='midline_or_unpaired');
    if(matching.length)return {status:'side-matched',objects:matching};
@@ -199,7 +201,7 @@ write('public/knowledge/acupoint-coordinates.json',coords);
 write('public/knowledge/acupoint-coordinate-qc.json',qc);
 
 // Manifest + regression for the frozen-B-gated official coordinate registry.
-const outputPaths=['public/knowledge/acupoint-bodyparts3d-realization.json','public/knowledge/acupoint-coordinate-solver-input.json','public/knowledge/acupoint-coordinates.json','public/knowledge/acupoint-coordinate-qc.json'];
+const outputPaths=['public/knowledge/acupoint-bodyparts3d-realization.json','public/knowledge/acupoint-coordinate-solver-input.json','public/knowledge/acupoint-coordinates.json','public/knowledge/acupoint-coordinate-qc.json','public/acupoint-coordinate-qc.html'];
 const hashes=Object.fromEntries(outputPaths.map(p=>[p,sha(fs.readFileSync(new URL(p,root)))]));
 const regression={schema_version:'1.0.0',generated_at:now,checks:{frozen_B_sha_exact:sha(graphBytes)===FROZEN_GRAPH_SHA,frozen_B_unchanged:true,landmark_count_2325:landmarkRealizations.length===2325,geometry_count_97:geometryRealizations.length===97,relation_count_2595:relationPlans.length===2595,logical_points_361:byPoint.size===361,no_solved_without_surface_projection:solved.every(x=>x.coordinate_projected&&x.legacy_candidate?.surface_mesh_id==='FJ2810'),no_solved_with_hard_unresolved_reason:solved.every(x=>!x.unresolved_reason),no_midline_bilateral_object_selection:physical.filter(x=>x.side==='midline').every(x=>x.mesh_object_provenance.every(y=>y.selection?.status!=='side-matched')),no_contralateral_object_selection:physical.every(x=>x.mesh_object_provenance.every(y=>y.selection?.status!=='contralateral_or_ambiguous'))},counts:{...realization.summary,...qc.summary}};
 write('public/knowledge/acupoint-coordinate-regression-report.json',regression);
