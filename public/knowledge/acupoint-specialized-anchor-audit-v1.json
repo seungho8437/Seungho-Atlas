@@ -1,91 +1,278 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-05T22:24:24.458Z",
-  "record_count": 29,
+  "generated_at": "2026-10-05T22:28:54.582Z",
+  "record_count": 42,
   "anchors": [
     {
       "anchor_id": "anterior-axillary-fold",
-      "side": "midline",
-      "coordinate": null,
-      "derivation_method": null,
-      "source_provenance": null,
+      "side": "left",
+      "coordinate": [
+        0.15321199595928192,
+        1.3815412521362305,
+        0.035110000520944595
+      ],
+      "derivation_method": "proximal-humerus level surface fold proxy",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
-      "issues": [
-        "bilateral_anchor_requires_physical_side_context"
-      ]
+      "issues": []
+    },
+    {
+      "anchor_id": "anterior-axillary-fold",
+      "side": "right",
+      "coordinate": [
+        -0.16339200735092163,
+        1.3652712106704712,
+        0.03736700117588043
+      ],
+      "derivation_method": "proximal-humerus level surface fold proxy",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
+      "bodyparts3d_surface_structure_relation": null,
+      "expected_anatomical_region": "review-from-anchor-identity",
+      "issues": []
     },
     {
       "anchor_id": "base-of-patella",
-      "side": "midline",
-      "coordinate": null,
-      "derivation_method": null,
-      "source_provenance": null,
+      "side": "left",
+      "coordinate": [
+        0.08558809757232666,
+        0.47887420654296875,
+        0.013186999596655369
+      ],
+      "derivation_method": "resolved-atlas-geometry",
+      "source_provenance": {
+        "definition": {
+          "kind": "bilateral-concept-feature",
+          "aliasesLeft": [
+            "left patella"
+          ],
+          "aliasesRight": [
+            "right patella"
+          ],
+          "feature": "superior"
+        }
+      },
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
-      "issues": [
-        "bilateral_anchor_requires_physical_side_context"
-      ]
+      "issues": []
+    },
+    {
+      "anchor_id": "base-of-patella",
+      "side": "right",
+      "coordinate": [
+        -0.08526229858398438,
+        0.47890719771385193,
+        0.012672999873757362
+      ],
+      "derivation_method": "resolved-atlas-geometry",
+      "source_provenance": {
+        "definition": {
+          "kind": "bilateral-concept-feature",
+          "aliasesLeft": [
+            "left patella"
+          ],
+          "aliasesRight": [
+            "right patella"
+          ],
+          "feature": "superior"
+        }
+      },
+      "bodyparts3d_surface_structure_relation": null,
+      "expected_anatomical_region": "review-from-anchor-identity",
+      "issues": []
     },
     {
       "anchor_id": "cubital-crease",
-      "side": "midline",
-      "coordinate": null,
-      "derivation_method": null,
-      "source_provenance": null,
+      "side": "left",
+      "coordinate": [
+        0.14215900003910065,
+        1.1434011459350586,
+        0.03876499831676483
+      ],
+      "derivation_method": "constructed-surface-geometry",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
-      "issues": [
-        "bilateral_anchor_requires_physical_side_context"
-      ]
+      "issues": []
+    },
+    {
+      "anchor_id": "cubital-crease",
+      "side": "right",
+      "coordinate": [
+        -0.13561099767684937,
+        1.1039111614227295,
+        0.03626000136137009
+      ],
+      "derivation_method": "constructed-surface-geometry",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
+      "bodyparts3d_surface_structure_relation": null,
+      "expected_anatomical_region": "review-from-anchor-identity",
+      "issues": []
     },
     {
       "anchor_id": "dorsal-wrist-crease",
-      "side": "midline",
-      "coordinate": null,
-      "derivation_method": null,
-      "source_provenance": null,
+      "side": "left",
+      "coordinate": [
+        0.2576870024204254,
+        0.878267228603363,
+        -0.002426000079140067
+      ],
+      "derivation_method": "constructed-surface-geometry",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
-      "issues": [
-        "bilateral_anchor_requires_physical_side_context"
-      ]
+      "issues": []
+    },
+    {
+      "anchor_id": "dorsal-wrist-crease",
+      "side": "right",
+      "coordinate": [
+        -0.2583250105381012,
+        0.8783591985702515,
+        -0.002612499985843897
+      ],
+      "derivation_method": "constructed-surface-geometry",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
+      "bodyparts3d_surface_structure_relation": null,
+      "expected_anatomical_region": "review-from-anchor-identity",
+      "issues": []
     },
     {
       "anchor_id": "gluteal-fold",
-      "side": "midline",
-      "coordinate": null,
-      "derivation_method": null,
-      "source_provenance": null,
+      "side": "left",
+      "coordinate": [
+        0.149044007062912,
+        0.8273711800575256,
+        -0.05646330118179321
+      ],
+      "derivation_method": "proximal-femur posterior surface fold proxy",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
+      "bodyparts3d_surface_structure_relation": null,
+      "expected_anatomical_region": "review-from-anchor-identity",
+      "issues": []
+    },
+    {
+      "anchor_id": "gluteal-fold",
+      "side": "right",
+      "coordinate": [
+        -0.15050700306892395,
+        0.8291882276535034,
+        -0.056237898766994476
+      ],
+      "derivation_method": "proximal-femur posterior surface fold proxy",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
+      "bodyparts3d_surface_structure_relation": null,
+      "expected_anatomical_region": "review-from-anchor-identity",
+      "issues": []
+    },
+    {
+      "anchor_id": "inferior-border-medial-condyle-tibia",
+      "side": "left",
+      "coordinate": [
+        0.05520709976553917,
+        0.07201586663722992,
+        -0.01443410012871027
+      ],
+      "derivation_method": "resolved-atlas-geometry",
+      "source_provenance": {
+        "definition": {
+          "kind": "bilateral-concept-feature",
+          "aliasesLeft": [
+            "left medial condyle of tibia",
+            "medial condyle of left tibia"
+          ],
+          "aliasesRight": [
+            "right medial condyle of tibia",
+            "medial condyle of right tibia"
+          ],
+          "feature": "inferior"
+        }
+      },
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
       "issues": [
-        "bilateral_anchor_requires_physical_side_context"
+        "wrong_feature_inferior_tibia_not_inferior_border_medial_condyle",
+        "bilateral_anchor_coordinate_collapse"
       ]
     },
     {
       "anchor_id": "inferior-border-medial-condyle-tibia",
-      "side": "midline",
-      "coordinate": null,
-      "derivation_method": null,
-      "source_provenance": null,
+      "side": "right",
+      "coordinate": [
+        0.05520709976553917,
+        0.07201586663722992,
+        -0.01443410012871027
+      ],
+      "derivation_method": "resolved-atlas-geometry",
+      "source_provenance": {
+        "definition": {
+          "kind": "bilateral-concept-feature",
+          "aliasesLeft": [
+            "left medial condyle of tibia",
+            "medial condyle of left tibia"
+          ],
+          "aliasesRight": [
+            "right medial condyle of tibia",
+            "medial condyle of right tibia"
+          ],
+          "feature": "inferior"
+        }
+      },
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
       "issues": [
-        "bilateral_anchor_requires_physical_side_context"
+        "laterality_sign_mismatch",
+        "wrong_feature_inferior_tibia_not_inferior_border_medial_condyle",
+        "bilateral_anchor_coordinate_collapse"
       ]
     },
     {
       "anchor_id": "lateral-prominence-greater-trochanter",
-      "side": "midline",
-      "coordinate": null,
-      "derivation_method": null,
-      "source_provenance": null,
+      "side": "left",
+      "coordinate": [
+        0.15023699402809143,
+        0.8621141910552979,
+        -0.023910699412226677
+      ],
+      "derivation_method": "model-specific bone extremum constrained to relevant segment",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
-      "issues": [
-        "bilateral_anchor_requires_physical_side_context"
-      ]
+      "issues": []
+    },
+    {
+      "anchor_id": "lateral-prominence-greater-trochanter",
+      "side": "right",
+      "coordinate": [
+        -0.14996400475502014,
+        0.8606011867523193,
+        -0.023131700232625008
+      ],
+      "derivation_method": "model-specific bone extremum constrained to relevant segment",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
+      "bodyparts3d_surface_structure_relation": null,
+      "expected_anatomical_region": "review-from-anchor-identity",
+      "issues": []
     },
     {
       "anchor_id": "left-anterior-hairline-corner",
@@ -252,67 +439,167 @@
     },
     {
       "anchor_id": "palmar-wrist-crease",
-      "side": "midline",
-      "coordinate": null,
-      "derivation_method": null,
-      "source_provenance": null,
+      "side": "left",
+      "coordinate": [
+        0.2588669955730438,
+        0.8945121765136719,
+        0.03639199957251549
+      ],
+      "derivation_method": "constructed-surface-geometry",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
-      "issues": [
-        "bilateral_anchor_requires_physical_side_context"
-      ]
+      "issues": []
+    },
+    {
+      "anchor_id": "palmar-wrist-crease",
+      "side": "right",
+      "coordinate": [
+        -0.2561190128326416,
+        0.8913851976394653,
+        0.03786100074648857
+      ],
+      "derivation_method": "constructed-surface-geometry",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
+      "bodyparts3d_surface_structure_relation": null,
+      "expected_anatomical_region": "review-from-anchor-identity",
+      "issues": []
     },
     {
       "anchor_id": "popliteal-crease",
-      "side": "midline",
-      "coordinate": null,
-      "derivation_method": null,
-      "source_provenance": null,
+      "side": "left",
+      "coordinate": [
+        0.11694200336933136,
+        0.44768020510673523,
+        0.004513000138103962
+      ],
+      "derivation_method": "constructed-surface-geometry",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
-      "issues": [
-        "bilateral_anchor_requires_physical_side_context"
-      ]
+      "issues": []
+    },
+    {
+      "anchor_id": "popliteal-crease",
+      "side": "right",
+      "coordinate": [
+        -0.06911259889602661,
+        0.4316631853580475,
+        0.017479000613093376
+      ],
+      "derivation_method": "constructed-surface-geometry",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
+      "bodyparts3d_surface_structure_relation": null,
+      "expected_anatomical_region": "review-from-anchor-identity",
+      "issues": []
     },
     {
       "anchor_id": "posterior-axillary-fold",
-      "side": "midline",
-      "coordinate": null,
-      "derivation_method": null,
-      "source_provenance": null,
+      "side": "left",
+      "coordinate": [
+        0.21280799806118011,
+        1.3981212377548218,
+        -0.011446700431406498
+      ],
+      "derivation_method": "proximal-humerus level surface fold proxy",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
-      "issues": [
-        "bilateral_anchor_requires_physical_side_context"
-      ]
+      "issues": []
+    },
+    {
+      "anchor_id": "posterior-axillary-fold",
+      "side": "right",
+      "coordinate": [
+        -0.1977970004081726,
+        1.411601185798645,
+        -0.008754399605095387
+      ],
+      "derivation_method": "proximal-humerus level surface fold proxy",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
+      "bodyparts3d_surface_structure_relation": null,
+      "expected_anatomical_region": "review-from-anchor-identity",
+      "issues": []
     },
     {
       "anchor_id": "prominence-lateral-malleolus",
-      "side": "midline",
-      "coordinate": null,
-      "derivation_method": null,
-      "source_provenance": null,
+      "side": "left",
+      "coordinate": [
+        0.09878209978342056,
+        0.0531327985227108,
+        -0.044682398438453674
+      ],
+      "derivation_method": "model-specific bone extremum constrained to relevant segment",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
-      "issues": [
-        "bilateral_anchor_requires_physical_side_context"
-      ]
+      "issues": []
+    },
+    {
+      "anchor_id": "prominence-lateral-malleolus",
+      "side": "right",
+      "coordinate": [
+        -0.0973862037062645,
+        0.05283129960298538,
+        -0.04576769843697548
+      ],
+      "derivation_method": "model-specific bone extremum constrained to relevant segment",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
+      "bodyparts3d_surface_structure_relation": null,
+      "expected_anatomical_region": "review-from-anchor-identity",
+      "issues": []
     },
     {
       "anchor_id": "prominence-medial-malleolus",
-      "side": "midline",
-      "coordinate": null,
-      "derivation_method": null,
-      "source_provenance": null,
+      "side": "left",
+      "coordinate": [
+        0.044721800833940506,
+        0.08634377270936966,
+        -0.020071599632501602
+      ],
+      "derivation_method": "model-specific bone extremum constrained to relevant segment",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
-      "issues": [
-        "bilateral_anchor_requires_physical_side_context"
-      ]
+      "issues": []
+    },
+    {
+      "anchor_id": "prominence-medial-malleolus",
+      "side": "right",
+      "coordinate": [
+        -0.04493439942598343,
+        0.08590435236692429,
+        -0.018172800540924072
+      ],
+      "derivation_method": "model-specific bone extremum constrained to relevant segment",
+      "source_provenance": {
+        "confidence": "moderate"
+      },
+      "bodyparts3d_surface_structure_relation": null,
+      "expected_anatomical_region": "review-from-anchor-identity",
+      "issues": []
     },
     {
       "anchor_id": "radial-crease-distal-interphalangeal-middle-finger",
-      "side": "midline",
+      "side": "right",
       "coordinate": [
         -0.2854897690729975,
         0.7434988984833695,
@@ -339,7 +626,7 @@
     },
     {
       "anchor_id": "radial-crease-proximal-interphalangeal-middle-finger",
-      "side": "midline",
+      "side": "right",
       "coordinate": [
         -0.28376909764596087,
         0.7645783552591559,
@@ -459,15 +746,35 @@
     },
     {
       "anchor_id": "sole",
-      "side": "midline",
-      "coordinate": null,
-      "derivation_method": null,
-      "source_provenance": null,
+      "side": "left",
+      "coordinate": [
+        0.13936500251293182,
+        1.3877787807814457e-17,
+        0.0746769979596138
+      ],
+      "derivation_method": "inferior plantar skin extremum",
+      "source_provenance": {
+        "confidence": "high"
+      },
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
-      "issues": [
-        "bilateral_anchor_requires_physical_side_context"
-      ]
+      "issues": []
+    },
+    {
+      "anchor_id": "sole",
+      "side": "right",
+      "coordinate": [
+        -0.13708999752998352,
+        0.000028000000384054147,
+        0.07323800027370453
+      ],
+      "derivation_method": "inferior plantar skin extremum",
+      "source_provenance": {
+        "confidence": "high"
+      },
+      "bodyparts3d_surface_structure_relation": null,
+      "expected_anatomical_region": "review-from-anchor-identity",
+      "issues": []
     },
     {
       "anchor_id": "superior-border-pubic-symphysis",
@@ -483,7 +790,9 @@
       },
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
-      "issues": []
+      "issues": [
+        "midline_anchor_lateral_offset"
+      ]
     },
     {
       "anchor_id": "suprasternal-notch",
@@ -507,7 +816,9 @@
       },
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
-      "issues": []
+      "issues": [
+        "wrong_feature_center_of_sternum_not_jugular_notch"
+      ]
     },
     {
       "anchor_id": "umbilicus-center",
