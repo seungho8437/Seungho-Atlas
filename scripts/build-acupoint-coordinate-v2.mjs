@@ -341,6 +341,14 @@ const corrections=[
 
 const residualRows=records.flatMap(x=>(x.raw_relation_residuals||[]).map(r=>({point_id:x.point_id,side:x.side,stage:'raw',...r})).concat((x.projected_relation_residuals||[]).map(r=>({point_id:x.point_id,side:x.side,stage:'projected',...r}))));
 const relationTypes=[...new Set(graph.relation_instances.map(x=>x.relation_type))].sort();
+const requiredRelationSet=new Set(['between','midpoint-between','fraction-along-line','on-line','at-border','at-junction','relative-to','surface-landmark','overlies','adjacent','deep-to']);
+const countBy=(xs,keyFn)=>xs.reduce((o,x)=>{const k=keyFn(x);o[k]=(o[k]||0)+1;return o;},{});
+const rawRequiredUncomputableByType=countBy(residualRows.filter(x=>x.stage==='raw'&&requiredRelationSet.has(x.relation_type)&&!x.computable),x=>x.relation_type);
+const rawRequiredFailByType=countBy(residualRows.filter(x=>x.stage==='raw'&&requiredRelationSet.has(x.relation_type)&&x.status==='fail'),x=>x.relation_type);
+const executedByMethod=countBy(records.filter(x=>x.relation_executed),x=>x.solver_method||'unknown');
+const calibrationUniqueMap=new Map();
+for(const x of calibrationAudit){const k=x.calibration_id+':'+x.side;if(!calibrationUniqueMap.has(k))calibrationUniqueMap.set(k,x);}
+const calibrationUnique=[...calibrationUniqueMap.values()];
 const summary={
  physical_records:records.length,
  dependency_ready:records.filter(x=>x.dependency_ready).length,
@@ -357,7 +365,7 @@ const summary={
  projected_relation_residual_pass:residualRows.filter(x=>x.stage==='projected'&&x.status==='pass').length,
  projected_relation_residual_review:residualRows.filter(x=>x.stage==='projected'&&x.status==='review').length,
  projected_relation_residual_fail:residualRows.filter(x=>x.stage==='projected'&&x.status==='fail').length,
- large_legacy_discrepancy:records.filter(x=>x.legacy_comparison?.flag==='large_discrepancy').length, relation_types_present:relationTypes
+ large_legacy_discrepancy:records.filter(x=>x.legacy_comparison?.flag==='large_discrepancy').length, relation_types_present:relationTypes, native_execution_by_method:executedByMethod, raw_required_uncomputable_by_type:rawRequiredUncomputableByType, raw_required_fail_by_type:rawRequiredFailByType
 };
 
 const v1KnownWrong=new Set(['CV1:midline','CV24:midline','GB26:left','GB26:right','ST29:left','ST29:right','ST35:left','ST35:right']);
@@ -371,8 +379,18 @@ const qcOut={schema_version:'2.0.1',artifact:'acupoint-coordinate-qc-v2.json',ge
 write('public/knowledge/acupoint-bodyparts3d-realization-v2.json',realizationOut);
 write('public/knowledge/acupoint-coordinate-solver-input-v2.json',solverOut);
 write('public/knowledge/acupoint-coordinates-v2.json',coordsOut);
-write('public/knowledge/acupoint-coordinate-qc-v2.json',qcOut);
-const outputFiles=['public/knowledge/acupoint-bodyparts3d-realization-v2.json','public/knowledge/acupoint-coordinate-solver-input-v2.json','public/knowledge/acupoint-coordinates-v2.json','public/knowledge/acupoint-coordinate-qc-v2.json'];
-const manifest={schema_version:'2.0.0',generated_at:now,frozen_B_sha256:FROZEN_B_SHA,frozen_B_modified:false,v1_baseline_preserved:true,outputs:Object.fromEntries(outputFiles.map(p=>[p,{sha256:hash(fs.readFileSync(new URL(p,root))),bytes:fs.statSync(new URL(p,root)).size}]))};
+write('public/knowledge/acupoint-coordinate-qc-v2.json',qcOut);\nconst auditSummary={schema_version:'1.0.0',artifact:'acupoint-coordinate-v2-audit-summary.json',generated_at:now,
+ baseline:{v1_preserved:true,v1_reinterpreted_as:'provisional_projected_candidate',v1_solved_physical:auditV1.v1_status_correction?.previous_solved_records,v1_legacy_candidate_reused:auditV1.provenance_census?.legacy_candidate_reused,v1_native_relation_executed:auditV1.provenance_census?.native_relation_executed},
+ attribution_sample:auditV1.audit_sample,
+ frozen_B:{sha256:FROZEN_B_SHA,modified:false,minimal_reopen_candidates:auditV1.frozen_B_structural_coordinate_audit},
+ anchor_corrections:corrections,
+ calibration:{frame_side_records:calibrationAudit.length,unique_calibration_side_records:calibrationUnique.length,unique_usable:calibrationUnique.filter(x=>x.status==='usable').length,unique_blocked:calibrationUnique.filter(x=>x.status==='blocked').length,blocked_unique:calibrationUnique.filter(x=>x.status==='blocked')},
+ c_v2:summary,
+ regression_subset:regressionSubset,
+ decision:{B_scope:'keep frozen globally; propose minimal review of CV1/CV12 geometry nodes only',C_status:'provisional v2; NOT frozen; NOT final validated',reason:'native execution exists, but zero physical records currently satisfy every material source relation numerically; visual QC is pending for all.'}};
+write('public/knowledge/acupoint-coordinate-v2-audit-summary.json',auditSummary);
+
+const outputFiles=['public/knowledge/acupoint-bodyparts3d-realization-v2.json','public/knowledge/acupoint-coordinate-solver-input-v2.json','public/knowledge/acupoint-coordinates-v2.json','public/knowledge/acupoint-coordinate-qc-v2.json','public/knowledge/acupoint-coordinate-v2-audit-summary.json'];
+const manifest={schema_version:'2.0.1',generated_at:now,frozen_B_sha256:FROZEN_B_SHA,frozen_B_modified:false,v1_baseline_preserved:true,outputs:Object.fromEntries(outputFiles.map(p=>[p,{sha256:hash(fs.readFileSync(new URL(p,root))),bytes:fs.statSync(new URL(p,root)).size}])),visual_qc_artifact:fs.existsSync(new URL('public/acupoint-coordinate-qc-v2.html',root))?{path:'public/acupoint-coordinate-qc-v2.html',sha256:hash(fs.readFileSync(new URL('public/acupoint-coordinate-qc-v2.html',root)))}:null};
 write('public/knowledge/acupoint-coordinate-manifest-v2.json',manifest);
 console.log(JSON.stringify({summary,anchor_corrections:corrections.map(x=>({anchor_id:x.anchor_id,shift:x.shift,old:x.old?.position,v2:x.v2?.position})),calibration:{total:calibrationAudit.length,usable:calibrationAudit.filter(x=>x.status==='usable').length,blocked:calibrationAudit.filter(x=>x.status==='blocked').length},B:auditV1.frozen_B_structural_coordinate_audit},null,2));
