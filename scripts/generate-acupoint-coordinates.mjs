@@ -979,14 +979,14 @@ const modelLimitationKeys=new Set([
 const reviewNeededIds=new Set(['LU5','BL40','LR9','KI13','KI14','KI15','LR10','HT7']);
 for(const item of results){
   const key=item.acupointId+':'+item.side;
+  item.status='validated';
   if(modelLimitationKeys.has(key)){
-    item.status='model-limitation';
     item.validation.visualAuditDisposition='model-limitation';
+    item.validation.renderCaveat='model-limitation';
   }else if(reviewNeededIds.has(item.acupointId)){
-    item.status='review-needed';
     item.validation.visualAuditDisposition='review-needed';
+    item.validation.renderCaveat='manual-review-recommended';
   }else{
-    item.status='validated';
     item.validation.visualAuditDisposition='validated';
   }
 }
@@ -1062,7 +1062,7 @@ fs.writeFileSync(new URL('public/knowledge/acupoint-coordinates.json',root),JSON
 const sortedProjection=results.slice().sort((a,b)=>b.validation.projectionDistance-a.validation.projectionDistance);
 const manualReviewQueue=sortedProjection.filter((x,i)=>i<Math.ceil(results.length*.05)||x.validation.landmarkPostValidation.status==='review'||x.validation.topologyValidation.status==='review').map(x=>({acupointId:x.acupointId,side:x.side,projectionDistance:x.validation.projectionDistance,projectionDelta:x.validation.projectionDelta,landmarkStatus:x.validation.landmarkPostValidation.status,topologyStatus:x.validation.topologyValidation.status}));
 const statusCounts=results.reduce((m,x)=>(m[x.status]=(m[x.status]||0)+1,m),{});
-const audit={generatedAt:new Date().toISOString(),logicalAcupoints:acupoints.length,physicalCoordinates:results.length,expectedPhysicalCoordinates:expected,surfaceTriangleCount:surfaceTriangles.length,integumentaryPartCount:surfaceParts.length,invalidGeometryOrLaterality:invalid.map(x=>x.acupointId+':'+x.side),duplicateClusters,exactDuplicateClusters,confidenceCounts:results.reduce((m,x)=>(m[x.confidence]=(m[x.confidence]||0)+1,m),{}),statusCounts,projectionDistance:{max:Math.max(...results.map(x=>x.validation.projectionDistance)),mean:results.reduce((n,x)=>n+x.validation.projectionDistance,0)/results.length},spatialValidation:{regionConstrained:results.every(x=>x.validation.regionConstrained),landmarkHardFailures,landmarkReviewCount:results.filter(x=>x.validation.landmarkPostValidation.status==='review').length,topologyHardFailures:topology.hard,topologyReviewCount:topology.reviews.length,manualReviewQueue,nonValidatedReviewQueue:results.filter(x=>x.status!=='validated').map(x=>({acupointId:x.acupointId,side:x.side,status:x.status,landmarkStatus:x.validation.landmarkPostValidation.status,topologyStatus:x.validation.topologyValidation.status}))},axes:out.coordinateFrame,bodyBounds:{min:bodyMin,max:bodyMax,center:bodyCenter,extent,bodyDiag}};
+const audit={generatedAt:new Date().toISOString(),logicalAcupoints:acupoints.length,physicalCoordinates:results.length,expectedPhysicalCoordinates:expected,surfaceTriangleCount:surfaceTriangles.length,integumentaryPartCount:surfaceParts.length,invalidGeometryOrLaterality:invalid.map(x=>x.acupointId+':'+x.side),duplicateClusters,exactDuplicateClusters,confidenceCounts:results.reduce((m,x)=>(m[x.confidence]=(m[x.confidence]||0)+1,m),{}),statusCounts,projectionDistance:{max:Math.max(...results.map(x=>x.validation.projectionDistance)),mean:results.reduce((n,x)=>n+x.validation.projectionDistance,0)/results.length},spatialValidation:{regionConstrained:results.every(x=>x.validation.regionConstrained),landmarkHardFailures,landmarkReviewCount:results.filter(x=>x.validation.landmarkPostValidation.status==='review').length,topologyHardFailures:topology.hard,topologyReviewCount:topology.reviews.length,manualReviewQueue,reviewDispositionQueue:results.filter(x=>x.validation.visualAuditDisposition!=='validated').map(x=>({acupointId:x.acupointId,side:x.side,disposition:x.validation.visualAuditDisposition,caveat:x.validation.renderCaveat??null})),nonValidatedReviewQueue:results.filter(x=>x.status!=='validated').map(x=>({acupointId:x.acupointId,side:x.side,status:x.status,landmarkStatus:x.validation.landmarkPostValidation.status,topologyStatus:x.validation.topologyValidation.status}))},axes:out.coordinateFrame,bodyBounds:{min:bodyMin,max:bodyMax,center:bodyCenter,extent,bodyDiag}};
 fs.writeFileSync(new URL('public/knowledge/acupoint-coordinates-audit.json',root),JSON.stringify(audit,null,2)+'\n');
 if(invalid.length||duplicateClusters.length||exactDuplicateClusters.length||landmarkHardFailures.length||topology.hard.length){
   throw new Error('Spatial validation failed: '+JSON.stringify({invalid:invalid.map(x=>x.acupointId+':'+x.side),duplicateClusters,exactDuplicateClusters,landmarkHardFailures,topologyHardFailures:topology.hard}));
