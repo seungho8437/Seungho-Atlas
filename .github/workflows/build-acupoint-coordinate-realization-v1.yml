@@ -1,0 +1,79 @@
+name: Build Frozen-B Acupoint Coordinate Realization v1
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/korean-tcm-knowledge
+    paths:
+      - scripts/data/anatomy-acupoint-relations-v1.json.gz.b64.txt
+      - scripts/build-acupoint-coordinate-realization-v1.mjs
+      - scripts/validate-acupoint-coordinate-realization-v1.mjs
+      - public/acupoint-coordinate-qc.html
+      - .github/workflows/build-acupoint-coordinate-realization-v1.yml
+
+concurrency:
+  group: frozen-b-acupoint-coordinate-realization-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+env:
+  FROZEN_B_SHA256: 6dd00d386a6262d02900ec5a30ea9b18aace899f071159e772c12679740b1d06
+  ATLAS_BLOB_SHA: 0f81b5621479a0c0548f4683c316f33bd4d6545b
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/korean-tcm-knowledge
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.0'
+      - name: Verify immutable frozen B snapshot
+        run: |
+          base64 -d scripts/data/anatomy-acupoint-relations-v1.json.gz.b64.txt | gzip -dc > /tmp/anatomy-acupoint-relations-v1.json
+          echo "$FROZEN_B_SHA256  /tmp/anatomy-acupoint-relations-v1.json" | sha256sum -c -
+      - name: Build realization, solver input, coordinates, QC and bundle
+        run: node scripts/build-acupoint-coordinate-realization-v1.mjs
+      - name: Validate frozen-B coordinate contract
+        run: node scripts/validate-acupoint-coordinate-realization-v1.mjs
+      - name: Typecheck application
+        run: npm run check
+      - name: Build application including 3D visual QC artifact
+        run: npm run build
+      - name: Verify ZIP integrity
+        run: |
+          test -f artifacts/acupoint-coordinate-v1.zip
+          sha256sum -c artifacts/acupoint-coordinate-v1.zip.sha256
+          unzip -t artifacts/acupoint-coordinate-v1.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: acupoint-coordinate-v1
+          path: |
+            artifacts/acupoint-coordinate-v1.zip
+            artifacts/acupoint-coordinate-v1.zip.sha256
+            public/knowledge/acupoint-coordinate-manifest.json
+            public/knowledge/acupoint-coordinate-regression-report.json
+          if-no-files-found: error
+      - name: Commit generated C-layer artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            public/knowledge/acupoint-bodyparts3d-realization.json \
+            public/knowledge/acupoint-coordinate-solver-input.json \
+            public/knowledge/acupoint-coordinates.json \
+            public/knowledge/acupoint-coordinate-qc.json \
+            public/knowledge/acupoint-coordinate-regression-report.json \
+            public/knowledge/acupoint-coordinate-manifest.json \
+            artifacts/acupoint-coordinate-v1.zip.sha256
+          if git diff --cached --quiet; then
+            echo "No generated C-layer changes."
+          else
+            git commit -m "data: build frozen-B BodyParts3D coordinate realization v1"
+            git push
+          fi
