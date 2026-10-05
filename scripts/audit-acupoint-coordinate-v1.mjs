@@ -99,13 +99,16 @@ for(const c of calibrations.filter(x=>x.calibration_id==='CHEST_SUPRASTERNAL_TO_
 
 const bStructural=[];
 for(const g of graph.geometry_nodes||[]){
- const deps=g.endpoint_node_ids||[];
- if(['constructed_line','reference_line'].includes(g.geometry_type)&&deps.length!==2)bStructural.push({kind:'GEOMETRY_LINE_CARDINALITY',node_id:g.node_id,point_id:String(g.source_statement_id||'').split(':')[1]||null,geometry_type:g.geometry_type,endpoint_count:deps.length,endpoint_node_ids:deps,source_raw:g.source_raw});
+ const deps=g.endpoint_node_ids||[], raw=String(g.source_raw||'').toLowerCase();
+ const intrinsicallyTwoEnded=g.geometry_type==='constructed_line'||(g.geometry_type==='reference_line'&&/line connecting|connecting line|line between/.test(raw));
+ if(intrinsicallyTwoEnded&&deps.length!==2)bStructural.push({kind:'GEOMETRY_LINE_CARDINALITY',node_id:g.node_id,point_id:String(g.source_statement_id||'').split(':')[1]||null,geometry_type:g.geometry_type,endpoint_count:deps.length,endpoint_node_ids:deps,source_raw:g.source_raw});
  if(String(g.geometry_type||'').includes('midpoint')&&deps.length!==2)bStructural.push({kind:'GEOMETRY_MIDPOINT_CARDINALITY',node_id:g.node_id,point_id:String(g.source_statement_id||'').split(':')[1]||null,geometry_type:g.geometry_type,endpoint_count:deps.length,endpoint_node_ids:deps,source_raw:g.source_raw});
 }
 for(const r of graph.relation_instances||[]){
- const n=(r.argument_node_ids||[]).length;
- if(['between','midpoint-between','fraction-along-line'].includes(r.relation_type)&&n<2)bStructural.push({kind:'RELATION_ARGUMENT_CARDINALITY',relation_id:r.relation_id,point_id:String(r.subject_node_id||'').replace(/^P:/,''),relation_type:r.relation_type,argument_count:n,argument_node_ids:r.argument_node_ids||[],source_raw:r.source_raw});
+ const args=r.argument_node_ids||[], n=args.length;
+ if(r.relation_type==='between'&&n<2)bStructural.push({kind:'RELATION_ARGUMENT_CARDINALITY',relation_id:r.relation_id,point_id:String(r.subject_node_id||'').replace(/^P:/,''),relation_type:r.relation_type,argument_count:n,argument_node_ids:args,source_raw:r.source_raw});
+ if(r.relation_type==='midpoint-between'&&n===1&&!String(args[0]).startsWith('G:'))bStructural.push({kind:'RELATION_ARGUMENT_CARDINALITY',relation_id:r.relation_id,point_id:String(r.subject_node_id||'').replace(/^P:/,''),relation_type:r.relation_type,argument_count:n,argument_node_ids:args,source_raw:r.source_raw});
+ if(r.relation_type==='fraction-along-line'&&n===0)bStructural.push({kind:'RELATION_ARGUMENT_CARDINALITY',relation_id:r.relation_id,point_id:String(r.subject_node_id||'').replace(/^P:/,''),relation_type:r.relation_type,argument_count:n,argument_node_ids:args,source_raw:r.source_raw});
 }
 const bAffected=[...new Set(bStructural.map(x=>x.point_id).filter(Boolean))];
 
