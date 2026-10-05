@@ -340,7 +340,8 @@ const corrections=[
 ].map(x=>({...x,shift:x.old?.position&&x.v2?.position?distance(x.old.position,x.v2.position):null}));
 
 const residualRows=records.flatMap(x=>(x.raw_relation_residuals||[]).map(r=>({point_id:x.point_id,side:x.side,stage:'raw',...r})).concat((x.projected_relation_residuals||[]).map(r=>({point_id:x.point_id,side:x.side,stage:'projected',...r}))));
-const relationTypes=[...new Set(graph.relation_instances.map(x=>x.relation_type))].sort();\nconst summary={
+const relationTypes=[...new Set(graph.relation_instances.map(x=>x.relation_type))].sort();
+const summary={
  physical_records:records.length,
  dependency_ready:records.filter(x=>x.dependency_ready).length,
  relation_executed:records.filter(x=>x.relation_executed).length,
