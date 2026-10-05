@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "anatomy-acupoint-relations-v1.0.1-patch-preflight-blocker.json",
+  "base_frozen_sha256": "6dd00d386a6262d02900ec5a30ea9b18aace899f071159e772c12679740b1d06",
+  "decision": "BLOCK_TWO_GEOMETRY_RECORD_ONLY_PATCH",
+  "frozen_B_modified": false,
+  "reason": "WHO source re-adjudication shows the required endpoint landmark nodes/bindings are absent or misbound. Editing only the two geometry endpoint arrays would create formally 2-endpoint lines that are semantically false.",
+  "cv1": {
+    "source_statement_id": "S:CV1:location",
+    "printed_page": 220,
+    "pdf_page": 229,
+    "source_text": "In the perineal region, at the midpoint of the line connecting the anus with the poste-rior border of the scrotum in males and the posterior commissure of labium majoris in females.",
+    "existing_geometry": {
+      "node_id": "G:S:CV1:location:line:0",
+      "endpoint_node_ids": [
+        "L:1562"
+      ]
+    },
+    "existing_relevant_nodes": [
+      {
+        "node_id": "L:1562",
+        "source_raw": "anus",
+        "char_start": 67,
+        "char_end": 71,
+        "terminal_disposition": "registry_limited"
+      },
+      {
+        "node_id": "L:1563",
+        "source_raw": "poste-rior border",
+        "char_start": 81,
+        "char_end": 98,
+        "terminal_disposition": "parent_unresolved"
+      }
+    ],
+    "missing_source_landmarks": [
+      {
+        "source_raw": "scrotum",
+        "char_start": 106,
+        "char_end": 113
+      },
+      {
+        "source_raw": "posterior commissure",
+        "char_start": 131,
+        "char_end": 151
+      },
+      {
+        "source_raw": "labium majoris",
+        "char_start": 155,
+        "char_end": 169
+      }
+    ],
+    "issue_types": [
+      "SOURCE_LANDMARK_EXTRACTION_OMISSION",
+      "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP"
+    ],
+    "why_geometry_only_is_invalid": "[L:1562,L:1563] would encode anus ↔ an unparented generic posterior border and cannot distinguish the male scrotal border from the female posterior labial commissure."
+  },
+  "cv12": {
+    "source_statement_id": "S:CV12:note:1",
+    "source_text": "Note: CV12 is located at the midpoint of the line connecting the xiphisternal junc-tion and the centre of umbilicus.",
+    "existing_geometry": {
+      "node_id": "G:S:CV12:note:1:line:0",
+      "endpoint_node_ids": [
+        "N:CV12:1:m2"
+      ]
+    },
+    "existing_relevant_nodes": [
+      {
+        "node_id": "N:CV12:1:m1",
+        "source_raw": "line connecting",
+        "char_start": 45,
+        "char_end": 60,
+        "terminal_disposition": "geometry_or_surface"
+      },
+      {
+        "node_id": "N:CV12:1:m2",
+        "source_raw": "umbilicus",
+        "char_start": 106,
+        "char_end": 115,
+        "terminal_disposition": "specialized_anchor"
+      }
+    ],
+    "missing_source_landmarks": [
+      {
+        "source_raw": "xiphisternal junc-tion",
+        "char_start": 65,
+        "char_end": 87
+      }
+    ],
+    "misbound_relations": [
+      {
+        "relation_id": "REL:2544",
+        "source_raw": "xiphisternal junc-tion",
+        "argument_node_ids": [
+          "N:CV12:1:m2"
+        ],
+        "actual_argument_identity": "umbilicus"
+      }
+    ],
+    "issue_types": [
+      "SOURCE_LANDMARK_EXTRACTION_OMISSION",
+      "RELATION_ARGUMENT_MISBINDING",
+      "REFERENCE_LINE_ENDPOINT_OMISSION"
+    ],
+    "why_geometry_only_is_invalid": "Adding a second umbilicus node or reusing location-section L:1594 would still omit the xiphisternal endpoint and would not repair REL:2544's wrong argument binding."
+  },
+  "minimal_reopen_proposal": {
+    "scope_points": [
+      "CV1",
+      "CV12"
+    ],
+    "no_other_points": true,
+    "required_record_classes": [
+      "only missing CV1/CV12 source landmark mention nodes needed to represent WHO endpoints",
+      "the two affected reference-line geometry records",
+      "only directly misbound CV1/CV12 relation arguments that point to the wrong/missing endpoint"
+    ],
+    "source_statements_unchanged": true,
+    "existing_unaffected_landmark_identities_unchanged": true,
+    "all_other_B_records_diff_zero_required": true
+  },
+  "gate": {
+    "B_patch_regression": "NOT_RUN_BECAUSE_SEMANTIC_PREFLIGHT_BLOCKED",
+    "C_v2": "DO_NOT_PROCEED"
+  }
+}
