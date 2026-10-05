@@ -41,6 +41,8 @@ jobs:
         run: node scripts/build-acupoint-coordinate-realization-v1.mjs
       - name: Validate frozen-B coordinate contract
         run: node scripts/validate-acupoint-coordinate-realization-v1.mjs
+      - name: Install application dependencies
+        run: npm ci
       - name: Typecheck application
         run: npm run check
       - name: Build application including 3D visual QC artifact
