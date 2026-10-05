@@ -1,25 +1,33 @@
 {
-  "schema_version": "2.0.0",
-  "generated_at": "2026-10-05T22:35:49.159Z",
+  "schema_version": "2.0.1",
+  "generated_at": "2026-10-05T22:39:27.205Z",
   "frozen_B_sha256": "6dd00d386a6262d02900ec5a30ea9b18aace899f071159e772c12679740b1d06",
   "frozen_B_modified": false,
   "v1_baseline_preserved": true,
   "outputs": {
     "public/knowledge/acupoint-bodyparts3d-realization-v2.json": {
-      "sha256": "c4be5f562415adb53173eec80fb409df7ceae5611a5872099f93a8218ba0ab81",
+      "sha256": "950319bd8c9c0f0dd15e5b99e720a7c7454398a6a677a7d2757c17cfda6baea7",
       "bytes": 9162012
     },
     "public/knowledge/acupoint-coordinate-solver-input-v2.json": {
-      "sha256": "c5335ee0c3606b49241ae19829963deabab81771573dca70968bde776e48549e",
+      "sha256": "8d0328660fb9db847d0ae7c1826bc0c5ea70432862a270f121918e3608f4f851",
       "bytes": 835050
     },
     "public/knowledge/acupoint-coordinates-v2.json": {
-      "sha256": "47950c84e418fd60e79f6b2bf7158de8546a5e244f9e9218834a9ce293296e4f",
-      "bytes": 2102576
+      "sha256": "fc6ae55da35c17ca87311ca10c9e7bebd9e78d9568c3b8238d9d7d870d753f75",
+      "bytes": 2102926
     },
     "public/knowledge/acupoint-coordinate-qc-v2.json": {
-      "sha256": "360872cda2f0f172c542d6a9ee8bcfb32ca46ba6d096bbf13179bc49057de3d0",
-      "bytes": 1018098
+      "sha256": "4a348212fd1027f53a4f043dcd64266f6a2bd7bd1d4170e91599ac104e07f701",
+      "bytes": 1018448
+    },
+    "public/knowledge/acupoint-coordinate-v2-audit-summary.json": {
+      "sha256": "cac83709d3d2bb35e42f9e3b3297bb3a021d5818fff4a7f5ba3c2aacc5cda2a1",
+      "bytes": 27254
     }
+  },
+  "visual_qc_artifact": {
+    "path": "public/acupoint-coordinate-qc-v2.html",
+    "sha256": "08656d0dacb9e1448122568829f72ef75ee79e530222ad6559ff15019eb3a9c4"
   }
 }

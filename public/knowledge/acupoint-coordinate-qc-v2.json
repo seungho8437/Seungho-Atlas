@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0.1",
   "artifact": "acupoint-coordinate-qc-v2.json",
-  "generated_at": "2026-10-05T22:35:49.159Z",
+  "generated_at": "2026-10-05T22:39:27.205Z",
   "summary": {
     "physical_records": 670,
     "dependency_ready": 668,
@@ -30,7 +30,20 @@
       "reference-landmark",
       "relative-to",
       "surface-landmark"
-    ]
+    ],
+    "native_execution_by_method": {
+      "native_proportional_measurement_offset": 184,
+      "direct-specialized-anchor": 15
+    },
+    "raw_required_uncomputable_by_type": {
+      "relative-to": 271,
+      "on-line": 38,
+      "between": 34,
+      "midpoint-between": 8
+    },
+    "raw_required_fail_by_type": {
+      "surface-landmark": 4
+    }
   },
   "numeric_relation_residuals": [
     {

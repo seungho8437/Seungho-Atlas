@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0.1",
   "artifact": "acupoint-coordinates-v2.json",
-  "generated_at": "2026-10-05T22:35:49.159Z",
+  "generated_at": "2026-10-05T22:39:27.205Z",
   "standard": "WHO 2008 frozen B relation graph v1 -> BodyParts3D 4.0 native C v2",
   "frozen_B_sha256": "6dd00d386a6262d02900ec5a30ea9b18aace899f071159e772c12679740b1d06",
   "v1_baseline_preserved": true,
@@ -41,7 +41,20 @@
       "reference-landmark",
       "relative-to",
       "surface-landmark"
-    ]
+    ],
+    "native_execution_by_method": {
+      "native_proportional_measurement_offset": 184,
+      "direct-specialized-anchor": 15
+    },
+    "raw_required_uncomputable_by_type": {
+      "relative-to": 271,
+      "on-line": 38,
+      "between": 34,
+      "midpoint-between": 8
+    },
+    "raw_required_fail_by_type": {
+      "surface-landmark": 4
+    }
   },
   "points": [
     {
