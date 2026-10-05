@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Acupoint Coordinate QC — Frozen B v1</title>
+<style>
+:root{font-family:Inter,system-ui,sans-serif;color-scheme:dark;background:#0b0f14;color:#e6edf3}
+*{box-sizing:border-box}body{margin:0;overflow:hidden}#app{display:grid;grid-template-columns:340px 1fr;height:100vh}
+#panel{padding:14px;overflow:auto;border-right:1px solid #27313d;background:#0f141b}#view{position:relative}
+h1{font-size:16px;margin:0 0 10px}.row{display:flex;gap:8px;margin:8px 0}.row>*{min-width:0}
+select,button,input{background:#161d26;color:#e6edf3;border:1px solid #344150;border-radius:6px;padding:7px}
+select{width:100%}button{cursor:pointer}.pill{display:inline-block;padding:2px 7px;border:1px solid #3d4b59;border-radius:999px;font-size:11px;margin:2px}
+.good{border-color:#238636}.warn{border-color:#d29922}.bad{border-color:#f85149}
+.card{border:1px solid #27313d;border-radius:8px;padding:9px;margin:9px 0;background:#111821}
+pre{white-space:pre-wrap;word-break:break-word;font-size:11px;line-height:1.35;margin:6px 0}
+label{font-size:12px;color:#9da7b3}.small{font-size:11px;color:#9da7b3}
+#legend{position:absolute;left:12px;bottom:12px;background:#0f141bdd;border:1px solid #27313d;border-radius:8px;padding:8px;font-size:11px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}.raw{background:#ff7b72}.projected{background:#58a6ff}.landmark{background:#d2a8ff}
+canvas{display:block;width:100%;height:100%}
+</style>
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.159.0/examples/jsm/"}}
+</script>
+</head>
+<body>
+<div id="app">
+  <aside id="panel">
+    <h1>Frozen-B Acupoint Coordinate QC v1</h1>
+    <div class="small">BodyParts3D 4.0 · source-backed realization only</div>
+    <div class="row"><select id="point"></select></div>
+    <div class="row">
+      <button id="prev">◀</button><button id="next">▶</button><button id="focus">Focus</button>
+    </div>
+    <div class="row">
+      <label><input id="showSkin" type="checkbox" checked/> skin</label>
+      <label><input id="showUsed" type="checkbox" checked/> used structures</label>
+      <label><input id="showRaw" type="checkbox" checked/> raw</label>
+    </div>
+    <div id="status" class="card"></div>
+    <div id="provenance" class="card"></div>
+    <div id="relations" class="card"></div>
+    <div id="flags" class="card"></div>
+  </aside>
+  <main id="view"></main>
+</div>
+<div id="legend"><span class="dot projected"></span>projected <span class="dot raw"></span>raw <span class="dot landmark"></span>source/used structure</div>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+
+const $=id=>document.getElementById(id);
+const loadJson=async p=>{const r=await fetch(p);if(!r.ok)throw new Error(p+' '+r.status);return r.json()};
+const [atlas,coords,qc,real,solver]=await Promise.all([
+  loadJson('/models/atlas.json'),
+  loadJson('/knowledge/acupoint-coordinates.json'),
+  loadJson('/knowledge/acupoint-coordinate-qc.json'),
+  loadJson('/knowledge/acupoint-bodyparts3d-realization.json'),
+  loadJson('/knowledge/acupoint-coordinate-solver-input.json')
+]);
+const partsById=new Map(atlas.parts.map(p=>[p.id,p]));
+const chunkCache=new Map();
+async function chunkBuffer(chunk){
+  if(chunkCache.has(chunk))return chunkCache.get(chunk);
+  const url='/models/'+atlas.chunks[chunk].url.split('/').pop();
+  const b=await (await fetch(url)).arrayBuffer();chunkCache.set(chunk,b);return b;
+}
+async function geometryOfPart(id){
+  const p=partsById.get(id);if(!p)return null;
+  const b=await chunkBuffer(p.chunk);
+  if(p.positions+p.vertexCount*12>b.byteLength||p.indices+p.indexCount*4>b.byteLength)return null;
+  const pos=new Float32Array(b,p.positions,p.vertexCount*3);
+  const idx=new Uint32Array(b,p.indices,p.indexCount);
+  const g=new THREE.BufferGeometry();
+  g.setAttribute('position',new THREE.BufferAttribute(new Float32Array(pos),3));
+  g.setIndex(new THREE.BufferAttribute(new Uint32Array(idx),1));
+  g.computeVertexNormals();return g;
+}
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x0b0f14);
+const camera=new THREE.PerspectiveCamera(35,1,.001,50);camera.position.set(1.8,1.0,2.2);
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));$('view').appendChild(renderer.domElement);
+const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;
+scene.add(new THREE.HemisphereLight(0xffffff,0x223344,2.2));
+const dl=new THREE.DirectionalLight(0xffffff,2.0);dl.position.set(2,3,3);scene.add(dl);
+const root=new THREE.Group();scene.add(root);
+const skinGroup=new THREE.Group(),usedGroup=new THREE.Group(),pointGroup=new THREE.Group();root.add(skinGroup,usedGroup,pointGroup);
+
+async function addPartMesh(id,material,target=usedGroup){
+ const g=await geometryOfPart(id);if(!g)return null;
+ const m=new THREE.Mesh(g,material);m.userData.partId=id;target.add(m);return m;
+}
+const skinPart=partsById.get('FJ2810')??atlas.parts.find(p=>p.system==='integumentary');
+if(skinPart)await addPartMesh(skinPart.id,new THREE.MeshStandardMaterial({color:0x74808f,transparent:true,opacity:.28,side:THREE.DoubleSide,depthWrite:false}),skinGroup);
+
+const physical=coords.points.filter(x=>Array.isArray(x.coordinate_projected));
+const all=coords.points;
+all.sort((a,b)=>(a.point_id+a.side).localeCompare(b.point_id+b.side,undefined,{numeric:true}));
+for(const x of all){const o=document.createElement('option');o.value=x.point_id+'|'+x.side;o.textContent=x.point_id+' · '+x.side+' · '+x.coordinate_status;$('point').appendChild(o)}
+const flagMap=new Map();for(const f of qc.flags??[]){const k=f.point_id+'|'+(f.side??'');const a=flagMap.get(k)??[];a.push(f);flagMap.set(k,a)}
+const relationById=new Map((solver.relation_plans??[]).map(x=>[x.relation_instance_id,x]));
+const realByNode=new Map((real.landmark_realizations??[]).map(x=>[x.node_id,x]));
+
+function sphere(pos,color,r=.008){
+ const g=new THREE.SphereGeometry(r,18,12),m=new THREE.MeshStandardMaterial({color,emissive:color,emissiveIntensity:.18});
+ const s=new THREE.Mesh(g,m);s.position.fromArray(pos);pointGroup.add(s);return s;
+}
+function line(a,b,color){
+ const g=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3().fromArray(a),new THREE.Vector3().fromArray(b)]);
+ const l=new THREE.Line(g,new THREE.LineBasicMaterial({color}));pointGroup.add(l);return l;
+}
+function fmt(v){return JSON.stringify(v,null,2)}
+async function show(rec){
+ pointGroup.clear();usedGroup.clear();
+ if(rec.coordinate_projected)sphere(rec.coordinate_projected,0x58a6ff,.011);
+ if($('showRaw').checked&&rec.coordinate_raw){sphere(rec.coordinate_raw,0xff7b72,.009);line(rec.coordinate_raw,rec.coordinate_projected,0xff7b72)}
+ const usedIds=new Set();
+ for(const p of rec.mesh_object_provenance??[]){
+   for(const o of p.selection?.objects??[])if(o.object_id)usedIds.add(o.object_id);
+   for(const it of p.selection?.items??[])if(it.position)sphere(it.position,0xd2a8ff,.007);
+   for(const a of p.selection?.anchors??[])if(Array.isArray(a.position))sphere(a.position,0xd2a8ff,.007);
+ }
+ if($('showUsed').checked){
+   for(const id of [...usedIds].slice(0,24)) await addPartMesh(id,new THREE.MeshStandardMaterial({color:0xd2a8ff,transparent:true,opacity:.32,wireframe:true,depthWrite:false}));
+ }
+ const flags=(qc.flags??[]).filter(f=>f.point_id===rec.point_id&&(f.side==null||f.side===rec.side));
+ const review=(qc.unresolved_review_queue??[]).filter(f=>f.point_id===rec.point_id&&(f.side==null||f.side===rec.side));
+ $('status').innerHTML='<b>'+rec.point_id+' · '+rec.side+'</b><br>'+
+   '<span class="pill '+(rec.coordinate_status==='solved'?'good':rec.coordinate_status==='conditional'?'warn':'bad')+'">'+rec.coordinate_status+'</span>'+
+   '<span class="pill">'+(rec.confidence??'n/a')+'</span><pre>'+fmt({solver_method:rec.solver_method,coordinate_raw:rec.coordinate_raw,coordinate_projected:rec.coordinate_projected,validation:rec.validation,unresolved_reason:rec.unresolved_reason})+'</pre>';
+ $('provenance').innerHTML='<b>Landmark / mesh provenance</b><pre>'+fmt((rec.mesh_object_provenance??[]).map(p=>({node_id:p.node_id,realization_status:p.realization_status,selection:p.selection,source:realByNode.get(p.node_id)?.source_raw,fma:realByNode.get(p.node_id)?.fma_identity})))+'</pre>';
+ $('relations').innerHTML='<b>Relations / measurements</b><pre>'+fmt({relations:(rec.relation_instance_ids??[]).map(id=>relationById.get(id)).filter(Boolean),measurements:rec.measurement_inputs})+'</pre>';
+ $('flags').innerHTML='<b>QC / review queue</b><pre>'+fmt({flags,review})+'</pre>';
+ if(rec.coordinate_projected){
+   const p=new THREE.Vector3().fromArray(rec.coordinate_projected);controls.target.copy(p);camera.position.copy(p.clone().add(new THREE.Vector3(.35,.25,.45)));controls.update();
+ }
+}
+function selected(){const [id,side]=$('point').value.split('|');return all.find(x=>x.point_id===id&&x.side===side)}
+$('point').onchange=()=>show(selected());
+$('focus').onclick=()=>show(selected());
+$('prev').onclick=()=>{$('point').selectedIndex=Math.max(0,$('point').selectedIndex-1);show(selected())};
+$('next').onclick=()=>{$('point').selectedIndex=Math.min(all.length-1,$('point').selectedIndex+1);show(selected())};
+$('showSkin').onchange=()=>skinGroup.visible=$('showSkin').checked;
+$('showUsed').onchange=()=>show(selected());
+$('showRaw').onchange=()=>show(selected());
+function resize(){const w=$('view').clientWidth,h=$('view').clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}addEventListener('resize',resize);resize();
+renderer.setAnimationLoop(()=>{controls.update();renderer.render(scene,camera)});
+if(all.length){$('point').selectedIndex=Math.max(0,all.findIndex(x=>x.coordinate_status!=='solved'));await show(selected())}
+</script>
+</body></html>
