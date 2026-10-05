@@ -29,7 +29,7 @@ const alternatives=(endpoint,side)=>(endpoint?.alternatives??[]).map(a=>({landma
 const euclid=(a,b)=>Math.hypot(...b.map((v,i)=>v-a[i]));
 const adjacency=Array.from({length:skin.vertexCount},()=>new Map());
 for(let i=0;i<skinIdx.length;i+=3){const tri=[skinIdx[i],skinIdx[i+1],skinIdx[i+2]];for(let e=0;e<3;e++){const a=tri[e],b=tri[(e+1)%3];const pa=[skinPos[a*3],skinPos[a*3+1],skinPos[a*3+2]],pb=[skinPos[b*3],skinPos[b*3+1],skinPos[b*3+2]],w=euclid(pa,pb);if(!adjacency[a].has(b)||adjacency[a].get(b)>w){adjacency[a].set(b,w);adjacency[b].set(a,w);}}}
-const skinDiag=Math.hypot(...ext),weldTolerance=skinDiag*1e-5,weldBuckets=new Map();
+const skinDiag=Math.hypot(...ext),weldTolerance=skinDiag*5e-4,weldBuckets=new Map();
 for(let i=0;i<skin.vertexCount;i++){const p=[skinPos[i*3],skinPos[i*3+1],skinPos[i*3+2]],key=p.map(v=>Math.round(v/weldTolerance)).join(',');const xs=weldBuckets.get(key)??[];xs.push(i);weldBuckets.set(key,xs);}
 let weldedVertexLinks=0;for(const xs of weldBuckets.values()){if(xs.length<2)continue;const rep=xs[0],rp=[skinPos[rep*3],skinPos[rep*3+1],skinPos[rep*3+2]];for(let k=1;k<xs.length;k++){const v=xs[k],vp=[skinPos[v*3],skinPos[v*3+1],skinPos[v*3+2]],w=euclid(rp,vp);if(w<=weldTolerance*1.8){adjacency[rep].set(v,w);adjacency[v].set(rep,w);weldedVertexLinks++;}}}
 const nearestVertex=(p,side)=>{let best=-1,d=Infinity;for(let i=0;i<skin.vertexCount;i++){const x=[skinPos[i*3],skinPos[i*3+1],skinPos[i*3+2]];if(side==='left'&&x[lrAxis]<0)continue;if(side==='right'&&x[lrAxis]>0)continue;const q=euclid(p,x);if(q<d){d=q;best=i;}}if(best<0)throw new Error('No Skin vertex for '+side);return {index:best,distance:d,position:[skinPos[best*3],skinPos[best*3+1],skinPos[best*3+2]]};};

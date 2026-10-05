@@ -899,6 +899,18 @@ function applyReviewedExceptionProjection(item){
       return true;
     }
   }
+  if(item.acupointId==='TE6'){
+    const te5=resultByKey.get('TE5:'+item.side),scale=solverCun('TE6',item.side,'proximal','B-cun')??solverCun('TE6',item.side,'superior','B-cun');
+    if(te5&&scale){const target=[...te5.position];target[supAxis]+=scale;mark(target,{sup:true,lr:true},'reviewed-TE6-one-cun-proximal-from-TE5-on-posterior-interosseous-line');return true;}
+  }
+  if(item.acupointId==='SP6'){
+    const sp7=resultByKey.get('SP7:'+item.side),scale=solverCun('SP6',item.side,'superior','B-cun');
+    if(sp7&&scale){const target=[...sp7.position];target[supAxis]-=3*scale;mark(target,{sup:true,lr:true},'reviewed-SP6-three-cun-inferior-to-SP7-on-medial-tibial-line');return true;}
+  }
+  if(item.acupointId==='SP21'){
+    const lr14=resultByKey.get('LR14:'+item.side);
+    if(lr14){const target=[...lr14.position];target[lrAxis]+=sideSign*bodyDiag*.035;target[apAxis]-=anteriorSign*bodyDiag*.008;mark(target,{sup:true,lr:true},'reviewed-SP21-midaxillary-sixth-intercostal-lateral-to-LR14');return true;}
+  }
   return false;
 }
 for(const item of results) applyReviewedExceptionProjection(item);
@@ -937,6 +949,23 @@ function updateFromRelativeDefinition(item,text){
 for(const item of results){
   const text=acupointById.get(item.acupointId)?.locationKo||'';
   updateFromRelativeDefinition(item,text);
+}
+for(const item of results){
+  if(item.acupointId==='GB11'){
+    const sideSign=item.side==='left'?leftSign:item.side==='right'?-leftSign:0;
+    const target=[...item.position];
+    target[apAxis]-=anteriorSign*bodyDiag*.008;
+    target[supAxis]+=bodyDiag*.003;
+    const text=acupointById.get(item.acupointId)?.locationKo||'';
+    const pr=project(target,item.side,{sup:true,ap:true},projectionRegion(text,target));
+    item.position=pr.point.map(v=>+v.toFixed(4));
+    item.validation.projectionDistance=+pr.distance.toFixed(4);
+    item.validation.projectionDelta=pr.point.map((v,i)=>+(v-target[i]).toFixed(4));
+    item.validation.regionConstrained=true;
+    item.validation.surfacePartId=pr.part;
+    item.validation.preProjectionTarget=target.map(v=>+v.toFixed(4));
+    item.validation.reviewedException='reviewed-GB11-posterosuperior-to-mastoid-separate-from-TE18';
+  }
 }
 
 const modelLimitationKeys=new Set([
