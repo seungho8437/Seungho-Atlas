@@ -904,8 +904,8 @@ function applyReviewedExceptionProjection(item){
     if(te5&&scale){const target=[...te5.position];target[supAxis]+=scale;mark(target,{sup:true,lr:true},'reviewed-TE6-one-cun-proximal-from-TE5-on-posterior-interosseous-line');return true;}
   }
   if(item.acupointId==='SP6'){
-    const sp7=resultByKey.get('SP7:'+item.side),scale=solverCun('SP6',item.side,'superior','B-cun');
-    if(sp7&&scale){const target=[...sp7.position];target[supAxis]-=3*scale;mark(target,{sup:true,lr:true},'reviewed-SP6-three-cun-inferior-to-SP7-on-medial-tibial-line');return true;}
+    const ki8=resultByKey.get('KI8:'+item.side),scale=solverCun('SP6',item.side,'superior','B-cun');
+    if(ki8&&scale){const target=[...ki8.position];target[supAxis]+=scale;mark(target,{sup:true,lr:true},'reviewed-SP6-one-cun-superior-to-KI8-on-posterior-medial-tibial-border');return true;}
   }
   if(item.acupointId==='SP21'){
     const lr14=resultByKey.get('LR14:'+item.side);
