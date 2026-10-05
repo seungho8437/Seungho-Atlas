@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "artifact": "acupoint-coordinate-v1-error-attribution-audit.json",
-  "generated_at": "2026-10-05T22:21:21.325Z",
+  "generated_at": "2026-10-05T22:23:19.389Z",
   "baseline": {
     "version": "acupoint-coordinate-v1",
     "frozen": false,
@@ -38,9 +38,21 @@
     "visually_wrong_records": 6,
     "visual_review_problem_records": 6,
     "first_failing_layer_counts": {
-      "RELATION_SOLVER_NOT_EXECUTED": 22,
-      "MEASUREMENT_CALIBRATION_ERROR": 1
-    }
+      "RELATION_SOLVER_NOT_EXECUTED": 21,
+      "MEASUREMENT_CALIBRATION_ERROR": 2
+    },
+    "classification_counts": {
+      "LEGACY_COORDINATE_CANDIDATE_ERROR": 23,
+      "RELATION_SOLVER_NOT_EXECUTED": 23,
+      "SURFACE_PROJECTION_ERROR": 5,
+      "MEASUREMENT_CALIBRATION_ERROR": 2
+    },
+    "B_layer_error_suspected_records": 5,
+    "realization_error_records": 0,
+    "anchor_or_calibration_error_records": 2,
+    "legacy_candidate_error_records": 23,
+    "surface_projection_error_records": 5,
+    "unknown_records": 0
   },
   "specialized_reference_anchor_audit": {
     "record_count": 29,
@@ -54,7 +66,7 @@
         "bodyparts3d_surface_structure_relation": null,
         "expected_anatomical_region": "review-from-anchor-identity",
         "issues": [
-          "coordinate_missing"
+          "bilateral_anchor_requires_physical_side_context"
         ]
       },
       {
@@ -66,7 +78,7 @@
         "bodyparts3d_surface_structure_relation": null,
         "expected_anatomical_region": "review-from-anchor-identity",
         "issues": [
-          "coordinate_missing"
+          "bilateral_anchor_requires_physical_side_context"
         ]
       },
       {
@@ -78,7 +90,7 @@
         "bodyparts3d_surface_structure_relation": null,
         "expected_anatomical_region": "review-from-anchor-identity",
         "issues": [
-          "coordinate_missing"
+          "bilateral_anchor_requires_physical_side_context"
         ]
       },
       {
@@ -90,7 +102,7 @@
         "bodyparts3d_surface_structure_relation": null,
         "expected_anatomical_region": "review-from-anchor-identity",
         "issues": [
-          "coordinate_missing"
+          "bilateral_anchor_requires_physical_side_context"
         ]
       },
       {
@@ -102,7 +114,7 @@
         "bodyparts3d_surface_structure_relation": null,
         "expected_anatomical_region": "review-from-anchor-identity",
         "issues": [
-          "coordinate_missing"
+          "bilateral_anchor_requires_physical_side_context"
         ]
       },
       {
@@ -114,7 +126,7 @@
         "bodyparts3d_surface_structure_relation": null,
         "expected_anatomical_region": "review-from-anchor-identity",
         "issues": [
-          "coordinate_missing"
+          "bilateral_anchor_requires_physical_side_context"
         ]
       },
       {
@@ -126,7 +138,7 @@
         "bodyparts3d_surface_structure_relation": null,
         "expected_anatomical_region": "review-from-anchor-identity",
         "issues": [
-          "coordinate_missing"
+          "bilateral_anchor_requires_physical_side_context"
         ]
       },
       {
@@ -301,7 +313,7 @@
         "bodyparts3d_surface_structure_relation": null,
         "expected_anatomical_region": "review-from-anchor-identity",
         "issues": [
-          "coordinate_missing"
+          "bilateral_anchor_requires_physical_side_context"
         ]
       },
       {
@@ -313,7 +325,7 @@
         "bodyparts3d_surface_structure_relation": null,
         "expected_anatomical_region": "review-from-anchor-identity",
         "issues": [
-          "coordinate_missing"
+          "bilateral_anchor_requires_physical_side_context"
         ]
       },
       {
@@ -325,7 +337,7 @@
         "bodyparts3d_surface_structure_relation": null,
         "expected_anatomical_region": "review-from-anchor-identity",
         "issues": [
-          "coordinate_missing"
+          "bilateral_anchor_requires_physical_side_context"
         ]
       },
       {
@@ -337,7 +349,7 @@
         "bodyparts3d_surface_structure_relation": null,
         "expected_anatomical_region": "review-from-anchor-identity",
         "issues": [
-          "coordinate_missing"
+          "bilateral_anchor_requires_physical_side_context"
         ]
       },
       {
@@ -349,7 +361,7 @@
         "bodyparts3d_surface_structure_relation": null,
         "expected_anatomical_region": "review-from-anchor-identity",
         "issues": [
-          "coordinate_missing"
+          "bilateral_anchor_requires_physical_side_context"
         ]
       },
       {
@@ -508,7 +520,7 @@
         "bodyparts3d_surface_structure_relation": null,
         "expected_anatomical_region": "review-from-anchor-identity",
         "issues": [
-          "coordinate_missing"
+          "bilateral_anchor_requires_physical_side_context"
         ]
       },
       {
@@ -628,9 +640,9 @@
     ]
   },
   "proportional_calibration_audit": {
-    "unique_calibration_side_records": 51,
+    "unique_calibration_side_records": 38,
     "blocker_records": 3,
-    "issue_records": 18,
+    "issue_records": 12,
     "calibrations": [
       {
         "calibration_id": "CHEST_NIPPLE_TO_NIPPLE",
@@ -961,9 +973,11 @@
         "recomputed_model_distance": 0.21442061268036833,
         "recomputed_model_unit_per_cun": 0.02680257658504604,
         "distance_discrepancy": 0,
-        "issues": [],
-        "region_median_model_unit_per_cun": 0.02680257658504604,
-        "ratio_to_region_median": 1
+        "issues": [
+          "neighboring_calibration_ratio_outlier"
+        ],
+        "region_median_model_unit_per_cun": 0.005657454447276105,
+        "ratio_to_region_median": 4.737568253501481
       },
       {
         "calibration_id": "CHEST_NIPPLE_TO_NIPPLE",
@@ -1294,342 +1308,11 @@
         "recomputed_model_distance": 0.21442061268036833,
         "recomputed_model_unit_per_cun": 0.02680257658504604,
         "distance_discrepancy": 0,
-        "issues": [],
-        "region_median_model_unit_per_cun": 0.02680257658504604,
-        "ratio_to_region_median": 1
-      },
-      {
-        "calibration_id": "CHEST_NIPPLE_TO_NIPPLE",
-        "side": "midline",
-        "unit": "B-cun",
-        "region": "chest",
-        "axis": "transverse",
-        "expected_cun": 8,
-        "from": "left-nipple-center",
-        "to": "right-nipple-center",
-        "metric_policy": "atlas-left-right-axis-projection",
-        "reported_interval_length": 0.21442061268036833,
-        "reported_model_unit_per_cun": 0.02680257658504604,
-        "used_by": [
-          {
-            "point_id": "LU1",
-            "frame_id": "LU1:MF1",
-            "value": 6,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "LU2",
-            "frame_id": "LU2:MF1",
-            "value": 6,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST12",
-            "frame_id": "ST12:MF1",
-            "value": 4,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST13",
-            "frame_id": "ST13:MF1",
-            "value": 4,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST14",
-            "frame_id": "ST14:MF1",
-            "value": 4,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST15",
-            "frame_id": "ST15:MF1",
-            "value": 4,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST16",
-            "frame_id": "ST16:MF1",
-            "value": 4,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST18",
-            "frame_id": "ST18:MF1",
-            "value": 4,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST19",
-            "frame_id": "ST19:MF2",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST20",
-            "frame_id": "ST20:MF2",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST21",
-            "frame_id": "ST21:MF2",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST22",
-            "frame_id": "ST22:MF2",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST23",
-            "frame_id": "ST23:MF2",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST24",
-            "frame_id": "ST24:MF2",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST25",
-            "frame_id": "ST25:MF1",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST26",
-            "frame_id": "ST26:MF2",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST27",
-            "frame_id": "ST27:MF2",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST28",
-            "frame_id": "ST28:MF2",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST29",
-            "frame_id": "ST29:MF2",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST30",
-            "frame_id": "ST30:MF1",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "SP13",
-            "frame_id": "SP13:MF2",
-            "value": 4,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "SP14",
-            "frame_id": "SP14:MF2",
-            "value": 4,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "SP15",
-            "frame_id": "SP15:MF1",
-            "value": 4,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "SP16",
-            "frame_id": "SP16:MF2",
-            "value": 4,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "SP17",
-            "frame_id": "SP17:MF1",
-            "value": 6,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "SP18",
-            "frame_id": "SP18:MF1",
-            "value": 6,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "SP19",
-            "frame_id": "SP19:MF1",
-            "value": 6,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "SP20",
-            "frame_id": "SP20:MF1",
-            "value": 6,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI11",
-            "frame_id": "KI11:MF2",
-            "value": 0.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI12",
-            "frame_id": "KI12:MF2",
-            "value": 0.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI13",
-            "frame_id": "KI13:MF2",
-            "value": 0.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI14",
-            "frame_id": "KI14:MF2",
-            "value": 0.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI15",
-            "frame_id": "KI15:MF2",
-            "value": 0.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI16",
-            "frame_id": "KI16:MF1",
-            "value": 0.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI17",
-            "frame_id": "KI17:MF2",
-            "value": 0.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI18",
-            "frame_id": "KI18:MF2",
-            "value": 0.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI19",
-            "frame_id": "KI19:MF2",
-            "value": 0.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI20",
-            "frame_id": "KI20:MF2",
-            "value": 0.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI21",
-            "frame_id": "KI21:MF2",
-            "value": 0.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI22",
-            "frame_id": "KI22:MF1",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI23",
-            "frame_id": "KI23:MF1",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI24",
-            "frame_id": "KI24:MF1",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI25",
-            "frame_id": "KI25:MF1",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI26",
-            "frame_id": "KI26:MF1",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "KI27",
-            "frame_id": "KI27:MF1",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "PC1",
-            "frame_id": "PC1:MF1",
-            "value": 5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "GB23",
-            "frame_id": "GB23:MF1",
-            "value": 1,
-            "direction": "anterior"
-          },
-          {
-            "point_id": "GB24",
-            "frame_id": "GB24:MF1",
-            "value": 4,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "LR12",
-            "frame_id": "LR12:MF1",
-            "value": 2.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "LR14",
-            "frame_id": "LR14:MF1",
-            "value": 4,
-            "direction": "lateral"
-          }
+        "issues": [
+          "neighboring_calibration_ratio_outlier"
         ],
-        "endpoint_coordinates": {
-          "from": [
-            0.10977442355309219,
-            1.2767360186136059,
-            0.11536354723471787
-          ],
-          "to": [
-            -0.10464618912727613,
-            1.2737596856897986,
-            0.11730811699402821
-          ]
-        },
-        "recomputed_model_distance": 0.21442061268036833,
-        "recomputed_model_unit_per_cun": 0.02680257658504604,
-        "distance_discrepancy": 0,
-        "issues": [],
-        "region_median_model_unit_per_cun": 0.02680257658504604,
-        "ratio_to_region_median": 1
+        "region_median_model_unit_per_cun": 0.005657454447276105,
+        "ratio_to_region_median": 4.737568253501481
       },
       {
         "calibration_id": "CHEST_SUPRASTERNAL_TO_XIPHISTERNAL",
@@ -1649,12 +1332,6 @@
             "frame_id": "LU1:MF2",
             "value": 1,
             "direction": "inferior"
-          },
-          {
-            "point_id": "CV21",
-            "frame_id": "CV21:MF1",
-            "value": 1,
-            "direction": "inferior"
           }
         ],
         "endpoint_coordinates": {
@@ -1674,11 +1351,10 @@
         "distance_discrepancy": 0,
         "issues": [
           "extremely_small_model_unit_per_cun",
-          "neighboring_calibration_ratio_outlier",
           "BLOCKER_suprasternal_endpoint_is_sternum_center_not_jugular_notch_feature"
         ],
-        "region_median_model_unit_per_cun": 0.02680257658504604,
-        "ratio_to_region_median": 0.21107875316855051
+        "region_median_model_unit_per_cun": 0.005657454447276105,
+        "ratio_to_region_median": 1
       },
       {
         "calibration_id": "CHEST_SUPRASTERNAL_TO_XIPHISTERNAL",
@@ -1698,12 +1374,6 @@
             "frame_id": "LU1:MF2",
             "value": 1,
             "direction": "inferior"
-          },
-          {
-            "point_id": "CV21",
-            "frame_id": "CV21:MF1",
-            "value": 1,
-            "direction": "inferior"
           }
         ],
         "endpoint_coordinates": {
@@ -1723,60 +1393,10 @@
         "distance_discrepancy": 0,
         "issues": [
           "extremely_small_model_unit_per_cun",
-          "neighboring_calibration_ratio_outlier",
           "BLOCKER_suprasternal_endpoint_is_sternum_center_not_jugular_notch_feature"
         ],
-        "region_median_model_unit_per_cun": 0.02680257658504604,
-        "ratio_to_region_median": 0.21107875316855051
-      },
-      {
-        "calibration_id": "CHEST_SUPRASTERNAL_TO_XIPHISTERNAL",
-        "side": "midline",
-        "unit": "B-cun",
-        "region": "chest",
-        "axis": "longitudinal",
-        "expected_cun": 9,
-        "from": "suprasternal-notch",
-        "to": "midpoint-xiphisternal-junction",
-        "metric_policy": "atlas-superior-axis-projection",
-        "reported_interval_length": 0.050917090025484946,
-        "reported_model_unit_per_cun": 0.005657454447276105,
-        "used_by": [
-          {
-            "point_id": "LU1",
-            "frame_id": "LU1:MF2",
-            "value": 1,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV21",
-            "frame_id": "CV21:MF1",
-            "value": 1,
-            "direction": "inferior"
-          }
-        ],
-        "endpoint_coordinates": {
-          "from": [
-            0.0009273688491848132,
-            1.3162882934480313,
-            0.08471770976887753
-          ],
-          "to": [
-            -0.007325700018554926,
-            1.2653712034225464,
-            0.11114799976348877
-          ]
-        },
-        "recomputed_model_distance": 0.050917090025484946,
-        "recomputed_model_unit_per_cun": 0.005657454447276105,
-        "distance_discrepancy": 0,
-        "issues": [
-          "extremely_small_model_unit_per_cun",
-          "neighboring_calibration_ratio_outlier",
-          "BLOCKER_suprasternal_endpoint_is_sternum_center_not_jugular_notch_feature"
-        ],
-        "region_median_model_unit_per_cun": 0.02680257658504604,
-        "ratio_to_region_median": 0.21107875316855051
+        "region_median_model_unit_per_cun": 0.005657454447276105,
+        "ratio_to_region_median": 1
       },
       {
         "calibration_id": "UPPER_ARM_AXILLARY_TO_CUBITAL",
@@ -1975,97 +1595,6 @@
         "issues": [],
         "region_median_model_unit_per_cun": 0.0290400054719713,
         "ratio_to_region_median": 1
-      },
-      {
-        "calibration_id": "UPPER_ARM_AXILLARY_TO_CUBITAL",
-        "side": "midline",
-        "unit": "B-cun",
-        "region": "upper-arm",
-        "axis": "longitudinal",
-        "expected_cun": 9,
-        "from": "anterior-axillary-fold",
-        "to": "cubital-crease",
-        "metric_policy": "atlas-superior-axis-projection",
-        "reported_interval_length": 0.23814010620117188,
-        "reported_model_unit_per_cun": 0.026460011800130207,
-        "used_by": [
-          {
-            "point_id": "LU3",
-            "frame_id": "LU3:MF1",
-            "value": 3,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "LU4",
-            "frame_id": "LU4:MF1",
-            "value": 4,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "LI13",
-            "frame_id": "LI13:MF1",
-            "value": 3,
-            "direction": "superior"
-          },
-          {
-            "point_id": "LI14",
-            "frame_id": "LI14:MF1",
-            "value": 7,
-            "direction": "superior"
-          },
-          {
-            "point_id": "HT2",
-            "frame_id": "HT2:MF1",
-            "value": 3,
-            "direction": "superior"
-          },
-          {
-            "point_id": "SI9",
-            "frame_id": "SI9:MF1",
-            "value": 1,
-            "direction": "superior"
-          },
-          {
-            "point_id": "PC2",
-            "frame_id": "PC2:MF1",
-            "value": 2,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "TE10",
-            "frame_id": "TE10:MF1",
-            "value": 1,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "TE11",
-            "frame_id": "TE11:MF1",
-            "value": 2,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "TE12",
-            "frame_id": "TE12:MF1",
-            "value": 5,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "TE13",
-            "frame_id": "TE13:MF1",
-            "value": 3,
-            "direction": "inferior"
-          }
-        ],
-        "endpoint_coordinates": {
-          "from": null,
-          "to": null
-        },
-        "recomputed_model_distance": null,
-        "recomputed_model_unit_per_cun": null,
-        "distance_discrepancy": null,
-        "issues": [
-          "endpoint_coordinate_missing"
-        ]
       },
       {
         "calibration_id": "FOREARM_CUBITAL_TO_WRIST",
@@ -2386,157 +1915,6 @@
         "ratio_to_region_median": 0.8538986853348353
       },
       {
-        "calibration_id": "FOREARM_CUBITAL_TO_WRIST",
-        "side": "midline",
-        "unit": "B-cun",
-        "region": "forearm",
-        "axis": "longitudinal",
-        "expected_cun": 12,
-        "from": "cubital-crease",
-        "to": "palmar-wrist-crease",
-        "metric_policy": "atlas-superior-axis-projection",
-        "reported_interval_length": 0.24888896942138672,
-        "reported_model_unit_per_cun": 0.020740747451782227,
-        "used_by": [
-          {
-            "point_id": "LU6",
-            "frame_id": "LU6:MF1",
-            "value": 7,
-            "direction": "superior"
-          },
-          {
-            "point_id": "LU7",
-            "frame_id": "LU7:MF1",
-            "value": 1.5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "LU8",
-            "frame_id": "LU8:MF1",
-            "value": 1,
-            "direction": "superior"
-          },
-          {
-            "point_id": "LI6",
-            "frame_id": "LI6:MF1",
-            "value": 3,
-            "direction": "superior"
-          },
-          {
-            "point_id": "LI7",
-            "frame_id": "LI7:MF1",
-            "value": 5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "LI8",
-            "frame_id": "LI8:MF1",
-            "value": 4,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "LI9",
-            "frame_id": "LI9:MF1",
-            "value": 3,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "LI10",
-            "frame_id": "LI10:MF1",
-            "value": 2,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "HT4",
-            "frame_id": "HT4:MF1",
-            "value": 1.5,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "HT5",
-            "frame_id": "HT5:MF1",
-            "value": 1,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "HT6",
-            "frame_id": "HT6:MF1",
-            "value": 0.5,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "SI6",
-            "frame_id": "SI6:MF1",
-            "value": 1,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "SI7",
-            "frame_id": "SI7:MF1",
-            "value": 5,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "PC4",
-            "frame_id": "PC4:MF1",
-            "value": 5,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "PC5",
-            "frame_id": "PC5:MF1",
-            "value": 3,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "PC6",
-            "frame_id": "PC6:MF1",
-            "value": 2,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "TE5",
-            "frame_id": "TE5:MF1",
-            "value": 2,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "TE6",
-            "frame_id": "TE6:MF1",
-            "value": 3,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "TE7",
-            "frame_id": "TE7:MF1",
-            "value": 3,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "TE8",
-            "frame_id": "TE8:MF1",
-            "value": 4,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "TE9",
-            "frame_id": "TE9:MF1",
-            "value": 5,
-            "direction": "distal"
-          }
-        ],
-        "endpoint_coordinates": {
-          "from": null,
-          "to": null
-        },
-        "recomputed_model_distance": null,
-        "recomputed_model_unit_per_cun": null,
-        "distance_discrepancy": null,
-        "issues": [
-          "endpoint_coordinate_missing"
-        ]
-      },
-      {
         "calibration_id": "F_CUN_MIDDLE_FINGER",
         "side": "left",
         "unit": "F-cun",
@@ -2638,105 +2016,6 @@
       {
         "calibration_id": "F_CUN_MIDDLE_FINGER",
         "side": "right",
-        "unit": "F-cun",
-        "region": "wrist-hand",
-        "axis": "surface-geodesic",
-        "expected_cun": 1,
-        "from": "radial-crease-proximal-interphalangeal-middle-finger",
-        "to": "radial-crease-distal-interphalangeal-middle-finger",
-        "metric_policy": "finger-method-chord",
-        "reported_interval_length": 0.028217043203965345,
-        "reported_model_unit_per_cun": 0.028217043203965345,
-        "used_by": [
-          {
-            "point_id": "LU11",
-            "frame_id": "LU11:MF1",
-            "value": 0.1,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "LI1",
-            "frame_id": "LI1:MF1",
-            "value": 0.1,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST4",
-            "frame_id": "ST4:MF1",
-            "value": 0.4,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST45",
-            "frame_id": "ST45:MF1",
-            "value": 0.1,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "SP1",
-            "frame_id": "SP1:MF1",
-            "value": 0.1,
-            "direction": "medial"
-          },
-          {
-            "point_id": "HT9",
-            "frame_id": "HT9:MF1",
-            "value": 0.1,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "SI1",
-            "frame_id": "SI1:MF1",
-            "value": 0.1,
-            "direction": "medial"
-          },
-          {
-            "point_id": "BL67",
-            "frame_id": "BL67:MF1",
-            "value": 0.1,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "TE1",
-            "frame_id": "TE1:MF1",
-            "value": 0.1,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "GB44",
-            "frame_id": "GB44:MF1",
-            "value": 0.1,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "LR1",
-            "frame_id": "LR1:MF1",
-            "value": 0.1,
-            "direction": "proximal"
-          }
-        ],
-        "endpoint_coordinates": {
-          "from": [
-            -0.28376909764596087,
-            0.7645783552591559,
-            0.06177738657366204
-          ],
-          "to": [
-            -0.2854897690729975,
-            0.7434988984833695,
-            0.0804561798712062
-          ]
-        },
-        "recomputed_model_distance": 0.028217043203965345,
-        "recomputed_model_unit_per_cun": 0.028217043203965345,
-        "distance_discrepancy": 0,
-        "issues": [],
-        "region_median_model_unit_per_cun": 0.028217043203965345,
-        "ratio_to_region_median": 1
-      },
-      {
-        "calibration_id": "F_CUN_MIDDLE_FINGER",
-        "side": "midline",
         "unit": "F-cun",
         "region": "wrist-hand",
         "axis": "surface-geodesic",
@@ -2959,129 +2238,6 @@
       {
         "calibration_id": "HEAD_ANTERIOR_HAIRLINE_CORNERS",
         "side": "right",
-        "unit": "B-cun",
-        "region": "head",
-        "axis": "transverse",
-        "expected_cun": 9,
-        "from": "left-anterior-hairline-corner",
-        "to": "right-anterior-hairline-corner",
-        "metric_policy": "atlas-left-right-axis-projection",
-        "reported_interval_length": 0.13638880752315485,
-        "reported_model_unit_per_cun": 0.015154311947017206,
-        "used_by": [
-          {
-            "point_id": "LI19",
-            "frame_id": "LI19:MF1",
-            "value": 0.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST8",
-            "frame_id": "ST8:MF1",
-            "value": 0.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "ST8",
-            "frame_id": "ST8:MF2",
-            "value": 4.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL1",
-            "frame_id": "BL1:MF1",
-            "value": 0.1,
-            "direction": "medial"
-          },
-          {
-            "point_id": "BL4",
-            "frame_id": "BL4:MF2",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL5",
-            "frame_id": "BL5:MF2",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL6",
-            "frame_id": "BL6:MF2",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL7",
-            "frame_id": "BL7:MF2",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL8",
-            "frame_id": "BL8:MF2",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "GB1",
-            "frame_id": "GB1:MF1",
-            "value": 0.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "GB13",
-            "frame_id": "GB13:MF2",
-            "value": 3,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "GB15",
-            "frame_id": "GB15:MF1",
-            "value": 0.5,
-            "direction": "medial"
-          },
-          {
-            "point_id": "GB16",
-            "frame_id": "GB16:MF1",
-            "value": 1.5,
-            "direction": "medial"
-          },
-          {
-            "point_id": "GB17",
-            "frame_id": "GB17:MF1",
-            "value": 2.5,
-            "direction": "medial"
-          },
-          {
-            "point_id": "GB18",
-            "frame_id": "GB18:MF1",
-            "value": 4,
-            "direction": "medial"
-          }
-        ],
-        "endpoint_coordinates": {
-          "from": [
-            0.06798804320438002,
-            1.598425825309668,
-            0.015555116201117582
-          ],
-          "to": [
-            -0.06840076431877484,
-            1.6220149200583849,
-            0.01559719328974462
-          ]
-        },
-        "recomputed_model_distance": 0.13638880752315485,
-        "recomputed_model_unit_per_cun": 0.015154311947017206,
-        "distance_discrepancy": 0,
-        "issues": [],
-        "region_median_model_unit_per_cun": 0.012485298760795516,
-        "ratio_to_region_median": 1.213772472518041
-      },
-      {
-        "calibration_id": "HEAD_ANTERIOR_HAIRLINE_CORNERS",
-        "side": "midline",
         "unit": "B-cun",
         "region": "head",
         "axis": "transverse",
@@ -3284,42 +2440,6 @@
           {
             "point_id": "KI21",
             "frame_id": "KI21:MF1",
-            "value": 6,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV9",
-            "frame_id": "CV9:MF1",
-            "value": 1,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV10",
-            "frame_id": "CV10:MF1",
-            "value": 2,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV11",
-            "frame_id": "CV11:MF1",
-            "value": 3,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV12",
-            "frame_id": "CV12:MF1",
-            "value": 4,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV13",
-            "frame_id": "CV13:MF1",
-            "value": 5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV14",
-            "frame_id": "CV14:MF1",
             "value": 6,
             "direction": "superior"
           }
@@ -3425,183 +2545,6 @@
           {
             "point_id": "KI21",
             "frame_id": "KI21:MF1",
-            "value": 6,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV9",
-            "frame_id": "CV9:MF1",
-            "value": 1,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV10",
-            "frame_id": "CV10:MF1",
-            "value": 2,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV11",
-            "frame_id": "CV11:MF1",
-            "value": 3,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV12",
-            "frame_id": "CV12:MF1",
-            "value": 4,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV13",
-            "frame_id": "CV13:MF1",
-            "value": 5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV14",
-            "frame_id": "CV14:MF1",
-            "value": 6,
-            "direction": "superior"
-          }
-        ],
-        "endpoint_coordinates": {
-          "from": [
-            -0.007325700018554926,
-            1.2653712034225464,
-            0.11114799976348877
-          ],
-          "to": [
-            -0.00476730630196931,
-            1.039050298281352,
-            0.09756270902768799
-          ]
-        },
-        "recomputed_model_distance": 0.2263209051411943,
-        "recomputed_model_unit_per_cun": 0.028290113142649287,
-        "distance_discrepancy": 0,
-        "issues": [],
-        "region_median_model_unit_per_cun": 0.028290113142649287,
-        "ratio_to_region_median": 1
-      },
-      {
-        "calibration_id": "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
-        "side": "midline",
-        "unit": "B-cun",
-        "region": "abdomen",
-        "axis": "longitudinal",
-        "expected_cun": 8,
-        "from": "midpoint-xiphisternal-junction",
-        "to": "umbilicus-center",
-        "metric_policy": "atlas-superior-axis-projection",
-        "reported_interval_length": 0.2263209051411943,
-        "reported_model_unit_per_cun": 0.028290113142649287,
-        "used_by": [
-          {
-            "point_id": "ST19",
-            "frame_id": "ST19:MF1",
-            "value": 6,
-            "direction": "superior"
-          },
-          {
-            "point_id": "ST20",
-            "frame_id": "ST20:MF1",
-            "value": 5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "ST21",
-            "frame_id": "ST21:MF1",
-            "value": 4,
-            "direction": "superior"
-          },
-          {
-            "point_id": "ST22",
-            "frame_id": "ST22:MF1",
-            "value": 3,
-            "direction": "superior"
-          },
-          {
-            "point_id": "ST23",
-            "frame_id": "ST23:MF1",
-            "value": 2,
-            "direction": "superior"
-          },
-          {
-            "point_id": "ST24",
-            "frame_id": "ST24:MF1",
-            "value": 1,
-            "direction": "superior"
-          },
-          {
-            "point_id": "SP16",
-            "frame_id": "SP16:MF1",
-            "value": 3,
-            "direction": "superior"
-          },
-          {
-            "point_id": "KI17",
-            "frame_id": "KI17:MF1",
-            "value": 2,
-            "direction": "superior"
-          },
-          {
-            "point_id": "KI18",
-            "frame_id": "KI18:MF1",
-            "value": 3,
-            "direction": "superior"
-          },
-          {
-            "point_id": "KI19",
-            "frame_id": "KI19:MF1",
-            "value": 4,
-            "direction": "superior"
-          },
-          {
-            "point_id": "KI20",
-            "frame_id": "KI20:MF1",
-            "value": 5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "KI21",
-            "frame_id": "KI21:MF1",
-            "value": 6,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV9",
-            "frame_id": "CV9:MF1",
-            "value": 1,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV10",
-            "frame_id": "CV10:MF1",
-            "value": 2,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV11",
-            "frame_id": "CV11:MF1",
-            "value": 3,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV12",
-            "frame_id": "CV12:MF1",
-            "value": 4,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV13",
-            "frame_id": "CV13:MF1",
-            "value": 5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "CV14",
-            "frame_id": "CV14:MF1",
             "value": 6,
             "direction": "superior"
           }
@@ -3714,42 +2657,6 @@
             "point_id": "GB28",
             "frame_id": "GB28:MF1",
             "value": 0.5,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV3",
-            "frame_id": "CV3:MF1",
-            "value": 4,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV4",
-            "frame_id": "CV4:MF1",
-            "value": 3,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV5",
-            "frame_id": "CV5:MF1",
-            "value": 2,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV6",
-            "frame_id": "CV6:MF1",
-            "value": 1.5,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV7",
-            "frame_id": "CV7:MF1",
-            "value": 1,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV15",
-            "frame_id": "CV15:MF1",
-            "value": 1,
             "direction": "inferior"
           }
         ],
@@ -3864,192 +2771,6 @@
             "point_id": "GB28",
             "frame_id": "GB28:MF1",
             "value": 0.5,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV3",
-            "frame_id": "CV3:MF1",
-            "value": 4,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV4",
-            "frame_id": "CV4:MF1",
-            "value": 3,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV5",
-            "frame_id": "CV5:MF1",
-            "value": 2,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV6",
-            "frame_id": "CV6:MF1",
-            "value": 1.5,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV7",
-            "frame_id": "CV7:MF1",
-            "value": 1,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV15",
-            "frame_id": "CV15:MF1",
-            "value": 1,
-            "direction": "inferior"
-          }
-        ],
-        "endpoint_coordinates": {
-          "from": [
-            -0.00476730630196931,
-            1.039050298281352,
-            0.09756270902768799
-          ],
-          "to": [
-            0.08211909979581833,
-            1.0090532302856445,
-            0.08333799988031387
-          ]
-        },
-        "recomputed_model_distance": 0.02999706799570756,
-        "recomputed_model_unit_per_cun": 0.005999413599141512,
-        "distance_discrepancy": 0,
-        "issues": [
-          "extremely_small_model_unit_per_cun",
-          "neighboring_calibration_ratio_outlier"
-        ],
-        "region_median_model_unit_per_cun": 0.028290113142649287,
-        "ratio_to_region_median": 0.2120675010697283
-      },
-      {
-        "calibration_id": "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS",
-        "side": "midline",
-        "unit": "B-cun",
-        "region": "abdomen",
-        "axis": "longitudinal",
-        "expected_cun": 5,
-        "from": "umbilicus-center",
-        "to": "superior-border-pubic-symphysis",
-        "metric_policy": "atlas-superior-axis-projection",
-        "reported_interval_length": 0.02999706799570756,
-        "reported_model_unit_per_cun": 0.005999413599141512,
-        "used_by": [
-          {
-            "point_id": "ST26",
-            "frame_id": "ST26:MF1",
-            "value": 1,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "ST27",
-            "frame_id": "ST27:MF1",
-            "value": 2,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "ST28",
-            "frame_id": "ST28:MF1",
-            "value": 3,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "ST29",
-            "frame_id": "ST29:MF1",
-            "value": 4,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "SP13",
-            "frame_id": "SP13:MF1",
-            "value": 4.3,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "SP14",
-            "frame_id": "SP14:MF1",
-            "value": 1.3,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "KI11",
-            "frame_id": "KI11:MF1",
-            "value": 5,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "KI12",
-            "frame_id": "KI12:MF1",
-            "value": 4,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "KI13",
-            "frame_id": "KI13:MF1",
-            "value": 3,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "KI14",
-            "frame_id": "KI14:MF1",
-            "value": 2,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "KI15",
-            "frame_id": "KI15:MF1",
-            "value": 1,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "GB27",
-            "frame_id": "GB27:MF1",
-            "value": 3,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "GB28",
-            "frame_id": "GB28:MF1",
-            "value": 0.5,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV3",
-            "frame_id": "CV3:MF1",
-            "value": 4,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV4",
-            "frame_id": "CV4:MF1",
-            "value": 3,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV5",
-            "frame_id": "CV5:MF1",
-            "value": 2,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV6",
-            "frame_id": "CV6:MF1",
-            "value": 1.5,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV7",
-            "frame_id": "CV7:MF1",
-            "value": 1,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "CV15",
-            "frame_id": "CV15:MF1",
-            "value": 1,
             "direction": "inferior"
           }
         ],
@@ -4212,71 +2933,6 @@
         "issues": [],
         "region_median_model_unit_per_cun": 0.028394645878246853,
         "ratio_to_region_median": 1.0372574284387608
-      },
-      {
-        "calibration_id": "THIGH_PUBIC_TO_PATELLA_BASE",
-        "side": "midline",
-        "unit": "B-cun",
-        "region": "thigh",
-        "axis": "longitudinal",
-        "expected_cun": 18,
-        "from": "superior-border-pubic-symphysis",
-        "to": "base-of-patella",
-        "metric_policy": "atlas-superior-axis-projection",
-        "reported_interval_length": 0.5301790237426758,
-        "reported_model_unit_per_cun": 0.029454390207926433,
-        "used_by": [
-          {
-            "point_id": "ST32",
-            "frame_id": "ST32:MF1",
-            "value": 6,
-            "direction": "superior"
-          },
-          {
-            "point_id": "ST33",
-            "frame_id": "ST33:MF1",
-            "value": 3,
-            "direction": "superior"
-          },
-          {
-            "point_id": "ST34",
-            "frame_id": "ST34:MF1",
-            "value": 2,
-            "direction": "superior"
-          },
-          {
-            "point_id": "SP10",
-            "frame_id": "SP10:MF1",
-            "value": 2,
-            "direction": "superior"
-          },
-          {
-            "point_id": "LR9",
-            "frame_id": "LR9:MF1",
-            "value": 4,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "LR10",
-            "frame_id": "LR10:MF1",
-            "value": 3,
-            "direction": "distal"
-          }
-        ],
-        "endpoint_coordinates": {
-          "from": [
-            0.08211909979581833,
-            1.0090532302856445,
-            0.08333799988031387
-          ],
-          "to": null
-        },
-        "recomputed_model_distance": null,
-        "recomputed_model_unit_per_cun": null,
-        "distance_discrepancy": null,
-        "issues": [
-          "endpoint_coordinate_missing"
-        ]
       },
       {
         "calibration_id": "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS",
@@ -4513,115 +3169,6 @@
         "ratio_to_region_median": 1
       },
       {
-        "calibration_id": "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS",
-        "side": "midline",
-        "unit": "B-cun",
-        "region": "leg",
-        "axis": "longitudinal",
-        "expected_cun": 16,
-        "from": "popliteal-crease",
-        "to": "prominence-lateral-malleolus",
-        "metric_policy": "atlas-superior-axis-projection",
-        "reported_interval_length": 0.39454740658402443,
-        "reported_model_unit_per_cun": 0.024659212911501527,
-        "used_by": [
-          {
-            "point_id": "ST36",
-            "frame_id": "ST36:MF1",
-            "value": 3,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "ST37",
-            "frame_id": "ST37:MF1",
-            "value": 6,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "ST38",
-            "frame_id": "ST38:MF1",
-            "value": 8,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "ST39",
-            "frame_id": "ST39:MF1",
-            "value": 9,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "ST40",
-            "frame_id": "ST40:MF1",
-            "value": 8,
-            "direction": "superior"
-          },
-          {
-            "point_id": "BL55",
-            "frame_id": "BL55:MF1",
-            "value": 2,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "BL56",
-            "frame_id": "BL56:MF1",
-            "value": 5,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "BL58",
-            "frame_id": "BL58:MF1",
-            "value": 7,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "BL59",
-            "frame_id": "BL59:MF1",
-            "value": 3,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "GB35",
-            "frame_id": "GB35:MF1",
-            "value": 7,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "GB36",
-            "frame_id": "GB36:MF1",
-            "value": 7,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "GB37",
-            "frame_id": "GB37:MF1",
-            "value": 5,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "GB38",
-            "frame_id": "GB38:MF1",
-            "value": 4,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "GB39",
-            "frame_id": "GB39:MF1",
-            "value": 3,
-            "direction": "proximal"
-          }
-        ],
-        "endpoint_coordinates": {
-          "from": null,
-          "to": null
-        },
-        "recomputed_model_distance": null,
-        "recomputed_model_unit_per_cun": null,
-        "distance_discrepancy": null,
-        "issues": [
-          "endpoint_coordinate_missing"
-        ]
-      },
-      {
         "calibration_id": "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
         "side": "left",
         "unit": "B-cun",
@@ -4802,85 +3349,6 @@
         "ratio_to_region_median": 0.04512165300979278
       },
       {
-        "calibration_id": "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
-        "side": "midline",
-        "unit": "B-cun",
-        "region": "leg",
-        "axis": "longitudinal",
-        "expected_cun": 13,
-        "from": "inferior-border-medial-condyle-tibia",
-        "to": "prominence-medial-malleolus",
-        "metric_policy": "atlas-superior-axis-projection",
-        "reported_interval_length": 0.01432790607213974,
-        "reported_model_unit_per_cun": 0.001102146620933826,
-        "used_by": [
-          {
-            "point_id": "SP6",
-            "frame_id": "SP6:MF1",
-            "value": 3,
-            "direction": "superior"
-          },
-          {
-            "point_id": "SP7",
-            "frame_id": "SP7:MF1",
-            "value": 6,
-            "direction": "superior"
-          },
-          {
-            "point_id": "SP8",
-            "frame_id": "SP8:MF1",
-            "value": 3,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "KI7",
-            "frame_id": "KI7:MF1",
-            "value": 2,
-            "direction": "superior"
-          },
-          {
-            "point_id": "KI8",
-            "frame_id": "KI8:MF1",
-            "value": 2,
-            "direction": "superior"
-          },
-          {
-            "point_id": "KI9",
-            "frame_id": "KI9:MF1",
-            "value": 5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "LR5",
-            "frame_id": "LR5:MF1",
-            "value": 5,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "LR6",
-            "frame_id": "LR6:MF1",
-            "value": 7,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "LR7",
-            "frame_id": "LR7:MF1",
-            "value": 1,
-            "direction": "posterior"
-          }
-        ],
-        "endpoint_coordinates": {
-          "from": null,
-          "to": null
-        },
-        "recomputed_model_distance": null,
-        "recomputed_model_unit_per_cun": null,
-        "distance_discrepancy": null,
-        "issues": [
-          "endpoint_coordinate_missing"
-        ]
-      },
-      {
         "calibration_id": "BACK_SCAPULAR_MEDIAL_BORDERS",
         "side": "left",
         "unit": "B-cun",
@@ -5391,261 +3859,6 @@
         "ratio_to_region_median": 1
       },
       {
-        "calibration_id": "BACK_SCAPULAR_MEDIAL_BORDERS",
-        "side": "midline",
-        "unit": "B-cun",
-        "region": "back",
-        "axis": "transverse",
-        "expected_cun": 6,
-        "from": "left-medial-border-scapula",
-        "to": "right-medial-border-scapula",
-        "metric_policy": "atlas-left-right-axis-projection",
-        "reported_interval_length": 0.11417319998145103,
-        "reported_model_unit_per_cun": 0.019028866663575172,
-        "used_by": [
-          {
-            "point_id": "SI14",
-            "frame_id": "SI14:MF1",
-            "value": 3,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "SI15",
-            "frame_id": "SI15:MF1",
-            "value": 2,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL11",
-            "frame_id": "BL11:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL12",
-            "frame_id": "BL12:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL13",
-            "frame_id": "BL13:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL14",
-            "frame_id": "BL14:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL15",
-            "frame_id": "BL15:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL16",
-            "frame_id": "BL16:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL17",
-            "frame_id": "BL17:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL18",
-            "frame_id": "BL18:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL19",
-            "frame_id": "BL19:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL20",
-            "frame_id": "BL20:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL21",
-            "frame_id": "BL21:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL22",
-            "frame_id": "BL22:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL23",
-            "frame_id": "BL23:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL24",
-            "frame_id": "BL24:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL25",
-            "frame_id": "BL25:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL26",
-            "frame_id": "BL26:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL27",
-            "frame_id": "BL27:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL28",
-            "frame_id": "BL28:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL29",
-            "frame_id": "BL29:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL30",
-            "frame_id": "BL30:MF1",
-            "value": 1.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL35",
-            "frame_id": "BL35:MF1",
-            "value": 0.5,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL41",
-            "frame_id": "BL41:MF1",
-            "value": 3,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL42",
-            "frame_id": "BL42:MF1",
-            "value": 3,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL43",
-            "frame_id": "BL43:MF1",
-            "value": 3,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL44",
-            "frame_id": "BL44:MF1",
-            "value": 3,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL45",
-            "frame_id": "BL45:MF1",
-            "value": 3,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL46",
-            "frame_id": "BL46:MF1",
-            "value": 3,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL47",
-            "frame_id": "BL47:MF1",
-            "value": 3,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL48",
-            "frame_id": "BL48:MF1",
-            "value": 3,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL49",
-            "frame_id": "BL49:MF1",
-            "value": 3,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL50",
-            "frame_id": "BL50:MF1",
-            "value": 3,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL51",
-            "frame_id": "BL51:MF1",
-            "value": 3,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL52",
-            "frame_id": "BL52:MF1",
-            "value": 3,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL53",
-            "frame_id": "BL53:MF1",
-            "value": 3,
-            "direction": "lateral"
-          },
-          {
-            "point_id": "BL54",
-            "frame_id": "BL54:MF1",
-            "value": 3,
-            "direction": "lateral"
-          }
-        ],
-        "endpoint_coordinates": {
-          "from": [
-            0.05710789933800697,
-            1.3778811693191528,
-            -0.08884160220623016
-          ],
-          "to": [
-            -0.05706530064344406,
-            1.3778412342071533,
-            -0.08855120092630386
-          ]
-        },
-        "recomputed_model_distance": 0.11417319998145103,
-        "recomputed_model_unit_per_cun": 0.019028866663575172,
-        "distance_discrepancy": 0,
-        "issues": [],
-        "region_median_model_unit_per_cun": 0.019028866663575172,
-        "ratio_to_region_median": 1
-      },
-      {
         "calibration_id": "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
         "side": "left",
         "unit": "B-cun",
@@ -5716,48 +3929,6 @@
             "point_id": "GB14",
             "frame_id": "GB14:MF1",
             "value": 1,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV18",
-            "frame_id": "GV18:MF1",
-            "value": 4,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV19",
-            "frame_id": "GV19:MF1",
-            "value": 5.5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV20",
-            "frame_id": "GV20:MF1",
-            "value": 5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV21",
-            "frame_id": "GV21:MF1",
-            "value": 3.5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV22",
-            "frame_id": "GV22:MF1",
-            "value": 2,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV23",
-            "frame_id": "GV23:MF1",
-            "value": 1,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV24",
-            "frame_id": "GV24:MF1",
-            "value": 0.5,
             "direction": "superior"
           }
         ],
@@ -5851,183 +4022,6 @@
             "point_id": "GB14",
             "frame_id": "GB14:MF1",
             "value": 1,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV18",
-            "frame_id": "GV18:MF1",
-            "value": 4,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV19",
-            "frame_id": "GV19:MF1",
-            "value": 5.5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV20",
-            "frame_id": "GV20:MF1",
-            "value": 5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV21",
-            "frame_id": "GV21:MF1",
-            "value": 3.5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV22",
-            "frame_id": "GV22:MF1",
-            "value": 2,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV23",
-            "frame_id": "GV23:MF1",
-            "value": 1,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV24",
-            "frame_id": "GV24:MF1",
-            "value": 0.5,
-            "direction": "superior"
-          }
-        ],
-        "endpoint_coordinates": {
-          "from": [
-            -0.009164012649194517,
-            1.6745205481833698,
-            0.07034331032000371
-          ],
-          "to": [
-            0.0021070081764764364,
-            1.5246969630538236,
-            -0.08412869774845701
-          ]
-        },
-        "recomputed_model_distance": 0.1498235851295462,
-        "recomputed_model_unit_per_cun": 0.012485298760795516,
-        "distance_discrepancy": 0,
-        "issues": [],
-        "region_median_model_unit_per_cun": 0.012485298760795516,
-        "ratio_to_region_median": 1
-      },
-      {
-        "calibration_id": "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
-        "side": "midline",
-        "unit": "B-cun",
-        "region": "head",
-        "axis": "longitudinal",
-        "expected_cun": 12,
-        "from": "midpoint-anterior-hairline",
-        "to": "midpoint-posterior-hairline",
-        "metric_policy": "atlas-superior-axis-projection",
-        "reported_interval_length": 0.1498235851295462,
-        "reported_model_unit_per_cun": 0.012485298760795516,
-        "used_by": [
-          {
-            "point_id": "BL3",
-            "frame_id": "BL3:MF1",
-            "value": 0.5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "BL4",
-            "frame_id": "BL4:MF1",
-            "value": 0.5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "BL5",
-            "frame_id": "BL5:MF1",
-            "value": 1,
-            "direction": "superior"
-          },
-          {
-            "point_id": "BL6",
-            "frame_id": "BL6:MF1",
-            "value": 2.5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "BL7",
-            "frame_id": "BL7:MF1",
-            "value": 4,
-            "direction": "superior"
-          },
-          {
-            "point_id": "BL8",
-            "frame_id": "BL8:MF1",
-            "value": 5.5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GB8",
-            "frame_id": "GB8:MF1",
-            "value": 1.5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GB9",
-            "frame_id": "GB9:MF1",
-            "value": 2,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GB13",
-            "frame_id": "GB13:MF1",
-            "value": 0.5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GB14",
-            "frame_id": "GB14:MF1",
-            "value": 1,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV18",
-            "frame_id": "GV18:MF1",
-            "value": 4,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV19",
-            "frame_id": "GV19:MF1",
-            "value": 5.5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV20",
-            "frame_id": "GV20:MF1",
-            "value": 5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV21",
-            "frame_id": "GV21:MF1",
-            "value": 3.5,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV22",
-            "frame_id": "GV22:MF1",
-            "value": 2,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV23",
-            "frame_id": "GV23:MF1",
-            "value": 1,
-            "direction": "superior"
-          },
-          {
-            "point_id": "GV24",
-            "frame_id": "GV24:MF1",
-            "value": 0.5,
             "direction": "superior"
           }
         ],
@@ -6092,45 +4086,6 @@
       {
         "calibration_id": "HEAD_MASTOID_TO_MASTOID",
         "side": "right",
-        "unit": "B-cun",
-        "region": "head",
-        "axis": "transverse",
-        "expected_cun": 9,
-        "from": "left-mastoid-process",
-        "to": "right-mastoid-process",
-        "metric_policy": "atlas-left-right-axis-projection",
-        "reported_interval_length": 0.10589569807052612,
-        "reported_model_unit_per_cun": 0.011766188674502902,
-        "used_by": [
-          {
-            "point_id": "BL9",
-            "frame_id": "BL9:MF1",
-            "value": 1.3,
-            "direction": "lateral"
-          }
-        ],
-        "endpoint_coordinates": {
-          "from": [
-            0.0514908991754055,
-            1.5614612102508545,
-            -0.058374401181936264
-          ],
-          "to": [
-            -0.05440479889512062,
-            1.5654511451721191,
-            -0.05897130072116852
-          ]
-        },
-        "recomputed_model_distance": 0.10589569807052612,
-        "recomputed_model_unit_per_cun": 0.011766188674502902,
-        "distance_discrepancy": 0,
-        "issues": [],
-        "region_median_model_unit_per_cun": 0.012485298760795516,
-        "ratio_to_region_median": 0.9424034538484047
-      },
-      {
-        "calibration_id": "HEAD_MASTOID_TO_MASTOID",
-        "side": "midline",
         "unit": "B-cun",
         "region": "head",
         "axis": "transverse",
@@ -6270,49 +4225,6 @@
         "ratio_to_region_median": 1
       },
       {
-        "calibration_id": "THIGH_GLUTEAL_FOLD_TO_POPLITEAL",
-        "side": "midline",
-        "unit": "B-cun",
-        "region": "thigh",
-        "axis": "longitudinal",
-        "expected_cun": 14,
-        "from": "gluteal-fold",
-        "to": "popliteal-crease",
-        "metric_policy": "atlas-superior-axis-projection",
-        "reported_interval_length": 0.3796909749507904,
-        "reported_model_unit_per_cun": 0.027120783925056458,
-        "used_by": [
-          {
-            "point_id": "BL37",
-            "frame_id": "BL37:MF1",
-            "value": 6,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "BL38",
-            "frame_id": "BL38:MF1",
-            "value": 1,
-            "direction": "proximal"
-          },
-          {
-            "point_id": "GB32",
-            "frame_id": "GB32:MF1",
-            "value": 7,
-            "direction": "superior"
-          }
-        ],
-        "endpoint_coordinates": {
-          "from": null,
-          "to": null
-        },
-        "recomputed_model_distance": null,
-        "recomputed_model_unit_per_cun": null,
-        "distance_discrepancy": null,
-        "issues": [
-          "endpoint_coordinate_missing"
-        ]
-      },
-      {
         "calibration_id": "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE",
         "side": "left",
         "unit": "B-cun",
@@ -6407,43 +4319,6 @@
         "ratio_to_region_median": 0.9767572941695924
       },
       {
-        "calibration_id": "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE",
-        "side": "midline",
-        "unit": "B-cun",
-        "region": "ankle-foot",
-        "axis": "surface-geodesic",
-        "expected_cun": 3,
-        "from": "prominence-medial-malleolus",
-        "to": "sole",
-        "metric_policy": "skin-FJ2810-local-seam-repaired-edge-geodesic",
-        "reported_interval_length": 0.18958713903479085,
-        "reported_model_unit_per_cun": 0.06319571301159695,
-        "used_by": [
-          {
-            "point_id": "KI5",
-            "frame_id": "KI5:MF1",
-            "value": 1,
-            "direction": "inferior"
-          },
-          {
-            "point_id": "KI6",
-            "frame_id": "KI6:MF1",
-            "value": 1,
-            "direction": "inferior"
-          }
-        ],
-        "endpoint_coordinates": {
-          "from": null,
-          "to": null
-        },
-        "recomputed_model_distance": null,
-        "recomputed_model_unit_per_cun": null,
-        "distance_discrepancy": null,
-        "issues": [
-          "endpoint_coordinate_missing"
-        ]
-      },
-      {
         "calibration_id": "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
         "side": "left",
         "unit": "B-cun",
@@ -6522,35 +4397,262 @@
         "ratio_to_region_median": 0.7950683512909834
       },
       {
-        "calibration_id": "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+        "calibration_id": "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
         "side": "midline",
         "unit": "B-cun",
-        "region": "thigh",
+        "region": "head",
         "axis": "longitudinal",
-        "expected_cun": 19,
-        "from": "lateral-prominence-greater-trochanter",
-        "to": "popliteal-crease",
+        "expected_cun": 12,
+        "from": "midpoint-anterior-hairline",
+        "to": "midpoint-posterior-hairline",
         "metric_policy": "atlas-superior-axis-projection",
-        "reported_interval_length": 0.4144339859485626,
-        "reported_model_unit_per_cun": 0.021812315049924348,
+        "reported_interval_length": 0.1498235851295462,
+        "reported_model_unit_per_cun": 0.012485298760795516,
         "used_by": [
           {
-            "point_id": "LR11",
-            "frame_id": "LR11:MF1",
+            "point_id": "GV18",
+            "frame_id": "GV18:MF1",
+            "value": 4,
+            "direction": "superior"
+          },
+          {
+            "point_id": "GV19",
+            "frame_id": "GV19:MF1",
+            "value": 5.5,
+            "direction": "superior"
+          },
+          {
+            "point_id": "GV20",
+            "frame_id": "GV20:MF1",
+            "value": 5,
+            "direction": "superior"
+          },
+          {
+            "point_id": "GV21",
+            "frame_id": "GV21:MF1",
+            "value": 3.5,
+            "direction": "superior"
+          },
+          {
+            "point_id": "GV22",
+            "frame_id": "GV22:MF1",
             "value": 2,
-            "direction": "distal"
+            "direction": "superior"
+          },
+          {
+            "point_id": "GV23",
+            "frame_id": "GV23:MF1",
+            "value": 1,
+            "direction": "superior"
+          },
+          {
+            "point_id": "GV24",
+            "frame_id": "GV24:MF1",
+            "value": 0.5,
+            "direction": "superior"
           }
         ],
         "endpoint_coordinates": {
-          "from": null,
-          "to": null
+          "from": [
+            -0.009164012649194517,
+            1.6745205481833698,
+            0.07034331032000371
+          ],
+          "to": [
+            0.0021070081764764364,
+            1.5246969630538236,
+            -0.08412869774845701
+          ]
         },
-        "recomputed_model_distance": null,
-        "recomputed_model_unit_per_cun": null,
-        "distance_discrepancy": null,
+        "recomputed_model_distance": 0.1498235851295462,
+        "recomputed_model_unit_per_cun": 0.012485298760795516,
+        "distance_discrepancy": 0,
+        "issues": [],
+        "region_median_model_unit_per_cun": 0.012485298760795516,
+        "ratio_to_region_median": 1
+      },
+      {
+        "calibration_id": "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS",
+        "side": "midline",
+        "unit": "B-cun",
+        "region": "abdomen",
+        "axis": "longitudinal",
+        "expected_cun": 5,
+        "from": "umbilicus-center",
+        "to": "superior-border-pubic-symphysis",
+        "metric_policy": "atlas-superior-axis-projection",
+        "reported_interval_length": 0.02999706799570756,
+        "reported_model_unit_per_cun": 0.005999413599141512,
+        "used_by": [
+          {
+            "point_id": "CV3",
+            "frame_id": "CV3:MF1",
+            "value": 4,
+            "direction": "inferior"
+          },
+          {
+            "point_id": "CV4",
+            "frame_id": "CV4:MF1",
+            "value": 3,
+            "direction": "inferior"
+          },
+          {
+            "point_id": "CV5",
+            "frame_id": "CV5:MF1",
+            "value": 2,
+            "direction": "inferior"
+          },
+          {
+            "point_id": "CV6",
+            "frame_id": "CV6:MF1",
+            "value": 1.5,
+            "direction": "inferior"
+          },
+          {
+            "point_id": "CV7",
+            "frame_id": "CV7:MF1",
+            "value": 1,
+            "direction": "inferior"
+          },
+          {
+            "point_id": "CV15",
+            "frame_id": "CV15:MF1",
+            "value": 1,
+            "direction": "inferior"
+          }
+        ],
+        "endpoint_coordinates": {
+          "from": [
+            -0.00476730630196931,
+            1.039050298281352,
+            0.09756270902768799
+          ],
+          "to": [
+            0.08211909979581833,
+            1.0090532302856445,
+            0.08333799988031387
+          ]
+        },
+        "recomputed_model_distance": 0.02999706799570756,
+        "recomputed_model_unit_per_cun": 0.005999413599141512,
+        "distance_discrepancy": 0,
         "issues": [
-          "endpoint_coordinate_missing"
-        ]
+          "extremely_small_model_unit_per_cun",
+          "neighboring_calibration_ratio_outlier"
+        ],
+        "region_median_model_unit_per_cun": 0.028290113142649287,
+        "ratio_to_region_median": 0.2120675010697283
+      },
+      {
+        "calibration_id": "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+        "side": "midline",
+        "unit": "B-cun",
+        "region": "abdomen",
+        "axis": "longitudinal",
+        "expected_cun": 8,
+        "from": "midpoint-xiphisternal-junction",
+        "to": "umbilicus-center",
+        "metric_policy": "atlas-superior-axis-projection",
+        "reported_interval_length": 0.2263209051411943,
+        "reported_model_unit_per_cun": 0.028290113142649287,
+        "used_by": [
+          {
+            "point_id": "CV9",
+            "frame_id": "CV9:MF1",
+            "value": 1,
+            "direction": "superior"
+          },
+          {
+            "point_id": "CV10",
+            "frame_id": "CV10:MF1",
+            "value": 2,
+            "direction": "superior"
+          },
+          {
+            "point_id": "CV11",
+            "frame_id": "CV11:MF1",
+            "value": 3,
+            "direction": "superior"
+          },
+          {
+            "point_id": "CV12",
+            "frame_id": "CV12:MF1",
+            "value": 4,
+            "direction": "superior"
+          },
+          {
+            "point_id": "CV13",
+            "frame_id": "CV13:MF1",
+            "value": 5,
+            "direction": "superior"
+          },
+          {
+            "point_id": "CV14",
+            "frame_id": "CV14:MF1",
+            "value": 6,
+            "direction": "superior"
+          }
+        ],
+        "endpoint_coordinates": {
+          "from": [
+            -0.007325700018554926,
+            1.2653712034225464,
+            0.11114799976348877
+          ],
+          "to": [
+            -0.00476730630196931,
+            1.039050298281352,
+            0.09756270902768799
+          ]
+        },
+        "recomputed_model_distance": 0.2263209051411943,
+        "recomputed_model_unit_per_cun": 0.028290113142649287,
+        "distance_discrepancy": 0,
+        "issues": [],
+        "region_median_model_unit_per_cun": 0.028290113142649287,
+        "ratio_to_region_median": 1
+      },
+      {
+        "calibration_id": "CHEST_SUPRASTERNAL_TO_XIPHISTERNAL",
+        "side": "midline",
+        "unit": "B-cun",
+        "region": "chest",
+        "axis": "longitudinal",
+        "expected_cun": 9,
+        "from": "suprasternal-notch",
+        "to": "midpoint-xiphisternal-junction",
+        "metric_policy": "atlas-superior-axis-projection",
+        "reported_interval_length": 0.050917090025484946,
+        "reported_model_unit_per_cun": 0.005657454447276105,
+        "used_by": [
+          {
+            "point_id": "CV21",
+            "frame_id": "CV21:MF1",
+            "value": 1,
+            "direction": "inferior"
+          }
+        ],
+        "endpoint_coordinates": {
+          "from": [
+            0.0009273688491848132,
+            1.3162882934480313,
+            0.08471770976887753
+          ],
+          "to": [
+            -0.007325700018554926,
+            1.2653712034225464,
+            0.11114799976348877
+          ]
+        },
+        "recomputed_model_distance": 0.050917090025484946,
+        "recomputed_model_unit_per_cun": 0.005657454447276105,
+        "distance_discrepancy": 0,
+        "issues": [
+          "extremely_small_model_unit_per_cun",
+          "BLOCKER_suprasternal_endpoint_is_sternum_center_not_jugular_notch_feature"
+        ],
+        "region_median_model_unit_per_cun": 0.005657454447276105,
+        "ratio_to_region_median": 1
       }
     ]
   },
@@ -7163,7 +5265,20 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:CV24:location",
-          "source_raw": null
+          "point_id": "CV24",
+          "section": "location",
+          "text_canonical": "On the face, in the depression in the centre of the mentolabial sulcus.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 231,
+            "pdf_page": 240,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Conception Vessel"
+            ],
+            "raw_record_id": "CV24"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         }
       ],
       "classifications": [
@@ -7888,11 +6003,29 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:ST7:location",
-          "source_raw": null
+          "point_id": "ST7",
+          "section": "location",
+          "text_canonical": "On the face, in the depression between the midpoint of the inferior border of the zygo-matic arch and the mandibular notch.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 49,
+            "pdf_page": 58,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Stomach Meridian"
+            ],
+            "raw_record_id": "ST7"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:ST7:note:1",
-          "source_raw": null
+          "point_id": "ST7",
+          "section": "note",
+          "note_index": 1,
+          "text_canonical": "Note: When the mouth is closed, ST7 is located at the depression inferior to the zygomatic arch, directly inferior to gB3.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         }
       ],
       "classifications": [
@@ -8029,7 +6162,20 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:TE17:location",
-          "source_raw": null
+          "point_id": "TE17",
+          "section": "location",
+          "text_canonical": "In the anterior region of the neck, posterior to the ear lobe, in the depression anterior to the inferior end of the mastoid process.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 166,
+            "pdf_page": 175,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Triple Energizer Meridian"
+            ],
+            "raw_record_id": "TE17"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         }
       ],
       "classifications": [
@@ -8240,7 +6386,20 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:TE16:location",
-          "source_raw": null
+          "point_id": "TE16",
+          "section": "location",
+          "text_canonical": "In the anterior region of the neck, at the same level as the angle of the mandible, in the depression posterior to the sterno-cleidomastoid muscle.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 165,
+            "pdf_page": 174,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Triple Energizer Meridian"
+            ],
+            "raw_record_id": "TE16"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         }
       ],
       "classifications": [
@@ -8594,15 +6753,38 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:GB26:location",
-          "source_raw": null
+          "point_id": "GB26",
+          "section": "location",
+          "text_canonical": "On the lateral abdomen, inferior to the free extremity of the 11th rib, at the same level as the centre of umbilicus.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 184,
+            "pdf_page": 193,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Gallbladder Meridian"
+            ],
+            "raw_record_id": "GB26"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:GB26:note:1",
-          "source_raw": null
+          "point_id": "GB26",
+          "section": "note",
+          "note_index": 1,
+          "text_canonical": "Note 1: GB26 can be located by first locat-ing the tenth rib, then searching for the free extremity of the 11th rib that is situated immediately below the inferior border of the costal arch.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         },
         {
           "source_statement_id": "S:GB26:note:2",
-          "source_raw": null
+          "point_id": "GB26",
+          "section": "note",
+          "note_index": 2,
+          "text_canonical": "Note 2: GB26 is inferior to LR13, at the same level as CV8.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         }
       ],
       "classifications": [
@@ -8863,11 +7045,29 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:ST29:location",
-          "source_raw": null
+          "point_id": "ST29",
+          "section": "location",
+          "text_canonical": "On the lower abdomen, 4 B-cun inferior to the centre of the umbilicus, 2 B-cun lateral to the anterior median line.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 60,
+            "pdf_page": 69,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Stomach Meridian"
+            ],
+            "raw_record_id": "ST29"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:ST29:note:1",
-          "source_raw": null
+          "point_id": "ST29",
+          "section": "note",
+          "note_index": 1,
+          "text_canonical": "Note: ST29 is 4 B-cun inferior to ST25, 1 B-cun inferior to St28, 2 B-cun lateral to CV3.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         }
       ],
       "classifications": [
@@ -8880,7 +7080,8 @@
       "evidence_notes": [
         "v1 builder copied legacy raw/projected coordinates after dependency/laterality gates; relation operations were not forward-executed.",
         "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS: extremely_small_model_unit_per_cun",
-        "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS: neighboring_calibration_ratio_outlier"
+        "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS: neighboring_calibration_ratio_outlier",
+        "CHEST_NIPPLE_TO_NIPPLE: neighboring_calibration_ratio_outlier"
       ]
     },
     {
@@ -9039,17 +7240,32 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:GB23:location",
-          "source_raw": null
+          "point_id": "GB23",
+          "section": "location",
+          "text_canonical": "In the lateral thoracic region, in the fourth intercostal space, 1 B-cun anterior to the midaxillary line.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 183,
+            "pdf_page": 192,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Gallbladder Meridian"
+            ],
+            "raw_record_id": "GB23"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         }
       ],
       "classifications": [
+        "MEASUREMENT_CALIBRATION_ERROR",
         "LEGACY_COORDINATE_CANDIDATE_ERROR",
         "RELATION_SOLVER_NOT_EXECUTED"
       ],
-      "first_failing_layer": "RELATION_SOLVER_NOT_EXECUTED",
+      "first_failing_layer": "MEASUREMENT_CALIBRATION_ERROR",
       "B_layer_assessment": "NO_AUTOMATIC_B_ERROR_ESTABLISHED; source/relation trace retained for manual adjudication",
       "evidence_notes": [
-        "v1 builder copied legacy raw/projected coordinates after dependency/laterality gates; relation operations were not forward-executed."
+        "v1 builder copied legacy raw/projected coordinates after dependency/laterality gates; relation operations were not forward-executed.",
+        "CHEST_NIPPLE_TO_NIPPLE: neighboring_calibration_ratio_outlier"
       ]
     },
     {
@@ -9239,11 +7455,29 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:BL54:location",
-          "source_raw": null
+          "point_id": "BL54",
+          "section": "location",
+          "text_canonical": "In the buttock region, at the same level as the fourth posterior sacral foramen, 3 B-cun lateral to the median sacral crest.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 126,
+            "pdf_page": 135,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Bladder Meridian"
+            ],
+            "raw_record_id": "BL54"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:BL54:note:1",
-          "source_raw": null
+          "point_id": "BL54",
+          "section": "note",
+          "note_index": 1,
+          "text_canonical": "Note: 3 B-cun lateral to the sacral hiatus, at the same level as BL 30.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         }
       ],
       "classifications": [
@@ -9767,15 +8001,38 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:SI14:location",
-          "source_raw": null
+          "point_id": "SI14",
+          "section": "location",
+          "text_canonical": "In the upper back region, at the same level as the inferior border of the spinous process of the first thoracic vertebra (T1), 3 B-cun lateral to the posterior median line.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 94,
+            "pdf_page": 103,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Small Intestine Meridian"
+            ],
+            "raw_record_id": "SI14"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:SI14:note:1",
-          "source_raw": null
+          "point_id": "SI14",
+          "section": "note",
+          "note_index": 1,
+          "text_canonical": "Note 1: SI14 is located at the intersection of two imaginary lines: the vertical line of the medial extremity of the spine of the scapula and the horizontal line inferior to the spinous process of the first thoracic vertebra (T1).",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         },
         {
           "source_statement_id": "S:SI14:note:2",
-          "source_raw": null
+          "point_id": "SI14",
+          "section": "note",
+          "note_index": 2,
+          "text_canonical": "Note 2: SI14 is located at the same level as BL11, gV13, and the inferior border of the spinous process of the first thoracic verte-bra (T1).",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         }
       ],
       "classifications": [
@@ -10046,7 +8303,20 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:LI10:location",
-          "source_raw": null
+          "point_id": "LI10",
+          "section": "location",
+          "text_canonical": "On the posterolateral aspect of the forearm, on the line connecting LI5 with LI11, 2 B-cun inferior to the cubital crease.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 38,
+            "pdf_page": 47,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Large Intestine Meridian"
+            ],
+            "raw_record_id": "LI10"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         }
       ],
       "classifications": [
@@ -10379,15 +8649,38 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:HT4:location",
-          "source_raw": null
+          "point_id": "HT4",
+          "section": "location",
+          "text_canonical": "On the anteromedial aspect of the forearm, just radial to the flexor carpi ulnaris tendon, 1.5 B-cun proximal to the palmar wrist crease.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 83,
+            "pdf_page": 92,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Heart Meridian"
+            ],
+            "raw_record_id": "HT4"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:HT4:note:1",
-          "source_raw": null
+          "point_id": "HT4",
+          "section": "note",
+          "note_index": 1,
+          "text_canonical": "Note 1: 1.5 B-cun proximal to HT7, at the same level as the superior border of the head of the ulna.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         },
         {
           "source_statement_id": "S:HT4:note:2",
-          "source_raw": null
+          "point_id": "HT4",
+          "section": "note",
+          "note_index": 2,
+          "text_canonical": "Note 2: 1.5 B-cun proximal to the radial side of the superior border of the pisiform bone.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         }
       ],
       "classifications": [
@@ -10724,11 +9017,29 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:PC7:location",
-          "source_raw": null
+          "point_id": "PC7",
+          "section": "location",
+          "text_canonical": "On the anterior aspect of the wrist, between the tendons of palmaris longus and the flexor carpi radialis, on the palmar wrist crease.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 155,
+            "pdf_page": 164,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Pericardium Meridian"
+            ],
+            "raw_record_id": "PC7"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:PC7:note:1",
-          "source_raw": null
+          "point_id": "PC7",
+          "section": "note",
+          "note_index": 1,
+          "text_canonical": "Note: With the fist clenched, the wrist slightly flexed, the two tendons become more prominent. PC7 is located at the midpoint of the palmar wrist crease, be-tween the tendons of palmaris longus and the flexor carpi radialis, at the same level as Ht7, at the proximal extremity of the pisiform bone.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         }
       ],
       "classifications": [
@@ -11091,11 +9402,28 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:PC8:location",
-          "source_raw": null
+          "point_id": "PC8",
+          "section": "location",
+          "text_canonical": "On the palm of the hand, in the depression between the second and third metacarpal bones, proximal to the metacarpophalan-geal joints.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 155,
+            "pdf_page": 164,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Pericardium Meridian"
+            ],
+            "raw_record_id": "PC8"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:PC8:remarks",
-          "source_raw": null
+          "point_id": "PC8",
+          "section": "remarks",
+          "text_canonical": "Remarks: Alternative location for PC8 - On the palm of the hand, in the depression, between the third and fourth metacarpal bones, proximal to the metacarpophalan-geal joints.",
+          "alternative_location": true,
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         }
       ],
       "classifications": [
@@ -11332,11 +9660,29 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:ST35:location",
-          "source_raw": null
+          "point_id": "ST35",
+          "section": "location",
+          "text_canonical": "On the anterior aspect of the knee, in the depression lateral to the patellar ligament.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 63,
+            "pdf_page": 72,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Stomach Meridian"
+            ],
+            "raw_record_id": "ST35"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:ST35:note:1",
-          "source_raw": null
+          "point_id": "ST35",
+          "section": "note",
+          "note_index": 1,
+          "text_canonical": "Note: When the knee is flexed, ST35 is lo-cated in the depression lateral and inferior to the patella.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         }
       ],
       "classifications": [
@@ -12121,15 +10467,38 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:ST31:location",
-          "source_raw": null
+          "point_id": "ST31",
+          "section": "location",
+          "text_canonical": "On the anterior aspect of the thigh, in the depression among three muscles: the proxi-mal portion of the rectus femoris muscle, the sartorius muscle and the tensor fasciae latae muscle.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 61,
+            "pdf_page": 70,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Stomach Meridian"
+            ],
+            "raw_record_id": "ST31"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:ST31:note:1",
-          "source_raw": null
+          "point_id": "ST31",
+          "section": "note",
+          "note_index": 1,
+          "text_canonical": "Note 1: With the hip and the knee in slight flexion, and the thigh slightly abducted when resistance is placed against the an-teromedial aspect of the thigh, a triangular depression appears. the proximal portion of the rectus femoris muscle is found in the depression between the sartorius muscle medially and the tensor fascia latae muscle laterally. St31 is located at the deepest point in the depression inferior to the apex of this triangle.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         },
         {
           "source_statement_id": "S:ST31:note:2",
-          "source_raw": null
+          "point_id": "ST31",
+          "section": "note",
+          "note_index": 2,
+          "text_canonical": "Note 2: ST31 is located at the intersection of the line connecting the lateral end of the base of the patella with the anterior superi-or iliac spine, and the horizontal line of the inferior border of the pubic symphysis.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         }
       ],
       "classifications": [
@@ -12335,7 +10704,20 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:BL65:location",
-          "source_raw": null
+          "point_id": "BL65",
+          "section": "location",
+          "text_canonical": "On the lateral aspect of the foot, in the depression proximal to the fifth metatar-sophalangeal joint, at the border between the red and white flesh.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 132,
+            "pdf_page": 141,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Bladder Meridian"
+            ],
+            "raw_record_id": "BL65"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         }
       ],
       "classifications": [
@@ -12515,7 +10897,20 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:LR2:location",
-          "source_raw": null
+          "point_id": "LR2",
+          "section": "location",
+          "text_canonical": "On the dorsum of the foot, between the first and second toes, proximal to the web margin, at the border between the red and white flesh.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 196,
+            "pdf_page": 205,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Liver Meridian"
+            ],
+            "raw_record_id": "LR2"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         }
       ],
       "classifications": [
@@ -12715,11 +11110,29 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:CV1:location",
-          "source_raw": null
+          "point_id": "CV1",
+          "section": "location",
+          "text_canonical": "In the perineal region, at the midpoint of the line connecting the anus with the poste-rior border of the scrotum in males and the posterior commissure of labium majoris in females.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 220,
+            "pdf_page": 229,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Conception Vessel"
+            ],
+            "raw_record_id": "CV1"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:CV1:note:1",
-          "source_raw": null
+          "point_id": "CV1",
+          "section": "note",
+          "note_index": 1,
+          "text_canonical": "Note: CV1 is located midway between the anus and the genital organ, with the subject lying on the side or in knee-chest position.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         }
       ],
       "classifications": [
@@ -12994,11 +11407,29 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:CV12:location",
-          "source_raw": null
+          "point_id": "CV12",
+          "section": "location",
+          "text_canonical": "On the upper abdomen, 4 B-cun superior to the centre of the umbilicus, on the anterior median line.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 225,
+            "pdf_page": 234,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Conception Vessel"
+            ],
+            "raw_record_id": "CV12"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:CV12:note:1",
-          "source_raw": null
+          "point_id": "CV12",
+          "section": "note",
+          "note_index": 1,
+          "text_canonical": "Note: CV12 is located at the midpoint of the line connecting the xiphisternal junc-tion and the centre of umbilicus.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         }
       ],
       "classifications": [
@@ -13421,11 +11852,29 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:GV14:location",
-          "source_raw": null
+          "point_id": "GV14",
+          "section": "location",
+          "text_canonical": "In the posterior region of the neck, in the depression inferior to the spinous process of the seventh cervical vertebra (C7), on the posterior median line.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 210,
+            "pdf_page": 219,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Governor Vessel"
+            ],
+            "raw_record_id": "GV14"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:GV14:note:1",
-          "source_raw": null
+          "point_id": "GV14",
+          "section": "note",
+          "note_index": 1,
+          "text_canonical": "Note 1: When the head is in a neutral position while the subject is seated, the most prominent site on the posterior aspect of the neck is the spinous process of the seventh cervical vertebra (C7). Forward flexion of the neck may facilitate palpation of the C7 spinous process.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         }
       ],
       "classifications": [
@@ -13779,15 +12228,38 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:GB26:location",
-          "source_raw": null
+          "point_id": "GB26",
+          "section": "location",
+          "text_canonical": "On the lateral abdomen, inferior to the free extremity of the 11th rib, at the same level as the centre of umbilicus.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 184,
+            "pdf_page": 193,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Gallbladder Meridian"
+            ],
+            "raw_record_id": "GB26"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:GB26:note:1",
-          "source_raw": null
+          "point_id": "GB26",
+          "section": "note",
+          "note_index": 1,
+          "text_canonical": "Note 1: GB26 can be located by first locat-ing the tenth rib, then searching for the free extremity of the 11th rib that is situated immediately below the inferior border of the costal arch.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         },
         {
           "source_statement_id": "S:GB26:note:2",
-          "source_raw": null
+          "point_id": "GB26",
+          "section": "note",
+          "note_index": 2,
+          "text_canonical": "Note 2: GB26 is inferior to LR13, at the same level as CV8.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         }
       ],
       "classifications": [
@@ -14072,11 +12544,29 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:LU5:location",
-          "source_raw": null
+          "point_id": "LU5",
+          "section": "location",
+          "text_canonical": "On the anterior aspect of the elbow, at the cubital crease, in the depression lateral to the biceps brachii tendon.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 28,
+            "pdf_page": 37,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Lung Meridian"
+            ],
+            "raw_record_id": "LU5"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:LU5:note:1",
-          "source_raw": null
+          "point_id": "LU5",
+          "section": "note",
+          "note_index": 1,
+          "text_canonical": "Note: With the elbow flexed, LU5 is lo-cated at the cubital crease, between LI11 and PC3, separated from PC3 by the biceps brachii tendon.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         }
       ],
       "classifications": [
@@ -14859,15 +13349,38 @@
       "WHO_source_statements": [
         {
           "source_statement_id": "S:ST31:location",
-          "source_raw": null
+          "point_id": "ST31",
+          "section": "location",
+          "text_canonical": "On the anterior aspect of the thigh, in the depression among three muscles: the proxi-mal portion of the rectus femoris muscle, the sartorius muscle and the tensor fasciae latae muscle.",
+          "source": {
+            "primary_source": "9789290613831-eng.pdf",
+            "printed_page": 61,
+            "pdf_page": 70,
+            "section_title_path": [
+              "WHO Standard Acupuncture Point Locations",
+              "Stomach Meridian"
+            ],
+            "raw_record_id": "ST31"
+          },
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762"
         },
         {
           "source_statement_id": "S:ST31:note:1",
-          "source_raw": null
+          "point_id": "ST31",
+          "section": "note",
+          "note_index": 1,
+          "text_canonical": "Note 1: With the hip and the knee in slight flexion, and the thigh slightly abducted when resistance is placed against the an-teromedial aspect of the thigh, a triangular depression appears. the proximal portion of the rectus femoris muscle is found in the depression between the sartorius muscle medially and the tensor fascia latae muscle laterally. St31 is located at the deepest point in the depression inferior to the apex of this triangle.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         },
         {
           "source_statement_id": "S:ST31:note:2",
-          "source_raw": null
+          "point_id": "ST31",
+          "section": "note",
+          "note_index": 2,
+          "text_canonical": "Note 2: ST31 is located at the intersection of the line connecting the lateral end of the base of the patella with the anterior superi-or iliac spine, and the horizontal line of the inferior border of the pubic symphysis.",
+          "frozen_source_sha256": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+          "notes_role_sha256": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a"
         }
       ],
       "classifications": [
@@ -14881,8 +13394,1244 @@
       ]
     }
   ],
+  "frozen_B_structural_coordinate_audit": {
+    "issue_count": 115,
+    "affected_point_count": 63,
+    "affected_points": [
+      "LU1",
+      "LU2",
+      "LU11",
+      "LI1",
+      "ST3",
+      "ST31",
+      "ST45",
+      "SP1",
+      "SP5",
+      "HT9",
+      "SI1",
+      "SI14",
+      "SI15",
+      "BL9",
+      "BL67",
+      "KI1",
+      "PC9",
+      "TE1",
+      "TE18",
+      "TE19",
+      "GB4",
+      "GB5",
+      "GB6",
+      "GB7",
+      "GB10",
+      "GB11",
+      "GB13",
+      "GB15",
+      "GB44",
+      "LR1",
+      "GV9",
+      "GV12",
+      "GV17",
+      "CV1",
+      "CV12",
+      "LU3",
+      "LU6",
+      "LI6",
+      "LI8",
+      "LI11",
+      "LI19",
+      "ST33",
+      "ST41",
+      "SP8",
+      "SP11",
+      "HT2",
+      "HT3",
+      "SI7",
+      "SI11",
+      "SI13",
+      "BL4",
+      "BL37",
+      "PC4",
+      "TE8",
+      "GB21",
+      "GB29",
+      "GB30",
+      "GB35",
+      "GB36",
+      "LR5",
+      "LR6",
+      "GV21",
+      "GV26"
+    ],
+    "issues": [
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:LU1:note:2:line:0",
+        "point_id": "LU1",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "transverse line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:LU2:note:2:line:0",
+        "point_id": "LU2",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "transverse line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:LU11:location:line:0",
+        "point_id": "LU11",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:LU11:location:line:1",
+        "point_id": "LU11",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:LI1:location:line:0",
+        "point_id": "LI1",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:LI1:location:line:1",
+        "point_id": "LI1",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:ST3:note:1:line:0",
+        "point_id": "ST3",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:ST3:note:1:line:1",
+        "point_id": "ST3",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:ST31:note:2:line:1",
+        "point_id": "ST31",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:ST45:location:line:0",
+        "point_id": "ST45",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:ST45:location:line:1",
+        "point_id": "ST45",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:SP1:location:line:0",
+        "point_id": "SP1",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:SP1:location:line:1",
+        "point_id": "SP1",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:SP5:note:1:line:0",
+        "point_id": "SP5",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:SP5:note:1:line:1",
+        "point_id": "SP5",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:HT9:location:line:0",
+        "point_id": "HT9",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:HT9:location:line:1",
+        "point_id": "HT9",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:SI1:location:line:0",
+        "point_id": "SI1",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:SI1:location:line:1",
+        "point_id": "SI1",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:SI14:note:1:line:0",
+        "point_id": "SI14",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:SI14:note:1:line:1",
+        "point_id": "SI14",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:SI15:note:1:line:0",
+        "point_id": "SI15",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:SI15:note:1:line:2",
+        "point_id": "SI15",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:BL9:note:1:line:0",
+        "point_id": "BL9",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:BL9:note:1:line:1",
+        "point_id": "BL9",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:BL67:location:line:0",
+        "point_id": "BL67",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:BL67:location:line:1",
+        "point_id": "BL67",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:KI1:note:1:line:0",
+        "point_id": "KI1",
+        "geometry_type": "reference_line",
+        "endpoint_count": 1,
+        "endpoint_node_ids": [
+          "N:KI1:1:m4"
+        ],
+        "source_raw": "line connect-ing"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:PC9:remarks:line:0",
+        "point_id": "PC9",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:PC9:remarks:line:1",
+        "point_id": "PC9",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:TE1:location:line:0",
+        "point_id": "TE1",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:TE1:location:line:1",
+        "point_id": "TE1",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:TE18:location:line:0",
+        "point_id": "TE18",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "curved line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:TE19:location:line:0",
+        "point_id": "TE19",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "curved line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:GB4:location:line:0",
+        "point_id": "GB4",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "curved line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:GB5:location:line:0",
+        "point_id": "GB5",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "curved line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:GB6:location:line:0",
+        "point_id": "GB6",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "curved line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:GB7:location:line:0",
+        "point_id": "GB7",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:GB7:location:line:1",
+        "point_id": "GB7",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:GB10:location:line:0",
+        "point_id": "GB10",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "curved line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:GB11:location:line:0",
+        "point_id": "GB11",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "curved line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:GB13:note:1:line:0",
+        "point_id": "GB13",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "curved line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:GB15:note:1:line:0",
+        "point_id": "GB15",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "curved line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:GB44:location:line:0",
+        "point_id": "GB44",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:GB44:location:line:1",
+        "point_id": "GB44",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:LR1:location:line:0",
+        "point_id": "LR1",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:LR1:location:line:1",
+        "point_id": "LR1",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:GV9:note:1:line:0",
+        "point_id": "GV9",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:GV12:note:1:line:0",
+        "point_id": "GV12",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:GV17:note:1:line:0",
+        "point_id": "GV17",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "vertical line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:GV17:note:1:line:1",
+        "point_id": "GV17",
+        "geometry_type": "reference_line",
+        "endpoint_count": 0,
+        "endpoint_node_ids": [],
+        "source_raw": "horizontal line"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:CV1:location:line:0",
+        "point_id": "CV1",
+        "geometry_type": "reference_line",
+        "endpoint_count": 1,
+        "endpoint_node_ids": [
+          "L:1562"
+        ],
+        "source_raw": "line connecting"
+      },
+      {
+        "kind": "GEOMETRY_LINE_CARDINALITY",
+        "node_id": "G:S:CV12:note:1:line:0",
+        "point_id": "CV12",
+        "geometry_type": "reference_line",
+        "endpoint_count": 1,
+        "endpoint_node_ids": [
+          "N:CV12:1:m2"
+        ],
+        "source_raw": "line connecting"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:33",
+        "point_id": "LU3",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:LU3:note:1:line:0"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:34",
+        "point_id": "LU3",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:LU3:note:1:line:0"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:60",
+        "point_id": "LU6",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:LU6:note:1:line:0"
+        ],
+        "source_raw": "the midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:143",
+        "point_id": "LI6",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:LI6:note:1:line:0"
+        ],
+        "source_raw": "three fourths"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:144",
+        "point_id": "LI6",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:LI6:note:1:line:0"
+        ],
+        "source_raw": "one fourth"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:165",
+        "point_id": "LI8",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:LI8:note:1:line:0"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:166",
+        "point_id": "LI8",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:LI8:note:1:line:0"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:184",
+        "point_id": "LI11",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:LI11:location:line:0"
+        ],
+        "source_raw": "at the midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:255",
+        "point_id": "LI19",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "R:LI19:m2"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:256",
+        "point_id": "LI19",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "R:LI19:m2"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:499",
+        "point_id": "ST33",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:ST33:note:1:line:0"
+        ],
+        "source_raw": "at the midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:577",
+        "point_id": "ST41",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:ST41:note:1:line:0"
+        ],
+        "source_raw": "at the midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:677",
+        "point_id": "SP8",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:SP8:note:1:line:0"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:678",
+        "point_id": "SP8",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:SP8:note:1:line:0"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:711",
+        "point_id": "SP11",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:SP11:location:line:0"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:712",
+        "point_id": "SP11",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:SP11:location:line:0"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:790",
+        "point_id": "HT2",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:HT2:note:1:line:0"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:791",
+        "point_id": "HT2",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:HT2:note:1:line:0"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:799",
+        "point_id": "HT3",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:HT3:note:1:line:0"
+        ],
+        "source_raw": "at the midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:935",
+        "point_id": "SI7",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:SI7:note:1:line:0"
+        ],
+        "source_raw": "the midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:962",
+        "point_id": "SI11",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:SI11:location:line:0"
+        ],
+        "source_raw": "the midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:963",
+        "point_id": "SI11",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:SI11:location:line:0"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:964",
+        "point_id": "SI11",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:SI11:location:line:0"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:978",
+        "point_id": "SI13",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:SI13:note:1:line:0"
+        ],
+        "source_raw": "at the midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1011",
+        "point_id": "SI15",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:SI15:note:1:line:1"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1012",
+        "point_id": "SI15",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:SI15:note:1:line:1"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1086",
+        "point_id": "BL4",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:BL4:note:1:line:0"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1087",
+        "point_id": "BL4",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:BL4:note:1:line:0"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1273",
+        "point_id": "BL37",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:BL37:note:2:line:0"
+        ],
+        "source_raw": "the midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1527",
+        "point_id": "KI1",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "N:KI1:1:m2"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1528",
+        "point_id": "KI1",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "N:KI1:1:m2"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1678",
+        "point_id": "PC4",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:PC4:note:1:line:0"
+        ],
+        "source_raw": "the midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1802",
+        "point_id": "TE8",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:TE8:note:1:line:0"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1803",
+        "point_id": "TE8",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:TE8:note:1:line:0"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1865",
+        "point_id": "TE18",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "L:1173"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1866",
+        "point_id": "TE18",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "L:1173"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1873",
+        "point_id": "TE19",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "L:1177"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1874",
+        "point_id": "TE19",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "L:1177"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1927",
+        "point_id": "GB4",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "L:1208"
+        ],
+        "source_raw": "one fourth"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1928",
+        "point_id": "GB4",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "L:1208"
+        ],
+        "source_raw": "three fourths"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1939",
+        "point_id": "GB6",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "L:1216"
+        ],
+        "source_raw": "three fourths"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1940",
+        "point_id": "GB6",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "L:1216"
+        ],
+        "source_raw": "one fourth"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1964",
+        "point_id": "GB10",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "L:1234"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1965",
+        "point_id": "GB10",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "L:1234"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1975",
+        "point_id": "GB11",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "L:1239"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1976",
+        "point_id": "GB11",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "L:1239"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1989",
+        "point_id": "GB13",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "N:GB13:1:m1"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:1990",
+        "point_id": "GB13",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "N:GB13:1:m1"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:2035",
+        "point_id": "GB21",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:GB21:location:line:0"
+        ],
+        "source_raw": "at the midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:2087",
+        "point_id": "GB29",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:GB29:location:line:0"
+        ],
+        "source_raw": "midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:2096",
+        "point_id": "GB30",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:GB30:location:line:0"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:2097",
+        "point_id": "GB30",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:GB30:location:line:0"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:2103",
+        "point_id": "GB30",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "R:GB30:m2"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:2104",
+        "point_id": "GB30",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "R:GB30:m2"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:2135",
+        "point_id": "GB35",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:GB35:note:1:line:0"
+        ],
+        "source_raw": "the midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:2146",
+        "point_id": "GB36",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:GB36:note:1:line:0"
+        ],
+        "source_raw": "the midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:2241",
+        "point_id": "LR5",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:LR5:note:1:line:0"
+        ],
+        "source_raw": "two thirds"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:2242",
+        "point_id": "LR5",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:LR5:note:1:line:0"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:2252",
+        "point_id": "LR6",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:LR6:note:1:line:0"
+        ],
+        "source_raw": "the midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:2467",
+        "point_id": "GV21",
+        "relation_type": "midpoint-between",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "G:S:GV21:note:1:line:0"
+        ],
+        "source_raw": "at the midpoint of"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:2488",
+        "point_id": "GV26",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "R:GV26:m1"
+        ],
+        "source_raw": "one third"
+      },
+      {
+        "kind": "RELATION_ARGUMENT_CARDINALITY",
+        "relation_id": "REL:2489",
+        "point_id": "GV26",
+        "relation_type": "fraction-along-line",
+        "argument_count": 1,
+        "argument_node_ids": [
+          "R:GV26:m1"
+        ],
+        "source_raw": "two thirds"
+      }
+    ]
+  },
   "B_reopen_assessment": {
-    "recommendation": "DO_NOT_REOPEN_B_YET",
-    "reason": "The v1 coordinate path did not execute frozen-B relation operations natively, so coordinate failures cannot yet be attributed to B. One concrete upstream C-layer anchor/realization defect is already established for suprasternal-notch calibration. B should only be reopened after source/relation trace adjudication demonstrates repeated source extraction, identity, argument/cardinality, or schema failures."
+    "recommendation": "PROPOSE_MINIMAL_B_REOPEN_FOR_STRUCTURAL_CARDINALITY_REVIEW",
+    "reason": "Repeated source-geometry/relation cardinality defects exist in frozen B. Do not edit yet; adjudicate affected records against WHO source and reopen only the minimal affected subset if confirmed."
   }
 }

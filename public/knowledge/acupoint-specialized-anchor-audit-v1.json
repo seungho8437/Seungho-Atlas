@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-05T22:21:21.325Z",
+  "generated_at": "2026-10-05T22:23:19.389Z",
   "record_count": 29,
   "anchors": [
     {
@@ -12,7 +12,7 @@
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
       "issues": [
-        "coordinate_missing"
+        "bilateral_anchor_requires_physical_side_context"
       ]
     },
     {
@@ -24,7 +24,7 @@
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
       "issues": [
-        "coordinate_missing"
+        "bilateral_anchor_requires_physical_side_context"
       ]
     },
     {
@@ -36,7 +36,7 @@
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
       "issues": [
-        "coordinate_missing"
+        "bilateral_anchor_requires_physical_side_context"
       ]
     },
     {
@@ -48,7 +48,7 @@
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
       "issues": [
-        "coordinate_missing"
+        "bilateral_anchor_requires_physical_side_context"
       ]
     },
     {
@@ -60,7 +60,7 @@
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
       "issues": [
-        "coordinate_missing"
+        "bilateral_anchor_requires_physical_side_context"
       ]
     },
     {
@@ -72,7 +72,7 @@
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
       "issues": [
-        "coordinate_missing"
+        "bilateral_anchor_requires_physical_side_context"
       ]
     },
     {
@@ -84,7 +84,7 @@
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
       "issues": [
-        "coordinate_missing"
+        "bilateral_anchor_requires_physical_side_context"
       ]
     },
     {
@@ -259,7 +259,7 @@
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
       "issues": [
-        "coordinate_missing"
+        "bilateral_anchor_requires_physical_side_context"
       ]
     },
     {
@@ -271,7 +271,7 @@
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
       "issues": [
-        "coordinate_missing"
+        "bilateral_anchor_requires_physical_side_context"
       ]
     },
     {
@@ -283,7 +283,7 @@
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
       "issues": [
-        "coordinate_missing"
+        "bilateral_anchor_requires_physical_side_context"
       ]
     },
     {
@@ -295,7 +295,7 @@
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
       "issues": [
-        "coordinate_missing"
+        "bilateral_anchor_requires_physical_side_context"
       ]
     },
     {
@@ -307,7 +307,7 @@
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
       "issues": [
-        "coordinate_missing"
+        "bilateral_anchor_requires_physical_side_context"
       ]
     },
     {
@@ -466,7 +466,7 @@
       "bodyparts3d_surface_structure_relation": null,
       "expected_anatomical_region": "review-from-anchor-identity",
       "issues": [
-        "coordinate_missing"
+        "bilateral_anchor_requires_physical_side_context"
       ]
     },
     {
