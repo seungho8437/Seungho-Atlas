@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-10-05T22:07:47.831Z",
+  "checks": {
+    "frozen_B_sha_exact": true,
+    "frozen_B_unchanged": true,
+    "landmark_count_2325": true,
+    "geometry_count_97": true,
+    "relation_count_2595": true,
+    "logical_points_361": true,
+    "no_solved_without_surface_projection": true,
+    "no_solved_with_hard_unresolved_reason": true,
+    "no_midline_bilateral_object_selection": true,
+    "no_contralateral_object_selection": true
+  },
+  "counts": {
+    "landmark_nodes": 2325,
+    "mesh_or_geometry_realizable": 2048,
+    "fma_no_mesh": 0,
+    "specialized_anchor_resolved": 59,
+    "surface_geometry": 941,
+    "constructed_geometry": 50,
+    "reference_acupoint": 268,
+    "registry_limited_but_geometry_recoverable": 373,
+    "geometry_unresolved": 277,
+    "logical_points": 361,
+    "physical_records": 670,
+    "logical_solved": 214,
+    "logical_conditional_or_unresolved": 147,
+    "surface_projection_success_count": 401,
+    "surface_projection_success_rate": 1,
+    "hard_qc_flags": 0,
+    "review_qc_flags": 9,
+    "relation_total": 2595,
+    "relation_computable_or_constraint_ready": 2279,
+    "relation_not_computable": 316,
+    "legacy_visual_problem_records": 50,
+    "review_queue_records": 303
+  }
+}
