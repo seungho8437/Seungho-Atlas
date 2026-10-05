@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "before_sha256": {
+    "Location identity-resolution finalization v1": "3f01697631db39cb6efa32c443ec0e3a0050c287cfa2c8e12811325552ddff53",
+    "Notes anatomical identity mapping v1 (derived from frozen Notes semantic-role v0.3)": "241d20c1dea3a51aa2bb50f494c4040371ef0b47255810bb6ac9644dd28d7b3a",
+    "Remarks adjudication v1 (1A-backed)": "608fae5e56dc563d12be3c99755f7808e4745e68ad3f997c14f756c61264caca"
+  },
+  "after_sha256": {
+    "Location identity-resolution finalization v1": "3f01697631db39cb6efa32c443ec0e3a0050c287cfa2c8e12811325552ddff53",
+    "Notes anatomical identity mapping v1 (derived from frozen Notes semantic-role v0.3)": "241d20c1dea3a51aa2bb50f494c4040371ef0b47255810bb6ac9644dd28d7b3a",
+    "Remarks adjudication v1 (1A-backed)": "608fae5e56dc563d12be3c99755f7808e4745e68ad3f997c14f756c61264caca"
+  },
+  "modified": {
+    "Location identity-resolution finalization v1": false,
+    "Notes anatomical identity mapping v1 (derived from frozen Notes semantic-role v0.3)": false,
+    "Remarks adjudication v1 (1A-backed)": false
+  },
+  "all_zero": true
+}

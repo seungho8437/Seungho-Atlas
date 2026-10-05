@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "all_pass": true,
+  "tests": [
+    {
+      "test": "S:ST35:location|depression_argument_to_patellar_ligament",
+      "target_statement": "S:ST35:location",
+      "expected_failure_field": "argument_mismatch",
+      "PASS": true,
+      "observed": {
+        "statement_id": "S:ST35:location",
+        "point_id": "ST35",
+        "statement_type": "location",
+        "exact_semantic_match": false,
+        "source_landmark_missing": false,
+        "argument_mismatch": true,
+        "relation_type_mismatch": false,
+        "endpoint_cardinality_mismatch": false,
+        "composite_binding_mismatch": false,
+        "conditional_semantics_mismatch": false,
+        "source_relation_missing": false,
+        "source_relation_overgenerated": false
+      }
+    },
+    {
+      "test": "S:CV12:note:1|remove_one_line_endpoint",
+      "target_statement": "S:CV12:note:1",
+      "expected_failure_field": "endpoint_cardinality_mismatch",
+      "PASS": true,
+      "observed": {
+        "statement_id": "S:CV12:note:1",
+        "point_id": "CV12",
+        "statement_type": "note",
+        "exact_semantic_match": false,
+        "source_landmark_missing": false,
+        "argument_mismatch": false,
+        "relation_type_mismatch": false,
+        "endpoint_cardinality_mismatch": true,
+        "composite_binding_mismatch": false,
+        "conditional_semantics_mismatch": false,
+        "source_relation_missing": false,
+        "source_relation_overgenerated": false
+      }
+    },
+    {
+      "test": "S:CV1:location|remove_sex_conditions",
+      "target_statement": "S:CV1:location",
+      "expected_failure_field": "conditional_semantics_mismatch",
+      "PASS": true,
+      "observed": {
+        "statement_id": "S:CV1:location",
+        "point_id": "CV1",
+        "statement_type": "location",
+        "exact_semantic_match": false,
+        "source_landmark_missing": false,
+        "argument_mismatch": false,
+        "relation_type_mismatch": false,
+        "endpoint_cardinality_mismatch": false,
+        "composite_binding_mismatch": false,
+        "conditional_semantics_mismatch": true,
+        "source_relation_missing": false,
+        "source_relation_overgenerated": false
+      }
+    },
+    {
+      "test": "S:LU5:note:1|remove_between_endpoint",
+      "target_statement": "S:LU5:note:1",
+      "expected_failure_field": "argument_mismatch",
+      "PASS": true,
+      "observed": {
+        "statement_id": "S:LU5:note:1",
+        "point_id": "LU5",
+        "statement_type": "note",
+        "exact_semantic_match": false,
+        "source_landmark_missing": false,
+        "argument_mismatch": true,
+        "relation_type_mismatch": false,
+        "endpoint_cardinality_mismatch": false,
+        "composite_binding_mismatch": false,
+        "conditional_semantics_mismatch": false,
+        "source_relation_missing": false,
+        "source_relation_overgenerated": false
+      }
+    },
+    {
+      "test": "S:GB26:location|remove_composite_parent",
+      "target_statement": "S:GB26:location",
+      "expected_failure_field": "composite_binding_mismatch",
+      "PASS": true,
+      "observed": {
+        "statement_id": "S:GB26:location",
+        "point_id": "GB26",
+        "statement_type": "location",
+        "exact_semantic_match": false,
+        "source_landmark_missing": false,
+        "argument_mismatch": false,
+        "relation_type_mismatch": false,
+        "endpoint_cardinality_mismatch": false,
+        "composite_binding_mismatch": true,
+        "conditional_semantics_mismatch": false,
+        "source_relation_missing": false,
+        "source_relation_overgenerated": false
+      }
+    },
+    {
+      "test": "S:ST18:note:1|replace_intersection_operand",
+      "target_statement": "S:ST18:note:1",
+      "expected_failure_field": "argument_mismatch",
+      "PASS": true,
+      "observed": {
+        "statement_id": "S:ST18:note:1",
+        "point_id": "ST18",
+        "statement_type": "note",
+        "exact_semantic_match": false,
+        "source_landmark_missing": false,
+        "argument_mismatch": true,
+        "relation_type_mismatch": false,
+        "endpoint_cardinality_mismatch": false,
+        "composite_binding_mismatch": false,
+        "conditional_semantics_mismatch": false,
+        "source_relation_missing": false,
+        "source_relation_overgenerated": false
+      }
+    }
+  ]
+}

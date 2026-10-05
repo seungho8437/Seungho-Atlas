@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "counts": {
+    "added_landmark": 1051,
+    "removed_landmark": 844,
+    "rebound_relation_argument": 355,
+    "changed_relation_type": 0,
+    "added_relation_semantics": 882,
+    "removed_relation_semantics": 2591,
+    "added_geometry": 0,
+    "removed_geometry": 16,
+    "added_conditional_branch": 115,
+    "composite_binding_change": 210
+  }
+}

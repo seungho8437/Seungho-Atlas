@@ -1,0 +1,77 @@
+{
+  "B_v2_statements": 583,
+  "exact_semantic_matches": 583,
+  "remaining_blocked_or_mismatched": 0,
+  "total_landmark_nodes": 2528,
+  "total_relation_instances": 885,
+  "total_geometry_nodes": 81,
+  "total_conditional_branches": 115,
+  "total_composite_bindings": 210,
+  "total_proportional_measurements": 288,
+  "B_v2_source_backed_derived_landmarks": 72,
+  "known_defects_total": 235,
+  "known_defects_repaired": 235,
+  "unresolved_CRITICAL": 0,
+  "unresolved_MAJOR": 0,
+  "mandatory_regression": {
+    "CV1": {
+      "PASS": true,
+      "statements": {
+        "S:CV1:location": true,
+        "S:CV1:note:1": true
+      }
+    },
+    "CV12": {
+      "PASS": true,
+      "statements": {
+        "S:CV12:location": true,
+        "S:CV12:note:1": true
+      }
+    },
+    "GB26": {
+      "PASS": true,
+      "statements": {
+        "S:GB26:location": true,
+        "S:GB26:note:1": true,
+        "S:GB26:note:2": true
+      }
+    },
+    "ST35": {
+      "PASS": true,
+      "statements": {
+        "S:ST35:location": true,
+        "S:ST35:note:1": true
+      }
+    },
+    "ST29": {
+      "PASS": true,
+      "statements": {
+        "S:ST29:location": true,
+        "S:ST29:note:1": true
+      }
+    }
+  },
+  "negative_validator_tests_PASS": true,
+  "upstream_frozen_diff": {
+    "Location identity-resolution finalization v1": false,
+    "Notes anatomical identity mapping v1 (derived from frozen Notes semantic-role v0.3)": false,
+    "Remarks adjudication v1 (1A-backed)": false
+  },
+  "orphan_landmark_relation_geometry_count": 0,
+  "invalid_FMA_reference_count": 0,
+  "semantic_diff": {
+    "added_landmark": 1051,
+    "removed_landmark": 844,
+    "rebound_relation_argument": 355,
+    "changed_relation_type": 0,
+    "added_relation_semantics": 882,
+    "removed_relation_semantics": 2591,
+    "added_geometry": 0,
+    "removed_geometry": 16,
+    "added_conditional_branch": 115,
+    "composite_binding_change": 210
+  },
+  "deterministic_rebuild_hash_sha256": "7c636f1fbadb1d367343b4ee7d5cf6a803e38b350cb72d739e8b4486fabef5f0",
+  "deterministic_rebuild_reproducibility_PASS": true,
+  "final_judgment": "B_V2_FREEZE_CANDIDATE"
+}
