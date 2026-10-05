@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T15:33:44.722Z",
+  "generatedAt": "2026-10-05T00:14:27.642Z",
   "scope": "Focused visual/anatomical exception review: four formerly low-confidence acupoints plus seven formerly near-duplicate clusters.",
   "coordinateModel": "BodyParts3D-4.0",
   "reviewedLogicalAcupoints": 18,
@@ -356,11 +356,11 @@
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.1116
+          "distance": 0.1125
         },
         {
           "side": "right",
-          "distance": 0.1125
+          "distance": 0.1158
         }
       ],
       "confidence": [
@@ -383,12 +383,12 @@
         {
           "id": "TE4",
           "side": "left",
-          "distance": 0.0258
+          "distance": 0.0261
         },
         {
           "id": "TE4",
           "side": "right",
-          "distance": 0.0303
+          "distance": 0.0262
         }
       ],
       "caveat": null

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "standardAcupointCount": 361,
   "measurementFrameCount": 237,
   "coordinateFrame": {
@@ -7,51 +7,92 @@
     "leftRightAxis": 0,
     "anteriorPosteriorAxis": 2
   },
-  "calibrationGeometry": {
-    "readyIntervalCount": 20,
-    "referencedCalibrationCount": 16,
-    "referencedCalibrationIds": [
-      "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS",
-      "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
-      "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE",
-      "BACK_SCAPULAR_MEDIAL_BORDERS",
-      "CHEST_NIPPLE_TO_NIPPLE",
-      "CHEST_SUPRASTERNAL_TO_XIPHISTERNAL",
-      "FOREARM_CUBITAL_TO_WRIST",
-      "HEAD_ANTERIOR_HAIRLINE_CORNERS",
-      "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
-      "HEAD_MASTOID_TO_MASTOID",
-      "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
-      "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS",
-      "THIGH_GLUTEAL_FOLD_TO_POPLITEAL",
-      "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
-      "THIGH_PUBIC_TO_PATELLA_BASE",
-      "UPPER_ARM_AXILLARY_TO_CUBITAL"
-    ],
-    "unreferencedReadyCalibrations": [
-      "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE",
-      "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
-      "KNEE_MEDIAL_TIBIAL_CONDYLE_TO_PATELLA_APEX",
-      "F_CUN_MIDDLE_FINGER"
-    ]
+  "reviewResolution": {
+    "surfacePathFramesResolved": 2,
+    "endpointAlternativeFramesResolved": 15,
+    "regionalReferenceFramesReviewed": 40,
+    "fingerCunFramesResolved": 11
   },
   "connections": {
     "directFrames": 186,
-    "provisionalFrames": 40,
-    "fingerMethodFrames": 11,
-    "directAutoSolveFrames": 172,
-    "pathMetricPendingFrames": 2,
-    "endpointAlternativeReviewFrames": 15
+    "reviewedRegionalFrames": 40,
+    "reviewedFingerMethodFrames": 11,
+    "autoSolveFrames": 237,
+    "unresolvedMeasurementFrames": 0
   },
-  "solver": {
-    "readyPointPlans": 78,
-    "reviewRequiredPointPlans": 283
-  },
+  "geodesic": [
+    {
+      "key": "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE:left",
+      "from": "prominence-medial-malleolus",
+      "to": "sole",
+      "metricPolicy": "skin-FJ2810-local-seam-repaired-edge-geodesic",
+      "intervalLength": 0.18958713903479085,
+      "cunLength": 0.06319571301159695,
+      "skinMeshId": "FJ2810",
+      "weldTolerance": 0.0009336323390529325,
+      "weldedVertexLinks": 565,
+      "seamRepairRadius": 0,
+      "seamRepairLinksAdded": 0,
+      "localVertexCount": 0,
+      "chordLength": 0.15254901011522873,
+      "geodesicToChordRatio": 1.242794947614443,
+      "fromVertex": 14247,
+      "toVertex": 18640,
+      "fromSnapDistance": 0.010241494616734967,
+      "toSnapDistance": 0,
+      "pathVertexCount": 14
+    },
+    {
+      "key": "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE:right",
+      "from": "prominence-medial-malleolus",
+      "to": "sole",
+      "metricPolicy": "skin-FJ2810-local-seam-repaired-edge-geodesic",
+      "intervalLength": 0.18806418188631094,
+      "cunLength": 0.06268806062877032,
+      "skinMeshId": "FJ2810",
+      "weldTolerance": 0.0009336323390529325,
+      "weldedVertexLinks": 565,
+      "seamRepairRadius": 0.0028008970171587975,
+      "seamRepairLinksAdded": 357,
+      "localVertexCount": 1572,
+      "chordLength": 0.1622509154182623,
+      "geodesicToChordRatio": 1.1590947354688588,
+      "fromVertex": 8774,
+      "toVertex": 4191,
+      "fromSnapDistance": 0.009498846822471195,
+      "toSnapDistance": 0,
+      "pathVertexCount": 15
+    },
+    {
+      "key": "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE:midline",
+      "from": "prominence-medial-malleolus",
+      "to": "sole",
+      "metricPolicy": "skin-FJ2810-local-seam-repaired-edge-geodesic",
+      "intervalLength": 0.18958713903479085,
+      "cunLength": 0.06319571301159695,
+      "skinMeshId": "FJ2810",
+      "weldTolerance": 0.0009336323390529325,
+      "weldedVertexLinks": 565,
+      "seamRepairRadius": 0,
+      "seamRepairLinksAdded": 0,
+      "localVertexCount": 0,
+      "chordLength": 0.15254901011522873,
+      "geodesicToChordRatio": 1.242794947614443,
+      "fromVertex": 14247,
+      "toVertex": 18640,
+      "fromSnapDistance": 0.010241494616734967,
+      "toSnapDistance": 0,
+      "pathVertexCount": 14
+    }
+  ],
   "invariants": {
     "all361Covered": true,
-    "allNonFingerMeasurementFramesHaveGeometry": true,
-    "provisionalReferencesRemainGated": true,
-    "fingerMethodsRemainUnselected": true,
-    "noGlobalBodyHeightCun": true
+    "all237MeasurementFramesReady": true,
+    "twoSurfacePathFramesResolved": true,
+    "fifteenEndpointAlternativesResolved": true,
+    "fortyRegionalReferencesReviewed": true,
+    "elevenFingerCunMethodsSelected": true,
+    "noGlobalBodyHeightCun": true,
+    "skinGeodesicUsesFJ2810": true
   }
 }
