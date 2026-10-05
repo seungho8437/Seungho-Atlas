@@ -1,0 +1,25 @@
+{
+  "schema_version": "2.0.0",
+  "generated_at": "2026-10-05T22:32:06.074Z",
+  "frozen_B_sha256": "6dd00d386a6262d02900ec5a30ea9b18aace899f071159e772c12679740b1d06",
+  "frozen_B_modified": false,
+  "v1_baseline_preserved": true,
+  "outputs": {
+    "public/knowledge/acupoint-bodyparts3d-realization-v2.json": {
+      "sha256": "fb01a8edc509368720a2e33fb905ce8cf5949bac127969d5b424045c01ff6734",
+      "bytes": 9162012
+    },
+    "public/knowledge/acupoint-coordinate-solver-input-v2.json": {
+      "sha256": "0a2b9351afccc317fcf24038bdef7ccfc54205e52e82bafdfafdc0094c6e9650",
+      "bytes": 835050
+    },
+    "public/knowledge/acupoint-coordinates-v2.json": {
+      "sha256": "5f2dd7317397070c4220cc17b44ee285b01a3e59ede2429cb64210b64e9b54be",
+      "bytes": 1987815
+    },
+    "public/knowledge/acupoint-coordinate-qc-v2.json": {
+      "sha256": "7b8c211b6233010c9aefd2a44741280e536725ac41161b204bd258d3dbd87dea",
+      "bytes": 1005374
+    }
+  }
+}
