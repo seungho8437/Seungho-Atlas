@@ -37,7 +37,7 @@ class Heap{constructor(){this.a=[];}push(x){let i=this.a.push(x)-1;while(i){let 
 const shortest=(start,goal)=>{const d=new Float64Array(skin.vertexCount);d.fill(Infinity);d[start]=0;const h=new Heap();h.push([0,start]);const prev=new Int32Array(skin.vertexCount);prev.fill(-1);while(h.size){const cur=h.pop(),cd=cur[0],u=cur[1];if(cd!==d[u])continue;if(u===goal)break;for(const [v,w] of adjacency[u]){const nd=cd+w;if(nd<d[v]){d[v]=nd;prev[v]=u;h.push([nd,v]);}}}if(!Number.isFinite(d[goal]))throw new Error('Skin geodesic disconnected');let n=0,u=goal;while(u!==-1){n++;if(u===start)break;u=prev[u];}return {length:d[goal],vertexCount:n};};
 const geodesicCache=new Map();
 function addLocalSeamStitches(a,b,side,radius){
-  const margin=bodyDiag*.035,mins=a.map((v,i)=>Math.min(v,b[i])-margin),maxs=a.map((v,i)=>Math.max(v,b[i])+margin);
+  const margin=skinDiag*.035,mins=a.map((v,i)=>Math.min(v,b[i])-margin),maxs=a.map((v,i)=>Math.max(v,b[i])+margin);
   const ids=[];for(let i=0;i<skin.vertexCount;i++){const p=[skinPos[i*3],skinPos[i*3+1],skinPos[i*3+2]];if(side==='left'&&p[lrAxis]<0)continue;if(side==='right'&&p[lrAxis]>0)continue;if(p.every((v,k)=>v>=mins[k]&&v<=maxs[k]))ids.push(i);}
   const buckets=new Map(),key=p=>p.map(v=>Math.floor(v/radius)).join(',');
   for(const i of ids){const p=[skinPos[i*3],skinPos[i*3+1],skinPos[i*3+2]],k=key(p),xs=buckets.get(k)??[];xs.push(i);buckets.set(k,xs);}
@@ -51,7 +51,7 @@ function skinGeodesic(cal,side){
   const av=nearestVertex(a.position,side),bv=nearestVertex(b.position,side),chord=euclid(av.position,bv.position);
   let g=shortest(av.index,bv.index),seamRepair={radius:0,added:0,localVertexCount:0},ratio=g.length/Math.max(chord,1e-9);
   if(ratio>1.8){
-    for(const radius of [bodyDiag*.00075,bodyDiag*.0015,bodyDiag*.003]){
+    for(const radius of [skinDiag*.00075,skinDiag*.0015,skinDiag*.003]){
       const st=addLocalSeamStitches(av.position,bv.position,side,radius);seamRepair={radius,added:seamRepair.added+st.added,localVertexCount:st.localVertexCount};
       g=shortest(av.index,bv.index);ratio=g.length/Math.max(chord,1e-9);if(ratio<=1.8)break;
     }
