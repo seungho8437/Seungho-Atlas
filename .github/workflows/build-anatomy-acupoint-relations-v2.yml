@@ -1,0 +1,96 @@
+name: Build B v2 source-first acupoint relation graph
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/korean-tcm-knowledge
+    paths:
+      - scripts/build-anatomy-acupoint-relations-v2.py
+      - scripts/data/b-v2-*.json.gz.b64.txt
+      - .github/workflows/build-anatomy-acupoint-relations-v2.yml
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/korean-tcm-knowledge
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Decode frozen/audited B v2 inputs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64,gzip
+          root=Path('.')
+          tmp=root/'.tmp/b-semantic-audit'
+          tmp.mkdir(parents=True,exist_ok=True)
+          mapping={
+            'scripts/data/b-v2-statement-ledger-v1.json.gz.b64.txt':'b-semantic-integrity-statement-ledger-v1.json',
+            'scripts/data/b-v2-defect-inventory-v1.json.gz.b64.txt':'b-semantic-integrity-defect-inventory-v1.json',
+            'scripts/data/b-v2-location-identity-final-v1.json.gz.b64.txt':'location_fma_identity_resolution_final_v1.json',
+            'scripts/data/b-v2-notes-identity-v1.json.gz.b64.txt':'notes_anatomical_identity_mapping_v1.json',
+            'scripts/data/b-v2-remarks-adjudication-v1.json.gz.b64.txt':'remarks_adjudication_v1.json',
+            'scripts/data/anatomy-acupoint-relations-v1.json.gz.b64.txt':'anatomy-acupoint-relations.json',
+          }
+          for src,dst in mapping.items():
+              raw=base64.b64decode(Path(src).read_text().strip())
+              (tmp/dst).write_bytes(gzip.decompress(raw))
+          PY
+      - name: Independent deterministic rebuild run 1
+        env:
+          B_V2_BASE: ${{ github.workspace }}/.tmp/b-semantic-audit
+          B_V2_OUT: ${{ github.workspace }}/.tmp/b-v2-run1
+        run: python scripts/build-anatomy-acupoint-relations-v2.py
+      - name: Independent deterministic rebuild run 2
+        env:
+          B_V2_BASE: ${{ github.workspace }}/.tmp/b-semantic-audit
+          B_V2_OUT: ${{ github.workspace }}/.tmp/b-v2-run2
+        run: python scripts/build-anatomy-acupoint-relations-v2.py
+      - name: Enforce freeze gate and deterministic byte identity
+        run: |
+          cmp .tmp/b-v2-run1/anatomy-acupoint-relations-v2.json .tmp/b-v2-run2/anatomy-acupoint-relations-v2.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          s=json.loads(Path('.tmp/b-v2-run2/b-v2-review-summary.json').read_text())
+          assert s['B_v2_statements']==583
+          assert s['exact_semantic_matches']==583
+          assert s['remaining_blocked_or_mismatched']==0
+          assert s['known_defects_total']==235 and s['known_defects_repaired']==235
+          assert s['unresolved_CRITICAL']==0 and s['unresolved_MAJOR']==0
+          assert s['negative_validator_tests_PASS'] is True
+          assert s['orphan_landmark_relation_geometry_count']==0
+          assert s['invalid_FMA_reference_count']==0
+          assert all(not v for v in s['upstream_frozen_diff'].values())
+          assert all(v['PASS'] for v in s['mandatory_regression'].values())
+          assert s['deterministic_rebuild_reproducibility_PASS'] is True
+          assert s['final_judgment']=='B_V2_FREEZE_CANDIDATE'
+          PY
+          unzip -t .tmp/b-v2-run2/b-v2-review-bundle.zip
+      - name: Publish review candidate artifacts
+        run: |
+          mkdir -p public/knowledge/b-v2 artifacts
+          cp .tmp/b-v2-run2/anatomy-acupoint-relations-v2.json public/knowledge/anatomy-acupoint-relations-v2.json
+          cp .tmp/b-v2-run2/b-v2-*.json public/knowledge/b-v2/
+          cp .tmp/b-v2-run2/b-v2-rebuild-report.md public/knowledge/b-v2/
+          cp .tmp/b-v2-run2/b-v2-review-bundle.zip artifacts/b-v2-review-bundle.zip
+          sha256sum artifacts/b-v2-review-bundle.zip > artifacts/b-v2-review-bundle.zip.sha256
+      - name: Commit B v2 review candidate
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/knowledge/anatomy-acupoint-relations-v2.json public/knowledge/b-v2 artifacts/b-v2-review-bundle.zip artifacts/b-v2-review-bundle.zip.sha256
+          if git diff --cached --quiet; then
+            echo "No B v2 output changes."
+          else
+            git commit -m "data: build source-first acupoint relation graph v2"
+            git pull --rebase origin feature/korean-tcm-knowledge
+            git push origin HEAD:feature/korean-tcm-knowledge
+          fi
