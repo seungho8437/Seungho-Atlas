@@ -78,5 +78,6 @@ jobs:
             echo "No generated C-layer changes."
           else
             git commit -m "data: build frozen-B BodyParts3D coordinate realization v1"
-            git push
+            git pull --rebase origin feature/korean-tcm-knowledge
+            git push origin HEAD:feature/korean-tcm-knowledge
           fi
