@@ -379,7 +379,8 @@ const qcOut={schema_version:'2.0.1',artifact:'acupoint-coordinate-qc-v2.json',ge
 write('public/knowledge/acupoint-bodyparts3d-realization-v2.json',realizationOut);
 write('public/knowledge/acupoint-coordinate-solver-input-v2.json',solverOut);
 write('public/knowledge/acupoint-coordinates-v2.json',coordsOut);
-write('public/knowledge/acupoint-coordinate-qc-v2.json',qcOut);\nconst auditSummary={schema_version:'1.0.0',artifact:'acupoint-coordinate-v2-audit-summary.json',generated_at:now,
+write('public/knowledge/acupoint-coordinate-qc-v2.json',qcOut);
+const auditSummary={schema_version:'1.0.0',artifact:'acupoint-coordinate-v2-audit-summary.json',generated_at:now,
  baseline:{v1_preserved:true,v1_reinterpreted_as:'provisional_projected_candidate',v1_solved_physical:auditV1.v1_status_correction?.previous_solved_records,v1_legacy_candidate_reused:auditV1.provenance_census?.legacy_candidate_reused,v1_native_relation_executed:auditV1.provenance_census?.native_relation_executed},
  attribution_sample:auditV1.audit_sample,
  frozen_B:{sha256:FROZEN_B_SHA,modified:false,minimal_reopen_candidates:auditV1.frozen_B_structural_coordinate_audit},
