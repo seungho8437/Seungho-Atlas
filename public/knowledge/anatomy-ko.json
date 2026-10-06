@@ -4642,8 +4642,8 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA13322": {
-    "nameKo": "오른빗장뼈",
-    "legacyKo": "우쇄골",
+    "nameKo": "오른쪽 빗장뼈",
+    "legacyKo": "우측 쇄골",
     "hanja": "右鎖骨",
     "status": "derived",
     "sourceIds": [
@@ -4660,8 +4660,8 @@
     "terminologyBaseId": "FMA13321"
   },
   "FMA13323": {
-    "nameKo": "왼빗장뼈",
-    "legacyKo": "좌쇄골",
+    "nameKo": "왼쪽 빗장뼈",
+    "legacyKo": "좌측 쇄골",
     "hanja": "左鎖骨",
     "status": "derived",
     "sourceIds": [
@@ -5294,8 +5294,8 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA13395": {
-    "nameKo": "오른어깨뼈",
-    "legacyKo": "우견갑골",
+    "nameKo": "오른쪽 어깨뼈",
+    "legacyKo": "우측 견갑골",
     "hanja": "右肩胛骨",
     "status": "derived",
     "sourceIds": [
@@ -5312,8 +5312,8 @@
     "terminologyBaseId": "FMA13394"
   },
   "FMA13396": {
-    "nameKo": "왼어깨뼈",
-    "legacyKo": "좌견갑골",
+    "nameKo": "왼쪽 어깨뼈",
+    "legacyKo": "좌측 견갑골",
     "hanja": "左肩胛骨",
     "status": "derived",
     "sourceIds": [
@@ -10188,8 +10188,8 @@
     "nameKoVerification": "direct-KAA"
   },
   "FMA22544": {
-    "nameKo": "오른앞정강근",
-    "legacyKo": "우전경골근",
+    "nameKo": "오른쪽 앞정강근",
+    "legacyKo": "우측 전경골근",
     "hanja": "右前脛骨筋",
     "status": "derived",
     "sourceIds": [
@@ -10206,8 +10206,8 @@
     "terminologyBaseId": "FMA22532"
   },
   "FMA22545": {
-    "nameKo": "왼앞정강근",
-    "legacyKo": "좌전경골근",
+    "nameKo": "왼쪽 앞정강근",
+    "legacyKo": "좌측 전경골근",
     "hanja": "左前脛骨筋",
     "status": "derived",
     "sourceIds": [
@@ -12936,8 +12936,8 @@
     "status": "derived"
   },
   "FMA23130": {
-    "nameKo": "오른위팔뼈",
-    "legacyKo": "우상완골",
+    "nameKo": "오른쪽 위팔뼈",
+    "legacyKo": "우측 상완골",
     "hanja": "右上腕骨",
     "status": "derived",
     "sourceIds": [
@@ -12954,8 +12954,8 @@
     "terminologyBaseId": "FMA13303"
   },
   "FMA23131": {
-    "nameKo": "왼위팔뼈",
-    "legacyKo": "좌상완골",
+    "nameKo": "왼쪽 위팔뼈",
+    "legacyKo": "좌측 상완골",
     "hanja": "左上腕骨",
     "status": "derived",
     "sourceIds": [
@@ -13036,8 +13036,8 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA23464": {
-    "nameKo": "오른노뼈",
-    "legacyKo": "우요골",
+    "nameKo": "오른쪽 노뼈",
+    "legacyKo": "우측 요골",
     "hanja": "右橈骨",
     "status": "derived",
     "sourceIds": [
@@ -13054,8 +13054,8 @@
     "terminologyBaseId": "FMA23463"
   },
   "FMA23465": {
-    "nameKo": "왼노뼈",
-    "legacyKo": "좌요골",
+    "nameKo": "왼쪽 노뼈",
+    "legacyKo": "좌측 요골",
     "hanja": "左橈骨",
     "status": "derived",
     "sourceIds": [
@@ -13091,8 +13091,8 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA23467": {
-    "nameKo": "오른자뼈",
-    "legacyKo": "우척골",
+    "nameKo": "오른쪽 자뼈",
+    "legacyKo": "우측 척골",
     "hanja": "右尺骨",
     "status": "derived",
     "sourceIds": [
@@ -13109,8 +13109,8 @@
     "terminologyBaseId": "FMA23466"
   },
   "FMA23468": {
-    "nameKo": "왼자뼈",
-    "legacyKo": "좌척골",
+    "nameKo": "왼쪽 자뼈",
+    "legacyKo": "좌측 척골",
     "hanja": "左尺骨",
     "status": "derived",
     "sourceIds": [
@@ -13905,8 +13905,8 @@
     "status": "derived"
   },
   "FMA24474": {
-    "nameKo": "오른넙다리뼈",
-    "legacyKo": "우대퇴골",
+    "nameKo": "오른쪽 넙다리뼈",
+    "legacyKo": "우측 대퇴골",
     "hanja": "右大腿骨",
     "status": "derived",
     "sourceIds": [
@@ -13923,8 +13923,8 @@
     "terminologyBaseId": "FMA9611"
   },
   "FMA24475": {
-    "nameKo": "왼넙다리뼈",
-    "legacyKo": "좌대퇴골",
+    "nameKo": "왼쪽 넙다리뼈",
+    "legacyKo": "좌측 대퇴골",
     "hanja": "左大腿骨",
     "status": "derived",
     "sourceIds": [
@@ -13959,8 +13959,8 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA24477": {
-    "nameKo": "오른정강뼈",
-    "legacyKo": "우경골",
+    "nameKo": "오른쪽 정강뼈",
+    "legacyKo": "우측 경골",
     "hanja": "右脛骨",
     "status": "derived",
     "sourceIds": [
@@ -13977,8 +13977,8 @@
     "terminologyBaseId": "FMA24476"
   },
   "FMA24478": {
-    "nameKo": "왼정강뼈",
-    "legacyKo": "좌경골",
+    "nameKo": "왼쪽 정강뼈",
+    "legacyKo": "좌측 경골",
     "hanja": "左脛骨",
     "status": "derived",
     "sourceIds": [
@@ -14013,8 +14013,8 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA24480": {
-    "nameKo": "오른종아리뼈",
-    "legacyKo": "우비골",
+    "nameKo": "오른쪽 종아리뼈",
+    "legacyKo": "우측 비골",
     "hanja": "右腓骨",
     "status": "derived",
     "sourceIds": [
@@ -14031,8 +14031,8 @@
     "terminologyBaseId": "FMA24479"
   },
   "FMA24481": {
-    "nameKo": "왼종아리뼈",
-    "legacyKo": "좌비골",
+    "nameKo": "왼쪽 종아리뼈",
+    "legacyKo": "좌측 비골",
     "hanja": "左腓骨",
     "status": "derived",
     "sourceIds": [
@@ -14100,8 +14100,8 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA24486": {
-    "nameKo": "오른무릎뼈",
-    "legacyKo": "우슬개골",
+    "nameKo": "오른쪽 무릎뼈",
+    "legacyKo": "우측 슬개골",
     "hanja": "右膝蓋骨",
     "status": "derived",
     "sourceIds": [
@@ -14118,8 +14118,8 @@
     "terminologyBaseId": "FMA24485"
   },
   "FMA24487": {
-    "nameKo": "왼무릎뼈",
-    "legacyKo": "좌슬개골",
+    "nameKo": "왼쪽 무릎뼈",
+    "legacyKo": "좌측 슬개골",
     "hanja": "左膝蓋骨",
     "status": "derived",
     "sourceIds": [
@@ -23670,8 +23670,8 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52738": {
-    "nameKo": "오른관자뼈",
-    "legacyKo": "우측두골",
+    "nameKo": "오른쪽 관자뼈",
+    "legacyKo": "우측 측두골",
     "hanja": "右側頭骨",
     "status": "derived",
     "sourceIds": [
@@ -23688,8 +23688,8 @@
     "terminologyBaseId": "FMA52737"
   },
   "FMA52739": {
-    "nameKo": "왼관자뼈",
-    "legacyKo": "좌측두골",
+    "nameKo": "왼쪽 관자뼈",
+    "legacyKo": "좌측 측두골",
     "hanja": "左側頭骨",
     "status": "derived",
     "sourceIds": [
@@ -23828,8 +23828,8 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA52788": {
-    "nameKo": "오른마루뼈",
-    "legacyKo": "우두정골",
+    "nameKo": "오른쪽 마루뼈",
+    "legacyKo": "우측 두정골",
     "hanja": "右頭頂骨",
     "status": "derived",
     "sourceIds": [
@@ -23846,8 +23846,8 @@
     "terminologyBaseId": "FMA9613"
   },
   "FMA52789": {
-    "nameKo": "왼마루뼈",
-    "legacyKo": "좌두정골",
+    "nameKo": "왼쪽 마루뼈",
+    "legacyKo": "좌측 두정골",
     "hanja": "左頭頂骨",
     "status": "derived",
     "sourceIds": [
@@ -32498,15 +32498,15 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7165": {
-    "nameKo": "심장오른쪽",
-    "legacyKo": "심장우측",
+    "nameKo": "심장 오른쪽",
+    "legacyKo": "심장 우측",
     "hanja": "心臟右側",
     "sourceNameEn": "right side of heart",
     "status": "derived"
   },
   "FMA7166": {
-    "nameKo": "심장왼쪽",
-    "legacyKo": "심장좌측",
+    "nameKo": "심장 왼쪽",
+    "legacyKo": "심장 좌측",
     "hanja": "心臟左側",
     "sourceNameEn": "left side of heart",
     "status": "derived"
@@ -34042,29 +34042,29 @@
   "FMA20224": {
     "sourceNameEn": "right side of rib cage",
     "status": "derived",
-    "nameKo": "갈비우리오른쪽",
-    "legacyKo": "흉곽우측",
+    "nameKo": "갈비우리 오른쪽",
+    "legacyKo": "흉곽 우측",
     "hanja": "胸廓右側"
   },
   "FMA20225": {
     "sourceNameEn": "left side of rib cage",
     "status": "derived",
-    "nameKo": "갈비우리왼쪽",
-    "legacyKo": "흉곽좌측",
+    "nameKo": "갈비우리 왼쪽",
+    "legacyKo": "흉곽 좌측",
     "hanja": "胸廓左側"
   },
   "FMA20226": {
     "sourceNameEn": "right side of bony pelvis",
     "status": "derived",
-    "nameKo": "뼈골반오른쪽",
-    "legacyKo": "골성골반우측",
+    "nameKo": "뼈골반 오른쪽",
+    "legacyKo": "골성골반 우측",
     "hanja": "骨性骨盤右側"
   },
   "FMA20227": {
     "sourceNameEn": "left side of bony pelvis",
     "status": "derived",
-    "nameKo": "뼈골반왼쪽",
-    "legacyKo": "골성골반좌측",
+    "nameKo": "뼈골반 왼쪽",
+    "legacyKo": "골성골반 좌측",
     "hanja": "骨性骨盤左側"
   },
   "FMA20347": {
@@ -35390,29 +35390,29 @@
     "status": "derived"
   },
   "FMA59748": {
-    "nameKo": "속코오른쪽",
-    "legacyKo": "내비우측",
+    "nameKo": "속코 오른쪽",
+    "legacyKo": "내비 우측",
     "hanja": "內鼻右側",
     "sourceNameEn": "right side of internal nose",
     "status": "derived"
   },
   "FMA59749": {
-    "nameKo": "속코왼쪽",
-    "legacyKo": "내비좌측",
+    "nameKo": "속코 왼쪽",
+    "legacyKo": "내비 좌측",
     "hanja": "內鼻左側",
     "sourceNameEn": "left side of internal nose",
     "status": "derived"
   },
   "FMA59754": {
-    "nameKo": "속코오른쪽벽",
-    "legacyKo": "내비우측벽",
+    "nameKo": "속코 오른쪽 벽",
+    "legacyKo": "내비 우측 벽",
     "hanja": "內鼻右側壁",
     "sourceNameEn": "wall of right side of internal nose",
     "status": "derived"
   },
   "FMA59755": {
-    "nameKo": "속코왼쪽벽",
-    "legacyKo": "내비좌측벽",
+    "nameKo": "속코 왼쪽 벽",
+    "legacyKo": "내비 좌측 벽",
     "hanja": "內鼻左側壁",
     "sourceNameEn": "wall of left side of internal nose",
     "status": "derived"
@@ -36272,15 +36272,15 @@
     "status": "derived"
   },
   "FMA73703": {
-    "nameKo": "심장오른쪽벽",
-    "legacyKo": "심장우측벽",
+    "nameKo": "심장 오른쪽 벽",
+    "legacyKo": "심장 우측 벽",
     "hanja": "心臟右側壁",
     "sourceNameEn": "wall of right side of heart",
     "status": "derived"
   },
   "FMA73704": {
-    "nameKo": "심장왼쪽벽",
-    "legacyKo": "심장좌측벽",
+    "nameKo": "심장 왼쪽 벽",
+    "legacyKo": "심장 좌측 벽",
     "hanja": "心臟左側壁",
     "sourceNameEn": "wall of left side of heart",
     "status": "derived"
