@@ -231,22 +231,21 @@ def render_html(data,out):
  out.write_text("".join(parts),encoding="utf-8")
 
 def render_pdf(data,out):
- from reportlab.lib import colors
- from reportlab.lib.enums import TA_LEFT
  from reportlab.lib.pagesizes import A4
  from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
  from reportlab.lib.units import mm
- from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,Table,TableStyle,PageBreak,KeepTogether
+ from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,PageBreak,KeepTogether
  from reportlab.pdfbase import pdfmetrics
  from reportlab.pdfbase.ttfonts import TTFont
  font="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
  if os.path.exists(font):pdfmetrics.registerFont(TTFont("DV",font));base="DV"
  else:base="Helvetica"
  styles=getSampleStyleSheet()
- body=ParagraphStyle("BodyX",parent=styles["BodyText"],fontName=base,fontSize=8.5,leading=11)
- h1=ParagraphStyle("H1X",parent=styles["Heading1"],fontName=base,fontSize=15,leading=18)
- h2=ParagraphStyle("H2X",parent=styles["Heading2"],fontName=base,fontSize=12,leading=15)
- mono=ParagraphStyle("MonoX",parent=body,fontName=base,fontSize=7,leading=9)
+ body=ParagraphStyle("BodyX",parent=styles["BodyText"],fontName=base,fontSize=8.2,leading=10.6,spaceAfter=2)
+ h1=ParagraphStyle("H1X",parent=styles["Heading1"],fontName=base,fontSize=15,leading=18,spaceAfter=6)
+ h2=ParagraphStyle("H2X",parent=styles["Heading2"],fontName=base,fontSize=11.5,leading=14,spaceBefore=5,spaceAfter=3)
+ h3=ParagraphStyle("H3X",parent=styles["Heading3"],fontName=base,fontSize=9.4,leading=11.5,spaceBefore=3,spaceAfter=2)
+ mono=ParagraphStyle("MonoX",parent=body,fontName=base,fontSize=6.8,leading=8.5,wordWrap="CJK")
  doc=SimpleDocTemplate(str(out),pagesize=A4,leftMargin=12*mm,rightMargin=12*mm,topMargin=12*mm,bottomMargin=12*mm)
  story=[Paragraph("C v3 Vertical Slice v1 - Stage 2 Human Semantic Review",h1),
         Paragraph("Renderer-only artifact from the frozen existing Stage 2 output. No Stage 2 execution is performed by this document builder.",body),
@@ -255,26 +254,41 @@ def render_pdf(data,out):
   story+=[PageBreak(),Paragraph(f"{p['point_id']} - {p['final_stage2_status']}",h1)]
   if p["conditional_present"]:story.append(Paragraph("CONDITIONAL state present in Stage 2 output.",h2))
   sid=p["primary_location_source_statement_id"];src=p["source_statements"].get(sid,{})
-  story+=[Paragraph("WHO primary Location",h2),Paragraph(f"{sid}: {html.escape(str(src.get('text')))}",body),Spacer(1,4)]
-  rows=[["landmark ID","source","status","executor","identity"]]
+  story+=[Paragraph("WHO primary Location",h2),Paragraph(f"<b>{html.escape(str(sid))}</b>: {html.escape(str(src.get('text')))}",body),Spacer(1,3)]
+  story.append(Paragraph("Semantic decomposition / operands",h2))
   for o in p["operands"]:
-   rows.append([o["landmark_id"],str(o.get("source_raw")),o["status"],str(o["executor"]),canon(o["identity"])])
-  t=Table(rows,colWidths=[42*mm,43*mm,20*mm,28*mm,55*mm],repeatRows=1)
-  t.setStyle(TableStyle([("FONTNAME",(0,0),(-1,-1),base),("FONTSIZE",(0,0),(-1,-1),6.2),("GRID",(0,0),(-1,-1),0.25,colors.grey),("VALIGN",(0,0),(-1,-1),"TOP"),("BACKGROUND",(0,0),(-1,0),colors.lightgrey)]));story+=[Paragraph("Semantic decomposition / operands",h2),t,Spacer(1,4)]
-  rows=[["relation ID","status","operator","operand IDs","reason"]]
-  for r in p["relations"]:rows.append([r["relation_id"],r["status"],str(r.get("operator") or r.get("executor")),", ".join(r["operand_ids"]),str(r.get("reason"))])
-  t=Table(rows,colWidths=[50*mm,20*mm,30*mm,55*mm,33*mm],repeatRows=1)
-  t.setStyle(TableStyle([("FONTNAME",(0,0),(-1,-1),base),("FONTSIZE",(0,0),(-1,-1),6.2),("GRID",(0,0),(-1,-1),0.25,colors.grey),("VALIGN",(0,0),(-1,-1),"TOP"),("BACKGROUND",(0,0),(-1,0),colors.lightgrey)]));story+=[Paragraph("Relation / operator chain",h2),t]
+   lines=[
+    f"<b>{html.escape(str(o['landmark_id']))}</b>",
+    f"source: {html.escape(str(o.get('source_raw')))}",
+    f"class: {html.escape(str(o.get('landmark_class')))} | status: {html.escape(str(o.get('status')))} | executor: {html.escape(str(o.get('executor')))}",
+    f"identity: {html.escape(canon(o.get('identity')))}",
+    f"reason: {html.escape(str(o.get('reason')))}"
+   ]
+   story.append(KeepTogether([Paragraph("<br/>".join(lines),mono),Spacer(1,3)]))
+  story.append(Paragraph("Relation / operator chain",h2))
+  for r in p["relations"]:
+   lines=[
+    f"<b>{html.escape(str(r['relation_id']))}</b>",
+    f"status: {html.escape(str(r.get('status')))} | operator: {html.escape(str(r.get('operator') or r.get('executor')))}",
+    f"operand IDs: {html.escape(', '.join(r['operand_ids']))}",
+    f"direction: {html.escape(str(r.get('direction')))} | source statement: {html.escape(str(r.get('source_statement_id')))}",
+    f"reason: {html.escape(str(r.get('reason')))}"
+   ]
+   story.append(KeepTogether([Paragraph("<br/>".join(lines),mono),Spacer(1,3)]))
   if p["measurements"]:
-   story+=[Spacer(1,4),Paragraph("Measurements",h2)]
+   story+=[Paragraph("Measurements / calibration use",h2)]
    for m in p["measurements"]:story.append(Paragraph(html.escape(canon(m)),mono))
   if p["conditions"]:
-   story+=[Spacer(1,4),Paragraph("Conditions",h2)]
-   for c in p["conditions"]:story.append(Paragraph(html.escape(canon(c)),mono))
-  story+=[Spacer(1,4),Paragraph("Dependency edges (projection of existing explicit IDs)",h2)]
-  for e in p["dependency_edges"]:story.append(Paragraph(html.escape(f"{e['from']} -> {e['to']} [{e['kind']}]"),mono))
-  story+=[Spacer(1,4),Paragraph("Recorded data order",h2),Paragraph(html.escape(" -> ".join(p["recorded_data_order"])),mono),
-          Spacer(1,4),Paragraph("Final semantic execution result",h2),Paragraph(html.escape(canon(p["final_semantic_execution_result"])),mono)]
+   story+=[Paragraph("Conditions",h2)]
+   for co in p["conditions"]:story.append(Paragraph(html.escape(canon(co)),mono))
+  story+=[Paragraph("Dependency edges (projection of existing explicit IDs)",h2)]
+  for e in p["dependency_edges"]:
+   story.append(Paragraph(html.escape(f"{e['from']} -> {e['to']} [{e['kind']}]"),mono))
+  story+=[Paragraph("Recorded data order",h2),
+          Paragraph("Stage 2 output does not record timestamped per-operation runtime order. The following preserves exact serialized Stage 2 data order.",body),
+          Paragraph(html.escape(" -> ".join(p["recorded_data_order"])),mono),
+          Paragraph("Final semantic execution result",h2),
+          Paragraph(html.escape(canon(p["final_semantic_execution_result"])),mono)]
   if p["final_stage2_status"]!="RESOLVED":
    story+=[Paragraph("Blocking dependency",h2),Paragraph(html.escape(canon(p["blocking"])),mono)]
   story+=[Spacer(1,4),Paragraph("Coordinates generated: 0 | Legacy C coordinate referenced: 0",body),
