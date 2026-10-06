@@ -162,13 +162,21 @@
       {
         "type": "DERIVED_GEOMETRY_OUTPUT_NOT_BOUND_TO_DOWNSTREAM_RELATION",
         "detail": "Resolved midpoint/center/midpoint-between outputs must be represented as derived geometry identities and consumed by downstream relations when a named derived semantic operand exists."
+      },
+      {
+        "type": "LEXICALIZED_ANATOMICAL_ENTITY_FALSE_SUBFEATURE_SPLIT",
+        "detail": "An ontology/FMA-resolved lexicalized anatomical entity such as spinous process must not be re-decomposed into parent vertebra + generic process child for execution."
+      },
+      {
+        "type": "SUBFEATURE_SYNONYM_NORMALIZATION_GAP",
+        "detail": "Recognized lexical synonyms such as free extremity must normalize to a canonical subfeature type (free_end); unresolved geometry is distinct from unknown semantic type."
       }
     ],
     "latest_repair_candidate": {
-      "workflow_run_id": 37448526640,
-      "artifact_commit": "bc0fe46",
+      "workflow_run_id": 37450405490,
+      "artifact_commit": "4527db2",
       "validation": "PASS",
-      "checks": 298,
+      "checks": 304,
       "errors": 0,
       "post_repair_counts": {
         "parent_only_collapse": 0,
@@ -180,22 +188,25 @@
         "condition_linkage_loss": 0,
         "quantitative_relation_semantics_loss": 0,
         "derived_geometry_output_not_bound": 0,
+        "lexicalized_anatomical_entity_false_subfeature_split": 0,
+        "subfeature_synonym_normalization_gap": 0,
         "false_fallback": 0
       },
       "negative_tests_added": [
-        "quantitative_value_to_none",
-        "quantitative_unit_to_none",
-        "derived_output_binding_removed"
+        "lexicalized_process_generic_split",
+        "atomic_fma_internal_child_executable",
+        "free_extremity_normalization_removed",
+        "synonym_left_unknown"
       ],
       "human_reaudit_required": true
     }
   },
-  "next_gate": "Human semantic re-audit of the latest 47-page repair artifact; Stage 3 remains blocked.",
+  "next_gate": "Human semantic re-audit of the latest 47-page lexical-normalization repair artifact; Stage 3 remains blocked.",
   "semantic_repair": {
     "status": "PASS",
-    "workflow_run_id": 37444457416,
-    "artifact_commit": "29963a2",
-    "checks": 243,
+    "workflow_run_id": 37450405490,
+    "artifact_commit": "4527db2",
+    "checks": 304,
     "errors": 0,
     "known_affected_repair": {
       "TE20": "UNRESOLVED; body_position condition repaired to CONDITIONAL",
@@ -217,6 +228,13 @@
       "unused_child_subfeature": 0,
       "distinct_subfeature_identity_collapse": 0,
       "condition_preservation_failure": 0,
+      "direction_preservation_failure": 0,
+      "relation_nonoperand_semantics_loss": 0,
+      "condition_linkage_loss": 0,
+      "quantitative_relation_semantics_loss": 0,
+      "derived_geometry_output_not_bound": 0,
+      "lexicalized_anatomical_entity_false_subfeature_split": 0,
+      "subfeature_synonym_normalization_gap": 0,
       "false_fallback": 0
     },
     "negative_tests": {
