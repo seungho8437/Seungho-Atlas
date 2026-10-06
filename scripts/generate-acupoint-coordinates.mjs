@@ -256,6 +256,33 @@ function regionTarget(text,side){
 
 const cunY=trunkCun;
 const ordinalIntercostal={첫째:1,둘째:2,셋째:3,넷째:4,다섯째:5,여섯째:6,일곱째:7};
+const costalCartilageIds={1:'FMA7603',2:'FMA7703',3:'FMA7741',4:'FMA7768',5:'FMA7795',6:'FMA7822',7:'FMA7849'};
+function intercostalLevel(n,side){
+  const a=statsSeed(costalCartilageIds[n],side),b=statsSeed(costalCartilageIds[n+1],side);
+  if(a&&b)return (a.center[supAxis]+b.center[supAxis])/2;
+  return norm(supAxis,.76-(n-1)*.03);
+}
+const headHairStats=centerBounds(atlas.parts.filter(p=>/hair of head/i.test(p.name)));
+const anteriorHairlineLevel=headHairStats?.min[supAxis]??norm(supAxis,.895);
+function pupilAnchor(side){
+  const id=side==='left'?'FMA58082':side==='right'?'FMA58081':null;
+  return id?conceptStats(id)?.center:null;
+}
+let noseTipAnchor=null;
+{
+  let best=-Infinity;
+  const eyeY=(conceptStats('FMA58082')?.center[supAxis]??norm(supAxis,.92));
+  for(const p of surfaceParts){
+    const a=positionsOfPart(p);
+    for(let i=0;i<a.length;i+=3){
+      const v=[a[i],a[i+1],a[i+2]];
+      if(Math.abs(v[lrAxis]-bodyCenter[lrAxis])>extent[lrAxis]*.035)continue;
+      if(v[supAxis]<eyeY-extent[supAxis]*.085||v[supAxis]>eyeY+extent[supAxis]*.01)continue;
+      const score=anteriorSign*(v[apAxis]-bodyCenter[apAxis]);
+      if(score>best){best=score;noseTipAnchor=v;}
+    }
+  }
+}
 function wristLevel(side){const id=side==='left'?'FMA40121':side==='right'?'FMA40120':null;return (id?conceptStats(id):null)?.center[supAxis]??regionalGeometrySeed('wrist',side)?.[supAxis]??norm(supAxis,.50);}
 function elbowLevel(side){const r=statsSeed('FMA23463',side),u=statsSeed('FMA23466',side);return Math.max(r?.max[supAxis]??0,u?.max[supAxis]??0)||norm(supAxis,.64);}
 function forearmCun(side){return Math.abs(elbowLevel(side)-wristLevel(side))/12;}
@@ -299,13 +326,13 @@ function applyWhoConstraints(input,text,side){
   }
   const hair=text.match(/(?:앞머리선|머리선)[^,.]{0,35}?(?:위로|안쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(hair){
-    t[supAxis]=norm(supAxis,.895)+Number(hair[1])*cunY;
+    t[supAxis]=anteriorHairlineLevel+Number(hair[1])*trunkCun;
     count++;
   }
   const ic=text.match(/(첫째|둘째|셋째|넷째|다섯째|여섯째|일곱째)\s*갈비사이공간/);
   if(ic){
     const n=ordinalIntercostal[ic[1]];
-    t[supAxis]=norm(supAxis,.735-(n-1)*.027);
+    t[supAxis]=intercostalLevel(n,side);
     count++;
   }
   const refs=[
@@ -346,7 +373,7 @@ function applyWhoConstraints(input,text,side){
   if(/팔오금주름\s*위/.test(text)&&!/[0-9]\s*B-cun/.test(text)){t[supAxis]=norm(supAxis,.55);count++;}
   if(/손바닥쪽\s*손목주름\s*위에/.test(text)){t[supAxis]=norm(supAxis,.385);count++;}
   if(!/팔오금주름/.test(text)&&/오금주름의\s*가운데|오금주름\s*위/.test(text)){t[supAxis]=norm(supAxis,.20);count++;}
-  if(/코끝/.test(text)){t[supAxis]=norm(supAxis,.865);t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.46;count+=2;}
+  if(/코끝/.test(text)&&noseTipAnchor){for(let k=0;k<3;k++)t[k]=noseTipAnchor[k];count+=3;}
   if(/인중(?:의)?\s*정중선|인중의\s*중점/.test(text)){t[supAxis]=norm(supAxis,.835);count++;}
   if(/윗입술결절/.test(text)){t[supAxis]=norm(supAxis,.82);count++;}
   if(/윗입술소대/.test(text)){t[supAxis]=norm(supAxis,.808);count++;}
@@ -436,7 +463,7 @@ function applyWhoConstraints(input,text,side){
   if(/귀구슬|귓바퀴|꼭지돌기/.test(text)&&sideSign){
     t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*.86;count++;
   }
-  if(/동공/.test(text)&&sideSign){t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*.34;count++;}
+  if(/동공/.test(text)&&sideSign){const eye=pupilAnchor(side);t[lrAxis]=eye?eye[lrAxis]:bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*.34;count++;}
   if(/가쪽눈구석/.test(text)&&sideSign){
     t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*.55;
     t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.28;count+=2;
