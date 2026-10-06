@@ -2928,20 +2928,20 @@
     },
     "FMA13322": {
       "sourceNameEn": "right clavicle",
-      "nameKo": "오른빗장뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "빗장뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA13321",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         30
       ]
     },
     "FMA13323": {
       "sourceNameEn": "left clavicle",
-      "nameKo": "왼빗장뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "빗장뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA13321",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         30
       ]
@@ -3334,20 +3334,20 @@
     },
     "FMA13395": {
       "sourceNameEn": "right scapula",
-      "nameKo": "오른어깨뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "어깨뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA13394",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         29
       ]
     },
     "FMA13396": {
       "sourceNameEn": "left scapula",
-      "nameKo": "왼어깨뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "어깨뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA13394",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         29
       ]
@@ -6517,20 +6517,20 @@
     },
     "FMA22544": {
       "sourceNameEn": "right tibialis anterior",
-      "nameKo": "오른앞정강근",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "앞정강근",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA22532",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         63
       ]
     },
     "FMA22545": {
       "sourceNameEn": "left tibialis anterior",
-      "nameKo": "왼앞정강근",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "앞정강근",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA22532",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         63
       ]
@@ -8354,20 +8354,20 @@
     },
     "FMA23130": {
       "sourceNameEn": "right humerus",
-      "nameKo": "오른위팔뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "위팔뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA13303",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         30
       ]
     },
     "FMA23131": {
       "sourceNameEn": "left humerus",
-      "nameKo": "왼위팔뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "위팔뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA13303",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         30
       ]
@@ -8410,20 +8410,20 @@
     },
     "FMA23464": {
       "sourceNameEn": "right radius",
-      "nameKo": "오른노뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "노뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA23463",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         31
       ]
     },
     "FMA23465": {
       "sourceNameEn": "left radius",
-      "nameKo": "왼노뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "노뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA23463",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         31
       ]
@@ -8438,20 +8438,20 @@
     },
     "FMA23467": {
       "sourceNameEn": "right ulna",
-      "nameKo": "오른자뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "자뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA23466",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         31
       ]
     },
     "FMA23468": {
       "sourceNameEn": "left ulna",
-      "nameKo": "왼자뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "자뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA23466",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         31
       ]
@@ -9027,20 +9027,20 @@
     },
     "FMA24474": {
       "sourceNameEn": "right femur",
-      "nameKo": "오른넙다리뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "넙다리뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA9611",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         35
       ]
     },
     "FMA24475": {
       "sourceNameEn": "left femur",
-      "nameKo": "왼넙다리뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "넙다리뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA9611",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         35
       ]
@@ -9055,20 +9055,20 @@
     },
     "FMA24477": {
       "sourceNameEn": "right tibia",
-      "nameKo": "오른정강뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "정강뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA24476",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         36
       ]
     },
     "FMA24478": {
       "sourceNameEn": "left tibia",
-      "nameKo": "왼정강뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "정강뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA24476",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         36
       ]
@@ -9083,20 +9083,20 @@
     },
     "FMA24480": {
       "sourceNameEn": "right fibula",
-      "nameKo": "오른종아리뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "종아리뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA24479",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         36
       ]
     },
     "FMA24481": {
       "sourceNameEn": "left fibula",
-      "nameKo": "왼종아리뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "종아리뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA24479",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         36
       ]
@@ -9131,20 +9131,20 @@
     },
     "FMA24486": {
       "sourceNameEn": "right patella",
-      "nameKo": "오른무릎뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "무릎뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA24485",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         35
       ]
     },
     "FMA24487": {
       "sourceNameEn": "left patella",
-      "nameKo": "왼무릎뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "무릎뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA24485",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         35
       ]
@@ -15694,20 +15694,20 @@
     },
     "FMA52738": {
       "sourceNameEn": "right temporal bone",
-      "nameKo": "오른관자뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "관자뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA52737",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         19
       ]
     },
     "FMA52739": {
       "sourceNameEn": "left temporal bone",
-      "nameKo": "왼관자뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "관자뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA52737",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         19
       ]
@@ -15778,20 +15778,20 @@
     },
     "FMA52788": {
       "sourceNameEn": "right parietal bone",
-      "nameKo": "오른마루뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "마루뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA9613",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         15
       ]
     },
     "FMA52789": {
       "sourceNameEn": "left parietal bone",
-      "nameKo": "왼마루뼈",
-      "result": "derived-from-KAA-lateral-base",
+      "nameKo": "마루뼈",
+      "result": "display-laterality-suppressed",
       "baseId": "FMA9613",
-      "note": "Deterministic Korean-name inheritance from an exact KAA-supported English base concept: right/left + base English -> 오른/왼 + base Korean.",
+      "note": "Display label intentionally omits redundant left/right laterality for a simple paired structure. FMA identity, sourceNameEn, and baseId retain side identity.",
       "pages": [
         15
       ]
