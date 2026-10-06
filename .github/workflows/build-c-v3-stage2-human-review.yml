@@ -70,6 +70,7 @@ jobs:
             git push origin HEAD:feature/korean-tcm-knowledge
           fi
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: c-v3-stage2-human-review
           path: |
