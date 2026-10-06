@@ -14807,16 +14807,16 @@
   "FMA32547": {
     "sourceNameEn": "right infraspinatus muscle",
     "status": "derived",
-    "nameKo": "오른가시아래근",
-    "legacyKo": "우극하근",
-    "hanja": "右棘下筋"
+    "nameKo": "가시아래근",
+    "legacyKo": "극하근",
+    "hanja": "棘下筋"
   },
   "FMA32548": {
     "sourceNameEn": "left infraspinatus muscle",
     "status": "derived",
-    "nameKo": "왼가시아래근",
-    "legacyKo": "좌극하근",
-    "hanja": "左棘下筋"
+    "nameKo": "가시아래근",
+    "legacyKo": "극하근",
+    "hanja": "棘下筋"
   },
   "FMA32549": {
     "nameKo": "큰원근",
@@ -33721,16 +33721,16 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA13373": {
-    "nameKo": "오른가슴큰",
-    "legacyKo": "우흉근대",
-    "hanja": "右胸筋大",
+    "nameKo": "큰가슴근",
+    "legacyKo": "대흉근",
+    "hanja": "大胸筋",
     "sourceNameEn": "right pectoralis major",
     "status": "derived"
   },
   "FMA13374": {
-    "nameKo": "왼가슴큰",
-    "legacyKo": "좌흉근대",
-    "hanja": "左胸筋大",
+    "nameKo": "큰가슴근",
+    "legacyKo": "대흉근",
+    "hanja": "大胸筋",
     "sourceNameEn": "left pectoralis major",
     "status": "derived"
   },
