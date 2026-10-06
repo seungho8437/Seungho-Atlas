@@ -37,19 +37,19 @@ def git_blob(p):return subprocess.check_output(["git","hash-object",p],text=True
 def norm(s):return re.sub(r"[^a-z0-9]+"," ",(s or "").lower().replace("proxi-mal","proximal").replace("pos-terior","posterior")).strip()
 def subfeature_types(raw):
  n=norm(raw)
- n=re.sub(r"\\bborders\\b","border",n);n=re.sub(r"\\bmargins\\b","margin",n);n=re.sub(r"\\bedges\\b","edge",n);n=re.sub(r"\\bends\\b","end",n);n=re.sub(r"\\bangles\\b","angle",n)
+ n=re.sub(r"\bborders\b","border",n);n=re.sub(r"\bmargins\b","margin",n);n=re.sub(r"\bedges\b","edge",n);n=re.sub(r"\bends\b","end",n);n=re.sub(r"\bangles\b","angle",n)
  out=[]
- if re.search(r"anterior\\s+(?:and\\s+posterior\\s+)?border",n):out.append("anterior border")
- if re.search(r"(?:anterior\\s+and\\s+)?posterior\\s+border",n):out.append("posterior border")
+ if re.search(r"anterior\s+(?:and\s+posterior\s+)?border",n):out.append("anterior border")
+ if re.search(r"(?:anterior\s+and\s+)?posterior\s+border",n):out.append("posterior border")
  for x in ("superior border","inferior border","free end","midpoint","centre","center","margin","edge","angle","apex"):
   if x in n and x not in out:out.append(x)
  if "border" in n and not any(x.endswith("border") for x in out):out.append("border")
- if re.search(r"\\bend\\b",n) and "free end" not in out:out.append("end")
+ if re.search(r"\bend\b",n) and "free end" not in out:out.append("end")
  return out
 def subfeature_type(raw):
  xs=subfeature_types(raw);return xs[0] if len(xs)==1 else None
 def node_span(node_id):
- m=re.search(r":(\\d+)-(\\d+)(?::[0-9a-f]+)?$",node_id or "")
+ m=re.search(r":(\d+)-(\d+)(?::[0-9a-f]+)?$",node_id or "")
  return (int(m.group(1)),int(m.group(2))) if m else None
 
 def span_info(node_id):
@@ -206,7 +206,7 @@ def main():
    if nid not in binding_by_child:continue
    b=binding_by_child[nid];parent_id=b["parent_landmark_id"];sfs=subfeature_types(n.get("source_raw"));sf=sfs[0] if len(sfs)==1 else None;par=lout.get(parent_id)
    if not sf:
-    lout[nid]={"status":"UNRESOLVED","executor":"composite_subfeature_binding","geometry":None,"reason":"child subfeature type is absent or semantically non-atomic","provenance":{"binding_id":b["binding_id"],"parent_landmark_id":parent_id,"subfeature_types":sfs}
+    lout[nid]={"status":"UNRESOLVED","executor":"composite_subfeature_binding","geometry":None,"reason":"child subfeature type is absent or semantically non-atomic","provenance":{"binding_id":b["binding_id"],"parent_landmark_id":parent_id,"subfeature_types":sfs}}
    elif not par or par.get("status")!="RESOLVED":
     lout[nid]={"status":"UNRESOLVED","executor":"composite_subfeature_binding","geometry":None,"reason":"parent entity is not uniquely resolved","provenance":{"binding_id":b["binding_id"],"parent_landmark_id":parent_id,"subfeature_type":sf}}
    elif sf in SYMBOLIC_CONSTRUCTIBLE:
