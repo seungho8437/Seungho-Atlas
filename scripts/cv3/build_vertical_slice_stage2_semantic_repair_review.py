@@ -57,7 +57,6 @@ def point_projection(pid,before,after,g,validation,rejection):
     "semantic_identity":{"landmark_class":bnodes.get(k,{}).get("landmark_class")},"executable_identity":identity(a["landmarks"].get(k,{})),
     "status":a["landmarks"].get(k,{}).get("status")} for k in kids]})
  rels=[]
- edges=[]
  for rid,r in a["relations"].items():
   con=r.get("constraint") or {};sflds=r.get("semantic_fields") or {}
   sem=sflds.get("semantic_argument_node_ids") or con.get("semantic_argument_node_ids") or r.get("semantic_argument_node_ids") or r.get("argument_node_ids") or []
@@ -66,12 +65,24 @@ def point_projection(pid,before,after,g,validation,rejection):
    "operator":sflds.get("op") or con.get("op") or r.get("executor"),"semantic_operand_ids":sem,"actual_executable_operand_ids":exe,
    "direction":sflds.get("direction") if "direction" in sflds else con.get("direction"),
    "branch_id":sflds.get("branch_id"),"source_statement_id":sflds.get("source_statement_id") or con.get("source_statement_id"),
+   "bound_measurement_ids":sflds.get("bound_measurement_ids",[]),"quantitative_constraints":sflds.get("quantitative_constraints",[]),
+   "statement_measurement_ids":sflds.get("statement_measurement_ids",[]),
    "semantic_fields_hash":r.get("semantic_fields_hash"),"status":r.get("status"),"reason":r.get("reason")})
+ measurements=[]
+ for mid,m in a.get("measurements",{}).items():
+  con=m.get("constraint") or {}
+  measurements.append({"measurement_id":mid,"status":m.get("status"),"executor":m.get("executor"),
+   "value":con.get("value"),"unit":con.get("unit"),"source_unit":con.get("source_unit"),"direction":con.get("direction"),
+   "anchor_landmark_id":con.get("anchor_landmark_id"),"source_statement_id":con.get("source_statement_id"),"who_pdf_page":con.get("who_pdf_page"),"reason":m.get("reason")})
+ derived_geometries=list(a.get("derived_geometries",{}).values())
+ edges=[]
+ for r0 in rels:
+  sem=r0["semantic_operand_ids"];exe=r0["actual_executable_operand_ids"];rid=r0["relation_id"]
   for s,e in zip(sem,exe):
    if s!=e:edges.append({"from":s,"to":e,"kind":"semantic_to_executable"})
   for e in exe:edges.append({"from":e,"to":rid,"kind":"executable_to_relation"})
-  sid=sflds.get("source_statement_id") or con.get("source_statement_id")
-  if sid:edges.append({"from":rid,"to":sid,"kind":"relation_to_statement"})
+  for mid in r0.get("bound_measurement_ids",[]):edges.append({"from":mid,"to":rid,"kind":"measurement_to_relation"})
+  if r0.get("source_statement_id"):edges.append({"from":rid,"to":r0["source_statement_id"],"kind":"relation_to_statement"})
  for h in hierarchy:
   for ch in h["children"]:edges.append({"from":h["parent_node_id"],"to":ch["node_id"],"kind":"parent_to_child_subfeature"})
  for m in measurements:
@@ -84,17 +95,7 @@ def point_projection(pid,before,after,g,validation,rejection):
   ident=o.get("identity") or {}
   if ident.get("kind")=="derived_relation_output" and ident.get("constructed_id"):
    edges.append({"from":ident["constructed_id"],"to":o["node_id"],"kind":"derived_geometry_to_semantic_operand"})
-  for r0 in rels:
-  rr=a["relations"].get(r0["relation_id"],{});sf=rr.get("semantic_fields") or {}
-  for mid in sf.get("bound_measurement_ids",[]):edges.append({"from":mid,"to":r0["relation_id"],"kind":"measurement_to_relation"})
  for s in stm:edges.append({"from":s["source_statement_id"],"to":pid,"kind":"statement_to_point"})
- measurements=[]
- for mid,m in a.get("measurements",{}).items():
-  con=m.get("constraint") or {}
-  measurements.append({"measurement_id":mid,"status":m.get("status"),"executor":m.get("executor"),
-   "value":con.get("value"),"unit":con.get("unit"),"source_unit":con.get("source_unit"),"direction":con.get("direction"),
-   "anchor_landmark_id":con.get("anchor_landmark_id"),"source_statement_id":con.get("source_statement_id"),"who_pdf_page":con.get("who_pdf_page"),"reason":m.get("reason")})
- derived_geometries=list(a.get("derived_geometries",{}).values())
  conditions=[]
  condsrc={x["condition_id"]:x for x in g.get("conditions",[])}
  for cid,c in a["conditions"].items():
