@@ -193,13 +193,10 @@ def main():
   lout={}
   # First pass: terminal entities / surface-registry geometry / references.
   for n in lms:
-   nid=n["node_id"];sr=surface_registry_id(n,stmt[n["source_statement_id"]]["text_canonical"])
-   if sr:
-    res=surf[sr]
-    lout[nid]={"status":res.status,"executor":"approved_surface_registry","geometry":{"kind":"surface_registry","registry_id":sr,"geometry_hash":res.geometry_hash()} if res.status=="RESOLVED" else None,
-               "reason":res.notes[0] if res.notes else (None if res.status=="RESOLVED" else "approved registry unresolved")}
-    continue
-   disp=n.get("terminal_disposition")
+   nid=n["node_id"];disp=n.get("terminal_disposition")
+   # Frozen B identity has precedence.  A resolved_fma/cross_reference landmark
+   # must not be replaced merely because its lexical span is also a reviewed
+   # surface expression such as "face" or "head".
    if disp=="resolved_fma":
     fid=n.get("fma_id");co=concept.get(fid)
     if co and co.get("elements"):
@@ -210,17 +207,24 @@ def main():
     lout[nid]={"status":"RESOLVED" if rid in all_point_ids else "INVALID","executor":"reference_acupoint",
                "geometry":{"kind":"reference_acupoint","point_id":rid} if rid in all_point_ids else None,
                "reason":None if rid in all_point_ids else "reference point absent from B graph"}
-   elif disp in ("registry_limited","specialized_anchor"):
+   else:
+    sr=surface_registry_id(n,stmt[n["source_statement_id"]]["text_canonical"])
+    if sr:
+     res=surf[sr]
+     lout[nid]={"status":res.status,"executor":"approved_surface_registry","geometry":{"kind":"surface_registry","registry_id":sr,"geometry_hash":res.geometry_hash()} if res.status=="RESOLVED" else None,
+                "reason":res.notes[0] if res.notes else (None if res.status=="RESOLVED" else "approved registry unresolved")}
+     continue
+    if disp in ("registry_limited","specialized_anchor"):
     z=atlas_lookup(store,n.get("source_raw",""));lout[nid]={"executor":"atlas_name_resolution",**z}
-   elif disp in ("source_backed_derived_unresolved","ambiguous_generic","parent_unresolved","blocked_by_context"):
+    elif disp in ("source_backed_derived_unresolved","ambiguous_generic","parent_unresolved","blocked_by_context"):
     z=atlas_lookup(store,n.get("source_raw",""))
     if z["status"]=="RESOLVED":
      lout[nid]={"executor":"atlas_name_resolution",**z}
     else:lout[nid]={"status":"UNRESOLVED","executor":"explicit_unresolved_taxonomy","geometry":None,"reason":disp}
-   elif n.get("landmark_class") in ("soft_tissue_feature","orifice_or_cavity","vessel","cartilage","muscle","tendon","bone.opening","bone.process_or_prominence","structure.part","bone.bone"):
+    elif n.get("landmark_class") in ("soft_tissue_feature","orifice_or_cavity","vessel","cartilage","muscle","tendon","bone.opening","bone.process_or_prominence","structure.part","bone.bone"):
     z=atlas_lookup(store,n.get("source_raw",""));lout[nid]={"executor":"atlas_name_resolution",**z}
-   else:
-    lout[nid]={"status":"UNRESOLVED","executor":"no_family_executor","geometry":None,"reason":f"unsupported landmark disposition/class: {disp}/{n.get('landmark_class')}"}
+    else:
+     lout[nid]={"status":"UNRESOLVED","executor":"no_family_executor","geometry":None,"reason":f"unsupported landmark disposition/class: {disp}/{n.get('landmark_class')}"}
 
   # Second pass: source-backed composite child subfeatures can execute if parent executes.
   for n in lms:
