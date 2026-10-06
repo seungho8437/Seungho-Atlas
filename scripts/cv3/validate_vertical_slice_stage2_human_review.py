@@ -50,7 +50,7 @@ def edges(p,condsrc):
   sid=condsrc.get(cid,{}).get("source_statement_id")
   if sid:e.append({"from":cid,"to":sid,"kind":"condition_to_statement"})
  for s in p["statements"]:e.append({"from":s["source_statement_id"],"to":p["point_id"],"kind":"statement_to_point"})
- return e
+ return sorted(e,key=lambda x:(x["kind"],x["from"],x["to"]))
 
 def blocker(p,bnodes):
  loc=loc_statement(p)
