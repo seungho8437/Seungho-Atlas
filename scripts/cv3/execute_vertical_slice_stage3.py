@@ -60,7 +60,7 @@ def side_of_curve(curve,sub):
  m=sum(xs)/len(xs)
  return "left" if m>0 else "right"
 
-def dedupe_geometric_ray_hits(hits,tol_t=1e-6,tol_point=1e-6):
+def dedupe_geometric_ray_hits(hits,tol_t=1e-3,tol_point=1e-3):
  groups=[]
  for h in hits:
   placed=False
