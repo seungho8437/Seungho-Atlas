@@ -194,7 +194,8 @@ def _line_order(ctx:GeometryContext,idxs:Iterable[int],axis:int=0)->list[Vec3]:
  return [ctx.world(q) for q in vals]
 
 def _rib_parts(ctx:GeometryContext,n:int,side:str)->list[str]:
- patterns=(f"rib {n}",f"{n}th rib",f"{n}rd rib",f"{n}nd rib",f"{n}st rib")
+ word={4:"fourth",5:"fifth"}[n]
+ patterns=(f"rib {n}",f"{n}th rib",f"{n}rd rib",f"{n}nd rib",f"{n}st rib",f"{word} rib",f"rib, {word}",f"rib {word}")
  found=[]
  for p in ctx.store.atlas["parts"]:
   nm=p["name"].lower()
