@@ -29,5 +29,9 @@
     "If a relation uses a composite landmark with an extracted child subfeature, the executable dependency chain must bind and use that child subfeature or remain UNRESOLVED.",
     "Pose/body-position conditions incompatible with default atlas pose must remain CONDITIONAL."
   ],
-  "note": "Automated identity/structural validation remains valid for artifact consistency, but is insufficient for semantic-granularity preservation."
+  "note": "Automated identity/structural validation remains valid for artifact consistency, but is insufficient for semantic-granularity preservation. Historical rejection retained for provenance; it is superseded by the later PASS artifact.",
+  "historical": true,
+  "superseded": true,
+  "superseded_by": "artifacts/c-v3/vertical-slice-v1/stage2-human-semantic-audit-approval.json",
+  "current_stage2_human_semantic_audit": "PASS"
 }
