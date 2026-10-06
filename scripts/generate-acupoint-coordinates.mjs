@@ -654,9 +654,9 @@ function trianglePlaneIntersection(tri,axis,value){
   return pts;
 }
 function respectsHardLocks(q,target,locks){
-  const tolSup=Math.max(.018,bodyDiag*.010);
-  const tolLr=Math.max(.024,bodyDiag*.013);
-  const tolAp=Math.max(.055,bodyDiag*.030);
+  const tolSup=Math.max(.030,bodyDiag*.014);
+  const tolLr=Math.max(.045,bodyDiag*.020);
+  const tolAp=Math.max(.070,bodyDiag*.035);
   if(locks.sup&&Math.abs(q[supAxis]-target[supAxis])>tolSup)return false;
   if(locks.lr&&Math.abs(q[lrAxis]-target[lrAxis])>tolLr)return false;
   if(locks.ap&&Math.abs(q[apAxis]-target[apAxis])>tolAp)return false;
@@ -1032,7 +1032,10 @@ for(const p of acupoints){
       ap:/손바닥|손등|발바닥|발등|손허리|손가락|발허리|발가락|어깨뼈\s*부위|어깨세모근|가쪽눈구석|관자부|앞가슴|아랫배|복부|배꼽|앞정중선/.test(locText)
     };
     const region=projectionRegion(locText,target);
-    const projected=project(target,side,locks,region);
+    let projected;
+    try{projected=project(target,side,locks,region);}
+    catch(error){throw new Error('Projection failed for '+p.id+':'+side+' target='+JSON.stringify(target)+' locks='+JSON.stringify(locks)+' region='+JSON.stringify(region)+' :: '+(error instanceof Error?error.message:String(error)));}
+
     const sideExpected=side==='left'?leftSign:side==='right'?-leftSign:0;
     const lateral=(projected.point[lrAxis]-bodyCenter[lrAxis]);
     const sideOk=side==='midline'?Math.abs(lateral)<=extent[lrAxis]*.12:Math.sign(lateral||0)===sideExpected;
