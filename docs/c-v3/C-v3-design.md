@@ -1,6 +1,6 @@
 # C v3 — Canonical Four-Stage Design
 
-Status: **Stage 1 APPROVED · Stage 2 IN PROGRESS**
+Status: **Stage 1 APPROVED · Vertical Slice Stage 2 APPROVED · Stage 3 NOT STARTED**
 
 This document is the canonical C v3 contract. Rejected S1/G1 implementations are not active.
 
@@ -249,8 +249,39 @@ Only Stage 4 approval permits `GLOBAL_VALIDATED`.
 - Stage 1 automatic validation on BodyParts3D: **PASS**.
 - Stage 1 human visual review: **APPROVED by user after z-buffer hidden-surface QC**.
 - Stage 1: **APPROVED**.
-- Stage 2: **IN PROGRESS**.
+- Stage 2 Vertical Slice v1: **APPROVED**. Full-graph Stage 2 expansion has not started.
 - Vertical Slice v1 surface-registry + calibration human review: **APPROVED**.
 - Vertical Slice Stage 2 automated structural validation: **PASS**.
-- Vertical Slice Stage 2 human semantic audit: **REJECTED** — earlier collapse/dependency/condition/direction/quantitative/derived-output defects were repaired in successive candidates; the latest human audit added lexicalized-anatomical-entity false subfeature splitting and subfeature synonym normalization as mandatory contracts. Latest candidate passes the expanded independent validator, but human re-audit is still required; Stage 3 remains blocked.
-- No new acupoint coordinates have been generated or deployed.
+- Vertical Slice Stage 2 human semantic audit: **PASS** — the latest 20-point human re-audit accepts the repaired semantic execution. Suppressed/provenance-only parse residue is non-blocking provided it is isolated from canonical execution and point-status inference.
+- Stage 3: **NOT STARTED**; no new acupoint coordinates have been generated or deployed.
+
+
+## Non-blocking regression watchpoint — SUPPRESSED_PROVENANCE_EXECUTION_ISOLATION
+
+Suppressed/provenance-only parse nodes may remain in the audit graph. Their presence alone is not a semantic defect. They become blocking only if they contaminate canonical execution or status inference.
+
+For every expansion cohort and the 361-point full execution, the validator report must emit all three metrics below across the complete dataset:
+
+- `suppressed_executable_operand_count` — number of `semantic_suppressed=true` nodes used in `executable_argument_node_ids`. Expected: **0**.
+- `suppressed_status_aggregation_influence_count` — number of cases in which a suppressed node changes point-level RESOLVED/UNRESOLVED aggregation. Expected: **0**.
+- `suppressed_only_resolved_path_count` — number of RESOLVED relations whose canonical success depends on a suppressed node or suppressed-only path. Expected: **0**.
+
+A nonzero metric does not authorize a point patch. First inventory all occurrences, determine whether the structure repeats, and decide whether source semantics or canonical execution is actually affected. Promote the issue to a blocking defect family only when the promotion criteria below are satisfied.
+
+## Defect-family promotion criteria
+
+A new blocking defect-family candidate requires at least one of:
+
+1. WHO/source semantics is actually lost or transformed.
+2. An incorrect operand, operator, direction, measurement, or condition is executed.
+3. The issue can produce false RESOLVED or an incorrect coordinate.
+4. The same structural failure repeats across independent source expressions.
+5. A frozen semantic-contract invariant is violated.
+
+The following are non-blocking by default when they do not affect canonical execution/status: suppressed parser residue, provenance-only shadow parses, duplicate human-review rendering, and diagnostic nodes.
+
+## Anti-overfitting rule for expansion
+
+Do not repair expansion failures by hard-coding an acupoint ID, a single WHO sentence, or a point-specific suppression solely to satisfy a validator. A point-only change is not considered a defect-family fix. The repair sequence is: inventory → structural pattern analysis → defect-family decision → validator contract → negative test → full regression.
+
+Expansion strategy remains: **20-point Vertical Slice → expansion cohort → 361-point full execution**. Existing defect-family recurrence is treated as a validator-contract failure; human analysis should focus on genuinely new failure families.
