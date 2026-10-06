@@ -199,7 +199,8 @@
         "free_extremity_normalization_removed",
         "synonym_left_unknown"
       ],
-      "human_reaudit_required": true
+      "human_reaudit_required": false,
+      "human_reaudit_completed": true
     },
     "pass_scope": "Vertical Slice v1 20-point Stage 2 semantic execution only",
     "resolved_defect_families": [
@@ -251,9 +252,11 @@
       "WHO-string-specific exceptions",
       "point-specific suppression added only to pass a validator",
       "individual point patch accepted as a defect-family fix"
-    ]
+    ],
+    "historical_defects_status": "RESOLVED_IN_APPROVED_VERTICAL_SLICE",
+    "current_blocking_defects": []
   },
-  "next_gate": "Stage 2 Vertical Slice v1 is human-approved. Stage 3 remains NOT STARTED and requires a separate explicit command.",
+  "next_gate": "Stage 2 Vertical Slice v1 is approved. Stage 3 remains NOT STARTED and requires a separate explicit command.",
   "semantic_repair": {
     "status": "PASS",
     "workflow_run_id": 37450405490,
