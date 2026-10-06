@@ -10,6 +10,9 @@ on:
       - scripts/generate-acupoint-coordinates.mjs
       - scripts/generate-acupoint-exception-review.mjs
       - scripts/validate-acupoint-spatial.mjs
+      - scripts/validate-knowledge.mjs
+      - lib/anatomy-knowledge/types.ts
+      - app/page.tsx
       - .github/workflows/generate-acupoint-coordinates.yml
 
 concurrency:
