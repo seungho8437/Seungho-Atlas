@@ -1076,7 +1076,27 @@ function contextCun(text,side){
   return trunkCun;
 }
 function executeSemanticRelations(base,point,side){
-  const target=[...base],graphRelations=semanticRelationsByPoint.get(point.id)??[];
+  const target=[...base];
+  const relationPriority=type=>({
+    'center-of':10,
+    'midpoint-of-entity':10,
+    'between':10,
+    'midpoint-between':10,
+    'at-junction':10,
+    'same-level':20,
+    'on-line':20,
+    'fraction-along-line':20,
+    'relative-to':30,
+    'superior-to':30,
+    'inferior-to':30,
+    'overlies':35,
+    'surface-landmark':90,
+    'reference-acupoint':90
+  }[type]??50);
+  // B v2.1 records source order, not execution dependency order.  Composite
+  // anchors must be established before directional offsets; otherwise a later
+  // "centre of ..." relation can erase an earlier B-cun displacement.
+  const graphRelations=[...(semanticRelationsByPoint.get(point.id)??[])].sort((a,b)=>relationPriority(a.relation_type)-relationPriority(b.relation_type));
   const measurements=semanticMeasurementsByPoint.get(point.id)??[];
   const executed=[],unresolved=[];
   for(const r of graphRelations){
