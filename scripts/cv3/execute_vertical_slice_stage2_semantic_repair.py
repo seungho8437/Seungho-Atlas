@@ -35,9 +35,22 @@ def sha256(p):
  return h.hexdigest()
 def git_blob(p):return subprocess.check_output(["git","hash-object",p],text=True).strip()
 def norm(s):return re.sub(r"[^a-z0-9]+"," ",(s or "").lower().replace("proxi-mal","proximal").replace("pos-terior","posterior")).strip()
-def subfeature_type(raw):
+def subfeature_types(raw):
  n=norm(raw)
- return next((x for x in SUBFEATURES if x in n),None)
+ n=re.sub(r"\\bborders\\b","border",n);n=re.sub(r"\\bmargins\\b","margin",n);n=re.sub(r"\\bedges\\b","edge",n);n=re.sub(r"\\bends\\b","end",n);n=re.sub(r"\\bangles\\b","angle",n)
+ out=[]
+ if re.search(r"anterior\\s+(?:and\\s+posterior\\s+)?border",n):out.append("anterior border")
+ if re.search(r"(?:anterior\\s+and\\s+)?posterior\\s+border",n):out.append("posterior border")
+ for x in ("superior border","inferior border","free end","midpoint","centre","center","margin","edge","angle","apex"):
+  if x in n and x not in out:out.append(x)
+ if "border" in n and not any(x.endswith("border") for x in out):out.append("border")
+ if re.search(r"\\bend\\b",n) and "free end" not in out:out.append("end")
+ return out
+def subfeature_type(raw):
+ xs=subfeature_types(raw);return xs[0] if len(xs)==1 else None
+def node_span(node_id):
+ m=re.search(r":(\\d+)-(\\d+)(?::[0-9a-f]+)?$",node_id or "")
+ return (int(m.group(1)),int(m.group(2))) if m else None
 
 def span_info(node_id):
  m=re.search(r":(\d+)-(\d+)(?::[^:]+)?$",node_id or "")
