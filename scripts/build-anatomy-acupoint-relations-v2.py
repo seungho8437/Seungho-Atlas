@@ -1,9 +1,10 @@
 import json,re,hashlib,copy,os,zipfile,csv,sys
+from b_v2_source_semantics import source_expected_v2, semantic_text_with_map, orig_span as source_orig_span
 from collections import defaultdict,Counter
 from pathlib import Path
 
-BASE=Path(os.environ.get('B_V2_BASE','/mnt/data/b_semantic_audit')).resolve()
-OUT=Path(os.environ.get('B_V2_OUT',str(BASE/'b_v2'))).resolve()
+BASE=Path(os.environ.get('B_V2_BASE','/mnt/data/b_semantic_audit'))
+OUT=Path(os.environ.get('B_V2_OUT',str(BASE/'b_v2_final')))
 OUT.mkdir(parents=True,exist_ok=True)
 
 def load(name):
@@ -38,30 +39,52 @@ def span_obj(text,start,end,role=None,source_segments=None):
 v1=load('anatomy-acupoint-relations.json')
 ledger=load('b-semantic-integrity-statement-ledger-v1.json')
 defects=load('b-semantic-integrity-defect-inventory-v1.json')
-try:
-    regcases=load('b-semantic-integrity-regression-cases-v1.json')
-except FileNotFoundError:
-    regcases={'regression_cases':{
-      'CV1':{'statements':['S:CV1:location','S:CV1:note:1']},
-      'CV12':{'statements':['S:CV12:location','S:CV12:note:1']},
-      'GB26':{'statements':['S:GB26:location','S:GB26:note:1','S:GB26:note:2']},
-      'ST35':{'statements':['S:ST35:location','S:ST35:note:1']},
-      'ST29':{'statements':['S:ST29:location','S:ST29:note:1']}
-    }}
+regcases=load('b-semantic-integrity-regression-cases-v1.json')
 loc=load('location_fma_identity_resolution_final_v1.json')
 notes=load('notes_anatomical_identity_mapping_v1.json')
 remarks=load('remarks_adjudication_v1.json')
+frozen_composite=load('frozen_upstream/location_composite_binding_v0.1.json')
 
 ledger_by={s['statement_id']:s for s in ledger['statements']}
 v1_source_by={s['source_statement_id']:s for s in v1['source_statements']}
 
 # ---- frozen upstream snapshot hashes before build ----
+FROZEN_DIR=BASE/'frozen_upstream'
 upstream_files={
- 'Location identity-resolution finalization v1':BASE/'location_fma_identity_resolution_final_v1.json',
- 'Notes anatomical identity mapping v1 (derived from frozen Notes semantic-role v0.3)':BASE/'notes_anatomical_identity_mapping_v1.json',
- 'Remarks adjudication v1 (1A-backed)':BASE/'remarks_adjudication_v1.json',
+ '1A v1.0.5':FROZEN_DIR/'who_361_points_1A_annotations_v1.0.5.json',
+ 'Notes semantic-role v0.3':FROZEN_DIR/'1A_note_semantic_roles_v0.3.json',
+ 'Location semantic target v0.1':FROZEN_DIR/'location_semantic_target_layer_v0.1.json',
+ 'Composite binding/decomposition v0.1':FROZEN_DIR/'location_composite_binding_v0.1.json',
+ 'Location identity-resolution finalization v1':FROZEN_DIR/'location_fma_identity_resolution_final_v1.json',
+}
+expected_upstream_sha={
+ '1A v1.0.5':'f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762',
+ 'Notes semantic-role v0.3':'ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a',
+ 'Location semantic target v0.1':'77fd48c73129eb24dd7c5bc81ade3a6416c62b34f76145743f452f5d122197bc',
+ 'Composite binding/decomposition v0.1':'3c6bf81de00508f0a2ee168b2cf37fffc295ade465883358ce168f403cc2f4c9',
+ 'Location identity-resolution finalization v1':'3f01697631db39cb6efa32c443ec0e3a0050c287cfa2c8e12811325552ddff53',
 }
 upstream_before={k:sha_file(p) for k,p in upstream_files.items()}
+for k,h in expected_upstream_sha.items():
+    if upstream_before[k]!=h: raise RuntimeError(f'frozen upstream SHA mismatch: {k} {upstream_before[k]} != {h}')
+policy_contract_before={'policy_baseline':loc.get('policy_baseline'),'registry_blob_sha':next((r.get('final_disposition',{}).get('registry_blob_sha') for r in loc['records'] if r.get('final_disposition',{}).get('registry_blob_sha')),None)}
+if policy_contract_before['policy_baseline']!='v0.3.1-frozen': raise RuntimeError('FMA policy baseline is not v0.3.1-frozen')
+
+# Direct WHO raw-page verification: every ledger statement must occur on its recorded PDF page.
+def source_norm(s):
+    s=str(s or '').lower().replace('\u00ad','')
+    s=re.sub(r'(?<=[a-z])-\s+(?=[a-z])','-',s)
+    return re.sub(r'\s+',' ',s).strip()
+pages={}
+with open(BASE/'primary_pages_raw.jsonl',encoding='utf-8') as f:
+    for line in f:
+        d=json.loads(line); pages[int(d['pdf_page'])]=d.get('text','')
+source_verify_fail=[]
+for st in ledger['statements']:
+    page=pages.get(int(st['source_page']),'')
+    if source_norm(st['source_text']) not in source_norm(page):
+        source_verify_fail.append({'statement_id':st['statement_id'],'pdf_page':st['source_page']})
+if source_verify_fail: raise RuntimeError('WHO direct source verification failed: '+json.dumps(source_verify_fail[:10]))
 
 # ---- upstream source-backed candidate mentions, never B-v1 landmark reuse ----
 up=defaultdict(list)
@@ -100,40 +123,79 @@ for r in remarks['records']:
 
 # ---- source-only specification compiler ----
 def find_coord_and_split(text, clause_start, clause_end):
-    """Return two source-backed operand expressions for 'between ... and ...'. Handles common shared-parent coordination."""
+    """Parse source-faithful BETWEEN operands.
+    Returns either two explicit endpoint expressions or one unresolved endpoint-set
+    expression when the WHO source specifies a plural/pair without lexical identities.
+    No nearby-landmark substitution is allowed.
+    """
     raw=text[clause_start:clause_end]
-    m=re.search(r'\bbetween\s+(.+)$',raw,re.I)
+    m=re.search(r'\bbe-?tween\s+(.+)$',raw,re.I)
     if not m:return []
     body=m.group(1).strip()
     body_abs=clause_start+m.start(1)
-    # shared parent: anterior and posterior borders of X / sternal and clavicular heads of X
+
+    def mk(a0,a1,role='between_endpoint',**extra):
+        d=span_obj(text,a0,a1,role)
+        d.update(extra);return d
+
+    # Shared parent: anterior and posterior borders of X / sternal and clavicular heads of X.
     sm=re.match(r'(?:the\s+)?([\w-]+)\s+and\s+([\w-]+)\s+(borders?|heads?|ends?|sides?|margins?|corners?)\s+of\s+(.+)$',body,re.I)
     if sm:
         a,b,part,parent=sm.groups(); singular=part[:-1] if part.lower().endswith('s') else part
-        # source segments preserve exact lexical evidence even if semantic operand is discontinuous
         a0=body_abs+sm.start(1);a1=body_abs+sm.end(1); b0=body_abs+sm.start(2);b1=body_abs+sm.end(2)
-        p0=body_abs+sm.start(4);p1=body_abs+sm.end(4)
+        part0=body_abs+sm.start(3);part1=body_abs+sm.end(3);p0=body_abs+sm.start(4);p1=body_abs+sm.end(4)
         return [
-          {'source_raw':f'{a} {singular} of {parent}','char_start':a0,'char_end':p1,'role':'between_endpoint','source_segments':[{'char_start':a0,'char_end':a1},{'char_start':body_abs+sm.start(3),'char_end':body_abs+sm.end(3)},{'char_start':p0,'char_end':p1}], 'derived_expression':True},
-          {'source_raw':f'{b} {singular} of {parent}','char_start':b0,'char_end':p1,'role':'between_endpoint','source_segments':[{'char_start':b0,'char_end':b1},{'char_start':body_abs+sm.start(3),'char_end':body_abs+sm.end(3)},{'char_start':p0,'char_end':p1}], 'derived_expression':True}
+          {'source_raw':f'{a} {singular} of {parent}','char_start':a0,'char_end':p1,'role':'between_endpoint','source_segments':[{'char_start':a0,'char_end':a1},{'char_start':part0,'char_end':part1},{'char_start':p0,'char_end':p1}], 'derived_expression':True},
+          {'source_raw':f'{b} {singular} of {parent}','char_start':b0,'char_end':p1,'role':'between_endpoint','source_segments':[{'char_start':b0,'char_end':b1},{'char_start':part0,'char_end':part1},{'char_start':p0,'char_end':p1}], 'derived_expression':True}
         ]
-    # shared terminal noun: second and third toes / radius and ulna handled naturally enough
+
+    # Shared operator: tendons of X and Y [muscles]. Preserve discontinuous source spans.
+    sm=re.match(r'(?:the\s+)?tendons?\s+of\s+(.+?)\s+and\s+(?:the\s+)?(.+)$',body,re.I)
+    if sm:
+        a,b=sm.groups(); b_clean=re.sub(r'\s+muscles?\s*$','',b,flags=re.I)
+        a0=body_abs+sm.start(1);a1=body_abs+sm.end(1);b0=body_abs+sm.start(2);b1=body_abs+sm.end(2)
+        headm=re.search(r'tendons?',body,re.I);h0=body_abs+headm.start();h1=body_abs+headm.end()
+        return [
+          {'source_raw':f'tendon of {a.strip()}','char_start':a0,'char_end':a1,'role':'between_endpoint','source_segments':[{'char_start':h0,'char_end':h1},{'char_start':a0,'char_end':a1}], 'derived_expression':True},
+          {'source_raw':f'tendon of {b_clean.strip()}','char_start':b0,'char_end':b1,'role':'between_endpoint','source_segments':[{'char_start':h0,'char_end':h1},{'char_start':b0,'char_end':b1}], 'derived_expression':True}
+        ]
+
+    # Explicit A and B. Keep source spans exactly; shared terminal nouns may be semantically
+    # completed with source_segments, but never substituted with a nearby landmark.
     sm=re.match(r'(?:the\s+)?(.+?)\s+and\s+(.+)$',body,re.I)
-    if not sm:return []
-    a,b=sm.groups();
-    a0=body_abs+sm.start(1);a1=body_abs+sm.end(1);b0=body_abs+sm.start(2);b1=body_abs+sm.end(2)
-    # second and third metatarsal bones => reconstruct first with shared noun phrase
-    shared=re.match(r'([A-Za-z0-9-]+)\s+(.+)$',b)
-    if shared and re.fullmatch(r'(?:first|second|third|fourth|fifth|anterior|posterior|medial|lateral|radial|ulnar|sternal|clavicular)',a.strip(),re.I):
-        bhead,tail=shared.groups()
-        if re.fullmatch(r'(?:first|second|third|fourth|fifth|anterior|posterior|medial|lateral|radial|ulnar|sternal|clavicular)',bhead,re.I):
-            return [
-              {'source_raw':f'{a.strip()} {tail}','char_start':a0,'char_end':b1,'role':'between_endpoint','source_segments':[{'char_start':a0,'char_end':a1},{'char_start':b0+len(bhead)+1,'char_end':b1}], 'derived_expression':True},
-              {'source_raw':b.strip(),'char_start':b0,'char_end':b1,'role':'between_endpoint'}]
-    return [span_obj(text,a0,a1,'between_endpoint'),span_obj(text,b0,b1,'between_endpoint')]
+    if sm:
+        a,b=sm.groups();a0=body_abs+sm.start(1);a1=body_abs+sm.end(1);b0=body_abs+sm.start(2);b1=body_abs+sm.end(2)
+        # second and third metatarsal bones / similar shared tail
+        shared=re.match(r'([A-Za-z0-9-]+)\s+(.+)$',b)
+        if shared and re.fullmatch(r'(?:first|second|third|fourth|fifth|anterior|posterior|medial|lateral|radial|ulnar|sternal|clavicular)',a.strip(),re.I):
+            bhead,tail=shared.groups()
+            if re.fullmatch(r'(?:first|second|third|fourth|fifth|anterior|posterior|medial|lateral|radial|ulnar|sternal|clavicular)',bhead,re.I):
+                return [
+                  {'source_raw':f'{a.strip()} {tail}','char_start':a0,'char_end':b1,'role':'between_endpoint','source_segments':[{'char_start':a0,'char_end':a1},{'char_start':b0+len(bhead)+1,'char_end':b1}], 'derived_expression':True},
+                  mk(b0,b1)]
+        return [mk(a0,a1),mk(b0,b1)]
+
+    # Pair/set expressions: source gives a plural or explicit "two/each" set but not lexical A/B.
+    # Preserve the unresolved pair as a source-backed endpoint set instead of inventing identities.
+    nbody=norm(body)
+    if re.search(r'\b(two|each)\b',body,re.I) or re.search(r'\b(muscles|bones|tendons|clavicles|eyebrows|bellies)\b',body,re.I):
+        return [{'source_raw':body,'char_start':body_abs,'char_end':body_abs+len(body),'role':'between_endpoint_set',
+                 'endpoint_set':True,'required_member_count':2 if re.search(r'\b(two|each)\b',body,re.I) else None,
+                 'minimum_member_count':2}]
+    return []
+
+def parse_fraction_line_anchor(text, cue_span):
+    """For fraction partitions such as 'upper one third ... of the philtrum midline',
+    bind the source line/entity after the partition cue. No synthetic endpoints are created.
+    """
+    tail=text[cue_span['char_end']:]
+    m=re.match(r'\s+of\s+(?:the\s+)?(.+?)(?=,|\.|;|$)',tail,re.I)
+    if not m:return None
+    st=cue_span['char_end']+m.start(1); en=cue_span['char_end']+m.end(1)
+    return span_obj(text,st,en,'fraction_line_anchor')
 
 def parse_midpoint_pair(text):
-    pats=[r'\bmidway between\s+(.+?)\s+and\s+(.+?)(?=,|\.|;)',r'\bmidpoint between\s+(.+?)\s+and\s+(.+?)(?=,|\.|;)',r'\bmidpoint of the connecting line between\s+(.+?)\s+and\s+(.+?)(?=,|\.|;)']
+    pats=[r'\bmidway\s+be-?tween\s+(.+?)\s+and\s+(.+?)(?=,|\.|;)',r'\bmidpoint\s+be-?tween\s+(.+?)\s+and\s+(.+?)(?=,|\.|;)',r'\bmidpoint of the connecting line\s+be-?tween\s+(.+?)\s+and\s+(.+?)(?=,|\.|;)']
     for pat in pats:
         m=re.search(pat,text,re.I)
         if m:return [span_obj(text,m.start(1),m.end(1),'midpoint_endpoint'),span_obj(text,m.start(2),m.end(2),'midpoint_endpoint')]
@@ -141,6 +203,279 @@ def parse_midpoint_pair(text):
 
 def compile_spec(s):
     sid=s['statement_id']; text=s['source_text']; e=copy.deepcopy(s['expected_semantic_representation'])
+    # WHO source has highest priority. Independently parse the source and merge any
+    # relation/geometry/composite/condition semantics missing from the official ledger.
+    src_exp=source_expected_v2({'text_canonical':text})
+    def _sig_span(x): return (x.get('char_start'),x.get('char_end'),norm(x.get('source_raw','')))
+    # The source parser's landmark list is derivative of relations/geometries/composites.
+    # Do not ingest it independently: doing so can preserve a discarded broad regex span
+    # as an orphan. Landmarks are materialized from final semantic structures below.
+    # geometries
+    for x in src_exp.get('geometry_constructs',[]):
+        sig=(x['geometry_type'],x['source_span']['char_start'],x['source_span']['char_end'],tuple((a['char_start'],a['char_end']) for a in x.get('endpoints',[])))
+        if not any((y['geometry_type'],y['source_span']['char_start'],y['source_span']['char_end'],tuple((a['char_start'],a['char_end']) for a in y.get('endpoints',[])))==sig for y in e['geometry_constructs']): e['geometry_constructs'].append(copy.deepcopy(x))
+    # conditions
+    for x in src_exp.get('conditional_branches',[]):
+        sig=(x['condition_type'],x['char_start'],x['char_end'])
+        if not any((y['condition_type'],y['char_start'],y['char_end'])==sig for y in e['conditional_branches']): e['conditional_branches'].append(copy.deepcopy(x))
+    # composites
+    for x in src_exp.get('composites',[]):
+        sig=(x['child']['char_start'],x['child']['char_end'],x['parent']['char_start'],x['parent']['char_end'])
+        if not any((y['child']['char_start'],y['child']['char_end'],y['parent']['char_start'],y['parent']['char_end'])==sig for y in e['composites']): e['composites'].append(copy.deepcopy(x))
+    # Explicit centre/center-of composite required by the B-v2 composite contract.
+    stc,mpc=semantic_text_with_map(text)
+    for cm in re.finditer(r'\b(centre|center)\s+of\s+([^,.;]+)',stc,re.I):
+        cst,cen=source_orig_span(mpc,cm.start(1),cm.end(1),text); pst,pen=source_orig_span(mpc,cm.start(2),cm.end(2),text)
+        child={'source_raw':text[cst:cen],'char_start':cst,'char_end':cen,'role':'composite_child'}
+        parent={'source_raw':text[pst:pen],'char_start':pst,'char_end':pen,'role':'composite_parent'}
+        sig=(cst,cen,pst,pen)
+        if not any((y['child']['char_start'],y['child']['char_end'],y['parent']['char_start'],y['parent']['char_end'])==sig for y in e['composites']):
+            e['composites'].append({'child':child,'parent':parent,'source_span':{'source_raw':text[cst:pen],'char_start':cst,'char_end':pen,'role':'composite'}})
+    # measurements
+    for x in src_exp.get('proportional_measurements',[]):
+        sig=(x['cue_span']['char_start'],x['cue_span']['char_end'],x['value'],x.get('direction'))
+        if not any((y['cue_span']['char_start'],y['cue_span']['char_end'],y['value'],y.get('direction'))==sig for y in e['proportional_measurements']): e['proportional_measurements'].append(copy.deepcopy(x))
+    # relations: ledger is a minimum contract; WHO-source parser can add missing relations.
+    for x in src_exp.get('relations',[]):
+        xargs=tuple((a['char_start'],a['char_end']) for a in x.get('arguments',[]))
+        duplicate=False
+        for y in e['relations']:
+            if y['expected_relation_type']!=x['expected_relation_type']: continue
+            yargs=tuple((a['char_start'],a['char_end']) for a in y.get('arguments',[]))
+            if xargs and yargs and xargs==yargs: duplicate=True; break
+            if not xargs and not yargs and max(y['cue_span']['char_start'],x['cue_span']['char_start']) < min(y['cue_span']['char_end'],x['cue_span']['char_end']): duplicate=True; break
+        if not duplicate: e['relations'].append(copy.deepcopy(x))
+
+    # Compound directional source such as 'lateral and inferior to the patella' must
+    # retain both constraints, not only the final direction.
+    stxt,mp=semantic_text_with_map(text)
+    dirs='superior|inferior|medial|lateral|anterior|posterior|proximal|distal|radial|ulnar'
+    for m in re.finditer(r'\b(?P<d1>'+dirs+r')\s+and\s+(?P<d2>'+dirs+r')\s+to\s+([^,.;]+)',stxt,re.I):
+        ast,aen=source_orig_span(mp,m.start(3),m.end(3),text)
+        anchor={'source_raw':text[ast:aen],'char_start':ast,'char_end':aen,'role':'direction_anchor'}
+        if not any(_sig_span(y)==_sig_span(anchor) for y in e['required_landmark_mentions']): e['required_landmark_mentions'].append(anchor)
+        for dg in ('d1','d2'):
+            cs,ce=source_orig_span(mp,m.start(dg),m.end(dg),text)
+            rr={'expected_relation_type':'relative-to','cue_span':{'source_raw':text[cs:ce],'char_start':cs,'char_end':ce,'role':'direction'},'arguments':[anchor],'direction':m.group(dg).lower()}
+            def _ydir(y):
+                if y.get('direction'): return y['direction']
+                cn=norm(y.get('cue_span',{}).get('source_raw',''))
+                return next((d for d in dirs.split('|') if re.search(r'\b'+re.escape(d)+r'\b',cn)),None)
+            if not any(y['expected_relation_type']=='relative-to' and len(y.get('arguments',[]))==1 and norm(y['arguments'][0].get('source_raw'))==norm(anchor['source_raw']) and _ydir(y)==rr['direction'] for y in e['relations']): e['relations'].append(rr)
+
+    # Frozen Location composite layer may supply an exact source parent binding that
+    # the ledger's regex lost. It is used only when explicitly resolved from source context.
+    if s['statement_type']=='location':
+        for fr in frozen_composite.get('records',[]):
+            if fr.get('point_id')!=s['point_id'] or fr.get('section')!='location': continue
+            par=fr.get('parent') or {}
+            if par.get('binding_status')!='resolved_from_source_context' or not par.get('parent_text'): continue
+            cst,cen=fr['char_start'],fr['char_end']
+            child={'source_raw':text[cst:cen],'char_start':cst,'char_end':cen,'role':'composite_child'}
+            tt,mpp=semantic_text_with_map(text); q=re.sub(r'\s+',' ',par['parent_text'].lower()).strip(); pos=tt.find(q)
+            if pos<0: continue
+            pst,pen=source_orig_span(mpp,pos,pos+len(q),text)
+            parent={'source_raw':text[pst:pen],'char_start':pst,'char_end':pen,'role':'composite_parent'}
+            # replace conflicting same-child ledger composite; source-resolved frozen parent is more specific.
+            e['composites']=[z for z in e['composites'] if not (z['child']['char_start']==cst and z['child']['char_end']==cen and (z['parent']['char_start'],z['parent']['char_end'])!=(pst,pen))]
+            if not any(z['child']['char_start']==cst and z['child']['char_end']==cen and z['parent']['char_start']==pst and z['parent']['char_end']==pen for z in e['composites']):
+                ss=min(cst,pst); ee=max(cen,pen); e['composites'].append({'child':child,'parent':parent,'source_span':{'source_raw':text[ss:ee],'char_start':ss,'char_end':ee,'role':'composite'}})
+            for z in (child,parent):
+                if not any(_sig_span(y)==_sig_span(z) for y in e['required_landmark_mentions']): e['required_landmark_mentions'].append(z)
+
+    # Generic WHO locatives are real source constraints. Bind only when source syntax
+    # directly places a frozen-upstream mention after on/in/at/within; never choose a
+    # nearest landmark by token distance.
+    for u in up.get(sid,[]):
+        ust,uen=u['char_start'],u['char_end']
+        prefix=text[max(0,ust-24):ust]
+        pm=re.search(r'\b(on|in|at|within)(?:\s+(?:the|a|an))?\s*$',prefix,re.I)
+        if not pm: continue
+        prep=pm.group(1).lower(); cst=max(0,ust-24)+pm.start(1)
+        cue={'source_raw':text[cst:uen],'char_start':cst,'char_end':uen,'role':'locative_'+prep}
+        arg={'source_raw':text[ust:uen],'char_start':ust,'char_end':uen,'role':'locative_anchor'}
+        # Do not duplicate a more specific depression/foramen/on-line relation on the same anchor.
+        if any(y['expected_relation_type']=='surface-landmark' and any(norm(a.get('source_raw'))==norm(arg['source_raw']) for a in y.get('arguments',[])) for y in e['relations']):
+            continue
+        e['relations'].append({'expected_relation_type':'surface-landmark','cue_span':cue,'arguments':[arg],'source_semantics':'locative.'+prep})
+        if not any(_sig_span(y)==_sig_span(arg) for y in e['required_landmark_mentions']): e['required_landmark_mentions'].append(arg)
+
+    # Hyphenated compound directions are lost by dehyphenated lexical normalization if
+    # untreated (e.g. proximal-lateral to). Preserve them explicitly.
+    for hm in re.finditer(r'\b(proximal|distal)-(lateral|medial)\s+to\s+([^,.;]+)',text,re.I):
+        ast,aen=hm.start(3),hm.end(3); anchor={'source_raw':text[ast:aen],'char_start':ast,'char_end':aen,'role':'direction_anchor'}
+        dr=hm.group(1).lower()+'-'+hm.group(2).lower(); cs,ce=hm.start(1),hm.end(2)
+        if not any(y['expected_relation_type']=='relative-to' and len(y.get('arguments',[]))==1 and norm(y['arguments'][0].get('source_raw'))==norm(anchor['source_raw']) and norm(y.get('cue_span',{}).get('source_raw'))==norm(text[cs:ce]) for y in e['relations']):
+            e['relations'].append({'expected_relation_type':'relative-to','cue_span':{'source_raw':text[cs:ce],'char_start':cs,'char_end':ce,'role':'direction'},'arguments':[anchor],'direction':dr})
+        if not any(_sig_span(y)==_sig_span(anchor) for y in e['required_landmark_mentions']): e['required_landmark_mentions'].append(anchor)
+
+    # Alignment variants used by WHO in addition to "same level as".
+    stxt2,mp2=semantic_text_with_map(text)
+    for am in re.finditer(r'\b(?:at the )?level with\s+([^,.;]+)',stxt2,re.I):
+        ast,aen=source_orig_span(mp2,am.start(1),am.end(1),text); cst,cen=source_orig_span(mp2,am.start(),am.end(),text)
+        anchor={'source_raw':text[ast:aen],'char_start':ast,'char_end':aen,'role':'alignment_anchor'}
+        if not any(y['expected_relation_type']=='same-level' and any(norm(a.get('source_raw'))==norm(anchor['source_raw']) for a in y.get('arguments',[])) for y in e['relations']):
+            e['relations'].append({'expected_relation_type':'same-level','cue_span':{'source_raw':text[cst:cen],'char_start':cst,'char_end':cen,'role':'same-level'},'arguments':[anchor]})
+        if not any(_sig_span(y)==_sig_span(anchor) for y in e['required_landmark_mentions']): e['required_landmark_mentions'].append(anchor)
+
+    # Source-specific junction families that are not safely covered by a first-"and" regex.
+    def _add_junction(cst,cen,args,sem='junction'):
+        if len(args)!=2:return
+        for a in args:
+            if not any(_sig_span(y)==_sig_span(a) for y in e['required_landmark_mentions']):e['required_landmark_mentions'].append(a)
+        sigargs=tuple((a['char_start'],a['char_end'],norm(a.get('source_raw'))) for a in args)
+        if not any(y['expected_relation_type']=='at-junction' and tuple((a['char_start'],a['char_end'],norm(a.get('source_raw'))) for a in y.get('arguments',[]))==sigargs for y in e['relations']):
+            cue={'source_raw':text[cst:cen],'char_start':cst,'char_end':cen,'role':'junction'}
+            e['relations'].append({'expected_relation_type':'at-junction','cue_span':cue,'arguments':args,'source_semantics':sem})
+            e['geometry_constructs'].append({'geometry_type':'intersection','source_span':cue,'required_endpoint_count':2,'endpoints':args})
+    # vertical/horizontal line junction (GB7 family)
+    jm=re.search(r'junction of the (vertical line of .+?) and the (horizontal line of .+?)(?=\.|,|;)',text,re.I)
+    if jm:
+        _add_junction(jm.start(),jm.end(),[{'source_raw':text[jm.start(1):jm.end(1)],'char_start':jm.start(1),'char_end':jm.end(1),'role':'junction_operand'},{'source_raw':text[jm.start(2):jm.end(2)],'char_start':jm.start(2),'char_end':jm.end(2),'role':'junction_operand'}])
+    # junction/joint/connecting point A with/and B, excluding fractional partitions.
+    for pat,sem in [(r'(?:junction|joint) of (.+?) (?:with|and) (.+?)(?=\.|,|;)','junction'),(r'connecting point of (.+?) with (.+?)(?=\.|,|;)','connecting_point')]:
+        for jm in re.finditer(pat,text,re.I):
+            if re.search(r'\b(?:one|two|three)\s+(?:thirds?|fourths?)\b',jm.group(0),re.I):continue
+            _add_junction(jm.start(),jm.end(),[{'source_raw':text[jm.start(1):jm.end(1)],'char_start':jm.start(1),'char_end':jm.end(1),'role':'junction_operand'},{'source_raw':text[jm.start(2):jm.end(2)],'char_start':jm.start(2),'char_end':jm.end(2),'role':'junction_operand'}],sem)
+    # Shared bases of fourth/fifth etc. Derive two source-backed expressions with discontinuous source segments.
+    for jm in re.finditer(r'junction of the bases of the (first|second|third|fourth|fifth) and (first|second|third|fourth|fifth) ([^,.;]+)',text,re.I):
+        a,b,tail=jm.group(1),jm.group(2),jm.group(3); base_m=re.search(r'bases',jm.group(0),re.I); bst=jm.start()+base_m.start();ben=jm.start()+base_m.end()
+        args=[]
+        for gi in (1,2):
+            os,oe=jm.start(gi),jm.end(gi); args.append({'source_raw':f'base of {jm.group(gi)} {tail}','char_start':os,'char_end':jm.end(3),'role':'junction_operand','source_segments':[{'char_start':bst,'char_end':ben},{'char_start':os,'char_end':oe},{'char_start':jm.start(3),'char_end':jm.end(3)}],'derived_expression':True})
+        _add_junction(jm.start(),jm.end(),args,'junction_shared_base')
+
+    # "Among three muscles: A, B and C" is an explicit n-ary interposition constraint.
+    for am in re.finditer(r'\bamong three muscles:\s*(.+?),\s*(.+?)\s+and\s+(.+?)(?=\.|;)',text,re.I):
+        args=[{'source_raw':text[am.start(i):am.end(i)],'char_start':am.start(i),'char_end':am.end(i),'role':'among_operand'} for i in (1,2,3)]
+        for a in args:
+            if not any(_sig_span(y)==_sig_span(a) for y in e['required_landmark_mentions']):e['required_landmark_mentions'].append(a)
+        e['relations'].append({'expected_relation_type':'among','cue_span':{'source_raw':text[am.start():am.end()],'char_start':am.start(),'char_end':am.end(),'role':'among'},'arguments':args})
+
+    # Midpoint of a source line from A to B must produce both line and midpoint semantics.
+    for mm in re.finditer(r'midpoint of the line from\s+(.+?)\s+to\s+(.+?)(?=\.|,|;)',text,re.I):
+        args=[{'source_raw':text[mm.start(1):mm.end(1)],'char_start':mm.start(1),'char_end':mm.end(1),'role':'line_endpoint'},{'source_raw':text[mm.start(2):mm.end(2)],'char_start':mm.start(2),'char_end':mm.end(2),'role':'line_endpoint'}]
+        if not any(y['expected_relation_type']=='midpoint-between' and tuple(norm(a.get('source_raw')) for a in y.get('arguments',[]))==tuple(norm(a.get('source_raw')) for a in args) for y in e['relations']):
+            e['relations'].append({'expected_relation_type':'midpoint-between','cue_span':{'source_raw':text[mm.start():mm.start(1)],'char_start':mm.start(),'char_end':mm.start(1),'role':'midpoint'},'arguments':args})
+        for a in args:
+            if not any(_sig_span(y)==_sig_span(a) for y in e['required_landmark_mentions']): e['required_landmark_mentions'].append(a)
+
+    # Additional source-only patterns not safely reducible to generic upstream locative binding.
+    stx,mpx=semantic_text_with_map(text)
+    # "at the same level and lateral/posterior to A [and B]" => preserve alignment independently of direction.
+    for sm in re.finditer(r'\b(?:located )?at the same level and (?:lateral|medial|anterior|posterior) to\s+([^.;]+)',stx,re.I):
+        rawarg=stx[sm.start(1):sm.end(1)]
+        # Split only explicit acupuncture-point enumerations; otherwise keep one source expression.
+        pieces=[]
+        for pm in re.finditer(r'\b[a-z]{1,3}\s*\d+\b',rawarg,re.I):
+            a0=sm.start(1)+pm.start(); a1=sm.start(1)+pm.end(); os,oe=source_orig_span(mpx,a0,a1,text)
+            pieces.append({'source_raw':text[os:oe],'char_start':os,'char_end':oe,'role':'alignment_anchor'})
+        if not pieces:
+            os,oe=source_orig_span(mpx,sm.start(1),sm.end(1),text); pieces=[{'source_raw':text[os:oe],'char_start':os,'char_end':oe,'role':'alignment_anchor'}]
+        cs,ce=source_orig_span(mpx,sm.start(),sm.end(),text)
+        e['relations'].append({'expected_relation_type':'same-level','cue_span':{'source_raw':text[cs:ce],'char_start':cs,'char_end':ce,'role':'same-level'},'arguments':pieces})
+        for a in pieces:
+            if not any(_sig_span(y)==_sig_span(a) for y in e['required_landmark_mentions']):e['required_landmark_mentions'].append(a)
+    # "at the level of X" / "level with X" alignment (but not the already captured same-level form).
+    for sm in re.finditer(r'\b(?:at the )?level of\s+([^,.;]+)',stx,re.I):
+        os,oe=source_orig_span(mpx,sm.start(1),sm.end(1),text); cs,ce=source_orig_span(mpx,sm.start(),sm.end(),text)
+        a={'source_raw':text[os:oe],'char_start':os,'char_end':oe,'role':'alignment_anchor'}
+        if not any(y['expected_relation_type']=='same-level' and any(norm(z.get('source_raw'))==norm(a['source_raw']) for z in y.get('arguments',[])) for y in e['relations']):
+            e['relations'].append({'expected_relation_type':'same-level','cue_span':{'source_raw':text[cs:ce],'char_start':cs,'char_end':ce,'role':'same-level'},'arguments':[a]})
+        if not any(_sig_span(y)==_sig_span(a) for y in e['required_landmark_mentions']):e['required_landmark_mentions'].append(a)
+    # Explicit point-supporting surface phrases.
+    surface_patterns=[
+      r'\b(?:located )?at the (prominence of [^,.;]+)',
+      r'\bat the (corner of [^,.;]+)',
+      r'\bon the (bulge of [^,.;]+)',
+      r'\bin the ((?:deeper|deepest|posterior|anterior) depression(?: [^,.;]+)?)',
+      r'\bor on the (continuation of [^,.;]+)',
+      r'\bat the ((?:proximal|distal|ulnar|radial|medial|lateral) (?:end|extremity) of [^,.;]+)',
+      r'\bat the (deepest point in the depression)',
+      r'\bat the (cleft between [^,.;]+)',
+      r'\bon the (bisector of [^,.;]+)',
+    ]
+    for pat in surface_patterns:
+        for sm in re.finditer(pat,stx,re.I):
+            os,oe=source_orig_span(mpx,sm.start(1),sm.end(1),text); cs,ce=source_orig_span(mpx,sm.start(),sm.end(),text)
+            a={'source_raw':text[os:oe],'char_start':os,'char_end':oe,'role':'surface_feature'}
+            if not any(y['expected_relation_type']=='surface-landmark' and any(norm(z.get('source_raw'))==norm(a['source_raw']) for z in y.get('arguments',[])) for y in e['relations']):
+                e['relations'].append({'expected_relation_type':'surface-landmark','cue_span':{'source_raw':text[cs:ce],'char_start':cs,'char_end':ce,'role':'surface-landmark'},'arguments':[a]})
+            if not any(_sig_span(y)==_sig_span(a) for y in e['required_landmark_mentions']):e['required_landmark_mentions'].append(a)
+    # Angle formed by A and B is a true two-operand junction.
+    for sm in re.finditer(r'\bat the angle formed by\s+(.+?)\s+and\s+(.+?)(?=\.|,|;)',stx,re.I):
+        args=[]
+        for gi in (1,2):
+            os,oe=source_orig_span(mpx,sm.start(gi),sm.end(gi),text);args.append({'source_raw':text[os:oe],'char_start':os,'char_end':oe,'role':'junction_operand'})
+        cs,ce=source_orig_span(mpx,sm.start(),sm.end(),text); cue={'source_raw':text[cs:ce],'char_start':cs,'char_end':ce,'role':'junction'}
+        e['relations'].append({'expected_relation_type':'at-junction','cue_span':cue,'arguments':args,'source_semantics':'angle_formed_by'})
+        e['geometry_constructs'].append({'geometry_type':'intersection','source_span':cue,'required_endpoint_count':2,'endpoints':args})
+        for a in args:
+            if not any(_sig_span(y)==_sig_span(a) for y in e['required_landmark_mentions']):e['required_landmark_mentions'].append(a)
+    # LR3-style anaphora: "junction of the bases of the two bones" reuses the source-established
+    # binary between endpoints and applies the base operator to each, rather than inventing bones.
+    for sm in re.finditer(r'junction of the bases of the two bones',stx,re.I):
+        br=next((y for y in e['relations'] if y['expected_relation_type']=='between'),None)
+        if br and len(br.get('arguments',[]))!=2:
+            parsed=find_coord_and_split(text,br['cue_span']['char_start'],br['cue_span']['char_end'])
+            if len(parsed)==2: br['arguments']=parsed
+        if br and len(br.get('arguments',[]))==2:
+            bs=stx.find('bases',sm.start(),sm.end()); bos,boe=source_orig_span(mpx,bs,bs+len('bases'),text)
+            args=[]
+            for a0 in br['arguments']:
+                args.append({'source_raw':'base of '+a0['source_raw'].strip(),'char_start':a0['char_start'],'char_end':a0['char_end'],'role':'junction_operand','source_segments':[{'char_start':bos,'char_end':boe},{'char_start':a0['char_start'],'char_end':a0['char_end']}],'derived_expression':True})
+            cs,ce=source_orig_span(mpx,sm.start(),sm.end(),text); cue={'source_raw':text[cs:ce],'char_start':cs,'char_end':ce,'role':'junction'}
+            e['relations'].append({'expected_relation_type':'at-junction','cue_span':cue,'arguments':args,'source_semantics':'anaphoric_bases_of_two_bones'})
+            e['geometry_constructs'].append({'geometry_type':'intersection','source_span':cue,'required_endpoint_count':2,'endpoints':args})
+            for a in args:
+                if not any(_sig_span(y)==_sig_span(a) for y in e['required_landmark_mentions']):e['required_landmark_mentions'].append(a)
+
+    # Dynamic source landmarks used by WHO locating manoeuvres.
+    for tm in re.finditer(r'where\s+the\s+(tip of [^,.;]+?)\s+rests',stx,re.I):
+        os,oe=source_orig_span(mpx,tm.start(1),tm.end(1),text); cs,ce=source_orig_span(mpx,tm.start(),tm.end(),text)
+        a={'source_raw':text[os:oe],'char_start':os,'char_end':oe,'role':'dynamic_reference_landmark'}
+        e['relations'].append({'expected_relation_type':'surface-landmark','cue_span':{'source_raw':text[cs:ce],'char_start':cs,'char_end':ce,'role':'dynamic_palpation_reference'},'arguments':[a],'source_semantics':'dynamic_palpation_reference'})
+        if not any(_sig_span(y)==_sig_span(a) for y in e['required_landmark_mentions']):e['required_landmark_mentions'].append(a)
+    # Explicit anaphoric posterior depression in TE14 Note: source phrase 'posterior one, in which TE14 is located'.
+    for am in re.finditer(r'(posterior one),\s+in which\s+[a-z]{1,3}\s*\d+\s+is located',stx,re.I):
+        os,oe=source_orig_span(mpx,am.start(1),am.end(1),text); cs,ce=source_orig_span(mpx,am.start(),am.end(),text)
+        a={'source_raw':text[os:oe],'char_start':os,'char_end':oe,'role':'anaphoric_surface_landmark','derived_expression':True}
+        e['relations'].append({'expected_relation_type':'surface-landmark','cue_span':{'source_raw':text[cs:ce],'char_start':cs,'char_end':ce,'role':'anaphoric_location'},'arguments':[a],'source_semantics':'anaphoric_posterior_depression'})
+        if not any(_sig_span(y)==_sig_span(a) for y in e['required_landmark_mentions']):e['required_landmark_mentions'].append(a)
+
+    # De-duplicate exact semantic relations introduced by overlapping source rules.
+    ded=[]; seen=set()
+    for rr in e['relations']:
+        key=(rr['expected_relation_type'],rr['cue_span']['char_start'],rr['cue_span']['char_end'],tuple((norm(a.get('source_raw')),a.get('char_start'),a.get('char_end')) for a in rr.get('arguments',[])),rr.get('direction'))
+        if key not in seen: seen.add(key); ded.append(rr)
+    e['relations']=ded
+
+    # Canonicalize depression support to the lexical depression itself, never the
+    # whole locative cue ('in the depression') or an adjacent anatomical anchor.
+    for rr in e['relations']:
+        if rr.get('expected_relation_type')=='surface-landmark' and rr.get('source_semantics')=='depression':
+            cs=rr['cue_span']['char_start']; ce=rr['cue_span']['char_end']; seg=text[cs:ce]
+            dm=re.search(r'depression',seg,re.I)
+            if dm:
+                ds=cs+dm.start(); de=cs+dm.end(); dep={'source_raw':text[ds:de],'char_start':ds,'char_end':de,'role':'depression'}
+                rr['arguments']=[dep]
+                e['required_landmark_mentions']=[x for x in e['required_landmark_mentions'] if x.get('role')!='depression']+[dep]
+
+    # Drop stale structural mention spans whose relation/geometry/composite was superseded
+    # by higher-priority WHO/frozen-source semantics. This is not semantic deletion: a
+    # structural mention survives exactly when a final semantic structure uses it.
+    structural_spans=set()
+    for rr in e['relations']:
+        for a in rr.get('arguments',[]): structural_spans.add((a['char_start'],a['char_end']))
+    for gg in e['geometry_constructs']:
+        for a in gg.get('endpoints',[]): structural_spans.add((a['char_start'],a['char_end']))
+    for cc in e['composites']:
+        structural_spans.add((cc['child']['char_start'],cc['child']['char_end'])); structural_spans.add((cc['parent']['char_start'],cc['parent']['char_end']))
+    for mm in e['proportional_measurements']:
+        structural_spans.add((mm['anchor']['char_start'],mm['anchor']['char_end']))
+    structural_roles={'composite_child','composite_parent','line_endpoint','junction_operand','midpoint_endpoint','relation_operand','alignment_anchor','direction_anchor','measurement_anchor','depression','midpoint_entity'}
+    e['required_landmark_mentions']=[x for x in e['required_landmark_mentions'] if x.get('role') not in structural_roles or (x['char_start'],x['char_end']) in structural_spans]
+
     spec={'statement_id':sid,'point_id':s['point_id'],'statement_type':s['statement_type'],'source_text':text,
           'required_landmarks':copy.deepcopy(e['required_landmark_mentions']),'relations':[], 'geometries':copy.deepcopy(e['geometry_constructs']),
           'conditions':copy.deepcopy(e['conditional_branches']), 'composites':copy.deepcopy(e['composites']), 'measurements':copy.deepcopy(e['proportional_measurements'])}
@@ -155,35 +490,49 @@ def compile_spec(s):
         addlm(c.get('child'));addlm(c.get('parent'))
     for m in spec['measurements']:addlm(m.get('anchor'))
 
-    # CV1 source wins over incomplete ledger representation: explicitly compile both sex branches.
+    # CV1 source wins over incomplete ledger representation: compile both sex branches
+    # directly from the WHO sentence and bind the composite endpoint parts to their parents.
     if sid=='S:CV1:location':
-        # exact source spans located from source, no graph assistance
         def exact_span(phrase,role):
-            i=text.lower().find(phrase.lower());
+            i=text.lower().find(phrase.lower())
             if i<0:raise RuntimeError('CV1 source phrase missing '+phrase)
             return span_obj(text,i,i+len(phrase),role)
         anus=exact_span('the anus','line_endpoint')
-        male=exact_span('poste-rior border of the scrotum','line_endpoint')
-        female=exact_span('posterior commissure of labium majoris','line_endpoint')
-        for x in [anus,male,female]:addlm(x)
-        spec['conditions']=[{'condition_type':'sex_specific','source_raw':'in males','char_start':text.index('in males'),'char_end':text.index('in males')+len('in males'),'role':None,'condition':'male'},{'condition_type':'sex_specific','source_raw':'in females','char_start':text.index('in females'),'char_end':text.index('in females')+len('in females'),'role':None,'condition':'female'}]
-        spec['geometries']=[
-          {'geometry_type':'constructed_line','source_span':span_obj(text,text.index('line connecting'),text.index(' in males'),'line_construct'),'required_endpoint_count':2,'endpoints':[anus,male],'branch_id':'male'},
-          {'geometry_type':'constructed_line','source_span':{'source_raw':'conditional female midpoint line','char_start':text.index('the anus'),'char_end':len(text),'role':'line_construct','source_segments':[{'char_start':anus['char_start'],'char_end':anus['char_end']},{'char_start':female['char_start'],'char_end':female['char_end']}]},'required_endpoint_count':2,'endpoints':[anus,female],'branch_id':'female'}]
+        male_child=exact_span('poste-rior border','line_endpoint')
+        male_parent=exact_span('the scrotum','composite_parent')
+        female_child=exact_span('posterior commissure','line_endpoint')
+        female_parent=exact_span('labium majoris','composite_parent')
+        # Replace the audit-ledger's malformed broad composite spans with source-exact nodes.
+        spec['required_landmarks']=[anus,male_child,male_parent,female_child,female_parent]
+        spec['conditions']=[
+          {'condition_type':'sex_specific','source_raw':'in males','char_start':text.index('in males'),'char_end':text.index('in males')+len('in males'),'role':None,'condition':'male'},
+          {'condition_type':'sex_specific','source_raw':'in females','char_start':text.index('in females'),'char_end':text.index('in females')+len('in females'),'role':None,'condition':'female'}]
+        spec['composites']=[
+          {'child':male_child,'parent':male_parent,'source_span':span_obj(text,male_child['char_start'],male_parent['char_end'],'composite')},
+          {'child':female_child,'parent':female_parent,'source_span':span_obj(text,female_child['char_start'],female_parent['char_end'],'composite')}]
+        male_line={'geometry_type':'constructed_line','source_span':span_obj(text,text.index('line connecting'),text.index(' in males'),'line_construct'),'required_endpoint_count':2,'endpoints':[anus,male_child],'branch_id':'male'}
+        female_line={'geometry_type':'constructed_line','source_span':{'source_raw':'line connecting the anus with the posterior commissure of labium majoris','char_start':text.index('line connecting'),'char_end':female_parent['char_end'],'role':'line_construct','source_segments':[{'char_start':text.index('line connecting'),'char_end':text.index(' in males')},{'char_start':female_child['char_start'],'char_end':female_parent['char_end']}]},'required_endpoint_count':2,'endpoints':[anus,female_child],'branch_id':'female'}
+        spec['geometries']=[male_line,female_line]
         m=re.search(r'at the midpoint of the line connecting',text,re.I); midpoint_cue=span_obj(text,m.start(),m.end(),'midpoint')
+        region_i=text.lower().find('perineal region'); region=span_obj(text,region_i,region_i+len('perineal region'),'locative_anchor')
+        region_cue=span_obj(text,0,region['char_end'],'locative_in')
+        spec['required_landmarks'].append(region)
         spec['relations']=[
-          {'relation_type':'on-line','cue_span':spec['geometries'][0]['source_span'],'arguments':[anus,male],'branch_id':'male'},
-          {'relation_type':'midpoint-between','cue_span':midpoint_cue,'arguments':[anus,male],'branch_id':'male'},
-          {'relation_type':'on-line','cue_span':spec['geometries'][1]['source_span'],'arguments':[anus,female],'branch_id':'female'},
-          {'relation_type':'midpoint-between','cue_span':midpoint_cue,'arguments':[anus,female],'branch_id':'female'}]
+          {'relation_type':'surface-landmark','cue_span':region_cue,'arguments':[region],'source_semantics':'locative.in'},
+          {'relation_type':'on-line','cue_span':male_line['source_span'],'arguments':[anus,male_child],'branch_id':'male'},
+          {'relation_type':'midpoint-between','cue_span':midpoint_cue,'arguments':[anus,male_child],'branch_id':'male'},
+          {'relation_type':'on-line','cue_span':female_line['source_span'],'arguments':[anus,female_child],'branch_id':'female'},
+          {'relation_type':'midpoint-between','cue_span':midpoint_cue,'arguments':[anus,female_child],'branch_id':'female'}]
         return spec
 
     # ordinary expected relations, compile empty argument sets from source syntax/geometry
     for r in e['relations']:
         rr={'relation_type':r['expected_relation_type'],'cue_span':copy.deepcopy(r['cue_span']),'arguments':copy.deepcopy(r.get('arguments',[]))}
         if r.get('source_semantics'):rr['source_semantics']=r['source_semantics']
+        if r.get('direction'):rr['direction']=r['direction']
         if rr['relation_type']=='surface-landmark' and r.get('source_semantics')=='depression':
             dep=[x for x in spec['required_landmarks'] if x.get('role')=='depression' and x['char_start']>=rr['cue_span']['char_start'] and x['char_end']<=rr['cue_span']['char_end']]
+            dep.sort(key=lambda x:(0 if norm(x.get('source_raw'))=='depression' else 1, x['char_end']-x['char_start']))
             if dep: rr['arguments']=[dep[0]]
         if not rr['arguments']:
             if rr['relation_type']=='between':
@@ -202,12 +551,25 @@ def compile_spec(s):
                 else:
                     br=[x for x in spec['relations'] if x.get('relation_type')=='between']
                     # handled after loop if needed
+        for a in rr.get('arguments',[]): addlm(a)
         spec['relations'].append(rr)
-    # second pass fraction can reuse source between operands
+    # second pass: nested midpoint/fraction relations reuse source-faithful operands.
     for rr in spec['relations']:
-        if rr['relation_type']=='fraction-along-line' and not rr['arguments']:
-            br=[x for x in spec['relations'] if x['relation_type']=='between' and len(x.get('arguments',[]))==2]
+        if rr['relation_type']=='midpoint-between' and not rr['arguments']:
+            # A midpoint over an explicit/implicit between construct inherits that source endpoint expression.
+            br=[x for x in spec['relations'] if x['relation_type']=='between' and x.get('arguments')]
             if br: rr['arguments']=copy.deepcopy(br[0]['arguments'])
+        if rr['relation_type']=='fraction-along-line' and not rr['arguments']:
+            br=[x for x in spec['relations'] if x['relation_type']=='between' and x.get('arguments')]
+            if br:
+                rr['arguments']=copy.deepcopy(br[0]['arguments'])
+            else:
+                anchor=parse_fraction_line_anchor(text,rr['cue_span'])
+                if anchor:
+                    rr['arguments']=[anchor]; addlm(anchor)
+                    cue=norm(rr['cue_span'].get('source_raw'))
+                    if 'upper one third' in cue and 'lower two thirds' in cue: rr['fraction_partition']={'upper':1/3,'lower':2/3}
+                    elif 'upper two thirds' in cue and 'lower one third' in cue: rr['fraction_partition']={'upper':2/3,'lower':1/3}
     return spec
 
 specs={s['statement_id']:compile_spec(s) for s in ledger['statements']}
@@ -238,6 +600,8 @@ def ensure_lm(sid,sp,reason='expected_spec'):
     rec={'node_id':lid,'node_type':'landmark','source_statement_id':sid,'point_id':ledger_by[sid]['point_id'],'source_section':ledger_by[sid]['statement_type'],
          'source_raw':sp.get('source_raw',''),'char_start':sp['char_start'],'char_end':sp['char_end'],'semantic_role':sp.get('role'),
          'source_segments':copy.deepcopy(sp.get('source_segments',[])),'creation_reason':reason}
+    for k in ('endpoint_set','required_member_count','minimum_member_count','derived_expression'):
+        if sp.get(k) is not None: rec[k]=sp.get(k)
     if u:
         rec.update({'source_backing':'frozen_upstream','upstream_origin':u['origin'],'landmark_class':u.get('landmark_class'),'semantic_target_type':u.get('semantic_target_type'),
                     'terminal_disposition':u.get('terminal_disposition'),'fma_id':u.get('fma_id'),'fma_name':u.get('fma_name'),'components':copy.deepcopy(u.get('components',[])),
@@ -250,21 +614,11 @@ def ensure_lm(sid,sp,reason='expected_spec'):
     landmarks.append(rec);lm_by_sem[key]=lid;lm_by_sid[sid].append(rec)
     return lid
 
-# include frozen upstream eligible mentions as source-backed contextual landmarks, unless consumed by a spec span
-for sid,us in sorted(up.items()):
-    if sid not in specs: continue
-    consumed=set()
-    for sp in specs[sid]['required_landmarks']:
-        u=candidate_upstream(sid,sp)
-        if u:consumed.add((u['char_start'],u['char_end'],u['source_raw']))
-        ensure_lm(sid,sp,'expected_spec')
-    for u in us:
-        uk=(u['char_start'],u['char_end'],u['source_raw'])
-        if uk in consumed:continue
-        ensure_lm(sid,{'source_raw':u['source_raw'],'char_start':u['char_start'],'char_end':u['char_end'],'role':u.get('role')},'frozen_upstream_context')
-# ensure all statements' spec landmarks (including statements without upstream candidates)
+# Only graph landmarks required by the source-derived specification. Frozen upstream
+# mentions remain available as identity/provenance candidates but are not copied as orphan context nodes.
 for sid,spec in specs.items():
-    for sp in spec['required_landmarks']: ensure_lm(sid,sp,'expected_spec')
+    for sp in spec['required_landmarks']:
+        ensure_lm(sid,sp,'expected_spec')
 
 # relation/geometry/composite/condition construction
 geometries=[]; geom_by_sid=defaultdict(list); relations=[]; rel_by_sid=defaultdict(list); composites=[]; conditions=[]; measurements=[]
@@ -276,8 +630,8 @@ def rel_id(sid,idx,typ,branch=None):return f"RL:{safeid(sid)}:{idx:02d}:{typ}"+(
 
 def cond_label(raw):
     n=norm(raw)
-    if 'male' in n:return 'male'
-    if 'female' in n:return 'female'
+    if re.search(r'\bfemale',n):return 'female'
+    if re.search(r'\bmale',n):return 'male'
     if 'not present' in n:return 'structure_absent'
     if 'alternative location' in n:return 'alternative_location'
     return None
@@ -296,7 +650,8 @@ for sid in sorted(specs):
         args=[lm_for_span(sid,x) for x in r.get('arguments',[])]
         rec={'relation_id':rel_id(sid,ri,r['relation_type'],r.get('branch_id')),'subject_node_id':'P:'+spec['point_id'],'relation_type':r['relation_type'],
              'argument_node_ids':args,'source_statement_id':sid,'source_section':spec['statement_type'],'cue_span':copy.deepcopy(r['cue_span']),'branch_id':r.get('branch_id'),
-             'source_semantics':r.get('source_semantics'),'provenance':{'construction':'B_v2_source_spec_compiler','binding_basis':'source span + expected representation'}}
+             'source_semantics':r.get('source_semantics'),'direction':r.get('direction'),'fraction_partition':copy.deepcopy(r.get('fraction_partition')),
+             'provenance':{'construction':'B_v2_source_spec_compiler','binding_basis':'source span + expected representation'}}
         # associate compatible geometry for line/midpoint/intersection
         matching=[]
         for g in geom_by_sid[sid]:
@@ -320,7 +675,7 @@ for sid in sorted(specs):
         cid=f"CD:{safeid(sid)}:{ci:02d}"
         # relation scope by source position; posture/palpation applies to whole locator, alternative/variant from condition onward.
         if sid=='S:CV1:location':
-            branch='male' if 'male' in c['source_raw'].lower() else 'female'
+            branch='female' if 'female' in c['source_raw'].lower() else 'male'
             relids=[r['relation_id'] for r in rel_by_sid[sid] if r.get('branch_id')==branch]
             lmids=[]
             for r in rel_by_sid[sid]:
@@ -337,13 +692,19 @@ for sid in sorted(specs):
         conditions.append({'condition_id':cid,'source_statement_id':sid,'condition_type':c['condition_type'],'condition_scope':'statement_locator' if c['condition_type'] in ('body_position','palpation_dependent') else 'branch_specific',
                            'branch_id':branch,'source_span':copy.deepcopy(c),'branch_relation_ids':sorted(set(relids)),'branch_landmark_ids':sorted(set(lmids))})
 
-# points/source statements: source text from audited ledger, provenance metadata preserved from source identity baseline
+# points/source statements: WHO text/provenance is explicit for all 583 statements.
 points=[{'node_id':'P:'+pid,'node_type':'acupoint','point_id':pid} for pid in sorted({s['point_id'] for s in ledger['statements']})]
 source_statements=[]
 for s in ledger['statements']:
     old=v1_source_by[s['statement_id']]
-    rec={'source_statement_id':s['statement_id'],'point_id':s['point_id'],'section':s['statement_type'],'text_canonical':s['source_text'],'source':copy.deepcopy(old.get('source',{})),
-         'primary_source_verified':s['primary_source_verified'],'audit_source_page':s['source_page'],'frozen_source_sha256':old.get('frozen_source_sha256')}
+    src=copy.deepcopy(old.get('source',{}))
+    src['primary_source']='9789290613831-eng.pdf'
+    src['pdf_page']=int(s['source_page'])
+    src['direct_page_text_verified']=True
+    src['page_text_sha256']=hashlib.sha256(pages[int(s['source_page'])].encode('utf-8')).hexdigest()
+    rec={'source_statement_id':s['statement_id'],'point_id':s['point_id'],'section':s['statement_type'],'text_canonical':s['source_text'],'source':src,
+         'primary_source_verified':True,'audit_source_page':s['source_page'],'source_text_sha256':hashlib.sha256(s['source_text'].encode('utf-8')).hexdigest(),
+         'frozen_source_sha256':old.get('frozen_source_sha256')}
     if old.get('note_index') is not None:rec['note_index']=old['note_index']
     if old.get('alternative_location') is not None:rec['alternative_location']=old['alternative_location']
     source_statements.append(rec)
@@ -397,8 +758,8 @@ def validate_graph(graph):
         observed_cb=[(x['child_landmark_id'],x['parent_landmark_id'],x['source_span']['char_start'],x['source_span']['char_end']) for x in cbs[sid]]
         if sorted(expected_cb)!=sorted(observed_cb):status['composite_binding_mismatch']=True;details.append({'kind':'composite','expected':expected_cb,'observed':observed_cb})
         # conditions: count/type/span plus branch relation nonflattening if relation-bearing statement
-        ec=[(x['condition_type'],x['char_start'],x['char_end']) for x in spec['conditions']]
-        oc=[(x['condition_type'],x['source_span']['char_start'],x['source_span']['char_end']) for x in conds[sid]]
+        ec=[(x['condition_type'],x['char_start'],x['char_end'],x.get('condition') or cond_label(x.get('source_raw','')) or f"branch_{i+1}") for i,x in enumerate(spec['conditions'])]
+        oc=[(x['condition_type'],x['source_span']['char_start'],x['source_span']['char_end'],x.get('branch_id')) for x in conds[sid]]
         if sorted(ec)!=sorted(oc):status['conditional_semantics_mismatch']=True;details.append({'kind':'conditions','expected':ec,'observed':oc})
         for c in conds[sid]:
             if rs[sid] and c['condition_type'] in ('sex_specific','anatomical_variant','alternative') and not c['branch_relation_ids']:
@@ -501,22 +862,79 @@ for d in defects['defects']:
 # upstream after build
 upstream_after={k:sha_file(p) for k,p in upstream_files.items()}
 upstream_diff={k:(upstream_before[k]!=upstream_after[k]) for k in upstream_before}
+policy_contract_after={'policy_baseline':loc.get('policy_baseline'),'registry_blob_sha':next((r.get('final_disposition',{}).get('registry_blob_sha') for r in loc['records'] if r.get('final_disposition',{}).get('registry_blob_sha')),None)}
+upstream_diff['FMA registry resolution policy v0.3.1']=(policy_contract_before!=policy_contract_after)
 
-# hard graph integrity
+# hard graph integrity: referential integrity + actual semantic-use orphan checks.
 lmids={x['node_id'] for x in graph['landmark_nodes']};gids={x['node_id'] for x in graph['geometry_nodes']};pids={x['node_id'] for x in graph['points']};rids={x['relation_id'] for x in graph['relation_instances']}
+lm_by_id={x['node_id']:x for x in graph['landmark_nodes']}
 orph=[]
+used_lm=set();used_geom=set()
 for r in graph['relation_instances']:
     if r['subject_node_id'] not in pids:orph.append(('relation_subject',r['relation_id'],r['subject_node_id']))
     for a in r['argument_node_ids']:
         if a not in lmids and a not in gids:orph.append(('relation_arg',r['relation_id'],a))
+        if a in lmids:used_lm.add(a)
+        if a in gids:used_geom.add(a)
+    for gid in r.get('geometry_node_ids',[]):
+        if gid not in gids:orph.append(('relation_geometry',r['relation_id'],gid))
+        else:used_geom.add(gid)
 for g in graph['geometry_nodes']:
     for a in g['endpoint_node_ids']:
         if a not in lmids:orph.append(('geometry_endpoint',g['node_id'],a))
+        else:used_lm.add(a)
+for cb in graph['composite_bindings']:
+    for a in (cb['child_landmark_id'],cb['parent_landmark_id']):
+        if a not in lmids:orph.append(('composite_landmark',cb['binding_id'],a))
+        else:used_lm.add(a)
 for c in graph['conditions']:
-    for r in c['branch_relation_ids']:
-        if r not in rids:orph.append(('condition_relation',c['condition_id'],r))
+    for rid in c['branch_relation_ids']:
+        if rid not in rids:orph.append(('condition_relation',c['condition_id'],rid))
     for a in c['branch_landmark_ids']:
         if a not in lmids:orph.append(('condition_landmark',c['condition_id'],a))
+        else:used_lm.add(a)
+for pm in graph['proportional_measurements']:
+    a=pm['anchor_landmark_id']
+    if a not in lmids:orph.append(('measurement_anchor',pm['measurement_id'],a))
+    else:used_lm.add(a)
+semantic_orphan_landmarks=[x['node_id'] for x in graph['landmark_nodes'] if x['node_id'] not in used_lm]
+semantic_orphan_geometry=[x['node_id'] for x in graph['geometry_nodes'] if x['node_id'] not in used_geom]
+for x in semantic_orphan_landmarks:orph.append(('orphan_landmark',x,None))
+for x in semantic_orphan_geometry:orph.append(('orphan_geometry',x,None))
+
+# Relation-family semantic cardinality. Explicit binary operators must remain binary;
+# source plural/anaphoric endpoint sets are represented as one unresolved set node with min cardinality >=2.
+semantic_cardinality_errors=[]
+def endpoint_set_ok(a):
+    x=lm_by_id.get(a,{})
+    return bool(x.get('endpoint_set')) and int(x.get('required_member_count') or x.get('minimum_member_count') or 0)>=2
+for r in graph['relation_instances']:
+    n=len(r['argument_node_ids']);typ=r['relation_type']
+    if typ in ('between','midpoint-between'):
+        if not (n==2 or (n==1 and endpoint_set_ok(r['argument_node_ids'][0]))):
+            semantic_cardinality_errors.append({'relation_id':r['relation_id'],'type':typ,'argument_count':n})
+    elif typ=='at-junction' and n!=2:
+        semantic_cardinality_errors.append({'relation_id':r['relation_id'],'type':typ,'argument_count':n})
+    elif typ=='on-line' and n not in (1,2):
+        # Unary on-line is source-faithful when the source names an existing line
+        # (median line, intercostal curve, etc.); binary is used for constructed lines.
+        semantic_cardinality_errors.append({'relation_id':r['relation_id'],'type':typ,'argument_count':n})
+    elif typ=='fraction-along-line':
+        if n==2:pass
+        elif n==1:
+            a=lm_by_id.get(r['argument_node_ids'][0],{})
+            if a.get('semantic_role')!='fraction_line_anchor' or not r.get('fraction_partition'):
+                semantic_cardinality_errors.append({'relation_id':r['relation_id'],'type':typ,'argument_count':n,'reason':'single fraction line anchor lacks partition semantics'})
+        else:
+            semantic_cardinality_errors.append({'relation_id':r['relation_id'],'type':typ,'argument_count':n})
+for g in graph['geometry_nodes']:
+    expected=int(g.get('required_endpoint_count',len(g.get('endpoint_node_ids',[]))))
+    if len(g.get('endpoint_node_ids',[]))!=expected:
+        semantic_cardinality_errors.append({'geometry_id':g['node_id'],'type':g['geometry_type'],'endpoint_count':len(g.get('endpoint_node_ids',[])),'required':expected})
+    if g['geometry_type'] in ('constructed_line','curved_line','intersection') and expected!=2:
+        semantic_cardinality_errors.append({'geometry_id':g['node_id'],'type':g['geometry_type'],'required':expected,'reason':'binary geometry must require 2 endpoints'})
+
+source_provenance_incomplete=[s['source_statement_id'] for s in graph['source_statements'] if not (s.get('primary_source_verified') and s.get('source',{}).get('primary_source')=='9789290613831-eng.pdf' and s.get('source',{}).get('pdf_page'))]
 
 # invalid FMA only those supplied by upstream; use v1's frozen valid set as non-authoritative baseline plus known registry pattern
 # User requested no broad FMA reevaluation. Check references are FMA-like and existed in v1 upstream graph FMA set.
@@ -539,15 +957,65 @@ summary={
                   'added_geometry':max(0,len(graph['geometry_nodes'])-len(v1['geometry_nodes'])),'removed_geometry':max(0,len(v1['geometry_nodes'])-len(graph['geometry_nodes'])),
                   'added_conditional_branch':len(graph['conditions']),'composite_binding_change':len(graph['composite_bindings'])},
 }
-for p,case in regcases['regression_cases'].items():
-    sids=case['statements'];summary['mandatory_regression'][p]={'PASS':all(val_by[s]['exact_semantic_match'] for s in sids),'statements':{s:val_by[s]['exact_semantic_match'] for s in sids}}
+# Permanent regression predicates verify the actual required semantics, not merely statement-level validator status.
+lmreg={x['node_id']:x for x in graph['landmark_nodes']}
+def _rels(sid,typ=None): return [r for r in graph['relation_instances'] if r['source_statement_id']==sid and (typ is None or r['relation_type']==typ)]
+def _args(r): return [norm(lmreg[a]['source_raw']) for a in r['argument_node_ids']]
+def _has_rel(sid,typ,need_args=None,branch=None):
+    for r in _rels(sid,typ):
+        if branch is not None and r.get('branch_id')!=branch: continue
+        aa=_args(r)
+        if need_args is None or all(any(norm(n) in x for x in aa) for n in need_args): return True
+    return False
+def _has_cb(sid,child,parent):
+    for c in graph['composite_bindings']:
+        if c['source_statement_id']==sid and norm(child) in norm(lmreg[c['child_landmark_id']]['source_raw']) and norm(parent) in norm(lmreg[c['parent_landmark_id']]['source_raw']): return True
+    return False
+def _cond_branches(sid): return {(c['condition_type'],c['branch_id']) for c in graph['conditions'] if c['source_statement_id']==sid}
+def _meas(sid): return [m for m in graph['proportional_measurements'] if m['source_statement_id']==sid]
+
+reg={}
+checks={
+ 'CV1':[
+   ('male_line',_has_rel('S:CV1:location','on-line',['anus','posterior border'],'male')),
+   ('male_midpoint',_has_rel('S:CV1:location','midpoint-between',['anus','posterior border'],'male')),
+   ('female_line',_has_rel('S:CV1:location','on-line',['anus','posterior commissure'],'female')),
+   ('female_midpoint',_has_rel('S:CV1:location','midpoint-between',['anus','posterior commissure'],'female')),
+   ('male_composite',_has_cb('S:CV1:location','posterior border','scrotum')),
+   ('female_composite',_has_cb('S:CV1:location','posterior commissure','labium majoris')),
+   ('sex_branches',('sex_specific','male') in _cond_branches('S:CV1:location') and ('sex_specific','female') in _cond_branches('S:CV1:location'))],
+ 'CV12':[
+   ('line',_has_rel('S:CV12:note:1','on-line',['xiphisternal junction','centre of umbilicus'])),
+   ('midpoint',_has_rel('S:CV12:note:1','midpoint-between',['xiphisternal junction','centre of umbilicus'])),
+   ('two_endpoint_geometry',any(len(x['endpoint_node_ids'])==2 for x in graph['geometry_nodes'] if x['source_statement_id']=='S:CV12:note:1'))],
+ 'ST35':[
+   ('location_depression',any(_args(r)==['depression'] for r in _rels('S:ST35:location','surface-landmark'))),
+   ('location_patellar_ligament_anchor',_has_rel('S:ST35:location','relative-to',['patellar ligament'])),
+   ('note_depression',any(_args(r)==['depression'] for r in _rels('S:ST35:note:1','surface-landmark'))),
+   ('note_lateral_patella',any(r.get('direction')=='lateral' and any('patella' in x for x in _args(r)) for r in _rels('S:ST35:note:1','relative-to'))),
+   ('note_inferior_patella',any(('inferior' in norm(r['cue_span']['source_raw']) or r.get('direction')=='inferior') and any('patella' in x for x in _args(r)) for r in _rels('S:ST35:note:1','relative-to'))),
+   ('knee_flexed_condition',any(c['condition_type']=='body_position' and 'knee is flexed' in c['source_span']['source_raw'].lower() for c in graph['conditions'] if c['source_statement_id']=='S:ST35:note:1'))],
+ 'GB26':[
+   ('rib_relation',_has_rel('S:GB26:location','relative-to',['free extremity of the 11th rib'])),
+   ('umbilical_level',_has_rel('S:GB26:location','same-level',['centre of umbilicus'])),   ('rib_composite',_has_cb('S:GB26:location','free extremity','11th rib')),
+   ('note2_cv8_level',_has_rel('S:GB26:note:2','same-level',['cv8']))],
+ 'ST29':[
+   ('location_4cun_inferior',any(m['value']==4.0 and m['unit']=='B-cun' and m['direction']=='inferior' for m in _meas('S:ST29:location'))),
+   ('location_2cun_lateral',any(m['value']==2.0 and m['unit']=='B-cun' and m['direction']=='lateral' for m in _meas('S:ST29:location'))),
+   ('note_regression',val_by['S:ST29:note:1']['exact_semantic_match'])]
+}
+for p,items in checks.items():
+    reg[p]={'PASS':all(v for _,v in items),'checks':{k:v for k,v in items}}
+summary['mandatory_regression']=reg
 
 # deterministic graph hash: write twice from independently sorted serialization after deepcopy
 h1=sha_obj(graph);h2=sha_obj(copy.deepcopy(graph));det=(h1==h2)
 summary['deterministic_rebuild_hash_sha256']=h1;summary['deterministic_rebuild_reproducibility_PASS']=det
 
 # freeze gate
-gate=(len(specs)==583 and exact==583 and not blocked and sev_unresolved['CRITICAL']==0 and sev_unresolved['MAJOR']==0 and all(x['PASS'] for x in tests) and not any(upstream_diff.values()) and not orph and not invalid_fma and all(x['PASS'] for x in summary['mandatory_regression'].values()) and det)
+gate=(len(specs)==583 and exact==583 and not blocked and sev_unresolved['CRITICAL']==0 and sev_unresolved['MAJOR']==0 and all(x['PASS'] for x in tests) and not any(upstream_diff.values()) and not orph and not invalid_fma and not semantic_cardinality_errors and not source_provenance_incomplete and all(x['PASS'] for x in summary['mandatory_regression'].values()) and det)
+summary['semantic_cardinality_error_count']=len(semantic_cardinality_errors)
+summary['source_provenance_incomplete_count']=len(source_provenance_incomplete)
 summary['final_judgment']='B_V2_FREEZE_CANDIDATE' if gate else 'B_V2_NOT_READY'
 graph['status']=summary['final_judgment']
 graph['build_summary']=summary
