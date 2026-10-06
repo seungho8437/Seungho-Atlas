@@ -41,10 +41,10 @@ def main():
  pair=collections.Counter()
  hard_rel=[]; special_rel=[]
  for r in g["relation_instances"]:
-  args=[node_by_id[a] for a in r.get("argument_node_ids",[]) if a in node_by_id]
-  classes=sorted({x.get("landmark_class") or "<none>" for x in args}) or ["<none>"]
+  rel_args=[node_by_id[a] for a in r.get("argument_node_ids",[]) if a in node_by_id]
+  classes=sorted({x.get("landmark_class") or "<none>" for x in rel_args}) or ["<none>"]
   for cls in classes: pair[(r["relation_type"],cls)]+=1
-  dispositions={x.get("terminal_disposition") for x in args}
+  dispositions={x.get("terminal_disposition") for x in rel_args}
   if dispositions & HARD_UNRESOLVED: hard_rel.append(r["relation_id"])
   if dispositions & {"registry_limited","specialized_anchor"}: special_rel.append(r["relation_id"])
 
