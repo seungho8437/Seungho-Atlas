@@ -1,378 +1,191 @@
-# C v3 — Canonical Design
+# C v3 — Canonical Four-Stage Design
 
-Status: **S1 REDESIGN REQUIRED / implementation not started**
+Status: **Stage 1 automatic validation PASS · human visual review pending**
 
-This document is the canonical C v3 design contract. Rejected S1 code, workflow, and G1 artifacts are not part of the active design.
+This document is the canonical C v3 contract. Rejected S1/G1 implementations are not active.
 
-## 0. Non-negotiable rules
+## Non-negotiable rules
 
-1. B v2.1 is the semantic source graph. C must execute it; C must not silently reinterpret or replace it.
+1. B v2.1 is the semantic source graph. C executes it; C does not silently reinterpret it.
 2. Legacy C v1/v2 coordinates are never solver inputs.
-3. A plausible rendered point is not evidence of validity.
-4. No point-specific coordinate override is permitted unless the WHO source itself requires an explicit point-specific exception and that exception is documented and regression-tested.
-5. Generation, computation, local validation, family validation, point validation, and global validation are distinct states.
-6. A failed gate blocks the next stage.
-7. Rejected executable code/workflows/deployment artifacts are removed from the active tree rather than left as alternate pipelines.
+3. Plausible rendering is not validity.
+4. No point-specific coordinate override is allowed unless the WHO source itself requires an explicit point-specific exception and that exception is documented and regression-tested.
+5. GENERATED, COMPUTABLE, LOCALLY_VALIDATED, FAMILY_VALIDATED, POINT_VALIDATED and GLOBAL_VALIDATED are distinct states.
+6. A failed stage blocks the next stage.
+7. Rejected executable code/workflows/deployment artifacts are removed from the active tree.
+8. The skin is a component-aware indexed triangle surface. No closed-manifold assumption is made.
+9. Spatial eligibility is expressed as overlapping constraints/masks, never as one exclusive whole-body region partition and never by an `else -> trunk` fallback.
+10. MULTIPLE and UNRESOLVED are first-class outcomes; neither may be silently collapsed to RESOLVED.
 
 ---
 
-# 1. Why the previous S1 is rejected
+# Stage 1 — Spatial substrate
 
-The rejected S1 attempted to assign every skin vertex to one exclusive coarse body region using:
-- nearest skeletal segment axis;
-- a radius threshold derived from bone radial p95;
-- expanded hand/foot skeletal bounding boxes;
-- mandible/clavicle Y cut-offs for head/neck;
-- trunk as a residual fallback.
+Purpose: make BodyParts3D geometrically trustworthy and queryable without knowing any acupoint ID.
 
-That construction is not a valid anatomical substrate for WHO acupoint localization.
+Stage 1 contains the following responsibilities; these are subtests, not separate project stages.
 
-It fails for structural reasons:
+### 1A. Canonical mesh registry
 
-- **exclusive coarse partitioning is the wrong primitive**: many WHO locations are defined by overlapping surface, level, line, crease, interspace, boundary, and relation constraints rather than one body-region label;
-- **nearest-bone logic is not semantic localization**: proximity to femur/ulna/etc. cannot establish that a point belongs to lateral abdomen, wrist crease, fourth intercostal space, etc.;
-- **global-axis cut-offs do not model local anatomy**;
-- **transition zones are not represented**;
-- **surface topology is discarded when only vertices are classified**;
-- **candidate multiplicity/uniqueness is not represented**;
-- **no downstream relation can prove that a chosen candidate satisfies all source constraints**.
+For every BodyParts3D part/concept used by C:
+- stable IDs and names;
+- anatomical system;
+- laterality including explicit bilateral cases;
+- binary chunk/offsets;
+- vertex/index/triangle counts;
+- bounds;
+- concept-to-part bindings;
+- source hashes.
 
-The user-provided visual failures are used only as evidence of these design defects, not as patch targets:
+### 1B. Global and local anatomical frames
 
-- GB23 appearing near the elbow shows that a lateral-thorax constraint can be lost and a geometrically unrelated candidate can survive.
-- HT7 duplicated and displaced toward the ulnar elbow shows absence of candidate cardinality/uniqueness enforcement plus inadequate local wrist constraints.
-- LU6 on the little finger shows failure to preserve a forearm line/interval constraint.
-- LI7 producing three ipsilateral candidates shows that the pipeline can emit candidates without a one-point-per-side cardinality proof.
-- GB26 on the femur shows that same-level + lateral-abdomen semantics are not acting as hard constraints.
+Required frames:
+- global patient left/right, superior/inferior, anterior/posterior;
+- trunk and head/neck;
+- bilateral upper arm, forearm, hand, thigh, lower leg, foot;
+- shoulder, elbow, wrist, hip, knee, ankle centers.
 
-These examples do **not** define the complete failure set.
+Frame orientation must be derived from explicit neighboring skeletal anatomy and independently validated. A generic distance-to-trunk heuristic or a single world-axis cutoff is forbidden.
 
----
+Hands and feet use anatomically appropriate surface axes:
+- hand: proximal/distal, outward, palmar;
+- foot: proximal/distal, outward, dorsal.
 
-# 2. S1 purpose: build a spatial substrate, not acupoint regions
+### 1C. Topology-preserving skin surface
 
-S1 must not produce acupoint coordinates and must not try to pre-label the entire skin into a single mutually exclusive region map.
-
-S1 produces an **acupoint-independent anatomical spatial substrate** capable of supporting later semantic execution.
-
-## S1-A. Canonical mesh registry
-
-For every BodyParts3D mesh/part used by C, record:
-
-- stable part/concept identifier;
-- anatomical name;
-- system;
-- laterality;
-- parent/whole relationship when available;
-- vertex count;
-- triangle/index topology availability;
-- axis-aligned bounds;
-- centroid;
-- source chunk and byte ranges;
-- whether the mesh is surface, deep structure, or reference-only for C.
-
-Required invariants:
-
-- no unaccounted duplicated IDs;
-- no silent left/right conflation;
-- units and world coordinate convention fixed;
-- every geometry lookup returns a stable typed object, never just an untyped vertex array.
-
-## S1-B. Body frame and local anatomical frames
-
-One global frame is insufficient.
-
-S1 shall establish:
-
-- global patient-left/right, superior/inferior, anterior/posterior frame;
-- bilateral limb frames for upper arm, forearm, hand, thigh, lower leg, foot;
-- joint-level frames for shoulder, elbow, wrist, hip, knee, ankle;
-- trunk-local frame;
-- head/neck frame.
-
-Each frame must be derived from multiple independent anatomical references where possible.
-
-Every frame record must include:
-- defining structures;
-- fitting method;
-- residual/error measures;
-- laterality;
-- confidence/status.
-
-A frame is invalid if its orientation depends on one arbitrary mesh extremum or a single global-axis cut-off.
-
-## S1-C. Preserve the skin as a surface
-
-The skin must be represented as a triangulated/topological surface, not merely a bag of labeled vertices.
-
-S1 must support deterministic primitives for:
-
-- nearest point on skin triangle;
+The skin is represented as indexed triangles with:
+- triangle identity;
+- barycentric coordinates;
+- nearest triangle point;
 - ray-surface intersection;
 - plane-surface intersection;
-- local surface normal;
-- connected-component check;
-- geodesic distance/path on skin;
-- projection of a deep/internal candidate to the anatomically eligible skin;
-- side-of-plane / interval / half-space queries.
+- triangle normal;
+- connected-component membership;
+- mesh-edge geodesic;
+- deterministic reconstruction.
 
-Every surface result must preserve the triangle/face identity and barycentric coordinates so it can be reproduced exactly.
+The source skin may contain multiple components and isolated topology defects. These must be measured and exposed, not hidden. Invalid indices, degenerate triangles, or component coverage loss are fatal.
 
-## S1-D. Anatomical constraints are overlapping masks, not one exclusive region label
+### 1D. Typed spatial query layer
 
-S1 may construct reusable anatomical masks/fields, but they are **constraints**, not a global partition.
+Queries return one of:
+- `RESOLVED`
+- `MULTIPLE`
+- `UNRESOLVED`
+- `INVALID`
 
-Examples:
-- left/right;
-- upper/lower limb segment interval;
-- hand/foot envelope;
-- anterior/posterior/medial/lateral surface aspect;
-- trunk level slabs;
-- thoracic/abdominal/pelvic eligibility;
-- joint-neighborhood zones;
-- intercostal candidate bands when constructible from ribs;
-- proximity fields around explicit structures.
+and preserve candidates, provenance and residuals.
 
-A skin point may satisfy multiple masks simultaneously.
+Reusable primitives include:
+- entity mesh/subfeature lookup;
+- local frame lookup;
+- half-space and interval masks;
+- intersections/unions of masks;
+- lines/planes/intersections;
+- nearest eligible skin point;
+- ray/plane surface intersections;
+- component-aware geodesic distance.
 
-No `else -> trunk` or equivalent residual fallback is permitted.
+No WHO acupoint ID is used in Stage 1.
 
-If a requested anatomical mask cannot be derived with justified geometry, the result is `UNRESOLVED`, not an inferred substitute.
+### Stage 1 pass contract
 
-## S1-E. Reusable spatial query API
+Automatic validation must independently establish:
+- complete atlas/binary integrity;
+- registry reproducibility;
+- global/local frame orientation and anatomical chain order;
+- bilateral consistency;
+- topology/index validity;
+- component coverage;
+- actual-atlas nearest/ray/plane/barycentric query round-trips;
+- no legacy coordinate input;
+- no exclusive region partition;
+- no acupoint-specific logic.
 
-S1 exposes typed primitives only; it does not know acupoint IDs.
+A separate human review artifact shows only body surface, frames and joints. No acupoints are rendered.
 
-Minimum query families:
-
-- `entity_mesh(id, side)`
-- `entity_subfeature(parent, feature_contract)`
-- `local_frame(region_or_joint, side)`
-- `surface_mask(predicate_set)`
-- `level_plane(reference)`
-- `line_between(a,b)`
-- `plane_through(...)`
-- `intersection(A,B,...)`
-- `project_to_skin(candidate, eligibility_mask, direction_contract)`
-- `nearest_on_skin(candidate, eligibility_mask)`
-- `geodesic_distance(a,b, eligibility_mask)`
-
-Every query returns:
-- status: RESOLVED / MULTIPLE / UNRESOLVED / INVALID;
-- zero or more candidates;
-- provenance;
-- residuals;
-- eligibility constraints used.
-
-S1 never converts MULTIPLE to RESOLVED by arbitrary nearest-neighbor choice.
+Stage 1 is fully approved only after the automatic suite passes and the human visual review is accepted.
 
 ---
 
-# 3. G1 — S1 validation gate
+# Stage 2 — Semantic execution layer
 
-G1 is not one visual page. It contains independent sub-gates.
+Purpose: execute the complete B v2.1 WHO spatial ontology on the Stage 1 substrate.
 
-## G1-A. Registry integrity
+Input scope is the entire B v2.1 graph, not selected example points.
 
-Pass conditions:
-- all required atlas parts are readable;
-- ID/name/laterality/system mappings are deterministic;
-- no silent alias collision;
-- mesh bounds and counts are reproducible;
-- input hashes match G0.
+Stage 2 must cover:
+- every landmark class;
+- every relation type;
+- every proportional measurement;
+- every conditional branch;
+- every reference-acupoint dependency;
+- every constructed geometry.
 
-## G1-B. Frame audit
+Examples include `same-level`, `between`, `on-line`, `relative-to`, `surface-landmark`, B/F-cun, creases, interspaces, borders and reference lines.
 
-Independent validator recomputes orientation tests without calling the S1 frame-building functions.
+Each B node/relation obtains a deterministic execution route and explicit terminal state. Stage 2 does not force all items to resolve.
 
-It must verify:
-- left/right sign on multiple bilateral structures;
-- superior/inferior order using multiple axial structures;
-- anterior/posterior direction using independent structures;
-- monotonic proximal-distal ordering of each limb;
-- bilateral symmetry residuals within declared tolerances.
-
-Any failed frame blocks G1.
-
-## G1-C. Surface/topology audit
-
-Pass conditions:
-- skin topology is readable and deterministic;
-- triangle-to-vertex references are valid;
-- surface normals are internally consistent enough for queries;
-- ray/nearest-point/plane-intersection round-trip tests pass;
-- no unexpected disconnected component is silently merged;
-- barycentric reconstruction residual is within tolerance.
-
-## G1-D. Boundary and transition stress test
-
-This is a predeclared challenge set based on anatomy, not on hand-picked acupoints.
-
-It must cover at minimum:
-- neck ↔ trunk;
-- shoulder/axilla ↔ upper arm;
-- elbow transition;
-- wrist ↔ hand;
-- thorax ↔ abdomen;
-- abdomen/pelvis ↔ thigh/groin;
-- knee/popliteal transition;
-- ankle ↔ foot;
-- medial/lateral/anterior/posterior surface aspects.
-
-The challenge set is defined **before** observing the test output.
-
-Success means the spatial masks/frames behave coherently at transitions. It does not mean all future landmark classes are solved.
-
-## G1-E. Human visual QC
-
-Human review visualizes:
-- global/local frames;
-- skin surface and normals;
-- anatomical masks/fields;
-- transition challenge probes;
-- left/right and proximal/distal axes.
-
-No acupoint coordinates are shown at G1.
-
-Human QC is confirmatory. It must not be the primary mechanism for discovering routine structural errors.
-
-### G1 pass rule
-
-G1 = APPROVED only if G1-A through G1-E all pass.
-
-Automatic tests cannot substitute for G1-E.
-G1-E cannot override a failed automatic sub-gate.
-
----
-
-# 4. S2 — exhaustive landmark realization layer
-
-S2 begins only after G1 approval.
-
-Input scope is the **entire B v2.1 landmark-node census**, not selected acupoints.
-
-Each landmark node is assigned to a declared realization contract such as:
-
-- direct entity mesh;
-- entity subfeature;
-- body/surface constraint;
-- crease/border/notch/depression/orifice specialized anchor;
-- anatomical/reference line;
-- constructed geometry;
-- reference-acupoint dependency;
-- source-contextual unresolved.
-
-S2 does not force every node to resolve. It guarantees that every node has a deterministic route and an explicit terminal state.
-
-## G2
-
-G2 audits every landmark class and realization contract:
+Stage 2 validation is exhaustive by semantic family × landmark family and checks:
 - coverage;
 - laterality;
 - cardinality;
-- geometry correctness;
+- landmark realization;
+- relation residuals;
 - source compatibility;
-- class-specific challenge cases;
-- unresolved reason taxonomy.
+- unresolved taxonomy;
+- no legacy-coordinate leakage.
 
-No S3 until G2 passes.
-
----
-
-# 5. S3 — relation-operation execution
-
-S3 executes B v2.1 relation semantics using only validated S1/S2 primitives.
-
-Examples:
-- surface-landmark;
-- relative-to;
-- reference-acupoint;
-- same-level;
-- on-line;
-- between;
-- center-of;
-- midpoint-between;
-- at-junction;
-- fraction-along-line;
-- midpoint-of-entity;
-- overlies.
-
-Each relation operation must return a residual or explicit satisfaction test.
-
-## G3
-
-Validation unit is **relation family × landmark family** across the entire graph.
-
-A relation family passes only when:
-- operands are valid;
-- expected cardinality is met;
-- all hard constraints are satisfied;
-- laterality and anatomical eligibility hold;
-- MULTIPLE is not silently collapsed;
-- no legacy coordinate was used.
+Stage 2 answers: **Can the ontology's WHO spatial meaning actually be executed on BodyParts3D?**
 
 ---
 
-# 6. S4 — 361-acupoint synthesis
+# Stage 3 — 361-acupoint synthesis
 
-Only after G3.
+Purpose: synthesize coordinates only from Stage 2-validated semantic dependencies.
 
 For each logical acupoint:
-
-1. gather all hard source relations;
+1. gather all hard source constraints;
 2. execute the dependency graph;
-3. intersect constraints/candidate sets;
-4. enforce cardinality:
-   - midline point: exactly one valid coordinate unless source specifies otherwise;
-   - bilateral point: exactly one valid coordinate per side;
-5. require all hard relations to be computable and satisfied;
-6. project to skin only through the validated projection contract;
+3. intersect eligible candidate sets;
+4. enforce cardinality;
+5. require every hard constraint to be computable and satisfied;
+6. project to skin only through validated Stage 1/2 contracts;
 7. otherwise return UNRESOLVED.
 
-Examples such as two HT7 points on one side or three LI7 points on one side are therefore impossible to promote to VALIDATED: they fail cardinality before publication.
+Cardinality:
+- midline point: exactly one valid coordinate unless the source explicitly says otherwise;
+- bilateral point: exactly one valid coordinate per side.
+
+Multiple candidates can never be published as a validated coordinate.
 
 ---
 
-# 7. G4 — final 361-point audit
+# Stage 4 — Global validation
 
-G4 contains:
+Purpose: decide whether the complete 361-point product is publishable.
 
-- semantic source-consistency audit;
-- relation residual audit;
-- cardinality/uniqueness audit;
-- laterality audit;
-- skin adherence audit;
-- anatomical eligibility audit;
-- dependency-cycle audit;
-- bilateral/global outlier audit;
-- full human visual QC.
+Required audits:
+- source-semantic consistency;
+- relation residuals;
+- cardinality/uniqueness;
+- laterality;
+- surface adherence;
+- anatomical eligibility;
+- dependency cycles;
+- bilateral/global outliers;
+- complete human visual QC.
 
-A coordinate may be published only after G4 approval.
-
----
-
-# 8. State machine
-
-Allowed states:
-
-`DISCOVERED`
-→ `CLASSIFIED`
-→ `IMPLEMENTED`
-→ `COMPUTABLE`
-→ `LOCALLY_VALIDATED`
-→ `FAMILY_VALIDATED`
-→ `POINT_VALIDATED`
-→ `GLOBAL_VALIDATED`
-
-The word `VALIDATED` must not be used for generated-but-unverified coordinates.
+Only Stage 4 approval permits `GLOBAL_VALIDATED`.
 
 ---
 
-# 9. Active C v3 state after rejection
+# Current state
 
-- G0 input lock: retained and moved to `artifacts/c-v3/g0/inputs.lock.json`.
-- rejected S1 executable: removed.
-- rejected S1 GitHub Actions workflow: removed.
-- rejected G1 body-frame/skin-region artifacts: removed.
-- S1 implementation: **not started under this redesign**.
-- next action: implement S1-A through S1-E exactly against this contract, then build independent G1-A through G1-D validators before asking for G1-E human review.
+- B v2.1 input lock: retained.
+- rejected earlier S1/G1 executable and generated artifacts: removed from the active tree.
+- Stage 1 implementation: present under `scripts/cv3/`.
+- Stage 1 automatic validation on BodyParts3D: **PASS**.
+- Stage 1 human visual review: **PENDING**.
+- Stage 2: **NOT STARTED**.
+- No new acupoint coordinates have been generated or deployed.
