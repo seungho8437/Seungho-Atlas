@@ -211,33 +211,46 @@ function averageCenters(stats){
   const xs=stats.filter(Boolean);if(!xs.length)return null;
   return [0,1,2].map(k=>xs.reduce((n,x)=>n+x.center[k],0)/xs.length);
 }
+function primaryLocationSegment(text){
+  const q=String(text||'').trim();
+  if(/^(아래팔|전완)/.test(q))return 'forearm';
+  if(/^(위팔|상완)/.test(q))return 'upper-arm';
+  if(/^손목/.test(q))return 'wrist';
+  if(/^(손등|손바닥|손가락|손허리|손 부위)/.test(q))return 'hand';
+  if(/^(넓적다리|대퇴)/.test(q))return 'thigh';
+  if(/^(무릎|오금)/.test(q))return 'knee';
+  if(/^(종아리|정강|하퇴|아래다리)/.test(q))return 'leg';
+  if(/^(발목|복사)/.test(q))return 'ankle';
+  if(/^(발등|발바닥|발가락|발허리|발 가쪽|발 안쪽)/.test(q))return 'foot';
+  if(/^(볼기|둔부)/.test(q))return 'buttock';
+  if(/^얼굴/.test(q))return 'face';
+  if(/^(머리|두피)/.test(q))return 'head';
+  if(/^(목|경부)/.test(q))return 'neck';
+  if(/^(가슴|흉부|앞가슴)/.test(q))return 'chest';
+  if(/^(윗배|아랫배|복부)/.test(q))return 'abdomen';
+  if(/^(샅|회음|두덩|골반|엉치)/.test(q))return 'pelvis';
+  return null;
+}
 function regionalGeometrySeed(text,side){
-  const ss=sideSignFor(side);
-  if(/손목|wrist/i.test(text)){
+  const segment=primaryLocationSegment(text);
+  if(segment==='wrist'){
     const id=side==='left'?'FMA40121':side==='right'?'FMA40120':null;
     const st=id?conceptStats(id,0,lrAxis,leftSign):null;
     if(st)return [...st.center];
     return averageCenters([statsSeed('FMA23463',side),statsSeed('FMA23466',side)]);
   }
-  if(/손등|손바닥|손가락|손허리|hand|finger|metacarp/i.test(text)){
+  if(segment==='hand'){
     const st=statsSeed('FMA23900',side);if(st)return [...st.center];
   }
-  if(/아래팔|전완|forearm/i.test(text)){
+  if(segment==='forearm'){
     const c=averageCenters([statsSeed('FMA23463',side),statsSeed('FMA23466',side)]);if(c)return c;
   }
-  if(/팔꿈치|주와|elbow/i.test(text)){
-    const r=statsSeed('FMA23463',side),u=statsSeed('FMA23466',side);
-    const c=averageCenters([r,u]);if(c){c[supAxis]=Math.max(r?.max[supAxis]??c[supAxis],u?.max[supAxis]??c[supAxis]);return c;}
-  }
-  if(/위팔|상완|upper arm/i.test(text)){const st=statsSeed('FMA13303',side);if(st)return [...st.center];}
-  if(/볼기|둔부|buttock|glute/i.test(text)){
-    const st=glutealStatsBySide(side);if(st){const c=[...st.center];c[apAxis]=st.min[apAxis];return c;}
-  }
-  if(/넓적다리|대퇴|thigh/i.test(text)){const st=statsSeed('FMA9611',side);if(st)return [...st.center];}
-  if(/무릎|오금|knee|poplite/i.test(text)){const st=statsSeed('FMA24485',side);if(st)return [...st.center];}
-  if(/종아리|정강|하퇴|아래다리|leg/i.test(text)){const st=statsSeed('FMA24476',side);if(st)return [...st.center];}
-  if(/발목|복사|ankle|malleol/i.test(text)){const st=statsSeed('FMA9708',side);if(st)return [...st.center];}
-  if(/발등|발바닥|발가락|발허리|foot|toe|metatars/i.test(text)){const st=statsSeed('FMA24496',side);if(st)return [...st.center];}
+  if(segment==='upper-arm'){const st=statsSeed('FMA13303',side);if(st)return [...st.center];}
+  if(segment==='thigh'){const st=statsSeed('FMA9611',side);if(st)return [...st.center];}
+  if(segment==='knee'){const st=statsSeed('FMA24485',side);if(st)return [...st.center];}
+  if(segment==='leg'){const st=statsSeed('FMA24476',side);if(st)return [...st.center];}
+  if(segment==='ankle'){const st=statsSeed('FMA9708',side);if(st)return [...st.center];}
+  if(segment==='foot'){const st=statsSeed('FMA24496',side);if(st)return [...st.center];}
   return null;
 }
 
@@ -279,25 +292,26 @@ function unionStats(items){
 }
 function anatomicalEnvelope(text,side){
   let st=null,margin=[.045,.035,.065];
-  if(/아래팔|전완|forearm/i.test(text)){
+  const segment=primaryLocationSegment(text);
+  if(segment==='forearm'){
     st=unionStats([statsSeed('FMA23463',side),statsSeed('FMA23466',side)]);margin=[.050,.045,.070];
-  } else if(/위팔|상완|upper arm/i.test(text)){
+  } else if(segment==='upper-arm'){
     st=unionStats([statsSeed('FMA13303',side)]);margin=[.055,.050,.075];
-  } else if(/손목|wrist/i.test(text)){
+  } else if(segment==='wrist'){
     const id=side==='left'?'FMA40121':side==='right'?'FMA40120':null;
     st=id?conceptStats(id):null;margin=[.050,.035,.075];
-  } else if(/손등|손바닥|손가락|손허리|hand|finger|metacarp/i.test(text)){
+  } else if(segment==='hand'){
     st=unionStats([statsSeed('FMA23900',side)]);margin=[.060,.060,.080];
-  } else if(/볼기|둔부|buttock|glute/i.test(text)){
+  } else if(segment==='buttock'){
     st=glutealStatsBySide(side);margin=[.045,.040,.055];
-  } else if(/무릎|오금|knee|poplite/i.test(text)){
+  } else if(segment==='knee'){
     st=unionStats([statsSeed('FMA24485',side),statsSeed('FMA24476',side),statsSeed('FMA9611',side)]);margin=[.055,.045,.070];
-  } else if(/종아리|정강|하퇴|아래다리|\bleg\b/i.test(text)){
+  } else if(segment==='leg'){
     st=unionStats([statsSeed('FMA24476',side),statsSeed('FMA24479',side)]);margin=[.050,.045,.070];
-  } else if(/발목|복사|ankle|malleol/i.test(text)){
+  } else if(segment==='ankle'){
     st=unionStats([statsSeed('FMA9708',side),statsSeed('FMA24476',side),statsSeed('FMA24479',side)]);margin=[.050,.035,.075];
     if(st){const y=ankleLevel(side);st.min[supAxis]=y-.065;st.max[supAxis]=y+.065;}
-  } else if(/발등|발바닥|발가락|발허리|foot|toe|metatars/i.test(text)){
+  } else if(segment==='foot'){
     st=unionStats([statsSeed('FMA24496',side),statsSeed('FMA24502',side),statsSeed('FMA24503',side)]);margin=[.060,.050,.090];
   }
   if(!st)return null;
