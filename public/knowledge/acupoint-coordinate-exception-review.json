@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T12:09:50.114Z",
+  "generatedAt": "2026-10-06T04:44:07.009Z",
   "scope": "Focused visual/anatomical exception review: four formerly low-confidence acupoints plus seven formerly near-duplicate clusters.",
   "coordinateModel": "BodyParts3D-4.0",
   "reviewedLogicalAcupoints": 18,
@@ -8,7 +8,24 @@
   "checks": {
     "allReviewedPointsPresent": true,
     "invalidGeometryOrLaterality": [],
-    "globalNearDuplicateClusters": [],
+    "globalNearDuplicateClusters": [
+      [
+        "LI13",
+        "HT2"
+      ],
+      [
+        "LI17",
+        "SI16"
+      ],
+      [
+        "BL3",
+        "BL4"
+      ],
+      [
+        "BL63",
+        "GB42"
+      ]
+    ],
     "globalExactDuplicateClusters": [],
     "formerlyLowConfidenceNowLow": []
   },
@@ -148,11 +165,11 @@
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.1413
+          "distance": 0.1031
         },
         {
           "side": "right",
-          "distance": 0.1412
+          "distance": 0.1273
         }
       ],
       "confidence": [
@@ -165,22 +182,22 @@
         {
           "id": "ST17",
           "side": "left",
-          "distance": 0.0339
+          "distance": 0.1317
         },
         {
           "id": "ST17",
           "side": "right",
-          "distance": 0.0228
+          "distance": 0.105
         },
         {
           "id": "GB23",
           "side": "left",
-          "distance": 0.0974
+          "distance": 0.1187
         },
         {
           "id": "GB23",
           "side": "right",
-          "distance": 0.0926
+          "distance": 0.1157
         }
       ],
       "caveat": null
@@ -200,11 +217,11 @@
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.0301
+          "distance": 0.036
         },
         {
           "side": "right",
-          "distance": 0.0432
+          "distance": 0.0469
         }
       ],
       "confidence": [
@@ -217,22 +234,22 @@
         {
           "id": "ST43",
           "side": "left",
-          "distance": 0.0033
+          "distance": 0.0028
         },
         {
           "id": "ST43",
           "side": "right",
-          "distance": 0.0002
+          "distance": 0.0008
         },
         {
           "id": "GB42",
           "side": "left",
-          "distance": 0.0161
+          "distance": 0.0163
         },
         {
           "id": "GB42",
           "side": "right",
-          "distance": 0.019
+          "distance": 0.0196
         }
       ],
       "caveat": null
@@ -252,11 +269,11 @@
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.0763
+          "distance": 0.1419
         },
         {
           "side": "right",
-          "distance": 0.0757
+          "distance": 0.1426
         }
       ],
       "confidence": [
@@ -269,22 +286,22 @@
         {
           "id": "BL62",
           "side": "left",
-          "distance": 0.1881
+          "distance": 0.1918
         },
         {
           "id": "BL62",
           "side": "right",
-          "distance": 0.1803
+          "distance": 0.1878
         },
         {
           "id": "KI4",
           "side": "left",
-          "distance": 0.0017
+          "distance": 0.0135
         },
         {
           "id": "KI4",
           "side": "right",
-          "distance": 0.0166
+          "distance": 0.0018
         }
       ],
       "caveat": null
@@ -304,11 +321,11 @@
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.0858
+          "distance": 0.051
         },
         {
           "side": "right",
-          "distance": 0.0809
+          "distance": 0.0509
         }
       ],
       "confidence": [
@@ -321,22 +338,22 @@
         {
           "id": "BL63",
           "side": "left",
-          "distance": 0.0495
+          "distance": 0.002
         },
         {
           "id": "BL63",
           "side": "right",
-          "distance": 0.0431
+          "distance": 0.0057
         },
         {
           "id": "GB41",
           "side": "left",
-          "distance": 0.0134
+          "distance": 0.0149
         },
         {
           "id": "GB41",
           "side": "right",
-          "distance": 0.0155
+          "distance": 0.0145
         }
       ],
       "caveat": null
@@ -356,39 +373,39 @@
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.1116
+          "distance": 0.0917
         },
         {
           "side": "right",
-          "distance": 0.1125
+          "distance": 0.093
         }
       ],
       "confidence": [
         "high",
         "high",
-        "high",
-        "high"
+        "moderate",
+        "moderate"
       ],
       "projectionDistances": [
         {
           "id": "TE3",
           "side": "left",
-          "distance": 0.0188
+          "distance": 0.0014
         },
         {
           "id": "TE3",
           "side": "right",
-          "distance": 0.0181
+          "distance": 0.0018
         },
         {
           "id": "TE4",
           "side": "left",
-          "distance": 0.0258
+          "distance": 0.0487
         },
         {
           "id": "TE4",
           "side": "right",
-          "distance": 0.0303
+          "distance": 0.0511
         }
       ],
       "caveat": null
@@ -408,23 +425,23 @@
       "pairDistances": [
         {
           "side": "midline",
-          "distance": 0.0382
+          "distance": 0.0373
         }
       ],
       "confidence": [
-        "high",
-        "high"
+        "moderate",
+        "moderate"
       ],
       "projectionDistances": [
         {
           "id": "GV9",
           "side": "midline",
-          "distance": 0.0505
+          "distance": 0.0407
         },
         {
           "id": "GV10",
           "side": "midline",
-          "distance": 0.0459
+          "distance": 0.0425
         }
       ],
       "caveat": null
@@ -444,23 +461,23 @@
       "pairDistances": [
         {
           "side": "midline",
-          "distance": 0.0388
+          "distance": 0.0996
         }
       ],
       "confidence": [
-        "high",
+        "moderate",
         "moderate"
       ],
       "projectionDistances": [
         {
           "id": "GV13",
           "side": "midline",
-          "distance": 0.0541
+          "distance": 0.0543
         },
         {
           "id": "GV15",
           "side": "midline",
-          "distance": 0.0378
+          "distance": 0.0397
         }
       ],
       "caveat": null
