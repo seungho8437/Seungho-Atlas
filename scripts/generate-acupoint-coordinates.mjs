@@ -230,12 +230,32 @@ function regionalGeometrySeed(text,side){
     const c=averageCenters([r,u]);if(c){c[supAxis]=Math.max(r?.max[supAxis]??c[supAxis],u?.max[supAxis]??c[supAxis]);return c;}
   }
   if(/위팔|상완|upper arm/i.test(text)){const st=statsSeed('FMA13303',side);if(st)return [...st.center];}
+  if(/볼기|둔부|buttock|glute/i.test(text)){
+    const st=glutealStatsBySide(side);if(st){const c=[...st.center];c[apAxis]=st.min[apAxis];return c;}
+  }
   if(/넓적다리|대퇴|thigh/i.test(text)){const st=statsSeed('FMA9611',side);if(st)return [...st.center];}
   if(/무릎|오금|knee|poplite/i.test(text)){const st=statsSeed('FMA24485',side);if(st)return [...st.center];}
   if(/종아리|정강|하퇴|아래다리|leg/i.test(text)){const st=statsSeed('FMA24476',side);if(st)return [...st.center];}
   if(/발목|복사|ankle|malleol/i.test(text)){const st=statsSeed('FMA9708',side);if(st)return [...st.center];}
   if(/발등|발바닥|발가락|발허리|foot|toe|metatars/i.test(text)){const st=statsSeed('FMA24496',side);if(st)return [...st.center];}
   return null;
+}
+
+const sacrumStats=conceptStats('FMA16202');
+const glutealStatsBySide=side=>unionStats([
+  statsSeed('FMA22327',side),statsSeed('FMA22330',side),statsSeed('FMA22332',side),
+  statsSeed('FMA16585',side)
+]);
+function posteriorSacralForamenLevel(ord){
+  const st=sacrumStats;
+  if(!st)return norm(supAxis,.50-(ord-1)*.025);
+  const fractions={1:.76,2:.61,3:.46,4:.31};
+  return st.min[supAxis]+(st.max[supAxis]-st.min[supAxis])*fractions[ord];
+}
+function glutealHalfWidth(y,side){
+  const st=glutealStatsBySide(side);
+  if(!st)return Math.min(localHalfWidth(y),extent[lrAxis]*.22);
+  return Math.max(.04,Math.max(Math.abs(st.min[lrAxis]-bodyCenter[lrAxis]),Math.abs(st.max[lrAxis]-bodyCenter[lrAxis])));
 }
 
 const regionRules = [
@@ -268,6 +288,8 @@ function anatomicalEnvelope(text,side){
     st=unionStats([statsSeed('FMA23463',side),statsSeed('FMA23466',side)]);margin=[.050,.045,.070];
   } else if(/위팔|상완|upper arm/i.test(text)){
     st=unionStats([statsSeed('FMA13303',side)]);margin=[.055,.050,.075];
+  } else if(/볼기|둔부|buttock|glute/i.test(text)){
+    st=glutealStatsBySide(side);margin=[.045,.040,.055];
   } else if(/무릎|오금|knee|poplite/i.test(text)){
     st=unionStats([statsSeed('FMA24485',side),statsSeed('FMA24476',side),statsSeed('FMA9611',side)]);margin=[.055,.045,.070];
   } else if(/종아리|정강|하퇴|아래다리|\bleg\b/i.test(text)){
@@ -381,7 +403,7 @@ function applyWhoConstraints(input,text,side){
   const sacral=text.match(/(첫째|둘째|셋째|넷째)\s*뒤엉치뼈구멍/);
   if(sacral){
     const ord={첫째:1,둘째:2,셋째:3,넷째:4}[sacral[1]];
-    t[supAxis]=norm(supAxis,.405-(ord-1)*.026);
+    t[supAxis]=posteriorSacralForamenLevel(ord);
     count++;
   }
   const hair=text.match(/(?:앞머리선|머리선)[^,.]{0,35}?(?:위로|안쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/);
@@ -414,10 +436,17 @@ function applyWhoConstraints(input,text,side){
     if(anchorLevel===null)anchorLevel=t[supAxis];
     t[supAxis]=anchorLevel+(up?1:-1)*n*localCun; count++; break;
   }
+  const sacSame=text.match(/(첫째|둘째|셋째|넷째)\s*뒤엉치뼈구멍(?:과|와)?\s*같은\s*높이/);
+  if(sacSame){
+    const ord={첫째:1,둘째:2,셋째:3,넷째:4}[sacSame[1]];
+    t[supAxis]=posteriorSacralForamenLevel(ord);count++;
+  }
   const sacLat=text.match(/정중엉치뼈능선[^,.]{0,30}?가쪽으로\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(sacLat&&sideSign){
     const n=Number(sacLat[1]);
-    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*Math.min(.92,n/3*.7);
+    const sideName=sideSign===leftSign?'left':'right';
+    const half=glutealHalfWidth(t[supAxis],sideName);
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*half*Math.min(.94,n/3*.90);
     count++;
   }
   const malleolus=text.match(/(안쪽|가쪽)복사(?:\s*융기)?에서[^,.]{0,30}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/);
