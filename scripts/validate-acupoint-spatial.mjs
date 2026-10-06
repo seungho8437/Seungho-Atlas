@@ -16,6 +16,29 @@ if(!audit.spatialValidation?.regionConstrained)fail('Region-constrained projecti
 if((audit.spatialValidation?.landmarkHardFailures??[]).length)fail('Landmark post-validation hard failures',audit.spatialValidation.landmarkHardFailures);
 if((audit.spatialValidation?.topologyHardFailures??[]).length)fail('Meridian topology hard failures',audit.spatialValidation.topologyHardFailures);
 
+
+const methodology=coords.methodology??{};
+if(!String(methodology.anatomyConstraints??'').includes('anatomy-acupoint-relations-v2.1.json')) fail('C must consume B v2.1 directly',methodology.anatomyConstraints);
+if(String(methodology.anatomyConstraints??'').includes('anatomy-acupoint-relations.json (B)')) fail('Legacy B registry is forbidden in C',methodology.anatomyConstraints);
+
+const missingSemanticVersion=coords.points.filter(p=>p.validation?.semanticGraphVersion!=='2.1.0');
+if(missingSemanticVersion.length) fail('Missing B v2.1 provenance',missingSemanticVersion.map(x=>x.acupointId+':'+x.side));
+
+const logicalMultiplicity=new Map();
+for(const p of coords.points){
+  const sides=logicalMultiplicity.get(p.acupointId)??[];sides.push(p.side);logicalMultiplicity.set(p.acupointId,sides);
+}
+const badMultiplicity=[];
+for(const [id,sides] of logicalMultiplicity){
+  const expected=id.startsWith('CV')||id.startsWith('GV')?['midline']:['left','right'];
+  const sorted=[...sides].sort(), exp=[...expected].sort();
+  if(sorted.length!==exp.length||sorted.some((v,i)=>v!==exp[i])) badMultiplicity.push({id,sides,expected});
+}
+if(badMultiplicity.length) fail('Per-acupoint multiplicity invariant failed',badMultiplicity);
+
+const noNativeOps=coords.points.filter(p=>(p.validation?.relationCount??0)>0&&(p.validation?.nativeOperationCount??0)===0);
+if(noNativeOps.length>Math.ceil(coords.points.length*0.85)) fail('Native semantic execution coverage is effectively absent',{count:noNativeOps.length,total:coords.points.length});
+
 const bad=coords.points.filter(p=>!p.validation?.surfaceProjected||!p.validation?.lateralityConsistent||!p.validation?.regionConstrained);
 if(bad.length)fail('Coordinate-level spatial invariant failed',bad.map(x=>x.acupointId+':'+x.side));
 
