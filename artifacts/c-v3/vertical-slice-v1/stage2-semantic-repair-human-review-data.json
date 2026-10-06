@@ -218,7 +218,9 @@
           ],
           "actual_executable_operand_ids": [],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI18:location",
+          "semantic_fields_hash": "53fac0924ad39668b91eeae05f11db16956d7d7b62ecec90aae94ea57123330d",
           "status": "UNRESOLVED",
           "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
         },
@@ -233,7 +235,9 @@
             "LM:S:LI18:location:61-76"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI18:location",
+          "semantic_fields_hash": "cc35e86561e20ead9da852c408f0987a243ed966cd52a30fb4f79a2b8b7314b3",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -248,12 +252,19 @@
             "LM:S:LI18:location:7-22"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI18:location",
+          "semantic_fields_hash": "e73d4814e6128b34f4e17cad65b5956d7b7c58c3c3d0586f83cfb3a558c46b9f",
           "status": "RESOLVED",
           "reason": null
         }
       ],
       "dependency_edges": [
+        {
+          "from": "RL:S:LI18:location:00:between",
+          "to": "S:LI18:location",
+          "kind": "relation_to_statement"
+        },
         {
           "from": "LM:S:LI18:location:57-101",
           "to": "LM:S:LI18:location:61-76",
@@ -263,6 +274,11 @@
           "from": "LM:S:LI18:location:61-76",
           "to": "RL:S:LI18:location:01:same-level",
           "kind": "executable_to_relation"
+        },
+        {
+          "from": "RL:S:LI18:location:01:same-level",
+          "to": "S:LI18:location",
+          "kind": "relation_to_statement"
         },
         {
           "from": "LM:S:LI18:location:7-22",
@@ -771,8 +787,10 @@
           "actual_executable_operand_ids": [
             "LM:S:ST10:location:100-107"
           ],
-          "direction": null,
-          "modifier": null,
+          "direction": "anterior",
+          "branch_id": null,
+          "source_statement_id": "S:ST10:location",
+          "semantic_fields_hash": "87063103c1542329c9be236d77c686f7ea4bc641f330022b473e4b197d4ffb94",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -787,7 +805,9 @@
             "LM:S:ST10:location:57-78"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST10:location",
+          "semantic_fields_hash": "1cfddcdbac4b4281402e748a91faa05e0caf9e3c920bfef25618c01d1dc82b63",
           "status": "RESOLVED",
           "reason": null
         },
@@ -802,7 +822,9 @@
             "LM:S:ST10:location:7-34"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST10:location",
+          "semantic_fields_hash": "e53fc06ca2764ec17cc7d12f4fbab5ededeb2155131962b8d858f38d0f8f8396",
           "status": "RESOLVED",
           "reason": null
         }
@@ -817,6 +839,11 @@
           "from": "LM:S:ST10:location:100-107",
           "to": "RL:S:ST10:location:00:relative-to",
           "kind": "executable_to_relation"
+        },
+        {
+          "from": "RL:S:ST10:location:00:relative-to",
+          "to": "S:ST10:location",
+          "kind": "relation_to_statement"
         },
         {
           "from": "LM:S:ST10:location:57-78",
@@ -1340,8 +1367,10 @@
           "actual_executable_operand_ids": [
             "LM:S:LI17:location:101-108"
           ],
-          "direction": null,
-          "modifier": null,
+          "direction": "posterior",
+          "branch_id": null,
+          "source_statement_id": "S:LI17:location",
+          "semantic_fields_hash": "2b46cdf0ec4aed6638511250c33f249c16549f116b8fe76e295fa4242c62fa3c",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -1356,7 +1385,9 @@
             "LM:S:LI17:location:57-78"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI17:location",
+          "semantic_fields_hash": "2079891f51e10f9b4f3fccf742348b1b8e6547703acac881f6d6b49cf16303a1",
           "status": "RESOLVED",
           "reason": null
         },
@@ -1371,7 +1402,9 @@
             "LM:S:LI17:location:7-22"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI17:location",
+          "semantic_fields_hash": "e26417b42c2975d2eafc0dead8d6a92717a65ab89b3cc250a57db98ea9cbab6d",
           "status": "RESOLVED",
           "reason": null
         },
@@ -1386,7 +1419,9 @@
             "LM:S:LI17:note:1:26-31"
           ],
           "direction": "inferior",
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI17:note:1",
+          "semantic_fields_hash": "a0be66cab72cc9336633cc6a7a68c24cb71bd934a89a55cc053c7dbf5107b0a4",
           "status": "RESOLVED",
           "reason": null
         },
@@ -1401,7 +1436,9 @@
             "LM:S:LI17:note:1:54-58"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI17:note:1",
+          "semantic_fields_hash": "336081d4f0f72ca176269d0db3882c4379a0046bbb843974a8718f56190029ba",
           "status": "RESOLVED",
           "reason": null
         },
@@ -1416,7 +1453,9 @@
             "LM:S:LI17:note:1:26-31"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI17:note:1",
+          "semantic_fields_hash": "d629e44efa47512180deef56a078c97af89682ce90c1051cd2d6635be6bbd35f",
           "status": "RESOLVED",
           "reason": null
         },
@@ -1431,7 +1470,9 @@
             "LM:S:LI17:note:1:54-58"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI17:note:1",
+          "semantic_fields_hash": "86d6974447c1245ad89ce39395e645deeae722e8704298836571443fcfc132ce",
           "status": "RESOLVED",
           "reason": null
         }
@@ -1446,6 +1487,11 @@
           "from": "LM:S:LI17:location:101-108",
           "to": "RL:S:LI17:location:00:relative-to",
           "kind": "executable_to_relation"
+        },
+        {
+          "from": "RL:S:LI17:location:00:relative-to",
+          "to": "S:LI17:location",
+          "kind": "relation_to_statement"
         },
         {
           "from": "LM:S:LI17:location:57-78",
@@ -2338,7 +2384,9 @@
             "LM:S:BL17:location:149-175"
           ],
           "direction": "lateral",
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:BL17:location",
+          "semantic_fields_hash": "6a11aebbd715e5ef3e3587f2e1aa7b7282d788fa5b565c356652258e3dbe2d83",
           "status": "RESOLVED",
           "reason": null
         },
@@ -2353,7 +2401,9 @@
             "LM:S:BL17:location:51-66"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:BL17:location",
+          "semantic_fields_hash": "ba54059035ed65df89be107cec93ea882cff2412857d6999e48ba9913b696be0",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -2368,7 +2418,9 @@
             "LM:S:BL17:location:7-24"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:BL17:location",
+          "semantic_fields_hash": "d6e9916331460e32751b849ed1c04c2e73fee2c4438a77ea1f7d9f1c787d74f7",
           "status": "RESOLVED",
           "reason": null
         },
@@ -2383,7 +2435,9 @@
             "LM:S:BL17:note:1:64-116"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:BL17:note:1",
+          "semantic_fields_hash": "bb6a8a9dc0a5e2bdeaade9a8bbe219bb21a459878612bbec0e7d0d1180ce959c",
           "status": "RESOLVED",
           "reason": null
         }
@@ -2408,6 +2462,11 @@
           "from": "LM:S:BL17:location:51-66",
           "to": "RL:S:BL17:location:01:same-level",
           "kind": "executable_to_relation"
+        },
+        {
+          "from": "RL:S:BL17:location:01:same-level",
+          "to": "S:BL17:location",
+          "kind": "relation_to_statement"
         },
         {
           "from": "LM:S:BL17:location:7-24",
@@ -2987,7 +3046,9 @@
             "LM:S:BL23:location:142-168"
           ],
           "direction": "lateral",
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:BL23:location",
+          "semantic_fields_hash": "862c78830cd2dc16693d8cbc4a56f30c9ce3fa1488debbc6fa903edfc04af189",
           "status": "RESOLVED",
           "reason": null
         },
@@ -3002,7 +3063,9 @@
             "LM:S:BL23:location:47-62"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:BL23:location",
+          "semantic_fields_hash": "88e3397ffd20831a035aef5ee673749ac0196234b6b92198de2a59f96ab3b7d5",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -3017,7 +3080,9 @@
             "LM:S:BL23:location:7-20"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:BL23:location",
+          "semantic_fields_hash": "7ef1f11395cf9bf57fb05cd3712f0ec2325b6f4c4c713ed8ed29a82e2bdb0323",
           "status": "RESOLVED",
           "reason": null
         }
@@ -3042,6 +3107,11 @@
           "from": "LM:S:BL23:location:47-62",
           "to": "RL:S:BL23:location:01:same-level",
           "kind": "executable_to_relation"
+        },
+        {
+          "from": "RL:S:BL23:location:01:same-level",
+          "to": "S:BL23:location",
+          "kind": "relation_to_statement"
         },
         {
           "from": "LM:S:BL23:location:7-20",
@@ -3505,7 +3575,9 @@
             "LM:S:BL25:location:142-168"
           ],
           "direction": "lateral",
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:BL25:location",
+          "semantic_fields_hash": "1b7ca304871e9a64afc4612124bd256897d067a7d065c8e7d99a16801ffc811e",
           "status": "RESOLVED",
           "reason": null
         },
@@ -3520,7 +3592,9 @@
             "LM:S:BL25:location:47-62"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:BL25:location",
+          "semantic_fields_hash": "caa9e7786c7095e3489c3ea24114d5e5c8e105a2b8423ad52855af499ac4adbe",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -3535,7 +3609,9 @@
             "LM:S:BL25:location:7-20"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:BL25:location",
+          "semantic_fields_hash": "53f2ca5e3ce9d576a596085b32ffa1b87d88cda84bb7d347526593f3e50332fc",
           "status": "RESOLVED",
           "reason": null
         }
@@ -3560,6 +3636,11 @@
           "from": "LM:S:BL25:location:47-62",
           "to": "RL:S:BL25:location:01:same-level",
           "kind": "executable_to_relation"
+        },
+        {
+          "from": "RL:S:BL25:location:01:same-level",
+          "to": "S:BL25:location",
+          "kind": "relation_to_statement"
         },
         {
           "from": "LM:S:BL25:location:7-20",
@@ -4329,7 +4410,9 @@
             "LM:S:ST9:location:114-146"
           ],
           "direction": "anterior",
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST9:location",
+          "semantic_fields_hash": "0da925091aded9811ecc3019b8f660367a31b928ea97672e386fe0636dbc40a9",
           "status": "RESOLVED",
           "reason": null
         },
@@ -4344,7 +4427,9 @@
             "LM:S:ST9:location:61-76"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST9:location",
+          "semantic_fields_hash": "00f74e5d21de535782c60963d3309c26eba9a4c782fd55d42a5d9ac524fd1aee",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -4359,7 +4444,9 @@
             "LM:S:ST9:location:157-178"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST9:location",
+          "semantic_fields_hash": "a394ba9959b2e061747e70591eaf347298f1274a1db495465697d2d4c5a29194",
           "status": "RESOLVED",
           "reason": null
         },
@@ -4374,7 +4461,9 @@
             "LM:S:ST9:location:7-34"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST9:location",
+          "semantic_fields_hash": "7988af80d90df68d16d40f7455be910ddfbadf4dd610a05451eddff6182dfb4a",
           "status": "RESOLVED",
           "reason": null
         },
@@ -4388,7 +4477,9 @@
           ],
           "actual_executable_operand_ids": [],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST9:note:2",
+          "semantic_fields_hash": "0de1e68e63b08635e4dc6643430e9b8efdd9399b349d8343db4738de254e0319",
           "status": "UNRESOLVED",
           "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
         },
@@ -4403,7 +4494,9 @@
             "LM:S:ST9:note:2:131-162"
           ],
           "direction": "anterior",
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST9:note:2",
+          "semantic_fields_hash": "3855ed87478f75dc47705e1eee3b92e08423a7e178d215c99ce3c0fde874c76a",
           "status": "RESOLVED",
           "reason": null
         },
@@ -4418,7 +4511,9 @@
             "LM:S:ST9:note:2:186-226"
           ],
           "direction": "posterior",
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST9:note:2",
+          "semantic_fields_hash": "e79d950d98f6ddc102dedd92062d544beebcd09639cf4b54c6888e76b7f3c7b8",
           "status": "RESOLVED",
           "reason": null
         },
@@ -4433,7 +4528,9 @@
             "LM:S:ST9:note:2:44-48"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST9:note:2",
+          "semantic_fields_hash": "05f75cd806b6e4801296c87e519e93e454c0c0cdc8c65cd6b235b958f41595a5",
           "status": "RESOLVED",
           "reason": null
         },
@@ -4448,7 +4545,9 @@
             "LM:S:ST9:note:2:44-48"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST9:note:2",
+          "semantic_fields_hash": "aa27ce51039c4c30749b294c12b3e3374f453ff269d55a273d822456ff52fbc6",
           "status": "RESOLVED",
           "reason": null
         },
@@ -4463,7 +4562,9 @@
             "LM21:S:ST9:note:2:50-54:6775aaafeb"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST9:note:2",
+          "semantic_fields_hash": "5d66dd3c9ac274d662e5599beb94f1d480f0a2c8a2087975cb690cfe0a33ab0c",
           "status": "RESOLVED",
           "reason": null
         },
@@ -4478,7 +4579,9 @@
             "LM21:S:ST9:note:2:168-172:6775aaafeb"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST9:note:2",
+          "semantic_fields_hash": "6dd689ff346688754baabc53626985eeeb2a0d81064fae5d42e3caa34f170894",
           "status": "RESOLVED",
           "reason": null
         },
@@ -4493,7 +4596,9 @@
             "LM21:S:ST9:note:2:222-226:34574dfae8"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST9:note:2",
+          "semantic_fields_hash": "9c70b37fa69f6fc67ce297e0ce061a359e920e6442c815d6b0d1e98a086f20b2",
           "status": "RESOLVED",
           "reason": null
         }
@@ -4520,6 +4625,11 @@
           "kind": "executable_to_relation"
         },
         {
+          "from": "RL:S:ST9:location:01:same-level",
+          "to": "S:ST9:location",
+          "kind": "relation_to_statement"
+        },
+        {
           "from": "LM:S:ST9:location:157-178",
           "to": "RL:S:ST9:location:02:overlies",
           "kind": "executable_to_relation"
@@ -4537,6 +4647,11 @@
         {
           "from": "RL:S:ST9:location:03:surface-landmark",
           "to": "S:ST9:location",
+          "kind": "relation_to_statement"
+        },
+        {
+          "from": "RL:S:ST9:note:2:00:between",
+          "to": "S:ST9:note:2",
           "kind": "relation_to_statement"
         },
         {
@@ -4641,6 +4756,7 @@
           "source_statement_id": "S:ST9:note:1",
           "source_raw": "when the head is turned to the opposite side against resistance",
           "condition_type": "body_position",
+          "branch_id": "branch_1",
           "repaired_status": "CONDITIONAL",
           "default_pose_compatible": false,
           "reason": "condition requires pose incompatible with default BodyParts3D pose"
@@ -4650,6 +4766,7 @@
           "source_statement_id": "S:ST9:note:1",
           "source_raw": "more distinct when the head is turned to the opposite side against resistance",
           "condition_type": "palpation_dependent",
+          "branch_id": "branch_2",
           "repaired_status": "CONDITIONAL",
           "default_pose_compatible": null,
           "reason": "condition preserved as non-executed conditional branch"
@@ -5703,8 +5820,10 @@
             "LM:S:TE20:location:29-48"
           ],
           "actual_executable_operand_ids": [],
-          "direction": null,
-          "modifier": null,
+          "direction": "superior",
+          "branch_id": null,
+          "source_statement_id": "S:TE20:location",
+          "semantic_fields_hash": "78e8dc4bd902c8a77ce9b262ee187bac1edf61c27a1a4aabfa2dd52e6e687e65",
           "status": "UNRESOLVED",
           "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
         },
@@ -5719,12 +5838,19 @@
             "LM:S:TE20:location:7-11"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:TE20:location",
+          "semantic_fields_hash": "629eea7cdb9cfce055ec9cabdfe1142b2a1ba75a09eb748ef73054d9e5a1cdb4",
           "status": "RESOLVED",
           "reason": null
         }
       ],
       "dependency_edges": [
+        {
+          "from": "RL:S:TE20:location:00:relative-to",
+          "to": "S:TE20:location",
+          "kind": "relation_to_statement"
+        },
         {
           "from": "LM:S:TE20:location:7-11",
           "to": "RL:S:TE20:location:01:surface-landmark",
@@ -5752,6 +5878,7 @@
           "source_statement_id": "S:TE20:note:1",
           "source_raw": "With the auricle folded",
           "condition_type": "body_position",
+          "branch_id": "branch_1",
           "repaired_status": "CONDITIONAL",
           "default_pose_compatible": false,
           "reason": "condition requires pose incompatible with default BodyParts3D pose"
@@ -6220,8 +6347,10 @@
             "LM:S:HT7:location:50-82"
           ],
           "actual_executable_operand_ids": [],
-          "direction": null,
-          "modifier": null,
+          "direction": "radial",
+          "branch_id": null,
+          "source_statement_id": "S:HT7:location",
+          "semantic_fields_hash": "1a4251fe166d7c21dfd128024c63afc22893a75e496babaa57fdd3ced308a914",
           "status": "UNRESOLVED",
           "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
         },
@@ -6236,7 +6365,9 @@
             "LM:S:HT7:location:7-26"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:HT7:location",
+          "semantic_fields_hash": "6e181e0aee72a37cc7da648d2d69ad6aa558cf079f5976ed40d5790e9c2da8e6",
           "status": "RESOLVED",
           "reason": null
         },
@@ -6251,7 +6382,9 @@
             "LM:S:HT7:location:91-110"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:HT7:location",
+          "semantic_fields_hash": "934528fd1ee34200c7cc907f1ddc843676c27b57b370b6a7d42327dca6ee5811",
           "status": "RESOLVED",
           "reason": null
         },
@@ -6265,8 +6398,10 @@
           "actual_executable_operand_ids": [
             "LM:S:HT7:note:1:38-54"
           ],
-          "direction": null,
-          "modifier": null,
+          "direction": "radial",
+          "branch_id": null,
+          "source_statement_id": "S:HT7:note:1",
+          "semantic_fields_hash": "9350c9f70c9c3380c7d2475a7a0501e56d730ff1d7b129743d45a86ce6bcf66d",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -6281,7 +6416,9 @@
             "LM:S:HT7:note:1:13-23"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:HT7:note:1",
+          "semantic_fields_hash": "4a0fdffb1c523b18f899c3e75956c9d18e125df8dae9d75ee0ea71443146232b",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -6296,12 +6433,19 @@
             "LM:S:HT7:note:1:84-103"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:HT7:note:1",
+          "semantic_fields_hash": "2179a0fa55b3ae678f06dcb989082cf5a8161f6874985a3fc861c10381c6ea68",
           "status": "RESOLVED",
           "reason": null
         }
       ],
       "dependency_edges": [
+        {
+          "from": "RL:S:HT7:location:00:relative-to",
+          "to": "S:HT7:location",
+          "kind": "relation_to_statement"
+        },
         {
           "from": "LM:S:HT7:location:7-26",
           "to": "RL:S:HT7:location:01:surface-landmark",
@@ -6333,9 +6477,19 @@
           "kind": "executable_to_relation"
         },
         {
+          "from": "RL:S:HT7:note:1:00:relative-to",
+          "to": "S:HT7:note:1",
+          "kind": "relation_to_statement"
+        },
+        {
           "from": "LM:S:HT7:note:1:13-23",
           "to": "RL:S:HT7:note:1:01:surface-landmark",
           "kind": "executable_to_relation"
+        },
+        {
+          "from": "RL:S:HT7:note:1:01:surface-landmark",
+          "to": "S:HT7:note:1",
+          "kind": "relation_to_statement"
         },
         {
           "from": "LM:S:HT7:note:1:84-103",
@@ -6897,8 +7051,10 @@
             "LM:S:LI4:location:36-79"
           ],
           "actual_executable_operand_ids": [],
-          "direction": null,
-          "modifier": null,
+          "direction": "radial",
+          "branch_id": null,
+          "source_statement_id": "S:LI4:location",
+          "semantic_fields_hash": "bd5e1460450788ffaf006b0207138a39a5c8064035d816c1e677ce4e66ee9fd2",
           "status": "UNRESOLVED",
           "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
         },
@@ -6913,7 +7069,9 @@
             "LM:S:LI4:location:53-79"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI4:location",
+          "semantic_fields_hash": "b0a194d30f014de8ff5617fced152378dc1b4eafae0d9aea29a8286b3ead1d5c",
           "status": "RESOLVED",
           "reason": null
         },
@@ -6928,12 +7086,19 @@
             "LM:S:LI4:location:7-25"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI4:location",
+          "semantic_fields_hash": "fdcde62eb5df04f38d1d003fd51af9e5b52a9aa2e6dc5f733c056571087ac1c6",
           "status": "RESOLVED",
           "reason": null
         }
       ],
       "dependency_edges": [
+        {
+          "from": "RL:S:LI4:location:00:relative-to",
+          "to": "S:LI4:location",
+          "kind": "relation_to_statement"
+        },
         {
           "from": "LM:S:LI4:location:53-79",
           "to": "RL:S:LI4:location:01:midpoint-of-entity",
@@ -7315,7 +7480,9 @@
             "LM:S:ST1:location:25-32"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST1:location",
+          "semantic_fields_hash": "f36140710e5e1a840112abd192822011cf3a7e73b0a779da698d69c523dbd673",
           "status": "UNRESOLVED",
           "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
         },
@@ -7329,8 +7496,10 @@
           "actual_executable_operand_ids": [
             "LM:S:ST1:location:82-92"
           ],
-          "direction": null,
-          "modifier": null,
+          "direction": "inferior",
+          "branch_id": null,
+          "source_statement_id": "S:ST1:location",
+          "semantic_fields_hash": "63b41196731bfad1de3cd94215f6027d047afed959bd4fffa9806a68bdf5faad",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -7345,7 +7514,9 @@
             "LM:S:ST1:location:7-11"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST1:location",
+          "semantic_fields_hash": "64930f0b85ddf97143a6ad179a634ba76d9b03ccdd4b1a3d84c18cf5ae55909a",
           "status": "RESOLVED",
           "reason": null
         }
@@ -7357,9 +7528,19 @@
           "kind": "executable_to_relation"
         },
         {
+          "from": "RL:S:ST1:location:00:between",
+          "to": "S:ST1:location",
+          "kind": "relation_to_statement"
+        },
+        {
           "from": "LM:S:ST1:location:82-92",
           "to": "RL:S:ST1:location:01:relative-to",
           "kind": "executable_to_relation"
+        },
+        {
+          "from": "RL:S:ST1:location:01:relative-to",
+          "to": "S:ST1:location",
+          "kind": "relation_to_statement"
         },
         {
           "from": "LM:S:ST1:location:7-11",
@@ -7814,7 +7995,9 @@
             "LM:S:GB14:location:32-45"
           ],
           "direction": "superior",
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:GB14:location",
+          "semantic_fields_hash": "6c8a802d5497e556c4cdb4e0093f2e713eb8e3d00976487b5af1ed3309fa3a01",
           "status": "RESOLVED",
           "reason": null
         },
@@ -7828,8 +8011,10 @@
           "actual_executable_operand_ids": [
             "LM:S:GB14:location:72-78"
           ],
-          "direction": null,
-          "modifier": null,
+          "direction": "superior",
+          "branch_id": null,
+          "source_statement_id": "S:GB14:location",
+          "semantic_fields_hash": "13ca1fa7cd158fd1a80e404280048529c25e44737aa45ee11d019ed69d8758db",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -7844,7 +8029,9 @@
             "LM:S:GB14:location:82-91"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:GB14:location",
+          "semantic_fields_hash": "dfbdf3ee8ee61d6accafdf42c9f1c37b3a75984f374325ab0fd710ffc64d02ff",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -7859,7 +8046,9 @@
             "LM:S:GB14:location:7-11"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:GB14:location",
+          "semantic_fields_hash": "247eee5548e9a699cc2993d3cad4f126e56f7e8dded44fd59ee15e27ba2465ff",
           "status": "RESOLVED",
           "reason": null
         }
@@ -7886,9 +8075,19 @@
           "kind": "executable_to_relation"
         },
         {
+          "from": "RL:S:GB14:location:01:relative-to",
+          "to": "S:GB14:location",
+          "kind": "relation_to_statement"
+        },
+        {
           "from": "LM:S:GB14:location:82-91",
           "to": "RL:S:GB14:location:02:center-of",
           "kind": "executable_to_relation"
+        },
+        {
+          "from": "RL:S:GB14:location:02:center-of",
+          "to": "S:GB14:location",
+          "kind": "relation_to_statement"
         },
         {
           "from": "LM:S:GB14:location:7-11",
@@ -8347,7 +8546,9 @@
             "LM:S:GB23:location:84-105"
           ],
           "direction": "anterior",
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:GB23:location",
+          "semantic_fields_hash": "c8dbaf4c030e499c83c5aa4a2d3e33a4c9a28987ef8905c85a189b288c14e875",
           "status": "RESOLVED",
           "reason": null
         },
@@ -8362,7 +8563,9 @@
             "LM:S:GB23:location:7-30"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:GB23:location",
+          "semantic_fields_hash": "6dd532c62f313ad91b18ba33ff26c3c3f64605c5ad3f13538767088df6bcafcd",
           "status": "RESOLVED",
           "reason": null
         },
@@ -8377,7 +8580,9 @@
             "LM:S:GB23:location:39-63"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:GB23:location",
+          "semantic_fields_hash": "3aaa9bbb4ffd80be803249a8bec453dbba827689513a7ad86678b90531bed790",
           "status": "RESOLVED",
           "reason": null
         }
@@ -8985,7 +9190,9 @@
             "LM:S:LU6:location:76-79"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LU6:location",
+          "semantic_fields_hash": "8127246e37c892e098e53b88a14f23e11ca870d465d505c211ea7337a7dc06b1",
           "status": "RESOLVED",
           "reason": null
         },
@@ -9000,7 +9207,9 @@
             "LM:S:LU6:location:100-124"
           ],
           "direction": "superior",
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LU6:location",
+          "semantic_fields_hash": "2392d9ef381c8ce2d20b5753030b99c467db0bfcbddd487bd9ed0d431084ab04",
           "status": "RESOLVED",
           "reason": null
         },
@@ -9015,7 +9224,9 @@
             "LM:S:LU6:location:7-27"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LU6:location",
+          "semantic_fields_hash": "4d73cb1321afef477cd817a3d12fb50cc09f848b1122caa0e64dd4e31dd0df5a",
           "status": "RESOLVED",
           "reason": null
         },
@@ -9030,7 +9241,9 @@
             "LM:S:LU6:location:51-66"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LU6:location",
+          "semantic_fields_hash": "350f6d6a7cdd54e9ba68329a2415e53be6e550425d5e49aa45b57b54708f051a",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -9047,7 +9260,9 @@
             "LM:S:LU6:note:1:103-106"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LU6:note:1",
+          "semantic_fields_hash": "7bb16371944117cc51c819cfe5f54d525a860e64a4ca90c9253e190b18d3e31b",
           "status": "RESOLVED",
           "reason": null
         },
@@ -9064,7 +9279,9 @@
             "LM:S:LU6:note:1:103-106"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LU6:note:1",
+          "semantic_fields_hash": "d87983c613e28df2ff1d912a02ead7cb99a9f7e4e168541389c23eeb3ceacd89",
           "status": "RESOLVED",
           "reason": null
         },
@@ -9079,7 +9296,9 @@
             "LM:S:LU6:note:1:32-36"
           ],
           "direction": "inferior",
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LU6:note:1",
+          "semantic_fields_hash": "16e56b1a2673e912f80e56a078aeafccfa7a9872ca2d6cfb4163d7268473f4f9",
           "status": "RESOLVED",
           "reason": null
         },
@@ -9091,8 +9310,10 @@
             "LM:S:LU6:note:1:57-106"
           ],
           "actual_executable_operand_ids": [],
-          "direction": null,
-          "modifier": null,
+          "direction": "superior",
+          "branch_id": null,
+          "source_statement_id": "S:LU6:note:1",
+          "semantic_fields_hash": "6de4a338eceaa85a46932d7ad7aff4eb902937f14ee39b73e6ddf10b28b03a7a",
           "status": "UNRESOLVED",
           "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
         },
@@ -9107,7 +9328,9 @@
             "LM21:S:LU6:location:67-70:002c0a95e5"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LU6:location",
+          "semantic_fields_hash": "f02110f400a290e850b4bc84b60e87e58a30daa712da22a370d276bfbaa14cf4",
           "status": "RESOLVED",
           "reason": null
         },
@@ -9122,7 +9345,9 @@
             "LM21:S:LU6:location:76-79:30c4b43ed7"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LU6:location",
+          "semantic_fields_hash": "3c9f2aa1132754348eaf5dae2a65bb83b888472c80c28616af939c7da61342ef",
           "status": "RESOLVED",
           "reason": null
         },
@@ -9137,7 +9362,9 @@
             "LM:S:LU6:note:1:32-36"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LU6:note:1",
+          "semantic_fields_hash": "00f55dfa0a111d92ba2113254797091edae862d8979a5bf415274a436ac6132d",
           "status": "RESOLVED",
           "reason": null
         },
@@ -9152,7 +9379,9 @@
             "LM:S:LU6:note:1:94-97"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LU6:note:1",
+          "semantic_fields_hash": "3735c1285789ca4b9b8d18bf6352f5e61316d8739500d115f2b28e47efbece67",
           "status": "RESOLVED",
           "reason": null
         },
@@ -9167,7 +9396,9 @@
             "LM:S:LU6:note:1:103-106"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LU6:note:1",
+          "semantic_fields_hash": "166f2ce142c362f654b734ee1c61c7271ee5a961b08d8aa3cb508240779d428d",
           "status": "RESOLVED",
           "reason": null
         }
@@ -9214,6 +9445,11 @@
           "kind": "executable_to_relation"
         },
         {
+          "from": "RL:S:LU6:location:03:surface-landmark",
+          "to": "S:LU6:location",
+          "kind": "relation_to_statement"
+        },
+        {
           "from": "LM:S:LU6:note:1:94-97",
           "to": "RL:S:LU6:note:1:00:on-line",
           "kind": "executable_to_relation"
@@ -9250,6 +9486,11 @@
         },
         {
           "from": "RL:S:LU6:note:1:02:relative-to",
+          "to": "S:LU6:note:1",
+          "kind": "relation_to_statement"
+        },
+        {
+          "from": "RL:S:LU6:note:1:03:relative-to",
           "to": "S:LU6:note:1",
           "kind": "relation_to_statement"
         },
@@ -10454,7 +10695,9 @@
             "LM:S:LI7:location:77-81"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI7:location",
+          "semantic_fields_hash": "5b2cd83fd407c911c5157f44e582a5cc86b029a92ee40c744b03d085dc50bc13",
           "status": "RESOLVED",
           "reason": null
         },
@@ -10469,7 +10712,9 @@
             "LM:S:LI7:location:102-126"
           ],
           "direction": "superior",
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI7:location",
+          "semantic_fields_hash": "913f6a58d035cb02eaf4bb236848460930ed290622129079a7e5f955501b1de4",
           "status": "RESOLVED",
           "reason": null
         },
@@ -10484,7 +10729,9 @@
             "LM:S:LI7:location:7-28"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI7:location",
+          "semantic_fields_hash": "2953b9e840bedd475fff295bee04e8b38a8164b4d252bdcbf59d01fce9837a81",
           "status": "RESOLVED",
           "reason": null
         },
@@ -10499,7 +10746,9 @@
             "LM:S:LI7:location:52-67"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI7:location",
+          "semantic_fields_hash": "8d98305665e2b892df2752b1207b8c3e82c21784ed6cce44ba524c795510b9f6",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -10514,7 +10763,9 @@
             "LM21:S:LI7:location:68-71:1bff496df7"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI7:location",
+          "semantic_fields_hash": "99cca28a1d895bc28c0a15db2d915656395757620e424acc974755292ce34563",
           "status": "RESOLVED",
           "reason": null
         },
@@ -10529,7 +10780,9 @@
             "LM21:S:LI7:location:77-81:245ea01482"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:LI7:location",
+          "semantic_fields_hash": "0ca3c5eb9bbbdcc765a53409bf06ffb8a17f43f8ef95e6260d67aecf7958f3a5",
           "status": "RESOLVED",
           "reason": null
         }
@@ -10574,6 +10827,11 @@
           "from": "LM:S:LI7:location:52-67",
           "to": "RL:S:LI7:location:03:surface-landmark",
           "kind": "executable_to_relation"
+        },
+        {
+          "from": "RL:S:LI7:location:03:surface-landmark",
+          "to": "S:LI7:location",
+          "kind": "relation_to_statement"
         },
         {
           "from": "LM21:S:LI7:location:68-71:1bff496df7",
@@ -11484,8 +11742,10 @@
           "actual_executable_operand_ids": [
             "LM:S:GB26:location:35-70"
           ],
-          "direction": null,
-          "modifier": null,
+          "direction": "inferior",
+          "branch_id": null,
+          "source_statement_id": "S:GB26:location",
+          "semantic_fields_hash": "b0ef1439a7fc4bbeb7551f66a487c1d3e8f992c9a5706142da22dd1d412e9f77",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -11500,7 +11760,9 @@
             "LM:S:GB26:location:97-103"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:GB26:location",
+          "semantic_fields_hash": "7d18af54f53dd4a38bdddec3540ffa4bf340fe95bbe015a79035faaa0e75dff1",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -11515,7 +11777,9 @@
             "LM:S:GB26:location:107-116"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:GB26:location",
+          "semantic_fields_hash": "63e84a8ed8130e1060aa035d8a0e2c59b94085e37ae2127151b87b70b93056f4",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -11530,7 +11794,9 @@
             "LM:S:GB26:location:7-22"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:GB26:location",
+          "semantic_fields_hash": "abf9853fbf46c06144361efbd186fa13cad5b6d58cac7653eb442b92241ff410",
           "status": "RESOLVED",
           "reason": null
         },
@@ -11545,7 +11811,9 @@
             "LM:S:GB26:note:2:27-32"
           ],
           "direction": "inferior",
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:GB26:note:2",
+          "semantic_fields_hash": "56deadfbc87e40a68f2b68d71ba71670758ae4bf904d4042e0cac08734aa0517",
           "status": "RESOLVED",
           "reason": null
         },
@@ -11560,7 +11828,9 @@
             "LM:S:GB26:note:2:55-58"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:GB26:note:2",
+          "semantic_fields_hash": "0634dd4e930ad40cc97213d4f9602dc6306ac8ef83ef346e86f9575e72fd5378",
           "status": "RESOLVED",
           "reason": null
         },
@@ -11575,7 +11845,9 @@
             "LM:S:GB26:note:2:27-32"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:GB26:note:2",
+          "semantic_fields_hash": "cb27d5084f3de973c9b4d0055f82f81baf9722ec22cf5c9955d894b4ac0f8de1",
           "status": "RESOLVED",
           "reason": null
         },
@@ -11590,7 +11862,9 @@
             "LM:S:GB26:note:2:55-58"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:GB26:note:2",
+          "semantic_fields_hash": "f2524f4da12ed827e06636166988fd38d44fedb3cfa4ad3d533c07e3e8355c59",
           "status": "RESOLVED",
           "reason": null
         }
@@ -11600,6 +11874,11 @@
           "from": "LM:S:GB26:location:35-70",
           "to": "RL:S:GB26:location:00:relative-to",
           "kind": "executable_to_relation"
+        },
+        {
+          "from": "RL:S:GB26:location:00:relative-to",
+          "to": "S:GB26:location",
+          "kind": "relation_to_statement"
         },
         {
           "from": "LM:S:GB26:location:93-116",
@@ -11612,9 +11891,19 @@
           "kind": "executable_to_relation"
         },
         {
+          "from": "RL:S:GB26:location:01:same-level",
+          "to": "S:GB26:location",
+          "kind": "relation_to_statement"
+        },
+        {
           "from": "LM:S:GB26:location:107-116",
           "to": "RL:S:GB26:location:02:center-of",
           "kind": "executable_to_relation"
+        },
+        {
+          "from": "RL:S:GB26:location:02:center-of",
+          "to": "S:GB26:location",
+          "kind": "relation_to_statement"
         },
         {
           "from": "LM:S:GB26:location:7-22",
@@ -12398,7 +12687,9 @@
             "LM:S:ST2:location:20-40"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST2:location",
+          "semantic_fields_hash": "3d1eb2f40bbe481537bc386a0095719b27a668061d0e9f06e42df43bbd77427c",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -12413,7 +12704,9 @@
             "LM:S:ST2:location:7-11"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST2:location",
+          "semantic_fields_hash": "7aeb8b00510694bf8036b5bae9a83b1e84b60ad23d01db7b0352d0ab54940145",
           "status": "RESOLVED",
           "reason": null
         }
@@ -12423,6 +12716,11 @@
           "from": "LM:S:ST2:location:20-40",
           "to": "RL:S:ST2:location:00:surface-landmark",
           "kind": "executable_to_relation"
+        },
+        {
+          "from": "RL:S:ST2:location:00:surface-landmark",
+          "to": "S:ST2:location",
+          "kind": "relation_to_statement"
         },
         {
           "from": "LM:S:ST2:location:7-11",
@@ -12643,7 +12941,9 @@
             "LM:S:BL40:location:56-76"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:BL40:location",
+          "semantic_fields_hash": "f9069d6516753af37e89a3f692c54324789ebf70a5473e6f3b339f21776225ae",
           "status": "RESOLVED",
           "reason": null
         },
@@ -12658,7 +12958,9 @@
             "LM:S:BL40:location:7-23"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:BL40:location",
+          "semantic_fields_hash": "243947be43536bab43c4453baecf127467fd3144b740c74ba74d4e0e3a51f14b",
           "status": "RESOLVED",
           "reason": null
         }
@@ -13010,8 +13312,10 @@
             "LM:S:ST4:location:33-56"
           ],
           "actual_executable_operand_ids": [],
-          "direction": null,
-          "modifier": null,
+          "direction": "lateral",
+          "branch_id": null,
+          "source_statement_id": "S:ST4:location",
+          "semantic_fields_hash": "7b248bd916d05ef8211bd209b58aa0242f1548d2c737a1821b913646f94041fb",
           "status": "UNRESOLVED",
           "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
         },
@@ -13026,7 +13330,9 @@
             "LM:S:ST4:location:7-11"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST4:location",
+          "semantic_fields_hash": "e2e00238a023ff674388282b7d83294a89a405ec354d7ea7ce518aa29785c447",
           "status": "RESOLVED",
           "reason": null
         },
@@ -13038,8 +13344,10 @@
             "LM:S:ST4:note:1:16-39"
           ],
           "actual_executable_operand_ids": [],
-          "direction": null,
-          "modifier": null,
+          "direction": "lateral",
+          "branch_id": null,
+          "source_statement_id": "S:ST4:note:1",
+          "semantic_fields_hash": "129a2201aa55d02df569b3af622b63fb62ae18d2dd320a3ed8c805f5174ba8a1",
           "status": "UNRESOLVED",
           "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
         },
@@ -13054,7 +13362,9 @@
             "LM:S:ST4:note:1:69-86"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST4:note:1",
+          "semantic_fields_hash": "9f782f45a1d8315a63bacb417b5f37fba25355b0102b14156abd69ca599e8999",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         },
@@ -13069,12 +13379,19 @@
             "LM:S:ST4:note:1:97-134"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:ST4:note:1",
+          "semantic_fields_hash": "06820a6652905776ae6f61c240a91b84745d34c80833ab40081bd60ffc6db2d9",
           "status": "UNRESOLVED",
           "reason": "executable operand not uniquely executable"
         }
       ],
       "dependency_edges": [
+        {
+          "from": "RL:S:ST4:location:00:relative-to",
+          "to": "S:ST4:location",
+          "kind": "relation_to_statement"
+        },
         {
           "from": "LM:S:ST4:location:7-11",
           "to": "RL:S:ST4:location:01:surface-landmark",
@@ -13086,14 +13403,29 @@
           "kind": "relation_to_statement"
         },
         {
+          "from": "RL:S:ST4:note:1:00:relative-to",
+          "to": "S:ST4:note:1",
+          "kind": "relation_to_statement"
+        },
+        {
           "from": "LM:S:ST4:note:1:69-86",
           "to": "RL:S:ST4:note:1:01:surface-landmark",
           "kind": "executable_to_relation"
         },
         {
+          "from": "RL:S:ST4:note:1:01:surface-landmark",
+          "to": "S:ST4:note:1",
+          "kind": "relation_to_statement"
+        },
+        {
           "from": "LM:S:ST4:note:1:97-134",
           "to": "RL:S:ST4:note:1:02:surface-landmark",
           "kind": "executable_to_relation"
+        },
+        {
+          "from": "RL:S:ST4:note:1:02:surface-landmark",
+          "to": "S:ST4:note:1",
+          "kind": "relation_to_statement"
         },
         {
           "from": "S:ST4:location",
@@ -13112,6 +13444,7 @@
           "source_statement_id": "S:ST4:note:1",
           "source_raw": "or on the continuation",
           "condition_type": "alternative",
+          "branch_id": "branch_1",
           "repaired_status": "CONDITIONAL",
           "default_pose_compatible": null,
           "reason": "condition preserved as non-executed conditional branch"
@@ -13742,7 +14075,9 @@
             "LM:S:TE6:location:98-106"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:TE6:location",
+          "semantic_fields_hash": "333ab43ffa74223029d7ad3e841302fd918d4c8edb6f5d95f5262182cf7661b3",
           "status": "RESOLVED",
           "reason": null
         },
@@ -13757,7 +14092,9 @@
             "LM:S:TE6:location:127-151"
           ],
           "direction": "proximal",
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:TE6:location",
+          "semantic_fields_hash": "63fb3a715e7a5d69b365210f92dab21c8999335c8de7bd135442271127b6ae78",
           "status": "RESOLVED",
           "reason": null
         },
@@ -13772,7 +14109,9 @@
             "LM:S:TE6:location:52-106"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:TE6:location",
+          "semantic_fields_hash": "e382fc8c45219bd6f91de2da6eda89436eb3d061d5ee887c9167ddc08979eaf7",
           "status": "RESOLVED",
           "reason": null
         },
@@ -13787,7 +14126,9 @@
             "LM:S:TE6:location:7-23"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:TE6:location",
+          "semantic_fields_hash": "b5999677b35f938ddea512bd0d0ea670706065f4043eae30cf4bd7e3d706ae6d",
           "status": "RESOLVED",
           "reason": null
         },
@@ -13804,7 +14145,9 @@
             "LM:S:TE6:note:1:54-62"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:TE6:note:1",
+          "semantic_fields_hash": "690296a19e6a761963a0912526c5b0cd5fbdd948da4e1cc224e01278cf1888f7",
           "status": "RESOLVED",
           "reason": null
         },
@@ -13819,7 +14162,9 @@
             "LM:S:TE6:note:1:25-29"
           ],
           "direction": "proximal",
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:TE6:note:1",
+          "semantic_fields_hash": "31ff8195a2bc08b55583394cca63d172acfd77963362a56450e1f2f43f51f4c1",
           "status": "RESOLVED",
           "reason": null
         },
@@ -13834,7 +14179,9 @@
             "LM:S:TE6:note:1:85-88"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:TE6:note:1",
+          "semantic_fields_hash": "50c1fe383bcc09148985b30617896c63a36546ef5a1e53eb807b8344a9de7e25",
           "status": "RESOLVED",
           "reason": null
         },
@@ -13849,7 +14196,9 @@
             "LM:S:TE6:note:1:25-29"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:TE6:note:1",
+          "semantic_fields_hash": "a836052bb77aa569cafa89148f7829fdb19e73c258047e27369787c4aeda7091",
           "status": "RESOLVED",
           "reason": null
         },
@@ -13864,7 +14213,9 @@
             "LM:S:TE6:note:1:85-88"
           ],
           "direction": null,
-          "modifier": null,
+          "branch_id": null,
+          "source_statement_id": "S:TE6:note:1",
+          "semantic_fields_hash": "ac005b54fd3d9574d6756f86cea2e296d2703c2d1f4f630bf17257aaed538c7e",
           "status": "RESOLVED",
           "reason": null
         }
