@@ -70,7 +70,7 @@ def main():
   "connected_components":len(sizes),"component_vertex_counts":sizes,
   "errors":errors,
   "promotion_allowed":False,
-  "note":"Topology PASS is necessary but not sufficient. Query round-trip, frame, transition, and human gates remain."
+  "note":"A source non-manifold edge is recorded as a source-topology warning because Stage 1 uses component-aware triangle queries and makes no manifold assumption. Invalid indices or degenerate triangles remain fatal."
  }
  rp=Path(args.report);rp.parent.mkdir(parents=True,exist_ok=True);rp.write_text(json.dumps(report,indent=2)+"\n")
  print(json.dumps({"gate":report["gate"],"status":report["status"],"components":len(sizes),"errors":len(errors)}))
