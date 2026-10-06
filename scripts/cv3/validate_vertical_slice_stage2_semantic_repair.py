@@ -1,0 +1,197 @@
+#!/usr/bin/env python3
+"""Independent semantic-repair validator for Vertical Slice v1 Stage 2.
+
+Does not import the repair executor. Contracts are independently encoded from
+the human-audit requirements.
+"""
+from __future__ import annotations
+import argparse,copy,hashlib,json,re
+from pathlib import Path
+
+COHORT=("HT7","LI4","ST1","GB14","GB23","LU6","LI7","GB26","ST2","ST10","LI18","LI17","BL17","BL23","BL25","BL40","TE20","ST4","TE6","ST9")
+KNOWN={"TE20","ST10","LI17","LI18","BL17","BL23","BL25","ST9"}
+SUBFEATURES=("superior border","inferior border","anterior border","posterior border","free end","midpoint","centre","center","margin","edge","angle","apex","border","end")
+
+def norm(s):return re.sub(r"[^a-z0-9]+"," ",(s or "").lower()).strip()
+def sf(raw):
+ n=norm(raw);return next((x for x in SUBFEATURES if x in n),None)
+def identity(rec):
+ g=rec.get("geometry") or {}
+ if g.get("geometry_hash"):return "hash:"+g["geometry_hash"]
+ if g.get("constructed_id"):return "constructed:"+g["constructed_id"]
+ if g.get("fma_id"):return "fma:"+g["fma_id"]+":"+",".join(sorted(g.get("part_ids",[])))
+ if g.get("concept_id"):return "concept:"+g["concept_id"]+":"+",".join(sorted(g.get("part_ids",[])))
+ if g.get("part_id"):return "part:"+g["part_id"]
+ if g.get("registry_id"):return "registry:"+g["registry_id"]+":"+str(g.get("geometry_hash"))
+ if g.get("point_id"):return "point:"+g["point_id"]
+ return None
+
+def build_maps(g):
+ bnodes={x["node_id"]:x for x in g["landmark_nodes"]};children={}
+ for b in g.get("composite_bindings",[]):children.setdefault(b["parent_landmark_id"],[]).append(b["child_landmark_id"])
+ cond={x["condition_id"]:x for x in g.get("conditions",[])}
+ return bnodes,children,cond
+
+def scan(out,g):
+ bnodes,children,condsrc=build_maps(g);findings=[]
+ pby={x["point_id"]:x for x in out["points"]}
+ for pid,p in pby.items():
+  # Rule 1 / 5: parent-only composite resolution.
+  for parent,kids in children.items():
+   if parent not in p["landmarks"]:continue
+   psf=sf(bnodes.get(parent,{}).get("source_raw"));rec=p["landmarks"][parent]
+   if psf and rec.get("status")=="RESOLVED":
+    kind=(rec.get("geometry") or {}).get("kind")
+    if kind not in ("bound_subfeature","constructed_subfeature"):
+     findings.append({"rule":"parent_only_composite_resolution","point_id":pid,"node_id":parent,"source_raw":bnodes.get(parent,{}).get("source_raw"),"geometry_kind":kind,"identity":identity(rec)})
+  # Rules 2 / 3 + trace completeness.
+  for rid,r in p["relations"].items():
+   semantic=(r.get("constraint") or {}).get("semantic_argument_node_ids") or (r.get("constraint") or {}).get("argument_node_ids") or r.get("semantic_argument_node_ids") or r.get("argument_node_ids") or []
+   executable=(r.get("constraint") or {}).get("executable_argument_node_ids") or r.get("executable_argument_node_ids") or semantic
+   if r.get("status")=="RESOLVED" and ("semantic_argument_node_ids" not in (r.get("constraint") or {}) or "executable_argument_node_ids" not in (r.get("constraint") or {})):
+    findings.append({"rule":"operand_trace_incomplete","point_id":pid,"relation_id":rid})
+   for a in semantic:
+    kids=[k for k in children.get(a,[]) if sf(bnodes.get(k,{}).get("source_raw"))]
+    if kids and r.get("status")=="RESOLVED":
+     if a in executable or not any(k in executable for k in kids):
+      findings.append({"rule":"child_subfeature_unused_by_relation","point_id":pid,"relation_id":rid,"semantic_operand":a,"child_ids":kids,"executable_operands":executable})
+   if r.get("status")=="RESOLVED" and len(executable)>1:
+    ids=[identity(p["landmarks"].get(x,{})) for x in executable]
+    sfs=[sf(bnodes.get(x,{}).get("source_raw")) for x in executable]
+    for i in range(len(executable)):
+     for j in range(i+1,len(executable)):
+      if sfs[i] and sfs[j] and sfs[i]!=sfs[j] and ids[i] and ids[i]==ids[j]:
+       findings.append({"rule":"distinct_subfeature_identity_collapse","point_id":pid,"relation_id":rid,"operand_a":executable[i],"operand_b":executable[j],"identity":ids[i]})
+  # Child itself may not fallback to a whole parent mesh.
+  for child,b in ((x["child_landmark_id"],x) for x in g.get("composite_bindings",[]) if x["child_landmark_id"] in p["landmarks"]):
+   raw=bnodes.get(child,{}).get("source_raw");typ=sf(raw);rec=p["landmarks"][child]
+   if typ and rec.get("status")=="RESOLVED":
+    kind=(rec.get("geometry") or {}).get("kind")
+    if kind not in ("constructed_subfeature","bound_subfeature"):
+     findings.append({"rule":"child_subfeature_false_fallback","point_id":pid,"node_id":child,"subfeature":typ,"geometry_kind":kind,"identity":identity(rec)})
+  # Rule 4: condition preservation.
+  for cid,c in p["conditions"].items():
+   src=condsrc.get(cid,{});raw=norm((src.get("source_span") or {}).get("source_raw"))
+   incompatible=(src.get("condition_type")=="body_position" and any(x in raw for x in ("auricle folded","folded forward","folded forwards","head is turned","head turned","against resistance","pressed against")))
+   if incompatible and c.get("status")=="RESOLVED":
+    findings.append({"rule":"condition_preservation_failure","point_id":pid,"condition_id":cid,"source_raw":raw})
+ return findings
+
+def validate(out,before,g):
+ errors=[];checks=0
+ def ck(ok,code,detail=None):
+  nonlocal checks;checks+=1
+  if not ok:errors.append({"code":code,"detail":detail})
+ pids=[x["point_id"] for x in out["points"]]
+ ck(set(pids)==set(COHORT) and len(pids)==20,"REGRESSION_COVERAGE_20",pids)
+ ck(KNOWN.issubset(set(pids)),"KNOWN_AFFECTED_COVERAGE_8")
+ ck(out.get("scope",{}).get("physical_coordinates_generated") is False,"COORDINATE_GENERATION_NONZERO")
+ ck(out.get("scope",{}).get("legacy_coordinate_input") is False,"LEGACY_INPUT_NONZERO")
+ findings=scan(out,g)
+ grouped={}
+ for f in findings:grouped.setdefault(f["rule"],[]).append(f)
+ for rule in ("parent_only_composite_resolution","child_subfeature_unused_by_relation","distinct_subfeature_identity_collapse","condition_preservation_failure","child_subfeature_false_fallback","operand_trace_incomplete"):
+  ck(len(grouped.get(rule,[]))==0,rule.upper(),grouped.get(rule,[]))
+ # Trace completeness for every relation.
+ for p in out["points"]:
+  for rid,r in p["relations"].items():
+   con=r.get("constraint") or {}
+   if r.get("status")=="RESOLVED":
+    ck("semantic_argument_node_ids" in con and "executable_argument_node_ids" in con and "operand_binding_trace" in con,"SEMANTIC_EXECUTABLE_TRACE_INCOMPLETE",{"point":p["point_id"],"relation":rid})
+    for x in con.get("executable_argument_node_ids",[]):
+     ck(x in p["landmarks"],"EXECUTABLE_OPERAND_NOT_LANDMARK_NODE",{"point":p["point_id"],"relation":rid,"operand":x})
+     ck(p["landmarks"][x].get("status")=="RESOLVED","RESOLVED_RELATION_USES_NONRESOLVED_OPERAND",{"point":p["point_id"],"relation":rid,"operand":x})
+ # Before/after regression inventory.
+ pre=scan(before,g);new_pre=[f for f in pre if f["point_id"] not in KNOWN]
+ return checks,errors,findings,pre,new_pre
+
+def mutate_child_to_parent(out,g):
+ m=copy.deepcopy(out);bnodes,children,_=build_maps(g)
+ for p in m["points"]:
+  for rid,r in p["relations"].items():
+   con=r.get("constraint") or {}
+   for tr in con.get("operand_binding_trace",[]):
+    if tr.get("binding")=="child_subfeature":
+     par=tr["semantic_operand_id"];child=tr["executable_operand_id"]
+     con["executable_argument_node_ids"]=[par if x==child else x for x in con["executable_argument_node_ids"]]
+     tr["executable_operand_id"]=par
+     r["status"]="RESOLVED";return m
+ raise RuntimeError("no child-bound relation for negative test")
+
+def mutate_distinct_same_hash(out,g):
+ m=copy.deepcopy(out);bnodes,children,_=build_maps(g);p=next(x for x in m["points"] if x["point_id"]=="LI18")
+ candidates=[nid for nid in p["landmarks"] if sf(bnodes.get(nid,{}).get("source_raw")) in ("anterior border","posterior border")]
+ if len(candidates)<2:
+  candidates=[nid for nid in p["landmarks"] if sf(bnodes.get(nid,{}).get("source_raw"))]
+ if len(candidates)<2:raise RuntimeError("LI18 distinct subfeatures unavailable")
+ a,b=candidates[:2]
+ fake={"kind":"constructed_subfeature","constructed_id":"SUBFEATURE:FORGED","geometry_hash":"FORGED_SAME_HASH"}
+ for x in (a,b):p["landmarks"][x]={"status":"RESOLVED","executor":"constructed_subfeature","geometry":copy.deepcopy(fake)}
+ # Make one multi-operand relation resolve against them.
+ rid,nextrel=next(iter(p["relations"].items()));nextrel["status"]="RESOLVED";nextrel["constraint"]={"op":nextrel.get("executor"),"semantic_argument_node_ids":[a,b],"executable_argument_node_ids":[a,b],"argument_node_ids":[a,b],"operand_binding_trace":[],"source_statement_id":"FORGED"}
+ return m
+
+def mutate_same_level_parent(out,g):
+ m=copy.deepcopy(out);bnodes,children,_=build_maps(g);p=next(x for x in m["points"] if x["point_id"]=="BL17")
+ for rid,r in p["relations"].items():
+  con=r.get("constraint") or {}
+  if con.get("op")=="same_level_plane":
+   for tr in con.get("operand_binding_trace",[]):
+    if tr.get("binding")=="child_subfeature":
+     par=tr["semantic_operand_id"];child=tr["executable_operand_id"];con["executable_argument_node_ids"]=[par if x==child else x for x in con["executable_argument_node_ids"]];r["status"]="RESOLVED";return m
+ raise RuntimeError("BL17 same-level child binding unavailable")
+
+def mutate_te20_condition(out):
+ m=copy.deepcopy(out);p=next(x for x in m["points"] if x["point_id"]=="TE20")
+ for c in p["conditions"].values():
+  if c.get("status")=="CONDITIONAL":c["status"]="RESOLVED";return m
+ raise RuntimeError("TE20 conditional unavailable")
+
+def mutate_unknown_subfeature_fallback(out,g):
+ m=copy.deepcopy(out);bnodes,children,_=build_maps(g)
+ for p in m["points"]:
+  for child,rec in p["landmarks"].items():
+   if sf(bnodes.get(child,{}).get("source_raw")) and rec.get("status")=="UNRESOLVED":
+    # Forge whole-entity fallback, exactly the forbidden failure mode.
+    rec.clear();rec.update({"status":"RESOLVED","executor":"fma_mesh","geometry":{"kind":"fma_concept","fma_id":"FMA_FORGED_PARENT","part_ids":["FORGED"]}})
+    return m
+ raise RuntimeError("no unresolved subfeature available")
+
+def rejected(mut,before,g):
+ _,errs,find,_,_=validate(mut,before,g)
+ return bool(errs or find)
+
+def main():
+ ap=argparse.ArgumentParser();ap.add_argument("--before",required=True);ap.add_argument("--after",required=True);ap.add_argument("--graph",default="public/knowledge/anatomy-acupoint-relations-v2.1.json");ap.add_argument("--out",required=True);args=ap.parse_args()
+ before=json.loads(Path(args.before).read_text());after=json.loads(Path(args.after).read_text());g=json.loads(Path(args.graph).read_text())
+ checks,errors,remaining,pre,new_pre=validate(after,before,g)
+ muts={
+  "child_removed_parent_whole_mesh":mutate_child_to_parent(after,g),
+  "distinct_borders_same_geometry_hash":mutate_distinct_same_hash(after,g),
+  "same_level_child_replaced_by_parent":mutate_same_level_parent(after,g),
+  "te20_conditional_to_resolved":mutate_te20_condition(after),
+  "unknown_subfeature_whole_entity_fallback":mutate_unknown_subfeature_fallback(after,g)
+ }
+ neg={k:rejected(v,before,g) for k,v in muts.items()}
+ for k,v in neg.items():
+  checks+=1
+  if not v:errors.append({"code":"NEGATIVE_TEST_NOT_REJECTED","detail":k})
+ status="PASS" if not errors else "FAIL"
+ def count(rule,arr):return sum(x["rule"]==rule for x in arr)
+ report={"schema_version":"1.0.0","artifact":"c-v3-stage2-semantic-repair-validation","status":status,
+  "checks":checks,"errors":len(errors),"error_details":errors,
+  "coverage":{"known_affected":8,"regression_points":20},
+  "remaining_defects":remaining,
+  "pre_repair_scan":{"total":len(pre),"new_regression_defects_outside_known8":len(new_pre),"new_regression_findings":new_pre},
+  "post_repair_counts":{
+   "parent_only_collapse":count("parent_only_composite_resolution",remaining),
+   "unused_child_subfeature":count("child_subfeature_unused_by_relation",remaining),
+   "distinct_subfeature_identity_collapse":count("distinct_subfeature_identity_collapse",remaining),
+   "condition_preservation_failure":count("condition_preservation_failure",remaining),
+   "false_fallback":count("child_subfeature_false_fallback",remaining)},
+  "negative_tests":neg,"coordinate_generation_count":0,"legacy_c_coordinate_reference_count":0,
+  "final_state":{"stage2_automated_structural_validation":"PASS","stage2_semantic_repair_validation":status,"stage2_human_semantic_audit":"PENDING","stage3":"NOT_STARTED"}}
+ Path(args.out).write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n")
+ print(json.dumps({"status":status,"checks":checks,"errors":len(errors),"new_regression_defects":len(new_pre),"post_counts":report["post_repair_counts"],"negative_tests":neg}))
+ raise SystemExit(0 if status=="PASS" else 1)
+if __name__=="__main__":main()
