@@ -251,4 +251,6 @@ Only Stage 4 approval permits `GLOBAL_VALIDATED`.
 - Stage 1: **APPROVED**.
 - Stage 2: **IN PROGRESS**.
 - Vertical Slice v1 surface-registry + calibration human review: **APPROVED**.
+- Vertical Slice Stage 2 automated structural validation: **PASS**.
+- Vertical Slice Stage 2 human semantic audit: **REJECTED** — composite-subfeature collapse / modifier dependency loss / conditional-state loss identified; Stage 3 remains blocked.
 - No new acupoint coordinates have been generated or deployed.
