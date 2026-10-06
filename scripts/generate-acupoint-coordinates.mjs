@@ -1139,7 +1139,7 @@ function relationTarget(point, side){
     const st=conceptStats(r.anatomyId,sideSign,lrAxis,leftSign)||conceptStats(r.anatomyId,0,lrAxis,leftSign); if(!st)continue;
     const en=anatomyKo[r.anatomyId]?.sourceNameEn || '';
     const isBroad=broad.test(en);
-    if(/^(?:GV9|GV10|GV13|GV15)$/.test(point.id) && /(?:thoracic|cervical) vertebra$/i.test(en)) vertebralSup.push(st.center[supAxis]);
+    if(/(?:thoracic|cervical) vertebra$/i.test(en)) vertebralSup.push(st.center[supAxis]);
     if(isBroad){
       // B v2.1 broad regions (head/chest/abdomen/etc.) constrain admissible
       // anatomy but must not contribute a centroid to the coordinate target.
@@ -1165,7 +1165,7 @@ function relationTarget(point, side){
     for(let k=0;k<3;k++)acc[k]+=hit.st.center[k]*w;
     wsum+=w;textLandmarkCount++;
     const en=anatomyKo[hit.id]?.sourceNameEn||'';
-    if(/^(?:GV9|GV10|GV13|GV15)$/.test(point.id) && /(?:thoracic|cervical) vertebra$/i.test(en)) vertebralSup.push(hit.st.center[supAxis]);
+    if(/(?:thoracic|cervical) vertebra$/i.test(en)) vertebralSup.push(hit.st.center[supAxis]);
   }
   const blended=wsum ? (()=>{const g=acc.map(v=>v/wsum),alpha=specific>=2?.82:.68;return g.map((v,i)=>v*alpha+rt[i]*(1-alpha));})() : rt;
   if(vertebralSup.length) blended[supAxis]=vertebralSup.reduce((a,b)=>a+b,0)/vertebralSup.length;
@@ -1240,108 +1240,7 @@ for(const p of acupoints){
 const resultByKey=new Map(results.map(x=>[x.acupointId+':'+x.side,x]));
 const acupointById=new Map(acupoints.map(x=>[x.id,x]));
 
-function applyReviewedExceptionProjection(item){
-  const sideSign=item.side==='left'?leftSign:item.side==='right'?-leftSign:0;
-  const mark=(target,locks,rule)=>{
-    const text=acupointById.get(item.acupointId)?.locationKo||'';
-    const pr=project(target,item.side,locks,projectionRegion(text,target));
-    item.position=pr.point.map(v=>+v.toFixed(4));
-    item.validation.projectionDistance=+pr.distance.toFixed(4);
-    item.validation.projectionDelta=pr.point.map((v,i)=>+(v-target[i]).toFixed(4));
-    item.validation.regionConstrained=true;
-    item.validation.surfacePartId=pr.part;
-    item.validation.preProjectionTarget=target.map(v=>+v.toFixed(4));
-    item.validation.reviewedException=rule;
-  };
 
-  if(item.acupointId==='BL67'){
-    const p1=resultByKey.get('BL66:'+item.side),p2=resultByKey.get('BL65:'+item.side);
-    if(p1&&p2){
-      const target=p1.position.map((v,i)=>v+(p1.position[i]-p2.position[i])*1.15);
-      mark(target,{sup:true,lr:true},'reviewed-BL67-distal-continuation-from-BL65-BL66');
-      return true;
-    }
-  }
-  if(item.acupointId==='GB44'){
-    const p1=resultByKey.get('GB43:'+item.side),p2=resultByKey.get('GB42:'+item.side);
-    if(p1&&p2){
-      const target=p1.position.map((v,i)=>v+(p1.position[i]-p2.position[i])*.55);
-      mark(target,{sup:true,lr:true},'reviewed-GB44-distal-continuation-from-GB42-GB43');
-      return true;
-    }
-  }
-  if(item.acupointId==='GB7'){
-    const target=[...item.validation.preProjectionTarget];
-    mark(target,{sup:true,ap:true},'reviewed-GB7-temporal-hairline');
-    return true;
-  }
-  if(item.acupointId==='GB8'){
-    const gb7=resultByKey.get('GB7:'+item.side);
-    if(gb7){
-      const target=[...gb7.position];
-      target[supAxis]+=1.5*cunY;
-      mark(target,{sup:true,ap:true},'reviewed-GB8-1.5-cun-superior-to-GB7-hairline-level');
-      return true;
-    }
-  }
-
-  if(item.acupointId==='ST43'){
-    const proximal=resultByKey.get('ST42:'+item.side), distal=resultByKey.get('ST44:'+item.side);
-    if(proximal&&distal){
-      const target=proximal.position.map((v,i)=>v*.40+distal.position[i]*.60);
-      mark(target,{sup:true,lr:true},'reviewed-ST43-between-ST42-ST44');
-      return true;
-    }
-  }
-  if(item.acupointId==='GB41'){
-    const ankle=resultByKey.get('GB40:'+item.side),web=resultByKey.get('GB43:'+item.side);
-    if(ankle&&web){
-      const target=ankle.position.map((v,i)=>v*.62+web.position[i]*.38);
-      mark(target,{sup:true,lr:true},'reviewed-GB41-between-GB40-GB43');
-      return true;
-    }
-  }
-  if(item.acupointId==='GB42'){
-    const gb41=resultByKey.get('GB41:'+item.side),gb43=resultByKey.get('GB43:'+item.side);
-    if(gb41&&gb43){
-      const f=.70;
-      const target=gb41.position.map((v,i)=>v*(1-f)+gb43.position[i]*f);
-      mark(target,{sup:true,lr:true},'reviewed-GB42-between-GB41-GB43');
-      return true;
-    }
-  }
-  if(item.acupointId==='BL63'){
-    const ankle=resultByKey.get('BL62:'+item.side), distal=resultByKey.get('BL64:'+item.side);
-    if(ankle&&distal){
-      const target=ankle.position.map((v,i)=>v*.62+distal.position[i]*.38);
-      mark(target,{sup:true,lr:true},'reviewed-BL63-between-BL62-BL64');
-      return true;
-    }
-  }
-
-  if(item.acupointId==='TE4'){
-    const distal=resultByKey.get('TE3:'+item.side);
-    const proximal=resultByKey.get('TE5:'+item.side);
-    if(distal&&proximal){
-      const target=distal.position.map((v,i)=>v*.55+proximal.position[i]*.45);
-      mark(target,{sup:true,lr:true},'reviewed-wrist-between-TE3-TE5');
-      return true;
-    }
-  }
-
-  if(item.acupointId==='GV15'){
-    const gv16=resultByKey.get('GV16:midline');
-    if(gv16){
-      const target=[...item.validation.preProjectionTarget];
-      target[lrAxis]=bodyCenter[lrAxis];
-      target[supAxis]=gv16.position[supAxis]-.5*cunY;
-      mark(target,{sup:true},'reviewed-GV15-0.5-cun-inferior-to-GV16');
-      return true;
-    }
-  }
-  return false;
-}
-for(const item of results) applyReviewedExceptionProjection(item);
 function updateFromRelativeDefinition(item,text){
   const pair=text.match(/([A-Z]{1,2}\d+)\s*(?:와|과)\s*([A-Z]{1,2}\d+)(?:을|를)\s*잇는\s*(?:곡선|선)/);
   if(!pair)return false;
@@ -1490,8 +1389,10 @@ const sortedProjection=results.slice().sort((a,b)=>b.validation.projectionDistan
 const manualReviewQueue=sortedProjection.filter((x,i)=>i<Math.ceil(results.length*.05)||x.validation.landmarkPostValidation.status==='review'||x.validation.topologyValidation.status==='review').map(x=>({acupointId:x.acupointId,side:x.side,projectionDistance:x.validation.projectionDistance,projectionDelta:x.validation.projectionDelta,landmarkStatus:x.validation.landmarkPostValidation.status,topologyStatus:x.validation.topologyValidation.status}));
 const audit={generatedAt:new Date().toISOString(),logicalAcupoints:acupoints.length,physicalCoordinates:results.length,expectedPhysicalCoordinates:expected,validatedPhysicalCoordinates:validatedPoints.length,reviewNeededPhysicalCoordinates:reviewNeededPoints.length,surfaceTriangleCount:surfaceTriangles.length,integumentaryPartCount:surfaceParts.length,invalidGeometryOrLaterality:invalid.map(x=>x.acupointId+':'+x.side),duplicateClusters,exactDuplicateClusters,confidenceCounts:results.reduce((m,x)=>(m[x.confidence]=(m[x.confidence]||0)+1,m),{}),projectionDistance:{max:Math.max(...results.map(x=>x.validation.projectionDistance)),mean:results.reduce((n,x)=>n+x.validation.projectionDistance,0)/results.length},spatialValidation:{regionConstrained:results.every(x=>x.validation.regionConstrained),landmarkHardFailures,landmarkReviewCount:results.filter(x=>x.validation.landmarkPostValidation.status==='review').length,topologyHardFailures:topology.hard,topologyReviewCount:topology.reviews.length,manualReviewQueue},axes:out.coordinateFrame,bodyBounds:{min:bodyMin,max:bodyMax,center:bodyCenter,extent,bodyDiag}};
 fs.writeFileSync(new URL('public/knowledge/acupoint-coordinates-audit.json',root),JSON.stringify(audit,null,2)+'\n');
-const regressionIds=new Set(['SP15','LI4','LI6','SI7','TE5','TE6','TE7','TE8','BL57','BL58','PC4','PC5','CV2','CV8','ST6','LU9','HT7','BL64','GB43','BL8','GB15','GB16','GV25','TE18','KI26','CV17','GB23','LR14','CV13','CV10','SP16','PC7','GB27','SP13','KI10','ST36']);
-console.log('C_V2_REPORTED_CASE_DIAGNOSTICS '+JSON.stringify(results.filter(x=>regressionIds.has(x.acupointId)).map(x=>({id:x.acupointId,side:x.side,position:x.position,pre:x.validation.preProjectionTarget,native:x.validation.nativeOperationCount,unresolved:x.validation.unresolvedSemanticRelationIds,projectionDistance:x.validation.projectionDistance}))));
+const unresolvedCount=results.filter(x=>(x.validation.unresolvedSemanticRelationIds??[]).length).length;
+const envelopeClampCount=results.filter(x=>x.validation.envelopeClamped).length;
+const largeProjectionCount=results.filter(x=>x.validation.projectionDistance>bodyDiag*.05).length;
+console.log('C_PIPELINE_DIAGNOSTICS '+JSON.stringify({physicalCoordinates:results.length,unresolvedCount,envelopeClampCount,largeProjectionCount,exactDuplicateClusters:exactDuplicateClusters.length,topologyHardFailures:topology.hard.length,landmarkHardFailures:landmarkHardFailures.length}));
 if(invalid.length||exactDuplicateClusters.length||landmarkHardFailures.length||topology.hard.length){
   console.warn('C_REVIEW_QUARANTINE '+JSON.stringify({invalid:invalid.map(x=>x.acupointId+':'+x.side),duplicateClusters,exactDuplicateClusters,landmarkHardFailures,topologyHardFailures:topology.hard}));
 }
