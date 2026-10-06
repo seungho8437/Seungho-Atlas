@@ -1068,6 +1068,10 @@ function executeSemanticRelations(base,point,side){
       for(let k=0;k<3;k++)target[k]=(usable[0].value.point[k]+usable[1].value.point[k])/2;
       executed.push(r.relation_id);continue;
     }
+    if(r.relation_type==='midpoint-of-entity'&&usable.length===0){
+      const priorBetween=graphRelations.find(x=>x.relation_type==='between'&&executed.includes(x.relation_id));
+      if(priorBetween){executed.push(r.relation_id);continue;}
+    }
     if((r.relation_type==='center-of'||r.relation_type==='midpoint-of-entity')&&usable.length>=1){
       for(let k=0;k<3;k++)target[k]=usable[0].value.point[k];
       executed.push(r.relation_id);continue;
@@ -1083,8 +1087,18 @@ function executeSemanticRelations(base,point,side){
       const amount=measure?.value?Number(measure.value)*contextCun(point.locationKo||'',side):Math.max(bodyDiag*.006,(a.value.stats?.diag||0)*.12);
       const compactCue=cue.replace(/[\s-]+/g,'');
       let did=false;
-      if(measure?.direction==='lateral'||/lateralto|radialto/.test(compactCue)){target[lrAxis]=p[lrAxis]+(side==='left'?leftSign:-leftSign)*amount;did=true;}
-      if(/medialto|ulnarto/.test(compactCue)){target[lrAxis]=p[lrAxis]-(side==='left'?leftSign:-leftSign)*amount;did=true;}
+      if(/radialto/.test(compactCue)&&a.value.fmaId==='FMA23466'){
+        const radius=statsSeed('FMA23463',side);
+        if(radius){target[lrAxis]=p[lrAxis]+(radius.center[lrAxis]-p[lrAxis])*.28;did=true;}
+      } else if(measure?.direction==='lateral'||/lateralto|radialto/.test(compactCue)){
+        target[lrAxis]=p[lrAxis]+(side==='left'?leftSign:-leftSign)*amount;did=true;
+      }
+      if(!did&&/ulnarto/.test(compactCue)&&a.value.fmaId==='FMA23463'){
+        const ulna=statsSeed('FMA23466',side);
+        if(ulna){target[lrAxis]=p[lrAxis]+(ulna.center[lrAxis]-p[lrAxis])*.28;did=true;}
+      } else if(!did&&/medialto|ulnarto/.test(compactCue)){
+        target[lrAxis]=p[lrAxis]-(side==='left'?leftSign:-leftSign)*amount;did=true;
+      }
       if(measure?.direction==='superior'||/superiorto|proximalto|anterosuperiorto/.test(compactCue)){target[supAxis]=p[supAxis]+amount;did=true;}
       if(measure?.direction==='inferior'||/inferiorto|distalto|posteroinferiorto|anteroinferiorto/.test(compactCue)){target[supAxis]=p[supAxis]-amount;did=true;}
       if(measure?.direction==='anterior'||/anteriorto|anteroinferiorto|anterosuperiorto/.test(compactCue)){target[apAxis]=p[apAxis]+anteriorSign*amount;did=true;}
