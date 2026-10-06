@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-vertical-slice-v1-stage2-human-review-validation",
+  "status": "PASS",
+  "review_disposition": "HUMAN_REVIEW_REJECTED",
+  "identity_validation": {
+    "checks": 385,
+    "errors": 0,
+    "error_details": []
+  },
+  "independent_validation": {
+    "checks": 64,
+    "errors": 0,
+    "error_details": []
+  },
+  "negative_tests": {
+    "forged_operator_rejected": true,
+    "forged_fma_or_registry_identity_rejected": true,
+    "forged_dependency_edge_rejected": true,
+    "forged_status_flip_rejected": true
+  },
+  "coverage": {
+    "points": 20,
+    "resolved": 12,
+    "unresolved": 8,
+    "conditional_points": 2
+  },
+  "coordinate_generation_count": 0,
+  "legacy_c_coordinate_reference_count": 0,
+  "semantic_discrepancies": [
+    {
+      "code": "POSE_CONDITION_NOT_PRESERVED_AS_CONDITIONAL",
+      "point_id": "TE20",
+      "condition_id": "CD:S:TE20:note:1:00",
+      "source_raw": "with the auricle folded",
+      "stage2_status": "RESOLVED"
+    }
+  ],
+  "special_requested_audits": {
+    "GB23": {
+      "lateral_thoracic_region_present": true,
+      "fourth_intercostal_space_present": true,
+      "midaxillary_line_present": true,
+      "one_b_cun_anterior_present": true
+    },
+    "TE6": {
+      "posterior_forearm_present": true,
+      "interosseous_operand": {
+        "status": "RESOLVED",
+        "executor": "approved_surface_registry",
+        "geometry": {
+          "kind": "surface_registry",
+          "registry_id": "SR:radius_ulna_interosseous_space",
+          "geometry_hash": "4b89dd3e588ceb0c6fc9aae7de7f8c71ea842a9e0305158cad97d76f12f35f33"
+        },
+        "reason": null
+      },
+      "three_b_cun_proximal_present": true,
+      "deep_space_not_replaced_by_surface_membership": true
+    },
+    "ST4": {
+      "primary_location_resolved": true,
+      "primary_relation_statuses": [
+        "RESOLVED",
+        "RESOLVED"
+      ],
+      "note_nasolabial_unresolved": [
+        {
+          "id": "LM:S:ST4:note:1:69-86",
+          "status": "UNRESOLVED",
+          "reason": "No approved BodyParts3D geometric definition; deliberately unresolved."
+        },
+        {
+          "id": "LM:S:ST4:note:1:97-134",
+          "status": "UNRESOLVED",
+          "reason": "No approved BodyParts3D geometric definition; deliberately unresolved."
+        }
+      ],
+      "note_dependencies_separate_from_primary": true
+    },
+    "neck_point_identity_signatures": {
+      "ST9": [
+        "FMA13407",
+        "FMA13407",
+        "FMA13407",
+        "FMA13407",
+        "FMA13407",
+        "FMA3939",
+        "FMA55099",
+        "FMA55099",
+        "FMA55099",
+        "LM21:S:ST9:note:2:168-172:6775aaafeb",
+        "LM21:S:ST9:note:2:222-226:34574dfae8",
+        "LM21:S:ST9:note:2:50-54:6775aaafeb",
+        "LM:S:ST9:location:61-76",
+        "LM:S:ST9:note:2:44-48",
+        "LM:S:ST9:note:2:63-78",
+        "SR:anterior_neck"
+      ],
+      "ST10": [
+        "FMA13407",
+        "FMA13407",
+        "FMA9615",
+        "SR:anterior_neck"
+      ],
+      "LI17": [
+        "FMA13407",
+        "FMA13407",
+        "FMA9615",
+        "LM:S:LI17:note:1:26-31",
+        "LM:S:LI17:note:1:54-58",
+        "SR:anterior_neck"
+      ],
+      "LI18": [
+        "FMA13407",
+        "FMA13407",
+        "FMA55099",
+        "FMA55099",
+        "LM:S:LI18:location:61-76",
+        "SR:anterior_neck"
+      ]
+    },
+    "BL17": {
+      "vertebral_anchor_present": true,
+      "posterior_median_line_present": true,
+      "lateral_1_5_b_cun_present": true
+    },
+    "BL23": {
+      "vertebral_anchor_present": true,
+      "posterior_median_line_present": true,
+      "lateral_1_5_b_cun_present": true
+    },
+    "BL25": {
+      "vertebral_anchor_present": true,
+      "posterior_median_line_present": true,
+      "lateral_1_5_b_cun_present": true
+    },
+    "LI4": {
+      "all_primary_relations_resolved": true,
+      "all_primary_relation_operands_resolved": true
+    },
+    "BL40": {
+      "all_primary_relations_resolved": true,
+      "all_primary_relation_operands_resolved": true
+    }
+  },
+  "final_stage_state": "Stage 2 = AUTOMATED VALIDATED, HUMAN REVIEW PENDING"
+}
