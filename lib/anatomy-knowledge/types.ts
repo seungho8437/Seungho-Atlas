@@ -89,7 +89,7 @@ export type AcupointCoordinate = {
   side: 'left' | 'right' | 'midline';
   position: [number, number, number];
   model: 'BodyParts3D-4.0';
-  status: 'validated';
+  status: 'validated' | 'review-needed';
   sourceIds: string[];
 };
 

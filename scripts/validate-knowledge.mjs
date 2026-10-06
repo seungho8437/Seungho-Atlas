@@ -119,9 +119,16 @@ for(const coordinate of acupointCoordinateRegistry.points){
   assert.ok(['left','right','midline'].includes(coordinate.side),`${coordinate.acupointId}: invalid coordinate side`);
   assert.ok(Array.isArray(coordinate.position)&&coordinate.position.length===3&&coordinate.position.every(Number.isFinite),`${coordinate.acupointId}: invalid 3D coordinate`);
   assert.equal(coordinate.model,'BodyParts3D-4.0',`${coordinate.acupointId}: coordinate model mismatch`);
-  assert.equal(coordinate.status,'validated',`${coordinate.acupointId}: only validated coordinates may render`);
+  assert.ok(['validated','review-needed'].includes(coordinate.status),`${coordinate.acupointId}: invalid coordinate status`);
+  if(coordinate.status==='validated'){
+    assert.deepEqual(coordinate.validation?.reviewReasons??[],[],`${coordinate.acupointId}: validated coordinate cannot carry review reasons`);
+    assert.deepEqual(coordinate.validation?.unresolvedSemanticRelationIds??[],[],`${coordinate.acupointId}: validated coordinate cannot carry unresolved semantic relations`);
+  }
   for(const id of coordinate.sourceIds??[])assert.ok(sourceIds.has(id),`${coordinate.acupointId}: missing coordinate source ${id}`);
 }
+const renderableCoordinates=acupointCoordinateRegistry.points.filter(coordinate=>coordinate.status==='validated');
+assert.ok(renderableCoordinates.length>0,'At least one validated coordinate must remain renderable');
+assert.ok(renderableCoordinates.length<acupointCoordinateRegistry.points.length,'C quarantine contract regression: current repair branch is expected to retain review-needed candidates');
 
 const pointById=new Map(acupoints.map(point=>[point.id,point]));
 assert.equal(pointById.get('ST36')?.name.ko,'족삼리','ST36 Korean name regression');
