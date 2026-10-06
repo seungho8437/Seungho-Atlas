@@ -113,6 +113,18 @@ def geometry_identity(rec):
  if g.get("point_id"):return "point:"+g["point_id"]
  return None
 
+def relation_semantic_fields(r,op,semantic):
+ fields={"op":op,"relation_type":r["relation_type"],"source_statement_id":r["source_statement_id"],
+         "branch_id":r.get("branch_id"),"semantic_argument_node_ids":semantic}
+ if r["relation_type"]=="relative-to":
+  fields["direction"]=relation_direction(r)
+ return fields
+
+def attach_semantic_hash(rec):
+ fields=rec.get("semantic_fields") or {}
+ rec["semantic_fields_hash"]=objhash(fields)
+ return rec
+
 def main():
  ap=argparse.ArgumentParser()
  ap.add_argument("--graph",default="public/knowledge/anatomy-acupoint-relations-v2.1.json")
@@ -222,13 +234,21 @@ def main():
    elif c["condition_type"] in ("alternative","palpation_dependent"):st="CONDITIONAL";reason="condition preserved as non-executed conditional branch"
    else:st="RESOLVED";reason=None
    cout[c["condition_id"]]={"status":st,"executor":"condition_contract","condition_type":c["condition_type"],"branch_id":c.get("branch_id"),
+    "source_statement_id":c["source_statement_id"],"source_span":c.get("source_span"),
     "default_pose_compatible":False if pose_incompatible else None,"reason":reason}
   rout={}
   for r in rels:
-   rid=r["relation_id"];op=REL_OP.get(r["relation_type"])
-   if not op:rout[rid]={"status":"INVALID","executor":"relation_dispatch","reason":"relation family has no slice executor"};continue
-   semantic=list(r.get("argument_node_ids",[]));executable=[];binding_trace=[]
-   ambiguous=False
+   rid=r["relation_id"];op=REL_OP.get(r["relation_type"]);semantic=list(r.get("argument_node_ids",[]))
+   semantic_fields=relation_semantic_fields(r,op,semantic)
+   if not op:
+    rout[rid]=attach_semantic_hash({"status":"INVALID","executor":"relation_dispatch","reason":"relation family has no slice executor",
+      "semantic_fields":semantic_fields,"semantic_argument_node_ids":semantic,"executable_argument_node_ids":[],"operand_binding_trace":[]});continue
+   # Non-operand semantics are captured before any executable-operand repair.
+   # They remain present even when execution becomes UNRESOLVED.
+   if r["relation_type"]=="relative-to" and not semantic_fields.get("direction"):
+    rout[rid]=attach_semantic_hash({"status":"UNRESOLVED","executor":op,"reason":"direction cue not normalized",
+      "semantic_fields":semantic_fields,"semantic_argument_node_ids":semantic,"executable_argument_node_ids":[],"operand_binding_trace":[]});continue
+   executable=[];binding_trace=[];ambiguous=False
    for a in semantic:
     kids=[k for k in contained_bound_children(a,bindings) if subfeature_type(bnodes.get(k,{}).get("source_raw"))]
     asf=subfeature_type(bnodes.get(a,{}).get("source_raw"))
@@ -242,31 +262,29 @@ def main():
     else:
      executable.append(a);binding_trace.append({"semantic_operand_id":a,"executable_operand_id":a,"binding":"identity"})
    if ambiguous:
-    rout[rid]={"status":"UNRESOLVED","executor":op,"reason":"semantic composite has multiple child subfeatures and no unique executable operand",
-      "semantic_argument_node_ids":semantic,"executable_argument_node_ids":executable,"operand_binding_trace":binding_trace};continue
+    rout[rid]=attach_semantic_hash({"status":"UNRESOLVED","executor":op,"reason":"semantic composite has multiple child subfeatures and no unique executable operand",
+      "semantic_fields":semantic_fields,"semantic_argument_node_ids":semantic,"executable_argument_node_ids":executable,"operand_binding_trace":binding_trace});continue
    argrecs=[lout.get(x,{"status":"INVALID"}) for x in executable]
    worst=sorted((x["status"] for x in argrecs),key=status_rank,reverse=True)[0] if argrecs else "RESOLVED"
    if worst in ("INVALID","UNRESOLVED","MULTIPLE"):
-    rout[rid]={"status":worst,"executor":op,"reason":"executable operand not uniquely executable","semantic_argument_node_ids":semantic,
-      "executable_argument_node_ids":executable,"operand_binding_trace":binding_trace};continue
-   # Distinct semantic subfeatures used by a multi-operand relation require distinct executable identities.
+    rout[rid]=attach_semantic_hash({"status":worst,"executor":op,"reason":"executable operand not uniquely executable",
+      "semantic_fields":semantic_fields,"semantic_argument_node_ids":semantic,"executable_argument_node_ids":executable,"operand_binding_trace":binding_trace});continue
    if len(executable)>1:
     fps=[geometry_identity(lout[x]) for x in executable]
-    sf=[subfeature_type(bnodes.get(x,{}).get("source_raw")) for x in executable]
+    sft=[subfeature_type(bnodes.get(x,{}).get("source_raw")) for x in executable]
+    collision=False
     for i in range(len(executable)):
      for j in range(i+1,len(executable)):
-      if sf[i] and sf[j] and sf[i]!=sf[j] and fps[i] and fps[i]==fps[j]:
-       rout[rid]={"status":"UNRESOLVED","executor":op,"reason":"DISTINCT_SEMANTIC_SUBFEATURES_REQUIRE_DISTINCT_EXECUTABLE_IDENTITY",
-        "semantic_argument_node_ids":semantic,"executable_argument_node_ids":executable,"operand_binding_trace":binding_trace};break
-     if rid in rout:break
-    if rid in rout:continue
-   con={"op":op,"argument_node_ids":semantic,"semantic_argument_node_ids":semantic,"executable_argument_node_ids":executable,
-        "operand_binding_trace":binding_trace,"source_statement_id":r["source_statement_id"],"branch_id":r.get("branch_id")}
-   if r["relation_type"]=="relative-to":
-    d=relation_direction(r)
-    if not d:rout[rid]={"status":"UNRESOLVED","executor":op,"reason":"direction cue not normalized","semantic_argument_node_ids":semantic,"executable_argument_node_ids":executable,"operand_binding_trace":binding_trace};continue
-    con["direction"]=d
-   rout[rid]={"status":"RESOLVED","executor":op,"constraint":con}
+      if sft[i] and sft[j] and sft[i]!=sft[j] and fps[i] and fps[i]==fps[j]:
+       collision=True;break
+     if collision:break
+    if collision:
+     rout[rid]=attach_semantic_hash({"status":"UNRESOLVED","executor":op,"reason":"DISTINCT_SEMANTIC_SUBFEATURES_REQUIRE_DISTINCT_EXECUTABLE_IDENTITY",
+      "semantic_fields":semantic_fields,"semantic_argument_node_ids":semantic,"executable_argument_node_ids":executable,"operand_binding_trace":binding_trace});continue
+   con=dict(semantic_fields)
+   con.update({"argument_node_ids":semantic,"executable_argument_node_ids":executable,"operand_binding_trace":binding_trace})
+   rout[rid]=attach_semantic_hash({"status":"RESOLVED","executor":op,"constraint":con,"semantic_fields":semantic_fields,
+     "semantic_argument_node_ids":semantic,"executable_argument_node_ids":executable,"operand_binding_trace":binding_trace})
   statements=[]
   for s in ss:
    sid=s["source_statement_id"];rr=[r["relation_id"] for r in rels if r["source_statement_id"]==sid];mm=[m["measurement_id"] for m in pms if m["source_statement_id"]==sid];cc=[c["condition_id"] for c in conds if c["source_statement_id"]==sid]
