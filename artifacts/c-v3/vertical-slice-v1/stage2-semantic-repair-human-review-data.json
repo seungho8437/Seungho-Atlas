@@ -20,7 +20,7 @@
         {
           "source_statement_id": "S:LI18:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 51,
           "text": "On the anterior aspect of the neck, at the same level as the superior border of the thyroid cartilage, between the anterior and posterior borders of the sternocleidomas-toid muscle."
         }
       ],
@@ -210,7 +210,7 @@
       "relations": [
         {
           "relation_id": "RL:S:LI18:location:00:between",
-          "source_phrase": null,
+          "source_phrase": "between the anterior and posterior borders of the sternocleidomas-toid muscle",
           "operator": "between_constraint",
           "semantic_operand_ids": [
             "LM:S:LI18:location:115-180:0f3e9745",
@@ -224,7 +224,7 @@
         },
         {
           "relation_id": "RL:S:LI18:location:01:same-level",
-          "source_phrase": null,
+          "source_phrase": "at the same level as the superior border of the thyroid cartilage",
           "operator": "same_level_plane",
           "semantic_operand_ids": [
             "LM:S:LI18:location:57-101"
@@ -239,7 +239,7 @@
         },
         {
           "relation_id": "RL:S:LI18:location:02:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "On the anterior aspect",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:LI18:location:7-22"
@@ -551,7 +551,7 @@
         {
           "source_statement_id": "S:ST10:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 59,
           "text": "In the anterior region of the neck, at the same level as the cricoid cartilage, just anterior to the border of the sternocleido-mastoid muscle."
         }
       ],
@@ -718,7 +718,7 @@
       "relations": [
         {
           "relation_id": "RL:S:ST10:location:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "anterior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:ST10:location:96-142"
@@ -733,7 +733,7 @@
         },
         {
           "relation_id": "RL:S:ST10:location:01:same-level",
-          "source_phrase": null,
+          "source_phrase": "at the same level as the cricoid cartilage",
           "operator": "same_level_plane",
           "semantic_operand_ids": [
             "LM:S:ST10:location:57-78"
@@ -748,7 +748,7 @@
         },
         {
           "relation_id": "RL:S:ST10:location:02:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "In the anterior region of the neck",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:ST10:location:7-34"
@@ -1009,13 +1009,13 @@
         {
           "source_statement_id": "S:LI17:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 51,
           "text": "On the anterior aspect of the neck, at the same level as the cricoid cartilage, just posterior to the border of the sternocleido-mastoid muscle."
         },
         {
           "source_statement_id": "S:LI17:note:1",
           "section": "note",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 51,
           "text": "Note: Directly inferior to LI18, at the same level as St10."
         }
       ],
@@ -1228,7 +1228,7 @@
       "relations": [
         {
           "relation_id": "RL:S:LI17:location:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "posterior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:LI17:location:97-143"
@@ -1243,7 +1243,7 @@
         },
         {
           "relation_id": "RL:S:LI17:location:01:same-level",
-          "source_phrase": null,
+          "source_phrase": "at the same level as the cricoid cartilage",
           "operator": "same_level_plane",
           "semantic_operand_ids": [
             "LM:S:LI17:location:57-78"
@@ -1258,7 +1258,7 @@
         },
         {
           "relation_id": "RL:S:LI17:location:02:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "On the anterior aspect",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:LI17:location:7-22"
@@ -1273,7 +1273,7 @@
         },
         {
           "relation_id": "RL:S:LI17:note:1:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "inferior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:LI17:note:1:26-31"
@@ -1288,7 +1288,7 @@
         },
         {
           "relation_id": "RL:S:LI17:note:1:01:same-level",
-          "source_phrase": null,
+          "source_phrase": "at the same level as St10",
           "operator": "same_level_plane",
           "semantic_operand_ids": [
             "LM:S:LI17:note:1:54-58"
@@ -1303,7 +1303,7 @@
         },
         {
           "relation_id": "RL21:S:LI17:note:1:27-31:reference-acupoint:9ab9a5cce4",
-          "source_phrase": null,
+          "source_phrase": "LI18",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM:S:LI17:note:1:26-31"
@@ -1318,7 +1318,7 @@
         },
         {
           "relation_id": "RL21:S:LI17:note:1:54-58:reference-acupoint:87e9101b1e",
-          "source_phrase": null,
+          "source_phrase": "St10",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM:S:LI17:note:1:54-58"
@@ -1786,13 +1786,13 @@
         {
           "source_statement_id": "S:BL17:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 117,
           "text": "In the upper back region, at the same level as the inferior border of the spinous process of the seventh thoracic vertebra (T7), 1.5 B-cun lateral to the posterior median line."
         },
         {
           "source_statement_id": "S:BL17:note:1",
           "section": "note",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 117,
           "text": "Note: The inferior angle of the scapula is at the same level as the spinous process of the seventh thoracic vertebra."
         }
       ],
@@ -2069,7 +2069,7 @@
       "relations": [
         {
           "relation_id": "RL:S:BL17:location:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "1.5 B-cun lateral to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:BL17:location:149-175"
@@ -2084,7 +2084,7 @@
         },
         {
           "relation_id": "RL:S:BL17:location:01:same-level",
-          "source_phrase": null,
+          "source_phrase": "at the same level as the inferior border of the spinous process of the seventh thoracic vertebra (T7)",
           "operator": "same_level_plane",
           "semantic_operand_ids": [
             "LM:S:BL17:location:47-127"
@@ -2099,7 +2099,7 @@
         },
         {
           "relation_id": "RL:S:BL17:location:02:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "In the upper back region",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:BL17:location:7-24"
@@ -2114,7 +2114,7 @@
         },
         {
           "relation_id": "RL:S:BL17:note:1:00:same-level",
-          "source_phrase": null,
+          "source_phrase": "at the same level as the spinous process of the seventh thoracic vertebra",
           "operator": "same_level_plane",
           "semantic_operand_ids": [
             "LM:S:BL17:note:1:64-116"
@@ -2468,7 +2468,7 @@
         {
           "source_statement_id": "S:BL23:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 120,
           "text": "In the lumbar region, at the same level as the inferior border of the spinous process of the second lumbar vertebra (L2), 1.5 B-cun lateral to the posterior median line."
         }
       ],
@@ -2635,7 +2635,7 @@
       "relations": [
         {
           "relation_id": "RL:S:BL23:location:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "1.5 B-cun lateral to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:BL23:location:142-168"
@@ -2650,7 +2650,7 @@
         },
         {
           "relation_id": "RL:S:BL23:location:01:same-level",
-          "source_phrase": null,
+          "source_phrase": "at the same level as the inferior border of the spinous process of the second lumbar vertebra (L2)",
           "operator": "same_level_plane",
           "semantic_operand_ids": [
             "LM:S:BL23:location:43-120"
@@ -2665,7 +2665,7 @@
         },
         {
           "relation_id": "RL:S:BL23:location:02:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "In the lumbar region",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:BL23:location:7-20"
@@ -2927,7 +2927,7 @@
         {
           "source_statement_id": "S:BL25:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 121,
           "text": "In the lumbar region, at the same level as the inferior border of the spinous process of the fourth lumbar vertebra (L4), 1.5 B-cun lateral to the posterior median line."
         }
       ],
@@ -3094,7 +3094,7 @@
       "relations": [
         {
           "relation_id": "RL:S:BL25:location:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "1.5 B-cun lateral to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:BL25:location:142-168"
@@ -3109,7 +3109,7 @@
         },
         {
           "relation_id": "RL:S:BL25:location:01:same-level",
-          "source_phrase": null,
+          "source_phrase": "at the same level as the inferior border of the spinous process of the fourth lumbar vertebra (L4)",
           "operator": "same_level_plane",
           "semantic_operand_ids": [
             "LM:S:BL25:location:43-120"
@@ -3124,7 +3124,7 @@
         },
         {
           "relation_id": "RL:S:BL25:location:02:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "In the lumbar region",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:BL25:location:7-20"
@@ -3386,19 +3386,19 @@
         {
           "source_statement_id": "S:ST9:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 59,
           "text": "In the anterior region of the neck, at the same level as the superior border of the thyroid cartilage, anterior to the sterno-cleidomastoid muscle, over the common carotid artery."
         },
         {
           "source_statement_id": "S:ST9:note:1",
           "section": "note",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 59,
           "text": "Note 1: The sternocleidomastoid muscle is more distinct when the head is turned to the opposite side against resistance."
         },
         {
           "source_statement_id": "S:ST9:note:2",
           "section": "note",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 59,
           "text": "Note 2: ST9 is located at the same level as LI18, SI16 and the superior border of the thyroid cartilage. St9 is located anterior to the sternocleidomastoid muscle, and SI16, posterior to the sternocleidomastoid muscle and LI18, between the anterior and pos-terior borders of the sternocleidomastoid muscle."
         }
       ],
@@ -3859,7 +3859,7 @@
       "relations": [
         {
           "relation_id": "RL:S:ST9:location:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "anterior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:ST9:location:114-146"
@@ -3874,7 +3874,7 @@
         },
         {
           "relation_id": "RL:S:ST9:location:01:same-level",
-          "source_phrase": null,
+          "source_phrase": "at the same level as the superior border of the thyroid cartilage",
           "operator": "same_level_plane",
           "semantic_operand_ids": [
             "LM:S:ST9:location:57-101"
@@ -3889,7 +3889,7 @@
         },
         {
           "relation_id": "RL:S:ST9:location:02:overlies",
-          "source_phrase": null,
+          "source_phrase": "over the common carotid artery",
           "operator": "overlies_projection",
           "semantic_operand_ids": [
             "LM:S:ST9:location:157-178"
@@ -3904,7 +3904,7 @@
         },
         {
           "relation_id": "RL:S:ST9:location:03:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "In the anterior region of the neck",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:ST9:location:7-34"
@@ -3919,7 +3919,7 @@
         },
         {
           "relation_id": "RL:S:ST9:note:2:00:between",
-          "source_phrase": null,
+          "source_phrase": "between the anterior and pos-terior borders of the sternocleidomastoid muscle",
           "operator": "between_constraint",
           "semantic_operand_ids": [
             "LM:S:ST9:note:2:240-305:6f7a364e",
@@ -3933,7 +3933,7 @@
         },
         {
           "relation_id": "RL:S:ST9:note:2:01:relative-to",
-          "source_phrase": null,
+          "source_phrase": "anterior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:ST9:note:2:131-162"
@@ -3948,7 +3948,7 @@
         },
         {
           "relation_id": "RL:S:ST9:note:2:02:relative-to",
-          "source_phrase": null,
+          "source_phrase": "posterior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:ST9:note:2:186-226"
@@ -3963,7 +3963,7 @@
         },
         {
           "relation_id": "RL:S:ST9:note:2:03:same-level",
-          "source_phrase": null,
+          "source_phrase": "at the same level as LI18",
           "operator": "same_level_plane",
           "semantic_operand_ids": [
             "LM:S:ST9:note:2:44-48"
@@ -3978,7 +3978,7 @@
         },
         {
           "relation_id": "RL21:S:ST9:note:2:44-48:reference-acupoint:dfa4bc85d2",
-          "source_phrase": null,
+          "source_phrase": "LI18",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM:S:ST9:note:2:44-48"
@@ -3993,7 +3993,7 @@
         },
         {
           "relation_id": "RL21:S:ST9:note:2:50-54:reference-acupoint:cf7c9e057c",
-          "source_phrase": null,
+          "source_phrase": "SI16",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM21:S:ST9:note:2:50-54:6775aaafeb"
@@ -4008,7 +4008,7 @@
         },
         {
           "relation_id": "RL21:S:ST9:note:2:168-172:reference-acupoint:a3b2f0d073",
-          "source_phrase": null,
+          "source_phrase": "SI16",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM21:S:ST9:note:2:168-172:6775aaafeb"
@@ -4023,7 +4023,7 @@
         },
         {
           "relation_id": "RL21:S:ST9:note:2:222-226:reference-acupoint:01273086b9",
-          "source_phrase": null,
+          "source_phrase": "LI18",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM21:S:ST9:note:2:222-226:34574dfae8"
@@ -4894,13 +4894,13 @@
         {
           "source_statement_id": "S:TE20:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 176,
           "text": "On the head, just superior to the auricular apex."
         },
         {
           "source_statement_id": "S:TE20:note:1",
           "section": "note",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 176,
           "text": "Note: With the auricle folded forward and pressed against the head, the point is located where the auricular apex touches the head."
         }
       ],
@@ -4956,7 +4956,7 @@
       "relations": [
         {
           "relation_id": "RL:S:TE20:location:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "superior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:TE20:location:29-48"
@@ -4969,7 +4969,7 @@
         },
         {
           "relation_id": "RL:S:TE20:location:01:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "On the head",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:TE20:location:7-11"
@@ -5162,13 +5162,13 @@
         {
           "source_statement_id": "S:HT7:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 94,
           "text": "On the anteromedial aspect of the wrist, radial to the flexor carpi ulnaris tendon, on the palmar wrist crease."
         },
         {
           "source_statement_id": "S:HT7:note:1",
           "section": "note",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 94,
           "text": "Note: In the depression radial to the proxi-mal border of the pisiform bone, on the palmar wrist crease."
         }
       ],
@@ -5404,7 +5404,7 @@
       "relations": [
         {
           "relation_id": "RL:S:HT7:location:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "radial to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:HT7:location:50-82"
@@ -5417,7 +5417,7 @@
         },
         {
           "relation_id": "RL:S:HT7:location:01:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "On the anteromedial aspect",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:HT7:location:7-26"
@@ -5432,7 +5432,7 @@
         },
         {
           "relation_id": "RL:S:HT7:location:02:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "on the palmar wrist crease",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:HT7:location:91-110"
@@ -5447,7 +5447,7 @@
         },
         {
           "relation_id": "RL:S:HT7:note:1:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "radial to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:HT7:note:1:33-75"
@@ -5462,7 +5462,7 @@
         },
         {
           "relation_id": "RL:S:HT7:note:1:01:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "In the depression",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:HT7:note:1:13-23"
@@ -5477,7 +5477,7 @@
         },
         {
           "relation_id": "RL:S:HT7:note:1:03:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "on the palmar wrist crease",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:HT7:note:1:84-103"
@@ -5885,7 +5885,7 @@
         {
           "source_statement_id": "S:LI4:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 44,
           "text": "On the dorsum of the hand, radial to the midpoint of the second metacarpal bone."
         }
       ],
@@ -5964,7 +5964,7 @@
       "relations": [
         {
           "relation_id": "RL:S:LI4:location:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "radial to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:LI4:location:36-79"
@@ -5977,7 +5977,7 @@
         },
         {
           "relation_id": "RL:S:LI4:location:01:midpoint-of-entity",
-          "source_phrase": null,
+          "source_phrase": "the midpoint of the second metacarpal bone",
           "operator": "entity_midpoint",
           "semantic_operand_ids": [
             "LM:S:LI4:location:53-79"
@@ -5992,7 +5992,7 @@
         },
         {
           "relation_id": "RL:S:LI4:location:02:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "On the dorsum of the hand",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:LI4:location:7-25"
@@ -6204,7 +6204,7 @@
         {
           "source_statement_id": "S:ST1:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 55,
           "text": "On the face, between the eyeball and the infraorbital margin, directly inferior to the pupil."
         }
       ],
@@ -6306,7 +6306,7 @@
       "relations": [
         {
           "relation_id": "RL:S:ST1:location:00:between",
-          "source_phrase": null,
+          "source_phrase": "between the eyeball and the infraorbital margin",
           "operator": "between_constraint",
           "semantic_operand_ids": [
             "LM:S:ST1:location:25-32",
@@ -6322,7 +6322,7 @@
         },
         {
           "relation_id": "RL:S:ST1:location:01:relative-to",
-          "source_phrase": null,
+          "source_phrase": "inferior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:ST1:location:82-92"
@@ -6337,7 +6337,7 @@
         },
         {
           "relation_id": "RL:S:ST1:location:02:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "On the face",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:ST1:location:7-11"
@@ -6575,7 +6575,7 @@
         {
           "source_statement_id": "S:GB14:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 187,
           "text": "On the head, 1 B-cun superior to the eye-brow, directly superior to the centre of the pupil."
         }
       ],
@@ -6742,7 +6742,7 @@
       "relations": [
         {
           "relation_id": "RL:S:GB14:location:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "1 B-cun superior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:GB14:location:32-45"
@@ -6757,7 +6757,7 @@
         },
         {
           "relation_id": "RL:S:GB14:location:01:relative-to",
-          "source_phrase": null,
+          "source_phrase": "superior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:GB14:location:67-91"
@@ -6772,7 +6772,7 @@
         },
         {
           "relation_id": "RL:S:GB14:location:02:center-of",
-          "source_phrase": null,
+          "source_phrase": "the centre of the pupil",
           "operator": "entity_center",
           "semantic_operand_ids": [
             "LM:S:GB14:location:82-91"
@@ -6787,7 +6787,7 @@
         },
         {
           "relation_id": "RL:S:GB14:location:03:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "On the head",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:GB14:location:7-11"
@@ -7113,7 +7113,7 @@
         {
           "source_statement_id": "S:GB23:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 192,
           "text": "In the lateral thoracic region, in the fourth intercostal space, 1 B-cun anterior to the midaxillary line."
         }
       ],
@@ -7192,7 +7192,7 @@
       "relations": [
         {
           "relation_id": "RL:S:GB23:location:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "1 B-cun anterior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:GB23:location:84-105"
@@ -7207,7 +7207,7 @@
         },
         {
           "relation_id": "RL:S:GB23:location:01:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "In the lateral thoracic region",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:GB23:location:7-30"
@@ -7222,7 +7222,7 @@
         },
         {
           "relation_id": "RL:S:GB23:location:02:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "in the fourth intercostal space",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:GB23:location:39-63"
@@ -7431,13 +7431,13 @@
         {
           "source_statement_id": "S:LU6:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 37,
           "text": "On the anterolateral aspect of the forearm, on the line connecting LU5 with LU9, 7 B-cun superior to the palmar wrist crease."
         },
         {
           "source_statement_id": "S:LU6:note:1",
           "section": "note",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 37,
           "text": "Note: LU6 is 5 B-cun inferior to LU5, 1 B-cun superior to the midpoint of the line connecting LU5 with LU9."
         }
       ],
@@ -7700,7 +7700,7 @@
       "relations": [
         {
           "relation_id": "RL:S:LU6:location:00:on-line",
-          "source_phrase": null,
+          "source_phrase": "line connecting LU5 with LU9",
           "operator": "line_membership",
           "semantic_operand_ids": [
             "LM:S:LU6:location:67-70",
@@ -7717,7 +7717,7 @@
         },
         {
           "relation_id": "RL:S:LU6:location:01:relative-to",
-          "source_phrase": null,
+          "source_phrase": "7 B-cun superior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:LU6:location:100-124"
@@ -7732,7 +7732,7 @@
         },
         {
           "relation_id": "RL:S:LU6:location:02:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "On the anterolateral aspect",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:LU6:location:7-27"
@@ -7747,7 +7747,7 @@
         },
         {
           "relation_id": "RL:S:LU6:location:03:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "on the line connecting",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:LU6:location:51-66"
@@ -7762,7 +7762,7 @@
         },
         {
           "relation_id": "RL:S:LU6:note:1:00:on-line",
-          "source_phrase": null,
+          "source_phrase": "line connecting LU5 with LU9",
           "operator": "line_membership",
           "semantic_operand_ids": [
             "LM:S:LU6:note:1:94-97",
@@ -7779,7 +7779,7 @@
         },
         {
           "relation_id": "RL:S:LU6:note:1:01:midpoint-between",
-          "source_phrase": null,
+          "source_phrase": "the midpoint of the line connecting",
           "operator": "midpoint_between",
           "semantic_operand_ids": [
             "LM:S:LU6:note:1:94-97",
@@ -7796,7 +7796,7 @@
         },
         {
           "relation_id": "RL:S:LU6:note:1:02:relative-to",
-          "source_phrase": null,
+          "source_phrase": "5 B-cun inferior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:LU6:note:1:32-36"
@@ -7811,7 +7811,7 @@
         },
         {
           "relation_id": "RL:S:LU6:note:1:03:relative-to",
-          "source_phrase": null,
+          "source_phrase": "1 B-cun superior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:LU6:note:1:57-106"
@@ -7824,7 +7824,7 @@
         },
         {
           "relation_id": "RL21:S:LU6:location:67-70:reference-acupoint:f42e2db8d9",
-          "source_phrase": null,
+          "source_phrase": "LU5",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM21:S:LU6:location:67-70:002c0a95e5"
@@ -7839,7 +7839,7 @@
         },
         {
           "relation_id": "RL21:S:LU6:location:76-79:reference-acupoint:5171900d45",
-          "source_phrase": null,
+          "source_phrase": "LU9",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM21:S:LU6:location:76-79:30c4b43ed7"
@@ -7854,7 +7854,7 @@
         },
         {
           "relation_id": "RL21:S:LU6:note:1:33-36:reference-acupoint:a79a726278",
-          "source_phrase": null,
+          "source_phrase": "LU5",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM:S:LU6:note:1:32-36"
@@ -7869,7 +7869,7 @@
         },
         {
           "relation_id": "RL21:S:LU6:note:1:94-97:reference-acupoint:0d3fedaf0b",
-          "source_phrase": null,
+          "source_phrase": "LU5",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM:S:LU6:note:1:94-97"
@@ -7884,7 +7884,7 @@
         },
         {
           "relation_id": "RL21:S:LU6:note:1:103-106:reference-acupoint:ffaf5ca270",
-          "source_phrase": null,
+          "source_phrase": "LU9",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM:S:LU6:note:1:103-106"
@@ -8662,7 +8662,7 @@
         {
           "source_statement_id": "S:LI7:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 46,
           "text": "On the posterolateral aspect of the forearm, on the line connecting LI5 with LI11, 5 B-cun superior to the dorsal wrist crease."
         }
       ],
@@ -8833,7 +8833,7 @@
       "relations": [
         {
           "relation_id": "RL:S:LI7:location:00:on-line",
-          "source_phrase": null,
+          "source_phrase": "line connecting LI5 with LI11",
           "operator": "line_membership",
           "semantic_operand_ids": [
             "LM:S:LI7:location:68-71",
@@ -8850,7 +8850,7 @@
         },
         {
           "relation_id": "RL:S:LI7:location:01:relative-to",
-          "source_phrase": null,
+          "source_phrase": "5 B-cun superior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:LI7:location:102-126"
@@ -8865,7 +8865,7 @@
         },
         {
           "relation_id": "RL:S:LI7:location:02:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "On the posterolateral aspect",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:LI7:location:7-28"
@@ -8880,7 +8880,7 @@
         },
         {
           "relation_id": "RL:S:LI7:location:03:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "on the line connecting",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:LI7:location:52-67"
@@ -8895,7 +8895,7 @@
         },
         {
           "relation_id": "RL21:S:LI7:location:68-71:reference-acupoint:931d5b1cfd",
-          "source_phrase": null,
+          "source_phrase": "LI5",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM21:S:LI7:location:68-71:1bff496df7"
@@ -8910,7 +8910,7 @@
         },
         {
           "relation_id": "RL21:S:LI7:location:77-81:reference-acupoint:bbace3ac1c",
-          "source_phrase": null,
+          "source_phrase": "LI11",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM21:S:LI7:location:77-81:245ea01482"
@@ -9294,19 +9294,19 @@
         {
           "source_statement_id": "S:GB26:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 193,
           "text": "On the lateral abdomen, inferior to the free extremity of the 11th rib, at the same level as the centre of umbilicus."
         },
         {
           "source_statement_id": "S:GB26:note:1",
           "section": "note",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 193,
           "text": "Note 1: GB26 can be located by first locat-ing the tenth rib, then searching for the free extremity of the 11th rib that is situated immediately below the inferior border of the costal arch."
         },
         {
           "source_statement_id": "S:GB26:note:2",
           "section": "note",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 193,
           "text": "Note 2: GB26 is inferior to LR13, at the same level as CV8."
         }
       ],
@@ -9693,7 +9693,7 @@
       "relations": [
         {
           "relation_id": "RL:S:GB26:location:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "inferior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:GB26:location:35-70"
@@ -9708,7 +9708,7 @@
         },
         {
           "relation_id": "RL:S:GB26:location:01:same-level",
-          "source_phrase": null,
+          "source_phrase": "at the same level as the centre of umbilicus",
           "operator": "same_level_plane",
           "semantic_operand_ids": [
             "LM:S:GB26:location:93-116"
@@ -9723,7 +9723,7 @@
         },
         {
           "relation_id": "RL:S:GB26:location:02:center-of",
-          "source_phrase": null,
+          "source_phrase": "the centre of umbilicus",
           "operator": "entity_center",
           "semantic_operand_ids": [
             "LM:S:GB26:location:107-116"
@@ -9738,7 +9738,7 @@
         },
         {
           "relation_id": "RL:S:GB26:location:03:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "On the lateral abdomen",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:GB26:location:7-22"
@@ -9753,7 +9753,7 @@
         },
         {
           "relation_id": "RL:S:GB26:note:2:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "inferior to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:GB26:note:2:27-32"
@@ -9768,7 +9768,7 @@
         },
         {
           "relation_id": "RL:S:GB26:note:2:01:same-level",
-          "source_phrase": null,
+          "source_phrase": "at the same level as CV8",
           "operator": "same_level_plane",
           "semantic_operand_ids": [
             "LM:S:GB26:note:2:55-58"
@@ -9783,7 +9783,7 @@
         },
         {
           "relation_id": "RL21:S:GB26:note:2:28-32:reference-acupoint:260f7e9589",
-          "source_phrase": null,
+          "source_phrase": "LR13",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM:S:GB26:note:2:27-32"
@@ -9798,7 +9798,7 @@
         },
         {
           "relation_id": "RL21:S:GB26:note:2:55-58:reference-acupoint:3e3fd2558d",
-          "source_phrase": null,
+          "source_phrase": "CV8",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM:S:GB26:note:2:55-58"
@@ -10390,7 +10390,7 @@
         {
           "source_statement_id": "S:ST2:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 55,
           "text": "On the face, in the infraorbital foramen."
         }
       ],
@@ -10446,7 +10446,7 @@
       "relations": [
         {
           "relation_id": "RL:S:ST2:location:00:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "in the infraorbital foramen",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:ST2:location:20-40"
@@ -10461,7 +10461,7 @@
         },
         {
           "relation_id": "RL:S:ST2:location:01:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "On the face",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:ST2:location:7-11"
@@ -10593,7 +10593,7 @@
         {
           "source_statement_id": "S:BL40:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 128,
           "text": "On the posterior aspect of the knee, at the midpoint of the popliteal crease."
         }
       ],
@@ -10649,7 +10649,7 @@
       "relations": [
         {
           "relation_id": "RL:S:BL40:location:00:midpoint-of-entity",
-          "source_phrase": null,
+          "source_phrase": "at the midpoint of the popliteal crease",
           "operator": "entity_midpoint",
           "semantic_operand_ids": [
             "LM:S:BL40:location:56-76"
@@ -10664,7 +10664,7 @@
         },
         {
           "relation_id": "RL:S:BL40:location:01:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "On the posterior aspect",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:BL40:location:7-23"
@@ -10817,13 +10817,13 @@
         {
           "source_statement_id": "S:ST4:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 56,
           "text": "On the face, 0.4 f-cun lateral to the angle of the mouth."
         },
         {
           "source_statement_id": "S:ST4:note:1",
           "section": "note",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 56,
           "text": "Note: Lateral to the angle of the mouth, the point is located in the nasolabial sulcus or on the continuation of the nasolabial sulcus."
         }
       ],
@@ -10948,7 +10948,7 @@
       "relations": [
         {
           "relation_id": "RL:S:ST4:location:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "0.4 f-cun lateral to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:ST4:location:33-56"
@@ -10961,7 +10961,7 @@
         },
         {
           "relation_id": "RL:S:ST4:location:01:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "On the face",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:ST4:location:7-11"
@@ -10976,7 +10976,7 @@
         },
         {
           "relation_id": "RL:S:ST4:note:1:00:relative-to",
-          "source_phrase": null,
+          "source_phrase": "Lateral to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:ST4:note:1:16-39"
@@ -10989,7 +10989,7 @@
         },
         {
           "relation_id": "RL:S:ST4:note:1:01:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "in the nasolabial sulcus",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:ST4:note:1:69-86"
@@ -11004,7 +11004,7 @@
         },
         {
           "relation_id": "RL:S:ST4:note:1:02:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "or on the continuation of the nasolabial sulcus",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:ST4:note:1:97-134"
@@ -11340,13 +11340,13 @@
         {
           "source_statement_id": "S:TE6:location",
           "section": "location",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 169,
           "text": "On the posterior aspect of the forearm, midpoint of the interosseous space between the radius and the ulna, 3 B-cun proximal to the dorsal wrist crease."
         },
         {
           "source_statement_id": "S:TE6:note:1",
           "section": "note",
-          "page": "NOT_RECORDED_IN_B_V2_1",
+          "page": 169,
           "text": "Note: 1 B-cun proximal to TE5, between the radius and the ulna, at the same level as tE7."
         }
       ],
@@ -11563,7 +11563,7 @@
       "relations": [
         {
           "relation_id": "RL:S:TE6:location:00:between",
-          "source_phrase": null,
+          "source_phrase": "between the radius and the ulna",
           "operator": "between_constraint",
           "semantic_operand_ids": [
             "LM:S:TE6:location:87-93",
@@ -11580,7 +11580,7 @@
         },
         {
           "relation_id": "RL:S:TE6:location:01:relative-to",
-          "source_phrase": null,
+          "source_phrase": "3 B-cun proximal to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:TE6:location:127-151"
@@ -11595,7 +11595,7 @@
         },
         {
           "relation_id": "RL:S:TE6:location:02:midpoint-of-entity",
-          "source_phrase": null,
+          "source_phrase": "midpoint of the interosseous space between the radius and the ulna",
           "operator": "entity_midpoint",
           "semantic_operand_ids": [
             "LM:S:TE6:location:52-106"
@@ -11610,7 +11610,7 @@
         },
         {
           "relation_id": "RL:S:TE6:location:03:surface-landmark",
-          "source_phrase": null,
+          "source_phrase": "On the posterior aspect",
           "operator": "surface_membership",
           "semantic_operand_ids": [
             "LM:S:TE6:location:7-23"
@@ -11625,7 +11625,7 @@
         },
         {
           "relation_id": "RL:S:TE6:note:1:00:between",
-          "source_phrase": null,
+          "source_phrase": "between the radius and the ulna",
           "operator": "between_constraint",
           "semantic_operand_ids": [
             "LM:S:TE6:note:1:43-49",
@@ -11642,7 +11642,7 @@
         },
         {
           "relation_id": "RL:S:TE6:note:1:01:relative-to",
-          "source_phrase": null,
+          "source_phrase": "1 B-cun proximal to",
           "operator": "directional_relation",
           "semantic_operand_ids": [
             "LM:S:TE6:note:1:25-29"
@@ -11657,7 +11657,7 @@
         },
         {
           "relation_id": "RL:S:TE6:note:1:02:same-level",
-          "source_phrase": null,
+          "source_phrase": "at the same level as tE7",
           "operator": "same_level_plane",
           "semantic_operand_ids": [
             "LM:S:TE6:note:1:85-88"
@@ -11672,7 +11672,7 @@
         },
         {
           "relation_id": "RL21:S:TE6:note:1:26-29:reference-acupoint:87571bdea7",
-          "source_phrase": null,
+          "source_phrase": "TE5",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM:S:TE6:note:1:25-29"
@@ -11687,7 +11687,7 @@
         },
         {
           "relation_id": "RL21:S:TE6:note:1:85-88:reference-acupoint:eeb3b40f1e",
-          "source_phrase": null,
+          "source_phrase": "tE7",
           "operator": "reference_dependency",
           "semantic_operand_ids": [
             "LM:S:TE6:note:1:85-88"
@@ -12208,6 +12208,174 @@
       },
       "coordinates_generated": 0,
       "legacy_c_coordinate_references": 0
+    }
+  ],
+  "regression_table": [
+    {
+      "point_id": "LI18",
+      "before_status": "RESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "ST10",
+      "before_status": "RESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "LI17",
+      "before_status": "RESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "BL17",
+      "before_status": "RESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "BL23",
+      "before_status": "RESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "BL25",
+      "before_status": "RESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "ST9",
+      "before_status": "RESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "TE20",
+      "before_status": "UNRESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "HT7",
+      "before_status": "UNRESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [
+        "operand_trace_incomplete"
+      ],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "LI4",
+      "before_status": "RESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [
+        "operand_trace_incomplete",
+        "parent_only_composite_resolution"
+      ],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "ST1",
+      "before_status": "UNRESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [
+        "operand_trace_incomplete"
+      ],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "GB14",
+      "before_status": "UNRESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [
+        "operand_trace_incomplete"
+      ],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "GB23",
+      "before_status": "RESOLVED",
+      "after_status": "RESOLVED",
+      "pre_repair_rules": [
+        "operand_trace_incomplete"
+      ],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "LU6",
+      "before_status": "UNRESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [
+        "operand_trace_incomplete"
+      ],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "LI7",
+      "before_status": "UNRESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [
+        "operand_trace_incomplete"
+      ],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "GB26",
+      "before_status": "UNRESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [
+        "operand_trace_incomplete"
+      ],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "ST2",
+      "before_status": "UNRESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [
+        "operand_trace_incomplete"
+      ],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "BL40",
+      "before_status": "RESOLVED",
+      "after_status": "RESOLVED",
+      "pre_repair_rules": [
+        "operand_trace_incomplete"
+      ],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "ST4",
+      "before_status": "RESOLVED",
+      "after_status": "UNRESOLVED",
+      "pre_repair_rules": [
+        "operand_trace_incomplete",
+        "parent_only_composite_resolution"
+      ],
+      "post_repair_finding_count": 0
+    },
+    {
+      "point_id": "TE6",
+      "before_status": "RESOLVED",
+      "after_status": "RESOLVED",
+      "pre_repair_rules": [
+        "operand_trace_incomplete"
+      ],
+      "post_repair_finding_count": 0
     }
   ],
   "regression_summary": {
