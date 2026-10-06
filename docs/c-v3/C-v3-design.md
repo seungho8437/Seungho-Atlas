@@ -1,6 +1,6 @@
 # C v3 — Canonical Four-Stage Design
 
-Status: **Stage 1 APPROVED · Vertical Slice Stage 2 APPROVED · Stage 3 NOT STARTED**
+Status: **Stage 1 APPROVED · Vertical Slice Stage 2 APPROVED · Stage 3 AUTOMATED VALIDATED / HUMAN AUDIT PENDING**
 
 This document is the canonical C v3 contract. Rejected S1/G1 implementations are not active.
 
@@ -253,7 +253,7 @@ Only Stage 4 approval permits `GLOBAL_VALIDATED`.
 - Vertical Slice v1 surface-registry + calibration human review: **APPROVED**.
 - Vertical Slice Stage 2 automated structural validation: **PASS**.
 - Vertical Slice Stage 2 human semantic audit: **PASS** — the latest 20-point human re-audit accepts the repaired semantic execution. Suppressed/provenance-only parse residue is non-blocking provided it is isolated from canonical execution and point-status inference.
-- Stage 3: **NOT STARTED**; no new acupoint coordinates have been generated or deployed.
+- Stage 3 Vertical Slice v1: **AUTOMATED VALIDATED / HUMAN AUDIT PENDING**. The conservative pilot generated **0 coordinates**: 16 points remain blocked by Stage 2 and 4 Stage-2-resolved points remain Stage-3 UNRESOLVED under the frozen physical-synthesis contracts. No production coordinate dataset was written and Stage 4 has not started.
 
 
 ## Non-blocking regression watchpoint — SUPPRESSED_PROVENANCE_EXECUTION_ISOLATION
@@ -285,3 +285,35 @@ The following are non-blocking by default when they do not affect canonical exec
 Do not repair expansion failures by hard-coding an acupoint ID, a single WHO sentence, or a point-specific suppression solely to satisfy a validator. A point-only change is not considered a defect-family fix. The repair sequence is: inventory → structural pattern analysis → defect-family decision → validator contract → negative test → full regression.
 
 Expansion strategy remains: **20-point Vertical Slice → expansion cohort → 361-point full execution**. Existing defect-family recurrence is treated as a validator-contract failure; human analysis should focus on genuinely new failure families.
+
+
+## Stage 3 protected pilot result
+
+Vertical Slice v1 Stage 3 has executed against the frozen Stage 1 / approved registry-calibration / approved Stage 2 inputs.
+
+Current disposition: **AUTOMATED VALIDATED / HUMAN AUDIT PENDING**.
+
+The Stage 3 pilot is intentionally fail-safe. It emitted **0 physical coordinates** rather than infer missing metric/displacement rules:
+- 16/20 points are blocked because their repaired Stage 2 primary location is UNRESOLVED.
+- LI4 is Stage-3 UNRESOLVED because qualitative radial displacement has no frozen physical displacement rule.
+- GB23 and TE6 are Stage-3 UNRESOLVED because the approved Stage 2 calibration preserves B-cun semantics/source evidence but does not yet provide an explicit physical metres-per-cun realization usable by Stage 3.
+- BL40 is Stage-3 UNRESOLVED because the aspect-directed posterior skin ray has more than one distinct eligible geometric hit within the declared local constraint; Stage 3 refuses to pick one heuristically.
+
+Protection:
+- output is `deployable=false`;
+- production coordinate write is false;
+- legacy C coordinate input is false;
+- Stage 4 is not started;
+- output/validation/human-review files are SHA-256 locked in `stage3-result-lock.json`.
+
+Independent Stage 3 guard validation: **89 checks / 0 errors / PASS**.
+The mandatory `SUPPRESSED_PROVENANCE_EXECUTION_ISOLATION` metrics are **0 / 0 / 0**.
+
+The coordinate-tampering mutations that require a generated coordinate are explicitly marked `SKIPPED_NO_GENERATED_COORDINATE`; Stage-2-unresolved coordinate injection and suppressed-operand injection were both actively rejected. These skipped tests become mandatory once Stage 3 emits at least one coordinate.
+
+Human audit artifacts:
+- `artifacts/c-v3/vertical-slice-v1/stage3-human-review.pdf`
+- `artifacts/c-v3/vertical-slice-v1/stage3-human-review.html`
+- `artifacts/c-v3/vertical-slice-v1/stage3-human-review-data.json`
+
+Stage 3 is not approved until the human audit is completed. Stage 4 remains blocked.
