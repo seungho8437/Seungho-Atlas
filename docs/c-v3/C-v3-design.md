@@ -1,6 +1,6 @@
 # C v3 — Canonical Four-Stage Design
 
-Status: **Stage 1 automatic validation PASS · human visual review pending**
+Status: **Stage 1 APPROVED · Stage 2 IN PROGRESS**
 
 This document is the canonical C v3 contract. Rejected S1/G1 implementations are not active.
 
@@ -186,6 +186,7 @@ Only Stage 4 approval permits `GLOBAL_VALIDATED`.
 - rejected earlier S1/G1 executable and generated artifacts: removed from the active tree.
 - Stage 1 implementation: present under `scripts/cv3/`.
 - Stage 1 automatic validation on BodyParts3D: **PASS**.
-- Stage 1 human visual review: **PENDING**.
-- Stage 2: **NOT STARTED**.
+- Stage 1 human visual review: **APPROVED by user after z-buffer hidden-surface QC**.
+- Stage 1: **APPROVED**.
+- Stage 2: **IN PROGRESS**.
 - No new acupoint coordinates have been generated or deployed.
