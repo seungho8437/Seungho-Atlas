@@ -17,6 +17,13 @@ const badStatus=coords.points.filter(p=>!allowedStatuses.has(p.status));
 if(badStatus.length)fail('Unknown C coordinate status',badStatus.map(x=>x.acupointId+':'+x.side+':'+x.status));
 const validated=coords.points.filter(p=>p.status==='validated');
 const reviewNeeded=coords.points.filter(p=>p.status==='review-needed');
+const inconsistentNativeProvenance=coords.points.filter(p=>(p.validation?.nativeOperationCount??0)!==(p.validation?.nativeRelationIds??[]).length);
+if(inconsistentNativeProvenance.length)fail('Native operation provenance count mismatch',inconsistentNativeProvenance.map(x=>({id:x.acupointId,side:x.side,count:x.validation?.nativeOperationCount,ids:x.validation?.nativeRelationIds})));
+const nativeCovered=coords.points.filter(p=>(p.validation?.nativeOperationCount??0)>0).length;
+const deferredCovered=coords.points.filter(p=>(p.validation?.deferredReferenceOperationCount??0)>0).length;
+const unresolved=coords.points.filter(p=>(p.validation?.unresolvedSemanticRelationIds??[]).length>0).length;
+if(audit.nativeRelationExecutionPhysicalCoordinates!==nativeCovered||audit.deferredReferenceExecutionPhysicalCoordinates!==deferredCovered||audit.unresolvedSemanticPhysicalCoordinates!==unresolved)
+  fail('C execution coverage counts disagree with audit',{auditNative:audit.nativeRelationExecutionPhysicalCoordinates,nativeCovered,auditDeferred:audit.deferredReferenceExecutionPhysicalCoordinates,deferredCovered,auditUnresolved:audit.unresolvedSemanticPhysicalCoordinates,unresolved});
 if(audit.validatedPhysicalCoordinates!==validated.length||audit.reviewNeededPhysicalCoordinates!==reviewNeeded.length)
   fail('C status counts disagree with audit',{auditValidated:audit.validatedPhysicalCoordinates,actualValidated:validated.length,auditReview:audit.reviewNeededPhysicalCoordinates,actualReview:reviewNeeded.length});
 const invalidValidated=validated.filter(p=>
