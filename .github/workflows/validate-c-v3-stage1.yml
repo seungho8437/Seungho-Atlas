@@ -23,11 +23,11 @@ jobs:
       - name: Spatial kernel unit tests
         run: python scripts/cv3/test_spatial_core.py
       - name: Build S1 canonical mesh registry
-        run: python scripts/cv3/build_s1_registry.py --out .tmp/c-v3-stage1/mesh-registry.json
+        run: python scripts/cv3/build_stage1_registry.py --out .tmp/c-v3-stage1/mesh-registry.json
       - name: Independent registry validation
-        run: python scripts/cv3/validate_g1_registry.py .tmp/c-v3-stage1/mesh-registry.json --report .tmp/c-v3-stage1/registry-validation.json
+        run: python scripts/cv3/validate_stage1_registry.py .tmp/c-v3-stage1/mesh-registry.json --report .tmp/c-v3-stage1/registry-validation.json
       - name: Independent skin topology validation
-        run: python scripts/cv3/validate_g1_surface_topology.py --report .tmp/c-v3-stage1/surface-topology-validation.json
+        run: python scripts/cv3/validate_stage1_surface_topology.py --report .tmp/c-v3-stage1/surface-topology-validation.json
       - name: Build Stage 1 spatial substrate
         run: python scripts/cv3/build_stage1_substrate.py --out .tmp/c-v3-stage1/spatial-substrate.json
       - name: Independent frame validation
