@@ -37,7 +37,7 @@ def serialize_geom(g):
   "geometry_hash":g.geometry_hash(),
   "curves":[[[float(x) for x in p] for p in c] for c in g.curves],
   "markers":g.markers,
-  "deep_points":[[float(x) for x in p] for p in g.deep_points],
+  "deep_paths":[{"side":p["side"],"points":[[float(x) for x in q] for q in p["points"]],"source_part_ids":p.get("source_part_ids",[])} for p in g.deep_paths],
   "hidden_surface_vertex_indices":g.hidden_surface_vertex_indices,
   "view":g.view,"notes":g.notes
  }
@@ -158,14 +158,14 @@ function draw(canvas,entry){{
  ctx.fillStyle='rgba(215,58,45,.65)';for(const i of entry.surface_vertex_indices){{let q=pr[i],x=X(q[0]),y=Y(q[1]);ctx.fillRect(x-0.7,y-0.7,1.4,1.4)}}
  // Lines/creases/median lines are thin curves, not filled bands.
  ctx.strokeStyle='#d7191c';ctx.lineWidth=2.0;for(const curve of entry.curves){{if(curve.length<2)continue;ctx.beginPath();let p=P(curve[0]);ctx.moveTo(...p);for(let i=1;i<curve.length;i++){{p=P(curve[i]);ctx.lineTo(...p)}}ctx.stroke()}}
- // Deep space (radius-ulna) is shown as a distinct 3D path.
- if(entry.deep_points.length>1){{ctx.strokeStyle='#8e44ad';ctx.lineWidth=4;ctx.beginPath();let p=P(entry.deep_points[0]);ctx.moveTo(...p);for(let i=1;i<entry.deep_points.length;i++){{p=P(entry.deep_points[i]);ctx.lineTo(...p)}}ctx.stroke()}}
+ // Deep space paths are side-separated; never connect left and right arrays.
+ for(const dp of entry.deep_paths){{if(dp.points.length<2)continue;ctx.strokeStyle='#8e44ad';ctx.lineWidth=4;ctx.beginPath();let p=P(dp.points[0]);ctx.moveTo(...p);for(let i=1;i<dp.points.length;i++){{p=P(dp.points[i]);ctx.lineTo(...p)}}ctx.stroke()}}
  // Bone reference anchors.
  ctx.font='12px system-ui';for(const m of entry.markers){{if(!m.point)continue;let p=P(m.point);ctx.fillStyle='#0068b5';ctx.beginPath();ctx.arc(p[0],p[1],5,0,Math.PI*2);ctx.fill();ctx.fillStyle='#003b66';ctx.fillText(m.label,p[0]+7,p[1]-5)}}
  ctx.fillStyle='#111';ctx.font='bold 14px system-ui';ctx.fillText(entry.view.toUpperCase(),12,20);
 }}
 const grouped={{}};for(const [id,s] of Object.entries(specs))(grouped[s.group]??=[]).push(id);const app=document.getElementById('app');
-for(const [group,ids] of Object.entries(grouped)){{let sec=document.createElement('section');sec.innerHTML='<h2>'+group+'</h2>';for(const id of ids){{let s=specs[id],e=payload[id],card=document.createElement('div');card.className='card '+(s.status.includes('UNRESOLVED')?'unresolved':'');card.innerHTML='<h3>'+id+'</h3><div class="meta"><b>WHO expression:</b> '+s.terms.join(' / ')+'<br><b>Definition:</b> '+s.definition+'<br><b>Required by:</b> '+s.required_by.join(', ')+'<br><b>Execution status:</b> '+e.status+'<br><b>Review view:</b> '+e.view+'<br><b>Selected skin vertices:</b> '+e.surface_vertex_indices.length+'<br><b>Solver vertex hash:</b> <span class="hash">'+e.solver_vertex_hash+'</span></div><div class="checks">☐ anatomical scope 맞다 / 틀리다 &nbsp; ☐ side·aspect 맞다 / 틀리다 &nbsp; ☐ proximal-distal 또는 superior-inferior extent 맞다 / 틀리다<br>☐ line·crease·boundary placement 맞다 / 틀리다 &nbsp; ☐ bone anchors 맞다 / 틀리다 &nbsp; ☐ ACCEPT &nbsp; ☐ REJECT &nbsp; ☐ KEEP UNRESOLVED</div>';if(e.status!=='UNRESOLVED'||e.curves.length||e.markers.length||e.deep_points.length){{let cv=document.createElement('canvas');cv.width=840;cv.height=660;card.appendChild(cv);setTimeout(()=>draw(cv,e),0)}}sec.appendChild(card)}}app.appendChild(sec)}}
+for(const [group,ids] of Object.entries(grouped)){{let sec=document.createElement('section');sec.innerHTML='<h2>'+group+'</h2>';for(const id of ids){{let s=specs[id],e=payload[id],card=document.createElement('div');card.className='card '+(s.status.includes('UNRESOLVED')?'unresolved':'');card.innerHTML='<h3>'+id+'</h3><div class="meta"><b>WHO expression:</b> '+s.terms.join(' / ')+'<br><b>Definition:</b> '+s.definition+'<br><b>Required by:</b> '+s.required_by.join(', ')+'<br><b>Execution status:</b> '+e.status+'<br><b>Review view:</b> '+e.view+'<br><b>Selected skin vertices:</b> '+e.surface_vertex_indices.length+'<br><b>Deep paths:</b> '+e.deep_paths.length+'<br><b>Solver vertex hash:</b> <span class="hash">'+e.solver_vertex_hash+'</span><br><b>Full geometry hash:</b> <span class="hash">'+e.geometry_hash+'</span></div><div class="checks">☐ anatomical scope 맞다 / 틀리다 &nbsp; ☐ side·aspect 맞다 / 틀리다 &nbsp; ☐ proximal-distal 또는 superior-inferior extent 맞다 / 틀리다<br>☐ line·crease·boundary placement 맞다 / 틀리다 &nbsp; ☐ bone anchors 맞다 / 틀리다 &nbsp; ☐ ACCEPT &nbsp; ☐ REJECT &nbsp; ☐ KEEP UNRESOLVED</div>';if(e.status!=='UNRESOLVED'||e.curves.length||e.markers.length||e.deep_paths.length){{let cv=document.createElement('canvas');cv.width=840;cv.height=660;card.appendChild(cv);sec.appendChild(card);draw(cv,e)}}else{{sec.appendChild(card)}}}}app.appendChild(sec)}}
 </script>'''
  (out/"surface-registry-review.html").write_text(html,encoding="utf-8")
  print(json.dumps({"cohort":list(COHORT),"registry_entries":len(REGISTRY),"calibration_rows":len(calibration),"resolved_registry":sum(1 for x in results.values() if x.status=="RESOLVED"),"unresolved_registry":sum(1 for x in results.values() if x.status=="UNRESOLVED"),"out_dir":str(out)}))
