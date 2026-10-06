@@ -27,7 +27,7 @@ def identity(rec):
  return None
 
 def span_info(node_id):
- m=re.search(r":(\\d+)-(\\d+)(?::[^:]+)?$",node_id or "")
+ m=re.search(r":(\d+)-(\d+)(?::[^:]+)?$",node_id or "")
  return (node_id[:m.start()],int(m.group(1)),int(m.group(2))) if m else None
 
 def contained_children(arg_id,bindings,bnodes):
