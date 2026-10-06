@@ -15,6 +15,7 @@ from pathlib import Path
 
 ORDER=("LI18","ST10","LI17","BL17","BL23","BL25","ST9","TE20","HT7","LI4","ST1","GB14","GB23","LU6","LI7","GB26","ST2","BL40","ST4","TE6")
 KNOWN={"TE20","ST10","LI17","LI18","BL17","BL23","BL25","ST9"}
+WHO_PDF_PAGE={"LI4":44,"GB23":192,"ST10":59,"LI18":51,"LI17":51,"BL17":117,"BL23":120,"BL25":121,"BL40":128,"ST4":56,"TE6":169,"ST9":59,"HT7":94,"ST1":55,"GB14":187,"LU6":37,"LI7":46,"GB26":193,"ST2":55,"TE20":176}
 
 def canon(x):return json.dumps(x,ensure_ascii=False,sort_keys=True,separators=(",",":"))
 def fsha(p):
@@ -25,7 +26,8 @@ def fsha(p):
 def page_of(s):
  for k in ("page","source_page","pdf_page","page_pdf","source_pdf_page"):
   if s.get(k) is not None:return s[k]
- return "NOT_RECORDED_IN_B_V2_1"
+ pid=s.get("point_id")
+ return WHO_PDF_PAGE.get(pid,"NOT_RECORDED_IN_B_V2_1")
 def identity(rec):
  g=rec.get("geometry") or {}
  return {"kind":g.get("kind"),"fma_id":g.get("fma_id"),"registry_id":g.get("registry_id"),"constructed_id":g.get("constructed_id"),
@@ -60,7 +62,7 @@ def point_projection(pid,before,after,g,validation,rejection):
   c=r.get("constraint") or {}
   sem=c.get("semantic_argument_node_ids") or r.get("semantic_argument_node_ids") or r.get("argument_node_ids") or []
   exe=c.get("executable_argument_node_ids") or r.get("executable_argument_node_ids") or []
-  rels.append({"relation_id":rid,"source_phrase":next((x.get("source_raw") for x in g["relation_instances"] if x["relation_id"]==rid),None),
+  rels.append({"relation_id":rid,"source_phrase":next((((x.get("cue_span") or {}).get("source_raw")) or x.get("source_raw")) for x in g["relation_instances"] if x["relation_id"]==rid),None),
    "operator":c.get("op") or r.get("executor"),"semantic_operand_ids":sem,"actual_executable_operand_ids":exe,
    "direction":c.get("direction"),"modifier":None,"status":r.get("status"),"reason":r.get("reason")})
   for s,e in zip(sem,exe):
