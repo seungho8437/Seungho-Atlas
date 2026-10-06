@@ -923,6 +923,39 @@ function specializedLandmark(raw,side){
     const man=centerBounds(atlas.parts.filter(p=>/manubrium/i.test(p.name)));
     if(man){const c=[...man.center];c[supAxis]=man.max[supAxis];c[lrAxis]=bodyCenter[lrAxis];return {point:c,kind:'constructed-suprasternal-fossa'};}
   }
+  if(/semitendinosus tendon/.test(q)){
+    const st=statsSeed('FMA22357',side);
+    if(st){
+      const c=[...st.center];
+      c[supAxis]=kneeLevel(side);
+      c[apAxis]=st.min[apAxis];
+      return {point:c,stats:st,kind:'derived-semitendinosus-distal-tendon'};
+    }
+  }
+  if(/anterior superior iliac spine/.test(q)){
+    const re=new RegExp(side==='left'?'left hip bone':'right hip bone','i');
+    const st=centerBounds(atlas.parts.filter(p=>re.test(p.name)));
+    if(st){
+      const c=[...st.center];
+      c[lrAxis]=side==='left'?st.max[lrAxis]:st.min[lrAxis];
+      c[supAxis]=st.min[supAxis]+(st.max[supAxis]-st.min[supAxis])*.78;
+      c[apAxis]=st.max[apAxis];
+      return {point:c,stats:st,kind:'hip-bone-ASIS-proxy'};
+    }
+  }
+  if(/fourth intercostal space/.test(q)){
+    const c=regionTarget('anterior thoracic region',side);
+    c[supAxis]=intercostalLevel(4,side);
+    return {point:c,kind:'constructed-fourth-intercostal-level'};
+  }
+  if(/midaxillary line/.test(q)){
+    const y=intercostalLevel(4,side);
+    const c=[...bodyCenter];
+    c[supAxis]=y;
+    c[lrAxis]=bodyCenter[lrAxis]+(side==='left'?leftSign:-leftSign)*torsoHalfWidth(y)*.96;
+    c[apAxis]=bodyCenter[apAxis];
+    return {point:c,kind:'constructed-midaxillary-line'};
+  }
   if(/biceps brachii tendon/.test(q)){
     const a=statsSeed('FMA37682',side),b=statsSeed('FMA37683',side),c=averageCenters([a,b]);
     if(c){c[supAxis]=Math.min(a?.min[supAxis]??c[supAxis],b?.min[supAxis]??c[supAxis]);return {point:c,kind:'derived-biceps-distal-tendon'};}
