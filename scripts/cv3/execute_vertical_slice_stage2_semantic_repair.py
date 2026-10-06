@@ -191,18 +191,6 @@ def derived_candidate_nodes(r,lms,bnodes):
    out.append(n["node_id"])
  return sorted(out,key=lambda x:((span_info(x)[2]-span_info(x)[1]) if span_info(x) else 10**9,x))
 
-def collect_landmark_refs(obj):
- out=set()
- def walk(x):
-  if isinstance(x,dict):
-   for v in x.values():walk(v)
-  elif isinstance(x,list):
-   for v in x:walk(v)
-  elif isinstance(x,str) and x.startswith("LM:"):
-   out.add(x)
- walk(obj)
- return out
-
 def main():
  ap=argparse.ArgumentParser()
  ap.add_argument("--graph",default="public/knowledge/anatomy-acupoint-relations-v2.1.json")
@@ -231,32 +219,21 @@ def main():
    "distinct_subfeatures_require_distinct_executable_identity":True,"incompatible_body_position_must_be_conditional":True,
    "quantitative_relation_semantics_loss_forbidden":True,"derived_operator_output_binding_required":True,
    "lexicalized_anatomical_entity_false_subfeature_split_forbidden":True,
-   "subfeature_synonym_normalization_required":True,
-   "lexicalized_entity_shadow_parse_full_quarantine_required":True},
+   "subfeature_synonym_normalization_required":True},
   "points":[]}
  for pid in COHORT:
   ss=[x for x in g["source_statements"] if x["point_id"]==pid];sm={x["source_statement_id"] for x in ss}
   lms=[x for x in g["landmark_nodes"] if x["point_id"]==pid];rels=[x for x in g["relation_instances"] if x["subject_node_id"]==f"P:{pid}"]
   pms=[x for x in g.get("proportional_measurements",[]) if x["source_statement_id"] in sm]
   conds=[x for x in g.get("conditions",[]) if x["source_statement_id"] in sm]
-  lexicalized_suppressed={};quarantined_shadow_parse_branches={}
-  point_node_ids={x["node_id"] for x in lms}
-  point_geometry=[x for x in g.get("geometry_nodes",[]) if x.get("source_statement_id") in sm]
-  independent_refs=collect_landmark_refs(rels) | collect_landmark_refs(pms) | collect_landmark_refs(conds) | collect_landmark_refs(point_geometry)
+  lexicalized_suppressed={}
   for b in bindings:
    child=b["child_landmark_id"];parent=b["parent_landmark_id"]
-   if child not in point_node_ids:continue
+   if child not in {x["node_id"] for x in lms}:continue
    container=lexicalized_atomic_container(child,parent,lms,bnodes)
    if container:
-    parent_shared=parent in independent_refs
-    branch={"binding_id":b["binding_id"],"accepted_atomic_landmark_id":container,
-      "shadow_parent_landmark_id":parent,"shadow_child_landmark_id":child,
-      "edge_quarantined":True,"shadow_parent_independently_referenced":parent_shared,
-      "shadow_parent_suppressed":not parent_shared}
-    quarantined_shadow_parse_branches[b["binding_id"]]=branch
     lexicalized_suppressed[child]={"binding_id":b["binding_id"],"parent_landmark_id":parent,
-      "suppressed_by_atomic_landmark_id":container,"normalization":subfeature_normalization(bnodes.get(child,{}).get("source_raw")),
-      "shadow_branch_quarantined":True}
+      "suppressed_by_atomic_landmark_id":container,"normalization":subfeature_normalization(bnodes.get(child,{}).get("source_raw"))}
   lout={}
   for n in lms:
    nid=n["node_id"];disp=n.get("terminal_disposition")
@@ -311,19 +288,6 @@ def main():
       "reason":f"no approved executable construction rule for canonical subfeature '{sf}'",
       "semantic_normalization":normal,
       "provenance":{"binding_id":b["binding_id"],"parent_landmark_id":parent_id,"subfeature_type":sf}}
-  # Quarantine the rejected compositional branch, not just its child token.
-  for bid,q in quarantined_shadow_parse_branches.items():
-   parent_id=q["shadow_parent_landmark_id"];child_id=q["shadow_child_landmark_id"]
-   if q["shadow_parent_suppressed"] and parent_id in lout:
-    prior=lout[parent_id]
-    lout[parent_id]={"status":"UNRESOLVED","executor":"lexicalized_shadow_guard","geometry":None,
-      "reason":"LEXICALIZED_ENTITY_SHADOW_PARSE_NOT_FULLY_SUPPRESSED_PREVENTED",
-      "semantic_suppressed":True,"shadow_parse_quarantined":True,
-      "provenance":{"binding_id":bid,"accepted_atomic_landmark_id":q["accepted_atomic_landmark_id"],
-        "shadow_child_landmark_id":child_id,"pre_quarantine_identity":geometry_identity(prior)}}
-   elif parent_id in lout:
-    lout[parent_id]["shadow_parse_quarantined"]=True
-    lout[parent_id]["shadow_parse_role"]="shared_parent_retained_for_independent_semantics"
   # Any semantic operand containing subfeature language may not survive as a
   # parent whole-entity geometry.  Bindings are detected by source-span containment,
   # because B may bind the child to the entity fragment while a relation references
@@ -452,8 +416,7 @@ def main():
   loc=next((x for x in statements if x["section"]=="location"),None)
   out["points"].append({"point_id":pid,"primary_location_status":loc["status"] if loc else "UNRESOLVED","landmarks":lout,"relations":rout,
     "measurements":mout,"derived_geometries":derived_outputs,"conditions":cout,"statements":statements,
-    "lexicalized_suppressed_children":lexicalized_suppressed,
-    "quarantined_shadow_parse_branches":quarantined_shadow_parse_branches})
+    "lexicalized_suppressed_children":lexicalized_suppressed})
  q=Path(args.out);q.parent.mkdir(parents=True,exist_ok=True);q.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n")
  print(json.dumps({"points":20,"primary":dict(collections.Counter(x["primary_location_status"] for x in out["points"])),
   "conditions":dict(collections.Counter(v["status"] for x in out["points"] for v in x["conditions"].values()))}))
