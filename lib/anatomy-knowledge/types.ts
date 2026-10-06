@@ -42,58 +42,6 @@ export type Acupoint = {
   sourceIds: string[];
 };
 
-export type MeridianSinew = {
-  id: string;
-  meridian: MeridianId;
-  name: {
-    ko: string;
-    hanja: string;
-    en: string;
-  };
-  overviewKo?: string;
-  sourceIds: string[];
-};
-
-export type AnatomyAcupointRelation = {
-  anatomyId: string;
-  acupointId: string;
-  relation:
-    | 'surface-landmark'
-    | 'overlies'
-    | 'adjacent'
-    | 'between'
-    | 'deep-to'
-    | 'reference-landmark';
-  noteKo?: string;
-  sourceIds: string[];
-};
-
-export type AnatomyMeridianSinewRelation = {
-  anatomyId: string;
-  meridianSinewId: string;
-  relation:
-    | 'course-region'
-    | 'binding-region'
-    | 'branch-region'
-    | 'termination-region';
-  correspondence:
-    | 'direct-landmark'
-    | 'regional'
-    | 'interpretive';
-  noteKo?: string;
-  sourceIds: string[];
-};
-
-export type AcupointCoordinate = {
-  acupointId: string;
-  side: 'left' | 'right' | 'midline';
-  position: [number, number, number];
-  model: 'BodyParts3D-4.0';
-  status: 'validated';
-  sourceIds: string[];
-};
-
-
 export type AcupointSemanticGraphV21 = {
   schema_version: string;
   artifact: string;
