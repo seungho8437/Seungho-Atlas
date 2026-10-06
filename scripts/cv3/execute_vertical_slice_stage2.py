@@ -108,11 +108,39 @@ def atlas_lookup(store:AtlasStore,raw:str):
 def surface_registry_id(node,stmt_text):
  raw=normtxt(node.get("source_raw"))
  full=normtxt(stmt_text)
- both=raw+" | "+full
- for terms,rid in SURFACE_RULES:
-  if all(normtxt(t) in both for t in terms):
-   return rid
+ # Node span is primary. Statement context is used only to disambiguate generic
+ # aspect words such as "posterior aspect"; it must never cause an unrelated
+ # landmark in the same sentence to inherit a surface mask.
+ direct=(
+  ("palmar wrist crease","SR:palmar_wrist_crease"),
+  ("dorsal wrist crease","SR:dorsal_wrist_crease"),
+  ("dorsum of the hand","SR:dorsum_hand"),
+  ("popliteal crease","SR:popliteal_crease"),
+  ("posterior median line","SR:posterior_median_line"),
+  ("midaxillary line","SR:midaxillary_line"),
+  ("fourth intercostal space","SR:fourth_intercostal_space"),
+  ("lateral thoracic region","SR:lateral_thorax"),
+  ("lateral abdomen","SR:lateral_abdomen"),
+  ("upper back region","SR:upper_back"),
+  ("lumbar region","SR:lumbar_region"),
+  ("nasolabial sulcus","SR:nasolabial_sulcus"),
+  ("interosseous space between the radius and the ulna","SR:radius_ulna_interosseous_space"),
+ )
+ for phrase,rid in direct:
+  if phrase in raw:return rid
+ if raw=="face":return "SR:face_region"
+ if raw=="head":return "SR:head_region"
+ if "anteromedial aspect" in raw and "wrist" in full:return "SR:anteromedial_wrist"
+ if "anterolateral aspect" in raw and "forearm" in full:return "SR:anterolateral_forearm"
+ if "posterolateral aspect" in raw and "forearm" in full:return "SR:posterolateral_forearm"
+ if "posterior aspect" in raw and "forearm" in full:return "SR:posterior_forearm"
+ if "posterior aspect" in raw and "knee" in full:return "SR:posterior_knee"
+ if ("anterior region" in raw or "anterior aspect" in raw) and "neck" in full:return "SR:anterior_neck"
  return None
+
+def parse_acupoint_ref(raw):
+ m=re.search(r"\b(?:LU|LI|ST|SP|HT|SI|BL|KI|PC|TE|GB|LR|CV|GV)\s*\d+\b",(raw or "").upper())
+ return re.sub(r"\s+","",m.group(0)) if m else None
 
 def relation_direction(rel):
  cue=normtxt((rel.get("cue_span") or {}).get("source_raw"))
@@ -178,7 +206,7 @@ def main():
      lout[nid]={"status":"RESOLVED","executor":"fma_mesh","geometry":{"kind":"fma_concept","fma_id":fid,"concept_name":co["name"],"part_ids":co["elements"]}}
     else:lout[nid]={"status":"UNRESOLVED","executor":"fma_mesh","geometry":None,"reason":"FMA concept has no atlas mesh elements"}
    elif disp=="cross_reference":
-    rid=n.get("cross_reference_point_id")
+    rid=n.get("cross_reference_point_id") or parse_acupoint_ref(n.get("source_raw",""))
     lout[nid]={"status":"RESOLVED" if rid in all_point_ids else "INVALID","executor":"reference_acupoint",
                "geometry":{"kind":"reference_acupoint","point_id":rid} if rid in all_point_ids else None,
                "reason":None if rid in all_point_ids else "reference point absent from B graph"}
