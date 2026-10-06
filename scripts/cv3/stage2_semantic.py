@@ -13,6 +13,7 @@ class ExecStatus(str,Enum):
  RESOLVED="RESOLVED"
  MULTIPLE="MULTIPLE"
  UNRESOLVED="UNRESOLVED"
+ CONDITIONAL="CONDITIONAL"
  INVALID="INVALID"
 
 @dataclass(frozen=True)
@@ -56,6 +57,9 @@ class SemanticRegistry:
 
 def unresolved(executor,reason,provenance=None):
  return ExecResult(ExecStatus.UNRESOLVED,tuple(),executor,reason)
+
+def conditional(executor,reason,provenance=None):
+ return ExecResult(ExecStatus.CONDITIONAL,tuple(),executor,reason)
 
 def invalid(executor,reason,provenance=None):
  return ExecResult(ExecStatus.INVALID,tuple(),executor,reason)
