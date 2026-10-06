@@ -38,6 +38,21 @@ def norm(s):return re.sub(r"[^a-z0-9]+"," ",(s or "").lower().replace("proxi-mal
 def subfeature_type(raw):
  n=norm(raw)
  return next((x for x in SUBFEATURES if x in n),None)
+
+def span_info(node_id):
+ m=re.search(r":(\d+)-(\d+)(?::[^:]+)?$",node_id or "")
+ return (node_id[:m.start()],int(m.group(1)),int(m.group(2))) if m else None
+
+def contained_bound_children(arg_id,bindings):
+ a=span_info(arg_id)
+ if not a:return []
+ out=[]
+ for b in bindings:
+  cs=span_info(b["child_landmark_id"]);ps=span_info(b["parent_landmark_id"])
+  if not cs or not ps or cs[0]!=a[0] or ps[0]!=a[0]:continue
+  if a[1]<=cs[1] and cs[2]<=a[2] and a[1]<=ps[1] and ps[2]<=a[2]:
+   out.append(b["child_landmark_id"])
+ return out
 def content_tokens(s):return [x for x in norm(s).split() if len(x)>2 and x not in STOP]
 def parse_ref(raw):
  m=re.search(r"\b(?:LU|LI|ST|SP|HT|SI|BL|KI|PC|TE|GB|LR|CV|GV)\s*\d+\b",(raw or "").upper())
@@ -175,11 +190,14 @@ def main():
     lout[nid]={"status":"UNRESOLVED","executor":"composite_subfeature_binding","geometry":None,
       "reason":f"no approved executable construction rule for subfeature '{sf}'",
       "provenance":{"binding_id":b["binding_id"],"parent_landmark_id":parent_id,"subfeature_type":sf}}
-  # Composite parents containing subfeature language may not survive as whole-entity geometry.
+  # Any semantic operand containing subfeature language may not survive as a
+  # parent whole-entity geometry.  Bindings are detected by source-span containment,
+  # because B may bind the child to the entity fragment while a relation references
+  # a larger composite phrase spanning both fragments.
   for n in lms:
-   nid=n["node_id"];kids=children_by_parent.get(nid,[]);sf=subfeature_type(n.get("source_raw"))
-   if not kids or not sf:continue
-   relevant=[k for k in kids if subfeature_type(bnodes.get(k,{}).get("source_raw"))]
+   nid=n["node_id"];sf=subfeature_type(n.get("source_raw"))
+   if not sf or nid in binding_by_child:continue
+   relevant=[k for k in contained_bound_children(nid,bindings) if subfeature_type(bnodes.get(k,{}).get("source_raw"))]
    if len(relevant)==1 and lout.get(relevant[0],{}).get("status")=="RESOLVED":
     child=relevant[0];cg=lout[child]["geometry"]
     lout[nid]={"status":"RESOLVED","executor":"bound_composite_subfeature","geometry":{"kind":"bound_subfeature",
@@ -188,7 +206,7 @@ def main():
    else:
     lout[nid]={"status":"UNRESOLVED","executor":"bound_composite_subfeature","geometry":None,
       "reason":"composite contains subfeature semantics but no unique executable child subfeature geometry",
-      "provenance":{"child_landmark_ids":relevant}}
+      "provenance":{"child_landmark_ids":relevant,"subfeature_type":sf}}
   mout={}
   for m in pms:
    row=cal.get(m["measurement_id"])
@@ -212,12 +230,15 @@ def main():
    semantic=list(r.get("argument_node_ids",[]));executable=[];binding_trace=[]
    ambiguous=False
    for a in semantic:
-    kids=[k for k in children_by_parent.get(a,[]) if subfeature_type(bnodes.get(k,{}).get("source_raw"))]
+    kids=[k for k in contained_bound_children(a,bindings) if subfeature_type(bnodes.get(k,{}).get("source_raw"))]
+    asf=subfeature_type(bnodes.get(a,{}).get("source_raw"))
     if kids:
      if len(kids)==1:
       executable.append(kids[0]);binding_trace.append({"semantic_operand_id":a,"executable_operand_id":kids[0],"binding":"child_subfeature"})
      else:
       ambiguous=True;binding_trace.append({"semantic_operand_id":a,"executable_operand_ids":kids,"binding":"ambiguous_multi_subfeature"})
+    elif asf:
+     ambiguous=True;binding_trace.append({"semantic_operand_id":a,"executable_operand_ids":[],"binding":"missing_executable_subfeature"})
     else:
      executable.append(a);binding_trace.append({"semantic_operand_id":a,"executable_operand_id":a,"binding":"identity"})
    if ambiguous:
