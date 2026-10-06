@@ -59,6 +59,16 @@ def side_of_curve(curve,sub):
  m=sum(xs)/len(xs)
  return "left" if m>0 else "right"
 
+def dedupe_geometric_ray_hits(hits,tol_t=1e-6,tol_point=1e-6):
+ groups=[]
+ for h in hits:
+  placed=False
+  for g in groups:
+   if abs(h.t-g[0].t)<=tol_t and distance(h.point,g[0].point)<=tol_point:
+    g.append(h);placed=True;break
+  if not placed:groups.append([h])
+ return [min(g,key=lambda x:(x.t,x.triangle_index)) for g in groups]
+
 def physical_calibration_ready(row):
  # A Stage-3 metric scale must be explicit, not inferred from joint distance.
  keys=("physical_scale_m_per_cun","physical_interval_m","nominal_interval_m","metric_length_m")
@@ -109,9 +119,11 @@ def synthesize_surface_line_midpoint(point,surface,sub,store):
   candidate=arc_midpoint(side_curves[side])
   if candidate is None:return None,f"{side.upper()}_CURVE_MIDPOINT_UNRESOLVED"
   origin=vadd(candidate,vmul(ant,DIRECT_SURFACE_INWARD_OFFSET_M))
-  hits=[h for h in ray_hits_part(store,SKIN_PART,origin,posterior) if h.t>1e-7 and h.t<=DIRECT_SURFACE_PROJECTION_BUDGET_M]
-  # The short, aspect-directed budget disambiguates the local posterior surface.
-  if len(hits)!=1:return None,f"{side.upper()}_ASPECT_RAY_HIT_CARDINALITY_{len(hits)}"
+  raw_hits=[h for h in ray_hits_part(store,SKIN_PART,origin,posterior) if h.t>1e-7 and h.t<=DIRECT_SURFACE_PROJECTION_BUDGET_M]
+  hits=dedupe_geometric_ray_hits(raw_hits)
+  # Triangulation can produce duplicate hits at a shared edge/vertex; those are one
+  # geometric surface hit. Distinct depth/position clusters remain ambiguous.
+  if len(hits)!=1:return None,f"{side.upper()}_ASPECT_RAY_GEOMETRIC_HIT_CARDINALITY_{len(hits)}"
   h=hits[0]
   coords.append({
    "side":side,
@@ -129,7 +141,8 @@ def synthesize_surface_line_midpoint(point,surface,sub,store):
     "t_m":float(h.t),
     "budget_m":DIRECT_SURFACE_PROJECTION_BUDGET_M,
     "inward_offset_m":DIRECT_SURFACE_INWARD_OFFSET_M,
-    "eligible_hit_count_within_budget":len(hits)
+    "raw_triangle_hit_count_within_budget":len(raw_hits),
+    "distinct_geometric_hit_count_within_budget":len(hits)
    },
    "source_geometry":{
     "registry_id":regid,
@@ -202,10 +215,11 @@ def main():
       "cardinality":{"expected":["left","right"],"actual":[x["side"] for x in coords]},
       "trace_hash":None}
     entry["trace"]["trace_hash"]=objhash({k:v for k,v in entry["trace"].items() if k!="trace_hash"}|{"coordinates":coords})
-   else:
+    out["points"].append(entry);continue
+   if reason not in ("MIDPOINT_OPERAND_IS_NOT_APPROVED_SURFACE_REGISTRY","MIDPOINT_OPERAND_IS_NOT_SURFACE_LINE","NOT_SURFACE_LINE_MIDPOINT_FAMILY"):
     entry["stage3_status"]="UNRESOLVED";entry["blocking_reason"]=reason
     entry["trace"]={"location_statement_id":loc["source_statement_id"],"primary_relation_ids":loc["relation_ids"]}
-   out["points"].append(entry);continue
+    out["points"].append(entry);continue
 
   if qualitative_direction:
    entry["stage3_status"]="UNRESOLVED"
