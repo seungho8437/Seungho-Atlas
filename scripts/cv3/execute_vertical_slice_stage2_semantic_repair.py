@@ -242,7 +242,7 @@ def main():
   lexicalized_suppressed={};quarantined_shadow_parse_branches={}
   point_node_ids={x["node_id"] for x in lms}
   point_geometry=[x for x in g.get("geometry_nodes",[]) if x.get("source_statement_id") in sm]
-  independent_refs=collect_landmark_refs(rels)+collect_landmark_refs(pms)+collect_landmark_refs(conds)+collect_landmark_refs(point_geometry)
+  independent_refs=collect_landmark_refs(rels) | collect_landmark_refs(pms) | collect_landmark_refs(conds) | collect_landmark_refs(point_geometry)
   for b in bindings:
    child=b["child_landmark_id"];parent=b["parent_landmark_id"]
    if child not in point_node_ids:continue
