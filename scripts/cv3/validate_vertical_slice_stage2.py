@@ -48,6 +48,10 @@ def sha256(p):
 
 def norm(s):return re.sub(r"[^a-z0-9]+"," ",(s or "").lower()).strip()
 
+def parse_ref(raw):
+ m=re.search(r"\b(?:LU|LI|ST|SP|HT|SI|BL|KI|PC|TE|GB|LR|CV|GV)\s*\d+\b",(raw or "").upper())
+ return re.sub(r"\s+","",m.group(0)) if m else None
+
 def validate(out,g,atlas,approval):
  errors=[];checks=0
  def ck(ok,code,detail=None):
@@ -83,10 +87,13 @@ def validate(out,g,atlas,approval):
     if c and c.get("elements"):
      ck(got["status"]=="RESOLVED","RESOLVED_FMA_NOT_RESOLVED",n["node_id"])
      geom=got.get("geometry") or {}
-     ck(geom.get("fma_id")==n.get("fma_id"),"FMA_ID_MISMATCH",n["node_id"])
-     ck(set(geom.get("part_ids",[]))==set(c.get("elements",[])),"FMA_PART_SET_MISMATCH",n["node_id"])
+     if got.get("executor")=="approved_surface_registry" and n.get("landmark_class")=="region.body_region" and norm(n.get("source_raw")) in ("face","head"):
+      ck(geom.get("registry_id") in {"SR:face_region","SR:head_region"},"BODY_REGION_SURFACE_REGISTRY_MISMATCH",n["node_id"])
+     else:
+      ck(geom.get("fma_id")==n.get("fma_id"),"FMA_ID_MISMATCH",n["node_id"])
+      ck(set(geom.get("part_ids",[]))==set(c.get("elements",[])),"FMA_PART_SET_MISMATCH",n["node_id"])
    if n.get("terminal_disposition")=="cross_reference":
-    rid=n.get("cross_reference_point_id")
+    rid=n.get("cross_reference_point_id") or parse_ref(n.get("source_raw"))
     ck(rid in allpts,"B_REFERENCE_TARGET_MISSING",n["node_id"])
     ck(got["status"]=="RESOLVED","REFERENCE_DEPENDENCY_NOT_RESOLVED",n["node_id"])
     ck((got.get("geometry") or {}).get("point_id")==rid,"REFERENCE_TARGET_MISMATCH",n["node_id"])
@@ -126,10 +133,12 @@ def validate(out,g,atlas,approval):
     ck(got["status"]=="CONDITIONAL","POSE_INCOMPATIBLE_BRANCH_NOT_CONDITIONAL",c["condition_id"])
    if c["condition_type"] in ("alternative","palpation_dependent"):
     ck(got["status"]=="CONDITIONAL","ALTERNATIVE_OR_PALPATION_BRANCH_NOT_CONDITIONAL",c["condition_id"])
- # Stage 2 must not contain a physical coordinate product or legacy input references.
+ # Stage 2 must not contain a physical coordinate product or any legacy coordinate path.
+ ck(out.get("scope",{}).get("legacy_coordinate_input") is False,"LEGACY_INPUT_FLAG_NOT_FALSE")
+ ck(out.get("scope",{}).get("physical_coordinates_generated") is False,"PHYSICAL_COORDINATE_FLAG_NOT_FALSE")
  raw=json.dumps(out).lower()
- for forbidden in ("acupoint-coordinates.json","legacy candidate","legacy_coordinate","physical_coordinate"):
-  ck(forbidden not in raw,"FORBIDDEN_STAGE2_OR_LEGACY_TOKEN",forbidden)
+ for forbidden in ("acupoint-coordinates.json","legacy candidate","legacy c v1","legacy c v2"):
+  ck(forbidden not in raw,"FORBIDDEN_STAGE2_OR_LEGACY_REFERENCE",forbidden)
  return checks,errors
 
 def main():
