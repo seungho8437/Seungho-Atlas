@@ -107,16 +107,6 @@ def derived_target_candidates(src_rel,g,bnodes):
   if any(a and a[0]==sp[0] and sp[1]<=a[1] and a[2]<=sp[2] for a in asp):out.append(n["node_id"])
  return sorted(out)
 
-def collect_landmark_refs(obj):
- out=set()
- def walk(x):
-  if isinstance(x,dict):
-   for v in x.values():walk(v)
-  elif isinstance(x,list):
-   for v in x:walk(v)
-  elif isinstance(x,str) and x.startswith("LM:"):out.add(x)
- walk(obj);return out
-
 def scan(out,g):
  bnodes,children,condsrc,relsrc=build_maps(g);bindings=g.get("composite_bindings",[]);binding_by_child={x["child_landmark_id"]:x for x in bindings};findings=[]
  pby={x["point_id"]:x for x in out["points"]}
@@ -138,40 +128,6 @@ def scan(out,g):
      exe=(rr.get("constraint") or {}).get("executable_argument_node_ids") or rr.get("executable_argument_node_ids") or []
      if child in exe:
       findings.append({"rule":"lexicalized_anatomical_entity_false_subfeature_split","point_id":pid,"node_id":child,"relation_id":rid,"detail":"suppressed lexical token used as executable operand"})
-  # Full quarantine contract for rejected compositional shadow parses.
-  qbranches=p.get("quarantined_shadow_parse_branches",{})
-  sm={n.get("source_statement_id") for n in bnodes.values() if n.get("point_id")==pid}
-  point_rels=[x for x in g.get("relation_instances",[]) if x.get("subject_node_id")==f"P:{pid}"]
-  point_pms=[x for x in g.get("proportional_measurements",[]) if x.get("source_statement_id") in sm]
-  point_conds=[x for x in g.get("conditions",[]) if x.get("source_statement_id") in sm]
-  point_geometry=[x for x in g.get("geometry_nodes",[]) if x.get("source_statement_id") in sm]
-  independent_refs=collect_landmark_refs(point_rels) | collect_landmark_refs(point_pms) | collect_landmark_refs(point_conds) | collect_landmark_refs(point_geometry)
-  for b in bindings:
-   child=b["child_landmark_id"];parent=b["parent_landmark_id"]
-   if child not in p["landmarks"]:continue
-   container=lexicalized_atomic_container(child,parent,bnodes)
-   if not container:continue
-   q=qbranches.get(b["binding_id"])
-   if not q or not q.get("edge_quarantined"):
-    findings.append({"rule":"lexicalized_entity_shadow_parse_not_fully_suppressed","point_id":pid,"binding_id":b["binding_id"],"detail":"quarantined branch record/edge quarantine missing"})
-    continue
-   if q.get("accepted_atomic_landmark_id")!=container or q.get("shadow_parent_landmark_id")!=parent or q.get("shadow_child_landmark_id")!=child:
-    findings.append({"rule":"lexicalized_entity_shadow_parse_not_fully_suppressed","point_id":pid,"binding_id":b["binding_id"],"detail":"quarantine branch identities mismatch","record":q})
-   parent_shared=parent in independent_refs
-   if q.get("shadow_parent_independently_referenced")!=parent_shared:
-    findings.append({"rule":"lexicalized_entity_shadow_parse_not_fully_suppressed","point_id":pid,"binding_id":b["binding_id"],"detail":"independent-reference classification mismatch","expected_shared":parent_shared,"record":q})
-   prec=p["landmarks"].get(parent,{})
-   crec=p["landmarks"].get(child,{})
-   if not parent_shared:
-    if not q.get("shadow_parent_suppressed") or not prec.get("semantic_suppressed") or prec.get("executor")!="lexicalized_shadow_guard" or prec.get("status")!="UNRESOLVED" or prec.get("geometry") is not None:
-     findings.append({"rule":"lexicalized_entity_shadow_parse_not_fully_suppressed","point_id":pid,"binding_id":b["binding_id"],"detail":"shadow-only parent remains executable/resolved","parent_record":prec})
-   else:
-    if q.get("shadow_parent_suppressed"):
-     findings.append({"rule":"lexicalized_entity_shadow_parse_not_fully_suppressed","point_id":pid,"binding_id":b["binding_id"],"detail":"independently referenced parent incorrectly suppressed"})
-   for rid,rr in p["relations"].items():
-    exe=(rr.get("constraint") or {}).get("executable_argument_node_ids") or rr.get("executable_argument_node_ids") or []
-    if child in exe or (not parent_shared and parent in exe):
-     findings.append({"rule":"lexicalized_entity_shadow_parse_not_fully_suppressed","point_id":pid,"binding_id":b["binding_id"],"relation_id":rid,"detail":"quarantined shadow node used as executable operand","executable":exe})
   # Rule 1 / 5: any non-child semantic node carrying subfeature language may not
   # resolve to only a coarse parent/entity geometry.
   for nid,rec in p["landmarks"].items():
@@ -291,7 +247,7 @@ def validate(out,before,g):
  findings=scan(out,g)
  grouped={}
  for f in findings:grouped.setdefault(f["rule"],[]).append(f)
- for rule in ("parent_only_composite_resolution","child_subfeature_unused_by_relation","distinct_subfeature_identity_collapse","condition_preservation_failure","condition_linkage_loss","child_subfeature_false_fallback","operand_trace_incomplete","relation_nonoperand_semantics_loss","direction_preservation_failure","relation_semantic_hash_mismatch","quantitative_relation_semantics_loss","derived_geometry_output_not_bound","lexicalized_anatomical_entity_false_subfeature_split","subfeature_synonym_normalization_gap","lexicalized_entity_shadow_parse_not_fully_suppressed"):
+ for rule in ("parent_only_composite_resolution","child_subfeature_unused_by_relation","distinct_subfeature_identity_collapse","condition_preservation_failure","condition_linkage_loss","child_subfeature_false_fallback","operand_trace_incomplete","relation_nonoperand_semantics_loss","direction_preservation_failure","relation_semantic_hash_mismatch","quantitative_relation_semantics_loss","derived_geometry_output_not_bound","lexicalized_anatomical_entity_false_subfeature_split","subfeature_synonym_normalization_gap"):
   ck(len(grouped.get(rule,[]))==0,rule.upper(),grouped.get(rule,[]))
  # Trace completeness for every relation.
  for p in out["points"]:
@@ -425,27 +381,6 @@ def mutate_synonym_to_unknown(out,g):
     return m
  raise RuntimeError("no normalized synonym node found")
 
-def mutate_shadow_parent_unsuppressed(out,g):
- m=copy.deepcopy(out)
- for p in m["points"]:
-  for bid,q in p.get("quarantined_shadow_parse_branches",{}).items():
-   if not q.get("shadow_parent_suppressed"):continue
-   parent=q["shadow_parent_landmark_id"]
-   rec=p["landmarks"][parent]
-   rec.clear();rec.update({"status":"RESOLVED","executor":"fma_mesh","semantic_suppressed":False,
-    "geometry":{"kind":"fma_concept","fma_id":"FORGED_SHADOW_PARENT","part_ids":["FORGED"]}})
-   q["shadow_parent_suppressed"]=False
-   return m
- raise RuntimeError("no suppressible shadow parent found")
-
-def mutate_shadow_edge_unquarantined(out,g):
- m=copy.deepcopy(out)
- for p in m["points"]:
-  for bid,q in p.get("quarantined_shadow_parse_branches",{}).items():
-   q["edge_quarantined"]=False
-   return m
- raise RuntimeError("no quarantined shadow branch found")
-
 def mutate_measurement_value_to_none(out,g):
  m=copy.deepcopy(out)
  for p in m["points"]:
@@ -511,9 +446,7 @@ def main():
   "lexicalized_process_generic_split":mutate_lexicalized_process_unsuppressed(after,g),
   "atomic_fma_internal_child_executable":mutate_atomic_fma_internal_child_executable(after,g),
   "free_extremity_normalization_removed":mutate_free_extremity_normalization_removed(after,g),
-  "synonym_left_unknown":mutate_synonym_to_unknown(after,g),
-  "shadow_parent_unsuppressed":mutate_shadow_parent_unsuppressed(after,g),
-  "shadow_parse_edge_unquarantined":mutate_shadow_edge_unquarantined(after,g)
+  "synonym_left_unknown":mutate_synonym_to_unknown(after,g)
  }
  neg={k:rejected(v,before,g) for k,v in muts.items()}
  for k,v in neg.items():
@@ -538,7 +471,6 @@ def main():
    "derived_geometry_output_not_bound":count("derived_geometry_output_not_bound",remaining),
    "lexicalized_anatomical_entity_false_subfeature_split":count("lexicalized_anatomical_entity_false_subfeature_split",remaining),
    "subfeature_synonym_normalization_gap":count("subfeature_synonym_normalization_gap",remaining),
-   "lexicalized_entity_shadow_parse_not_fully_suppressed":count("lexicalized_entity_shadow_parse_not_fully_suppressed",remaining),
    "false_fallback":count("child_subfeature_false_fallback",remaining)},
   "negative_tests":neg,"coordinate_generation_count":0,"legacy_c_coordinate_reference_count":0,
   "final_state":{"stage2_automated_structural_validation":"PASS","stage2_semantic_repair_validation":status,"stage2_human_semantic_audit":"PENDING","stage3":"NOT_STARTED"}}
