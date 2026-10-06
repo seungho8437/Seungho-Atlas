@@ -36188,16 +36188,16 @@
     "status": "derived"
   },
   "FMA72971": {
-    "nameKo": "관자엽",
-    "legacyKo": "측두엽",
-    "hanja": "側頭葉",
+    "nameKo": "오른관자엽",
+    "legacyKo": "우측두엽",
+    "hanja": "右側頭葉",
     "sourceNameEn": "right temporal lobe",
     "status": "derived"
   },
   "FMA72972": {
-    "nameKo": "관자엽",
-    "legacyKo": "측두엽",
-    "hanja": "側頭葉",
+    "nameKo": "왼관자엽",
+    "legacyKo": "좌측두엽",
+    "hanja": "左側頭葉",
     "sourceNameEn": "left temporal lobe",
     "status": "derived"
   },
