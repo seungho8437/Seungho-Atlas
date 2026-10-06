@@ -1072,10 +1072,24 @@ for(const p of acupoints){
     if(side==='right' && Math.sign((target[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) target[lrAxis]=bodyCenter[lrAxis]-leftSign*Math.abs(target[lrAxis]-bodyCenter[lrAxis]);
     if(side==='midline') target[lrAxis]=bodyCenter[lrAxis];
     const locText=p.locationKo||'';
+    const executedRelationSet=new Set(nativeRelationIds);
+    const executedRelations=(semanticRelationsByPoint.get(p.id)??[]).filter(r=>executedRelationSet.has(r.relation_id));
+    const executedMeasurements=(semanticMeasurementsByPoint.get(p.id)??[]).filter(m=>
+      executedRelations.some(r=>(r.argument_node_ids??[]).includes(m.anchor_landmark_id))
+    );
+    const cueText=executedRelations.map(r=>String(r.cue_span?.source_raw||'').toLowerCase()).join(' ');
+    const measureDirections=new Set(executedMeasurements.map(m=>m.direction).filter(Boolean));
+    // Locks are semantic invariants, not region keywords.  Region words choose
+    // an admissible surface envelope; only executed directional/proportional
+    // relations (plus direct crease/midline anchors) hard-lock axes.
     const locks={
-      sup:(/B-cun/.test(locText)&&/(위로|아래로|위쪽으로|아래쪽으로|몸쪽으로|먼쪽으로|머리선|같은 높이|뒤엉치뼈구멍)/.test(locText))||/갈비사이공간|칼몸통결합|F-cun|귀구슬위패임|귀구슬\s*중심|귀구슬사이패임|발등|발바닥|발가락|발허리|발꿈치|복사|발목|손목|손등|손바닥|손가락|손허리|가쪽눈구석|안쪽눈구석|눈확|광대뼈|광대활|관자부|귓바퀴|꼭지돌기|목아래오목|목뿔뼈|방패연골|빗장아래오목|빗장뼈|쇄골|배꼽/.test(locText),
-      lr:side==='midline'||/앞정중선\s*위|가쪽(?:으로)?\s*\d+(?:\.\d+)?\s*B-cun|노뼈와\s*자뼈\s*사이|자뼈\s*바로\s*노쪽|뒤가쪽|앞가쪽|뒤안쪽|앞안쪽|동공|귀구슬|귓바퀴|가쪽눈구석|젖꼭지|중간겨드랑선|손허리|손가락|발허리|발가락|가쪽복사|안쪽복사/.test(locText),
-      ap:/손바닥|손등|발바닥|발등|손허리|손가락|발허리|발가락|어깨뼈\s*부위|어깨세모근|가쪽눈구석|관자부|앞가슴|아랫배|복부|배꼽|앞정중선/.test(locText)
+      sup:measureDirections.has('superior')||measureDirections.has('inferior')||
+          /superior to|inferior to|proximal to|distal to|same level/.test(cueText)||
+          /갈비사이공간|배꼽(?:\s*중심)?(?:보다|에서)?\s*(?:위|아래)로\s*\d|손(?:바닥|등)쪽\s*손목주름|팔오금주름|오금주름|머리선/.test(locText),
+      lr:side==='midline'||measureDirections.has('lateral')||measureDirections.has('medial')||
+         /lateral to|medial to/.test(cueText)||/정중선[^,.]{0,45}?가쪽(?:으로)?\s*\d+(?:\.\d+)?\s*B-cun|동공/.test(locText),
+      ap:measureDirections.has('anterior')||measureDirections.has('posterior')||
+         /anterior to|posterior to/.test(cueText)
     };
     const region=projectionRegion(locText,target);
     let projected;
