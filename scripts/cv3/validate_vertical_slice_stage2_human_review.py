@@ -309,6 +309,7 @@ def main():
       "final_stage_state":"Stage 2 = AUTOMATED VALIDATED, HUMAN REVIEW PENDING"}
  Path(args.out).write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n")
  print(json.dumps({"status":status,"review_disposition":review_disposition,"identity_checks":ic,"identity_errors":len(ie),
-                   "independent_checks":dc,"independent_errors":len(de),"semantic_discrepancies":len(disc),"negative_tests":neg}))
+                   "identity_error_details":ie[:20],"independent_checks":dc,"independent_errors":len(de),
+                   "independent_error_details":de[:20],"semantic_discrepancies":disc,"negative_tests":neg},ensure_ascii=False))
  raise SystemExit(0 if status=="PASS" else 1)
 if __name__=="__main__":main()
