@@ -35,7 +35,7 @@ def main():
  contract={"schema_version":"1.0.0","artifact":"stage1-review-camera-contract",
    "coordinate_basis":{"left":left,"superior":superior,"anterior":anterior,"origin":origin},
    "cameras":cameras,
-   "rendering":{"normal_shading":True,"depth_cue":True,"wireframe_overlay":True,"oblique_views":True,"acupoints_rendered":False},
+   "rendering":{"normal_shading":True,"depth_cue":True,"hidden_surface":"software_z_buffer","wireframe_overlay":False,"oblique_views":True,"acupoints_rendered":False},
    "invariants":{"front_back_depth_opposite":True,"left_right_depth_opposite":True,
      "front_back_screen_x_mirrored":True,"left_right_screen_x_mirrored":True,
      "depth_aware_surface_rendering":True,"raw_world_xyz_projection":False}}
@@ -59,7 +59,7 @@ canvas{{width:100%;height:620px;background:white;border:1px solid #bbb}}
 .note{{max-width:1050px}}@media(max-width:760px){{.grid{{grid-template-columns:1fr}}}}
 </style>
 <h1>C v3 · Stage 1 spatial substrate visual QC</h1>
-<p class="note">No acupoints are rendered. The skin is rendered with depth ordering, normal/depth shading, and a light triangle wireframe so occiput, back, buttocks, heel and foot dorsum can be visually distinguished. FRONT/BACK and LEFT/RIGHT are true opposite cameras; oblique views are added for anatomical surface confirmation.</p>
+<p class="note">No acupoints are rendered. The skin uses a per-pixel software z-buffer, so hidden anterior surfaces cannot bleed through the BACK view and hidden posterior surfaces cannot bleed through the FRONT view. Normal/depth shading and oblique views are included for occiput, back, buttocks, heel and foot-orientation review.</p>
 <div class="grid">
 <canvas id="front" width="700" height="620"></canvas><canvas id="back" width="700" height="620"></canvas>
 <canvas id="left" width="700" height="620"></canvas><canvas id="right" width="700" height="620"></canvas>
@@ -89,27 +89,47 @@ function draw(id){{
  for(const q of projected){{xmin=Math.min(xmin,q[0]);xmax=Math.max(xmax,q[0]);ymin=Math.min(ymin,q[1]);ymax=Math.max(ymax,q[1]);zmin=Math.min(zmin,q[2]);zmax=Math.max(zmax,q[2])}}
  const padx=34,pady=36,sx=(c.width-2*padx)/(xmax-xmin),sy=(c.height-2*pady)/(ymax-ymin),scale=Math.min(sx,sy);
  const X=x=>c.width/2+(x-(xmin+xmax)/2)*scale, Y=y=>c.height/2-(y-(ymin+ymax)/2)*scale;
- const tris=[];
+ const W=c.width,H=c.height;
+ const zbuf=new Float64Array(W*H);zbuf.fill(-Infinity);
+ const shadebuf=new Uint8Array(W*H);shadebuf.fill(255);
+ const light=unit([0.35,0.55,0.76]);
+ function edge(ax,ay,bx,by,px,py){{return (px-ax)*(by-ay)-(py-ay)*(bx-ax)}}
  for(let k=0;k<inds.length;k+=3){{
    const ia=inds[k],ib=inds[k+1],ic=inds[k+2];
-   const va=pv[ia],vb=pv[ib],vc=pv[ic];
-   const n=unit(cross(sub(vb,va),sub(vc,va)));
-   tris.push([(projected[ia][2]+projected[ib][2]+projected[ic][2])/3,ia,ib,ic,n]);
+   const pa=projected[ia],pb=projected[ib],pc=projected[ic];
+   const ax=X(pa[0]),ay=Y(pa[1]),bx=X(pb[0]),by=Y(pb[1]),cx=X(pc[0]),cy=Y(pc[1]);
+   const area=edge(ax,ay,bx,by,cx,cy);
+   if(Math.abs(area)<1e-9)continue;
+   const minx=Math.max(0,Math.floor(Math.min(ax,bx,cx))),maxx=Math.min(W-1,Math.ceil(Math.max(ax,bx,cx)));
+   const miny=Math.max(0,Math.floor(Math.min(ay,by,cy))),maxy=Math.min(H-1,Math.ceil(Math.max(ay,by,cy)));
+   const va=pv[ia],vb=pv[ib],vc=pv[ic],n=unit(cross(sub(vb,va),sub(vc,va)));
+   const facing=Math.abs(dot(n,cam.depth)),lam=Math.abs(dot(n,light));
+   for(let py=miny;py<=maxy;py++){{for(let px=minx;px<=maxx;px++){{
+     const sx=px+0.5,sy=py+0.5;
+     const w0=edge(bx,by,cx,cy,sx,sy)/area,w1=edge(cx,cy,ax,ay,sx,sy)/area,w2=edge(ax,ay,bx,by,sx,sy)/area;
+     if(w0<-1e-8||w1<-1e-8||w2<-1e-8)continue;
+     const z=w0*pa[2]+w1*pb[2]+w2*pc[2],idx=py*W+px;
+     if(z<=zbuf[idx])continue;
+     zbuf[idx]=z;
+     const depth=(z-zmin)/(zmax-zmin||1);
+     shadebuf[idx]=Math.round(Math.max(72,Math.min(235,88+92*facing+34*lam+20*depth)));
+   }}}}
  }}
- tris.sort((a,b)=>a[0]-b[0]);
- const light=unit([0.35,0.55,0.76]);
- for(const t of tris){{
-   const a=projected[t[1]],b=projected[t[2]],d=projected[t[3]],n=t[4];
-   const facing=Math.abs(dot(n,cam.depth)),lam=Math.abs(dot(n,light)),depth=(t[0]-zmin)/(zmax-zmin||1);
-   const shade=Math.round(Math.max(82,Math.min(226,92+78*facing+36*lam+20*depth)));
-   ctx.fillStyle='rgb('+shade+','+shade+','+shade+')';
-   ctx.beginPath();ctx.moveTo(X(a[0]),Y(a[1]));ctx.lineTo(X(b[0]),Y(b[1]));ctx.lineTo(X(d[0]),Y(d[1]));ctx.closePath();ctx.fill();
+ const img=ctx.createImageData(W,H);
+ for(let i=0;i<W*H;i++){{
+   const o=i*4;
+   if(zbuf[i]===-Infinity){{img.data[o]=255;img.data[o+1]=255;img.data[o+2]=255;img.data[o+3]=255;continue}}
+   const s=shadebuf[i];img.data[o]=s;img.data[o+1]=s;img.data[o+2]=s;img.data[o+3]=255;
  }}
- ctx.strokeStyle='rgba(40,40,40,0.10)';ctx.lineWidth=.28;
- for(let k=0;k<inds.length;k+=3){{
-   const a=projected[inds[k]],b=projected[inds[k+1]],d=projected[inds[k+2]];
-   ctx.beginPath();ctx.moveTo(X(a[0]),Y(a[1]));ctx.lineTo(X(b[0]),Y(b[1]));ctx.lineTo(X(d[0]),Y(d[1]));ctx.closePath();ctx.stroke();
- }}
+ // Depth-gradient contour enhancement only on visible pixels.
+ for(let y=1;y<H-1;y++){{for(let x=1;x<W-1;x++){{
+   const i=y*W+x;if(zbuf[i]===-Infinity)continue;
+   const zl=zbuf[i-1],zr=zbuf[i+1],zu=zbuf[i-W],zd=zbuf[i+W];
+   if(zl===-Infinity||zr===-Infinity||zu===-Infinity||zd===-Infinity)continue;
+   const g=Math.max(Math.abs(zr-zl),Math.abs(zd-zu));
+   if(g>0.003){{const o=i*4;img.data[o]=Math.max(30,img.data[o]-42);img.data[o+1]=Math.max(30,img.data[o+1]-42);img.data[o+2]=Math.max(30,img.data[o+2]-42)}}
+ }}}}
+ ctx.putImageData(img,0,0);
  ctx.lineWidth=2;
  for(const l of lines){{
    const a=proj(patient(l.a),cam),b=proj(patient(l.b),cam);
