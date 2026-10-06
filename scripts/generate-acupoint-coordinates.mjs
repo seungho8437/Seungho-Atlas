@@ -173,6 +173,26 @@ function localSideLateral(y, sideSign, frac){
   return bodyCenter[lrAxis]+sideSign*(inner+(outer-inner)*Math.max(0,Math.min(1,frac)));
 }
 
+const torsoCrossSectionSamples=[];
+for(const p of atlas.parts.filter(p=>/rib|costal cartilage|hip bone|sternum/i.test(p.name))){
+  const a=positionsOfPart(p);
+  for(let i=0;i<a.length;i+=3)torsoCrossSectionSamples.push([a[lrAxis],a[supAxis]]);
+}
+const torsoWidthCache=new Map();
+function torsoHalfWidth(y){
+  const step=extent[supAxis]*.012,bucket=Math.round((y-bodyMin[supAxis])/step);
+  if(torsoWidthCache.has(bucket))return torsoWidthCache.get(bucket);
+  let band=extent[supAxis]*.025,vals=[];
+  for(let pass=0;pass<4&&!vals.length;pass++,band*=1.8){
+    vals=torsoCrossSectionSamples.filter(v=>Math.abs(v[1]-y)<=band).map(v=>Math.abs(v[0]-bodyCenter[lrAxis]));
+  }
+  if(!vals.length)return Math.min(localHalfWidth(y),extent[lrAxis]*.28);
+  vals.sort((a,b)=>a-b);
+  const skeletal=vals[Math.min(vals.length-1,Math.floor(vals.length*.93))];
+  const value=Math.min(localHalfWidth(y),skeletal*1.16);
+  torsoWidthCache.set(bucket,value);return value;
+}
+
 const xiphoidStats=conceptStats('FMA7488');
 const pubicHairStats=centerBounds(atlas.parts.filter(p=>/pubic hair/i.test(p.name)));
 const xiphoidLevel=xiphoidStats?.center[supAxis] ?? norm(supAxis,.72);
@@ -249,7 +269,7 @@ function regionTarget(text,side){
   if(/앞|anterior|배쪽/.test(text))t[apAxis]=bodyCenter[apAxis]+anteriorSign*apHalf*.82;
   const lateralFrac=/정중|median|midline/.test(text)?0:(/가쪽|lateral|외측/.test(text)?.62:.43);
   const sideS=side==='left'?leftSign:side==='right'?-leftSign:0;
-  const half=localHalfWidth(t[supAxis]);
+  const half=/chest|가슴|흉부|갈비|늑간|abdomen|복부|윗배|아랫배|배꼽|pelvis|골반/.test(text)?torsoHalfWidth(t[supAxis]):localHalfWidth(t[supAxis]);
   t[lrAxis]=bodyCenter[lrAxis]+sideS*half*lateralFrac;
   return t;
 }
@@ -302,7 +322,7 @@ function applyWhoConstraints(input,text,side){
   if(lateral&&sideSign){
     const n=Number(lateral[1]);
     const frac=Math.min(.92,n/6*.84);
-    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*frac;
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*torsoHalfWidth(t[supAxis])*frac;
     count++;
   }
   const nav=text.match(/배꼽(?:\s*중심)?(?:보다|에서)?\s*(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/);
@@ -315,7 +335,7 @@ function applyWhoConstraints(input,text,side){
   if(navLat&&sideSign){
     const n=Number(navLat[1]);
     t[supAxis]=navelLevel;
-    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*Math.min(.82,n/4*.62);
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*torsoHalfWidth(t[supAxis])*Math.min(.82,n/4*.62);
     count+=2;
   }
   const sacral=text.match(/(첫째|둘째|셋째|넷째)\s*뒤엉치뼈구멍/);
@@ -429,8 +449,8 @@ function applyWhoConstraints(input,text,side){
     count++;
   }
   if(/중간겨드랑선보다\s*앞쪽으로\s*1\s*B-cun/.test(text)&&sideSign){
-    t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*.82;
-    t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.10;
+    t[lrAxis]=bodyCenter[lrAxis]+sideSign*torsoHalfWidth(t[supAxis])*.96;
+    t[apAxis]=bodyCenter[apAxis]+anteriorSign*extent[apAxis]*.08;
     count+=2;
   }
   if(/가쪽복사\s*융기\s*바로\s*아래/.test(text)&&sideSign){
@@ -633,6 +653,15 @@ function trianglePlaneIntersection(tri,axis,value){
   }
   return pts;
 }
+function respectsHardLocks(q,target,locks){
+  const tolSup=Math.max(.018,bodyDiag*.010);
+  const tolLr=Math.max(.024,bodyDiag*.013);
+  const tolAp=Math.max(.055,bodyDiag*.030);
+  if(locks.sup&&Math.abs(q[supAxis]-target[supAxis])>tolSup)return false;
+  if(locks.lr&&Math.abs(q[lrAxis]-target[lrAxis])>tolLr)return false;
+  if(locks.ap&&Math.abs(q[apAxis]-target[apAxis])>tolAp)return false;
+  return true;
+}
 function projectLockedToSurface(target,side,locks){
   const primary=locks.sup?supAxis:locks.lr?lrAxis:locks.ap?apAxis:null;
   if(primary===null)return null;
@@ -652,6 +681,7 @@ function projectLockedToSurface(target,side,locks){
     if(side==='left' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign)continue;
     if(side==='right' && Math.sign((q[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign)continue;
     if(side==='midline' && Math.abs(q[lrAxis]-bodyCenter[lrAxis])>extent[lrAxis]*.035)continue;
+    if(!respectsHardLocks(q,target,locks))continue;
     let score=0;
     for(let i=0;i<3;i++)score+=weights[i]*(q[i]-target[i])**2;
     const d=dist2(q,target);
@@ -689,6 +719,7 @@ function project(target, side, locks={}, region=null){
     if(side==='left' && Math.sign(sideCoord||0)!==leftSign)return;
     if(side==='right' && Math.sign(sideCoord||0)!==-leftSign)return;
     if(side==='midline' && Math.abs(sideCoord)>extent[lrAxis]*.12)return;
+    if(!respectsHardLocks(q,target,locks))return;
     const d=dist2(target,q); let score=d;
     if(locks.sup) score+=5200*(q[supAxis]-target[supAxis])**2;
     if(locks.lr) score+=2400*(q[lrAxis]-target[lrAxis])**2;
