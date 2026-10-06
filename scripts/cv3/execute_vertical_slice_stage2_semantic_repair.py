@@ -52,15 +52,20 @@ def subfeature_type(raw):
  return x["canonical_subfeature_type"] if x else None
 
 def fma_atomic_at_same_granularity(node):
- if node.get("terminal_disposition")!="resolved_fma" or not node.get("fma_name"):return False
+ if node.get("terminal_disposition")!="resolved_fma":return False
  sf=subfeature_normalization(node.get("source_raw"))
  if not sf:return True
+ raw=norm(node.get("source_raw"));lex=sf["source_lexical_form"];canon=sf["canonical_subfeature_type"]
  fname=norm(node.get("fma_name"))
- lex=sf["source_lexical_form"];canon=sf["canonical_subfeature_type"]
- # An ontology/FMA name that itself lexicalizes the feature is treated as an atomic entity.
- if lex in fname:return True
- if canon=="free_end" and ("free end" in fname or "free extremity" in fname):return True
- if canon=="center" and ("center" in fname or "centre" in fname):return True
+ if fname:
+  if lex in fname:return True
+  if canon=="free_end" and ("free end" in fname or "free extremity" in fname):return True
+  if canon=="center" and ("center" in fname or "centre" in fname):return True
+ # Conservative lexicalized-name rule for ontology-resolved named processes:
+ # e.g. spinous/mastoid/styloid/xiphoid/coracoid process. A higher-order
+ # modifier such as "inferior border of ..." has canonical type != process,
+ # so it is not exempted by this rule.
+ if canon=="process" and re.search(r"\b[a-z][a-z-]+\s+process\b",raw):return True
  return False
 
 def span_info(node_id):
