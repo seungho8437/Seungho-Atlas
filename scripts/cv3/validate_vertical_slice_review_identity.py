@@ -48,8 +48,24 @@ def main():
    ck(any("ulna" in x for x in labs),"ULNAR_REFERENCE_MARKER_MISSING",rid)
   if rid in ("SR:lateral_thorax","SR:midaxillary_line","SR:fourth_intercostal_space","SR:lateral_abdomen","SR:upper_back","SR:lumbar_region","SR:posterior_median_line"):
    ck(bool(exp.hidden_surface_vertex_indices),"UPPER_LIMB_HIDE_SET_MISSING",rid)
+  if exp.status=="RESOLVED":
+   inspectable=bool(exp.surface_vertex_indices or exp.curves or exp.deep_paths or exp.markers)
+   ck(inspectable,"RESOLVED_ENTRY_HAS_NO_INSPECTABLE_GEOMETRY",rid)
+   ck(bool(got.get("view")),"RESOLVED_ENTRY_HAS_NO_REVIEW_VIEW",rid)
   if rid=="SR:radius_ulna_interosseous_space":
-   ck(len(exp.deep_points)>=8,"INTEROSSEOUS_3D_PATH_TOO_SHORT",len(exp.deep_points))
+   ck(len(exp.deep_paths)==2,"INTEROSSEOUS_SIDE_PATH_COUNT",len(exp.deep_paths))
+   sides=sorted(p.get("side") for p in exp.deep_paths)
+   ck(sides==["left","right"],"INTEROSSEOUS_SIDE_LABELS",sides)
+   ck(all(len(p.get("points",[]))>=8 for p in exp.deep_paths),"INTEROSSEOUS_3D_PATH_TOO_SHORT",[len(p.get("points",[])) for p in exp.deep_paths])
+   ck(got.get("deep_paths")==[{"side":p["side"],"points":[[float(x) for x in q] for q in p["points"]],"source_part_ids":p.get("source_part_ids",[])} for p in exp.deep_paths],"DEEP_PATH_GEOMETRY_MISMATCH",rid)
+  if rid=="SR:anterior_neck":
+   labs=[m["label"].lower() for m in exp.markers]
+   ck(any("mandible inferior" in x for x in labs),"NECK_MANDIBLE_BOUNDARY_MARKER_MISSING",labs)
+   ck(any("clavicular/sternal lower" in x for x in labs),"NECK_CLAVICULAR_STERNAL_BOUNDARY_MISSING",labs)
+   ck(not any("forehead" in x for x in labs),"NECK_FOREHEAD_MARKER_FORBIDDEN",labs)
+  if rid=="SR:face_region":
+   ck(bool(exp.surface_vertex_indices),"FACE_REGION_SURFACE_EMPTY")
+   ck(got.get("status")=="RESOLVED","FACE_REGION_NOT_RESOLVED")
   if rid=="SR:fourth_intercostal_space":
    labs=[m["label"].lower() for m in exp.markers]
    ck(any("4th rib" in x for x in labs) and any("5th rib" in x for x in labs),"RIB_ANCHORS_MISSING",labs)
