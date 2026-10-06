@@ -215,14 +215,14 @@ def main():
                 "reason":res.notes[0] if res.notes else (None if res.status=="RESOLVED" else "approved registry unresolved")}
      continue
     if disp in ("registry_limited","specialized_anchor"):
-    z=atlas_lookup(store,n.get("source_raw",""));lout[nid]={"executor":"atlas_name_resolution",**z}
+     z=atlas_lookup(store,n.get("source_raw",""));lout[nid]={"executor":"atlas_name_resolution",**z}
     elif disp in ("source_backed_derived_unresolved","ambiguous_generic","parent_unresolved","blocked_by_context"):
-    z=atlas_lookup(store,n.get("source_raw",""))
-    if z["status"]=="RESOLVED":
-     lout[nid]={"executor":"atlas_name_resolution",**z}
-    else:lout[nid]={"status":"UNRESOLVED","executor":"explicit_unresolved_taxonomy","geometry":None,"reason":disp}
+     z=atlas_lookup(store,n.get("source_raw",""))
+     if z["status"]=="RESOLVED":
+      lout[nid]={"executor":"atlas_name_resolution",**z}
+     else:lout[nid]={"status":"UNRESOLVED","executor":"explicit_unresolved_taxonomy","geometry":None,"reason":disp}
     elif n.get("landmark_class") in ("soft_tissue_feature","orifice_or_cavity","vessel","cartilage","muscle","tendon","bone.opening","bone.process_or_prominence","structure.part","bone.bone"):
-    z=atlas_lookup(store,n.get("source_raw",""));lout[nid]={"executor":"atlas_name_resolution",**z}
+     z=atlas_lookup(store,n.get("source_raw",""));lout[nid]={"executor":"atlas_name_resolution",**z}
     else:
      lout[nid]={"status":"UNRESOLVED","executor":"no_family_executor","geometry":None,"reason":f"unsupported landmark disposition/class: {disp}/{n.get('landmark_class')}"}
 
