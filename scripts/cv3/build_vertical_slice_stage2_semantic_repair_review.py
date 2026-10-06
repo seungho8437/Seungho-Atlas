@@ -62,7 +62,7 @@ def point_projection(pid,before,after,g,validation,rejection):
   c=r.get("constraint") or {}
   sem=c.get("semantic_argument_node_ids") or r.get("semantic_argument_node_ids") or r.get("argument_node_ids") or []
   exe=c.get("executable_argument_node_ids") or r.get("executable_argument_node_ids") or []
-  rels.append({"relation_id":rid,"source_phrase":next(((((x.get("cue_span") or {}).get("source_raw")) or x.get("source_raw")) for x in g["relation_instances"] if x["relation_id"]==rid),None),
+  rels.append({"relation_id":rid,"source_phrase":next(iter([((x.get("cue_span") or {}).get("source_raw") or x.get("source_raw")) for x in g["relation_instances"] if x["relation_id"]==rid]),None),
    "operator":c.get("op") or r.get("executor"),"semantic_operand_ids":sem,"actual_executable_operand_ids":exe,
    "direction":c.get("direction"),"modifier":None,"status":r.get("status"),"reason":r.get("reason")})
   for s,e in zip(sem,exe):
