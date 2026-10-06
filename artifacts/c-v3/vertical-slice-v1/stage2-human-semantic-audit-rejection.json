@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-vertical-slice-v1-stage2-human-semantic-audit-rejection",
+  "status": "REJECTED",
+  "stage_state": {
+    "stage1": "APPROVED",
+    "registry_calibration": "APPROVED",
+    "stage2_automated_structural_validation": "PASS",
+    "stage2_human_semantic_audit": "REJECTED",
+    "stage3": "NOT_STARTED"
+  },
+  "affected_points": [
+    "TE20",
+    "ST10",
+    "LI17",
+    "LI18",
+    "BL17",
+    "BL23",
+    "BL25",
+    "ST9"
+  ],
+  "defect_families": [
+    "condition_semantics_loss",
+    "composite_subfeature_collapse",
+    "modifier_dependency_loss"
+  ],
+  "required_validator_contracts": [
+    "A composite operand containing border/superior border/inferior border/midpoint/anterior border/posterior border/end/apex or equivalent subfeature cannot be RESOLVED solely by the parent whole-entity mesh.",
+    "If a relation uses a composite landmark with an extracted child subfeature, the executable dependency chain must bind and use that child subfeature or remain UNRESOLVED.",
+    "Pose/body-position conditions incompatible with default atlas pose must remain CONDITIONAL."
+  ],
+  "note": "Automated identity/structural validation remains valid for artifact consistency, but is insufficient for semantic-granularity preservation."
+}
