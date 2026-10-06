@@ -122,7 +122,11 @@ def build_html(data,path):
  out=[f'<!doctype html><meta charset="utf-8"><title>Stage 2 Semantic Repair Human Review</title><style>{css}</style>',
  '<h1>C v3 Vertical Slice v1 - Stage 2 Semantic Repair Human Review</h1>',
  f'<p>Repair validation: <b>{data["validation_status"]}</b>. Human semantic audit remains <b>PENDING</b>. Stage 3 is NOT STARTED.</p>',
- '<p>This renderer projects repaired Stage 2 output + frozen B v2.1 only; it does not execute semantic rules.</p>']
+ '<p>This renderer projects repaired Stage 2 output + frozen B v2.1 only; it does not execute semantic rules.</p>',
+ '<h2>20-point regression overview</h2><table><tr><th>point</th><th>before</th><th>after</th><th>pre-repair regression findings outside known-8</th><th>post-repair finding count</th></tr>']
+ for row in data["regression_table"]:
+  out.append("<tr>"+"".join(f"<td class='mono'>{html.escape(str(v))}</td>" for v in [row["point_id"],row["before_status"],row["after_status"],", ".join(row["pre_repair_rules"]),row["post_repair_finding_count"]])+"</tr>")
+ out.append("</table>")
  for p in data["points"]:
   out.append(f'<section class="pt"><h2>{p["point_id"]}: {p["previous_stage2_status"]} → {p["repaired_stage2_status"]}</h2><p><b>Defect family:</b> {html.escape(", ".join(p["defect_family"]))}<br><b>Human review disposition:</b> PENDING</p>')
   out.append('<h3>WHO source</h3>')
@@ -170,7 +174,10 @@ def build_pdf(data,path):
  mono=ParagraphStyle("mx",parent=body,fontName=base,fontSize=6.5,leading=8.2,wordWrap="CJK")
  doc=SimpleDocTemplate(str(path),pagesize=A4,leftMargin=11*mm,rightMargin=11*mm,topMargin=11*mm,bottomMargin=11*mm)
  st=[Paragraph("C v3 Vertical Slice v1 - Stage 2 Semantic Repair Human Review",h1),
-     Paragraph(f"Repair validation: {data['validation_status']} | Human semantic audit: PENDING | Stage 3: NOT STARTED",body)]
+     Paragraph(f"Repair validation: {data['validation_status']} | Human semantic audit: PENDING | Stage 3: NOT STARTED",body),
+     Paragraph("20-point regression overview",h2)]
+ for row in data["regression_table"]:
+  st.append(Paragraph(html.escape(f"{row['point_id']} | {row['before_status']} -> {row['after_status']} | pre-repair rules={row['pre_repair_rules']} | post-repair findings={row['post_repair_finding_count']}"),mono))
  for p in data["points"]:
   st+=[PageBreak(),Paragraph(f"{p['point_id']}: {p['previous_stage2_status']} -> {p['repaired_stage2_status']}",h1),
        Paragraph("Defect family: "+html.escape(", ".join(p["defect_family"])),body)]
@@ -201,9 +208,18 @@ def build_pdf(data,path):
 def main():
  ap=argparse.ArgumentParser();ap.add_argument("--before",required=True);ap.add_argument("--after",required=True);ap.add_argument("--validation",required=True);ap.add_argument("--graph",default="public/knowledge/anatomy-acupoint-relations-v2.1.json");ap.add_argument("--rejection",default="artifacts/c-v3/vertical-slice-v1/stage2-summary.json");ap.add_argument("--out-dir",default="artifacts/c-v3/vertical-slice-v1");args=ap.parse_args()
  before=json.loads(Path(args.before).read_text());after=json.loads(Path(args.after).read_text());validation=json.loads(Path(args.validation).read_text());g=json.loads(Path(args.graph).read_text());rej=json.loads(Path(args.rejection).read_text())
+ pts=[point_projection(pid,before,after,g,validation,rej) for pid in ORDER]
+ pre=validation.get("pre_repair_scan",{}).get("new_regression_findings",[])
+ rem=validation.get("remaining_defects",[])
+ regression_table=[]
+ for p in pts:
+  pid=p["point_id"]
+  regression_table.append({"point_id":pid,"before_status":p["previous_stage2_status"],"after_status":p["repaired_stage2_status"],
+    "pre_repair_rules":sorted({x["rule"] for x in pre if x.get("point_id")==pid}),
+    "post_repair_finding_count":sum(1 for x in rem if x.get("point_id")==pid)})
  data={"schema_version":"1.0.0","artifact":"c-v3-stage2-semantic-repair-human-review-data","human_review_disposition":"PENDING",
   "before_sha256":fsha(Path(args.before)),"after_sha256":fsha(Path(args.after)),"validation_status":validation["status"],
-  "stage3":"NOT_STARTED","points":[point_projection(pid,before,after,g,validation,rej) for pid in ORDER],
+  "stage3":"NOT_STARTED","points":pts,"regression_table":regression_table,
   "regression_summary":{"new_regression_defects_outside_known8":validation["pre_repair_scan"]["new_regression_defects_outside_known8"],"post_repair_counts":validation["post_repair_counts"]}}
  out=Path(args.out_dir);out.mkdir(parents=True,exist_ok=True)
  (out/"stage2-semantic-repair-human-review-data.json").write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n")
