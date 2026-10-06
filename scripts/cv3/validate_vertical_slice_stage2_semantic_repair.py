@@ -130,7 +130,9 @@ def scan(out,g):
      if kids and (a in executable or not any(k in executable for k in kids)):
       findings.append({"rule":"child_subfeature_unused_by_relation","point_id":pid,"relation_id":rid,"semantic_operand":a,"child_ids":kids,"executable_operands":executable})
      if asf and not kids and a in executable:
-      findings.append({"rule":"parent_only_composite_resolution","point_id":pid,"relation_id":rid,"node_id":a,"source_raw":bnodes.get(a,{}).get("source_raw"),"detail":"subfeature-bearing relation operand has no executable child"})
+      akind=(p["landmarks"].get(a,{}).get("geometry") or {}).get("kind")
+      if akind!="derived_relation_output":
+       findings.append({"rule":"parent_only_composite_resolution","point_id":pid,"relation_id":rid,"node_id":a,"source_raw":bnodes.get(a,{}).get("source_raw"),"detail":"subfeature-bearing relation operand has no executable child"})
    if r.get("status")=="RESOLVED" and len(executable)>1:
     ids=[identity(p["landmarks"].get(x,{})) for x in executable]
     sfs=[sf(bnodes.get(x,{}).get("source_raw")) for x in executable]
