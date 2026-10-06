@@ -208,3 +208,114 @@ def plane_triangle_segments(store:AtlasStore,part_id:str,normal:Vec3,offset:floa
 
 def triangle_normal(a:Vec3,b:Vec3,c:Vec3)->Vec3:
     return normalize(cross(vsub(b,a),vsub(c,a)))
+
+
+# ---- typed query layer -------------------------------------------------------
+
+class QueryStatus:
+    RESOLVED="RESOLVED"
+    MULTIPLE="MULTIPLE"
+    UNRESOLVED="UNRESOLVED"
+    INVALID="INVALID"
+
+@dataclass(frozen=True)
+class QueryResult:
+    status:str
+    candidates:tuple
+    provenance:dict
+    residuals:dict
+
+@dataclass(frozen=True)
+class HalfSpaceMask:
+    normal:Vec3
+    offset:float
+    keep_positive:bool=True
+    tolerance:float=1e-9
+    def __call__(self,p:Vec3)->bool:
+        s=dot(normalize(self.normal),p)-self.offset
+        return s>=-self.tolerance if self.keep_positive else s<=self.tolerance
+
+@dataclass(frozen=True)
+class AxisIntervalMask:
+    origin:Vec3
+    axis:Vec3
+    minimum:float
+    maximum:float
+    tolerance:float=1e-9
+    def __call__(self,p:Vec3)->bool:
+        t=dot(vsub(p,self.origin),normalize(self.axis))
+        return self.minimum-self.tolerance<=t<=self.maximum+self.tolerance
+
+@dataclass(frozen=True)
+class IntersectionMask:
+    masks:tuple
+    def __call__(self,p:Vec3)->bool:
+        return all(m(p) for m in self.masks)
+
+@dataclass(frozen=True)
+class UnionMask:
+    masks:tuple
+    def __call__(self,p:Vec3)->bool:
+        return any(m(p) for m in self.masks)
+
+def point_line_distance(p:Vec3,a:Vec3,b:Vec3)->float:
+    ab=vsub(b,a);d=norm2(ab)
+    if d<=1e-24:return distance(p,a)
+    t=dot(vsub(p,a),ab)/d
+    q=vadd(a,vmul(ab,t))
+    return distance(p,q)
+
+def nearest_on_part_masked(store:AtlasStore,part_id:str,p:Vec3,mask=None)->QueryResult:
+    hits=[]
+    for ti,a,b,c in store.triangles(part_id):
+        q,w=closest_point_on_triangle(p,a,b,c)
+        if mask is not None and not mask(q):
+            continue
+        hits.append(TriangleHit(part_id,ti,q,w,distance(p,q)))
+    if not hits:
+        return QueryResult(QueryStatus.UNRESOLVED,tuple(),{"part_id":part_id},{"reason":"no eligible skin triangle"})
+    hits.sort(key=lambda h:h.distance)
+    return QueryResult(QueryStatus.RESOLVED,(hits[0],),{"part_id":part_id,"eligible_triangles":len(hits)},{"distance_m":hits[0].distance})
+
+def surface_components(store:AtlasStore,part_id:str):
+    ii=store.indices(part_id);n=store.parts[part_id]["vertexCount"]
+    adj=[set() for _ in range(n)]
+    for k in range(0,len(ii),3):
+        a,b,c=ii[k:k+3]
+        adj[a].update((b,c));adj[b].update((a,c));adj[c].update((a,b))
+    labels=[-1]*n;components=[]
+    for start in range(n):
+        if labels[start]!=-1:continue
+        cid=len(components);stack=[start];labels[start]=cid;members=[]
+        while stack:
+            x=stack.pop();members.append(x)
+            for y in adj[x]:
+                if labels[y]==-1:labels[y]=cid;stack.append(y)
+        components.append(tuple(members))
+    return tuple(labels),tuple(components)
+
+def mesh_edge_geodesic_distance(store:AtlasStore,part_id:str,source_vertex:int,target_vertex:int,allowed_vertices=None)->QueryResult:
+    import heapq
+    vv=store.vertices(part_id);ii=store.indices(part_id);n=len(vv)
+    if not (0<=source_vertex<n and 0<=target_vertex<n):
+        return QueryResult(QueryStatus.INVALID,tuple(),{"part_id":part_id},{"reason":"vertex index out of range"})
+    allowed=set(range(n)) if allowed_vertices is None else set(allowed_vertices)
+    if source_vertex not in allowed or target_vertex not in allowed:
+        return QueryResult(QueryStatus.UNRESOLVED,tuple(),{"part_id":part_id},{"reason":"endpoint outside allowed component"})
+    adj=[{} for _ in range(n)]
+    for k in range(0,len(ii),3):
+        tri=ii[k:k+3]
+        for a,b in ((tri[0],tri[1]),(tri[1],tri[2]),(tri[2],tri[0])):
+            if a not in allowed or b not in allowed:continue
+            w=distance(vv[a],vv[b])
+            if b not in adj[a] or w<adj[a][b]:adj[a][b]=w;adj[b][a]=w
+    inf=float("inf");distv={source_vertex:0.0};pq=[(0.0,source_vertex)]
+    while pq:
+        d,u=heapq.heappop(pq)
+        if d!=distv.get(u,inf):continue
+        if u==target_vertex:
+            return QueryResult(QueryStatus.RESOLVED,(d,),{"part_id":part_id,"method":"mesh-edge Dijkstra"},{"distance_m":d,"euclidean_lower_bound_m":distance(vv[source_vertex],vv[target_vertex])})
+        for v,w in adj[u].items():
+            nd=d+w
+            if nd<distv.get(v,inf):distv[v]=nd;heapq.heappush(pq,(nd,v))
+    return QueryResult(QueryStatus.UNRESOLVED,tuple(),{"part_id":part_id},{"reason":"different disconnected surface components"})
