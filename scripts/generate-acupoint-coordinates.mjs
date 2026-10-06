@@ -934,7 +934,7 @@ function semanticConceptHits(text,side){
   return hits;
 }
 function specializedLandmark(raw,side){
-  const q=String(raw||'').toLowerCase(),ss=sideSignFor(side);
+  const q=String(raw||'').toLowerCase().replace(/-\s*/g,'').replace(/\s+/g,' ').trim(),ss=sideSignFor(side);
   if(/cubital crease/.test(q)){
     const c=regionalGeometrySeed('elbow',side);if(c){c[supAxis]=elbowLevel(side);return {point:c,kind:'constructed-cubital-crease'};}
   }
@@ -1144,6 +1144,19 @@ function executeSemanticRelations(base,point,side){
       if(measure?.direction==='posterior'||/posteriorto|posteroinferiorto/.test(compactCue)){target[apAxis]=p[apAxis]-anteriorSign*amount;did=true;}
       if(did){executed.push(r.relation_id);continue;}
     }
+    if(r.relation_type==='relative-to'&&usable.length===0){
+      const raw=(r.argument_node_ids??[]).map(id=>String(semanticNodeById.get(id)?.source_raw||'').toLowerCase().replace(/-\s*/g,'')).join(' ');
+      const compactCue=String(r.cue_span?.source_raw||'').toLowerCase().replace(/[\s-]+/g,'');
+      const measure=measurements.find(m=>(r.argument_node_ids??[]).includes(m.anchor_landmark_id));
+      if(/anterior median line|posterior median line|median line/.test(raw)){
+        const amount=measure?.value?Number(measure.value)*(torsoHalfWidth(target[supAxis])/6):0;
+        if((measure?.direction==='lateral'||/lateralto/.test(compactCue))&&amount>0){
+          target[lrAxis]=bodyCenter[lrAxis]+(side==='left'?leftSign:-leftSign)*amount;
+          executed.push(r.relation_id);continue;
+        }
+        if(/online|samelevel/.test(compactCue)){executed.push(r.relation_id);continue;}
+      }
+    }
     if(r.relation_type==='surface-landmark')continue;
     if(r.relation_type==='reference-acupoint'||r.relation_type==='on-line'||r.relation_type==='fraction-along-line')continue;
     unresolved.push(r.relation_id);
@@ -1261,65 +1274,104 @@ const resultByKey=new Map(results.map(x=>[x.acupointId+':'+x.side,x]));
 const acupointById=new Map(acupoints.map(x=>[x.id,x]));
 
 
-function updateFromRelativeDefinition(item,text){
-  const pair=text.match(/([A-Z]{1,2}\d+)\s*(?:와|과)\s*([A-Z]{1,2}\d+)(?:을|를)\s*잇는\s*(?:곡선|선)/);
-  if(!pair)return false;
-  const a=resultByKey.get(pair[1]+':'+item.side), b=resultByKey.get(pair[2]+':'+item.side);
-  if(!a||!b)return false;
-  let target=null,rule=null;
-  if(/중점/.test(text)){target=a.position.map((v,i)=>(v+b.position[i])/2);rule='relative-midpoint';}
-  const vertical=text.match(/위쪽\s*(\d+)\/(\d+)(?:와|과)\s*아래쪽\s*(\d+)\/(\d+)\s*경계/);
-  if(vertical){
-    const f=Number(vertical[1])/Number(vertical[2]);
-    const upper=a.position[supAxis]>=b.position[supAxis]?a:b, lower=upper===a?b:a;
-    target=upper.position.map((v,i)=>v*(1-f)+lower.position[i]*f);rule='relative-vertical-fraction';
-  }
-  // A common WHO construction is "on the line connecting A with B" plus a
-  // proportional superior/inferior level.  The first pass can solve the level
-  // but cannot solve the line until A and B themselves have coordinates.
-  if(!target&&/B-cun/.test(text)){
-    const desired=item.validation.preProjectionTarget?.[supAxis];
-    const den=b.position[supAxis]-a.position[supAxis];
-    if(Number.isFinite(desired)&&Math.abs(den)>1e-6){
-      const f=Math.max(0,Math.min(1,(desired-a.position[supAxis])/den));
-      target=a.position.map((v,i)=>v+(b.position[i]-v)*f);
-      target[supAxis]=desired;
-      rule='relative-line-level';
+function referenceIdsForRelation(relation){
+  return (relation.argument_node_ids??[])
+    .map(id=>semanticNodeById.get(id)?.cross_reference_point_id)
+    .filter(Boolean)
+    .map(id=>String(id).replace(/\s+/g,''));
+}
+function fractionFromCue(cue){
+  const q=String(cue||'').toLowerCase().replace(/-\s*/g,' ');
+  const word={one:1,two:2,three:3,four:4};
+  const parseWord=(w)=>word[w]??Number(w);
+  let m=q.match(/(upper|medial|lateral)\s+(one|two|three|1|2|3)\s+(thirds?|fourths?)/);
+  if(!m)return null;
+  const n=parseWord(m[2]),d=m[3].startsWith('third')?3:4;
+  return {basis:m[1],fraction:n/d};
+}
+function deferredReferenceExecution(item){
+  const relations=semanticRelationsByPoint.get(item.acupointId)??[];
+  const text=acupointById.get(item.acupointId)?.locationKo||'';
+  let target=[...(item.validation.preProjectionTarget??item.position)];
+  const executed=[],locks={sup:false,lr:false,ap:false};
+  let changed=false;
+
+  for(const r of relations){
+    const refs=referenceIdsForRelation(r);
+    if(!refs.length)continue;
+    const points=refs.map(id=>resultByKey.get(id+':'+item.side)??resultByKey.get(id+':midline')).filter(Boolean);
+    if(!points.length)continue;
+    const cue=String(r.cue_span?.source_raw||'').toLowerCase().replace(/-\s*/g,' ');
+    const compact=cue.replace(/\s+/g,'');
+    const measurements=semanticMeasurementsByPoint.get(item.acupointId)??[];
+    const measure=measurements.find(m=>(r.argument_node_ids??[]).includes(m.anchor_landmark_id));
+    const amount=measure?.value?Number(measure.value)*contextCun(text,item.side):null;
+
+    if(r.relation_type==='same-level'&&points[0]){
+      target[supAxis]=points[0].position[supAxis];locks.sup=true;executed.push(r.relation_id);changed=true;continue;
+    }
+    if((r.relation_type==='midpoint-between'||r.relation_type==='between')&&points.length>=2){
+      for(let k=0;k<3;k++)target[k]=(points[0].position[k]+points[1].position[k])/2;
+      executed.push(r.relation_id);changed=true;continue;
+    }
+    if(r.relation_type==='relative-to'&&points[0]){
+      const p=points[0].position;let did=false;
+      if(amount!==null&&(measure?.direction==='superior'||/superior to|proximal to/.test(cue))){target[supAxis]=p[supAxis]+amount;locks.sup=true;did=true;}
+      if(amount!==null&&(measure?.direction==='inferior'||/inferior to|distal to/.test(cue))){target[supAxis]=p[supAxis]-amount;locks.sup=true;did=true;}
+      if(amount!==null&&(measure?.direction==='anterior'||/anterior to/.test(cue))){target[apAxis]=p[apAxis]+anteriorSign*amount;locks.ap=true;did=true;}
+      if(amount!==null&&(measure?.direction==='posterior'||/posterior to/.test(cue))){target[apAxis]=p[apAxis]-anteriorSign*amount;locks.ap=true;did=true;}
+      if(amount!==null&&(measure?.direction==='lateral'||/lateral to/.test(cue))){target[lrAxis]=p[lrAxis]+(item.side==='left'?leftSign:-leftSign)*amount;locks.lr=true;did=true;}
+      if(amount!==null&&(measure?.direction==='medial'||/medial to/.test(cue))){target[lrAxis]=p[lrAxis]-(item.side==='left'?leftSign:-leftSign)*amount;locks.lr=true;did=true;}
+      if(did){executed.push(r.relation_id);changed=true;continue;}
+    }
+    if(r.relation_type==='fraction-along-line'&&points.length>=2){
+      const frac=fractionFromCue(cue);
+      if(frac){
+        let a=points[0],b=points[1],f=frac.fraction;
+        if(frac.basis==='upper'){
+          if(a.position[supAxis]<b.position[supAxis]) [a,b]=[b,a];
+        }else if(frac.basis==='medial'){
+          if(Math.abs(a.position[lrAxis]-bodyCenter[lrAxis])>Math.abs(b.position[lrAxis]-bodyCenter[lrAxis])) [a,b]=[b,a];
+        }else if(frac.basis==='lateral'){
+          if(Math.abs(a.position[lrAxis]-bodyCenter[lrAxis])<Math.abs(b.position[lrAxis]-bodyCenter[lrAxis])) [a,b]=[b,a];
+        }
+        for(let k=0;k<3;k++)target[k]=a.position[k]+(b.position[k]-a.position[k])*f;
+        locks.sup=true;locks.lr=true;executed.push(r.relation_id);changed=true;continue;
+      }
+    }
+    if(r.relation_type==='on-line'&&points.length>=2){
+      const den=points[1].position[supAxis]-points[0].position[supAxis];
+      const desired=target[supAxis];
+      if(Math.abs(den)>1e-6&&Number.isFinite(desired)){
+        const f=Math.max(0,Math.min(1,(desired-points[0].position[supAxis])/den));
+        for(let k=0;k<3;k++)target[k]=points[0].position[k]+(points[1].position[k]-points[0].position[k])*f;
+        target[supAxis]=desired;locks.sup=true;locks.lr=true;executed.push(r.relation_id);changed=true;continue;
+      }
     }
   }
-  const lateral=text.match(/가쪽\s*(\d+)\/(\d+)(?:와|과)\s*안쪽\s*(\d+)\/(\d+)\s*경계/);
-  if(lateral){
-    const f=Number(lateral[1])/Number(lateral[2]);
-    const outer=Math.abs(a.position[lrAxis]-bodyCenter[lrAxis])>=Math.abs(b.position[lrAxis]-bodyCenter[lrAxis])?a:b;
-    const inner=outer===a?b:a;
-    target=outer.position.map((v,i)=>v*(1-f)+inner.position[i]*f);rule='relative-lateral-fraction';
-  }
-  if(!target)return false;
-  const pr=project(target,item.side,{sup:true,lr:true},projectionRegion(text,target));
+
+  if(!changed)return false;
+  const region=projectionRegion(text,target);
+  const pr=project(target,item.side,locks,region);
   item.position=pr.point.map(v=>+v.toFixed(4));
   item.validation.projectionDistance=+pr.distance.toFixed(4);
   item.validation.projectionDelta=pr.point.map((v,i)=>+(v-target[i]).toFixed(4));
-  item.validation.regionConstrained=true;
   item.validation.surfacePartId=pr.part;
   item.validation.preProjectionTarget=target.map(v=>+v.toFixed(4));
-  item.validation.relativeConstraint=rule;
-  if(rule==='relative-line-level'){
-    const unresolved=new Set(item.validation.unresolvedSemanticRelationIds??[]);
-    const rels=semanticRelationsByPoint.get(item.acupointId)??[];
-    for(const r of rels){
-      if(r.relation_type==='relative-to'&&/B-cun/i.test(String(r.cue_span?.source_raw||''))) unresolved.delete(r.relation_id);
-    }
-    item.validation.unresolvedSemanticRelationIds=[...unresolved];
-    item.validation.deferredReferenceOperation='line-level';
-    item.validation.deferredReferenceOperationCount=(item.validation.deferredReferenceOperationCount??0)+1;
-  }
-  if(item.confidence==='low')item.confidence='moderate';
+  const unresolved=new Set(item.validation.unresolvedSemanticRelationIds??[]);
+  for(const id of executed)unresolved.delete(id);
+  item.validation.unresolvedSemanticRelationIds=[...unresolved];
+  item.validation.nativeRelationIds=[...new Set([...(item.validation.nativeRelationIds??[]),...executed])];
+  item.validation.nativeOperationCount=item.validation.nativeRelationIds.length;
+  item.validation.deferredReferenceOperations=executed;
   return true;
 }
-for(const item of results){
-  const text=acupointById.get(item.acupointId)?.locationKo||'';
-  updateFromRelativeDefinition(item,text);
+for(let pass=0;pass<3;pass++){
+  let changed=0;
+  for(const item of results)if(deferredReferenceExecution(item))changed++;
+  if(!changed)break;
 }
+
 function pointToBoundsDistance(point,st){
   let d2=0;
   for(let i=0;i<3;i++){
@@ -1398,6 +1450,7 @@ for(const item of results){
   const clamp=Math.hypot(...(item.validation.envelopeClampDelta??[0,0,0]));
   item.validation.envelopeClampMagnitude=+clamp.toFixed(4);
   if(clamp>bodyDiag*.02) reasons.push('large-anatomical-envelope-clamp');
+  if(item.validation.projectionDistance>bodyDiag*.035) reasons.push('large-surface-projection-displacement');
   item.validation.reviewReasons=[...new Set(reasons)];
   item.status=reasons.length?'review-needed':'validated';
 }
