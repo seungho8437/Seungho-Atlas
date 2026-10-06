@@ -600,10 +600,21 @@ function applyWhoConstraints(input,text,side){
     if(/발허리발가락관절[^,.]{0,20}몸쪽/.test(text)){t[supAxis]+=cunY*.65;count++;}
   }
   if(/아래팔/.test(text)&&sideSign){
+    const radius=statsSeed('FMA23463',side),ulna=statsSeed('FMA23466',side);
     const half=localHalfWidth(t[supAxis]);
-    if(/뒤가쪽/.test(text)) {t[lrAxis]=bodyCenter[lrAxis]+sideSign*half*.72;count++;}
-    if(/노뼈와\s*자뼈\s*사이/.test(text)) {t[lrAxis]=bodyCenter[lrAxis]+sideSign*half*.55;count++;}
-    if(/자뼈\s*바로\s*노쪽|뒤안쪽/.test(text)) {t[lrAxis]=bodyCenter[lrAxis]+sideSign*half*.40;count++;}
+    if(/노뼈와\s*자뼈\s*사이/.test(text)&&radius&&ulna){
+      t[lrAxis]=(radius.center[lrAxis]+ulna.center[lrAxis])/2;count++;
+    } else if(/자뼈\s*바로\s*노쪽/.test(text)&&radius&&ulna){
+      // Move from ulna toward radius, preserving the local forearm frame.
+      t[lrAxis]=ulna.center[lrAxis]+(radius.center[lrAxis]-ulna.center[lrAxis])*.35;count++;
+    } else if(/뒤가쪽/.test(text)&&radius){
+      t[lrAxis]=radius.center[lrAxis];count++;
+    } else if(/뒤안쪽/.test(text)&&ulna){
+      t[lrAxis]=ulna.center[lrAxis];count++;
+    } else {
+      if(/노뼈/.test(text)){t[lrAxis]+=sideSign*half*.10;count++;}
+      if(/자뼈/.test(text)){t[lrAxis]-=sideSign*half*.10;count++;}
+    }
   }
   if(/다섯째\s*손허리손가락관절/.test(text)){
     if(/먼쪽/.test(text)){t[supAxis]-=cunY*1.4;count++;}
@@ -1032,6 +1043,14 @@ function specializedLandmark(raw,side){
   if(/gastrocnemius/.test(q)){
     const c=averageCenters([statsSeed('FMA45956',side),statsSeed('FMA45959',side)]);
     if(c)return {point:c,kind:'gastrocnemius-bellies'};
+  }
+  if(/biceps femoris tendon/.test(q)){
+    const a=statsSeed('FMA45887',side),b=statsSeed('FMA45890',side),c=averageCenters([a,b]);
+    if(c){
+      c[supAxis]=Math.min(a?.min[supAxis]??c[supAxis],b?.min[supAxis]??c[supAxis]);
+      c[apAxis]-=anteriorSign*bodyDiag*.008;
+      return {point:c,kind:'derived-biceps-femoris-distal-tendon'};
+    }
   }
   if(/flexor carpi ulnaris/.test(q)){
     const c=averageCenters([statsSeed('FMA38615',side),statsSeed('FMA38616',side)]);
