@@ -28,11 +28,14 @@ def main():
    "front":{"screen_x":[-1,0,0],"screen_y":[0,1,0],"depth":[0,0,1],"label":"FRONT"},
    "back":{"screen_x":[1,0,0],"screen_y":[0,1,0],"depth":[0,0,-1],"label":"BACK"},
    "left":{"screen_x":[0,0,-1],"screen_y":[0,1,0],"depth":[1,0,0],"label":"LEFT"},
-   "right":{"screen_x":[0,0,1],"screen_y":[0,1,0],"depth":[-1,0,0],"label":"RIGHT"}
+   "right":{"screen_x":[0,0,1],"screen_y":[0,1,0],"depth":[-1,0,0],"label":"RIGHT"},
+   "front_oblique":{"screen_x":[-0.7071067811865476,0,0.7071067811865476],"screen_y":[0,1,0],"depth":[0.7071067811865476,0,0.7071067811865476],"label":"FRONT-OBLIQUE"},
+   "back_oblique":{"screen_x":[0.7071067811865476,0,-0.7071067811865476],"screen_y":[0,1,0],"depth":[-0.7071067811865476,0,-0.7071067811865476],"label":"BACK-OBLIQUE"}
  }
  contract={"schema_version":"1.0.0","artifact":"stage1-review-camera-contract",
    "coordinate_basis":{"left":left,"superior":superior,"anterior":anterior,"origin":origin},
    "cameras":cameras,
+   "rendering":{"normal_shading":True,"depth_cue":True,"wireframe_overlay":True,"oblique_views":True,"acupoints_rendered":False},
    "invariants":{"front_back_depth_opposite":True,"left_right_depth_opposite":True,
      "front_back_screen_x_mirrored":True,"left_right_screen_x_mirrored":True,
      "depth_aware_surface_rendering":True,"raw_world_xyz_projection":False}}
@@ -56,8 +59,12 @@ canvas{{width:100%;height:620px;background:white;border:1px solid #bbb}}
 .note{{max-width:1050px}}@media(max-width:760px){{.grid{{grid-template-columns:1fr}}}}
 </style>
 <h1>C v3 · Stage 1 spatial substrate visual QC</h1>
-<p class="note">No acupoints are rendered. Surface triangles are projected in the validated patient frame with depth-aware orthographic cameras. FRONT/BACK and LEFT/RIGHT are true opposite views. Frame lines and joint points are overlaid for QC.</p>
-<div class="grid"><canvas id="front" width="700" height="620"></canvas><canvas id="back" width="700" height="620"></canvas><canvas id="left" width="700" height="620"></canvas><canvas id="right" width="700" height="620"></canvas></div>
+<p class="note">No acupoints are rendered. The skin is rendered with depth ordering, normal/depth shading, and a light triangle wireframe so occiput, back, buttocks, heel and foot dorsum can be visually distinguished. FRONT/BACK and LEFT/RIGHT are true opposite cameras; oblique views are added for anatomical surface confirmation.</p>
+<div class="grid">
+<canvas id="front" width="700" height="620"></canvas><canvas id="back" width="700" height="620"></canvas>
+<canvas id="left" width="700" height="620"></canvas><canvas id="right" width="700" height="620"></canvas>
+<canvas id="front_oblique" width="700" height="620"></canvas><canvas id="back_oblique" width="700" height="620"></canvas>
+</div>
 <script>
 const verts={json.dumps(verts,separators=(',',':'))};
 const inds={json.dumps(inds,separators=(',',':'))};
@@ -68,6 +75,9 @@ const lines={json.dumps(lines,separators=(',',':'))};
 const joints={json.dumps(joints,separators=(',',':'))};
 function dot(a,b){{return a[0]*b[0]+a[1]*b[1]+a[2]*b[2]}}
 function sub(a,b){{return [a[0]-b[0],a[1]-b[1],a[2]-b[2]]}}
+function cross(a,b){{return [a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]]}}
+function norm(a){{return Math.hypot(a[0],a[1],a[2])}}
+function unit(a){{const n=norm(a)||1;return [a[0]/n,a[1]/n,a[2]/n]}}
 function patient(p){{const r=sub(p,origin);return [dot(r,basis.left),dot(r,basis.superior),dot(r,basis.anterior)]}}
 const pv=verts.map(patient);
 function proj(q,cam){{return [dot(q,cam.screen_x),dot(q,cam.screen_y),dot(q,cam.depth)]}}
@@ -75,20 +85,30 @@ function draw(id){{
  const c=document.getElementById(id),ctx=c.getContext('2d'),cam=cameras[id];
  ctx.clearRect(0,0,c.width,c.height);
  const projected=pv.map(q=>proj(q,cam));
- let xmin=Infinity,xmax=-Infinity,ymin=Infinity,ymax=-Infinity;
- for(const q of projected){{xmin=Math.min(xmin,q[0]);xmax=Math.max(xmax,q[0]);ymin=Math.min(ymin,q[1]);ymax=Math.max(ymax,q[1])}}
+ let xmin=Infinity,xmax=-Infinity,ymin=Infinity,ymax=-Infinity,zmin=Infinity,zmax=-Infinity;
+ for(const q of projected){{xmin=Math.min(xmin,q[0]);xmax=Math.max(xmax,q[0]);ymin=Math.min(ymin,q[1]);ymax=Math.max(ymax,q[1]);zmin=Math.min(zmin,q[2]);zmax=Math.max(zmax,q[2])}}
  const padx=34,pady=36,sx=(c.width-2*padx)/(xmax-xmin),sy=(c.height-2*pady)/(ymax-ymin),scale=Math.min(sx,sy);
  const X=x=>c.width/2+(x-(xmin+xmax)/2)*scale, Y=y=>c.height/2-(y-(ymin+ymax)/2)*scale;
  const tris=[];
  for(let k=0;k<inds.length;k+=3){{
    const ia=inds[k],ib=inds[k+1],ic=inds[k+2];
-   tris.push([(projected[ia][2]+projected[ib][2]+projected[ic][2])/3,ia,ib,ic]);
+   const va=pv[ia],vb=pv[ib],vc=pv[ic];
+   const n=unit(cross(sub(vb,va),sub(vc,va)));
+   tris.push([(projected[ia][2]+projected[ib][2]+projected[ic][2])/3,ia,ib,ic,n]);
  }}
  tris.sort((a,b)=>a[0]-b[0]);
- ctx.fillStyle='#d1d5db';
+ const light=unit([0.35,0.55,0.76]);
  for(const t of tris){{
-   const a=projected[t[1]],b=projected[t[2]],d=projected[t[3]];
+   const a=projected[t[1]],b=projected[t[2]],d=projected[t[3]],n=t[4];
+   const facing=Math.abs(dot(n,cam.depth)),lam=Math.abs(dot(n,light)),depth=(t[0]-zmin)/(zmax-zmin||1);
+   const shade=Math.round(Math.max(82,Math.min(226,92+78*facing+36*lam+20*depth)));
+   ctx.fillStyle='rgb('+shade+','+shade+','+shade+')';
    ctx.beginPath();ctx.moveTo(X(a[0]),Y(a[1]));ctx.lineTo(X(b[0]),Y(b[1]));ctx.lineTo(X(d[0]),Y(d[1]));ctx.closePath();ctx.fill();
+ }}
+ ctx.strokeStyle='rgba(40,40,40,0.10)';ctx.lineWidth=.28;
+ for(let k=0;k<inds.length;k+=3){{
+   const a=projected[inds[k]],b=projected[inds[k+1]],d=projected[inds[k+2]];
+   ctx.beginPath();ctx.moveTo(X(a[0]),Y(a[1]));ctx.lineTo(X(b[0]),Y(b[1]));ctx.lineTo(X(d[0]),Y(d[1]));ctx.closePath();ctx.stroke();
  }}
  ctx.lineWidth=2;
  for(const l of lines){{
@@ -101,8 +121,8 @@ function draw(id){{
  }}
  ctx.fillStyle='#111';ctx.font='16px system-ui';ctx.fillText(cam.label,12,22);
 }}
-for(const m of ['front','back','left','right'])draw(m);
+for(const m of ['front','back','left','right','front_oblique','back_oblique'])draw(m);
 </script>'''
  p=Path(args.out);p.parent.mkdir(parents=True,exist_ok=True);p.write_text(html,encoding="utf-8")
- print(json.dumps({"out":str(p),"contract":str(cp),"vertices":len(verts),"triangles":len(inds)//3,"frame_lines":len(lines),"joints":len(joints)}))
+ print(json.dumps({"out":str(p),"contract":str(cp),"vertices":len(verts),"triangles":len(inds)//3,"views":len(cameras),"frame_lines":len(lines),"joints":len(joints)}))
 if __name__=="__main__":main()
