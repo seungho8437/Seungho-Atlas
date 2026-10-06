@@ -442,14 +442,13 @@ function applyWhoConstraints(input,text,side){
     [/손등쪽\s*손목주름[^,.]{0,35}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/, null],
     [/팔오금주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .55],
     [/무릎뼈바닥[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .215],
-    [/ST35[^,.]{0,35}?(위로|위쪽으로|아래로|아래쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/, null],
     [/팔꿈치머리\s*융기[^,.]{0,35}?(몸쪽|먼쪽|위|아래)으로\s*(\d+(?:\.\d+)?)\s*B-cun/, .55],
   ];
   for(const [re,base] of refs){
     const m=text.match(re); if(!m)continue;
     const n=Number(m[2]), up=(m[1].startsWith('위')||m[1].startsWith('몸쪽'));
-    let anchorLevel=base===null?(/손목주름/.test(m[0])?wristLevel(side):/ST35/.test(m[0])?kneeLevel(side):null):norm(supAxis,base);
-    const localCun=/손목주름/.test(m[0])?forearmCun(side):/ST35/.test(m[0])?legCun(side):cunY;
+    let anchorLevel=base===null?(/손목주름/.test(m[0])?wristLevel(side):null):norm(supAxis,base);
+    const localCun=/손목주름/.test(m[0])?forearmCun(side):cunY;
     if(anchorLevel===null)anchorLevel=t[supAxis];
     t[supAxis]=anchorLevel+(up?1:-1)*n*localCun; count++; break;
   }
