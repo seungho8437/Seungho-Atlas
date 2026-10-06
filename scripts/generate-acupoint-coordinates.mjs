@@ -840,6 +840,35 @@ function specializedLandmark(raw,side){
   if(/anterior median line/.test(q)){const c=regionTarget('anterior abdomen',side);c[lrAxis]=bodyCenter[lrAxis];return {point:c,kind:'anterior-median-line'};}
   if(/pupil/.test(q)){const st=pupilAnchor(side);if(st)return {point:[...st],kind:'eyeball-anterior-chamber-proxy'};}
   if(/navicular bone/.test(q)){const st=statsSeed('FMA24499',side);if(st)return {point:[...st.center],kind:'fma-navicular'};}
+  if(/ring(?: finger)?$|\bring\b/.test(q)){const st=statsSeed('FMA23921',side);if(st)return {point:[...st.center],stats:st,kind:'fma-ring-proximal-phalanx'};}
+  if(/little fingers?|little finger/.test(q)){const st=statsSeed('FMA23922',side);if(st)return {point:[...st.center],stats:st,kind:'fma-little-proximal-phalanx'};}
+  if(/first and second metatarsal|first metatarsal/.test(q)){const a=statsSeed('FMA24502',side),b=statsSeed('FMA24503',side),c=averageCenters([a,b]);if(c)return {point:c,kind:'metatarsal-pair'};}
+  if(/second metatarsal/.test(q)){const st=statsSeed('FMA24503',side);if(st)return {point:[...st.center],stats:st,kind:'fma-second-metatarsal'};}
+  if(/intermediate cuneiform/.test(q)){const st=statsSeed('FMA24519',side);if(st)return {point:[...st.center],stats:st,kind:'fma-intermediate-cuneiform'};}
+  if(/lateral epicondyle.*humerus/.test(q)){
+    const st=statsSeed('FMA13303',side);if(st){const c=[...st.center];c[supAxis]=st.min[supAxis];c[lrAxis]=ss*leftSign>0?st.max[lrAxis]:st.min[lrAxis];return {point:c,stats:st,kind:'derived-lateral-humeral-epicondyle'};}
+  }
+  if(/medial epicondyle.*humerus/.test(q)){
+    const st=statsSeed('FMA13303',side);if(st){const c=[...st.center];c[supAxis]=st.min[supAxis];c[lrAxis]=ss*leftSign>0?st.min[lrAxis]:st.max[lrAxis];return {point:c,stats:st,kind:'derived-medial-humeral-epicondyle'};}
+  }
+  if(/olecranon/.test(q)){
+    const st=statsSeed('FMA23466',side);if(st){const c=[...st.center];c[supAxis]=st.max[supAxis];c[apAxis]=anteriorSign>0?st.min[apAxis]:st.max[apAxis];return {point:c,stats:st,kind:'derived-olecranon'};}
+  }
+  if(/medial condyle.*tibia/.test(q)){
+    const st=statsSeed('FMA24476',side);if(st){const c=[...st.center];c[supAxis]=st.max[supAxis];c[lrAxis]=ss*leftSign>0?st.min[lrAxis]:st.max[lrAxis];return {point:c,stats:st,kind:'derived-medial-tibial-condyle'};}
+  }
+  if(/medial border.*tibia/.test(q)){
+    const st=statsSeed('FMA24476',side);if(st){const c=[...st.center];c[lrAxis]=ss*leftSign>0?st.min[lrAxis]:st.max[lrAxis];return {point:c,stats:st,kind:'derived-medial-tibial-border'};}
+  }
+  if(/external occipital protuber/.test(q)){
+    const st=conceptStats('FMA52735');if(st){const c=[...st.center];c[lrAxis]=bodyCenter[lrAxis];c[apAxis]=anteriorSign>0?st.min[apAxis]:st.max[apAxis];c[supAxis]=st.center[supAxis];return {point:c,stats:st,kind:'occipital-bone-posterior-midline'};}
+  }
+  if(/extensor digi.*torum longus tendon/.test(q)){
+    const st=statsSeed('FMA22534',side);if(st){const c=[...st.center];c[supAxis]=st.min[supAxis];return {point:c,stats:st,kind:'derived-edl-distal-tendon'};}
+  }
+  if(/extensor hallucis longus/.test(q)){
+    const st=statsSeed('FMA22533',side);if(st){const c=[...st.center];c[supAxis]=st.min[supAxis];return {point:c,stats:st,kind:'derived-ehl-distal-tendon'};}
+  }
   return null;
 }
 function resolveSemanticNode(nodeId,side){
@@ -864,7 +893,7 @@ function executeSemanticRelations(base,point,side){
     const resolved=(r.argument_node_ids??[]).map(id=>({id,value:resolveSemanticNode(id,side)}));
     const usable=resolved.filter(x=>x.value?.point);
     const cue=String(r.cue_span?.source_raw||'').toLowerCase();
-    if((r.relation_type==='between'||r.relation_type==='midpoint-between')&&usable.length>=2){
+    if((r.relation_type==='between'||r.relation_type==='midpoint-between'||r.relation_type==='at-junction')&&usable.length>=2){
       for(let k=0;k<3;k++)target[k]=(usable[0].value.point[k]+usable[1].value.point[k])/2;
       executed.push(r.relation_id);continue;
     }
@@ -881,12 +910,15 @@ function executeSemanticRelations(base,point,side){
     if(r.relation_type==='relative-to'&&usable.length>=1){
       const a=usable[0],p=a.value.point,measure=measurements.find(m=>m.anchor_landmark_id===a.id);
       const amount=measure?.value?Number(measure.value)*contextCun(point.locationKo||'',side):Math.max(bodyDiag*.006,(a.value.stats?.diag||0)*.12);
-      if(measure?.direction==='lateral'||/lateral to/.test(cue)){target[lrAxis]=p[lrAxis]+(side==='left'?leftSign:-leftSign)*amount;executed.push(r.relation_id);continue;}
-      if(measure?.direction==='superior'||/superior to|proximal to/.test(cue)){target[supAxis]=p[supAxis]+amount;executed.push(r.relation_id);continue;}
-      if(measure?.direction==='inferior'||/inferior to|distal to/.test(cue)){target[supAxis]=p[supAxis]-amount;executed.push(r.relation_id);continue;}
-      if(measure?.direction==='anterior'||/anterior to/.test(cue)){target[apAxis]=p[apAxis]+anteriorSign*amount;executed.push(r.relation_id);continue;}
-      if(measure?.direction==='posterior'||/posterior to/.test(cue)){target[apAxis]=p[apAxis]-anteriorSign*amount;executed.push(r.relation_id);continue;}
-      if(/medial to/.test(cue)){target[lrAxis]=p[lrAxis]-(side==='left'?leftSign:-leftSign)*amount;executed.push(r.relation_id);continue;}
+      const compactCue=cue.replace(/[\s-]+/g,'');
+      let did=false;
+      if(measure?.direction==='lateral'||/lateralto|radialto/.test(compactCue)){target[lrAxis]=p[lrAxis]+(side==='left'?leftSign:-leftSign)*amount;did=true;}
+      if(/medialto|ulnarto/.test(compactCue)){target[lrAxis]=p[lrAxis]-(side==='left'?leftSign:-leftSign)*amount;did=true;}
+      if(measure?.direction==='superior'||/superiorto|proximalto/.test(compactCue)){target[supAxis]=p[supAxis]+amount;did=true;}
+      if(measure?.direction==='inferior'||/inferiorto|distalto|posteroinferiorto/.test(compactCue)){target[supAxis]=p[supAxis]-amount;did=true;}
+      if(measure?.direction==='anterior'||/anteriorto|anteroinferiorto/.test(compactCue)){target[apAxis]=p[apAxis]+anteriorSign*amount;did=true;}
+      if(measure?.direction==='posterior'||/posteriorto|posteroinferiorto/.test(compactCue)){target[apAxis]=p[apAxis]-anteriorSign*amount;did=true;}
+      if(did){executed.push(r.relation_id);continue;}
     }
     if(r.relation_type==='surface-landmark')continue;
     if(r.relation_type==='reference-acupoint'||r.relation_type==='on-line'||r.relation_type==='fraction-along-line')continue;
