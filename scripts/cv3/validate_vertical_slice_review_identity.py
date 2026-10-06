@@ -57,5 +57,5 @@ def main():
  out={"schema_version":"1.0.0","test":"vertical-slice-review-solver-geometry-identity","status":status,"checks":checks,"errors":errors,
       "contract":"Review surface vertex sets and solver surface vertex sets must have identical SHA-256; review HTML may not define anatomical masks."}
  p=Path(args.out);p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(out,indent=2)+"\n")
- print(json.dumps({"status":status,"checks":checks,"errors":len(errors)}));raise SystemExit(0 if status=="PASS" else 1)
+ print(json.dumps({"status":status,"checks":checks,"errors":len(errors),"error_details":errors}));raise SystemExit(0 if status=="PASS" else 1)
 if __name__=="__main__":main()
