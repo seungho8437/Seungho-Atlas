@@ -251,6 +251,46 @@ const regionRules = [
   [/pelvis|샅|회음|두덩|치골|엉덩|볼기|천골|엉치/, .52, .50],
 ];
 
+function unionStats(items){
+  const xs=items.filter(Boolean);if(!xs.length)return null;
+  const min=[Infinity,Infinity,Infinity],max=[-Infinity,-Infinity,-Infinity];
+  for(const st of xs)for(let k=0;k<3;k++){min[k]=Math.min(min[k],st.min[k]);max[k]=Math.max(max[k],st.max[k]);}
+  return {min,max,center:min.map((v,k)=>(v+max[k])/2)};
+}
+function anatomicalEnvelope(text,side){
+  let st=null,margin=[.045,.035,.065];
+  if(/손목|wrist/i.test(text)){
+    const id=side==='left'?'FMA40121':side==='right'?'FMA40120':null;
+    st=id?conceptStats(id):null;margin=[.050,.035,.075];
+  } else if(/손등|손바닥|손가락|손허리|hand|finger|metacarp/i.test(text)){
+    st=unionStats([statsSeed('FMA23900',side)]);margin=[.060,.060,.080];
+  } else if(/아래팔|전완|forearm/i.test(text)){
+    st=unionStats([statsSeed('FMA23463',side),statsSeed('FMA23466',side)]);margin=[.050,.045,.070];
+  } else if(/위팔|상완|upper arm/i.test(text)){
+    st=unionStats([statsSeed('FMA13303',side)]);margin=[.055,.050,.075];
+  } else if(/무릎|오금|knee|poplite/i.test(text)){
+    st=unionStats([statsSeed('FMA24485',side),statsSeed('FMA24476',side),statsSeed('FMA9611',side)]);margin=[.055,.045,.070];
+  } else if(/종아리|정강|하퇴|아래다리|\bleg\b/i.test(text)){
+    st=unionStats([statsSeed('FMA24476',side),statsSeed('FMA24479',side)]);margin=[.050,.045,.070];
+  } else if(/발목|복사|ankle|malleol/i.test(text)){
+    st=unionStats([statsSeed('FMA9708',side),statsSeed('FMA24476',side),statsSeed('FMA24479',side)]);margin=[.050,.035,.075];
+    if(st){const y=ankleLevel(side);st.min[supAxis]=y-.065;st.max[supAxis]=y+.065;}
+  } else if(/발등|발바닥|발가락|발허리|foot|toe|metatars/i.test(text)){
+    st=unionStats([statsSeed('FMA24496',side),statsSeed('FMA24502',side),statsSeed('FMA24503',side)]);margin=[.060,.050,.090];
+  }
+  if(!st)return null;
+  return {min:st.min.map((v,k)=>v-margin[k]),max:st.max.map((v,k)=>v+margin[k])};
+}
+function constrainToEnvelope(target,envelope){
+  if(!envelope)return {target:[...target],delta:[0,0,0],clamped:false};
+  const out=[...target],delta=[0,0,0];let clamped=false;
+  for(let k=0;k<3;k++){
+    const v=Math.max(envelope.min[k],Math.min(envelope.max[k],out[k]));
+    delta[k]=v-out[k];if(Math.abs(delta[k])>1e-9)clamped=true;out[k]=v;
+  }
+  return {target:out,delta,clamped};
+}
+
 function regionTarget(text,side){
   const geometrySeed=regionalGeometrySeed(text,side);
   if(geometrySeed){
@@ -1023,7 +1063,11 @@ const results=[];
 for(const p of acupoints){
   const sides=p.laterality==='midline'?['midline']:['left','right'];
   for(const side of sides){
-    const {target,specific,rels,whoConstraints,textLandmarkCount,nativeRelationIds,nativeOperationCount,unresolvedSemanticRelationIds,semanticMeasurementCount}=relationTarget(p,side);
+    const resolved=relationTarget(p,side);
+    const envelope=anatomicalEnvelope(p.locationKo||'',side);
+    const constrained=constrainToEnvelope(resolved.target,envelope);
+    const target=constrained.target;
+    const {specific,rels,whoConstraints,textLandmarkCount,nativeRelationIds,nativeOperationCount,unresolvedSemanticRelationIds,semanticMeasurementCount}=resolved;
     if(side==='left' && Math.sign((target[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) target[lrAxis]=bodyCenter[lrAxis]+leftSign*Math.abs(target[lrAxis]-bodyCenter[lrAxis]);
     if(side==='right' && Math.sign((target[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) target[lrAxis]=bodyCenter[lrAxis]-leftSign*Math.abs(target[lrAxis]-bodyCenter[lrAxis]);
     if(side==='midline') target[lrAxis]=bodyCenter[lrAxis];
@@ -1046,7 +1090,7 @@ for(const p of acupoints){
     results.push({
       acupointId:p.id,side,position:projected.point.map(v=>+v.toFixed(4)),model:'BodyParts3D-4.0',status:'validated',
       method:'WHO+B-v2.1-native-landmarks+laterality+surface-projection',confidence,
-      validation:{surfaceProjected:surfaceOk,lateralityConsistent:sideOk,projectionDistance:+projected.distance.toFixed(4),projectionDelta:projected.point.map((v,i)=>+(v-target[i]).toFixed(4)),regionConstrained:true,surfacePartId:projected.part,preProjectionTarget:target.map(v=>+v.toFixed(4)),relationCount:rels,specificLandmarkCount:specific,whoConstraintCount:whoConstraints,whoTextLandmarkCount:textLandmarkCount,semanticGraphVersion:semanticGraph.schema_version,nativeOperationCount,nativeRelationIds,unresolvedSemanticRelationIds,semanticMeasurementCount},
+      validation:{surfaceProjected:surfaceOk,lateralityConsistent:sideOk,projectionDistance:+projected.distance.toFixed(4),projectionDelta:projected.point.map((v,i)=>+(v-target[i]).toFixed(4)),regionConstrained:true,surfacePartId:projected.part,preProjectionTarget:target.map(v=>+v.toFixed(4)),relationCount:rels,specificLandmarkCount:specific,whoConstraintCount:whoConstraints,whoTextLandmarkCount:textLandmarkCount,semanticGraphVersion:semanticGraph.schema_version,nativeOperationCount,nativeRelationIds,unresolvedSemanticRelationIds,semanticMeasurementCount,anatomicalEnvelopeApplied:!!envelope,envelopeClampDelta:constrained.delta.map(v=>+v.toFixed(4)),envelopeClamped:constrained.clamped},
       sourceIds:['WHO_ACUPOINT_2008','BODY_PARTS_3D_4','TARA_ACUPOINT_CURATED']
     });
   }
