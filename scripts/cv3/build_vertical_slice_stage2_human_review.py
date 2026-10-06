@@ -144,6 +144,7 @@ def make_projection(point,b_source,condition_source):
  for co in conditions:
   if co.get("source_statement_id"):
    edges.append({"from":co["condition_id"],"to":co["source_statement_id"],"kind":"condition_to_statement"})
+ edges=sorted(edges,key=lambda e:(e["kind"],e["from"],e["to"]))
  block=derive_blocking(point,b_by_id)
  # Preserve source record order; this is not claimed to be timestamped runtime order.
  order=(list(point["landmarks"].keys())+list(point["measurements"].keys())+
