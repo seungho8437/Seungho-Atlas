@@ -1,0 +1,51 @@
+name: Publish B v2.1 semantic graph
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/korean-tcm-knowledge
+    paths:
+      - scripts/data/anatomy-acupoint-relations-v2.1.json.gz.b64.txt
+      - .github/workflows/publish-b-v2.1.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/korean-tcm-knowledge
+      - name: Decode audited B v2.1 graph
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64,gzip,hashlib,json
+          src=Path('scripts/data/anatomy-acupoint-relations-v2.1.json.gz.b64.txt')
+          raw=gzip.decompress(base64.b64decode(src.read_text().strip()))
+          expected='8126e20938a478a2d214f4a8487cabeebc8f3115f7a81ad30e46b594958fb2c1'
+          actual=hashlib.sha256(raw).hexdigest()
+          assert actual==expected,(actual,expected)
+          g=json.loads(raw)
+          assert g.get('artifact')=='anatomy-acupoint-relations-v2.1.json'
+          assert len(g.get('source_statements',[]))==583
+          dst=Path('public/knowledge/anatomy-acupoint-relations-v2.1.json')
+          dst.parent.mkdir(parents=True,exist_ok=True)
+          dst.write_bytes(raw)
+          print(actual)
+          PY
+      - name: Commit audited graph
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/knowledge/anatomy-acupoint-relations-v2.1.json
+          if git diff --cached --quiet; then
+            echo "No graph changes."
+          else
+            git commit -m "data: publish independently audited acupoint relation graph v2.1"
+            git pull --rebase origin feature/korean-tcm-knowledge
+            git push origin HEAD:feature/korean-tcm-knowledge
+          fi
