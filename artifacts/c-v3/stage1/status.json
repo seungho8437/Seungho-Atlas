@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-stage1-status",
+  "stage": "Stage 1 — Spatial substrate",
+  "status": "AUTOMATIC_VALIDATION_PASS_HUMAN_REVIEW_PENDING",
+  "validated_commit": "a0f2289e3d2b2eeb97bac1333e0658eba814bc0f",
+  "workflow_run_id": 37422228864,
+  "workflow_conclusion": "success",
+  "input": {
+    "atlas_sha256": "c359f4bcd2cba90b7411d66d5e9fc04dc81294d46cd5c1e8b212c824f2e5bbee",
+    "bodyparts3d_parts": 2234,
+    "concepts": 3432,
+    "total_triangles": 2288268,
+    "skin_part_id": "FJ2810"
+  },
+  "validation": {
+    "atlas_integrity": {
+      "status": "PASS"
+    },
+    "spatial_kernel_synthetic": {
+      "status": "PASS"
+    },
+    "registry": {
+      "status": "PASS",
+      "checks": 85447,
+      "errors": 0
+    },
+    "surface_topology": {
+      "status": "PASS",
+      "skin_vertices": 22902,
+      "skin_triangles": 44744,
+      "connected_components": 89,
+      "degenerate_triangles": 0,
+      "nonmanifold_edges": 1,
+      "warnings": [
+        "SOURCE_NONMANIFOLD_EDGES: 1; modeled explicitly under component-aware/non-manifold-safe contract"
+      ],
+      "errors": 0
+    },
+    "frames": {
+      "status": "PASS",
+      "checks": 131,
+      "errors": 0
+    },
+    "atlas_backed_queries": {
+      "status": "PASS",
+      "sampled_triangles": 48,
+      "plane_tests": 3,
+      "errors": 0
+    },
+    "human_visual_review": {
+      "status": "PENDING"
+    }
+  },
+  "implementation_contract": {
+    "acupoint_specific_logic": false,
+    "legacy_coordinate_input": false,
+    "exclusive_region_partition": false,
+    "source_surface_model": "component-aware indexed triangle surface",
+    "next_stage_allowed": false,
+    "reason": "Stage 2 remains blocked until Stage 1 human visual review is accepted."
+  },
+  "deployment": {
+    "coordinate_output_generated": false,
+    "production_artifact_generated": false
+  }
+}
