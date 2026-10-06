@@ -13,8 +13,19 @@ KNOWN={"TE20","ST10","LI17","LI18","BL17","BL23","BL25","ST9"}
 SUBFEATURES=("superior border","inferior border","anterior border","posterior border","free end","midpoint","centre","center","margin","edge","angle","apex","border","end")
 
 def norm(s):return re.sub(r"[^a-z0-9]+"," ",(s or "").lower()).strip()
+def sf_types(raw):
+ n=norm(raw)
+ n=re.sub(r"\bborders\b","border",n);n=re.sub(r"\bmargins\b","margin",n);n=re.sub(r"\bedges\b","edge",n);n=re.sub(r"\bends\b","end",n);n=re.sub(r"\bangles\b","angle",n)
+ out=[]
+ if re.search(r"anterior\s+(?:and\s+posterior\s+)?border",n):out.append("anterior border")
+ if re.search(r"(?:anterior\s+and\s+)?posterior\s+border",n):out.append("posterior border")
+ for x in ("superior border","inferior border","free end","midpoint","centre","center","margin","edge","angle","apex"):
+  if x in n and x not in out:out.append(x)
+ if "border" in n and not any(x.endswith("border") for x in out):out.append("border")
+ if re.search(r"\bend\b",n) and "free end" not in out:out.append("end")
+ return out
 def sf(raw):
- n=norm(raw);return next((x for x in SUBFEATURES if x in n),None)
+ xs=sf_types(raw);return xs[0] if len(xs)==1 else None
 def identity(rec):
  g=rec.get("geometry") or {}
  if g.get("geometry_hash"):return "hash:"+g["geometry_hash"]
@@ -37,7 +48,7 @@ def contained_children(arg_id,bindings,bnodes):
  for b in bindings:
   cs=span_info(b["child_landmark_id"]);ps=span_info(b["parent_landmark_id"])
   if not cs or not ps or cs[0]!=a[0] or ps[0]!=a[0]:continue
-  if a[1]<=cs[1] and cs[2]<=a[2] and a[1]<=ps[1] and ps[2]<=a[2] and sf(bnodes.get(b["child_landmark_id"],{}).get("source_raw")):
+  if a[1]<=cs[1] and cs[2]<=a[2] and a[1]<=ps[1] and ps[2]<=a[2] and sf_types(bnodes.get(b["child_landmark_id"],{}).get("source_raw")):
    out.append(b["child_landmark_id"])
  return out
 
@@ -55,7 +66,7 @@ def scan(out,g):
   # resolve to only a coarse parent/entity geometry.
   for nid,rec in p["landmarks"].items():
    if nid in binding_by_child:continue
-   psf=sf(bnodes.get(nid,{}).get("source_raw"))
+   psf=sf_types(bnodes.get(nid,{}).get("source_raw"))
    if psf and rec.get("status")=="RESOLVED":
     kind=(rec.get("geometry") or {}).get("kind")
     if kind not in ("bound_subfeature","constructed_subfeature"):
@@ -68,7 +79,7 @@ def scan(out,g):
     findings.append({"rule":"operand_trace_incomplete","point_id":pid,"relation_id":rid})
    for a in semantic:
     kids=contained_children(a,bindings,bnodes)
-    asf=sf(bnodes.get(a,{}).get("source_raw"))
+    asf=sf_types(bnodes.get(a,{}).get("source_raw"))
     if r.get("status")=="RESOLVED":
      if kids and (a in executable or not any(k in executable for k in kids)):
       findings.append({"rule":"child_subfeature_unused_by_relation","point_id":pid,"relation_id":rid,"semantic_operand":a,"child_ids":kids,"executable_operands":executable})
@@ -76,14 +87,14 @@ def scan(out,g):
       findings.append({"rule":"parent_only_composite_resolution","point_id":pid,"relation_id":rid,"node_id":a,"source_raw":bnodes.get(a,{}).get("source_raw"),"detail":"subfeature-bearing relation operand has no executable child"})
    if r.get("status")=="RESOLVED" and len(executable)>1:
     ids=[identity(p["landmarks"].get(x,{})) for x in executable]
-    sfs=[sf(bnodes.get(x,{}).get("source_raw")) for x in executable]
+    sfs=[tuple(sf_types(bnodes.get(x,{}).get("source_raw"))) for x in executable]
     for i in range(len(executable)):
      for j in range(i+1,len(executable)):
       if sfs[i] and sfs[j] and sfs[i]!=sfs[j] and ids[i] and ids[i]==ids[j]:
        findings.append({"rule":"distinct_subfeature_identity_collapse","point_id":pid,"relation_id":rid,"operand_a":executable[i],"operand_b":executable[j],"identity":ids[i]})
   # Child itself may not fallback to a whole parent mesh.
   for child,b in ((x["child_landmark_id"],x) for x in g.get("composite_bindings",[]) if x["child_landmark_id"] in p["landmarks"]):
-   raw=bnodes.get(child,{}).get("source_raw");typ=sf(raw);rec=p["landmarks"][child]
+   raw=bnodes.get(child,{}).get("source_raw");types=sf_types(raw);typ=types[0] if len(types)==1 else None;rec=p["landmarks"][child]
    if typ and rec.get("status")=="RESOLVED":
     kind=(rec.get("geometry") or {}).get("kind")
     if kind not in ("constructed_subfeature","bound_subfeature"):
@@ -185,7 +196,7 @@ def mutate_unknown_subfeature_fallback(out,g):
  m=copy.deepcopy(out);bnodes,children,_=build_maps(g)
  for p in m["points"]:
   for child,rec in p["landmarks"].items():
-   if sf(bnodes.get(child,{}).get("source_raw")) and rec.get("status")=="UNRESOLVED":
+   if sf_types(bnodes.get(child,{}).get("source_raw")) and rec.get("status")=="UNRESOLVED":
     # Forge whole-entity fallback, exactly the forbidden failure mode.
     rec.clear();rec.update({"status":"RESOLVED","executor":"fma_mesh","geometry":{"kind":"fma_concept","fma_id":"FMA_FORGED_PARENT","part_ids":["FORGED"]}})
     return m
