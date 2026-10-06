@@ -3,7 +3,7 @@
   "artifact": "c-v3-stage2-semantic-repair-human-review-data",
   "human_review_disposition": "PENDING",
   "before_sha256": "d70c437a536d21765a91693fd8e292b47cb3f157f89b503b135e52b974b74d86",
-  "after_sha256": "58371121b4f2d0c615606689f16a7cdc4c6091edc052c340729e64b90463cdaf",
+  "after_sha256": "693edfde21f4c9a377fb0e4f2122c7c1bc30e2147449461825ec0fce8ed2eae3",
   "validation_status": "PASS",
   "stage3": "NOT_STARTED",
   "points": [
@@ -441,6 +441,16 @@
               "status": "UNRESOLVED",
               "executor": "between_constraint",
               "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "semantic_fields": {
+                "op": "between_constraint",
+                "relation_type": "between",
+                "source_statement_id": "S:LI18:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI18:location:115-180:0f3e9745",
+                  "LM:S:LI18:location:128-180:9046d75e"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:LI18:location:115-180:0f3e9745",
                 "LM:S:LI18:location:128-180:9046d75e"
@@ -457,7 +467,8 @@
                   "executable_operand_ids": [],
                   "binding": "missing_executable_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "53fac0924ad39668b91eeae05f11db16956d7d7b62ecec90aae94ea57123330d"
             }
           },
           {
@@ -478,6 +489,15 @@
               "status": "UNRESOLVED",
               "executor": "same_level_plane",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "same_level_plane",
+                "relation_type": "same-level",
+                "source_statement_id": "S:LI18:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI18:location:57-101"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:LI18:location:57-101"
               ],
@@ -490,7 +510,8 @@
                   "executable_operand_id": "LM:S:LI18:location:61-76",
                   "binding": "child_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "cc35e86561e20ead9da852c408f0987a243ed966cd52a30fb4f79a2b8b7314b3"
             }
           },
           {
@@ -512,10 +533,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:LI18:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LI18:location:7-22"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LI18:location:7-22"
                 ],
                 "executable_argument_node_ids": [
@@ -527,10 +551,31 @@
                     "executable_operand_id": "LM:S:LI18:location:7-22",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:LI18:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI18:location:7-22"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LI18:location:7-22"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LI18:location:7-22"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LI18:location:7-22",
+                  "executable_operand_id": "LM:S:LI18:location:7-22",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "e73d4814e6128b34f4e17cad65b5956d7b7c58c3c3d0586f83cfb3a558c46b9f"
             }
           }
         ],
@@ -896,6 +941,16 @@
               "status": "UNRESOLVED",
               "executor": "directional_relation",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
+                "source_statement_id": "S:ST10:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST10:location:96-142"
+                ],
+                "direction": "anterior"
+              },
               "semantic_argument_node_ids": [
                 "LM:S:ST10:location:96-142"
               ],
@@ -908,7 +963,8 @@
                   "executable_operand_id": "LM:S:ST10:location:100-107",
                   "binding": "child_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "87063103c1542329c9be236d77c686f7ea4bc641f330022b473e4b197d4ffb94"
             }
           },
           {
@@ -930,10 +986,13 @@
               "executor": "same_level_plane",
               "constraint": {
                 "op": "same_level_plane",
-                "argument_node_ids": [
+                "relation_type": "same-level",
+                "source_statement_id": "S:ST10:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:ST10:location:57-78"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:ST10:location:57-78"
                 ],
                 "executable_argument_node_ids": [
@@ -945,10 +1004,31 @@
                     "executable_operand_id": "LM:S:ST10:location:57-78",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "same_level_plane",
+                "relation_type": "same-level",
                 "source_statement_id": "S:ST10:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST10:location:57-78"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:ST10:location:57-78"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:ST10:location:57-78"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:ST10:location:57-78",
+                  "executable_operand_id": "LM:S:ST10:location:57-78",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "1cfddcdbac4b4281402e748a91faa05e0caf9e3c920bfef25618c01d1dc82b63"
             }
           },
           {
@@ -970,10 +1050,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:ST10:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:ST10:location:7-34"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:ST10:location:7-34"
                 ],
                 "executable_argument_node_ids": [
@@ -985,10 +1068,31 @@
                     "executable_operand_id": "LM:S:ST10:location:7-34",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:ST10:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST10:location:7-34"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:ST10:location:7-34"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:ST10:location:7-34"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:ST10:location:7-34",
+                  "executable_operand_id": "LM:S:ST10:location:7-34",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "e53fc06ca2764ec17cc7d12f4fbab5ededeb2155131962b8d858f38d0f8f8396"
             }
           }
         ],
@@ -1511,6 +1615,16 @@
               "status": "UNRESOLVED",
               "executor": "directional_relation",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
+                "source_statement_id": "S:LI17:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI17:location:97-143"
+                ],
+                "direction": "posterior"
+              },
               "semantic_argument_node_ids": [
                 "LM:S:LI17:location:97-143"
               ],
@@ -1523,7 +1637,8 @@
                   "executable_operand_id": "LM:S:LI17:location:101-108",
                   "binding": "child_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "2b46cdf0ec4aed6638511250c33f249c16549f116b8fe76e295fa4242c62fa3c"
             }
           },
           {
@@ -1545,10 +1660,13 @@
               "executor": "same_level_plane",
               "constraint": {
                 "op": "same_level_plane",
-                "argument_node_ids": [
+                "relation_type": "same-level",
+                "source_statement_id": "S:LI17:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LI17:location:57-78"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LI17:location:57-78"
                 ],
                 "executable_argument_node_ids": [
@@ -1560,10 +1678,31 @@
                     "executable_operand_id": "LM:S:LI17:location:57-78",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "same_level_plane",
+                "relation_type": "same-level",
                 "source_statement_id": "S:LI17:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI17:location:57-78"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LI17:location:57-78"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LI17:location:57-78"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LI17:location:57-78",
+                  "executable_operand_id": "LM:S:LI17:location:57-78",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "2079891f51e10f9b4f3fccf742348b1b8e6547703acac881f6d6b49cf16303a1"
             }
           },
           {
@@ -1585,10 +1724,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:LI17:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LI17:location:7-22"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LI17:location:7-22"
                 ],
                 "executable_argument_node_ids": [
@@ -1600,10 +1742,31 @@
                     "executable_operand_id": "LM:S:LI17:location:7-22",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:LI17:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI17:location:7-22"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LI17:location:7-22"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LI17:location:7-22"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LI17:location:7-22",
+                  "executable_operand_id": "LM:S:LI17:location:7-22",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "e26417b42c2975d2eafc0dead8d6a92717a65ab89b3cc250a57db98ea9cbab6d"
             }
           },
           {
@@ -1626,10 +1789,14 @@
               "executor": "directional_relation",
               "constraint": {
                 "op": "directional_relation",
-                "argument_node_ids": [
+                "relation_type": "relative-to",
+                "source_statement_id": "S:LI17:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LI17:note:1:26-31"
                 ],
-                "semantic_argument_node_ids": [
+                "direction": "inferior",
+                "argument_node_ids": [
                   "LM:S:LI17:note:1:26-31"
                 ],
                 "executable_argument_node_ids": [
@@ -1641,11 +1808,32 @@
                     "executable_operand_id": "LM:S:LI17:note:1:26-31",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
                 "source_statement_id": "S:LI17:note:1",
                 "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI17:note:1:26-31"
+                ],
                 "direction": "inferior"
-              }
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LI17:note:1:26-31"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LI17:note:1:26-31"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LI17:note:1:26-31",
+                  "executable_operand_id": "LM:S:LI17:note:1:26-31",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "a0be66cab72cc9336633cc6a7a68c24cb71bd934a89a55cc053c7dbf5107b0a4"
             }
           },
           {
@@ -1667,10 +1855,13 @@
               "executor": "same_level_plane",
               "constraint": {
                 "op": "same_level_plane",
-                "argument_node_ids": [
+                "relation_type": "same-level",
+                "source_statement_id": "S:LI17:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LI17:note:1:54-58"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LI17:note:1:54-58"
                 ],
                 "executable_argument_node_ids": [
@@ -1682,10 +1873,31 @@
                     "executable_operand_id": "LM:S:LI17:note:1:54-58",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "same_level_plane",
+                "relation_type": "same-level",
                 "source_statement_id": "S:LI17:note:1",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI17:note:1:54-58"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LI17:note:1:54-58"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LI17:note:1:54-58"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LI17:note:1:54-58",
+                  "executable_operand_id": "LM:S:LI17:note:1:54-58",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "336081d4f0f72ca176269d0db3882c4379a0046bbb843974a8718f56190029ba"
             }
           },
           {
@@ -1707,10 +1919,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:LI17:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LI17:note:1:26-31"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LI17:note:1:26-31"
                 ],
                 "executable_argument_node_ids": [
@@ -1722,10 +1937,31 @@
                     "executable_operand_id": "LM:S:LI17:note:1:26-31",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:LI17:note:1",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI17:note:1:26-31"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LI17:note:1:26-31"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LI17:note:1:26-31"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LI17:note:1:26-31",
+                  "executable_operand_id": "LM:S:LI17:note:1:26-31",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "d629e44efa47512180deef56a078c97af89682ce90c1051cd2d6635be6bbd35f"
             }
           },
           {
@@ -1747,10 +1983,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:LI17:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LI17:note:1:54-58"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LI17:note:1:54-58"
                 ],
                 "executable_argument_node_ids": [
@@ -1762,10 +2001,31 @@
                     "executable_operand_id": "LM:S:LI17:note:1:54-58",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:LI17:note:1",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI17:note:1:54-58"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LI17:note:1:54-58"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LI17:note:1:54-58"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LI17:note:1:54-58",
+                  "executable_operand_id": "LM:S:LI17:note:1:54-58",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "86d6974447c1245ad89ce39395e645deeae722e8704298836571443fcfc132ce"
             }
           }
         ],
@@ -2315,10 +2575,14 @@
               "executor": "directional_relation",
               "constraint": {
                 "op": "directional_relation",
-                "argument_node_ids": [
+                "relation_type": "relative-to",
+                "source_statement_id": "S:BL17:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:BL17:location:149-175"
                 ],
-                "semantic_argument_node_ids": [
+                "direction": "lateral",
+                "argument_node_ids": [
                   "LM:S:BL17:location:149-175"
                 ],
                 "executable_argument_node_ids": [
@@ -2330,11 +2594,32 @@
                     "executable_operand_id": "LM:S:BL17:location:149-175",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
                 "source_statement_id": "S:BL17:location",
                 "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:BL17:location:149-175"
+                ],
                 "direction": "lateral"
-              }
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:BL17:location:149-175"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:BL17:location:149-175"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:BL17:location:149-175",
+                  "executable_operand_id": "LM:S:BL17:location:149-175",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "6a11aebbd715e5ef3e3587f2e1aa7b7282d788fa5b565c356652258e3dbe2d83"
             }
           },
           {
@@ -2355,6 +2640,15 @@
               "status": "UNRESOLVED",
               "executor": "same_level_plane",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "same_level_plane",
+                "relation_type": "same-level",
+                "source_statement_id": "S:BL17:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:BL17:location:47-127"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:BL17:location:47-127"
               ],
@@ -2367,7 +2661,8 @@
                   "executable_operand_id": "LM:S:BL17:location:51-66",
                   "binding": "child_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "ba54059035ed65df89be107cec93ea882cff2412857d6999e48ba9913b696be0"
             }
           },
           {
@@ -2389,10 +2684,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:BL17:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:BL17:location:7-24"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:BL17:location:7-24"
                 ],
                 "executable_argument_node_ids": [
@@ -2404,10 +2702,31 @@
                     "executable_operand_id": "LM:S:BL17:location:7-24",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:BL17:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:BL17:location:7-24"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:BL17:location:7-24"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:BL17:location:7-24"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:BL17:location:7-24",
+                  "executable_operand_id": "LM:S:BL17:location:7-24",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "d6e9916331460e32751b849ed1c04c2e73fee2c4438a77ea1f7d9f1c787d74f7"
             }
           },
           {
@@ -2429,10 +2748,13 @@
               "executor": "same_level_plane",
               "constraint": {
                 "op": "same_level_plane",
-                "argument_node_ids": [
+                "relation_type": "same-level",
+                "source_statement_id": "S:BL17:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:BL17:note:1:64-116"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:BL17:note:1:64-116"
                 ],
                 "executable_argument_node_ids": [
@@ -2444,10 +2766,31 @@
                     "executable_operand_id": "LM:S:BL17:note:1:64-116",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "same_level_plane",
+                "relation_type": "same-level",
                 "source_statement_id": "S:BL17:note:1",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:BL17:note:1:64-116"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:BL17:note:1:64-116"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:BL17:note:1:64-116"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:BL17:note:1:64-116",
+                  "executable_operand_id": "LM:S:BL17:note:1:64-116",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "bb6a8a9dc0a5e2bdeaade9a8bbe219bb21a459878612bbec0e7d0d1180ce959c"
             }
           }
         ],
@@ -2814,10 +3157,14 @@
               "executor": "directional_relation",
               "constraint": {
                 "op": "directional_relation",
-                "argument_node_ids": [
+                "relation_type": "relative-to",
+                "source_statement_id": "S:BL23:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:BL23:location:142-168"
                 ],
-                "semantic_argument_node_ids": [
+                "direction": "lateral",
+                "argument_node_ids": [
                   "LM:S:BL23:location:142-168"
                 ],
                 "executable_argument_node_ids": [
@@ -2829,11 +3176,32 @@
                     "executable_operand_id": "LM:S:BL23:location:142-168",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
                 "source_statement_id": "S:BL23:location",
                 "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:BL23:location:142-168"
+                ],
                 "direction": "lateral"
-              }
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:BL23:location:142-168"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:BL23:location:142-168"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:BL23:location:142-168",
+                  "executable_operand_id": "LM:S:BL23:location:142-168",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "862c78830cd2dc16693d8cbc4a56f30c9ce3fa1488debbc6fa903edfc04af189"
             }
           },
           {
@@ -2854,6 +3222,15 @@
               "status": "UNRESOLVED",
               "executor": "same_level_plane",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "same_level_plane",
+                "relation_type": "same-level",
+                "source_statement_id": "S:BL23:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:BL23:location:43-120"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:BL23:location:43-120"
               ],
@@ -2866,7 +3243,8 @@
                   "executable_operand_id": "LM:S:BL23:location:47-62",
                   "binding": "child_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "88e3397ffd20831a035aef5ee673749ac0196234b6b92198de2a59f96ab3b7d5"
             }
           },
           {
@@ -2888,10 +3266,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:BL23:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:BL23:location:7-20"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:BL23:location:7-20"
                 ],
                 "executable_argument_node_ids": [
@@ -2903,10 +3284,31 @@
                     "executable_operand_id": "LM:S:BL23:location:7-20",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:BL23:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:BL23:location:7-20"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:BL23:location:7-20"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:BL23:location:7-20"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:BL23:location:7-20",
+                  "executable_operand_id": "LM:S:BL23:location:7-20",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "7ef1f11395cf9bf57fb05cd3712f0ec2325b6f4c4c713ed8ed29a82e2bdb0323"
             }
           }
         ],
@@ -3273,10 +3675,14 @@
               "executor": "directional_relation",
               "constraint": {
                 "op": "directional_relation",
-                "argument_node_ids": [
+                "relation_type": "relative-to",
+                "source_statement_id": "S:BL25:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:BL25:location:142-168"
                 ],
-                "semantic_argument_node_ids": [
+                "direction": "lateral",
+                "argument_node_ids": [
                   "LM:S:BL25:location:142-168"
                 ],
                 "executable_argument_node_ids": [
@@ -3288,11 +3694,32 @@
                     "executable_operand_id": "LM:S:BL25:location:142-168",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
                 "source_statement_id": "S:BL25:location",
                 "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:BL25:location:142-168"
+                ],
                 "direction": "lateral"
-              }
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:BL25:location:142-168"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:BL25:location:142-168"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:BL25:location:142-168",
+                  "executable_operand_id": "LM:S:BL25:location:142-168",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "1b7ca304871e9a64afc4612124bd256897d067a7d065c8e7d99a16801ffc811e"
             }
           },
           {
@@ -3313,6 +3740,15 @@
               "status": "UNRESOLVED",
               "executor": "same_level_plane",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "same_level_plane",
+                "relation_type": "same-level",
+                "source_statement_id": "S:BL25:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:BL25:location:43-120"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:BL25:location:43-120"
               ],
@@ -3325,7 +3761,8 @@
                   "executable_operand_id": "LM:S:BL25:location:47-62",
                   "binding": "child_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "caa9e7786c7095e3489c3ea24114d5e5c8e105a2b8423ad52855af499ac4adbe"
             }
           },
           {
@@ -3347,10 +3784,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:BL25:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:BL25:location:7-20"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:BL25:location:7-20"
                 ],
                 "executable_argument_node_ids": [
@@ -3362,10 +3802,31 @@
                     "executable_operand_id": "LM:S:BL25:location:7-20",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:BL25:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:BL25:location:7-20"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:BL25:location:7-20"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:BL25:location:7-20"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:BL25:location:7-20",
+                  "executable_operand_id": "LM:S:BL25:location:7-20",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "53f2ca5e3ce9d576a596085b32ffa1b87d88cda84bb7d347526593f3e50332fc"
             }
           }
         ],
@@ -4382,10 +4843,14 @@
               "executor": "directional_relation",
               "constraint": {
                 "op": "directional_relation",
-                "argument_node_ids": [
+                "relation_type": "relative-to",
+                "source_statement_id": "S:ST9:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:ST9:location:114-146"
                 ],
-                "semantic_argument_node_ids": [
+                "direction": "anterior",
+                "argument_node_ids": [
                   "LM:S:ST9:location:114-146"
                 ],
                 "executable_argument_node_ids": [
@@ -4397,11 +4862,32 @@
                     "executable_operand_id": "LM:S:ST9:location:114-146",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
                 "source_statement_id": "S:ST9:location",
                 "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST9:location:114-146"
+                ],
                 "direction": "anterior"
-              }
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:ST9:location:114-146"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:ST9:location:114-146"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:ST9:location:114-146",
+                  "executable_operand_id": "LM:S:ST9:location:114-146",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "0da925091aded9811ecc3019b8f660367a31b928ea97672e386fe0636dbc40a9"
             }
           },
           {
@@ -4422,6 +4908,15 @@
               "status": "UNRESOLVED",
               "executor": "same_level_plane",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "same_level_plane",
+                "relation_type": "same-level",
+                "source_statement_id": "S:ST9:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST9:location:57-101"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:ST9:location:57-101"
               ],
@@ -4434,7 +4929,8 @@
                   "executable_operand_id": "LM:S:ST9:location:61-76",
                   "binding": "child_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "00f74e5d21de535782c60963d3309c26eba9a4c782fd55d42a5d9ac524fd1aee"
             }
           },
           {
@@ -4456,10 +4952,13 @@
               "executor": "overlies_projection",
               "constraint": {
                 "op": "overlies_projection",
-                "argument_node_ids": [
+                "relation_type": "overlies",
+                "source_statement_id": "S:ST9:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:ST9:location:157-178"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:ST9:location:157-178"
                 ],
                 "executable_argument_node_ids": [
@@ -4471,10 +4970,31 @@
                     "executable_operand_id": "LM:S:ST9:location:157-178",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "overlies_projection",
+                "relation_type": "overlies",
                 "source_statement_id": "S:ST9:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST9:location:157-178"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:ST9:location:157-178"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:ST9:location:157-178"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:ST9:location:157-178",
+                  "executable_operand_id": "LM:S:ST9:location:157-178",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "a394ba9959b2e061747e70591eaf347298f1274a1db495465697d2d4c5a29194"
             }
           },
           {
@@ -4496,10 +5016,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:ST9:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:ST9:location:7-34"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:ST9:location:7-34"
                 ],
                 "executable_argument_node_ids": [
@@ -4511,10 +5034,31 @@
                     "executable_operand_id": "LM:S:ST9:location:7-34",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:ST9:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST9:location:7-34"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:ST9:location:7-34"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:ST9:location:7-34"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:ST9:location:7-34",
+                  "executable_operand_id": "LM:S:ST9:location:7-34",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "7988af80d90df68d16d40f7455be910ddfbadf4dd610a05451eddff6182dfb4a"
             }
           },
           {
@@ -4536,6 +5080,16 @@
               "status": "UNRESOLVED",
               "executor": "between_constraint",
               "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "semantic_fields": {
+                "op": "between_constraint",
+                "relation_type": "between",
+                "source_statement_id": "S:ST9:note:2",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST9:note:2:240-305:6f7a364e",
+                  "LM:S:ST9:note:2:253-305:a442a1a4"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:ST9:note:2:240-305:6f7a364e",
                 "LM:S:ST9:note:2:253-305:a442a1a4"
@@ -4552,7 +5106,8 @@
                   "executable_operand_ids": [],
                   "binding": "missing_executable_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "0de1e68e63b08635e4dc6643430e9b8efdd9399b349d8343db4738de254e0319"
             }
           },
           {
@@ -4575,10 +5130,14 @@
               "executor": "directional_relation",
               "constraint": {
                 "op": "directional_relation",
-                "argument_node_ids": [
+                "relation_type": "relative-to",
+                "source_statement_id": "S:ST9:note:2",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:ST9:note:2:131-162"
                 ],
-                "semantic_argument_node_ids": [
+                "direction": "anterior",
+                "argument_node_ids": [
                   "LM:S:ST9:note:2:131-162"
                 ],
                 "executable_argument_node_ids": [
@@ -4590,11 +5149,32 @@
                     "executable_operand_id": "LM:S:ST9:note:2:131-162",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
                 "source_statement_id": "S:ST9:note:2",
                 "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST9:note:2:131-162"
+                ],
                 "direction": "anterior"
-              }
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:ST9:note:2:131-162"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:ST9:note:2:131-162"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:ST9:note:2:131-162",
+                  "executable_operand_id": "LM:S:ST9:note:2:131-162",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "3855ed87478f75dc47705e1eee3b92e08423a7e178d215c99ce3c0fde874c76a"
             }
           },
           {
@@ -4617,10 +5197,14 @@
               "executor": "directional_relation",
               "constraint": {
                 "op": "directional_relation",
-                "argument_node_ids": [
+                "relation_type": "relative-to",
+                "source_statement_id": "S:ST9:note:2",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:ST9:note:2:186-226"
                 ],
-                "semantic_argument_node_ids": [
+                "direction": "posterior",
+                "argument_node_ids": [
                   "LM:S:ST9:note:2:186-226"
                 ],
                 "executable_argument_node_ids": [
@@ -4632,11 +5216,32 @@
                     "executable_operand_id": "LM:S:ST9:note:2:186-226",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
                 "source_statement_id": "S:ST9:note:2",
                 "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST9:note:2:186-226"
+                ],
                 "direction": "posterior"
-              }
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:ST9:note:2:186-226"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:ST9:note:2:186-226"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:ST9:note:2:186-226",
+                  "executable_operand_id": "LM:S:ST9:note:2:186-226",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "e79d950d98f6ddc102dedd92062d544beebcd09639cf4b54c6888e76b7f3c7b8"
             }
           },
           {
@@ -4658,10 +5263,13 @@
               "executor": "same_level_plane",
               "constraint": {
                 "op": "same_level_plane",
-                "argument_node_ids": [
+                "relation_type": "same-level",
+                "source_statement_id": "S:ST9:note:2",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:ST9:note:2:44-48"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:ST9:note:2:44-48"
                 ],
                 "executable_argument_node_ids": [
@@ -4673,10 +5281,31 @@
                     "executable_operand_id": "LM:S:ST9:note:2:44-48",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "same_level_plane",
+                "relation_type": "same-level",
                 "source_statement_id": "S:ST9:note:2",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST9:note:2:44-48"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:ST9:note:2:44-48"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:ST9:note:2:44-48"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:ST9:note:2:44-48",
+                  "executable_operand_id": "LM:S:ST9:note:2:44-48",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "05f75cd806b6e4801296c87e519e93e454c0c0cdc8c65cd6b235b958f41595a5"
             }
           },
           {
@@ -4698,10 +5327,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:ST9:note:2",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:ST9:note:2:44-48"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:ST9:note:2:44-48"
                 ],
                 "executable_argument_node_ids": [
@@ -4713,10 +5345,31 @@
                     "executable_operand_id": "LM:S:ST9:note:2:44-48",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:ST9:note:2",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST9:note:2:44-48"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:ST9:note:2:44-48"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:ST9:note:2:44-48"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:ST9:note:2:44-48",
+                  "executable_operand_id": "LM:S:ST9:note:2:44-48",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "aa27ce51039c4c30749b294c12b3e3374f453ff269d55a273d822456ff52fbc6"
             }
           },
           {
@@ -4738,10 +5391,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:ST9:note:2",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM21:S:ST9:note:2:50-54:6775aaafeb"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM21:S:ST9:note:2:50-54:6775aaafeb"
                 ],
                 "executable_argument_node_ids": [
@@ -4753,10 +5409,31 @@
                     "executable_operand_id": "LM21:S:ST9:note:2:50-54:6775aaafeb",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:ST9:note:2",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM21:S:ST9:note:2:50-54:6775aaafeb"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM21:S:ST9:note:2:50-54:6775aaafeb"
+              ],
+              "executable_argument_node_ids": [
+                "LM21:S:ST9:note:2:50-54:6775aaafeb"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM21:S:ST9:note:2:50-54:6775aaafeb",
+                  "executable_operand_id": "LM21:S:ST9:note:2:50-54:6775aaafeb",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "5d66dd3c9ac274d662e5599beb94f1d480f0a2c8a2087975cb690cfe0a33ab0c"
             }
           },
           {
@@ -4778,10 +5455,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:ST9:note:2",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM21:S:ST9:note:2:168-172:6775aaafeb"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM21:S:ST9:note:2:168-172:6775aaafeb"
                 ],
                 "executable_argument_node_ids": [
@@ -4793,10 +5473,31 @@
                     "executable_operand_id": "LM21:S:ST9:note:2:168-172:6775aaafeb",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:ST9:note:2",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM21:S:ST9:note:2:168-172:6775aaafeb"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM21:S:ST9:note:2:168-172:6775aaafeb"
+              ],
+              "executable_argument_node_ids": [
+                "LM21:S:ST9:note:2:168-172:6775aaafeb"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM21:S:ST9:note:2:168-172:6775aaafeb",
+                  "executable_operand_id": "LM21:S:ST9:note:2:168-172:6775aaafeb",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "6dd689ff346688754baabc53626985eeeb2a0d81064fae5d42e3caa34f170894"
             }
           },
           {
@@ -4818,10 +5519,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:ST9:note:2",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM21:S:ST9:note:2:222-226:34574dfae8"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM21:S:ST9:note:2:222-226:34574dfae8"
                 ],
                 "executable_argument_node_ids": [
@@ -4833,10 +5537,31 @@
                     "executable_operand_id": "LM21:S:ST9:note:2:222-226:34574dfae8",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:ST9:note:2",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM21:S:ST9:note:2:222-226:34574dfae8"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM21:S:ST9:note:2:222-226:34574dfae8"
+              ],
+              "executable_argument_node_ids": [
+                "LM21:S:ST9:note:2:222-226:34574dfae8"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM21:S:ST9:note:2:222-226:34574dfae8",
+                  "executable_operand_id": "LM21:S:ST9:note:2:222-226:34574dfae8",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "9c70b37fa69f6fc67ce297e0ce061a359e920e6442c815d6b0d1e98a086f20b2"
             }
           }
         ],
@@ -4855,6 +5580,14 @@
               "executor": "condition_contract",
               "condition_type": "body_position",
               "branch_id": "branch_1",
+              "source_statement_id": "S:ST9:note:1",
+              "source_span": {
+                "condition_type": "body_position",
+                "source_raw": "when the head is turned to the opposite side against resistance",
+                "char_start": 56,
+                "char_end": 119,
+                "role": null
+              },
               "default_pose_compatible": false,
               "reason": "condition requires pose incompatible with default BodyParts3D pose"
             }
@@ -4873,6 +5606,14 @@
               "executor": "condition_contract",
               "condition_type": "palpation_dependent",
               "branch_id": "branch_2",
+              "source_statement_id": "S:ST9:note:1",
+              "source_span": {
+                "condition_type": "palpation_dependent",
+                "source_raw": "more distinct when the head is turned to the opposite side against resistance",
+                "char_start": 42,
+                "char_end": 119,
+                "role": null
+              },
               "default_pose_compatible": null,
               "reason": "condition preserved as non-executed conditional branch"
             }
@@ -5070,6 +5811,16 @@
               "status": "UNRESOLVED",
               "executor": "directional_relation",
               "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
+                "source_statement_id": "S:TE20:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:TE20:location:29-48"
+                ],
+                "direction": "superior"
+              },
               "semantic_argument_node_ids": [
                 "LM:S:TE20:location:29-48"
               ],
@@ -5080,7 +5831,8 @@
                   "executable_operand_ids": [],
                   "binding": "missing_executable_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "78e8dc4bd902c8a77ce9b262ee187bac1edf61c27a1a4aabfa2dd52e6e687e65"
             }
           },
           {
@@ -5102,10 +5854,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:TE20:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:TE20:location:7-11"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:TE20:location:7-11"
                 ],
                 "executable_argument_node_ids": [
@@ -5117,10 +5872,31 @@
                     "executable_operand_id": "LM:S:TE20:location:7-11",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:TE20:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:TE20:location:7-11"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:TE20:location:7-11"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:TE20:location:7-11"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:TE20:location:7-11",
+                  "executable_operand_id": "LM:S:TE20:location:7-11",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "629eea7cdb9cfce055ec9cabdfe1142b2a1ba75a09eb748ef73054d9e5a1cdb4"
             }
           }
         ],
@@ -5139,6 +5915,14 @@
               "executor": "condition_contract",
               "condition_type": "body_position",
               "branch_id": "branch_1",
+              "source_statement_id": "S:TE20:note:1",
+              "source_span": {
+                "condition_type": "body_position",
+                "source_raw": "With the auricle folded",
+                "char_start": 6,
+                "char_end": 29,
+                "role": null
+              },
               "default_pose_compatible": false,
               "reason": "condition requires pose incompatible with default BodyParts3D pose"
             }
@@ -5672,6 +6456,16 @@
               "status": "UNRESOLVED",
               "executor": "directional_relation",
               "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
+                "source_statement_id": "S:HT7:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:HT7:location:50-82"
+                ],
+                "direction": "radial"
+              },
               "semantic_argument_node_ids": [
                 "LM:S:HT7:location:50-82"
               ],
@@ -5682,7 +6476,8 @@
                   "executable_operand_ids": [],
                   "binding": "missing_executable_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "1a4251fe166d7c21dfd128024c63afc22893a75e496babaa57fdd3ced308a914"
             }
           },
           {
@@ -5704,10 +6499,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:HT7:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:HT7:location:7-26"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:HT7:location:7-26"
                 ],
                 "executable_argument_node_ids": [
@@ -5719,10 +6517,31 @@
                     "executable_operand_id": "LM:S:HT7:location:7-26",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:HT7:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:HT7:location:7-26"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:HT7:location:7-26"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:HT7:location:7-26"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:HT7:location:7-26",
+                  "executable_operand_id": "LM:S:HT7:location:7-26",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "6e181e0aee72a37cc7da648d2d69ad6aa558cf079f5976ed40d5790e9c2da8e6"
             }
           },
           {
@@ -5744,10 +6563,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:HT7:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:HT7:location:91-110"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:HT7:location:91-110"
                 ],
                 "executable_argument_node_ids": [
@@ -5759,10 +6581,31 @@
                     "executable_operand_id": "LM:S:HT7:location:91-110",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:HT7:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:HT7:location:91-110"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:HT7:location:91-110"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:HT7:location:91-110"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:HT7:location:91-110",
+                  "executable_operand_id": "LM:S:HT7:location:91-110",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "934528fd1ee34200c7cc907f1ddc843676c27b57b370b6a7d42327dca6ee5811"
             }
           },
           {
@@ -5779,6 +6622,16 @@
               "status": "UNRESOLVED",
               "executor": "directional_relation",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
+                "source_statement_id": "S:HT7:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:HT7:note:1:33-75"
+                ],
+                "direction": "radial"
+              },
               "semantic_argument_node_ids": [
                 "LM:S:HT7:note:1:33-75"
               ],
@@ -5791,7 +6644,8 @@
                   "executable_operand_id": "LM:S:HT7:note:1:38-54",
                   "binding": "child_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "9350c9f70c9c3380c7d2475a7a0501e56d730ff1d7b129743d45a86ce6bcf66d"
             }
           },
           {
@@ -5808,6 +6662,15 @@
               "status": "UNRESOLVED",
               "executor": "surface_membership",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:HT7:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:HT7:note:1:13-23"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:HT7:note:1:13-23"
               ],
@@ -5820,7 +6683,8 @@
                   "executable_operand_id": "LM:S:HT7:note:1:13-23",
                   "binding": "identity"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "4a0fdffb1c523b18f899c3e75956c9d18e125df8dae9d75ee0ea71443146232b"
             }
           },
           {
@@ -5842,10 +6706,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:HT7:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:HT7:note:1:84-103"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:HT7:note:1:84-103"
                 ],
                 "executable_argument_node_ids": [
@@ -5857,10 +6724,31 @@
                     "executable_operand_id": "LM:S:HT7:note:1:84-103",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:HT7:note:1",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:HT7:note:1:84-103"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:HT7:note:1:84-103"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:HT7:note:1:84-103"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:HT7:note:1:84-103",
+                  "executable_operand_id": "LM:S:HT7:note:1:84-103",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "2179a0fa55b3ae678f06dcb989082cf5a8161f6874985a3fc861c10381c6ea68"
             }
           }
         ],
@@ -6093,6 +6981,16 @@
               "status": "UNRESOLVED",
               "executor": "directional_relation",
               "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
+                "source_statement_id": "S:LI4:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI4:location:36-79"
+                ],
+                "direction": "radial"
+              },
               "semantic_argument_node_ids": [
                 "LM:S:LI4:location:36-79"
               ],
@@ -6103,7 +7001,8 @@
                   "executable_operand_ids": [],
                   "binding": "missing_executable_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "bd5e1460450788ffaf006b0207138a39a5c8064035d816c1e677ce4e66ee9fd2"
             }
           },
           {
@@ -6125,10 +7024,13 @@
               "executor": "entity_midpoint",
               "constraint": {
                 "op": "entity_midpoint",
-                "argument_node_ids": [
+                "relation_type": "midpoint-of-entity",
+                "source_statement_id": "S:LI4:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LI4:location:53-79"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LI4:location:53-79"
                 ],
                 "executable_argument_node_ids": [
@@ -6140,10 +7042,31 @@
                     "executable_operand_id": "LM:S:LI4:location:53-79",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "entity_midpoint",
+                "relation_type": "midpoint-of-entity",
                 "source_statement_id": "S:LI4:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI4:location:53-79"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LI4:location:53-79"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LI4:location:53-79"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LI4:location:53-79",
+                  "executable_operand_id": "LM:S:LI4:location:53-79",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "b0a194d30f014de8ff5617fced152378dc1b4eafae0d9aea29a8286b3ead1d5c"
             }
           },
           {
@@ -6165,10 +7088,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:LI4:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LI4:location:7-25"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LI4:location:7-25"
                 ],
                 "executable_argument_node_ids": [
@@ -6180,10 +7106,31 @@
                     "executable_operand_id": "LM:S:LI4:location:7-25",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:LI4:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI4:location:7-25"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LI4:location:7-25"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LI4:location:7-25"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LI4:location:7-25",
+                  "executable_operand_id": "LM:S:LI4:location:7-25",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "fdcde62eb5df04f38d1d003fd51af9e5b52a9aa2e6dc5f733c056571087ac1c6"
             }
           }
         ],
@@ -6466,6 +7413,16 @@
               "status": "UNRESOLVED",
               "executor": "between_constraint",
               "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "semantic_fields": {
+                "op": "between_constraint",
+                "relation_type": "between",
+                "source_statement_id": "S:ST1:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST1:location:25-32",
+                  "LM:S:ST1:location:37-60"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:ST1:location:25-32",
                 "LM:S:ST1:location:37-60"
@@ -6484,7 +7441,8 @@
                   "executable_operand_ids": [],
                   "binding": "missing_executable_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "f36140710e5e1a840112abd192822011cf3a7e73b0a779da698d69c523dbd673"
             }
           },
           {
@@ -6501,6 +7459,16 @@
               "status": "UNRESOLVED",
               "executor": "directional_relation",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
+                "source_statement_id": "S:ST1:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST1:location:82-92"
+                ],
+                "direction": "inferior"
+              },
               "semantic_argument_node_ids": [
                 "LM:S:ST1:location:82-92"
               ],
@@ -6513,7 +7481,8 @@
                   "executable_operand_id": "LM:S:ST1:location:82-92",
                   "binding": "identity"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "63b41196731bfad1de3cd94215f6027d047afed959bd4fffa9806a68bdf5faad"
             }
           },
           {
@@ -6535,10 +7504,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:ST1:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:ST1:location:7-11"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:ST1:location:7-11"
                 ],
                 "executable_argument_node_ids": [
@@ -6550,10 +7522,31 @@
                     "executable_operand_id": "LM:S:ST1:location:7-11",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:ST1:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST1:location:7-11"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:ST1:location:7-11"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:ST1:location:7-11"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:ST1:location:7-11",
+                  "executable_operand_id": "LM:S:ST1:location:7-11",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "64930f0b85ddf97143a6ad179a634ba76d9b03ccdd4b1a3d84c18cf5ae55909a"
             }
           }
         ],
@@ -6973,10 +7966,14 @@
               "executor": "directional_relation",
               "constraint": {
                 "op": "directional_relation",
-                "argument_node_ids": [
+                "relation_type": "relative-to",
+                "source_statement_id": "S:GB14:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:GB14:location:32-45"
                 ],
-                "semantic_argument_node_ids": [
+                "direction": "superior",
+                "argument_node_ids": [
                   "LM:S:GB14:location:32-45"
                 ],
                 "executable_argument_node_ids": [
@@ -6988,11 +7985,32 @@
                     "executable_operand_id": "LM:S:GB14:location:32-45",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
                 "source_statement_id": "S:GB14:location",
                 "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:GB14:location:32-45"
+                ],
                 "direction": "superior"
-              }
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:GB14:location:32-45"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:GB14:location:32-45"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:GB14:location:32-45",
+                  "executable_operand_id": "LM:S:GB14:location:32-45",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "6c8a802d5497e556c4cdb4e0093f2e713eb8e3d00976487b5af1ed3309fa3a01"
             }
           },
           {
@@ -7009,6 +8027,16 @@
               "status": "UNRESOLVED",
               "executor": "directional_relation",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
+                "source_statement_id": "S:GB14:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:GB14:location:67-91"
+                ],
+                "direction": "superior"
+              },
               "semantic_argument_node_ids": [
                 "LM:S:GB14:location:67-91"
               ],
@@ -7021,7 +8049,8 @@
                   "executable_operand_id": "LM:S:GB14:location:72-78",
                   "binding": "child_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "13ca1fa7cd158fd1a80e404280048529c25e44737aa45ee11d019ed69d8758db"
             }
           },
           {
@@ -7038,6 +8067,15 @@
               "status": "UNRESOLVED",
               "executor": "entity_center",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "entity_center",
+                "relation_type": "center-of",
+                "source_statement_id": "S:GB14:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:GB14:location:82-91"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:GB14:location:82-91"
               ],
@@ -7050,7 +8088,8 @@
                   "executable_operand_id": "LM:S:GB14:location:82-91",
                   "binding": "identity"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "dfbdf3ee8ee61d6accafdf42c9f1c37b3a75984f374325ab0fd710ffc64d02ff"
             }
           },
           {
@@ -7072,10 +8111,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:GB14:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:GB14:location:7-11"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:GB14:location:7-11"
                 ],
                 "executable_argument_node_ids": [
@@ -7087,10 +8129,31 @@
                     "executable_operand_id": "LM:S:GB14:location:7-11",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:GB14:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:GB14:location:7-11"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:GB14:location:7-11"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:GB14:location:7-11"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:GB14:location:7-11",
+                  "executable_operand_id": "LM:S:GB14:location:7-11",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "247eee5548e9a699cc2993d3cad4f126e56f7e8dded44fd59ee15e27ba2465ff"
             }
           }
         ],
@@ -7301,10 +8364,14 @@
               "executor": "directional_relation",
               "constraint": {
                 "op": "directional_relation",
-                "argument_node_ids": [
+                "relation_type": "relative-to",
+                "source_statement_id": "S:GB23:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:GB23:location:84-105"
                 ],
-                "semantic_argument_node_ids": [
+                "direction": "anterior",
+                "argument_node_ids": [
                   "LM:S:GB23:location:84-105"
                 ],
                 "executable_argument_node_ids": [
@@ -7316,11 +8383,32 @@
                     "executable_operand_id": "LM:S:GB23:location:84-105",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
                 "source_statement_id": "S:GB23:location",
                 "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:GB23:location:84-105"
+                ],
                 "direction": "anterior"
-              }
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:GB23:location:84-105"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:GB23:location:84-105"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:GB23:location:84-105",
+                  "executable_operand_id": "LM:S:GB23:location:84-105",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "c8dbaf4c030e499c83c5aa4a2d3e33a4c9a28987ef8905c85a189b288c14e875"
             }
           },
           {
@@ -7342,10 +8430,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:GB23:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:GB23:location:7-30"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:GB23:location:7-30"
                 ],
                 "executable_argument_node_ids": [
@@ -7357,10 +8448,31 @@
                     "executable_operand_id": "LM:S:GB23:location:7-30",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:GB23:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:GB23:location:7-30"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:GB23:location:7-30"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:GB23:location:7-30"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:GB23:location:7-30",
+                  "executable_operand_id": "LM:S:GB23:location:7-30",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "6dd532c62f313ad91b18ba33ff26c3c3f64605c5ad3f13538767088df6bcafcd"
             }
           },
           {
@@ -7382,10 +8494,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:GB23:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:GB23:location:39-63"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:GB23:location:39-63"
                 ],
                 "executable_argument_node_ids": [
@@ -7397,10 +8512,31 @@
                     "executable_operand_id": "LM:S:GB23:location:39-63",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:GB23:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:GB23:location:39-63"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:GB23:location:39-63"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:GB23:location:39-63"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:GB23:location:39-63",
+                  "executable_operand_id": "LM:S:GB23:location:39-63",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "3aaa9bbb4ffd80be803249a8bec453dbba827689513a7ad86678b90531bed790"
             }
           }
         ],
@@ -8133,11 +9269,14 @@
               "executor": "line_membership",
               "constraint": {
                 "op": "line_membership",
-                "argument_node_ids": [
+                "relation_type": "on-line",
+                "source_statement_id": "S:LU6:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LU6:location:67-70",
                   "LM:S:LU6:location:76-79"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LU6:location:67-70",
                   "LM:S:LU6:location:76-79"
                 ],
@@ -8156,10 +9295,39 @@
                     "executable_operand_id": "LM:S:LU6:location:76-79",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "line_membership",
+                "relation_type": "on-line",
                 "source_statement_id": "S:LU6:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LU6:location:67-70",
+                  "LM:S:LU6:location:76-79"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LU6:location:67-70",
+                "LM:S:LU6:location:76-79"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LU6:location:67-70",
+                "LM:S:LU6:location:76-79"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LU6:location:67-70",
+                  "executable_operand_id": "LM:S:LU6:location:67-70",
+                  "binding": "identity"
+                },
+                {
+                  "semantic_operand_id": "LM:S:LU6:location:76-79",
+                  "executable_operand_id": "LM:S:LU6:location:76-79",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "8127246e37c892e098e53b88a14f23e11ca870d465d505c211ea7337a7dc06b1"
             }
           },
           {
@@ -8182,10 +9350,14 @@
               "executor": "directional_relation",
               "constraint": {
                 "op": "directional_relation",
-                "argument_node_ids": [
+                "relation_type": "relative-to",
+                "source_statement_id": "S:LU6:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LU6:location:100-124"
                 ],
-                "semantic_argument_node_ids": [
+                "direction": "superior",
+                "argument_node_ids": [
                   "LM:S:LU6:location:100-124"
                 ],
                 "executable_argument_node_ids": [
@@ -8197,11 +9369,32 @@
                     "executable_operand_id": "LM:S:LU6:location:100-124",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
                 "source_statement_id": "S:LU6:location",
                 "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LU6:location:100-124"
+                ],
                 "direction": "superior"
-              }
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LU6:location:100-124"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LU6:location:100-124"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LU6:location:100-124",
+                  "executable_operand_id": "LM:S:LU6:location:100-124",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "2392d9ef381c8ce2d20b5753030b99c467db0bfcbddd487bd9ed0d431084ab04"
             }
           },
           {
@@ -8223,10 +9416,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:LU6:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LU6:location:7-27"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LU6:location:7-27"
                 ],
                 "executable_argument_node_ids": [
@@ -8238,10 +9434,31 @@
                     "executable_operand_id": "LM:S:LU6:location:7-27",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:LU6:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LU6:location:7-27"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LU6:location:7-27"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LU6:location:7-27"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LU6:location:7-27",
+                  "executable_operand_id": "LM:S:LU6:location:7-27",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "4d73cb1321afef477cd817a3d12fb50cc09f848b1122caa0e64dd4e31dd0df5a"
             }
           },
           {
@@ -8258,6 +9475,15 @@
               "status": "UNRESOLVED",
               "executor": "surface_membership",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:LU6:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LU6:location:51-66"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:LU6:location:51-66"
               ],
@@ -8270,7 +9496,8 @@
                   "executable_operand_id": "LM:S:LU6:location:51-66",
                   "binding": "identity"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "350f6d6a7cdd54e9ba68329a2415e53be6e550425d5e49aa45b57b54708f051a"
             }
           },
           {
@@ -8293,11 +9520,14 @@
               "executor": "line_membership",
               "constraint": {
                 "op": "line_membership",
-                "argument_node_ids": [
+                "relation_type": "on-line",
+                "source_statement_id": "S:LU6:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LU6:note:1:94-97",
                   "LM:S:LU6:note:1:103-106"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LU6:note:1:94-97",
                   "LM:S:LU6:note:1:103-106"
                 ],
@@ -8316,10 +9546,39 @@
                     "executable_operand_id": "LM:S:LU6:note:1:103-106",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "line_membership",
+                "relation_type": "on-line",
                 "source_statement_id": "S:LU6:note:1",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LU6:note:1:94-97",
+                  "LM:S:LU6:note:1:103-106"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LU6:note:1:94-97",
+                "LM:S:LU6:note:1:103-106"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LU6:note:1:94-97",
+                "LM:S:LU6:note:1:103-106"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LU6:note:1:94-97",
+                  "executable_operand_id": "LM:S:LU6:note:1:94-97",
+                  "binding": "identity"
+                },
+                {
+                  "semantic_operand_id": "LM:S:LU6:note:1:103-106",
+                  "executable_operand_id": "LM:S:LU6:note:1:103-106",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "7bb16371944117cc51c819cfe5f54d525a860e64a4ca90c9253e190b18d3e31b"
             }
           },
           {
@@ -8342,11 +9601,14 @@
               "executor": "midpoint_between",
               "constraint": {
                 "op": "midpoint_between",
-                "argument_node_ids": [
+                "relation_type": "midpoint-between",
+                "source_statement_id": "S:LU6:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LU6:note:1:94-97",
                   "LM:S:LU6:note:1:103-106"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LU6:note:1:94-97",
                   "LM:S:LU6:note:1:103-106"
                 ],
@@ -8365,10 +9627,39 @@
                     "executable_operand_id": "LM:S:LU6:note:1:103-106",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "midpoint_between",
+                "relation_type": "midpoint-between",
                 "source_statement_id": "S:LU6:note:1",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LU6:note:1:94-97",
+                  "LM:S:LU6:note:1:103-106"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LU6:note:1:94-97",
+                "LM:S:LU6:note:1:103-106"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LU6:note:1:94-97",
+                "LM:S:LU6:note:1:103-106"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LU6:note:1:94-97",
+                  "executable_operand_id": "LM:S:LU6:note:1:94-97",
+                  "binding": "identity"
+                },
+                {
+                  "semantic_operand_id": "LM:S:LU6:note:1:103-106",
+                  "executable_operand_id": "LM:S:LU6:note:1:103-106",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "d87983c613e28df2ff1d912a02ead7cb99a9f7e4e168541389c23eeb3ceacd89"
             }
           },
           {
@@ -8391,10 +9682,14 @@
               "executor": "directional_relation",
               "constraint": {
                 "op": "directional_relation",
-                "argument_node_ids": [
+                "relation_type": "relative-to",
+                "source_statement_id": "S:LU6:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LU6:note:1:32-36"
                 ],
-                "semantic_argument_node_ids": [
+                "direction": "inferior",
+                "argument_node_ids": [
                   "LM:S:LU6:note:1:32-36"
                 ],
                 "executable_argument_node_ids": [
@@ -8406,11 +9701,32 @@
                     "executable_operand_id": "LM:S:LU6:note:1:32-36",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
                 "source_statement_id": "S:LU6:note:1",
                 "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LU6:note:1:32-36"
+                ],
                 "direction": "inferior"
-              }
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LU6:note:1:32-36"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LU6:note:1:32-36"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LU6:note:1:32-36",
+                  "executable_operand_id": "LM:S:LU6:note:1:32-36",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "16e56b1a2673e912f80e56a078aeafccfa7a9872ca2d6cfb4163d7268473f4f9"
             }
           },
           {
@@ -8427,6 +9743,16 @@
               "status": "UNRESOLVED",
               "executor": "directional_relation",
               "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
+                "source_statement_id": "S:LU6:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LU6:note:1:57-106"
+                ],
+                "direction": "superior"
+              },
               "semantic_argument_node_ids": [
                 "LM:S:LU6:note:1:57-106"
               ],
@@ -8437,7 +9763,8 @@
                   "executable_operand_ids": [],
                   "binding": "missing_executable_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "6de4a338eceaa85a46932d7ad7aff4eb902937f14ee39b73e6ddf10b28b03a7a"
             }
           },
           {
@@ -8459,10 +9786,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:LU6:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM21:S:LU6:location:67-70:002c0a95e5"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM21:S:LU6:location:67-70:002c0a95e5"
                 ],
                 "executable_argument_node_ids": [
@@ -8474,10 +9804,31 @@
                     "executable_operand_id": "LM21:S:LU6:location:67-70:002c0a95e5",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:LU6:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM21:S:LU6:location:67-70:002c0a95e5"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM21:S:LU6:location:67-70:002c0a95e5"
+              ],
+              "executable_argument_node_ids": [
+                "LM21:S:LU6:location:67-70:002c0a95e5"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM21:S:LU6:location:67-70:002c0a95e5",
+                  "executable_operand_id": "LM21:S:LU6:location:67-70:002c0a95e5",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "f02110f400a290e850b4bc84b60e87e58a30daa712da22a370d276bfbaa14cf4"
             }
           },
           {
@@ -8499,10 +9850,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:LU6:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM21:S:LU6:location:76-79:30c4b43ed7"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM21:S:LU6:location:76-79:30c4b43ed7"
                 ],
                 "executable_argument_node_ids": [
@@ -8514,10 +9868,31 @@
                     "executable_operand_id": "LM21:S:LU6:location:76-79:30c4b43ed7",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:LU6:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM21:S:LU6:location:76-79:30c4b43ed7"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM21:S:LU6:location:76-79:30c4b43ed7"
+              ],
+              "executable_argument_node_ids": [
+                "LM21:S:LU6:location:76-79:30c4b43ed7"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM21:S:LU6:location:76-79:30c4b43ed7",
+                  "executable_operand_id": "LM21:S:LU6:location:76-79:30c4b43ed7",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "3c9f2aa1132754348eaf5dae2a65bb83b888472c80c28616af939c7da61342ef"
             }
           },
           {
@@ -8539,10 +9914,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:LU6:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LU6:note:1:32-36"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LU6:note:1:32-36"
                 ],
                 "executable_argument_node_ids": [
@@ -8554,10 +9932,31 @@
                     "executable_operand_id": "LM:S:LU6:note:1:32-36",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:LU6:note:1",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LU6:note:1:32-36"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LU6:note:1:32-36"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LU6:note:1:32-36"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LU6:note:1:32-36",
+                  "executable_operand_id": "LM:S:LU6:note:1:32-36",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "00f55dfa0a111d92ba2113254797091edae862d8979a5bf415274a436ac6132d"
             }
           },
           {
@@ -8579,10 +9978,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:LU6:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LU6:note:1:94-97"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LU6:note:1:94-97"
                 ],
                 "executable_argument_node_ids": [
@@ -8594,10 +9996,31 @@
                     "executable_operand_id": "LM:S:LU6:note:1:94-97",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:LU6:note:1",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LU6:note:1:94-97"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LU6:note:1:94-97"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LU6:note:1:94-97"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LU6:note:1:94-97",
+                  "executable_operand_id": "LM:S:LU6:note:1:94-97",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "3735c1285789ca4b9b8d18bf6352f5e61316d8739500d115f2b28e47efbece67"
             }
           },
           {
@@ -8619,10 +10042,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:LU6:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LU6:note:1:103-106"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LU6:note:1:103-106"
                 ],
                 "executable_argument_node_ids": [
@@ -8634,10 +10060,31 @@
                     "executable_operand_id": "LM:S:LU6:note:1:103-106",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:LU6:note:1",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LU6:note:1:103-106"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LU6:note:1:103-106"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LU6:note:1:103-106"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LU6:note:1:103-106",
+                  "executable_operand_id": "LM:S:LU6:note:1:103-106",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "166f2ce142c362f654b734ee1c61c7271ee5a961b08d8aa3cb508240779d428d"
             }
           }
         ],
@@ -9052,11 +10499,14 @@
               "executor": "line_membership",
               "constraint": {
                 "op": "line_membership",
-                "argument_node_ids": [
+                "relation_type": "on-line",
+                "source_statement_id": "S:LI7:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LI7:location:68-71",
                   "LM:S:LI7:location:77-81"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LI7:location:68-71",
                   "LM:S:LI7:location:77-81"
                 ],
@@ -9075,10 +10525,39 @@
                     "executable_operand_id": "LM:S:LI7:location:77-81",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "line_membership",
+                "relation_type": "on-line",
                 "source_statement_id": "S:LI7:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI7:location:68-71",
+                  "LM:S:LI7:location:77-81"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LI7:location:68-71",
+                "LM:S:LI7:location:77-81"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LI7:location:68-71",
+                "LM:S:LI7:location:77-81"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LI7:location:68-71",
+                  "executable_operand_id": "LM:S:LI7:location:68-71",
+                  "binding": "identity"
+                },
+                {
+                  "semantic_operand_id": "LM:S:LI7:location:77-81",
+                  "executable_operand_id": "LM:S:LI7:location:77-81",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "5b2cd83fd407c911c5157f44e582a5cc86b029a92ee40c744b03d085dc50bc13"
             }
           },
           {
@@ -9101,10 +10580,14 @@
               "executor": "directional_relation",
               "constraint": {
                 "op": "directional_relation",
-                "argument_node_ids": [
+                "relation_type": "relative-to",
+                "source_statement_id": "S:LI7:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LI7:location:102-126"
                 ],
-                "semantic_argument_node_ids": [
+                "direction": "superior",
+                "argument_node_ids": [
                   "LM:S:LI7:location:102-126"
                 ],
                 "executable_argument_node_ids": [
@@ -9116,11 +10599,32 @@
                     "executable_operand_id": "LM:S:LI7:location:102-126",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
                 "source_statement_id": "S:LI7:location",
                 "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI7:location:102-126"
+                ],
                 "direction": "superior"
-              }
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LI7:location:102-126"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LI7:location:102-126"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LI7:location:102-126",
+                  "executable_operand_id": "LM:S:LI7:location:102-126",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "913f6a58d035cb02eaf4bb236848460930ed290622129079a7e5f955501b1de4"
             }
           },
           {
@@ -9142,10 +10646,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:LI7:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:LI7:location:7-28"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:LI7:location:7-28"
                 ],
                 "executable_argument_node_ids": [
@@ -9157,10 +10664,31 @@
                     "executable_operand_id": "LM:S:LI7:location:7-28",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:LI7:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI7:location:7-28"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:LI7:location:7-28"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:LI7:location:7-28"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:LI7:location:7-28",
+                  "executable_operand_id": "LM:S:LI7:location:7-28",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "2953b9e840bedd475fff295bee04e8b38a8164b4d252bdcbf59d01fce9837a81"
             }
           },
           {
@@ -9177,6 +10705,15 @@
               "status": "UNRESOLVED",
               "executor": "surface_membership",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:LI7:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:LI7:location:52-67"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:LI7:location:52-67"
               ],
@@ -9189,7 +10726,8 @@
                   "executable_operand_id": "LM:S:LI7:location:52-67",
                   "binding": "identity"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "8d98305665e2b892df2752b1207b8c3e82c21784ed6cce44ba524c795510b9f6"
             }
           },
           {
@@ -9211,10 +10749,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:LI7:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM21:S:LI7:location:68-71:1bff496df7"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM21:S:LI7:location:68-71:1bff496df7"
                 ],
                 "executable_argument_node_ids": [
@@ -9226,10 +10767,31 @@
                     "executable_operand_id": "LM21:S:LI7:location:68-71:1bff496df7",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:LI7:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM21:S:LI7:location:68-71:1bff496df7"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM21:S:LI7:location:68-71:1bff496df7"
+              ],
+              "executable_argument_node_ids": [
+                "LM21:S:LI7:location:68-71:1bff496df7"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM21:S:LI7:location:68-71:1bff496df7",
+                  "executable_operand_id": "LM21:S:LI7:location:68-71:1bff496df7",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "99cca28a1d895bc28c0a15db2d915656395757620e424acc974755292ce34563"
             }
           },
           {
@@ -9251,10 +10813,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:LI7:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM21:S:LI7:location:77-81:245ea01482"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM21:S:LI7:location:77-81:245ea01482"
                 ],
                 "executable_argument_node_ids": [
@@ -9266,10 +10831,31 @@
                     "executable_operand_id": "LM21:S:LI7:location:77-81:245ea01482",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:LI7:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM21:S:LI7:location:77-81:245ea01482"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM21:S:LI7:location:77-81:245ea01482"
+              ],
+              "executable_argument_node_ids": [
+                "LM21:S:LI7:location:77-81:245ea01482"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM21:S:LI7:location:77-81:245ea01482",
+                  "executable_operand_id": "LM21:S:LI7:location:77-81:245ea01482",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "0ca3c5eb9bbbdcc765a53409bf06ffb8a17f43f8ef95e6260d67aecf7958f3a5"
             }
           }
         ],
@@ -10097,6 +11683,16 @@
               "status": "UNRESOLVED",
               "executor": "directional_relation",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
+                "source_statement_id": "S:GB26:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:GB26:location:35-70"
+                ],
+                "direction": "inferior"
+              },
               "semantic_argument_node_ids": [
                 "LM:S:GB26:location:35-70"
               ],
@@ -10109,7 +11705,8 @@
                   "executable_operand_id": "LM:S:GB26:location:35-70",
                   "binding": "identity"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "b0ef1439a7fc4bbeb7551f66a487c1d3e8f992c9a5706142da22dd1d412e9f77"
             }
           },
           {
@@ -10126,6 +11723,15 @@
               "status": "UNRESOLVED",
               "executor": "same_level_plane",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "same_level_plane",
+                "relation_type": "same-level",
+                "source_statement_id": "S:GB26:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:GB26:location:93-116"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:GB26:location:93-116"
               ],
@@ -10138,7 +11744,8 @@
                   "executable_operand_id": "LM:S:GB26:location:97-103",
                   "binding": "child_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "7d18af54f53dd4a38bdddec3540ffa4bf340fe95bbe015a79035faaa0e75dff1"
             }
           },
           {
@@ -10155,6 +11762,15 @@
               "status": "UNRESOLVED",
               "executor": "entity_center",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "entity_center",
+                "relation_type": "center-of",
+                "source_statement_id": "S:GB26:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:GB26:location:107-116"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:GB26:location:107-116"
               ],
@@ -10167,7 +11783,8 @@
                   "executable_operand_id": "LM:S:GB26:location:107-116",
                   "binding": "identity"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "63e84a8ed8130e1060aa035d8a0e2c59b94085e37ae2127151b87b70b93056f4"
             }
           },
           {
@@ -10189,10 +11806,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:GB26:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:GB26:location:7-22"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:GB26:location:7-22"
                 ],
                 "executable_argument_node_ids": [
@@ -10204,10 +11824,31 @@
                     "executable_operand_id": "LM:S:GB26:location:7-22",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:GB26:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:GB26:location:7-22"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:GB26:location:7-22"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:GB26:location:7-22"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:GB26:location:7-22",
+                  "executable_operand_id": "LM:S:GB26:location:7-22",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "abf9853fbf46c06144361efbd186fa13cad5b6d58cac7653eb442b92241ff410"
             }
           },
           {
@@ -10230,10 +11871,14 @@
               "executor": "directional_relation",
               "constraint": {
                 "op": "directional_relation",
-                "argument_node_ids": [
+                "relation_type": "relative-to",
+                "source_statement_id": "S:GB26:note:2",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:GB26:note:2:27-32"
                 ],
-                "semantic_argument_node_ids": [
+                "direction": "inferior",
+                "argument_node_ids": [
                   "LM:S:GB26:note:2:27-32"
                 ],
                 "executable_argument_node_ids": [
@@ -10245,11 +11890,32 @@
                     "executable_operand_id": "LM:S:GB26:note:2:27-32",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
                 "source_statement_id": "S:GB26:note:2",
                 "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:GB26:note:2:27-32"
+                ],
                 "direction": "inferior"
-              }
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:GB26:note:2:27-32"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:GB26:note:2:27-32"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:GB26:note:2:27-32",
+                  "executable_operand_id": "LM:S:GB26:note:2:27-32",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "56deadfbc87e40a68f2b68d71ba71670758ae4bf904d4042e0cac08734aa0517"
             }
           },
           {
@@ -10271,10 +11937,13 @@
               "executor": "same_level_plane",
               "constraint": {
                 "op": "same_level_plane",
-                "argument_node_ids": [
+                "relation_type": "same-level",
+                "source_statement_id": "S:GB26:note:2",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:GB26:note:2:55-58"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:GB26:note:2:55-58"
                 ],
                 "executable_argument_node_ids": [
@@ -10286,10 +11955,31 @@
                     "executable_operand_id": "LM:S:GB26:note:2:55-58",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "same_level_plane",
+                "relation_type": "same-level",
                 "source_statement_id": "S:GB26:note:2",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:GB26:note:2:55-58"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:GB26:note:2:55-58"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:GB26:note:2:55-58"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:GB26:note:2:55-58",
+                  "executable_operand_id": "LM:S:GB26:note:2:55-58",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "0634dd4e930ad40cc97213d4f9602dc6306ac8ef83ef346e86f9575e72fd5378"
             }
           },
           {
@@ -10311,10 +12001,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:GB26:note:2",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:GB26:note:2:27-32"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:GB26:note:2:27-32"
                 ],
                 "executable_argument_node_ids": [
@@ -10326,10 +12019,31 @@
                     "executable_operand_id": "LM:S:GB26:note:2:27-32",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:GB26:note:2",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:GB26:note:2:27-32"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:GB26:note:2:27-32"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:GB26:note:2:27-32"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:GB26:note:2:27-32",
+                  "executable_operand_id": "LM:S:GB26:note:2:27-32",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "cb27d5084f3de973c9b4d0055f82f81baf9722ec22cf5c9955d894b4ac0f8de1"
             }
           },
           {
@@ -10351,10 +12065,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:GB26:note:2",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:GB26:note:2:55-58"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:GB26:note:2:55-58"
                 ],
                 "executable_argument_node_ids": [
@@ -10366,10 +12083,31 @@
                     "executable_operand_id": "LM:S:GB26:note:2:55-58",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:GB26:note:2",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:GB26:note:2:55-58"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:GB26:note:2:55-58"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:GB26:note:2:55-58"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:GB26:note:2:55-58",
+                  "executable_operand_id": "LM:S:GB26:note:2:55-58",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "f2524f4da12ed827e06636166988fd38d44fedb3cfa4ad3d533c07e3e8355c59"
             }
           }
         ],
@@ -10519,6 +12257,15 @@
               "status": "UNRESOLVED",
               "executor": "surface_membership",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:ST2:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST2:location:20-40"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:ST2:location:20-40"
               ],
@@ -10531,7 +12278,8 @@
                   "executable_operand_id": "LM:S:ST2:location:20-40",
                   "binding": "identity"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "3d1eb2f40bbe481537bc386a0095719b27a668061d0e9f06e42df43bbd77427c"
             }
           },
           {
@@ -10553,10 +12301,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:ST2:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:ST2:location:7-11"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:ST2:location:7-11"
                 ],
                 "executable_argument_node_ids": [
@@ -10568,10 +12319,31 @@
                     "executable_operand_id": "LM:S:ST2:location:7-11",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:ST2:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST2:location:7-11"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:ST2:location:7-11"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:ST2:location:7-11"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:ST2:location:7-11",
+                  "executable_operand_id": "LM:S:ST2:location:7-11",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "7aeb8b00510694bf8036b5bae9a83b1e84b60ad23d01db7b0352d0ab54940145"
             }
           }
         ],
@@ -10732,10 +12504,13 @@
               "executor": "entity_midpoint",
               "constraint": {
                 "op": "entity_midpoint",
-                "argument_node_ids": [
+                "relation_type": "midpoint-of-entity",
+                "source_statement_id": "S:BL40:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:BL40:location:56-76"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:BL40:location:56-76"
                 ],
                 "executable_argument_node_ids": [
@@ -10747,10 +12522,31 @@
                     "executable_operand_id": "LM:S:BL40:location:56-76",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "entity_midpoint",
+                "relation_type": "midpoint-of-entity",
                 "source_statement_id": "S:BL40:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:BL40:location:56-76"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:BL40:location:56-76"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:BL40:location:56-76"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:BL40:location:56-76",
+                  "executable_operand_id": "LM:S:BL40:location:56-76",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "f9069d6516753af37e89a3f692c54324789ebf70a5473e6f3b339f21776225ae"
             }
           },
           {
@@ -10772,10 +12568,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:BL40:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:BL40:location:7-23"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:BL40:location:7-23"
                 ],
                 "executable_argument_node_ids": [
@@ -10787,10 +12586,31 @@
                     "executable_operand_id": "LM:S:BL40:location:7-23",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:BL40:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:BL40:location:7-23"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:BL40:location:7-23"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:BL40:location:7-23"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:BL40:location:7-23",
+                  "executable_operand_id": "LM:S:BL40:location:7-23",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "243947be43536bab43c4453baecf127467fd3144b740c74ba74d4e0e3a51f14b"
             }
           }
         ],
@@ -11152,6 +12972,16 @@
               "status": "UNRESOLVED",
               "executor": "directional_relation",
               "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
+                "source_statement_id": "S:ST4:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST4:location:33-56"
+                ],
+                "direction": "lateral"
+              },
               "semantic_argument_node_ids": [
                 "LM:S:ST4:location:33-56"
               ],
@@ -11162,7 +12992,8 @@
                   "executable_operand_ids": [],
                   "binding": "missing_executable_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "7b248bd916d05ef8211bd209b58aa0242f1548d2c737a1821b913646f94041fb"
             }
           },
           {
@@ -11184,10 +13015,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:ST4:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:ST4:location:7-11"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:ST4:location:7-11"
                 ],
                 "executable_argument_node_ids": [
@@ -11199,10 +13033,31 @@
                     "executable_operand_id": "LM:S:ST4:location:7-11",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:ST4:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST4:location:7-11"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:ST4:location:7-11"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:ST4:location:7-11"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:ST4:location:7-11",
+                  "executable_operand_id": "LM:S:ST4:location:7-11",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "e2e00238a023ff674388282b7d83294a89a405ec354d7ea7ce518aa29785c447"
             }
           },
           {
@@ -11224,6 +13079,16 @@
               "status": "UNRESOLVED",
               "executor": "directional_relation",
               "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
+                "source_statement_id": "S:ST4:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST4:note:1:16-39"
+                ],
+                "direction": "lateral"
+              },
               "semantic_argument_node_ids": [
                 "LM:S:ST4:note:1:16-39"
               ],
@@ -11234,7 +13099,8 @@
                   "executable_operand_ids": [],
                   "binding": "missing_executable_subfeature"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "129a2201aa55d02df569b3af622b63fb62ae18d2dd320a3ed8c805f5174ba8a1"
             }
           },
           {
@@ -11251,6 +13117,15 @@
               "status": "UNRESOLVED",
               "executor": "surface_membership",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:ST4:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST4:note:1:69-86"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:ST4:note:1:69-86"
               ],
@@ -11263,7 +13138,8 @@
                   "executable_operand_id": "LM:S:ST4:note:1:69-86",
                   "binding": "identity"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "9f782f45a1d8315a63bacb417b5f37fba25355b0102b14156abd69ca599e8999"
             }
           },
           {
@@ -11280,6 +13156,15 @@
               "status": "UNRESOLVED",
               "executor": "surface_membership",
               "reason": "executable operand not uniquely executable",
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:ST4:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:ST4:note:1:97-134"
+                ]
+              },
               "semantic_argument_node_ids": [
                 "LM:S:ST4:note:1:97-134"
               ],
@@ -11292,7 +13177,8 @@
                   "executable_operand_id": "LM:S:ST4:note:1:97-134",
                   "binding": "identity"
                 }
-              ]
+              ],
+              "semantic_fields_hash": "06820a6652905776ae6f61c240a91b84745d34c80833ab40081bd60ffc6db2d9"
             }
           }
         ],
@@ -11311,6 +13197,14 @@
               "executor": "condition_contract",
               "condition_type": "alternative",
               "branch_id": "branch_1",
+              "source_statement_id": "S:ST4:note:1",
+              "source_span": {
+                "condition_type": "alternative",
+                "source_raw": "or on the continuation",
+                "char_start": 87,
+                "char_end": 109,
+                "role": null
+              },
               "default_pose_compatible": null,
               "reason": "condition preserved as non-executed conditional branch"
             }
@@ -11841,11 +13735,14 @@
               "executor": "between_constraint",
               "constraint": {
                 "op": "between_constraint",
-                "argument_node_ids": [
+                "relation_type": "between",
+                "source_statement_id": "S:TE6:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:TE6:location:87-93",
                   "LM:S:TE6:location:98-106"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:TE6:location:87-93",
                   "LM:S:TE6:location:98-106"
                 ],
@@ -11864,10 +13761,39 @@
                     "executable_operand_id": "LM:S:TE6:location:98-106",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "between_constraint",
+                "relation_type": "between",
                 "source_statement_id": "S:TE6:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:TE6:location:87-93",
+                  "LM:S:TE6:location:98-106"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:TE6:location:87-93",
+                "LM:S:TE6:location:98-106"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:TE6:location:87-93",
+                "LM:S:TE6:location:98-106"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:TE6:location:87-93",
+                  "executable_operand_id": "LM:S:TE6:location:87-93",
+                  "binding": "identity"
+                },
+                {
+                  "semantic_operand_id": "LM:S:TE6:location:98-106",
+                  "executable_operand_id": "LM:S:TE6:location:98-106",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "333ab43ffa74223029d7ad3e841302fd918d4c8edb6f5d95f5262182cf7661b3"
             }
           },
           {
@@ -11890,10 +13816,14 @@
               "executor": "directional_relation",
               "constraint": {
                 "op": "directional_relation",
-                "argument_node_ids": [
+                "relation_type": "relative-to",
+                "source_statement_id": "S:TE6:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:TE6:location:127-151"
                 ],
-                "semantic_argument_node_ids": [
+                "direction": "proximal",
+                "argument_node_ids": [
                   "LM:S:TE6:location:127-151"
                 ],
                 "executable_argument_node_ids": [
@@ -11905,11 +13835,32 @@
                     "executable_operand_id": "LM:S:TE6:location:127-151",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
                 "source_statement_id": "S:TE6:location",
                 "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:TE6:location:127-151"
+                ],
                 "direction": "proximal"
-              }
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:TE6:location:127-151"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:TE6:location:127-151"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:TE6:location:127-151",
+                  "executable_operand_id": "LM:S:TE6:location:127-151",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "63fb3a715e7a5d69b365210f92dab21c8999335c8de7bd135442271127b6ae78"
             }
           },
           {
@@ -11931,10 +13882,13 @@
               "executor": "entity_midpoint",
               "constraint": {
                 "op": "entity_midpoint",
-                "argument_node_ids": [
+                "relation_type": "midpoint-of-entity",
+                "source_statement_id": "S:TE6:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:TE6:location:52-106"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:TE6:location:52-106"
                 ],
                 "executable_argument_node_ids": [
@@ -11946,10 +13900,31 @@
                     "executable_operand_id": "LM:S:TE6:location:52-106",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "entity_midpoint",
+                "relation_type": "midpoint-of-entity",
                 "source_statement_id": "S:TE6:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:TE6:location:52-106"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:TE6:location:52-106"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:TE6:location:52-106"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:TE6:location:52-106",
+                  "executable_operand_id": "LM:S:TE6:location:52-106",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "e382fc8c45219bd6f91de2da6eda89436eb3d061d5ee887c9167ddc08979eaf7"
             }
           },
           {
@@ -11971,10 +13946,13 @@
               "executor": "surface_membership",
               "constraint": {
                 "op": "surface_membership",
-                "argument_node_ids": [
+                "relation_type": "surface-landmark",
+                "source_statement_id": "S:TE6:location",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:TE6:location:7-23"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:TE6:location:7-23"
                 ],
                 "executable_argument_node_ids": [
@@ -11986,10 +13964,31 @@
                     "executable_operand_id": "LM:S:TE6:location:7-23",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "surface_membership",
+                "relation_type": "surface-landmark",
                 "source_statement_id": "S:TE6:location",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:TE6:location:7-23"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:TE6:location:7-23"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:TE6:location:7-23"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:TE6:location:7-23",
+                  "executable_operand_id": "LM:S:TE6:location:7-23",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "b5999677b35f938ddea512bd0d0ea670706065f4043eae30cf4bd7e3d706ae6d"
             }
           },
           {
@@ -12012,11 +14011,14 @@
               "executor": "between_constraint",
               "constraint": {
                 "op": "between_constraint",
-                "argument_node_ids": [
+                "relation_type": "between",
+                "source_statement_id": "S:TE6:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:TE6:note:1:43-49",
                   "LM:S:TE6:note:1:54-62"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:TE6:note:1:43-49",
                   "LM:S:TE6:note:1:54-62"
                 ],
@@ -12035,10 +14037,39 @@
                     "executable_operand_id": "LM:S:TE6:note:1:54-62",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "between_constraint",
+                "relation_type": "between",
                 "source_statement_id": "S:TE6:note:1",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:TE6:note:1:43-49",
+                  "LM:S:TE6:note:1:54-62"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:TE6:note:1:43-49",
+                "LM:S:TE6:note:1:54-62"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:TE6:note:1:43-49",
+                "LM:S:TE6:note:1:54-62"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:TE6:note:1:43-49",
+                  "executable_operand_id": "LM:S:TE6:note:1:43-49",
+                  "binding": "identity"
+                },
+                {
+                  "semantic_operand_id": "LM:S:TE6:note:1:54-62",
+                  "executable_operand_id": "LM:S:TE6:note:1:54-62",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "690296a19e6a761963a0912526c5b0cd5fbdd948da4e1cc224e01278cf1888f7"
             }
           },
           {
@@ -12061,10 +14092,14 @@
               "executor": "directional_relation",
               "constraint": {
                 "op": "directional_relation",
-                "argument_node_ids": [
+                "relation_type": "relative-to",
+                "source_statement_id": "S:TE6:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:TE6:note:1:25-29"
                 ],
-                "semantic_argument_node_ids": [
+                "direction": "proximal",
+                "argument_node_ids": [
                   "LM:S:TE6:note:1:25-29"
                 ],
                 "executable_argument_node_ids": [
@@ -12076,11 +14111,32 @@
                     "executable_operand_id": "LM:S:TE6:note:1:25-29",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "directional_relation",
+                "relation_type": "relative-to",
                 "source_statement_id": "S:TE6:note:1",
                 "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:TE6:note:1:25-29"
+                ],
                 "direction": "proximal"
-              }
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:TE6:note:1:25-29"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:TE6:note:1:25-29"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:TE6:note:1:25-29",
+                  "executable_operand_id": "LM:S:TE6:note:1:25-29",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "31ff8195a2bc08b55583394cca63d172acfd77963362a56450e1f2f43f51f4c1"
             }
           },
           {
@@ -12102,10 +14158,13 @@
               "executor": "same_level_plane",
               "constraint": {
                 "op": "same_level_plane",
-                "argument_node_ids": [
+                "relation_type": "same-level",
+                "source_statement_id": "S:TE6:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:TE6:note:1:85-88"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:TE6:note:1:85-88"
                 ],
                 "executable_argument_node_ids": [
@@ -12117,10 +14176,31 @@
                     "executable_operand_id": "LM:S:TE6:note:1:85-88",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "same_level_plane",
+                "relation_type": "same-level",
                 "source_statement_id": "S:TE6:note:1",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:TE6:note:1:85-88"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:TE6:note:1:85-88"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:TE6:note:1:85-88"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:TE6:note:1:85-88",
+                  "executable_operand_id": "LM:S:TE6:note:1:85-88",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "50c1fe383bcc09148985b30617896c63a36546ef5a1e53eb807b8344a9de7e25"
             }
           },
           {
@@ -12142,10 +14222,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:TE6:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:TE6:note:1:25-29"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:TE6:note:1:25-29"
                 ],
                 "executable_argument_node_ids": [
@@ -12157,10 +14240,31 @@
                     "executable_operand_id": "LM:S:TE6:note:1:25-29",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:TE6:note:1",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:TE6:note:1:25-29"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:TE6:note:1:25-29"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:TE6:note:1:25-29"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:TE6:note:1:25-29",
+                  "executable_operand_id": "LM:S:TE6:note:1:25-29",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "a836052bb77aa569cafa89148f7829fdb19e73c258047e27369787c4aeda7091"
             }
           },
           {
@@ -12182,10 +14286,13 @@
               "executor": "reference_dependency",
               "constraint": {
                 "op": "reference_dependency",
-                "argument_node_ids": [
+                "relation_type": "reference-acupoint",
+                "source_statement_id": "S:TE6:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
                   "LM:S:TE6:note:1:85-88"
                 ],
-                "semantic_argument_node_ids": [
+                "argument_node_ids": [
                   "LM:S:TE6:note:1:85-88"
                 ],
                 "executable_argument_node_ids": [
@@ -12197,10 +14304,31 @@
                     "executable_operand_id": "LM:S:TE6:note:1:85-88",
                     "binding": "identity"
                   }
-                ],
+                ]
+              },
+              "semantic_fields": {
+                "op": "reference_dependency",
+                "relation_type": "reference-acupoint",
                 "source_statement_id": "S:TE6:note:1",
-                "branch_id": null
-              }
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:TE6:note:1:85-88"
+                ]
+              },
+              "semantic_argument_node_ids": [
+                "LM:S:TE6:note:1:85-88"
+              ],
+              "executable_argument_node_ids": [
+                "LM:S:TE6:note:1:85-88"
+              ],
+              "operand_binding_trace": [
+                {
+                  "semantic_operand_id": "LM:S:TE6:note:1:85-88",
+                  "executable_operand_id": "LM:S:TE6:note:1:85-88",
+                  "binding": "identity"
+                }
+              ],
+              "semantic_fields_hash": "ac005b54fd3d9574d6756f86cea2e296d2703c2d1f4f630bf17257aaed538c7e"
             }
           }
         ],

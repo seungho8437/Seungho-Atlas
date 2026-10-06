@@ -187,6 +187,16 @@
       &quot;status&quot;: &quot;UNRESOLVED&quot;,
       &quot;executor&quot;: &quot;between_constraint&quot;,
       &quot;reason&quot;: &quot;semantic composite has multiple child subfeatures and no unique executable operand&quot;,
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;between_constraint&quot;,
+        &quot;relation_type&quot;: &quot;between&quot;,
+        &quot;source_statement_id&quot;: &quot;S:LI18:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:LI18:location:115-180:0f3e9745&quot;,
+          &quot;LM:S:LI18:location:128-180:9046d75e&quot;
+        ]
+      },
       &quot;semantic_argument_node_ids&quot;: [
         &quot;LM:S:LI18:location:115-180:0f3e9745&quot;,
         &quot;LM:S:LI18:location:128-180:9046d75e&quot;
@@ -203,12 +213,22 @@
           &quot;executable_operand_ids&quot;: [],
           &quot;binding&quot;: &quot;missing_executable_subfeature&quot;
         }
-      ]
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;53fac0924ad39668b91eeae05f11db16956d7d7b62ecec90aae94ea57123330d&quot;
     },
     {
       &quot;status&quot;: &quot;UNRESOLVED&quot;,
       &quot;executor&quot;: &quot;same_level_plane&quot;,
       &quot;reason&quot;: &quot;executable operand not uniquely executable&quot;,
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;same_level_plane&quot;,
+        &quot;relation_type&quot;: &quot;same-level&quot;,
+        &quot;source_statement_id&quot;: &quot;S:LI18:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:LI18:location:57-101&quot;
+        ]
+      },
       &quot;semantic_argument_node_ids&quot;: [
         &quot;LM:S:LI18:location:57-101&quot;
       ],
@@ -221,17 +241,21 @@
           &quot;executable_operand_id&quot;: &quot;LM:S:LI18:location:61-76&quot;,
           &quot;binding&quot;: &quot;child_subfeature&quot;
         }
-      ]
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;cc35e86561e20ead9da852c408f0987a243ed966cd52a30fb4f79a2b8b7314b3&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;surface_membership&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;surface_membership&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
+        &quot;source_statement_id&quot;: &quot;S:LI18:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:LI18:location:7-22&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:LI18:location:7-22&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -243,10 +267,31 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:LI18:location:7-22&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;surface_membership&quot;,
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
         &quot;source_statement_id&quot;: &quot;S:LI18:location&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:LI18:location:7-22&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:LI18:location:7-22&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:LI18:location:7-22&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:LI18:location:7-22&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:LI18:location:7-22&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;e73d4814e6128b34f4e17cad65b5956d7b7c58c3c3d0586f83cfb3a558c46b9f&quot;
     }
   ],
   &quot;conditions&quot;: []
@@ -371,6 +416,16 @@
       &quot;status&quot;: &quot;UNRESOLVED&quot;,
       &quot;executor&quot;: &quot;directional_relation&quot;,
       &quot;reason&quot;: &quot;executable operand not uniquely executable&quot;,
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;directional_relation&quot;,
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
+        &quot;source_statement_id&quot;: &quot;S:ST10:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:ST10:location:96-142&quot;
+        ],
+        &quot;direction&quot;: &quot;anterior&quot;
+      },
       &quot;semantic_argument_node_ids&quot;: [
         &quot;LM:S:ST10:location:96-142&quot;
       ],
@@ -383,17 +438,21 @@
           &quot;executable_operand_id&quot;: &quot;LM:S:ST10:location:100-107&quot;,
           &quot;binding&quot;: &quot;child_subfeature&quot;
         }
-      ]
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;87063103c1542329c9be236d77c686f7ea4bc641f330022b473e4b197d4ffb94&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;same_level_plane&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;same_level_plane&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;same-level&quot;,
+        &quot;source_statement_id&quot;: &quot;S:ST10:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:ST10:location:57-78&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:ST10:location:57-78&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -405,20 +464,44 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:ST10:location:57-78&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;same_level_plane&quot;,
+        &quot;relation_type&quot;: &quot;same-level&quot;,
         &quot;source_statement_id&quot;: &quot;S:ST10:location&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:ST10:location:57-78&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:ST10:location:57-78&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:ST10:location:57-78&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:ST10:location:57-78&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:ST10:location:57-78&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;1cfddcdbac4b4281402e748a91faa05e0caf9e3c920bfef25618c01d1dc82b63&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;surface_membership&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;surface_membership&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
+        &quot;source_statement_id&quot;: &quot;S:ST10:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:ST10:location:7-34&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:ST10:location:7-34&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -430,10 +513,31 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:ST10:location:7-34&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;surface_membership&quot;,
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
         &quot;source_statement_id&quot;: &quot;S:ST10:location&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:ST10:location:7-34&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:ST10:location:7-34&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:ST10:location:7-34&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:ST10:location:7-34&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:ST10:location:7-34&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;e53fc06ca2764ec17cc7d12f4fbab5ededeb2155131962b8d858f38d0f8f8396&quot;
     }
   ],
   &quot;conditions&quot;: []
@@ -607,6 +711,16 @@
       &quot;status&quot;: &quot;UNRESOLVED&quot;,
       &quot;executor&quot;: &quot;directional_relation&quot;,
       &quot;reason&quot;: &quot;executable operand not uniquely executable&quot;,
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;directional_relation&quot;,
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
+        &quot;source_statement_id&quot;: &quot;S:LI17:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:LI17:location:97-143&quot;
+        ],
+        &quot;direction&quot;: &quot;posterior&quot;
+      },
       &quot;semantic_argument_node_ids&quot;: [
         &quot;LM:S:LI17:location:97-143&quot;
       ],
@@ -619,17 +733,21 @@
           &quot;executable_operand_id&quot;: &quot;LM:S:LI17:location:101-108&quot;,
           &quot;binding&quot;: &quot;child_subfeature&quot;
         }
-      ]
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;2b46cdf0ec4aed6638511250c33f249c16549f116b8fe76e295fa4242c62fa3c&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;same_level_plane&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;same_level_plane&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;same-level&quot;,
+        &quot;source_statement_id&quot;: &quot;S:LI17:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:LI17:location:57-78&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:LI17:location:57-78&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -641,20 +759,44 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:LI17:location:57-78&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;same_level_plane&quot;,
+        &quot;relation_type&quot;: &quot;same-level&quot;,
         &quot;source_statement_id&quot;: &quot;S:LI17:location&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:LI17:location:57-78&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:LI17:location:57-78&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:LI17:location:57-78&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:LI17:location:57-78&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:LI17:location:57-78&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;2079891f51e10f9b4f3fccf742348b1b8e6547703acac881f6d6b49cf16303a1&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;surface_membership&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;surface_membership&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
+        &quot;source_statement_id&quot;: &quot;S:LI17:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:LI17:location:7-22&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:LI17:location:7-22&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -666,20 +808,45 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:LI17:location:7-22&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;surface_membership&quot;,
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
         &quot;source_statement_id&quot;: &quot;S:LI17:location&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:LI17:location:7-22&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:LI17:location:7-22&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:LI17:location:7-22&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:LI17:location:7-22&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:LI17:location:7-22&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;e26417b42c2975d2eafc0dead8d6a92717a65ab89b3cc250a57db98ea9cbab6d&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;directional_relation&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;directional_relation&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
+        &quot;source_statement_id&quot;: &quot;S:LI17:note:1&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:LI17:note:1:26-31&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;direction&quot;: &quot;inferior&quot;,
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:LI17:note:1:26-31&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -691,21 +858,45 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:LI17:note:1:26-31&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;directional_relation&quot;,
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
         &quot;source_statement_id&quot;: &quot;S:LI17:note:1&quot;,
         &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:LI17:note:1:26-31&quot;
+        ],
         &quot;direction&quot;: &quot;inferior&quot;
-      }
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:LI17:note:1:26-31&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:LI17:note:1:26-31&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:LI17:note:1:26-31&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:LI17:note:1:26-31&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;a0be66cab72cc9336633cc6a7a68c24cb71bd934a89a55cc053c7dbf5107b0a4&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;same_level_plane&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;same_level_plane&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;same-level&quot;,
+        &quot;source_statement_id&quot;: &quot;S:LI17:note:1&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:LI17:note:1:54-58&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:LI17:note:1:54-58&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -717,20 +908,44 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:LI17:note:1:54-58&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;same_level_plane&quot;,
+        &quot;relation_type&quot;: &quot;same-level&quot;,
         &quot;source_statement_id&quot;: &quot;S:LI17:note:1&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:LI17:note:1:54-58&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:LI17:note:1:54-58&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:LI17:note:1:54-58&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:LI17:note:1:54-58&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:LI17:note:1:54-58&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;336081d4f0f72ca176269d0db3882c4379a0046bbb843974a8718f56190029ba&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;reference_dependency&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;reference_dependency&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;reference-acupoint&quot;,
+        &quot;source_statement_id&quot;: &quot;S:LI17:note:1&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:LI17:note:1:26-31&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:LI17:note:1:26-31&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -742,20 +957,44 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:LI17:note:1:26-31&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;reference_dependency&quot;,
+        &quot;relation_type&quot;: &quot;reference-acupoint&quot;,
         &quot;source_statement_id&quot;: &quot;S:LI17:note:1&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:LI17:note:1:26-31&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:LI17:note:1:26-31&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:LI17:note:1:26-31&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:LI17:note:1:26-31&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:LI17:note:1:26-31&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;d629e44efa47512180deef56a078c97af89682ce90c1051cd2d6635be6bbd35f&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;reference_dependency&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;reference_dependency&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;reference-acupoint&quot;,
+        &quot;source_statement_id&quot;: &quot;S:LI17:note:1&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:LI17:note:1:54-58&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:LI17:note:1:54-58&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -767,10 +1006,31 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:LI17:note:1:54-58&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;reference_dependency&quot;,
+        &quot;relation_type&quot;: &quot;reference-acupoint&quot;,
         &quot;source_statement_id&quot;: &quot;S:LI17:note:1&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:LI17:note:1:54-58&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:LI17:note:1:54-58&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:LI17:note:1:54-58&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:LI17:note:1:54-58&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:LI17:note:1:54-58&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;86d6974447c1245ad89ce39395e645deeae722e8704298836571443fcfc132ce&quot;
     }
   ],
   &quot;conditions&quot;: []
@@ -942,10 +1202,14 @@
       &quot;executor&quot;: &quot;directional_relation&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;directional_relation&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
+        &quot;source_statement_id&quot;: &quot;S:BL17:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:BL17:location:149-175&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;direction&quot;: &quot;lateral&quot;,
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:BL17:location:149-175&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -957,16 +1221,46 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:BL17:location:149-175&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;directional_relation&quot;,
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
         &quot;source_statement_id&quot;: &quot;S:BL17:location&quot;,
         &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:BL17:location:149-175&quot;
+        ],
         &quot;direction&quot;: &quot;lateral&quot;
-      }
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:BL17:location:149-175&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:BL17:location:149-175&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:BL17:location:149-175&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:BL17:location:149-175&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;6a11aebbd715e5ef3e3587f2e1aa7b7282d788fa5b565c356652258e3dbe2d83&quot;
     },
     {
       &quot;status&quot;: &quot;UNRESOLVED&quot;,
       &quot;executor&quot;: &quot;same_level_plane&quot;,
       &quot;reason&quot;: &quot;executable operand not uniquely executable&quot;,
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;same_level_plane&quot;,
+        &quot;relation_type&quot;: &quot;same-level&quot;,
+        &quot;source_statement_id&quot;: &quot;S:BL17:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:BL17:location:47-127&quot;
+        ]
+      },
       &quot;semantic_argument_node_ids&quot;: [
         &quot;LM:S:BL17:location:47-127&quot;
       ],
@@ -979,17 +1273,21 @@
           &quot;executable_operand_id&quot;: &quot;LM:S:BL17:location:51-66&quot;,
           &quot;binding&quot;: &quot;child_subfeature&quot;
         }
-      ]
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;ba54059035ed65df89be107cec93ea882cff2412857d6999e48ba9913b696be0&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;surface_membership&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;surface_membership&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
+        &quot;source_statement_id&quot;: &quot;S:BL17:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:BL17:location:7-24&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:BL17:location:7-24&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -1001,20 +1299,44 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:BL17:location:7-24&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;surface_membership&quot;,
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
         &quot;source_statement_id&quot;: &quot;S:BL17:location&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:BL17:location:7-24&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:BL17:location:7-24&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:BL17:location:7-24&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:BL17:location:7-24&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:BL17:location:7-24&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;d6e9916331460e32751b849ed1c04c2e73fee2c4438a77ea1f7d9f1c787d74f7&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;same_level_plane&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;same_level_plane&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;same-level&quot;,
+        &quot;source_statement_id&quot;: &quot;S:BL17:note:1&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:BL17:note:1:64-116&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:BL17:note:1:64-116&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -1026,10 +1348,31 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:BL17:note:1:64-116&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;same_level_plane&quot;,
+        &quot;relation_type&quot;: &quot;same-level&quot;,
         &quot;source_statement_id&quot;: &quot;S:BL17:note:1&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:BL17:note:1:64-116&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:BL17:note:1:64-116&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:BL17:note:1:64-116&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:BL17:note:1:64-116&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:BL17:note:1:64-116&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;bb6a8a9dc0a5e2bdeaade9a8bbe219bb21a459878612bbec0e7d0d1180ce959c&quot;
     }
   ],
   &quot;conditions&quot;: []
@@ -1155,10 +1498,14 @@
       &quot;executor&quot;: &quot;directional_relation&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;directional_relation&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
+        &quot;source_statement_id&quot;: &quot;S:BL23:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:BL23:location:142-168&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;direction&quot;: &quot;lateral&quot;,
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:BL23:location:142-168&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -1170,16 +1517,46 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:BL23:location:142-168&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;directional_relation&quot;,
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
         &quot;source_statement_id&quot;: &quot;S:BL23:location&quot;,
         &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:BL23:location:142-168&quot;
+        ],
         &quot;direction&quot;: &quot;lateral&quot;
-      }
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:BL23:location:142-168&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:BL23:location:142-168&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:BL23:location:142-168&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:BL23:location:142-168&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;862c78830cd2dc16693d8cbc4a56f30c9ce3fa1488debbc6fa903edfc04af189&quot;
     },
     {
       &quot;status&quot;: &quot;UNRESOLVED&quot;,
       &quot;executor&quot;: &quot;same_level_plane&quot;,
       &quot;reason&quot;: &quot;executable operand not uniquely executable&quot;,
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;same_level_plane&quot;,
+        &quot;relation_type&quot;: &quot;same-level&quot;,
+        &quot;source_statement_id&quot;: &quot;S:BL23:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:BL23:location:43-120&quot;
+        ]
+      },
       &quot;semantic_argument_node_ids&quot;: [
         &quot;LM:S:BL23:location:43-120&quot;
       ],
@@ -1192,17 +1569,21 @@
           &quot;executable_operand_id&quot;: &quot;LM:S:BL23:location:47-62&quot;,
           &quot;binding&quot;: &quot;child_subfeature&quot;
         }
-      ]
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;88e3397ffd20831a035aef5ee673749ac0196234b6b92198de2a59f96ab3b7d5&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;surface_membership&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;surface_membership&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
+        &quot;source_statement_id&quot;: &quot;S:BL23:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:BL23:location:7-20&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:BL23:location:7-20&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -1214,10 +1595,31 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:BL23:location:7-20&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;surface_membership&quot;,
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
         &quot;source_statement_id&quot;: &quot;S:BL23:location&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:BL23:location:7-20&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:BL23:location:7-20&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:BL23:location:7-20&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:BL23:location:7-20&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:BL23:location:7-20&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;7ef1f11395cf9bf57fb05cd3712f0ec2325b6f4c4c713ed8ed29a82e2bdb0323&quot;
     }
   ],
   &quot;conditions&quot;: []
@@ -1343,10 +1745,14 @@
       &quot;executor&quot;: &quot;directional_relation&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;directional_relation&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
+        &quot;source_statement_id&quot;: &quot;S:BL25:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:BL25:location:142-168&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;direction&quot;: &quot;lateral&quot;,
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:BL25:location:142-168&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -1358,16 +1764,46 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:BL25:location:142-168&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;directional_relation&quot;,
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
         &quot;source_statement_id&quot;: &quot;S:BL25:location&quot;,
         &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:BL25:location:142-168&quot;
+        ],
         &quot;direction&quot;: &quot;lateral&quot;
-      }
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:BL25:location:142-168&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:BL25:location:142-168&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:BL25:location:142-168&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:BL25:location:142-168&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;1b7ca304871e9a64afc4612124bd256897d067a7d065c8e7d99a16801ffc811e&quot;
     },
     {
       &quot;status&quot;: &quot;UNRESOLVED&quot;,
       &quot;executor&quot;: &quot;same_level_plane&quot;,
       &quot;reason&quot;: &quot;executable operand not uniquely executable&quot;,
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;same_level_plane&quot;,
+        &quot;relation_type&quot;: &quot;same-level&quot;,
+        &quot;source_statement_id&quot;: &quot;S:BL25:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:BL25:location:43-120&quot;
+        ]
+      },
       &quot;semantic_argument_node_ids&quot;: [
         &quot;LM:S:BL25:location:43-120&quot;
       ],
@@ -1380,17 +1816,21 @@
           &quot;executable_operand_id&quot;: &quot;LM:S:BL25:location:47-62&quot;,
           &quot;binding&quot;: &quot;child_subfeature&quot;
         }
-      ]
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;caa9e7786c7095e3489c3ea24114d5e5c8e105a2b8423ad52855af499ac4adbe&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;surface_membership&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;surface_membership&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
+        &quot;source_statement_id&quot;: &quot;S:BL25:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:BL25:location:7-20&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:BL25:location:7-20&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -1402,10 +1842,31 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:BL25:location:7-20&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;surface_membership&quot;,
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
         &quot;source_statement_id&quot;: &quot;S:BL25:location&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:BL25:location:7-20&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:BL25:location:7-20&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:BL25:location:7-20&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:BL25:location:7-20&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:BL25:location:7-20&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;53f2ca5e3ce9d576a596085b32ffa1b87d88cda84bb7d347526593f3e50332fc&quot;
     }
   ],
   &quot;conditions&quot;: []
@@ -1759,10 +2220,14 @@
       &quot;executor&quot;: &quot;directional_relation&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;directional_relation&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
+        &quot;source_statement_id&quot;: &quot;S:ST9:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:ST9:location:114-146&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;direction&quot;: &quot;anterior&quot;,
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:ST9:location:114-146&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -1774,16 +2239,46 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:ST9:location:114-146&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;directional_relation&quot;,
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
         &quot;source_statement_id&quot;: &quot;S:ST9:location&quot;,
         &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:ST9:location:114-146&quot;
+        ],
         &quot;direction&quot;: &quot;anterior&quot;
-      }
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:ST9:location:114-146&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:ST9:location:114-146&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:ST9:location:114-146&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:ST9:location:114-146&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;0da925091aded9811ecc3019b8f660367a31b928ea97672e386fe0636dbc40a9&quot;
     },
     {
       &quot;status&quot;: &quot;UNRESOLVED&quot;,
       &quot;executor&quot;: &quot;same_level_plane&quot;,
       &quot;reason&quot;: &quot;executable operand not uniquely executable&quot;,
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;same_level_plane&quot;,
+        &quot;relation_type&quot;: &quot;same-level&quot;,
+        &quot;source_statement_id&quot;: &quot;S:ST9:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:ST9:location:57-101&quot;
+        ]
+      },
       &quot;semantic_argument_node_ids&quot;: [
         &quot;LM:S:ST9:location:57-101&quot;
       ],
@@ -1796,17 +2291,21 @@
           &quot;executable_operand_id&quot;: &quot;LM:S:ST9:location:61-76&quot;,
           &quot;binding&quot;: &quot;child_subfeature&quot;
         }
-      ]
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;00f74e5d21de535782c60963d3309c26eba9a4c782fd55d42a5d9ac524fd1aee&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;overlies_projection&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;overlies_projection&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;overlies&quot;,
+        &quot;source_statement_id&quot;: &quot;S:ST9:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:ST9:location:157-178&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:ST9:location:157-178&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -1818,20 +2317,44 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:ST9:location:157-178&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;overlies_projection&quot;,
+        &quot;relation_type&quot;: &quot;overlies&quot;,
         &quot;source_statement_id&quot;: &quot;S:ST9:location&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:ST9:location:157-178&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:ST9:location:157-178&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:ST9:location:157-178&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:ST9:location:157-178&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:ST9:location:157-178&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;a394ba9959b2e061747e70591eaf347298f1274a1db495465697d2d4c5a29194&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;surface_membership&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;surface_membership&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
+        &quot;source_statement_id&quot;: &quot;S:ST9:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:ST9:location:7-34&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:ST9:location:7-34&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -1843,15 +2366,46 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:ST9:location:7-34&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;surface_membership&quot;,
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
         &quot;source_statement_id&quot;: &quot;S:ST9:location&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:ST9:location:7-34&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:ST9:location:7-34&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:ST9:location:7-34&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:ST9:location:7-34&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:ST9:location:7-34&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;7988af80d90df68d16d40f7455be910ddfbadf4dd610a05451eddff6182dfb4a&quot;
     },
     {
       &quot;status&quot;: &quot;UNRESOLVED&quot;,
       &quot;executor&quot;: &quot;between_constraint&quot;,
       &quot;reason&quot;: &quot;semantic composite has multiple child subfeatures and no unique executable operand&quot;,
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;between_constraint&quot;,
+        &quot;relation_type&quot;: &quot;between&quot;,
+        &quot;source_statement_id&quot;: &quot;S:ST9:note:2&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:ST9:note:2:240-305:6f7a364e&quot;,
+          &quot;LM:S:ST9:note:2:253-305:a442a1a4&quot;
+        ]
+      },
       &quot;semantic_argument_node_ids&quot;: [
         &quot;LM:S:ST9:note:2:240-305:6f7a364e&quot;,
         &quot;LM:S:ST9:note:2:253-305:a442a1a4&quot;
@@ -1868,17 +2422,22 @@
           &quot;executable_operand_ids&quot;: [],
           &quot;binding&quot;: &quot;missing_executable_subfeature&quot;
         }
-      ]
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;0de1e68e63b08635e4dc6643430e9b8efdd9399b349d8343db4738de254e0319&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;directional_relation&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;directional_relation&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
+        &quot;source_statement_id&quot;: &quot;S:ST9:note:2&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:ST9:note:2:131-162&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;direction&quot;: &quot;anterior&quot;,
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:ST9:note:2:131-162&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -1890,21 +2449,46 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:ST9:note:2:131-162&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;directional_relation&quot;,
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
         &quot;source_statement_id&quot;: &quot;S:ST9:note:2&quot;,
         &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:ST9:note:2:131-162&quot;
+        ],
         &quot;direction&quot;: &quot;anterior&quot;
-      }
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:ST9:note:2:131-162&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:ST9:note:2:131-162&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:ST9:note:2:131-162&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:ST9:note:2:131-162&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;3855ed87478f75dc47705e1eee3b92e08423a7e178d215c99ce3c0fde874c76a&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;directional_relation&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;directional_relation&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
+        &quot;source_statement_id&quot;: &quot;S:ST9:note:2&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:ST9:note:2:186-226&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;direction&quot;: &quot;posterior&quot;,
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:ST9:note:2:186-226&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -1916,21 +2500,45 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:ST9:note:2:186-226&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;directional_relation&quot;,
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
         &quot;source_statement_id&quot;: &quot;S:ST9:note:2&quot;,
         &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:ST9:note:2:186-226&quot;
+        ],
         &quot;direction&quot;: &quot;posterior&quot;
-      }
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:ST9:note:2:186-226&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:ST9:note:2:186-226&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:ST9:note:2:186-226&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:ST9:note:2:186-226&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;e79d950d98f6ddc102dedd92062d544beebcd09639cf4b54c6888e76b7f3c7b8&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;same_level_plane&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;same_level_plane&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;same-level&quot;,
+        &quot;source_statement_id&quot;: &quot;S:ST9:note:2&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:ST9:note:2:44-48&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:ST9:note:2:44-48&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -1942,20 +2550,44 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:ST9:note:2:44-48&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;same_level_plane&quot;,
+        &quot;relation_type&quot;: &quot;same-level&quot;,
         &quot;source_statement_id&quot;: &quot;S:ST9:note:2&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:ST9:note:2:44-48&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:ST9:note:2:44-48&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:ST9:note:2:44-48&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:ST9:note:2:44-48&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:ST9:note:2:44-48&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;05f75cd806b6e4801296c87e519e93e454c0c0cdc8c65cd6b235b958f41595a5&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;reference_dependency&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;reference_dependency&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;reference-acupoint&quot;,
+        &quot;source_statement_id&quot;: &quot;S:ST9:note:2&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:ST9:note:2:44-48&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:ST9:note:2:44-48&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -1967,20 +2599,44 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:ST9:note:2:44-48&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;reference_dependency&quot;,
+        &quot;relation_type&quot;: &quot;reference-acupoint&quot;,
         &quot;source_statement_id&quot;: &quot;S:ST9:note:2&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:ST9:note:2:44-48&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:ST9:note:2:44-48&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:ST9:note:2:44-48&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:ST9:note:2:44-48&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:ST9:note:2:44-48&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;aa27ce51039c4c30749b294c12b3e3374f453ff269d55a273d822456ff52fbc6&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;reference_dependency&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;reference_dependency&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;reference-acupoint&quot;,
+        &quot;source_statement_id&quot;: &quot;S:ST9:note:2&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM21:S:ST9:note:2:50-54:6775aaafeb&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM21:S:ST9:note:2:50-54:6775aaafeb&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -1992,20 +2648,44 @@
             &quot;executable_operand_id&quot;: &quot;LM21:S:ST9:note:2:50-54:6775aaafeb&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;reference_dependency&quot;,
+        &quot;relation_type&quot;: &quot;reference-acupoint&quot;,
         &quot;source_statement_id&quot;: &quot;S:ST9:note:2&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM21:S:ST9:note:2:50-54:6775aaafeb&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM21:S:ST9:note:2:50-54:6775aaafeb&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM21:S:ST9:note:2:50-54:6775aaafeb&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM21:S:ST9:note:2:50-54:6775aaafeb&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM21:S:ST9:note:2:50-54:6775aaafeb&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;5d66dd3c9ac274d662e5599beb94f1d480f0a2c8a2087975cb690cfe0a33ab0c&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;reference_dependency&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;reference_dependency&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;reference-acupoint&quot;,
+        &quot;source_statement_id&quot;: &quot;S:ST9:note:2&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM21:S:ST9:note:2:168-172:6775aaafeb&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM21:S:ST9:note:2:168-172:6775aaafeb&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -2017,20 +2697,44 @@
             &quot;executable_operand_id&quot;: &quot;LM21:S:ST9:note:2:168-172:6775aaafeb&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;reference_dependency&quot;,
+        &quot;relation_type&quot;: &quot;reference-acupoint&quot;,
         &quot;source_statement_id&quot;: &quot;S:ST9:note:2&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM21:S:ST9:note:2:168-172:6775aaafeb&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM21:S:ST9:note:2:168-172:6775aaafeb&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM21:S:ST9:note:2:168-172:6775aaafeb&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM21:S:ST9:note:2:168-172:6775aaafeb&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM21:S:ST9:note:2:168-172:6775aaafeb&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;6dd689ff346688754baabc53626985eeeb2a0d81064fae5d42e3caa34f170894&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;reference_dependency&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;reference_dependency&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;reference-acupoint&quot;,
+        &quot;source_statement_id&quot;: &quot;S:ST9:note:2&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM21:S:ST9:note:2:222-226:34574dfae8&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM21:S:ST9:note:2:222-226:34574dfae8&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -2042,10 +2746,31 @@
             &quot;executable_operand_id&quot;: &quot;LM21:S:ST9:note:2:222-226:34574dfae8&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;reference_dependency&quot;,
+        &quot;relation_type&quot;: &quot;reference-acupoint&quot;,
         &quot;source_statement_id&quot;: &quot;S:ST9:note:2&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM21:S:ST9:note:2:222-226:34574dfae8&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM21:S:ST9:note:2:222-226:34574dfae8&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM21:S:ST9:note:2:222-226:34574dfae8&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM21:S:ST9:note:2:222-226:34574dfae8&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM21:S:ST9:note:2:222-226:34574dfae8&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;9c70b37fa69f6fc67ce297e0ce061a359e920e6442c815d6b0d1e98a086f20b2&quot;
     }
   ],
   &quot;conditions&quot;: [
@@ -2054,6 +2779,14 @@
       &quot;executor&quot;: &quot;condition_contract&quot;,
       &quot;condition_type&quot;: &quot;body_position&quot;,
       &quot;branch_id&quot;: &quot;branch_1&quot;,
+      &quot;source_statement_id&quot;: &quot;S:ST9:note:1&quot;,
+      &quot;source_span&quot;: {
+        &quot;condition_type&quot;: &quot;body_position&quot;,
+        &quot;source_raw&quot;: &quot;when the head is turned to the opposite side against resistance&quot;,
+        &quot;char_start&quot;: 56,
+        &quot;char_end&quot;: 119,
+        &quot;role&quot;: null
+      },
       &quot;default_pose_compatible&quot;: false,
       &quot;reason&quot;: &quot;condition requires pose incompatible with default BodyParts3D pose&quot;
     },
@@ -2062,6 +2795,14 @@
       &quot;executor&quot;: &quot;condition_contract&quot;,
       &quot;condition_type&quot;: &quot;palpation_dependent&quot;,
       &quot;branch_id&quot;: &quot;branch_2&quot;,
+      &quot;source_statement_id&quot;: &quot;S:ST9:note:1&quot;,
+      &quot;source_span&quot;: {
+        &quot;condition_type&quot;: &quot;palpation_dependent&quot;,
+        &quot;source_raw&quot;: &quot;more distinct when the head is turned to the opposite side against resistance&quot;,
+        &quot;char_start&quot;: 42,
+        &quot;char_end&quot;: 119,
+        &quot;role&quot;: null
+      },
       &quot;default_pose_compatible&quot;: null,
       &quot;reason&quot;: &quot;condition preserved as non-executed conditional branch&quot;
     }
@@ -2144,6 +2885,16 @@
       &quot;status&quot;: &quot;UNRESOLVED&quot;,
       &quot;executor&quot;: &quot;directional_relation&quot;,
       &quot;reason&quot;: &quot;semantic composite has multiple child subfeatures and no unique executable operand&quot;,
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;directional_relation&quot;,
+        &quot;relation_type&quot;: &quot;relative-to&quot;,
+        &quot;source_statement_id&quot;: &quot;S:TE20:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:TE20:location:29-48&quot;
+        ],
+        &quot;direction&quot;: &quot;superior&quot;
+      },
       &quot;semantic_argument_node_ids&quot;: [
         &quot;LM:S:TE20:location:29-48&quot;
       ],
@@ -2154,17 +2905,21 @@
           &quot;executable_operand_ids&quot;: [],
           &quot;binding&quot;: &quot;missing_executable_subfeature&quot;
         }
-      ]
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;78e8dc4bd902c8a77ce9b262ee187bac1edf61c27a1a4aabfa2dd52e6e687e65&quot;
     },
     {
       &quot;status&quot;: &quot;RESOLVED&quot;,
       &quot;executor&quot;: &quot;surface_membership&quot;,
       &quot;constraint&quot;: {
         &quot;op&quot;: &quot;surface_membership&quot;,
-        &quot;argument_node_ids&quot;: [
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
+        &quot;source_statement_id&quot;: &quot;S:TE20:location&quot;,
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
           &quot;LM:S:TE20:location:7-11&quot;
         ],
-        &quot;semantic_argument_node_ids&quot;: [
+        &quot;argument_node_ids&quot;: [
           &quot;LM:S:TE20:location:7-11&quot;
         ],
         &quot;executable_argument_node_ids&quot;: [
@@ -2176,10 +2931,31 @@
             &quot;executable_operand_id&quot;: &quot;LM:S:TE20:location:7-11&quot;,
             &quot;binding&quot;: &quot;identity&quot;
           }
-        ],
+        ]
+      },
+      &quot;semantic_fields&quot;: {
+        &quot;op&quot;: &quot;surface_membership&quot;,
+        &quot;relation_type&quot;: &quot;surface-landmark&quot;,
         &quot;source_statement_id&quot;: &quot;S:TE20:location&quot;,
-        &quot;branch_id&quot;: null
-      }
+        &quot;branch_id&quot;: null,
+        &quot;semantic_argument_node_ids&quot;: [
+          &quot;LM:S:TE20:location:7-11&quot;
+        ]
+      },
+      &quot;semantic_argument_node_ids&quot;: [
+        &quot;LM:S:TE20:location:7-11&quot;
+      ],
+      &quot;executable_argument_node_ids&quot;: [
+        &quot;LM:S:TE20:location:7-11&quot;
+      ],
+      &quot;operand_binding_trace&quot;: [
+        {
+          &quot;semantic_operand_id&quot;: &quot;LM:S:TE20:location:7-11&quot;,
+          &quot;executable_operand_id&quot;: &quot;LM:S:TE20:location:7-11&quot;,
+          &quot;binding&quot;: &quot;identity&quot;
+        }
+      ],
+      &quot;semantic_fields_hash&quot;: &quot;629eea7cdb9cfce055ec9cabdfe1142b2a1ba75a09eb748ef73054d9e5a1cdb4&quot;
     }
   ],
   &quot;conditions&quot;: [
@@ -2188,6 +2964,14 @@
       &quot;executor&quot;: &quot;condition_contract&quot;,
       &quot;condition_type&quot;: &quot;body_position&quot;,
       &quot;branch_id&quot;: &quot;branch_1&quot;,
+      &quot;source_statement_id&quot;: &quot;S:TE20:note:1&quot;,
+      &quot;source_span&quot;: {
+        &quot;condition_type&quot;: &quot;body_position&quot;,
+        &quot;source_raw&quot;: &quot;With the auricle folded&quot;,
+        &quot;char_start&quot;: 6,
+        &quot;char_end&quot;: 29,
+        &quot;role&quot;: null
+      },
       &quot;default_pose_compatible&quot;: false,
       &quot;reason&quot;: &quot;condition requires pose incompatible with default BodyParts3D pose&quot;
     }
