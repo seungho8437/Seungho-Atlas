@@ -73,7 +73,7 @@ def infer_laterality(name:str)->Optional[str]:
     s=name.strip().lower()
     left=s.startswith("left ") or s.endswith(" left") or " left " in s
     right=s.startswith("right ") or s.endswith(" right") or " right " in s
-    if left and right: return "AMBIGUOUS"
+    if left and right: return "bilateral"
     if left: return "left"
     if right: return "right"
     return None
