@@ -309,6 +309,9 @@ def main():
       "semantic_fields":semantic_fields,"semantic_argument_node_ids":semantic,"executable_argument_node_ids":[],"operand_binding_trace":[]});continue
    executable=[];binding_trace=[];ambiguous=False
    for a in semantic:
+    arec=lout.get(a,{})
+    if (arec.get("geometry") or {}).get("kind")=="derived_relation_output":
+     executable.append(a);binding_trace.append({"semantic_operand_id":a,"executable_operand_id":a,"binding":"derived_relation_output"});continue
     kids=[k for k in contained_bound_children(a,bindings) if subfeature_type(bnodes.get(k,{}).get("source_raw"))]
     asf=subfeature_type(bnodes.get(a,{}).get("source_raw"))
     if kids:
