@@ -20,8 +20,14 @@ COHORT=("HT7","LI4","ST1","GB14","GB23","LU6","LI7","GB26","ST2","ST10","LI18","
 EXPECTED_GEOMETRY_BLOB="efb078aaecc08af1a4491cb40e9c84fd4e4443fa"
 EXPECTED_REVIEW_BUILDER_BLOB="1c3a05ceb4b6f84ee670b6d6cf2c50c6f8349b5a"
 STOP={"the","of","and","a","an","to","in","on","at","with","bone","muscle","border","aspect","region","space","line","centre","center","midpoint"}
-SUBFEATURES=("superior border","inferior border","anterior border","posterior border","free end","midpoint","centre","center","margin","edge","angle","apex","border","end")
-SYMBOLIC_CONSTRUCTIBLE={"midpoint":"entity_midpoint","centre":"entity_center","center":"entity_center"}
+SUBFEATURE_SYNONYMS=(
+ ("superior border","superior_border"),("inferior border","inferior_border"),
+ ("anterior border","anterior_border"),("posterior border","posterior_border"),
+ ("free extremity","free_end"),("free end","free_end"),
+ ("midpoint","midpoint"),("centre","center"),("center","center"),
+ ("margin","margin"),("edge","edge"),("angle","angle"),("apex","apex"),
+ ("tip","tip"),("border","border"),("end","end"),("process","process"))
+SYMBOLIC_CONSTRUCTIBLE={"midpoint":"entity_midpoint","center":"entity_center"}
 REL_OP={"surface-landmark":"surface_membership","relative-to":"directional_relation","reference-acupoint":"reference_dependency",
  "same-level":"same_level_plane","between":"between_constraint","midpoint-of-entity":"entity_midpoint","on-line":"line_membership",
  "center-of":"entity_center","midpoint-between":"midpoint_between","overlies":"overlies_projection"}
@@ -35,9 +41,27 @@ def sha256(p):
  return h.hexdigest()
 def git_blob(p):return subprocess.check_output(["git","hash-object",p],text=True).strip()
 def norm(s):return re.sub(r"[^a-z0-9]+"," ",(s or "").lower().replace("proxi-mal","proximal").replace("pos-terior","posterior")).strip()
-def subfeature_type(raw):
+def subfeature_normalization(raw):
  n=norm(raw)
- return next((x for x in SUBFEATURES if x in n),None)
+ for lexical,canonical in SUBFEATURE_SYNONYMS:
+  if lexical in n:
+   return {"source_lexical_form":lexical,"canonical_subfeature_type":canonical}
+ return None
+def subfeature_type(raw):
+ x=subfeature_normalization(raw)
+ return x["canonical_subfeature_type"] if x else None
+
+def fma_atomic_at_same_granularity(node):
+ if node.get("terminal_disposition")!="resolved_fma" or not node.get("fma_name"):return False
+ sf=subfeature_normalization(node.get("source_raw"))
+ if not sf:return True
+ fname=norm(node.get("fma_name"))
+ lex=sf["source_lexical_form"];canon=sf["canonical_subfeature_type"]
+ # An ontology/FMA name that itself lexicalizes the feature is treated as an atomic entity.
+ if lex in fname:return True
+ if canon=="free_end" and ("free end" in fname or "free extremity" in fname):return True
+ if canon=="center" and ("center" in fname or "centre" in fname):return True
+ return False
 
 def span_info(node_id):
  m=re.search(r":(\d+)-(\d+)(?::[^:]+)?$",node_id or "")
@@ -53,6 +77,17 @@ def contained_bound_children(arg_id,bindings):
   if a[1]<=cs[1] and cs[2]<=a[2] and a[1]<=ps[1] and ps[2]<=a[2]:
    out.append(b["child_landmark_id"])
  return out
+def lexicalized_atomic_container(child_id,parent_id,lms,bnodes):
+ cs=span_info(child_id);ps=span_info(parent_id)
+ if not cs or not ps or cs[0]!=ps[0]:return None
+ for n in lms:
+  nid=n["node_id"]
+  if nid in (child_id,parent_id):continue
+  ns=span_info(nid)
+  if not ns or ns[0]!=cs[0]:continue
+  if ns[1]<=cs[1] and cs[2]<=ns[2] and ns[1]<=ps[1] and ps[2]<=ns[2] and fma_atomic_at_same_granularity(n):
+   return nid
+ return None
 def content_tokens(s):return [x for x in norm(s).split() if len(x)>2 and x not in STOP]
 def parse_ref(raw):
  m=re.search(r"\b(?:LU|LI|ST|SP|HT|SI|BL|KI|PC|TE|GB|LR|CV|GV)\s*\d+\b",(raw or "").upper())
@@ -177,13 +212,23 @@ def main():
   "scope":{"cohort":list(COHORT),"physical_coordinates_generated":False,"legacy_coordinate_input":False},
   "repair_contract":{"parent_only_composite_resolution_forbidden":True,"child_dependency_binding_required":True,
    "distinct_subfeatures_require_distinct_executable_identity":True,"incompatible_body_position_must_be_conditional":True,
-   "quantitative_relation_semantics_loss_forbidden":True,"derived_operator_output_binding_required":True},
+   "quantitative_relation_semantics_loss_forbidden":True,"derived_operator_output_binding_required":True,
+   "lexicalized_anatomical_entity_false_subfeature_split_forbidden":True,
+   "subfeature_synonym_normalization_required":True},
   "points":[]}
  for pid in COHORT:
   ss=[x for x in g["source_statements"] if x["point_id"]==pid];sm={x["source_statement_id"] for x in ss}
   lms=[x for x in g["landmark_nodes"] if x["point_id"]==pid];rels=[x for x in g["relation_instances"] if x["subject_node_id"]==f"P:{pid}"]
   pms=[x for x in g.get("proportional_measurements",[]) if x["source_statement_id"] in sm]
   conds=[x for x in g.get("conditions",[]) if x["source_statement_id"] in sm]
+  lexicalized_suppressed={}
+  for b in bindings:
+   child=b["child_landmark_id"];parent=b["parent_landmark_id"]
+   if child not in {x["node_id"] for x in lms}:continue
+   container=lexicalized_atomic_container(child,parent,lms,bnodes)
+   if container:
+    lexicalized_suppressed[child]={"binding_id":b["binding_id"],"parent_landmark_id":parent,
+      "suppressed_by_atomic_landmark_id":container,"normalization":subfeature_normalization(bnodes.get(child,{}).get("source_raw"))}
   lout={}
   for n in lms:
    nid=n["node_id"];disp=n.get("terminal_disposition")
@@ -214,20 +259,29 @@ def main():
   for n in lms:
    nid=n["node_id"]
    if nid not in binding_by_child:continue
-   b=binding_by_child[nid];parent_id=b["parent_landmark_id"];sf=subfeature_type(n.get("source_raw"));par=lout.get(parent_id)
-   if not sf:
-    lout[nid]={"status":"UNRESOLVED","executor":"composite_subfeature_binding","geometry":None,"reason":"child subfeature type not recognized","provenance":{"binding_id":b["binding_id"],"parent_landmark_id":parent_id}}
+   b=binding_by_child[nid];parent_id=b["parent_landmark_id"];normal=subfeature_normalization(n.get("source_raw"));sf=normal["canonical_subfeature_type"] if normal else None;par=lout.get(parent_id)
+   if nid in lexicalized_suppressed:
+    meta=lexicalized_suppressed[nid]
+    lout[nid]={"status":"UNRESOLVED","executor":"lexicalized_entity_guard","geometry":None,
+      "reason":"LEXICALIZED_ANATOMICAL_ENTITY_FALSE_SUBFEATURE_SPLIT_SUPPRESSED",
+      "semantic_suppressed":True,"semantic_normalization":normal,
+      "provenance":meta}
+   elif not sf:
+    lout[nid]={"status":"UNRESOLVED","executor":"composite_subfeature_binding","geometry":None,"reason":"subfeature lexical form not recognized",
+      "semantic_suppressed":False,"semantic_normalization":normal,
+      "provenance":{"binding_id":b["binding_id"],"parent_landmark_id":parent_id}}
    elif not par or par.get("status")!="RESOLVED":
-    lout[nid]={"status":"UNRESOLVED","executor":"composite_subfeature_binding","geometry":None,"reason":"parent entity is not uniquely resolved","provenance":{"binding_id":b["binding_id"],"parent_landmark_id":parent_id,"subfeature_type":sf}}
+    lout[nid]={"status":"UNRESOLVED","executor":"composite_subfeature_binding","geometry":None,"reason":"parent entity is not uniquely resolved","semantic_normalization":normal,"provenance":{"binding_id":b["binding_id"],"parent_landmark_id":parent_id,"subfeature_type":sf}}
    elif sf in SYMBOLIC_CONSTRUCTIBLE:
     rule=SYMBOLIC_CONSTRUCTIBLE[sf];spec={"rule":rule,"parent_identity":geometry_identity(par),"subfeature_type":sf,"parent_landmark_id":parent_id}
     gh=objhash(spec);cid=f"SUBFEATURE:{sf}:{parent_id}:{gh[:16]}"
     lout[nid]={"status":"RESOLVED","executor":"constructed_subfeature","geometry":{"kind":"constructed_subfeature","subfeature_type":sf,
       "parent_landmark_id":parent_id,"construction_rule":rule,"constructed_id":cid,"geometry_hash":gh},
-      "provenance":{"binding_id":b["binding_id"],"parent_landmark_id":parent_id}}
+      "semantic_normalization":normal,"provenance":{"binding_id":b["binding_id"],"parent_landmark_id":parent_id}}
    else:
     lout[nid]={"status":"UNRESOLVED","executor":"composite_subfeature_binding","geometry":None,
-      "reason":f"no approved executable construction rule for subfeature '{sf}'",
+      "reason":f"no approved executable construction rule for canonical subfeature '{sf}'",
+      "semantic_normalization":normal,
       "provenance":{"binding_id":b["binding_id"],"parent_landmark_id":parent_id,"subfeature_type":sf}}
   # Any semantic operand containing subfeature language may not survive as a
   # parent whole-entity geometry.  Bindings are detected by source-span containment,
@@ -235,8 +289,8 @@ def main():
   # a larger composite phrase spanning both fragments.
   for n in lms:
    nid=n["node_id"];sf=subfeature_type(n.get("source_raw"))
-   if not sf or nid in binding_by_child:continue
-   relevant=[k for k in contained_bound_children(nid,bindings) if subfeature_type(bnodes.get(k,{}).get("source_raw"))]
+   if not sf or nid in binding_by_child or fma_atomic_at_same_granularity(n):continue
+   relevant=[k for k in contained_bound_children(nid,bindings) if k not in lexicalized_suppressed and subfeature_type(bnodes.get(k,{}).get("source_raw"))]
    if len(relevant)==1 and lout.get(relevant[0],{}).get("status")=="RESOLVED":
     child=relevant[0];cg=lout[child]["geometry"]
     lout[nid]={"status":"RESOLVED","executor":"bound_composite_subfeature","geometry":{"kind":"bound_subfeature",
@@ -312,8 +366,9 @@ def main():
     arec=lout.get(a,{})
     if (arec.get("geometry") or {}).get("kind")=="derived_relation_output":
      executable.append(a);binding_trace.append({"semantic_operand_id":a,"executable_operand_id":a,"binding":"derived_relation_output"});continue
-    kids=[k for k in contained_bound_children(a,bindings) if subfeature_type(bnodes.get(k,{}).get("source_raw"))]
-    asf=subfeature_type(bnodes.get(a,{}).get("source_raw"))
+    anode=bnodes.get(a,{})
+    kids=[k for k in contained_bound_children(a,bindings) if k not in lexicalized_suppressed and subfeature_type(bnodes.get(k,{}).get("source_raw"))]
+    asf=None if fma_atomic_at_same_granularity(anode) else subfeature_type(anode.get("source_raw"))
     if kids:
      if len(kids)==1:
       executable.append(kids[0]);binding_trace.append({"semantic_operand_id":a,"executable_operand_id":kids[0],"binding":"child_subfeature"})
@@ -355,7 +410,8 @@ def main():
    statements.append({"source_statement_id":sid,"section":s["section"],"status":base,"relation_ids":rr,"measurement_ids":mm,"condition_ids":cc})
   loc=next((x for x in statements if x["section"]=="location"),None)
   out["points"].append({"point_id":pid,"primary_location_status":loc["status"] if loc else "UNRESOLVED","landmarks":lout,"relations":rout,
-    "measurements":mout,"derived_geometries":derived_outputs,"conditions":cout,"statements":statements})
+    "measurements":mout,"derived_geometries":derived_outputs,"conditions":cout,"statements":statements,
+    "lexicalized_suppressed_children":lexicalized_suppressed})
  q=Path(args.out);q.parent.mkdir(parents=True,exist_ok=True);q.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n")
  print(json.dumps({"points":20,"primary":dict(collections.Counter(x["primary_location_status"] for x in out["points"])),
   "conditions":dict(collections.Counter(v["status"] for x in out["points"] for v in x["conditions"].values()))}))
