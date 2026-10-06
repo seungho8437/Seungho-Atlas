@@ -10,7 +10,7 @@ surface-registry executor.
 from __future__ import annotations
 import argparse,copy,hashlib,json,math
 from pathlib import Path
-from spatial_core import AtlasStore,barycentric_reconstruct,ray_triangle,dot,normalize,vsub,distance
+from spatial_core import AtlasStore,barycentric_reconstruct,ray_triangle,ray_hits_part,dot,normalize,vsub,distance
 
 COHORT=("HT7","LI4","ST1","GB14","GB23","LU6","LI7","GB26","ST2","ST10",
         "LI18","LI17","BL17","BL23","BL25","BL40","TE20","ST4","TE6","ST9")
@@ -23,6 +23,15 @@ def sha256_file(p):
  return h.hexdigest()
 
 def primary_statement(p):return next((x for x in p["statements"] if x.get("section")=="location"),None)
+
+def dedupe_geometric_hits(hits,tol_t=1e-6,tol_point=1e-6):
+ groups=[]
+ for h in hits:
+  for g in groups:
+   if abs(h.t-g[0].t)<=tol_t and distance(h.point,g[0].point)<=tol_point:
+    g.append(h);break
+  else:groups.append([h])
+ return [min(g,key=lambda x:(x.t,x.triangle_index)) for g in groups]
 
 def suppressed_metrics(stage2):
  suppressed=set()
@@ -108,6 +117,9 @@ def validate(output,stage2,sub,store,lock):
     ck(t<=0.05,"PROJECTION_EXCEEDS_INDEPENDENT_LOCALITY_BOUND",{"point":pid,"side":c["side"],"t":t})
     rr=ray_triangle(tuple(proj["origin_world_m"]),d,*tri)
     ck(rr is not None,"DECLARED_RAY_DOES_NOT_HIT_DECLARED_TRIANGLE",{"point":pid,"side":c["side"]})
+    all_hits=[h for h in ray_hits_part(store,SKIN_PART,tuple(proj["origin_world_m"]),d) if h.t>1e-7 and h.t<=budget]
+    unique_hits=dedupe_geometric_hits(all_hits)
+    ck(len(unique_hits)==1,"DISTINCT_RAY_SURFACE_HIT_CARDINALITY_NOT_ONE",{"point":pid,"side":c["side"],"raw":len(all_hits),"distinct":len(unique_hits)})
     if rr is not None:
      rt,rw=rr
      ck(abs(rt-t)<=1e-7,"RAY_T_MISMATCH",{"point":pid,"side":c["side"],"declared":t,"recomputed":rt})
@@ -122,6 +134,7 @@ def validate(output,stage2,sub,store,lock):
   else:
    ck(b["stage3_status"] in ("UNRESOLVED","BLOCKED_BY_STAGE2"),"EMPTY_COORDINATE_WITH_INVALID_STATUS",pid)
 
+ ck(generated>=1,"STAGE3_GENERATED_NO_POINTS")
  ck(output.get("summary",{}).get("generated_points")==generated,"SUMMARY_GENERATED_POINT_COUNT_MISMATCH")
  ck(output.get("summary",{}).get("generated_coordinates")==sum(len(x["coordinates"]) for x in p3.values()),"SUMMARY_COORDINATE_COUNT_MISMATCH")
  return checks,errors,metrics
