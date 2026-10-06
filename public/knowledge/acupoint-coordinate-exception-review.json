@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-06T04:44:07.009Z",
+  "generatedAt": "2026-10-06T05:02:20.438Z",
   "scope": "Focused visual/anatomical exception review: four formerly low-confidence acupoints plus seven formerly near-duplicate clusters.",
   "coordinateModel": "BodyParts3D-4.0",
   "reviewedLogicalAcupoints": 18,
@@ -10,23 +10,40 @@
     "invalidGeometryOrLaterality": [],
     "globalNearDuplicateClusters": [
       [
-        "LI13",
-        "HT2"
-      ],
-      [
-        "LI17",
-        "SI16"
+        "LU9",
+        "PC7"
       ],
       [
         "BL3",
         "BL4"
       ],
       [
-        "BL63",
-        "GB42"
+        "BL64",
+        "GB43"
+      ],
+      [
+        "KI11",
+        "LR12"
+      ],
+      [
+        "GB7",
+        "GB8"
+      ],
+      [
+        "GB7",
+        "GB8"
       ]
     ],
-    "globalExactDuplicateClusters": [],
+    "globalExactDuplicateClusters": [
+      [
+        "GB7",
+        "GB8"
+      ],
+      [
+        "GB7",
+        "GB8"
+      ]
+    ],
     "formerlyLowConfidenceNowLow": []
   },
   "reviews": [
@@ -50,12 +67,12 @@
         {
           "id": "BL35",
           "side": "left",
-          "distance": 0.0728
+          "distance": 0.0652
         },
         {
           "id": "BL35",
           "side": "right",
-          "distance": 0.0714
+          "distance": 0.0574
         }
       ],
       "caveat": "WHO textual constraints and BodyParts3D surface projection carry this localization because no specific B-landmark mesh was counted."
@@ -80,12 +97,12 @@
         {
           "id": "BL36",
           "side": "left",
-          "distance": 0.0272
+          "distance": 0.0405
         },
         {
           "id": "BL36",
           "side": "right",
-          "distance": 0.0347
+          "distance": 0.0476
         }
       ],
       "caveat": "WHO textual constraints and BodyParts3D surface projection carry this localization because no specific B-landmark mesh was counted."
@@ -110,12 +127,12 @@
         {
           "id": "GB28",
           "side": "left",
-          "distance": 0.1072
+          "distance": 0.0426
         },
         {
           "id": "GB28",
           "side": "right",
-          "distance": 0.2075
+          "distance": 0.0398
         }
       ],
       "caveat": "WHO textual constraints and BodyParts3D surface projection carry this localization because no specific B-landmark mesh was counted."
@@ -140,12 +157,12 @@
         {
           "id": "GB29",
           "side": "left",
-          "distance": 0.1037
+          "distance": 0.0227
         },
         {
           "id": "GB29",
           "side": "right",
-          "distance": 0.0957
+          "distance": 0.0264
         }
       ],
       "caveat": "WHO textual constraints and BodyParts3D surface projection carry this localization because no specific B-landmark mesh was counted."
@@ -165,11 +182,11 @@
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.1031
+          "distance": 0.0545
         },
         {
           "side": "right",
-          "distance": 0.1273
+          "distance": 0.0554
         }
       ],
       "confidence": [
@@ -182,22 +199,22 @@
         {
           "id": "ST17",
           "side": "left",
-          "distance": 0.1317
+          "distance": 0.0649
         },
         {
           "id": "ST17",
           "side": "right",
-          "distance": 0.105
+          "distance": 0.0601
         },
         {
           "id": "GB23",
           "side": "left",
-          "distance": 0.1187
+          "distance": 0.0159
         },
         {
           "id": "GB23",
           "side": "right",
-          "distance": 0.1157
+          "distance": 0.0235
         }
       ],
       "caveat": null
@@ -217,11 +234,11 @@
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.036
+          "distance": 0.0557
         },
         {
           "side": "right",
-          "distance": 0.0469
+          "distance": 0.0565
         }
       ],
       "confidence": [
@@ -234,22 +251,22 @@
         {
           "id": "ST43",
           "side": "left",
-          "distance": 0.0028
+          "distance": 0.002
         },
         {
           "id": "ST43",
           "side": "right",
-          "distance": 0.0008
+          "distance": 0.0094
         },
         {
           "id": "GB42",
           "side": "left",
-          "distance": 0.0163
+          "distance": 0.0316
         },
         {
           "id": "GB42",
           "side": "right",
-          "distance": 0.0196
+          "distance": 0.0311
         }
       ],
       "caveat": null
@@ -269,11 +286,11 @@
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.1419
+          "distance": 0.0789
         },
         {
           "side": "right",
-          "distance": 0.1426
+          "distance": 0.0774
         }
       ],
       "confidence": [
@@ -286,22 +303,22 @@
         {
           "id": "BL62",
           "side": "left",
-          "distance": 0.1918
+          "distance": 0.0748
         },
         {
           "id": "BL62",
           "side": "right",
-          "distance": 0.1878
+          "distance": 0.0731
         },
         {
           "id": "KI4",
           "side": "left",
-          "distance": 0.0135
+          "distance": 0.008
         },
         {
           "id": "KI4",
           "side": "right",
-          "distance": 0.0018
+          "distance": 0.0003
         }
       ],
       "caveat": null
@@ -314,18 +331,18 @@
         "GB41"
       ],
       "expected": "BL63은 가쪽/뒤쪽 발, GB41은 발등 4-5 발허리뼈 바닥 먼쪽으로 분리되어야 한다.",
-      "status": "pass",
+      "status": "quarantined-review-needed",
       "surfaceAndLaterality": true,
       "directionalConstraint": true,
       "separationThreshold": 0.0188,
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.051
+          "distance": 0.0199
         },
         {
           "side": "right",
-          "distance": 0.0509
+          "distance": 0.0176
         }
       ],
       "confidence": [
@@ -338,22 +355,22 @@
         {
           "id": "BL63",
           "side": "left",
-          "distance": 0.002
+          "distance": 0.0329
         },
         {
           "id": "BL63",
           "side": "right",
-          "distance": 0.0057
+          "distance": 0.029
         },
         {
           "id": "GB41",
           "side": "left",
-          "distance": 0.0149
+          "distance": 0.028
         },
         {
           "id": "GB41",
           "side": "right",
-          "distance": 0.0145
+          "distance": 0.0275
         }
       ],
       "caveat": null
@@ -366,46 +383,46 @@
         "TE4"
       ],
       "expected": "TE3은 손허리뼈 사이, TE4는 손목주름으로 손-손목 축에서 분리되어야 한다.",
-      "status": "pass",
+      "status": "quarantined-review-needed",
       "surfaceAndLaterality": true,
       "directionalConstraint": true,
       "separationThreshold": 0.0188,
       "pairDistances": [
         {
           "side": "left",
-          "distance": 0.0917
+          "distance": 0.0177
         },
         {
           "side": "right",
-          "distance": 0.093
+          "distance": 0.0194
         }
       ],
       "confidence": [
         "high",
         "high",
-        "moderate",
-        "moderate"
+        "high",
+        "high"
       ],
       "projectionDistances": [
         {
           "id": "TE3",
           "side": "left",
-          "distance": 0.0014
+          "distance": 0.0034
         },
         {
           "id": "TE3",
           "side": "right",
-          "distance": 0.0018
+          "distance": 0.0017
         },
         {
           "id": "TE4",
           "side": "left",
-          "distance": 0.0487
+          "distance": 0.0061
         },
         {
           "id": "TE4",
           "side": "right",
-          "distance": 0.0511
+          "distance": 0.0065
         }
       ],
       "caveat": null
@@ -425,7 +442,7 @@
       "pairDistances": [
         {
           "side": "midline",
-          "distance": 0.0373
+          "distance": 0.0301
         }
       ],
       "confidence": [
@@ -436,12 +453,12 @@
         {
           "id": "GV9",
           "side": "midline",
-          "distance": 0.0407
+          "distance": 0.0412
         },
         {
           "id": "GV10",
           "side": "midline",
-          "distance": 0.0425
+          "distance": 0.0426
         }
       ],
       "caveat": null
@@ -461,7 +478,7 @@
       "pairDistances": [
         {
           "side": "midline",
-          "distance": 0.0996
+          "distance": 0.1168
         }
       ],
       "confidence": [
@@ -472,12 +489,12 @@
         {
           "id": "GV13",
           "side": "midline",
-          "distance": 0.0543
+          "distance": 0.0589
         },
         {
           "id": "GV15",
           "side": "midline",
-          "distance": 0.0397
+          "distance": 0.0373
         }
       ],
       "caveat": null
