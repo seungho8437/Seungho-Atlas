@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "inputs.lock.json",
+  "gate": "G0a",
+  "status": "APPROVED",
+  "B_v2_1": {
+    "path": "public/knowledge/anatomy-acupoint-relations-v2.1.json",
+    "sha256": "8126e20938a478a2d214f4a8487cabeebc8f3115f7a81ad30e46b594958fb2c1",
+    "expected_sha256": "8126e20938a478a2d214f4a8487cabeebc8f3115f7a81ad30e46b594958fb2c1",
+    "statements": 583
+  },
+  "BodyParts3D": {
+    "atlas_path": "public/models/atlas.json",
+    "sha256": "c359f4bcd2cba90b7411d66d5e9fc04dc81294d46cd5c1e8b212c824f2e5bbee",
+    "version": "BodyParts3D 4.0",
+    "sex": "male",
+    "mesh_input": "public/models/body-*.bin"
+  },
+  "forbidden_inputs_used": [],
+  "judgment": "C_V3_G0A_APPROVED"
+}
