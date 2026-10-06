@@ -1,0 +1,29 @@
+{
+  "gate": "G1",
+  "status": "AWAITING_HUMAN_REVIEW",
+  "vertex_count": 22902,
+  "region_counts": {
+    "head": 2907,
+    "neck": 647,
+    "trunk": 8273,
+    "left_upper_arm": 765,
+    "right_upper_arm": 674,
+    "left_forearm": 439,
+    "right_forearm": 466,
+    "left_hand": 1013,
+    "right_hand": 1001,
+    "left_thigh": 1066,
+    "right_thigh": 1178,
+    "left_lower_leg": 805,
+    "right_lower_leg": 768,
+    "left_foot": 1438,
+    "right_foot": 1462
+  },
+  "automatic_pre_qc": {
+    "issues": [],
+    "critical": 0,
+    "major": 0
+  },
+  "S2_started": false,
+  "judgment": "C_V3_G1_PENDING_HUMAN_QC"
+}
