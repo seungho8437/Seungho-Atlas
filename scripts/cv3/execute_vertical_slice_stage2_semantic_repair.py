@@ -148,6 +148,22 @@ def main():
  children_by_parent=collections.defaultdict(list)
  for b in bindings:children_by_parent[b["parent_landmark_id"]].append(b["child_landmark_id"])
  bnodes={x["node_id"]:x for x in g["landmark_nodes"]}
+ def contained_subfeature_children(node_id, point_landmarks):
+  n=bnodes.get(node_id,{})
+  sp=node_span(node_id);sid=n.get("source_statement_id")
+  if not sp:return []
+  outc=[]
+  for cand in point_landmarks:
+   cid=cand["node_id"]
+   if cid==node_id or cand.get("source_statement_id")!=sid:continue
+   csp=node_span(cid)
+   if not csp or not (sp[0] <= csp[0] and csp[1] <= sp[1]):continue
+   if not subfeature_types(cand.get("source_raw")):continue
+   if (csp[1]-csp[0]) >= (sp[1]-sp[0]):continue
+   outc.append(cid)
+  for cid in children_by_parent.get(node_id,[]):
+   if cid in bnodes and subfeature_types(bnodes[cid].get("source_raw")) and cid not in outc:outc.append(cid)
+  return sorted(outc,key=lambda x:(node_span(x) or (10**9,10**9),x))
  out={"schema_version":"2.0.0","artifact":"c-v3-vertical-slice-v1-stage2-semantic-repair","status":"GENERATED_NOT_VALIDATED",
   "scope":{"cohort":list(COHORT),"physical_coordinates_generated":False,"legacy_coordinate_input":False},
   "repair_contract":{"parent_only_composite_resolution_forbidden":True,"child_dependency_binding_required":True,
