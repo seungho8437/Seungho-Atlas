@@ -16,6 +16,11 @@ def norm(s):return re.sub(r"[^a-z0-9]+"," ",(s or "").lower()).strip()
 def expected_direction(rel):
  cue=norm((rel.get("cue_span") or {}).get("source_raw"))
  return next((x for x in ("radial","ulnar","anterior","posterior","superior","inferior","medial","lateral","proximal","distal") if x in cue),None)
+def expected_measurements_for_relation(rel,g):
+ same=[m for m in g.get("proportional_measurements",[]) if m["source_statement_id"]==rel.get("source_statement_id")]
+ if rel.get("relation_type")!="relative-to":return [],same
+ d=expected_direction(rel)
+ return [m for m in same if m.get("direction")==d],same
 def canon(x):return json.dumps(x,sort_keys=True,separators=(",",":"))
 def objhash(x):return hashlib.sha256(canon(x).encode()).hexdigest()
 def sf(raw):
@@ -83,6 +88,21 @@ def scan(out,g):
     findings.append({"rule":"relation_nonoperand_semantics_loss","point_id":pid,"relation_id":rid,"field":"semantic_argument_node_ids","expected":src.get("argument_node_ids",[]),"actual":sflds.get("semantic_argument_node_ids")})
    if src.get("relation_type")=="relative-to" and sflds.get("direction")!=exp_dir:
     findings.append({"rule":"direction_preservation_failure","point_id":pid,"relation_id":rid,"expected":exp_dir,"actual":sflds.get("direction")})
+   exp_bound,exp_stmt=expected_measurements_for_relation(src,g)
+   exp_bound_ids=[m["measurement_id"] for m in exp_bound];exp_stmt_ids=[m["measurement_id"] for m in exp_stmt]
+   if sflds.get("bound_measurement_ids",[])!=exp_bound_ids:
+    findings.append({"rule":"quantitative_relation_semantics_loss","point_id":pid,"relation_id":rid,"field":"bound_measurement_ids","expected":exp_bound_ids,"actual":sflds.get("bound_measurement_ids")})
+   if sflds.get("statement_measurement_ids",[])!=exp_stmt_ids:
+    findings.append({"rule":"quantitative_relation_semantics_loss","point_id":pid,"relation_id":rid,"field":"statement_measurement_ids","expected":exp_stmt_ids,"actual":sflds.get("statement_measurement_ids")})
+   gotqc=sflds.get("quantitative_constraints",[])
+   if len(gotqc)!=len(exp_bound):
+    findings.append({"rule":"quantitative_relation_semantics_loss","point_id":pid,"relation_id":rid,"field":"quantitative_constraints_count","expected":len(exp_bound),"actual":len(gotqc)})
+   else:
+    for srcm,q in zip(exp_bound,gotqc):
+     if q.get("value")!=srcm.get("value") or q.get("direction")!=srcm.get("direction") or q.get("source_statement_id")!=srcm.get("source_statement_id"):
+      findings.append({"rule":"quantitative_relation_semantics_loss","point_id":pid,"relation_id":rid,"measurement_id":srcm["measurement_id"],"expected":{"value":srcm.get("value"),"direction":srcm.get("direction"),"source_statement_id":srcm.get("source_statement_id")},"actual":q})
+     if not q.get("unit"):
+      findings.append({"rule":"quantitative_relation_semantics_loss","point_id":pid,"relation_id":rid,"measurement_id":srcm["measurement_id"],"field":"unit","actual":q.get("unit")})
    if r.get("semantic_fields_hash")!=objhash(sflds):
     findings.append({"rule":"relation_semantic_hash_mismatch","point_id":pid,"relation_id":rid})
    if r.get("status")=="RESOLVED" and ("semantic_argument_node_ids" not in (r.get("constraint") or {}) or "executable_argument_node_ids" not in (r.get("constraint") or {})):
@@ -102,6 +122,24 @@ def scan(out,g):
      for j in range(i+1,len(executable)):
       if sfs[i] and sfs[j] and sfs[i]!=sfs[j] and ids[i] and ids[i]==ids[j]:
        findings.append({"rule":"distinct_subfeature_identity_collapse","point_id":pid,"relation_id":rid,"operand_a":executable[i],"operand_b":executable[j],"identity":ids[i]})
+  # Derived operator output must be consumable by downstream relations.
+  derived=p.get("derived_geometries",{})
+  for dgid,dg in derived.items():
+   prod=dg.get("producer_relation_id")
+   if prod not in p["relations"] or p["relations"][prod].get("status")!="RESOLVED":
+    findings.append({"rule":"derived_geometry_output_not_bound","point_id":pid,"derived_geometry_id":dgid,"detail":"producer relation missing or not resolved"})
+  for nid,rec in p["landmarks"].items():
+   gref=rec.get("geometry") or {}
+   if gref.get("kind")=="derived_relation_output":
+    prod=gref.get("producer_relation_id");dgid=gref.get("derived_geometry_id")
+    if not prod or dgid not in derived:
+     findings.append({"rule":"derived_geometry_output_not_bound","point_id":pid,"node_id":nid,"detail":"derived landmark lacks registered producer/output"})
+    # A resolved downstream relation that semantically references this node must execute against it.
+    consumers=[(rid,r) for rid,r in p["relations"].items() if nid in ((r.get("semantic_fields") or {}).get("semantic_argument_node_ids") or []) and rid!=prod]
+    for rid,r in consumers:
+     exe=(r.get("constraint") or {}).get("executable_argument_node_ids") or r.get("executable_argument_node_ids") or []
+     if r.get("status")=="RESOLVED" and nid not in exe:
+      findings.append({"rule":"derived_geometry_output_not_bound","point_id":pid,"node_id":nid,"relation_id":rid,"detail":"resolved downstream relation does not consume derived output node"})
   # Child itself may not fallback to a whole parent mesh.
   for child,b in ((x["child_landmark_id"],x) for x in g.get("composite_bindings",[]) if x["child_landmark_id"] in p["landmarks"]):
    raw=bnodes.get(child,{}).get("source_raw");typ=sf(raw);rec=p["landmarks"][child]
@@ -134,7 +172,7 @@ def validate(out,before,g):
  findings=scan(out,g)
  grouped={}
  for f in findings:grouped.setdefault(f["rule"],[]).append(f)
- for rule in ("parent_only_composite_resolution","child_subfeature_unused_by_relation","distinct_subfeature_identity_collapse","condition_preservation_failure","condition_linkage_loss","child_subfeature_false_fallback","operand_trace_incomplete","relation_nonoperand_semantics_loss","direction_preservation_failure","relation_semantic_hash_mismatch"):
+ for rule in ("parent_only_composite_resolution","child_subfeature_unused_by_relation","distinct_subfeature_identity_collapse","condition_preservation_failure","condition_linkage_loss","child_subfeature_false_fallback","operand_trace_incomplete","relation_nonoperand_semantics_loss","direction_preservation_failure","relation_semantic_hash_mismatch","quantitative_relation_semantics_loss","derived_geometry_output_not_bound"):
   ck(len(grouped.get(rule,[]))==0,rule.upper(),grouped.get(rule,[]))
  # Trace completeness for every relation.
  for p in out["points"]:
@@ -224,6 +262,35 @@ def mutate_unknown_subfeature_fallback(out,g):
     return m
  raise RuntimeError("no unresolved subfeature available")
 
+def mutate_measurement_value_to_none(out,g):
+ m=copy.deepcopy(out)
+ for p in m["points"]:
+  for rid,r in p["relations"].items():
+   sflds=r.get("semantic_fields") or {}
+   qs=sflds.get("quantitative_constraints") or []
+   if qs:
+    qs[0]["value"]=None;r["semantic_fields_hash"]=objhash(sflds);return m
+ raise RuntimeError("no quantitative relation for negative test")
+
+def mutate_measurement_unit_to_none(out,g):
+ m=copy.deepcopy(out)
+ for p in m["points"]:
+  for rid,r in p["relations"].items():
+   sflds=r.get("semantic_fields") or {}
+   qs=sflds.get("quantitative_constraints") or []
+   if qs:
+    qs[0]["unit"]=None;r["semantic_fields_hash"]=objhash(sflds);return m
+ raise RuntimeError("no quantitative relation for negative test")
+
+def mutate_remove_derived_binding(out,g):
+ m=copy.deepcopy(out)
+ for p in m["points"]:
+  for nid,rec in p["landmarks"].items():
+   gg=rec.get("geometry") or {}
+   if gg.get("kind")=="derived_relation_output":
+    rec["status"]="UNRESOLVED";rec["geometry"]=None;rec["reason"]="FORGED_DERIVED_OUTPUT_REMOVAL";return m
+ raise RuntimeError("no derived output landmark for negative test")
+
 def mutate_direction_to_none(out,g,direction):
  m=copy.deepcopy(out);rels={x["relation_id"]:x for x in g.get("relation_instances",[])}
  for p in m["points"]:
@@ -253,7 +320,10 @@ def main():
   "direction_anterior_to_none":mutate_direction_to_none(after,g,"anterior"),
   "direction_posterior_to_none":mutate_direction_to_none(after,g,"posterior"),
   "direction_radial_to_none":mutate_direction_to_none(after,g,"radial"),
-  "direction_lateral_to_none":mutate_direction_to_none(after,g,"lateral")
+  "direction_lateral_to_none":mutate_direction_to_none(after,g,"lateral"),
+  "quantitative_value_to_none":mutate_measurement_value_to_none(after,g),
+  "quantitative_unit_to_none":mutate_measurement_unit_to_none(after,g),
+  "derived_output_binding_removed":mutate_remove_derived_binding(after,g)
  }
  neg={k:rejected(v,before,g) for k,v in muts.items()}
  for k,v in neg.items():
@@ -274,6 +344,8 @@ def main():
    "direction_preservation_failure":count("direction_preservation_failure",remaining),
    "relation_nonoperand_semantics_loss":count("relation_nonoperand_semantics_loss",remaining),
    "condition_linkage_loss":count("condition_linkage_loss",remaining),
+   "quantitative_relation_semantics_loss":count("quantitative_relation_semantics_loss",remaining),
+   "derived_geometry_output_not_bound":count("derived_geometry_output_not_bound",remaining),
    "false_fallback":count("child_subfeature_false_fallback",remaining)},
   "negative_tests":neg,"coordinate_generation_count":0,"legacy_c_coordinate_reference_count":0,
   "final_state":{"stage2_automated_structural_validation":"PASS","stage2_semantic_repair_validation":status,"stage2_human_semantic_audit":"PENDING","stage3":"NOT_STARTED"}}
