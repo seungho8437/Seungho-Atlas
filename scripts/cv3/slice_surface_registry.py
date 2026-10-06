@@ -71,7 +71,7 @@ class GeometryResult:
  surface_vertex_indices:list[int]
  curves:list[list[Vec3]]
  markers:list[dict]
- deep_points:list[Vec3]
+ deep_paths:list[dict]
  hidden_surface_vertex_indices:list[int]
  view:str
  notes:list[str]
@@ -82,7 +82,7 @@ class GeometryResult:
   payload={"vertices":sorted(set(self.surface_vertex_indices)),
            "curves":[[[round(v,9) for v in p] for p in c] for c in self.curves],
            "markers":self.markers,
-           "deep_points":[[round(v,9) for v in p] for p in self.deep_points]}
+           "deep_paths":[{"side":p["side"],"points":[[round(v,9) for v in q] for q in p["points"]],"source_part_ids":p.get("source_part_ids",[])} for p in self.deep_paths]}
   return hashlib.sha256(json.dumps(payload,sort_keys=True,separators=(",",":")).encode()).hexdigest()
 
 class GeometryContext:
@@ -99,6 +99,7 @@ class GeometryContext:
   self.mandible_ids=self.find_parts(("mandible",),system="skeletal")
   self.frontal_ids=self.find_parts(("frontal",),system="skeletal")
   self.clavicle_ids=self.find_parts(("clavicle",),system="skeletal")
+  self.sternum_ids=self.find_parts(("sternum",),system="skeletal")
   if not self.mandible_ids: raise RuntimeError("mandible mesh not found")
   self.mandible_y_min=min(self.patient(v)[1] for pid in self.mandible_ids for v in store.vertices(pid))
   # forehead boundary: superior orbital/forehead transition approximated from the inferior frontal-bone quartile.
@@ -237,7 +238,7 @@ def execute(ctx:GeometryContext,regid:str)->GeometryResult:
  spec=REGISTRY_BY_ID[regid]
  if spec["status"]=="PROPOSED_UNRESOLVED":
   return GeometryResult(regid,"UNRESOLVED",[],[],[],[],[],_view(regid),["No approved BodyParts3D geometric definition; deliberately unresolved."])
- selected=set();curves=[];markers=[];deep=[];notes=[];hidden=set()
+ selected=set();curves=[];markers=[];deep_paths=[];notes=[];hidden=set()
  # Surface orientation below is derived from local/global frame coordinates, not HTML.
  if regid=="SR:dorsum_hand":
   for side in ("left","right"):
@@ -277,10 +278,16 @@ def execute(ctx:GeometryContext,regid:str)->GeometryResult:
    if regid=="SR:face_region" and ctx.mandible_y_min<=y<=ctx.forehead_boundary_y and z>=ctx.trunk_origin[2]:selected.add(i)
    elif regid=="SR:head_region" and y>=ctx.forehead_boundary_y:selected.add(i)
    elif regid=="SR:anterior_neck" and ctx.neck_lower_y<=y<=ctx.mandible_y_min and z>=ctx.trunk_origin[2]:selected.add(i)
-  markers=[
-   {"label":"mandible inferior boundary","point":ctx.world((0,ctx.mandible_y_min,ctx.trunk_origin[2])),"source_part_ids":ctx.mandible_ids},
-   {"label":"forehead boundary (inferior frontal-bone quartile plane)","point":ctx.world((0,ctx.forehead_boundary_y,ctx.trunk_origin[2])),"source_part_ids":ctx.frontal_ids}
-  ]
+  if regid=="SR:anterior_neck":
+   markers=[
+    {"label":"mandible inferior boundary","point":ctx.world((0,ctx.mandible_y_min,ctx.trunk_origin[2])),"source_part_ids":ctx.mandible_ids},
+    {"label":"clavicular/sternal lower boundary","point":ctx.world((0,ctx.neck_lower_y,ctx.trunk_origin[2])),"source_part_ids":ctx.clavicle_ids+ctx.sternum_ids}
+   ]
+  else:
+   markers=[
+    {"label":"mandible inferior boundary","point":ctx.world((0,ctx.mandible_y_min,ctx.trunk_origin[2])),"source_part_ids":ctx.mandible_ids},
+    {"label":"forehead boundary (inferior frontal-bone quartile plane)","point":ctx.world((0,ctx.forehead_boundary_y,ctx.trunk_origin[2])),"source_part_ids":ctx.frontal_ids}
+   ]
  elif regid in ("SR:lateral_thorax","SR:midaxillary_line","SR:lateral_abdomen","SR:upper_back","SR:lumbar_region","SR:posterior_median_line","SR:fourth_intercostal_space"):
   hidden=set(ctx.upper_limb_skin)
   thor_lo=ctx.hip_y+0.43*(ctx.shoulder_y-ctx.hip_y); abd_hi=thor_lo
@@ -355,16 +362,16 @@ def execute(ctx:GeometryContext,regid:str)->GeometryResult:
      pu=min(uw,key=lambda x:distance(pr,x));d=distance(pr,pu)
      if best is None or d<best[0]:best=(d,pr,pu)
     if best:path.append(ctx.world(vmul(vadd(best[1],best[2]),0.5)))
-   curves.append(path);deep.extend(path)
+   deep_paths.append({"side":side,"points":path,"source_part_ids":rid+uid})
    markers.append({"label":f"{side} radius","point":_bone_centroid(ctx,rid),"source_part_ids":rid})
    markers.append({"label":f"{side} ulna","point":_bone_centroid(ctx,uid),"source_part_ids":uid})
  else:
   return GeometryResult(regid,"INVALID",[],[],[],[],[],_view(regid),["unimplemented registry id"])
- if not selected and not deep and spec["kind"]!="deep_space":
+ if not selected and not deep_paths and spec["kind"]!="deep_space":
   notes.append("definition executed but produced an empty geometry set")
   status="UNRESOLVED"
  else:status="RESOLVED"
- return GeometryResult(regid,status,sorted(selected),curves,markers,deep,sorted(hidden),_view(regid),notes)
+ return GeometryResult(regid,status,sorted(selected),curves,markers,deep_paths,sorted(hidden),_view(regid),notes)
 
 def _centroid(pts):
  return tuple(sum(p[k] for p in pts)/len(pts) for k in range(3))
