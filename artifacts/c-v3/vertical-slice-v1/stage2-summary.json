@@ -4,9 +4,10 @@
   "status": "AUTOMATED_VALIDATED_HUMAN_REVIEW_PENDING",
   "workflow": {
     "name": "Validate C v3 Vertical Slice Stage 2",
-    "run_id": 37438473939,
-    "head_sha": "fb6767a2f50af302741ccf3685a88e24a91275a9",
-    "conclusion": "success"
+    "run_id": 37438671650,
+    "run_attempt": 3,
+    "conclusion": "success",
+    "note": "Current branch was checked out during rerun; successful result reflects latest Stage 2 solver/validator code."
   },
   "coverage": {
     "cohort_points": 20,
@@ -59,10 +60,10 @@
       "pupil/centre-of-pupil unresolved"
     ],
     "LU6": [
-      "reference-line landmark itself not yet constructed at Stage 2"
+      "LU5-LU9 reference-line geometry family not yet realized"
     ],
     "LI7": [
-      "reference-line landmark itself not yet constructed at Stage 2"
+      "LI5-LI11 reference-line geometry family not yet realized"
     ],
     "GB26": [
       "umbilicus/centre and free extremity of 11th rib subfeatures not yet uniquely realized"
@@ -75,8 +76,16 @@
     ]
   },
   "automated_validation": {
-    "checks": 964,
-    "errors": 0,
+    "registry_identity_recheck": {
+      "checks": 193,
+      "errors": 0,
+      "status": "PASS"
+    },
+    "stage2_independent_validator": {
+      "checks": 954,
+      "errors": 0,
+      "status": "PASS"
+    },
     "negative_tests": {
       "forged_relation_operator_rejected": true,
       "forged_fma_identity_rejected": true
