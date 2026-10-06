@@ -270,8 +270,8 @@ def main():
    if r["relation_type"] not in DERIVED_RELATION_TYPES:continue
    rid=r["relation_id"];op=REL_OP.get(r["relation_type"]);semantic=list(r.get("argument_node_ids",[]))
    bound_ms,stmt_ms=relation_measurements(r,pms,mout);semantic_fields=relation_semantic_fields(r,op,semantic,bound_ms,stmt_ms)
-   args=[lout.get(x,{"status":"INVALID"}) for x in semantic]
-   if not op or any(x.get("status")!="RESOLVED" for x in args):
+   producer_args=[lout.get(x,{"status":"INVALID"}) for x in semantic]
+   if not op or any(x.get("status")!="RESOLVED" for x in producer_args):
     rout[rid]=attach_semantic_hash({"status":"UNRESOLVED","executor":op or "relation_dispatch","reason":"derived geometry producer operand not executable",
       "semantic_fields":semantic_fields,"semantic_argument_node_ids":semantic,"executable_argument_node_ids":semantic,
       "operand_binding_trace":[{"semantic_operand_id":x,"executable_operand_id":x,"binding":"identity"} for x in semantic]})
