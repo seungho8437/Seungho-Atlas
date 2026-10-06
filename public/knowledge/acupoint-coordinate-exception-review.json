@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-06T05:03:24.114Z",
+  "generatedAt": "2026-10-06T05:04:41.078Z",
   "scope": "Focused visual/anatomical exception review: four formerly low-confidence acupoints plus seven formerly near-duplicate clusters.",
   "coordinateModel": "BodyParts3D-4.0",
   "reviewedLogicalAcupoints": 18,
@@ -12,6 +12,15 @@
       [
         "LU9",
         "PC7"
+      ],
+      [
+        "LI13",
+        "TE11"
+      ],
+      [
+        "LI13",
+        "HT2",
+        "TE11"
       ],
       [
         "ST42",
@@ -26,26 +35,82 @@
         "BL4"
       ],
       [
+        "BL57",
+        "BL58"
+      ],
+      [
+        "BL57",
+        "BL58"
+      ],
+      [
         "BL64",
         "GB43"
       ],
       [
+        "TE19",
+        "GB4",
+        "GB5",
+        "GB6"
+      ],
+      [
+        "TE19",
+        "GB4",
+        "GB5",
+        "GB6"
+      ],
+      [
         "GB7",
         "GB8"
       ],
       [
         "GB7",
         "GB8"
+      ],
+      [
+        "GB10",
+        "GB11"
+      ],
+      [
+        "GB10",
+        "GB11"
       ]
     ],
     "globalExactDuplicateClusters": [
       [
+        "LI13",
+        "TE11"
+      ],
+      [
+        "LI13",
+        "TE11"
+      ],
+      [
         "ST42",
         "LR3"
       ],
       [
         "ST42",
         "LR3"
+      ],
+      [
+        "BL57",
+        "BL58"
+      ],
+      [
+        "BL57",
+        "BL58"
+      ],
+      [
+        "TE19",
+        "GB4",
+        "GB5",
+        "GB6"
+      ],
+      [
+        "TE19",
+        "GB4",
+        "GB5",
+        "GB6"
       ],
       [
         "GB7",
@@ -54,6 +119,14 @@
       [
         "GB7",
         "GB8"
+      ],
+      [
+        "GB10",
+        "GB11"
+      ],
+      [
+        "GB10",
+        "GB11"
       ]
     ],
     "formerlyLowConfidenceNowLow": []

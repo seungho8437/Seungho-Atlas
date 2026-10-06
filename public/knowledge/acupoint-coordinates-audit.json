@@ -1,10 +1,13 @@
 {
-  "generatedAt": "2026-10-06T05:03:23.958Z",
+  "generatedAt": "2026-10-06T05:04:40.916Z",
   "logicalAcupoints": 361,
   "physicalCoordinates": 670,
   "expectedPhysicalCoordinates": 670,
-  "validatedPhysicalCoordinates": 272,
-  "reviewNeededPhysicalCoordinates": 398,
+  "validatedPhysicalCoordinates": 285,
+  "reviewNeededPhysicalCoordinates": 385,
+  "nativeRelationExecutionPhysicalCoordinates": 425,
+  "deferredReferenceExecutionPhysicalCoordinates": 0,
+  "unresolvedSemanticPhysicalCoordinates": 320,
   "surfaceTriangleCount": 60362,
   "integumentaryPartCount": 5,
   "invalidGeometryOrLaterality": [],
@@ -12,6 +15,15 @@
     [
       "LU9",
       "PC7"
+    ],
+    [
+      "LI13",
+      "TE11"
+    ],
+    [
+      "LI13",
+      "HT2",
+      "TE11"
     ],
     [
       "ST42",
@@ -26,26 +38,82 @@
       "BL4"
     ],
     [
+      "BL57",
+      "BL58"
+    ],
+    [
+      "BL57",
+      "BL58"
+    ],
+    [
       "BL64",
       "GB43"
     ],
     [
+      "TE19",
+      "GB4",
+      "GB5",
+      "GB6"
+    ],
+    [
+      "TE19",
+      "GB4",
+      "GB5",
+      "GB6"
+    ],
+    [
       "GB7",
       "GB8"
     ],
     [
       "GB7",
       "GB8"
+    ],
+    [
+      "GB10",
+      "GB11"
+    ],
+    [
+      "GB10",
+      "GB11"
     ]
   ],
   "exactDuplicateClusters": [
     [
+      "LI13",
+      "TE11"
+    ],
+    [
+      "LI13",
+      "TE11"
+    ],
+    [
       "ST42",
       "LR3"
     ],
     [
       "ST42",
       "LR3"
+    ],
+    [
+      "BL57",
+      "BL58"
+    ],
+    [
+      "BL57",
+      "BL58"
+    ],
+    [
+      "TE19",
+      "GB4",
+      "GB5",
+      "GB6"
+    ],
+    [
+      "TE19",
+      "GB4",
+      "GB5",
+      "GB6"
     ],
     [
       "GB7",
@@ -54,23 +122,31 @@
     [
       "GB7",
       "GB8"
+    ],
+    [
+      "GB10",
+      "GB11"
+    ],
+    [
+      "GB10",
+      "GB11"
     ]
   ],
   "confidenceCounts": {
-    "moderate": 394,
+    "moderate": 386,
     "high": 272,
-    "low": 4
+    "low": 12
   },
   "projectionDistance": {
     "max": 0.1695,
-    "mean": 0.03745567164179104
+    "mean": 0.037308208955223854
   },
   "spatialValidation": {
     "regionConstrained": true,
     "landmarkHardFailures": [],
     "landmarkReviewCount": 0,
     "topologyHardFailures": [],
-    "topologyReviewCount": 23,
+    "topologyReviewCount": 21,
     "manualReviewQueue": [
       {
         "acupointId": "BL67",
@@ -238,7 +314,7 @@
           0
         ],
         "landmarkStatus": "pass",
-        "topologyStatus": "pass"
+        "topologyStatus": "review"
       },
       {
         "acupointId": "ST45",
@@ -262,7 +338,7 @@
           0
         ],
         "landmarkStatus": "pass",
-        "topologyStatus": "pass"
+        "topologyStatus": "review"
       },
       {
         "acupointId": "GB25",
@@ -275,18 +351,6 @@
         ],
         "landmarkStatus": "pass",
         "topologyStatus": "review"
-      },
-      {
-        "acupointId": "TE18",
-        "side": "right",
-        "projectionDistance": 0.0911,
-        "projectionDelta": [
-          0.0041,
-          0,
-          -0.091
-        ],
-        "landmarkStatus": "pass",
-        "topologyStatus": "pass"
       },
       {
         "acupointId": "GB25",
@@ -421,18 +485,6 @@
         "topologyStatus": "pass"
       },
       {
-        "acupointId": "GB13",
-        "side": "left",
-        "projectionDistance": 0.082,
-        "projectionDelta": [
-          0,
-          0,
-          -0.082
-        ],
-        "landmarkStatus": "pass",
-        "topologyStatus": "pass"
-      },
-      {
         "acupointId": "GB27",
         "side": "left",
         "projectionDistance": 0.0816,
@@ -469,13 +521,37 @@
         "topologyStatus": "pass"
       },
       {
-        "acupointId": "GB13",
-        "side": "right",
-        "projectionDistance": 0.0792,
+        "acupointId": "CV21",
+        "side": "midline",
+        "projectionDistance": 0.0784,
         "projectionDelta": [
+          -0.0003,
           0,
+          -0.0784
+        ],
+        "landmarkStatus": "pass",
+        "topologyStatus": "pass"
+      },
+      {
+        "acupointId": "GV20",
+        "side": "midline",
+        "projectionDistance": 0.0783,
+        "projectionDelta": [
+          0.0013,
           0,
-          -0.0792
+          -0.0783
+        ],
+        "landmarkStatus": "pass",
+        "topologyStatus": "pass"
+      },
+      {
+        "acupointId": "SP1",
+        "side": "right",
+        "projectionDistance": 0.0775,
+        "projectionDelta": [
+          -0.0229,
+          0.0042,
+          -0.0739
         ],
         "landmarkStatus": "pass",
         "topologyStatus": "pass"
@@ -548,30 +624,6 @@
           0,
           0.0195,
           0.0221
-        ],
-        "landmarkStatus": "pass",
-        "topologyStatus": "review"
-      },
-      {
-        "acupointId": "ST39",
-        "side": "left",
-        "projectionDistance": 0.0263,
-        "projectionDelta": [
-          0,
-          0,
-          -0.0263
-        ],
-        "landmarkStatus": "pass",
-        "topologyStatus": "review"
-      },
-      {
-        "acupointId": "ST39",
-        "side": "right",
-        "projectionDistance": 0.0262,
-        "projectionDelta": [
-          0,
-          0,
-          -0.0262
         ],
         "landmarkStatus": "pass",
         "topologyStatus": "review"
@@ -656,30 +708,6 @@
           0,
           0,
           0.0134
-        ],
-        "landmarkStatus": "pass",
-        "topologyStatus": "review"
-      },
-      {
-        "acupointId": "GB14",
-        "side": "left",
-        "projectionDistance": 0.0125,
-        "projectionDelta": [
-          0,
-          0,
-          0.0125
-        ],
-        "landmarkStatus": "pass",
-        "topologyStatus": "review"
-      },
-      {
-        "acupointId": "GB14",
-        "side": "right",
-        "projectionDistance": 0.0124,
-        "projectionDelta": [
-          0,
-          0,
-          0.0124
         ],
         "landmarkStatus": "pass",
         "topologyStatus": "review"
