@@ -250,4 +250,5 @@ Only Stage 4 approval permits `GLOBAL_VALIDATED`.
 - Stage 1 human visual review: **APPROVED by user after z-buffer hidden-surface QC**.
 - Stage 1: **APPROVED**.
 - Stage 2: **IN PROGRESS**.
+- Vertical Slice v1 surface-registry + calibration human review: **APPROVED**.
 - No new acupoint coordinates have been generated or deployed.
