@@ -188,8 +188,11 @@ function torsoHalfWidth(y){
   }
   if(!vals.length)return Math.min(localHalfWidth(y),extent[lrAxis]*.28);
   vals.sort((a,b)=>a-b);
-  const skeletal=vals[Math.min(vals.length-1,Math.floor(vals.length*.93))];
-  const value=Math.min(localHalfWidth(y),skeletal*1.16);
+  // Torso samples are already restricted to ribs/costal cartilage/hip/sternum.
+  // Hip-bone lateral vertices are sparse, so p93 badly underestimates lower-abdomen
+  // width. Use the outer anatomical envelope rather than mesh-density weighting.
+  const skeletal=vals[Math.min(vals.length-1,Math.floor(vals.length*.995))];
+  const value=Math.min(localHalfWidth(y),skeletal*1.08);
   torsoWidthCache.set(bucket,value);return value;
 }
 
