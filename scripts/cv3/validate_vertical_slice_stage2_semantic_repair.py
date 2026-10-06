@@ -145,7 +145,7 @@ def scan(out,g):
   point_pms=[x for x in g.get("proportional_measurements",[]) if x.get("source_statement_id") in sm]
   point_conds=[x for x in g.get("conditions",[]) if x.get("source_statement_id") in sm]
   point_geometry=[x for x in g.get("geometry_nodes",[]) if x.get("source_statement_id") in sm]
-  independent_refs=collect_landmark_refs(point_rels)+collect_landmark_refs(point_pms)+collect_landmark_refs(point_conds)+collect_landmark_refs(point_geometry)
+  independent_refs=collect_landmark_refs(point_rels) | collect_landmark_refs(point_pms) | collect_landmark_refs(point_conds) | collect_landmark_refs(point_geometry)
   for b in bindings:
    child=b["child_landmark_id"];parent=b["parent_landmark_id"]
    if child not in p["landmarks"]:continue
