@@ -17,6 +17,27 @@ if (!Array.isArray(semanticGraph.points) || semanticGraph.points.length !== 361)
 // geometry source: it was a negative baseline and its broad centroids can pull
 // a valid WHO target onto an unrelated limb.
 const semanticNodeById = new Map((semanticGraph.landmark_nodes ?? []).map(n => [n.node_id, n]));
+const normalizedSourceToken=value=>String(value??'').toUpperCase().replace(/\s+/g,'').replace(/[^A-Z0-9]/g,'');
+const crossReferenceAliasByNodeId=new Map();
+{
+  const refsByStatement=new Map();
+  for(const node of semanticGraph.landmark_nodes??[]){
+    if(!node.cross_reference_point_id)continue;
+    const rows=refsByStatement.get(node.source_statement_id)??[];rows.push(node);refsByStatement.set(node.source_statement_id,rows);
+  }
+  for(const node of semanticGraph.landmark_nodes??[]){
+    if(node.cross_reference_point_id)continue;
+    const candidates=refsByStatement.get(node.source_statement_id)??[];
+    const token=normalizedSourceToken(node.source_raw);
+    if(!token)continue;
+    const exact=candidates.find(ref=>
+      normalizedSourceToken(ref.source_raw)===token&&
+      (ref.char_start==null||node.char_start==null||Math.abs(ref.char_start-node.char_start)<=1)&&
+      (ref.char_end==null||node.char_end==null||Math.abs(ref.char_end-node.char_end)<=1)
+    )??candidates.find(ref=>normalizedSourceToken(ref.source_raw)===token);
+    if(exact)crossReferenceAliasByNodeId.set(node.node_id,exact.cross_reference_point_id);
+  }
+}
 const semanticLocationStatements = new Map(
   (semanticGraph.source_statements ?? [])
     .filter(s => s.section === 'location')
@@ -1065,7 +1086,8 @@ function specializedLandmark(raw,side){
 }
 function resolveSemanticNode(nodeId,side){
   const node=semanticNodeById.get(nodeId);if(!node)return null;
-  if(node.cross_reference_point_id)return {xref:node.cross_reference_point_id,kind:'reference-acupoint'};
+  const xref=node.cross_reference_point_id??crossReferenceAliasByNodeId.get(node.node_id);
+  if(xref)return {xref,kind:'reference-acupoint'};
   if(node.fma_id){
     const st=statsSeed(node.fma_id,side);
     if(st)return {point:[...st.center],stats:st,kind:'fma',fmaId:node.fma_id};
@@ -1278,7 +1300,7 @@ const acupointById=new Map(acupoints.map(x=>[x.id,x]));
 
 function referenceIdsForRelation(relation){
   return (relation.argument_node_ids??[])
-    .map(id=>semanticNodeById.get(id)?.cross_reference_point_id)
+    .map(id=>semanticNodeById.get(id)?.cross_reference_point_id??crossReferenceAliasByNodeId.get(id))
     .filter(Boolean)
     .map(id=>String(id).replace(/\s+/g,''));
 }
