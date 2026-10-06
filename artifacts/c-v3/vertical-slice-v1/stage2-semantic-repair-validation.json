@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "artifact": "c-v3-stage2-semantic-repair-validation",
   "status": "PASS",
-  "checks": 287,
+  "checks": 298,
   "errors": 0,
   "error_details": [],
   "coverage": {
@@ -11,8 +11,8 @@
   },
   "remaining_defects": [],
   "pre_repair_scan": {
-    "total": 554,
-    "new_regression_defects_outside_known8": 328,
+    "total": 626,
+    "new_regression_defects_outside_known8": 385,
     "new_regression_findings": [
       {
         "rule": "relation_nonoperand_semantics_loss",
@@ -500,6 +500,34 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:00:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:GB14:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:00:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:GB14:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:00:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "GB14",
         "relation_id": "RL:S:GB14:location:00:relative-to"
@@ -543,6 +571,34 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:01:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:GB14:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:01:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:GB14:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:01:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "GB14",
         "relation_id": "RL:S:GB14:location:01:relative-to"
@@ -574,6 +630,16 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:02:center-of",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:GB14:location:00"
+        ],
+        "actual": null
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "GB14",
         "relation_id": "RL:S:GB14:location:02:center-of"
@@ -601,6 +667,16 @@
         "field": "semantic_argument_node_ids",
         "expected": [
           "LM:S:GB14:location:7-11"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:03:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:GB14:location:00"
         ],
         "actual": null
       },
@@ -648,6 +724,34 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:00:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:GB23:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:00:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:GB23:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:00:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "GB23",
         "relation_id": "RL:S:GB23:location:00:relative-to"
@@ -680,6 +784,16 @@
         "field": "semantic_argument_node_ids",
         "expected": [
           "LM:S:GB23:location:7-30"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:01:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:GB23:location:00"
         ],
         "actual": null
       },
@@ -720,6 +834,16 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:02:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:GB23:location:00"
+        ],
+        "actual": null
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "GB23",
         "relation_id": "RL:S:GB23:location:02:surface-landmark"
@@ -753,6 +877,16 @@
         "expected": [
           "LM:S:LU6:location:67-70",
           "LM:S:LU6:location:76-79"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:00:on-line",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:location:00"
         ],
         "actual": null
       },
@@ -800,6 +934,34 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:01:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:LU6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:01:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:01:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "LU6",
         "relation_id": "RL:S:LU6:location:01:relative-to"
@@ -832,6 +994,16 @@
         "field": "semantic_argument_node_ids",
         "expected": [
           "LM:S:LU6:location:7-27"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:02:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:location:00"
         ],
         "actual": null
       },
@@ -872,6 +1044,16 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:03:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:location:00"
+        ],
+        "actual": null
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "LU6",
         "relation_id": "RL:S:LU6:location:03:surface-landmark"
@@ -900,6 +1082,17 @@
         "expected": [
           "LM:S:LU6:note:1:94-97",
           "LM:S:LU6:note:1:103-106"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:00:on-line",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00",
+          "PM:S:LU6:note:1:01"
         ],
         "actual": null
       },
@@ -937,6 +1130,17 @@
         "expected": [
           "LM:S:LU6:note:1:94-97",
           "LM:S:LU6:note:1:103-106"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:01:midpoint-between",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00",
+          "PM:S:LU6:note:1:01"
         ],
         "actual": null
       },
@@ -984,6 +1188,35 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:02:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:02:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00",
+          "PM:S:LU6:note:1:01"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:02:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "LU6",
         "relation_id": "RL:S:LU6:note:1:02:relative-to"
@@ -1027,6 +1260,35 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:03:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:01"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:03:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00",
+          "PM:S:LU6:note:1:01"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:03:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "LU6",
         "relation_id": "RL:S:LU6:note:1:03:relative-to"
@@ -1054,6 +1316,16 @@
         "field": "semantic_argument_node_ids",
         "expected": [
           "LM21:S:LU6:location:67-70:002c0a95e5"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:67-70:reference-acupoint:f42e2db8d9",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:location:00"
         ],
         "actual": null
       },
@@ -1094,6 +1366,16 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:76-79:reference-acupoint:5171900d45",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:location:00"
+        ],
+        "actual": null
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "LU6",
         "relation_id": "RL21:S:LU6:location:76-79:reference-acupoint:5171900d45"
@@ -1126,6 +1408,17 @@
         "field": "semantic_argument_node_ids",
         "expected": [
           "LM:S:LU6:note:1:32-36"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:33-36:reference-acupoint:a79a726278",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00",
+          "PM:S:LU6:note:1:01"
         ],
         "actual": null
       },
@@ -1166,6 +1459,17 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:94-97:reference-acupoint:0d3fedaf0b",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00",
+          "PM:S:LU6:note:1:01"
+        ],
+        "actual": null
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "LU6",
         "relation_id": "RL21:S:LU6:note:1:94-97:reference-acupoint:0d3fedaf0b"
@@ -1198,6 +1502,17 @@
         "field": "semantic_argument_node_ids",
         "expected": [
           "LM:S:LU6:note:1:103-106"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:103-106:reference-acupoint:ffaf5ca270",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00",
+          "PM:S:LU6:note:1:01"
         ],
         "actual": null
       },
@@ -1235,6 +1550,16 @@
         "expected": [
           "LM:S:LI7:location:68-71",
           "LM:S:LI7:location:77-81"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:00:on-line",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LI7:location:00"
         ],
         "actual": null
       },
@@ -1282,6 +1607,34 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:01:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:LI7:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:01:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LI7:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:01:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "LI7",
         "relation_id": "RL:S:LI7:location:01:relative-to"
@@ -1314,6 +1667,16 @@
         "field": "semantic_argument_node_ids",
         "expected": [
           "LM:S:LI7:location:7-28"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:02:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LI7:location:00"
         ],
         "actual": null
       },
@@ -1354,6 +1717,16 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:03:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LI7:location:00"
+        ],
+        "actual": null
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "LI7",
         "relation_id": "RL:S:LI7:location:03:surface-landmark"
@@ -1381,6 +1754,16 @@
         "field": "semantic_argument_node_ids",
         "expected": [
           "LM21:S:LI7:location:68-71:1bff496df7"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:68-71:reference-acupoint:931d5b1cfd",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LI7:location:00"
         ],
         "actual": null
       },
@@ -1417,6 +1800,16 @@
         "field": "semantic_argument_node_ids",
         "expected": [
           "LM21:S:LI7:location:77-81:245ea01482"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:77-81:reference-acupoint:bbace3ac1c",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LI7:location:00"
         ],
         "actual": null
       },
@@ -1906,6 +2299,34 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:00:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:ST4:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:00:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:ST4:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:00:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "ST4",
         "relation_id": "RL:S:ST4:location:00:relative-to"
@@ -1946,6 +2367,16 @@
         "field": "semantic_argument_node_ids",
         "expected": [
           "LM:S:ST4:location:7-11"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:01:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:ST4:location:00"
         ],
         "actual": null
       },
@@ -2107,6 +2538,16 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:00:between",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:location:00"
+        ],
+        "actual": null
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "TE6",
         "relation_id": "RL:S:TE6:location:00:between"
@@ -2150,6 +2591,34 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:01:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:TE6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:01:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:01:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "TE6",
         "relation_id": "RL:S:TE6:location:01:relative-to"
@@ -2182,6 +2651,16 @@
         "field": "semantic_argument_node_ids",
         "expected": [
           "LM:S:TE6:location:52-106"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:02:midpoint-of-entity",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:location:00"
         ],
         "actual": null
       },
@@ -2222,6 +2701,16 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:03:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:location:00"
+        ],
+        "actual": null
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "TE6",
         "relation_id": "RL:S:TE6:location:03:surface-landmark"
@@ -2255,6 +2744,16 @@
         "expected": [
           "LM:S:TE6:note:1:43-49",
           "LM:S:TE6:note:1:54-62"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:00:between",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:note:1:00"
         ],
         "actual": null
       },
@@ -2302,6 +2801,34 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:01:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:TE6:note:1:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:01:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:note:1:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:01:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "TE6",
         "relation_id": "RL:S:TE6:note:1:01:relative-to"
@@ -2334,6 +2861,16 @@
         "field": "semantic_argument_node_ids",
         "expected": [
           "LM:S:TE6:note:1:85-88"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:02:same-level",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:note:1:00"
         ],
         "actual": null
       },
@@ -2374,6 +2911,16 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:26-29:reference-acupoint:87571bdea7",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:note:1:00"
+        ],
+        "actual": null
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "TE6",
         "relation_id": "RL21:S:TE6:note:1:26-29:reference-acupoint:87571bdea7"
@@ -2410,6 +2957,16 @@
         "actual": null
       },
       {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:85-88:reference-acupoint:eeb3b40f1e",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:note:1:00"
+        ],
+        "actual": null
+      },
+      {
         "rule": "relation_semantic_hash_mismatch",
         "point_id": "TE6",
         "relation_id": "RL21:S:TE6:note:1:85-88:reference-acupoint:eeb3b40f1e"
@@ -2429,6 +2986,8 @@
     "direction_preservation_failure": 0,
     "relation_nonoperand_semantics_loss": 0,
     "condition_linkage_loss": 0,
+    "quantitative_relation_semantics_loss": 0,
+    "derived_geometry_output_not_bound": 0,
     "false_fallback": 0
   },
   "negative_tests": {
@@ -2440,7 +2999,10 @@
     "direction_anterior_to_none": true,
     "direction_posterior_to_none": true,
     "direction_radial_to_none": true,
-    "direction_lateral_to_none": true
+    "direction_lateral_to_none": true,
+    "quantitative_value_to_none": true,
+    "quantitative_unit_to_none": true,
+    "derived_output_binding_removed": true
   },
   "coordinate_generation_count": 0,
   "legacy_c_coordinate_reference_count": 0,
