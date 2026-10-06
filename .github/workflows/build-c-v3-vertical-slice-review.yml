@@ -1,0 +1,25 @@
+name: Build C v3 vertical slice review
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/korean-tcm-knowledge]
+    paths:
+      - 'scripts/cv3/build_vertical_slice_review.py'
+      - '.github/workflows/build-c-v3-vertical-slice-review.yml'
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: feature/korean-tcm-knowledge}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python scripts/cv3/build_stage1_substrate.py --out .tmp/c-v3-slice/spatial-substrate.json
+      - run: python scripts/cv3/build_vertical_slice_review.py --substrate .tmp/c-v3-slice/spatial-substrate.json --out-dir .tmp/c-v3-slice/review
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v3-vertical-slice-review
+          path: .tmp/c-v3-slice/review/
+          if-no-files-found: error
