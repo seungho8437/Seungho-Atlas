@@ -4,7 +4,77 @@ const root = new URL('../', import.meta.url);
 const readJson = p => JSON.parse(fs.readFileSync(new URL(p, root), 'utf8'));
 const atlas = readJson('public/models/atlas.json');
 const acupoints = readJson('public/knowledge/acupoints.json');
-const relations = readJson('public/knowledge/anatomy-acupoint-relations.json');
+const semanticGraph = readJson('public/knowledge/anatomy-acupoint-relations-v2.1.json');
+
+if (!semanticGraph || !String(semanticGraph.schema_version || '').startsWith('2.1')) {
+  throw new Error('C requires anatomy-acupoint-relations-v2.1.json');
+}
+if (!Array.isArray(semanticGraph.points) || semanticGraph.points.length !== 361) {
+  throw new Error('B v2.1 semantic graph must contain exactly 361 point nodes');
+}
+
+// C consumes B v2.1 directly.  The old flat B registry must never be used as a
+// geometry source: it was a negative baseline and its broad centroids can pull
+// a valid WHO target onto an unrelated limb.
+const semanticNodeById = new Map((semanticGraph.landmark_nodes ?? []).map(n => [n.node_id, n]));
+const semanticLocationStatements = new Map(
+  (semanticGraph.source_statements ?? [])
+    .filter(s => s.section === 'location')
+    .map(s => [s.source_statement_id, s])
+);
+const semanticRelationsByPoint = new Map();
+for (const relation of semanticGraph.relation_instances ?? []) {
+  const statement = semanticLocationStatements.get(relation.source_statement_id);
+  if (!statement) continue;
+  const rows = semanticRelationsByPoint.get(statement.point_id) ?? [];
+  rows.push(relation);
+  semanticRelationsByPoint.set(statement.point_id, rows);
+}
+const semanticMeasurementsByPoint = new Map();
+for (const measurement of semanticGraph.proportional_measurements ?? []) {
+  const statement = semanticLocationStatements.get(measurement.source_statement_id);
+  if (!statement) continue;
+  const rows = semanticMeasurementsByPoint.get(statement.point_id) ?? [];
+  rows.push(measurement);
+  semanticMeasurementsByPoint.set(statement.point_id, rows);
+}
+
+// Compatibility rows are derived only from explicit v2.1 FMA-resolved
+// landmark arguments.  They are not a second semantic source.
+const relations = [];
+const relationSeen = new Set();
+const relationKind = type => ({
+  'between':'between',
+  'midpoint-between':'between',
+  'midpoint-of-entity':'reference-landmark',
+  'center-of':'reference-landmark',
+  'overlies':'overlies',
+  'surface-landmark':'surface-landmark',
+  'same-level':'reference-landmark',
+  'on-line':'reference-landmark',
+  'fraction-along-line':'reference-landmark',
+  'at-junction':'adjacent',
+  'relative-to':'reference-landmark'
+}[type] ?? 'reference-landmark');
+for (const [pointId, pointRelations] of semanticRelationsByPoint) {
+  for (const relation of pointRelations) {
+    for (const nodeId of relation.argument_node_ids ?? []) {
+      const node = semanticNodeById.get(nodeId);
+      if (!node?.fma_id) continue;
+      const key = [pointId, relation.relation_id, node.fma_id].join('|');
+      if (relationSeen.has(key)) continue;
+      relationSeen.add(key);
+      relations.push({
+        acupointId: pointId,
+        anatomyId: node.fma_id,
+        relation: relationKind(relation.relation_type),
+        semanticRelationId: relation.relation_id,
+        semanticRelationType: relation.relation_type,
+        semanticNodeId: node.node_id
+      });
+    }
+  }
+}
 const anatomyKo = readJson('public/knowledge/anatomy-ko.json');
 
 const chunks = atlas.chunks.map(c => fs.readFileSync(new URL('public/models/' + c.url.split('/').pop(), root)));
@@ -622,7 +692,8 @@ function semanticConceptHits(text,side){
   }
   if(/첫째\s*발허리발가락관절/.test(text))patterns.push(/(?:first|1st).*metatarsophalangeal|metatarsophalangeal.*(?:big|first)/i);
   if(/다섯째\s*발허리발가락관절/.test(text))patterns.push(/(?:fifth|5th).*metatarsophalangeal|metatarsophalangeal.*(?:little|fifth)/i);
-  if(/꼭지돌기/.test(text))patterns.push(/mastoid process/i);
+  if(/반힘줄근|semitendinosus/i.test(text))patterns.push(/(?:left |right )?semitendinosus/i);
+    if(/꼭지돌기/.test(text))patterns.push(/mastoid process/i);
   if(/광대활/.test(text))patterns.push(/zygomatic arch/i);
   if(/아래턱뼈/.test(text))patterns.push(/^((?:left|right) )?mandible$|angle of (?:left |right )?mandible|condylar process of (?:left |right )?mandible/i);
   if(/노뼈붓돌기/.test(text))patterns.push(/styloid process of (?:left |right )?radius/i);
@@ -667,8 +738,9 @@ function relationTarget(point, side){
     const en=anatomyKo[r.anatomyId]?.sourceNameEn || '';
     const isBroad=broad.test(en);
     if(/^(?:GV9|GV10|GV13|GV15)$/.test(point.id) && /(?:thoracic|cervical) vertebra$/i.test(en)) vertebralSup.push(st.center[supAxis]);
-    if(r.relation==='surface-landmark'&&isBroad){
-      for(let k=0;k<3;k++)broadAcc[k]+=st.center[k];
+    if(isBroad){
+      // B v2.1 broad regions (head/chest/abdomen/etc.) constrain admissible
+      // anatomy but must not contribute a centroid to the coordinate target.
       broadN++;continue;
     }
     const relationWeight={adjacent:4,between:4,'deep-to':3.5,overlies:3.5,'reference-landmark':3,'surface-landmark':1}[r.relation]||1;
@@ -677,11 +749,8 @@ function relationTarget(point, side){
     for(let k=0;k<3;k++)acc[k]+=st.center[k]*w; wsum+=w;
     specific++;
   }
-  if(broadN){
-    const bg=broadAcc.map(v=>v/broadN);
-    const base=[...rt];
-    rt=bg.map((v,i)=>i===supAxis?base[i]:v*.64+base[i]*.36);
-  }
+  // Broad-region constraints are enforced after target construction; they no
+  // longer perturb the target by averaging an entire body-region centroid.
   const textHits=whoTextLandmarks(text,sideSign);
   for(const hit of textHits){
     const w=Math.max(.6,Math.min(4,hit.score/4));
@@ -699,14 +768,26 @@ function relationTarget(point, side){
   const blended=wsum ? (()=>{const g=acc.map(v=>v/wsum),alpha=specific>=2?.82:.68;return g.map((v,i)=>v*alpha+rt[i]*(1-alpha));})() : rt;
   if(vertebralSup.length) blended[supAxis]=vertebralSup.reduce((a,b)=>a+b,0)/vertebralSup.length;
   const who=applyWhoConstraints(blended,text,side);
-  return {target:who.target,specific,rels:rels.length,whoConstraints:who.count,textLandmarkCount};
+  const graphRelations=semanticRelationsByPoint.get(point.id) ?? [];
+  const graphMeasurements=semanticMeasurementsByPoint.get(point.id) ?? [];
+  const nativeRelationIds=[...new Set(rels.map(r=>r.semanticRelationId).filter(Boolean))];
+  return {
+    target:who.target,
+    specific,
+    rels:graphRelations.length,
+    whoConstraints:who.count,
+    textLandmarkCount,
+    nativeRelationIds,
+    nativeOperationCount:nativeRelationIds.length,
+    semanticMeasurementCount:graphMeasurements.length
+  };
 }
 
 const results=[];
 for(const p of acupoints){
   const sides=p.laterality==='midline'?['midline']:['left','right'];
   for(const side of sides){
-    const {target,specific,rels,whoConstraints,textLandmarkCount}=relationTarget(p,side);
+    const {target,specific,rels,whoConstraints,textLandmarkCount,nativeRelationIds,nativeOperationCount,semanticMeasurementCount}=relationTarget(p,side);
     if(side==='left' && Math.sign((target[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) target[lrAxis]=bodyCenter[lrAxis]+leftSign*Math.abs(target[lrAxis]-bodyCenter[lrAxis]);
     if(side==='right' && Math.sign((target[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) target[lrAxis]=bodyCenter[lrAxis]-leftSign*Math.abs(target[lrAxis]-bodyCenter[lrAxis]);
     if(side==='midline') target[lrAxis]=bodyCenter[lrAxis];
@@ -725,8 +806,8 @@ for(const p of acupoints){
     const evidence=specific+whoConstraints+Math.min(2,textLandmarkCount); const confidence=evidence>=3?'high':evidence>=1?'moderate':'low';
     results.push({
       acupointId:p.id,side,position:projected.point.map(v=>+v.toFixed(4)),model:'BodyParts3D-4.0',status:'validated',
-      method:'WHO+B-landmarks+laterality+surface-projection',confidence,
-      validation:{surfaceProjected:surfaceOk,lateralityConsistent:sideOk,projectionDistance:+projected.distance.toFixed(4),projectionDelta:projected.point.map((v,i)=>+(v-target[i]).toFixed(4)),regionConstrained:true,surfacePartId:projected.part,preProjectionTarget:target.map(v=>+v.toFixed(4)),relationCount:rels,specificLandmarkCount:specific,whoConstraintCount:whoConstraints,whoTextLandmarkCount:textLandmarkCount},
+      method:'WHO+B-v2.1-native-landmarks+laterality+surface-projection',confidence,
+      validation:{surfaceProjected:surfaceOk,lateralityConsistent:sideOk,projectionDistance:+projected.distance.toFixed(4),projectionDelta:projected.point.map((v,i)=>+(v-target[i]).toFixed(4)),regionConstrained:true,surfacePartId:projected.part,preProjectionTarget:target.map(v=>+v.toFixed(4)),relationCount:rels,specificLandmarkCount:specific,whoConstraintCount:whoConstraints,whoTextLandmarkCount:textLandmarkCount,semanticGraphVersion:semanticGraph.schema_version,nativeOperationCount,nativeRelationIds,semanticMeasurementCount},
       sourceIds:['WHO_ACUPOINT_2008','BODY_PARTS_3D_4','TARA_ACUPOINT_CURATED']
     });
   }
@@ -938,7 +1019,7 @@ const duplicateClusters=[...dup.values()].filter(v=>v.length>1);
 const exactMap=new Map();
 for(const x of results){const k=x.side+':'+x.position.join(',');if(!exactMap.has(k))exactMap.set(k,[]);exactMap.get(k).push(x.acupointId);}
 const exactDuplicateClusters=[...exactMap.values()].filter(v=>v.length>1);
-const out={version:1,model:'BodyParts3D-4.0',generatedAt:new Date().toISOString(),coordinateFrame:{source:'native BodyParts3D 4.0 atlas coordinates',axes:{superiorInferior:supAxis,leftRight:lrAxis,anteriorPosterior:apAxis},signs:{left:leftSign,anterior:anteriorSign}},methodology:{primary:'WHO 2008 location text',anatomyConstraints:'anatomy-acupoint-relations.json (B)',laterality:'bilateral points generated independently by side; GV/CV retained on midline',projection:'nearest point on actual integumentary mesh triangle, not bounding-box or vertex-only snapping'},points:results};
+const out={version:1,model:'BodyParts3D-4.0',generatedAt:new Date().toISOString(),coordinateFrame:{source:'native BodyParts3D 4.0 atlas coordinates',axes:{superiorInferior:supAxis,leftRight:lrAxis,anteriorPosterior:apAxis},signs:{left:leftSign,anterior:anteriorSign}},methodology:{primary:'WHO 2008 location text',anatomyConstraints:'anatomy-acupoint-relations-v2.1.json (B v2.1; old B excluded)',semanticExecution:'explicit v2.1 FMA-resolved landmark arguments are realized natively; unresolved specialized anchors remain WHO-text fallbacks and are provenance-counted',laterality:'bilateral points generated independently by side; GV/CV retained on midline',projection:'nearest point on actual integumentary mesh triangle, not bounding-box or vertex-only snapping'},points:results};
 fs.writeFileSync(new URL('public/knowledge/acupoint-coordinates.json',root),JSON.stringify(out,null,2)+'\n');
 const sortedProjection=results.slice().sort((a,b)=>b.validation.projectionDistance-a.validation.projectionDistance);
 const manualReviewQueue=sortedProjection.filter((x,i)=>i<Math.ceil(results.length*.05)||x.validation.landmarkPostValidation.status==='review'||x.validation.topologyValidation.status==='review').map(x=>({acupointId:x.acupointId,side:x.side,projectionDistance:x.validation.projectionDistance,projectionDelta:x.validation.projectionDelta,landmarkStatus:x.validation.landmarkPostValidation.status,topologyStatus:x.validation.topologyValidation.status}));
