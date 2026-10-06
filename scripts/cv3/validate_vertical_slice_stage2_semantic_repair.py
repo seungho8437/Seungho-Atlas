@@ -26,6 +26,21 @@ def identity(rec):
  if g.get("point_id"):return "point:"+g["point_id"]
  return None
 
+def span_info(node_id):
+ m=re.search(r":(\\d+)-(\\d+)(?::[^:]+)?$",node_id or "")
+ return (node_id[:m.start()],int(m.group(1)),int(m.group(2))) if m else None
+
+def contained_children(arg_id,bindings,bnodes):
+ a=span_info(arg_id)
+ if not a:return []
+ out=[]
+ for b in bindings:
+  cs=span_info(b["child_landmark_id"]);ps=span_info(b["parent_landmark_id"])
+  if not cs or not ps or cs[0]!=a[0] or ps[0]!=a[0]:continue
+  if a[1]<=cs[1] and cs[2]<=a[2] and a[1]<=ps[1] and ps[2]<=a[2] and sf(bnodes.get(b["child_landmark_id"],{}).get("source_raw")):
+   out.append(b["child_landmark_id"])
+ return out
+
 def build_maps(g):
  bnodes={x["node_id"]:x for x in g["landmark_nodes"]};children={}
  for b in g.get("composite_bindings",[]):children.setdefault(b["parent_landmark_id"],[]).append(b["child_landmark_id"])
@@ -33,17 +48,18 @@ def build_maps(g):
  return bnodes,children,cond
 
 def scan(out,g):
- bnodes,children,condsrc=build_maps(g);findings=[]
+ bnodes,children,condsrc=build_maps(g);bindings=g.get("composite_bindings",[]);binding_by_child={x["child_landmark_id"]:x for x in bindings};findings=[]
  pby={x["point_id"]:x for x in out["points"]}
  for pid,p in pby.items():
-  # Rule 1 / 5: parent-only composite resolution.
-  for parent,kids in children.items():
-   if parent not in p["landmarks"]:continue
-   psf=sf(bnodes.get(parent,{}).get("source_raw"));rec=p["landmarks"][parent]
+  # Rule 1 / 5: any non-child semantic node carrying subfeature language may not
+  # resolve to only a coarse parent/entity geometry.
+  for nid,rec in p["landmarks"].items():
+   if nid in binding_by_child:continue
+   psf=sf(bnodes.get(nid,{}).get("source_raw"))
    if psf and rec.get("status")=="RESOLVED":
     kind=(rec.get("geometry") or {}).get("kind")
     if kind not in ("bound_subfeature","constructed_subfeature"):
-     findings.append({"rule":"parent_only_composite_resolution","point_id":pid,"node_id":parent,"source_raw":bnodes.get(parent,{}).get("source_raw"),"geometry_kind":kind,"identity":identity(rec)})
+     findings.append({"rule":"parent_only_composite_resolution","point_id":pid,"node_id":nid,"source_raw":bnodes.get(nid,{}).get("source_raw"),"geometry_kind":kind,"identity":identity(rec)})
   # Rules 2 / 3 + trace completeness.
   for rid,r in p["relations"].items():
    semantic=(r.get("constraint") or {}).get("semantic_argument_node_ids") or (r.get("constraint") or {}).get("argument_node_ids") or r.get("semantic_argument_node_ids") or r.get("argument_node_ids") or []
@@ -51,10 +67,13 @@ def scan(out,g):
    if r.get("status")=="RESOLVED" and ("semantic_argument_node_ids" not in (r.get("constraint") or {}) or "executable_argument_node_ids" not in (r.get("constraint") or {})):
     findings.append({"rule":"operand_trace_incomplete","point_id":pid,"relation_id":rid})
    for a in semantic:
-    kids=[k for k in children.get(a,[]) if sf(bnodes.get(k,{}).get("source_raw"))]
-    if kids and r.get("status")=="RESOLVED":
-     if a in executable or not any(k in executable for k in kids):
+    kids=contained_children(a,bindings,bnodes)
+    asf=sf(bnodes.get(a,{}).get("source_raw"))
+    if r.get("status")=="RESOLVED":
+     if kids and (a in executable or not any(k in executable for k in kids)):
       findings.append({"rule":"child_subfeature_unused_by_relation","point_id":pid,"relation_id":rid,"semantic_operand":a,"child_ids":kids,"executable_operands":executable})
+     if asf and not kids and a in executable:
+      findings.append({"rule":"parent_only_composite_resolution","point_id":pid,"relation_id":rid,"node_id":a,"source_raw":bnodes.get(a,{}).get("source_raw"),"detail":"subfeature-bearing relation operand has no executable child"})
    if r.get("status")=="RESOLVED" and len(executable)>1:
     ids=[identity(p["landmarks"].get(x,{})) for x in executable]
     sfs=[sf(bnodes.get(x,{}).get("source_raw")) for x in executable]
@@ -112,7 +131,7 @@ def mutate_child_to_parent(out,g):
    con=r.setdefault("constraint",{})
    semantic=con.get("semantic_argument_node_ids") or r.get("semantic_argument_node_ids") or r.get("argument_node_ids") or []
    for par in semantic:
-    kids=[k for k in children.get(par,[]) if sf(bnodes.get(k,{}).get("source_raw"))]
+    kids=contained_children(par,g.get("composite_bindings",[]),bnodes)
     if kids:
      # Forge exactly the forbidden parent-only execution.
      prec=p["landmarks"][par];prec["status"]="RESOLVED";prec["executor"]="fma_mesh";prec["geometry"]={"kind":"fma_concept","fma_id":"FMA_FORGED_PARENT","part_ids":["FORGED"]}
@@ -145,14 +164,14 @@ def mutate_same_level_parent(out,g):
    if op!="same_level_plane":continue
    semantic=con.get("semantic_argument_node_ids") or r.get("semantic_argument_node_ids") or r.get("argument_node_ids") or []
    executable=con.get("executable_argument_node_ids") or semantic
-   for child in list(executable)+list(semantic):
-    b=binding_by_child.get(child)
-    if b and sf(bnodes.get(child,{}).get("source_raw")):
-     par=b["parent_landmark_id"]
-     p["landmarks"][par]={"status":"RESOLVED","executor":"fma_mesh","geometry":{"kind":"fma_concept","fma_id":"FMA_FORGED_PARENT","part_ids":["FORGED"]}}
+   for sem in semantic:
+    kids=contained_children(sem,g.get("composite_bindings",[]),bnodes)
+    if kids:
+     child=kids[0]
+     p["landmarks"][sem]={"status":"RESOLVED","executor":"fma_mesh","geometry":{"kind":"fma_concept","fma_id":"FMA_FORGED_PARENT","part_ids":["FORGED"]}}
      con.update({"op":"same_level_plane","semantic_argument_node_ids":semantic,
-       "executable_argument_node_ids":[par if x==child else x for x in executable],
-       "operand_binding_trace":[{"semantic_operand_id":child,"executable_operand_id":par,"binding":"FORGED_PARENT_REPLACEMENT"}]})
+       "executable_argument_node_ids":[sem if x==child else x for x in executable],
+       "operand_binding_trace":[{"semantic_operand_id":sem,"executable_operand_id":sem,"binding":"FORGED_PARENT_REPLACEMENT"}]})
      r["status"]="RESOLVED";return m
  raise RuntimeError("no same-level bound child available")
 
