@@ -8,7 +8,6 @@ on:
       - 'fix/c-acupoint-semantic-pipeline-v2'
     paths:
       - scripts/generate-acupoint-coordinates.mjs
-      - scripts/generate-acupoint-exception-review.mjs
       - scripts/validate-acupoint-spatial.mjs
       - scripts/validate-knowledge.mjs
       - lib/anatomy-knowledge/types.ts
@@ -31,7 +30,6 @@ jobs:
         with:
           node-version: '22.13.0'
       - run: node scripts/generate-acupoint-coordinates.mjs
-      - run: node scripts/generate-acupoint-exception-review.mjs
       - run: node scripts/validate-acupoint-spatial.mjs
       - run: node scripts/validate-atlas.mjs
       - run: node scripts/validate-knowledge.mjs
@@ -39,7 +37,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/knowledge/acupoint-coordinates.json public/knowledge/acupoint-coordinates-audit.json public/knowledge/acupoint-coordinate-exception-review.json public/knowledge/acupoint-coordinate-exception-review.svg
+          git add public/knowledge/acupoint-coordinates.json public/knowledge/acupoint-coordinates-audit.json
           if git diff --cached --quiet; then
             echo "No generated coordinate changes."
           else
