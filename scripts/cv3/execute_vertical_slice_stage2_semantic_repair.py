@@ -204,9 +204,9 @@ def main():
   for n in lms:
    nid=n["node_id"]
    if nid not in binding_by_child:continue
-   b=binding_by_child[nid];parent_id=b["parent_landmark_id"];sf=subfeature_type(n.get("source_raw"));par=lout.get(parent_id)
+   b=binding_by_child[nid];parent_id=b["parent_landmark_id"];sfs=subfeature_types(n.get("source_raw"));sf=sfs[0] if len(sfs)==1 else None;par=lout.get(parent_id)
    if not sf:
-    lout[nid]={"status":"UNRESOLVED","executor":"composite_subfeature_binding","geometry":None,"reason":"child subfeature type not recognized","provenance":{"binding_id":b["binding_id"],"parent_landmark_id":parent_id}}
+    lout[nid]={"status":"UNRESOLVED","executor":"composite_subfeature_binding","geometry":None,"reason":"child subfeature type is absent or semantically non-atomic","provenance":{"binding_id":b["binding_id"],"parent_landmark_id":parent_id,"subfeature_types":sfs}
    elif not par or par.get("status")!="RESOLVED":
     lout[nid]={"status":"UNRESOLVED","executor":"composite_subfeature_binding","geometry":None,"reason":"parent entity is not uniquely resolved","provenance":{"binding_id":b["binding_id"],"parent_landmark_id":parent_id,"subfeature_type":sf}}
    elif sf in SYMBOLIC_CONSTRUCTIBLE:
