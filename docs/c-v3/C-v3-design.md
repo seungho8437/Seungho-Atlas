@@ -1,6 +1,6 @@
 # C v3 — Canonical Four-Stage Design
 
-Status: **Stage 1 APPROVED · Vertical Slice Stage 2 APPROVED · Stage 3 AUTOMATED VALIDATED / HUMAN AUDIT PENDING**
+Status: **Stage 1 APPROVED · Vertical Slice Stage 2 APPROVED · Stage 3 AUTOMATED VALIDATED / HUMAN AUDIT PENDING · Stage 4 NOT STARTED**
 
 This document is the canonical C v3 contract. Rejected S1/G1 implementations are not active.
 
@@ -317,3 +317,17 @@ Human audit artifacts:
 - `artifacts/c-v3/vertical-slice-v1/stage3-human-review-data.json`
 
 Stage 3 is not approved until the human audit is completed. Stage 4 remains blocked.
+
+
+## Vertical Slice Stage 3 status
+
+Current state: **AUTOMATED VALIDATED / HUMAN AUDIT PENDING**.
+
+- Frozen Stage 1, approved registry/calibration, and approved Stage 2 execution are locked by `stage3-input-lock.json`.
+- Stage 3 outputs are pilot-only and non-deployable. Production coordinate dataset writes are forbidden.
+- Current conservative synthesis result: 20 logical points, 0 generated coordinates, 4 Stage-3-unresolved points, and 16 points blocked by unresolved Stage-2 primary semantics.
+- A zero-coordinate result is valid at this gate when no point satisfies all frozen physical-realization constraints without heuristic inference.
+- The independent guard validator passes, including active negative tests for forged coordinates, duplicated laterality, over-budget projection, missing trace, coordinate injection into a Stage-2-unresolved point, and suppressed-provenance executable injection.
+- `SUPPRESSED_PROVENANCE_EXECUTION_ISOLATION` metrics remain 0 / 0 / 0.
+- Stage 3 human audit artifacts are mandatory before any approval.
+- Stage 4 has not started and must not start from automated validation alone.
