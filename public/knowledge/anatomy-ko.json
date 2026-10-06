@@ -959,9 +959,9 @@
   "FMA4751": {
     "sourceNameEn": "right brachiocephalic vein",
     "status": "derived",
-    "nameKo": "오른팔머리정맥",
-    "legacyKo": "우상완두정맥",
-    "hanja": "右上腕頭靜脈",
+    "nameKo": "팔머리정맥",
+    "legacyKo": "상완두정맥",
+    "hanja": "上腕頭靜脈",
     "nameKoSourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
@@ -1022,9 +1022,9 @@
   "FMA4761": {
     "sourceNameEn": "left brachiocephalic vein",
     "status": "derived",
-    "nameKo": "왼팔머리정맥",
-    "legacyKo": "좌상완두정맥",
-    "hanja": "左上腕頭靜脈",
+    "nameKo": "팔머리정맥",
+    "legacyKo": "상완두정맥",
+    "hanja": "上腕頭靜脈",
     "nameKoSourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
@@ -1592,9 +1592,9 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA7204": {
-    "nameKo": "오른콩팥",
-    "legacyKo": "우신",
-    "hanja": "右腎",
+    "nameKo": "콩팥",
+    "legacyKo": "신장",
+    "hanja": "腎臟",
     "status": "verified",
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
@@ -1606,9 +1606,9 @@
     "nameKoVerification": "direct-KAA"
   },
   "FMA7205": {
-    "nameKo": "왼콩팥",
-    "legacyKo": "좌신",
-    "hanja": "左腎",
+    "nameKo": "콩팥",
+    "legacyKo": "신장",
+    "hanja": "腎臟",
     "status": "verified",
     "sourceIds": [
       "KAA_TERMINOLOGY_6"
@@ -2297,9 +2297,9 @@
     "terminologyBaseId": "FMA7597"
   },
   "FMA7875": {
-    "nameKo": "오른첫째갈비연골",
-    "legacyKo": "우제1늑연골",
-    "hanja": "右第一肋軟骨",
+    "nameKo": "첫째갈비연골",
+    "legacyKo": "제1늑연골",
+    "hanja": "第一肋軟骨",
     "sourceNameEn": "right first costal cartilage",
     "status": "derived"
   },
@@ -2320,37 +2320,37 @@
     "terminologyBaseId": "FMA7620"
   },
   "FMA7886": {
-    "nameKo": "오른둘째갈비연골",
-    "legacyKo": "우제2늑연골",
-    "hanja": "右第二肋軟骨",
+    "nameKo": "둘째갈비연골",
+    "legacyKo": "제2늑연골",
+    "hanja": "第二肋軟骨",
     "sourceNameEn": "right second costal cartilage",
     "status": "derived"
   },
   "FMA7909": {
-    "nameKo": "오른셋째갈비뼈",
-    "legacyKo": "우제3늑골",
-    "hanja": "右第三肋骨",
+    "nameKo": "셋째갈비뼈",
+    "legacyKo": "제3늑골",
+    "hanja": "第三肋骨",
     "sourceNameEn": "right third rib",
     "status": "derived"
   },
   "FMA7913": {
-    "nameKo": "오른셋째갈비연골",
-    "legacyKo": "우제3늑연골",
-    "hanja": "右第三肋軟骨",
+    "nameKo": "셋째갈비연골",
+    "legacyKo": "제3늑연골",
+    "hanja": "第三肋軟骨",
     "sourceNameEn": "right third costal cartilage",
     "status": "derived"
   },
   "FMA7957": {
-    "nameKo": "오른넷째갈비뼈",
-    "legacyKo": "우제4늑골",
-    "hanja": "右第四肋骨",
+    "nameKo": "넷째갈비뼈",
+    "legacyKo": "제4늑골",
+    "hanja": "第四肋骨",
     "sourceNameEn": "right fourth rib",
     "status": "derived"
   },
   "FMA7976": {
-    "nameKo": "오른넷째갈비연골",
-    "legacyKo": "우제4늑연골",
-    "hanja": "右第四肋軟骨",
+    "nameKo": "넷째갈비연골",
+    "legacyKo": "제4늑연골",
+    "hanja": "第四肋軟骨",
     "sourceNameEn": "right fourth costal cartilage",
     "status": "derived"
   },
@@ -2371,9 +2371,9 @@
     "terminologyBaseId": "FMA7597"
   },
   "FMA8005": {
-    "nameKo": "왼첫째갈비연골",
-    "legacyKo": "좌제1늑연골",
-    "hanja": "左第一肋軟骨",
+    "nameKo": "첫째갈비연골",
+    "legacyKo": "제1늑연골",
+    "hanja": "第一肋軟骨",
     "sourceNameEn": "left first costal cartilage",
     "status": "derived"
   },
@@ -2394,51 +2394,51 @@
     "terminologyBaseId": "FMA7620"
   },
   "FMA8031": {
-    "nameKo": "왼둘째갈비연골",
-    "legacyKo": "좌제2늑연골",
-    "hanja": "左第二肋軟骨",
+    "nameKo": "둘째갈비연골",
+    "legacyKo": "제2늑연골",
+    "hanja": "第二肋軟骨",
     "sourceNameEn": "left second costal cartilage",
     "status": "derived"
   },
   "FMA8039": {
-    "nameKo": "왼셋째갈비뼈",
-    "legacyKo": "좌제3늑골",
-    "hanja": "左第三肋骨",
+    "nameKo": "셋째갈비뼈",
+    "legacyKo": "제3늑골",
+    "hanja": "第三肋骨",
     "sourceNameEn": "left third rib",
     "status": "derived"
   },
   "FMA8058": {
-    "nameKo": "왼셋째갈비연골",
-    "legacyKo": "좌제3늑연골",
-    "hanja": "左第三肋軟骨",
+    "nameKo": "셋째갈비연골",
+    "legacyKo": "제3늑연골",
+    "hanja": "第三肋軟骨",
     "sourceNameEn": "left third costal cartilage",
     "status": "derived"
   },
   "FMA8066": {
-    "nameKo": "오른다섯째갈비뼈",
-    "legacyKo": "우제5늑골",
-    "hanja": "右第五肋骨",
+    "nameKo": "다섯째갈비뼈",
+    "legacyKo": "제5늑골",
+    "hanja": "第五肋骨",
     "sourceNameEn": "right fifth rib",
     "status": "derived"
   },
   "FMA8070": {
-    "nameKo": "오른다섯째갈비연골",
-    "legacyKo": "우제5늑연골",
-    "hanja": "右第五肋軟骨",
+    "nameKo": "다섯째갈비연골",
+    "legacyKo": "제5늑연골",
+    "hanja": "第五肋軟骨",
     "sourceNameEn": "right fifth costal cartilage",
     "status": "derived"
   },
   "FMA8093": {
-    "nameKo": "왼다섯째갈비뼈",
-    "legacyKo": "좌제5늑골",
-    "hanja": "左第五肋骨",
+    "nameKo": "다섯째갈비뼈",
+    "legacyKo": "제5늑골",
+    "hanja": "第五肋骨",
     "sourceNameEn": "left fifth rib",
     "status": "derived"
   },
   "FMA8112": {
-    "nameKo": "왼다섯째갈비연골",
-    "legacyKo": "좌제5늑연골",
-    "hanja": "左第五肋軟骨",
+    "nameKo": "다섯째갈비연골",
+    "legacyKo": "제5늑연골",
+    "hanja": "第五肋軟骨",
     "sourceNameEn": "left fifth costal cartilage",
     "status": "derived"
   },
@@ -2473,88 +2473,88 @@
     "nameKoDerivation": "sixth + FMA7574"
   },
   "FMA8148": {
-    "nameKo": "왼넷째갈비뼈",
-    "legacyKo": "좌제4늑골",
-    "hanja": "左第四肋骨",
+    "nameKo": "넷째갈비뼈",
+    "legacyKo": "제4늑골",
+    "hanja": "第四肋骨",
     "sourceNameEn": "left fourth rib",
     "status": "derived"
   },
   "FMA8167": {
-    "nameKo": "왼넷째갈비연골",
-    "legacyKo": "좌제4늑연골",
-    "hanja": "左第四肋軟骨",
+    "nameKo": "넷째갈비연골",
+    "legacyKo": "제4늑연골",
+    "hanja": "第四肋軟骨",
     "sourceNameEn": "left fourth costal cartilage",
     "status": "derived"
   },
   "FMA8175": {
-    "nameKo": "오른여섯째갈비뼈",
-    "legacyKo": "우제6늑골",
-    "hanja": "右第六肋骨",
+    "nameKo": "여섯째갈비뼈",
+    "legacyKo": "제6늑골",
+    "hanja": "第六肋骨",
     "sourceNameEn": "right sixth rib",
     "status": "derived"
   },
   "FMA8194": {
-    "nameKo": "오른여섯째갈비연골",
-    "legacyKo": "우제6늑연골",
-    "hanja": "右第六肋軟骨",
+    "nameKo": "여섯째갈비연골",
+    "legacyKo": "제6늑연골",
+    "hanja": "第六肋軟骨",
     "sourceNameEn": "right sixth costal cartilage",
     "status": "derived"
   },
   "FMA8202": {
-    "nameKo": "왼여섯째갈비뼈",
-    "legacyKo": "좌제6늑골",
-    "hanja": "左第六肋骨",
+    "nameKo": "여섯째갈비뼈",
+    "legacyKo": "제6늑골",
+    "hanja": "第六肋骨",
     "sourceNameEn": "left sixth rib",
     "status": "derived"
   },
   "FMA8221": {
-    "nameKo": "왼여섯째갈비연골",
-    "legacyKo": "좌제6늑연골",
-    "hanja": "左第六肋軟骨",
+    "nameKo": "여섯째갈비연골",
+    "legacyKo": "제6늑연골",
+    "hanja": "第六肋軟骨",
     "sourceNameEn": "left sixth costal cartilage",
     "status": "derived"
   },
   "FMA8229": {
-    "nameKo": "오른일곱째갈비뼈",
-    "legacyKo": "우제7늑골",
-    "hanja": "右第七肋骨",
+    "nameKo": "일곱째갈비뼈",
+    "legacyKo": "제7늑골",
+    "hanja": "第七肋骨",
     "sourceNameEn": "right seventh rib",
     "status": "derived"
   },
   "FMA8248": {
-    "nameKo": "오른일곱째갈비연골",
-    "legacyKo": "우제7늑연골",
-    "hanja": "右第七肋軟骨",
+    "nameKo": "일곱째갈비연골",
+    "legacyKo": "제7늑연골",
+    "hanja": "第七肋軟骨",
     "sourceNameEn": "right seventh costal cartilage",
     "status": "derived"
   },
   "FMA8256": {
-    "nameKo": "왼일곱째갈비뼈",
-    "legacyKo": "좌제7늑골",
-    "hanja": "左第七肋骨",
+    "nameKo": "일곱째갈비뼈",
+    "legacyKo": "제7늑골",
+    "hanja": "第七肋骨",
     "sourceNameEn": "left seventh rib",
     "status": "derived"
   },
   "FMA8275": {
-    "nameKo": "왼일곱째갈비연골",
-    "legacyKo": "좌제7늑연골",
-    "hanja": "左第七肋軟骨",
+    "nameKo": "일곱째갈비연골",
+    "legacyKo": "제7늑연골",
+    "hanja": "第七肋軟骨",
     "sourceNameEn": "left seventh costal cartilage",
     "status": "derived"
   },
   "FMA8283": {
     "sourceNameEn": "right eighth rib",
     "status": "derived",
-    "nameKo": "오른여덟째갈비뼈",
-    "legacyKo": "우제8늑골",
-    "hanja": "右第八肋骨"
+    "nameKo": "여덟째갈비뼈",
+    "legacyKo": "제8늑골",
+    "hanja": "第八肋骨"
   },
   "FMA8310": {
     "sourceNameEn": "left eighth rib",
     "status": "derived",
-    "nameKo": "왼여덟째갈비뼈",
-    "legacyKo": "좌제8늑골",
-    "hanja": "左第八肋骨"
+    "nameKo": "여덟째갈비뼈",
+    "legacyKo": "제8늑골",
+    "hanja": "第八肋骨"
   },
   "FMA8337": {
     "sourceNameEn": "ninth rib",
@@ -2574,16 +2574,16 @@
   "FMA8364": {
     "sourceNameEn": "right ninth rib",
     "status": "derived",
-    "nameKo": "오른아홉째갈비뼈",
-    "legacyKo": "우제9늑골",
-    "hanja": "右第九肋骨"
+    "nameKo": "아홉째갈비뼈",
+    "legacyKo": "제9늑골",
+    "hanja": "第九肋骨"
   },
   "FMA8391": {
     "sourceNameEn": "left ninth rib",
     "status": "derived",
-    "nameKo": "왼아홉째갈비뼈",
-    "legacyKo": "좌제9늑골",
-    "hanja": "左第九肋骨"
+    "nameKo": "아홉째갈비뼈",
+    "legacyKo": "제9늑골",
+    "hanja": "第九肋骨"
   },
   "FMA8418": {
     "sourceNameEn": "tenth rib",
@@ -2603,16 +2603,16 @@
   "FMA8445": {
     "sourceNameEn": "right tenth rib",
     "status": "derived",
-    "nameKo": "오른열째갈비뼈",
-    "legacyKo": "우제10늑골",
-    "hanja": "右第十肋骨"
+    "nameKo": "열째갈비뼈",
+    "legacyKo": "제10늑골",
+    "hanja": "第十肋骨"
   },
   "FMA8472": {
     "sourceNameEn": "left tenth rib",
     "status": "derived",
-    "nameKo": "왼열째갈비뼈",
-    "legacyKo": "좌제10늑골",
-    "hanja": "左第十肋骨"
+    "nameKo": "열째갈비뼈",
+    "legacyKo": "제10늑골",
+    "hanja": "第十肋骨"
   },
   "FMA8499": {
     "sourceNameEn": "eleventh rib",
@@ -2647,30 +2647,30 @@
   "FMA8531": {
     "sourceNameEn": "right eleventh rib",
     "status": "derived",
-    "nameKo": "오른열한째갈비뼈",
-    "legacyKo": "우제11늑골",
-    "hanja": "右第十一肋骨"
+    "nameKo": "열한째갈비뼈",
+    "legacyKo": "제11늑골",
+    "hanja": "第十一肋骨"
   },
   "FMA8532": {
     "sourceNameEn": "left eleventh rib",
     "status": "derived",
-    "nameKo": "왼열한째갈비뼈",
-    "legacyKo": "좌제11늑골",
-    "hanja": "左第十一肋骨"
+    "nameKo": "열한째갈비뼈",
+    "legacyKo": "제11늑골",
+    "hanja": "第十一肋骨"
   },
   "FMA8533": {
     "sourceNameEn": "right twelfth rib",
     "status": "derived",
-    "nameKo": "오른열두째갈비뼈",
-    "legacyKo": "우제12늑골",
-    "hanja": "右第十二肋骨"
+    "nameKo": "열두째갈비뼈",
+    "legacyKo": "제12늑골",
+    "hanja": "第十二肋骨"
   },
   "FMA8534": {
     "sourceNameEn": "left twelfth rib",
     "status": "derived",
-    "nameKo": "왼열두째갈비뼈",
-    "legacyKo": "좌제12늑골",
-    "hanja": "左第十二肋骨"
+    "nameKo": "열두째갈비뼈",
+    "legacyKo": "제12늑골",
+    "hanja": "第十二肋骨"
   },
   "FMA8612": {
     "nameKo": "허파동맥",
@@ -6043,9 +6043,9 @@
   "FMA14341": {
     "sourceNameEn": "right testicular vein",
     "status": "derived",
-    "nameKo": "오른고환정맥",
-    "legacyKo": "우고환정맥",
-    "hanja": "右睾丸靜脈",
+    "nameKo": "고환정맥",
+    "legacyKo": "고환정맥",
+    "hanja": "睾丸靜脈",
     "nameKoSourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
@@ -6056,9 +6056,9 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA14343": {
-    "nameKo": "오른부신정맥",
-    "legacyKo": "우부신정맥",
-    "hanja": "右副腎靜脈",
+    "nameKo": "부신정맥",
+    "legacyKo": "부신정맥",
+    "hanja": "副腎靜脈",
     "sourceNameEn": "right suprarenal vein",
     "status": "derived",
     "nameKoSourceIds": [
@@ -6080,9 +6080,9 @@
   "FMA14345": {
     "sourceNameEn": "left testicular vein",
     "status": "derived",
-    "nameKo": "왼고환정맥",
-    "legacyKo": "좌고환정맥",
-    "hanja": "左睾丸靜脈",
+    "nameKo": "고환정맥",
+    "legacyKo": "고환정맥",
+    "hanja": "睾丸靜脈",
     "nameKoSourceIds": [
       "KAA_TERMINOLOGY_6"
     ],
@@ -6100,9 +6100,9 @@
     "status": "derived"
   },
   "FMA14349": {
-    "nameKo": "왼부신정맥",
-    "legacyKo": "좌부신정맥",
-    "hanja": "左副腎靜脈",
+    "nameKo": "부신정맥",
+    "legacyKo": "부신정맥",
+    "hanja": "副腎靜脈",
     "sourceNameEn": "left suprarenal vein",
     "status": "derived",
     "nameKoSourceIds": [
@@ -8376,16 +8376,16 @@
   "FMA19235": {
     "sourceNameEn": "right deferent duct",
     "status": "derived",
-    "nameKo": "오른정관",
-    "legacyKo": "우정관",
-    "hanja": "右精管"
+    "nameKo": "정관",
+    "legacyKo": "정관",
+    "hanja": "精管"
   },
   "FMA19236": {
     "sourceNameEn": "left deferent duct",
     "status": "derived",
-    "nameKo": "왼정관",
-    "legacyKo": "좌정관",
-    "hanja": "左精管"
+    "nameKo": "정관",
+    "legacyKo": "정관",
+    "hanja": "精管"
   },
   "FMA19386": {
     "sourceNameEn": "seminal vesicle",
@@ -9395,30 +9395,30 @@
   "FMA22334": {
     "sourceNameEn": "right gemellus superior",
     "status": "derived",
-    "nameKo": "오른쌍둥이위",
-    "legacyKo": "우쌍자상",
-    "hanja": "右雙子上"
+    "nameKo": "쌍둥이위",
+    "legacyKo": "쌍자상",
+    "hanja": "雙子上"
   },
   "FMA22335": {
     "sourceNameEn": "left gemellus superior",
     "status": "derived",
-    "nameKo": "왼쌍둥이위",
-    "legacyKo": "좌쌍자상",
-    "hanja": "左雙子上"
+    "nameKo": "쌍둥이위",
+    "legacyKo": "쌍자상",
+    "hanja": "雙子上"
   },
   "FMA22336": {
     "sourceNameEn": "right gemellus inferior",
     "status": "derived",
-    "nameKo": "오른쌍둥이아래",
-    "legacyKo": "우쌍자하",
-    "hanja": "右雙子下"
+    "nameKo": "쌍둥이아래",
+    "legacyKo": "쌍자하",
+    "hanja": "雙子下"
   },
   "FMA22337": {
     "sourceNameEn": "left gemellus inferior",
     "status": "derived",
-    "nameKo": "왼쌍둥이아래",
-    "legacyKo": "좌쌍자하",
-    "hanja": "左雙子下"
+    "nameKo": "쌍둥이아래",
+    "legacyKo": "쌍자하",
+    "hanja": "雙子下"
   },
   "FMA22338": {
     "sourceNameEn": "right quadratus femoris",
@@ -11541,16 +11541,16 @@
   "FMA22777": {
     "sourceNameEn": "right arteria radialis indicis",
     "status": "derived",
-    "nameKo": "오른집게손가락노동맥",
-    "legacyKo": "우요측시지동맥",
-    "hanja": "右橈側示指動脈"
+    "nameKo": "집게손가락노동맥",
+    "legacyKo": "요측시지동맥",
+    "hanja": "橈側示指動脈"
   },
   "FMA22778": {
     "sourceNameEn": "left arteria radialis indicis",
     "status": "derived",
-    "nameKo": "왼집게손가락노동맥",
-    "legacyKo": "좌요측시지동맥",
-    "hanja": "左橈側示指動脈"
+    "nameKo": "집게손가락노동맥",
+    "legacyKo": "요측시지동맥",
+    "hanja": "橈側示指動脈"
   },
   "FMA22779": {
     "sourceNameEn": "right spinalis thoracis",
@@ -11652,16 +11652,16 @@
     "status": "derived"
   },
   "FMA22801": {
-    "nameKo": "오른앞자쪽되돌이동맥",
-    "legacyKo": "우전척측반회동맥",
-    "hanja": "右前尺側反回動脈",
+    "nameKo": "앞자쪽되돌이동맥",
+    "legacyKo": "전척측반회동맥",
+    "hanja": "前尺側反回動脈",
     "sourceNameEn": "right anterior ulnar recurrent artery",
     "status": "derived"
   },
   "FMA22802": {
-    "nameKo": "왼앞자쪽되돌이동맥",
-    "legacyKo": "좌전척측반회동맥",
-    "hanja": "左前尺側反回動脈",
+    "nameKo": "앞자쪽되돌이동맥",
+    "legacyKo": "전척측반회동맥",
+    "hanja": "前尺側反回動脈",
     "sourceNameEn": "left anterior ulnar recurrent artery",
     "status": "derived"
   },
@@ -11673,16 +11673,16 @@
     "status": "derived"
   },
   "FMA22804": {
-    "nameKo": "오른뒤자쪽되돌이동맥",
-    "legacyKo": "우후척측반회동맥",
-    "hanja": "右後尺側反回動脈",
+    "nameKo": "뒤자쪽되돌이동맥",
+    "legacyKo": "후척측반회동맥",
+    "hanja": "後尺側反回動脈",
     "sourceNameEn": "right posterior ulnar recurrent artery",
     "status": "derived"
   },
   "FMA22805": {
-    "nameKo": "왼뒤자쪽되돌이동맥",
-    "legacyKo": "좌후척측반회동맥",
-    "hanja": "左後尺側反回動脈",
+    "nameKo": "뒤자쪽되돌이동맥",
+    "legacyKo": "후척측반회동맥",
+    "hanja": "後尺側反回動脈",
     "sourceNameEn": "left posterior ulnar recurrent artery",
     "status": "derived"
   },
@@ -11803,16 +11803,16 @@
     "status": "derived"
   },
   "FMA22821": {
-    "nameKo": "자동맥오른등쪽손목가지",
-    "legacyKo": "척골동맥우배측수근지",
-    "hanja": "尺骨動脈右背側手根枝",
+    "nameKo": "자동맥등쪽손목가지",
+    "legacyKo": "척골동맥배측수근지",
+    "hanja": "尺骨動脈背側手根枝",
     "sourceNameEn": "right dorsal carpal branch of ulnar artery",
     "status": "derived"
   },
   "FMA22822": {
-    "nameKo": "자동맥왼등쪽손목가지",
-    "legacyKo": "척골동맥좌배측수근지",
-    "hanja": "尺骨動脈左背側手根枝",
+    "nameKo": "자동맥등쪽손목가지",
+    "legacyKo": "척골동맥배측수근지",
+    "hanja": "尺骨動脈背側手根枝",
     "sourceNameEn": "left dorsal carpal branch of ulnar artery",
     "status": "derived"
   },
@@ -11880,16 +11880,16 @@
     "status": "derived"
   },
   "FMA22835": {
-    "nameKo": "오른얕은손바닥동맥활",
-    "legacyKo": "우천수장동맥궁",
-    "hanja": "右淺手掌動脈弓",
+    "nameKo": "얕은손바닥동맥활",
+    "legacyKo": "천수장동맥궁",
+    "hanja": "淺手掌動脈弓",
     "sourceNameEn": "right superficial palmar arterial arch",
     "status": "derived"
   },
   "FMA22837": {
-    "nameKo": "왼얕은손바닥동맥활",
-    "legacyKo": "좌천수장동맥궁",
-    "hanja": "左淺手掌動脈弓",
+    "nameKo": "얕은손바닥동맥활",
+    "legacyKo": "천수장동맥궁",
+    "hanja": "淺手掌動脈弓",
     "sourceNameEn": "left superficial palmar arterial arch",
     "status": "derived"
   },
@@ -11992,9 +11992,9 @@
     "status": "derived"
   },
   "FMA22856": {
-    "nameKo": "오른첫째온손바닥손발가락동맥",
-    "legacyKo": "우제1총수장지동맥",
-    "hanja": "右第一總手掌指動脈",
+    "nameKo": "첫째온손바닥손발가락동맥",
+    "legacyKo": "제1총수장지동맥",
+    "hanja": "第一總手掌指動脈",
     "sourceNameEn": "right first common palmar digital artery",
     "status": "derived"
   },
@@ -12189,16 +12189,16 @@
   "FMA22905": {
     "sourceNameEn": "right arteria princeps pollicis",
     "status": "derived",
-    "nameKo": "오른엄지으뜸동맥",
-    "legacyKo": "우주무지동맥",
-    "hanja": "右主拇指動脈"
+    "nameKo": "엄지으뜸동맥",
+    "legacyKo": "주무지동맥",
+    "hanja": "主拇指動脈"
   },
   "FMA22907": {
     "sourceNameEn": "left arteria princeps pollicis",
     "status": "derived",
-    "nameKo": "왼엄지으뜸동맥",
-    "legacyKo": "좌주무지동맥",
-    "hanja": "左主拇指動脈"
+    "nameKo": "엄지으뜸동맥",
+    "legacyKo": "주무지동맥",
+    "hanja": "主拇指動脈"
   },
   "FMA22908": {
     "sourceNameEn": "basilic vein",
@@ -12255,16 +12255,16 @@
     "status": "derived"
   },
   "FMA22912": {
-    "nameKo": "오른깊은손바닥정맥활",
-    "legacyKo": "우심수장정맥궁",
-    "hanja": "右深手掌靜脈弓",
+    "nameKo": "깊은손바닥정맥활",
+    "legacyKo": "심수장정맥궁",
+    "hanja": "深手掌靜脈弓",
     "sourceNameEn": "right deep palmar venous arch",
     "status": "derived"
   },
   "FMA22913": {
-    "nameKo": "왼깊은손바닥정맥활",
-    "legacyKo": "좌심수장정맥궁",
-    "hanja": "左深手掌靜脈弓",
+    "nameKo": "깊은손바닥정맥활",
+    "legacyKo": "심수장정맥궁",
+    "hanja": "深手掌靜脈弓",
     "sourceNameEn": "left deep palmar venous arch",
     "status": "derived"
   },
@@ -12276,16 +12276,16 @@
     "status": "derived"
   },
   "FMA22915": {
-    "nameKo": "오른얕은손바닥정맥활",
-    "legacyKo": "우천수장정맥궁",
-    "hanja": "右淺手掌靜脈弓",
+    "nameKo": "얕은손바닥정맥활",
+    "legacyKo": "천수장정맥궁",
+    "hanja": "淺手掌靜脈弓",
     "sourceNameEn": "right superficial palmar venous arch",
     "status": "derived"
   },
   "FMA22916": {
-    "nameKo": "왼얕은손바닥정맥활",
-    "legacyKo": "좌천수장정맥궁",
-    "hanja": "左淺手掌靜脈弓",
+    "nameKo": "얕은손바닥정맥활",
+    "legacyKo": "천수장정맥궁",
+    "hanja": "淺手掌靜脈弓",
     "sourceNameEn": "left superficial palmar venous arch",
     "status": "derived"
   },
@@ -12408,16 +12408,16 @@
     "nameKoVerificationMethod": "exact-headword-normalized"
   },
   "FMA22935": {
-    "nameKo": "오른안쪽위팔정맥",
-    "legacyKo": "우내측상완정맥",
-    "hanja": "右內側上腕靜脈",
+    "nameKo": "안쪽위팔정맥",
+    "legacyKo": "내측상완정맥",
+    "hanja": "內側上腕靜脈",
     "sourceNameEn": "right medial brachial vein",
     "status": "derived"
   },
   "FMA22936": {
-    "nameKo": "왼안쪽위팔정맥",
-    "legacyKo": "좌내측상완정맥",
-    "hanja": "左內側上腕靜脈",
+    "nameKo": "안쪽위팔정맥",
+    "legacyKo": "내측상완정맥",
+    "hanja": "內側上腕靜脈",
     "sourceNameEn": "left medial brachial vein",
     "status": "derived"
   },
@@ -13581,16 +13581,16 @@
   "FMA24439": {
     "sourceNameEn": "right triquetral",
     "status": "derived",
-    "nameKo": "오른세모뼈",
-    "legacyKo": "우삼각골",
-    "hanja": "右三角骨"
+    "nameKo": "세모뼈",
+    "legacyKo": "삼각골",
+    "hanja": "三角骨"
   },
   "FMA24440": {
     "sourceNameEn": "left triquetral",
     "status": "derived",
-    "nameKo": "왼세모뼈",
-    "legacyKo": "좌삼각골",
-    "hanja": "左三角骨"
+    "nameKo": "세모뼈",
+    "legacyKo": "삼각골",
+    "hanja": "三角骨"
   },
   "FMA24441": {
     "sourceNameEn": "right pisiform",
@@ -13835,72 +13835,72 @@
     "status": "derived"
   },
   "FMA24464": {
-    "nameKo": "오른첫째손허리뼈",
-    "legacyKo": "우제1중수골",
-    "hanja": "右第一中手骨",
+    "nameKo": "첫째손허리뼈",
+    "legacyKo": "제1중수골",
+    "hanja": "第一中手骨",
     "sourceNameEn": "right first metacarpal bone",
     "status": "derived"
   },
   "FMA24465": {
-    "nameKo": "왼첫째손허리뼈",
-    "legacyKo": "좌제1중수골",
-    "hanja": "左第一中手骨",
+    "nameKo": "첫째손허리뼈",
+    "legacyKo": "제1중수골",
+    "hanja": "第一中手骨",
     "sourceNameEn": "left first metacarpal bone",
     "status": "derived"
   },
   "FMA24466": {
-    "nameKo": "오른둘째손허리뼈",
-    "legacyKo": "우제2중수골",
-    "hanja": "右第二中手骨",
+    "nameKo": "둘째손허리뼈",
+    "legacyKo": "제2중수골",
+    "hanja": "第二中手骨",
     "sourceNameEn": "right second metacarpal bone",
     "status": "derived"
   },
   "FMA24467": {
-    "nameKo": "왼둘째손허리뼈",
-    "legacyKo": "좌제2중수골",
-    "hanja": "左第二中手骨",
+    "nameKo": "둘째손허리뼈",
+    "legacyKo": "제2중수골",
+    "hanja": "第二中手骨",
     "sourceNameEn": "left second metacarpal bone",
     "status": "derived"
   },
   "FMA24468": {
-    "nameKo": "오른셋째손허리뼈",
-    "legacyKo": "우제3중수골",
-    "hanja": "右第三中手骨",
+    "nameKo": "셋째손허리뼈",
+    "legacyKo": "제3중수골",
+    "hanja": "第三中手骨",
     "sourceNameEn": "right third metacarpal bone",
     "status": "derived"
   },
   "FMA24469": {
-    "nameKo": "왼셋째손허리뼈",
-    "legacyKo": "좌제3중수골",
-    "hanja": "左第三中手骨",
+    "nameKo": "셋째손허리뼈",
+    "legacyKo": "제3중수골",
+    "hanja": "第三中手骨",
     "sourceNameEn": "left third metacarpal bone",
     "status": "derived"
   },
   "FMA24470": {
-    "nameKo": "오른넷째손허리뼈",
-    "legacyKo": "우제4중수골",
-    "hanja": "右第四中手骨",
+    "nameKo": "넷째손허리뼈",
+    "legacyKo": "제4중수골",
+    "hanja": "第四中手骨",
     "sourceNameEn": "right fourth metacarpal bone",
     "status": "derived"
   },
   "FMA24471": {
-    "nameKo": "왼넷째손허리뼈",
-    "legacyKo": "좌제4중수골",
-    "hanja": "左第四中手骨",
+    "nameKo": "넷째손허리뼈",
+    "legacyKo": "제4중수골",
+    "hanja": "第四中手骨",
     "sourceNameEn": "left fourth metacarpal bone",
     "status": "derived"
   },
   "FMA24472": {
-    "nameKo": "오른다섯째손허리뼈",
-    "legacyKo": "우제5중수골",
-    "hanja": "右第五中手骨",
+    "nameKo": "다섯째손허리뼈",
+    "legacyKo": "제5중수골",
+    "hanja": "第五中手骨",
     "sourceNameEn": "right fifth metacarpal bone",
     "status": "derived"
   },
   "FMA24473": {
-    "nameKo": "왼다섯째손허리뼈",
-    "legacyKo": "좌제5중수골",
-    "hanja": "左第五中手骨",
+    "nameKo": "다섯째손허리뼈",
+    "legacyKo": "제5중수골",
+    "hanja": "第五中手骨",
     "sourceNameEn": "left fifth metacarpal bone",
     "status": "derived"
   },
@@ -14267,72 +14267,72 @@
     "status": "derived"
   },
   "FMA24507": {
-    "nameKo": "오른첫째발허리뼈",
-    "legacyKo": "우제1중족골",
-    "hanja": "右第一中足骨",
+    "nameKo": "첫째발허리뼈",
+    "legacyKo": "제1중족골",
+    "hanja": "第一中足骨",
     "sourceNameEn": "right first metatarsal bone",
     "status": "derived"
   },
   "FMA24508": {
-    "nameKo": "왼첫째발허리뼈",
-    "legacyKo": "좌제1중족골",
-    "hanja": "左第一中足骨",
+    "nameKo": "첫째발허리뼈",
+    "legacyKo": "제1중족골",
+    "hanja": "第一中足骨",
     "sourceNameEn": "left first metatarsal bone",
     "status": "derived"
   },
   "FMA24509": {
-    "nameKo": "오른둘째발허리뼈",
-    "legacyKo": "우제2중족골",
-    "hanja": "右第二中足骨",
+    "nameKo": "둘째발허리뼈",
+    "legacyKo": "제2중족골",
+    "hanja": "第二中足骨",
     "sourceNameEn": "right second metatarsal bone",
     "status": "derived"
   },
   "FMA24510": {
-    "nameKo": "왼둘째발허리뼈",
-    "legacyKo": "좌제2중족골",
-    "hanja": "左第二中足骨",
+    "nameKo": "둘째발허리뼈",
+    "legacyKo": "제2중족골",
+    "hanja": "第二中足骨",
     "sourceNameEn": "left second metatarsal bone",
     "status": "derived"
   },
   "FMA24511": {
-    "nameKo": "오른셋째발허리뼈",
-    "legacyKo": "우제3중족골",
-    "hanja": "右第三中足骨",
+    "nameKo": "셋째발허리뼈",
+    "legacyKo": "제3중족골",
+    "hanja": "第三中足骨",
     "sourceNameEn": "right third metatarsal bone",
     "status": "derived"
   },
   "FMA24512": {
-    "nameKo": "왼셋째발허리뼈",
-    "legacyKo": "좌제3중족골",
-    "hanja": "左第三中足骨",
+    "nameKo": "셋째발허리뼈",
+    "legacyKo": "제3중족골",
+    "hanja": "第三中足骨",
     "sourceNameEn": "left third metatarsal bone",
     "status": "derived"
   },
   "FMA24513": {
-    "nameKo": "오른넷째발허리뼈",
-    "legacyKo": "우제4중족골",
-    "hanja": "右第四中足骨",
+    "nameKo": "넷째발허리뼈",
+    "legacyKo": "제4중족골",
+    "hanja": "第四中足骨",
     "sourceNameEn": "right fourth metatarsal bone",
     "status": "derived"
   },
   "FMA24514": {
-    "nameKo": "왼넷째발허리뼈",
-    "legacyKo": "좌제4중족골",
-    "hanja": "左第四中足骨",
+    "nameKo": "넷째발허리뼈",
+    "legacyKo": "제4중족골",
+    "hanja": "第四中足骨",
     "sourceNameEn": "left fourth metatarsal bone",
     "status": "derived"
   },
   "FMA24515": {
-    "nameKo": "오른다섯째발허리뼈",
-    "legacyKo": "우제5중족골",
-    "hanja": "右第五中足骨",
+    "nameKo": "다섯째발허리뼈",
+    "legacyKo": "제5중족골",
+    "hanja": "第五中足骨",
     "sourceNameEn": "right fifth metatarsal bone",
     "status": "derived"
   },
   "FMA24516": {
-    "nameKo": "왼다섯째발허리뼈",
-    "legacyKo": "좌제5중족골",
-    "hanja": "左第五中足骨",
+    "nameKo": "다섯째발허리뼈",
+    "legacyKo": "제5중족골",
+    "hanja": "第五中足骨",
     "sourceNameEn": "left fifth metatarsal bone",
     "status": "derived"
   },
@@ -14365,44 +14365,44 @@
     "status": "derived"
   },
   "FMA24521": {
-    "nameKo": "오른안쪽쐐기뼈",
-    "legacyKo": "우내측설상골",
-    "hanja": "右內側楔狀骨",
+    "nameKo": "안쪽쐐기뼈",
+    "legacyKo": "내측설상골",
+    "hanja": "內側楔狀骨",
     "sourceNameEn": "right medial cuneiform bone",
     "status": "derived"
   },
   "FMA24522": {
-    "nameKo": "왼안쪽쐐기뼈",
-    "legacyKo": "좌내측설상골",
-    "hanja": "左內側楔狀骨",
+    "nameKo": "안쪽쐐기뼈",
+    "legacyKo": "내측설상골",
+    "hanja": "內側楔狀骨",
     "sourceNameEn": "left medial cuneiform bone",
     "status": "derived"
   },
   "FMA24523": {
     "sourceNameEn": "right intermediate cuneiform bone",
     "status": "derived",
-    "nameKo": "오른중간쐐기뼈",
-    "legacyKo": "우중간설상골",
-    "hanja": "右中間楔狀骨"
+    "nameKo": "중간쐐기뼈",
+    "legacyKo": "중간설상골",
+    "hanja": "中間楔狀骨"
   },
   "FMA24524": {
     "sourceNameEn": "left intermediate cuneiform bone",
     "status": "derived",
-    "nameKo": "왼중간쐐기뼈",
-    "legacyKo": "좌중간설상골",
-    "hanja": "左中間楔狀骨"
+    "nameKo": "중간쐐기뼈",
+    "legacyKo": "중간설상골",
+    "hanja": "中間楔狀骨"
   },
   "FMA24525": {
-    "nameKo": "오른가쪽쐐기뼈",
-    "legacyKo": "우외측설상골",
-    "hanja": "右外側楔狀骨",
+    "nameKo": "가쪽쐐기뼈",
+    "legacyKo": "외측설상골",
+    "hanja": "外側楔狀骨",
     "sourceNameEn": "right lateral cuneiform bone",
     "status": "derived"
   },
   "FMA24526": {
-    "nameKo": "왼가쪽쐐기뼈",
-    "legacyKo": "좌외측설상골",
-    "hanja": "左外側楔狀骨",
+    "nameKo": "가쪽쐐기뼈",
+    "legacyKo": "외측설상골",
+    "hanja": "外側楔狀骨",
     "sourceNameEn": "left lateral cuneiform bone",
     "status": "derived"
   },
@@ -14416,16 +14416,16 @@
   "FMA24528": {
     "sourceNameEn": "right cuboid bone",
     "status": "derived",
-    "nameKo": "오른입방뼈",
-    "legacyKo": "우입방골",
-    "hanja": "右立方骨"
+    "nameKo": "입방뼈",
+    "legacyKo": "입방골",
+    "hanja": "立方骨"
   },
   "FMA24529": {
     "sourceNameEn": "left cuboid bone",
     "status": "derived",
-    "nameKo": "왼입방뼈",
-    "legacyKo": "좌입방골",
-    "hanja": "左立方骨"
+    "nameKo": "입방뼈",
+    "legacyKo": "입방골",
+    "hanja": "立方骨"
   },
   "FMA24551": {
     "sourceNameEn": "trunk of intrapulmonary vein",
@@ -17934,16 +17934,16 @@
     "status": "derived"
   },
   "FMA43937": {
-    "nameKo": "오른얕은안쪽발바닥동맥",
-    "legacyKo": "우천내측족저동맥",
-    "hanja": "右淺內側足底動脈",
+    "nameKo": "얕은안쪽발바닥동맥",
+    "legacyKo": "천내측족저동맥",
+    "hanja": "淺內側足底動脈",
     "sourceNameEn": "right superficial medial plantar artery",
     "status": "derived"
   },
   "FMA43938": {
-    "nameKo": "왼얕은안쪽발바닥동맥",
-    "legacyKo": "좌천내측족저동맥",
-    "hanja": "左淺內側足底動脈",
+    "nameKo": "얕은안쪽발바닥동맥",
+    "legacyKo": "천내측족저동맥",
+    "hanja": "淺內側足底動脈",
     "sourceNameEn": "left superficial medial plantar artery",
     "status": "derived"
   },
@@ -19799,16 +19799,16 @@
   "FMA46604": {
     "sourceNameEn": "right aryepiglotticus",
     "status": "derived",
-    "nameKo": "오른모뿔덮개근",
-    "legacyKo": "우피열후두개근",
-    "hanja": "右披裂喉頭蓋筋"
+    "nameKo": "모뿔덮개근",
+    "legacyKo": "피열후두개근",
+    "hanja": "披裂喉頭蓋筋"
   },
   "FMA46605": {
     "sourceNameEn": "left aryepiglotticus",
     "status": "derived",
-    "nameKo": "왼모뿔덮개근",
-    "legacyKo": "좌피열후두개근",
-    "hanja": "左披裂喉頭蓋筋"
+    "nameKo": "모뿔덮개근",
+    "legacyKo": "피열후두개근",
+    "hanja": "披裂喉頭蓋筋"
   },
   "FMA46608": {
     "sourceNameEn": "zone of cricothyroid",
@@ -22587,16 +22587,16 @@
     "terminologyBaseId": "FMA50629"
   },
   "FMA50672": {
-    "nameKo": "오른뒤안쪽맥락막동맥",
-    "legacyKo": "우후내측맥락막동맥",
-    "hanja": "右後內側脈絡膜動脈",
+    "nameKo": "뒤안쪽맥락막동맥",
+    "legacyKo": "후내측맥락막동맥",
+    "hanja": "後內側脈絡膜動脈",
     "sourceNameEn": "right posterior medial choroidal artery",
     "status": "derived"
   },
   "FMA50673": {
-    "nameKo": "왼뒤안쪽맥락막동맥",
-    "legacyKo": "좌후내측맥락막동맥",
-    "hanja": "左後內側脈絡膜動脈",
+    "nameKo": "뒤안쪽맥락막동맥",
+    "legacyKo": "후내측맥락막동맥",
+    "hanja": "後內側脈絡膜動脈",
     "sourceNameEn": "left posterior medial choroidal artery",
     "status": "derived"
   },
@@ -22631,16 +22631,16 @@
   "FMA50684": {
     "sourceNameEn": "right splenial artery",
     "status": "derived",
-    "nameKo": "오른팽대동맥",
-    "legacyKo": "우팽대동맥",
-    "hanja": "右膨大動脈"
+    "nameKo": "팽대동맥",
+    "legacyKo": "팽대동맥",
+    "hanja": "膨大動脈"
   },
   "FMA50685": {
     "sourceNameEn": "left splenial artery",
     "status": "derived",
-    "nameKo": "왼팽대동맥",
-    "legacyKo": "좌팽대동맥",
-    "hanja": "左膨大動脈"
+    "nameKo": "팽대동맥",
+    "legacyKo": "팽대동맥",
+    "hanja": "膨大動脈"
   },
   "FMA50694": {
     "nameKo": "위소뇌동맥 안쪽가지의 가지",
@@ -23357,16 +23357,16 @@
   "FMA52656": {
     "sourceNameEn": "right supra-orbital nerve",
     "status": "derived",
-    "nameKo": "오른위눈확신경",
-    "legacyKo": "우상안와신경",
-    "hanja": "右上眼窩神經"
+    "nameKo": "위눈확신경",
+    "legacyKo": "상안와신경",
+    "hanja": "上眼窩神經"
   },
   "FMA52657": {
     "sourceNameEn": "left supra-orbital nerve",
     "status": "derived",
-    "nameKo": "왼위눈확신경",
-    "legacyKo": "좌상안와신경",
-    "hanja": "左上眼窩神經"
+    "nameKo": "위눈확신경",
+    "legacyKo": "상안와신경",
+    "hanja": "上眼窩神經"
   },
   "FMA52668": {
     "sourceNameEn": "nasociliary nerve",
@@ -24872,156 +24872,156 @@
     "hanja": "中空樹枝狀器官"
   },
   "FMA55680": {
-    "nameKo": "오른위가쪽이차앞니치아",
-    "legacyKo": "우상외측이차절치치아",
-    "hanja": "右上外側二次切齒齒",
+    "nameKo": "위가쪽이차앞니치아",
+    "legacyKo": "상외측이차절치치아",
+    "hanja": "上外側二次切齒齒",
     "sourceNameEn": "right upper lateral secondary incisor tooth",
     "status": "derived"
   },
   "FMA55681": {
-    "nameKo": "오른위중심이차앞니치아",
-    "legacyKo": "우상중앙이차절치치아",
-    "hanja": "右上中央二次切齒齒",
+    "nameKo": "위중심이차앞니치아",
+    "legacyKo": "상중앙이차절치치아",
+    "hanja": "上中央二次切齒齒",
     "sourceNameEn": "right upper central secondary incisor tooth",
     "status": "derived"
   },
   "FMA55682": {
-    "nameKo": "왼위중심이차앞니치아",
-    "legacyKo": "좌상중앙이차절치치아",
-    "hanja": "左上中央二次切齒齒",
+    "nameKo": "위중심이차앞니치아",
+    "legacyKo": "상중앙이차절치치아",
+    "hanja": "上中央二次切齒齒",
     "sourceNameEn": "left upper central secondary incisor tooth",
     "status": "derived"
   },
   "FMA55683": {
-    "nameKo": "왼위가쪽이차앞니치아",
-    "legacyKo": "좌상외측이차절치치아",
-    "hanja": "左上外側二次切齒齒",
+    "nameKo": "위가쪽이차앞니치아",
+    "legacyKo": "상외측이차절치치아",
+    "hanja": "上外側二次切齒齒",
     "sourceNameEn": "left upper lateral secondary incisor tooth",
     "status": "derived"
   },
   "FMA55686": {
     "sourceNameEn": "right lower secondary canine tooth",
     "status": "derived",
-    "nameKo": "오른아래 이차 송곳니",
-    "legacyKo": "우하 이차 견치",
-    "hanja": "右下二次犬齒"
+    "nameKo": "아래 이차 송곳니",
+    "legacyKo": "하 이차 견치",
+    "hanja": "下二次犬齒"
   },
   "FMA55687": {
     "sourceNameEn": "left lower secondary canine tooth",
     "status": "derived",
-    "nameKo": "왼아래 이차 송곳니",
-    "legacyKo": "좌하 이차 견치",
-    "hanja": "左下二次犬齒"
+    "nameKo": "아래 이차 송곳니",
+    "legacyKo": "하 이차 견치",
+    "hanja": "下二次犬齒"
   },
   "FMA55688": {
-    "nameKo": "오른위둘째이차작은어금니치아",
-    "legacyKo": "우상제2이차소구치치아",
-    "hanja": "右上第二二次小臼齒齒",
+    "nameKo": "위둘째이차작은어금니치아",
+    "legacyKo": "상제2이차소구치치아",
+    "hanja": "上第二二次小臼齒齒",
     "sourceNameEn": "right upper second secondary premolar tooth",
     "status": "derived"
   },
   "FMA55689": {
-    "nameKo": "오른위첫째이차작은어금니치아",
-    "legacyKo": "우상제1이차소구치치아",
-    "hanja": "右上第一二次小臼齒齒",
+    "nameKo": "위첫째이차작은어금니치아",
+    "legacyKo": "상제1이차소구치치아",
+    "hanja": "上第一二次小臼齒齒",
     "sourceNameEn": "right upper first secondary premolar tooth",
     "status": "derived"
   },
   "FMA55690": {
-    "nameKo": "왼위첫째이차작은어금니치아",
-    "legacyKo": "좌상제1이차소구치치아",
-    "hanja": "左上第一二次小臼齒齒",
+    "nameKo": "위첫째이차작은어금니치아",
+    "legacyKo": "상제1이차소구치치아",
+    "hanja": "上第一二次小臼齒齒",
     "sourceNameEn": "left upper first secondary premolar tooth",
     "status": "derived"
   },
   "FMA55691": {
-    "nameKo": "왼위둘째이차작은어금니치아",
-    "legacyKo": "좌상제2이차소구치치아",
-    "hanja": "左上第二二次小臼齒齒",
+    "nameKo": "위둘째이차작은어금니치아",
+    "legacyKo": "상제2이차소구치치아",
+    "hanja": "上第二二次小臼齒齒",
     "sourceNameEn": "left upper second secondary premolar tooth",
     "status": "derived"
   },
   "FMA55692": {
-    "nameKo": "왼아래둘째이차작은어금니치아",
-    "legacyKo": "좌하제2이차소구치치아",
-    "hanja": "左下第二二次小臼齒齒",
+    "nameKo": "아래둘째이차작은어금니치아",
+    "legacyKo": "하제2이차소구치치아",
+    "hanja": "下第二二次小臼齒齒",
     "sourceNameEn": "left lower second secondary premolar tooth",
     "status": "derived"
   },
   "FMA55693": {
-    "nameKo": "왼아래첫째이차작은어금니치아",
-    "legacyKo": "좌하제1이차소구치치아",
-    "hanja": "左下第一二次小臼齒齒",
+    "nameKo": "아래첫째이차작은어금니치아",
+    "legacyKo": "하제1이차소구치치아",
+    "hanja": "下第一二次小臼齒齒",
     "sourceNameEn": "left lower first secondary premolar tooth",
     "status": "derived"
   },
   "FMA55694": {
-    "nameKo": "오른아래첫째이차작은어금니치아",
-    "legacyKo": "우하제1이차소구치치아",
-    "hanja": "右下第一二次小臼齒齒",
+    "nameKo": "아래첫째이차작은어금니치아",
+    "legacyKo": "하제1이차소구치치아",
+    "hanja": "下第一二次小臼齒齒",
     "sourceNameEn": "right lower first secondary premolar tooth",
     "status": "derived"
   },
   "FMA55695": {
-    "nameKo": "오른아래둘째이차작은어금니치아",
-    "legacyKo": "우하제2이차소구치치아",
-    "hanja": "右下第二二次小臼齒齒",
+    "nameKo": "아래둘째이차작은어금니치아",
+    "legacyKo": "하제2이차소구치치아",
+    "hanja": "下第二二次小臼齒齒",
     "sourceNameEn": "right lower second secondary premolar tooth",
     "status": "derived"
   },
   "FMA55697": {
-    "nameKo": "오른위둘째이차어금니치아",
-    "legacyKo": "우상제2이차구치치아",
-    "hanja": "右上第二二次臼齒齒",
+    "nameKo": "위둘째이차어금니치아",
+    "legacyKo": "상제2이차구치치아",
+    "hanja": "上第二二次臼齒齒",
     "sourceNameEn": "right upper second secondary molar tooth",
     "status": "derived"
   },
   "FMA55698": {
-    "nameKo": "오른위첫째이차어금니치아",
-    "legacyKo": "우상제1이차구치치아",
-    "hanja": "右上第一二次臼齒齒",
+    "nameKo": "위첫째이차어금니치아",
+    "legacyKo": "상제1이차구치치아",
+    "hanja": "上第一二次臼齒齒",
     "sourceNameEn": "right upper first secondary molar tooth",
     "status": "derived"
   },
   "FMA55699": {
-    "nameKo": "왼위첫째이차어금니치아",
-    "legacyKo": "좌상제1이차구치치아",
-    "hanja": "左上第一二次臼齒齒",
+    "nameKo": "위첫째이차어금니치아",
+    "legacyKo": "상제1이차구치치아",
+    "hanja": "上第一二次臼齒齒",
     "sourceNameEn": "left upper first secondary molar tooth",
     "status": "derived"
   },
   "FMA55700": {
-    "nameKo": "왼위둘째이차어금니치아",
-    "legacyKo": "좌상제2이차구치치아",
-    "hanja": "左上第二二次臼齒齒",
+    "nameKo": "위둘째이차어금니치아",
+    "legacyKo": "상제2이차구치치아",
+    "hanja": "上第二二次臼齒齒",
     "sourceNameEn": "left upper second secondary molar tooth",
     "status": "derived"
   },
   "FMA55703": {
-    "nameKo": "왼아래둘째이차어금니치아",
-    "legacyKo": "좌하제2이차구치치아",
-    "hanja": "左下第二二次臼齒齒",
+    "nameKo": "아래둘째이차어금니치아",
+    "legacyKo": "하제2이차구치치아",
+    "hanja": "下第二二次臼齒齒",
     "sourceNameEn": "left lower second secondary molar tooth",
     "status": "derived"
   },
   "FMA55704": {
-    "nameKo": "왼아래첫째이차어금니치아",
-    "legacyKo": "좌하제1이차구치치아",
-    "hanja": "左下第一二次臼齒齒",
+    "nameKo": "아래첫째이차어금니치아",
+    "legacyKo": "하제1이차구치치아",
+    "hanja": "下第一二次臼齒齒",
     "sourceNameEn": "left lower first secondary molar tooth",
     "status": "derived"
   },
   "FMA55705": {
-    "nameKo": "오른아래첫째이차어금니치아",
-    "legacyKo": "우하제1이차구치치아",
-    "hanja": "右下第一二次臼齒齒",
+    "nameKo": "아래첫째이차어금니치아",
+    "legacyKo": "하제1이차구치치아",
+    "hanja": "下第一二次臼齒齒",
     "sourceNameEn": "right lower first secondary molar tooth",
     "status": "derived"
   },
   "FMA55706": {
-    "nameKo": "오른아래둘째이차어금니치아",
-    "legacyKo": "우하제2이차구치치아",
-    "hanja": "右下第二二次臼齒齒",
+    "nameKo": "아래둘째이차어금니치아",
+    "legacyKo": "하제2이차구치치아",
+    "hanja": "下第二二次臼齒齒",
     "sourceNameEn": "right lower second secondary molar tooth",
     "status": "derived"
   },
@@ -25112,16 +25112,16 @@
   "FMA55798": {
     "sourceNameEn": "right upper secondary canine tooth",
     "status": "derived",
-    "nameKo": "오른위 이차 송곳니",
-    "legacyKo": "우상 이차 견치",
-    "hanja": "右上二次犬齒"
+    "nameKo": "위 이차 송곳니",
+    "legacyKo": "상 이차 견치",
+    "hanja": "上二次犬齒"
   },
   "FMA55799": {
     "sourceNameEn": "left upper secondary canine tooth",
     "status": "derived",
-    "nameKo": "왼위 이차 송곳니",
-    "legacyKo": "좌상 이차 견치",
-    "hanja": "左上二次犬齒"
+    "nameKo": "위 이차 송곳니",
+    "legacyKo": "상 이차 견치",
+    "hanja": "上二次犬齒"
   },
   "FMA55801": {
     "nameKo": "위첫째이차작은어금니치아",
@@ -25180,30 +25180,30 @@
     "status": "derived"
   },
   "FMA57140": {
-    "nameKo": "오른아래가쪽이차앞니치아",
-    "legacyKo": "우하외측이차절치치아",
-    "hanja": "右下外側二次切齒齒",
+    "nameKo": "아래가쪽이차앞니치아",
+    "legacyKo": "하외측이차절치치아",
+    "hanja": "下外側二次切齒齒",
     "sourceNameEn": "right lower lateral secondary incisor tooth",
     "status": "derived"
   },
   "FMA57141": {
-    "nameKo": "왼아래가쪽이차앞니치아",
-    "legacyKo": "좌하외측이차절치치아",
-    "hanja": "左下外側二次切齒齒",
+    "nameKo": "아래가쪽이차앞니치아",
+    "legacyKo": "하외측이차절치치아",
+    "hanja": "下外側二次切齒齒",
     "sourceNameEn": "left lower lateral secondary incisor tooth",
     "status": "derived"
   },
   "FMA57142": {
-    "nameKo": "오른아래중심이차앞니치아",
-    "legacyKo": "우하중앙이차절치치아",
-    "hanja": "右下中央二次切齒齒",
+    "nameKo": "아래중심이차앞니치아",
+    "legacyKo": "하중앙이차절치치아",
+    "hanja": "下中央二次切齒齒",
     "sourceNameEn": "right lower central secondary incisor tooth",
     "status": "derived"
   },
   "FMA57143": {
-    "nameKo": "왼아래중심이차앞니치아",
-    "legacyKo": "좌하중앙이차절치치아",
-    "hanja": "左下中央二次切齒齒",
+    "nameKo": "아래중심이차앞니치아",
+    "legacyKo": "하중앙이차절치치아",
+    "hanja": "下中央二次切齒齒",
     "sourceNameEn": "left lower central secondary incisor tooth",
     "status": "derived"
   },
@@ -25932,16 +25932,16 @@
     "status": "derived"
   },
   "FMA59512": {
-    "nameKo": "오른가쪽코연골",
-    "legacyKo": "우외측비연골",
-    "hanja": "右外側鼻軟骨",
+    "nameKo": "가쪽코연골",
+    "legacyKo": "외측비연골",
+    "hanja": "外側鼻軟骨",
     "sourceNameEn": "right lateral nasal cartilage",
     "status": "derived"
   },
   "FMA59513": {
-    "nameKo": "왼가쪽코연골",
-    "legacyKo": "좌외측비연골",
-    "hanja": "左外側鼻軟骨",
+    "nameKo": "가쪽코연골",
+    "legacyKo": "외측비연골",
+    "hanja": "外側鼻軟骨",
     "sourceNameEn": "left lateral nasal cartilage",
     "status": "derived"
   },
@@ -30118,30 +30118,30 @@
   "FMA72830": {
     "sourceNameEn": "right globus pallidus",
     "status": "derived",
-    "nameKo": "오른창백핵",
-    "legacyKo": "우담창구",
-    "hanja": "右淡蒼球"
+    "nameKo": "창백핵",
+    "legacyKo": "담창구",
+    "hanja": "淡蒼球"
   },
   "FMA72831": {
     "sourceNameEn": "left globus pallidus",
     "status": "derived",
-    "nameKo": "왼창백핵",
-    "legacyKo": "좌담창구",
-    "hanja": "左淡蒼球"
+    "nameKo": "창백핵",
+    "legacyKo": "담창구",
+    "hanja": "淡蒼球"
   },
   "FMA72832": {
     "sourceNameEn": "right amygdala",
     "status": "derived",
-    "nameKo": "오른편도체",
-    "legacyKo": "우편도체",
-    "hanja": "右扁桃體"
+    "nameKo": "편도체",
+    "legacyKo": "편도체",
+    "hanja": "扁桃體"
   },
   "FMA72833": {
     "sourceNameEn": "left amygdala",
     "status": "derived",
-    "nameKo": "왼편도체",
-    "legacyKo": "좌편도체",
-    "hanja": "左扁桃體"
+    "nameKo": "편도체",
+    "legacyKo": "편도체",
+    "hanja": "扁桃體"
   },
   "FMA72906": {
     "nameKo": "속섬유막",
@@ -30176,16 +30176,16 @@
   "FMA72924": {
     "sourceNameEn": "right fornix of forebrain",
     "status": "derived",
-    "nameKo": "앞뇌오른뇌궁",
-    "legacyKo": "전뇌우뇌궁",
-    "hanja": "前腦右腦弓"
+    "nameKo": "앞뇌뇌궁",
+    "legacyKo": "전뇌뇌궁",
+    "hanja": "前腦腦弓"
   },
   "FMA72925": {
     "sourceNameEn": "left fornix of forebrain",
     "status": "derived",
-    "nameKo": "앞뇌왼뇌궁",
-    "legacyKo": "전뇌좌뇌궁",
-    "hanja": "前腦左腦弓"
+    "nameKo": "앞뇌뇌궁",
+    "legacyKo": "전뇌뇌궁",
+    "hanja": "前腦腦弓"
   },
   "FMA72940": {
     "sourceNameEn": "left stria terminalis",
@@ -31713,51 +31713,51 @@
     "status": "derived"
   },
   "FMA85118": {
-    "nameKo": "왼첫째온손바닥손발가락동맥",
-    "legacyKo": "좌제1총수장지동맥",
-    "hanja": "左第一總手掌指動脈",
+    "nameKo": "첫째온손바닥손발가락동맥",
+    "legacyKo": "제1총수장지동맥",
+    "hanja": "第一總手掌指動脈",
     "sourceNameEn": "left first common palmar digital artery",
     "status": "derived"
   },
   "FMA85119": {
-    "nameKo": "오른둘째온손바닥손발가락동맥",
-    "legacyKo": "우제2총수장지동맥",
-    "hanja": "右第二總手掌指動脈",
+    "nameKo": "둘째온손바닥손발가락동맥",
+    "legacyKo": "제2총수장지동맥",
+    "hanja": "第二總手掌指動脈",
     "sourceNameEn": "right second common palmar digital artery",
     "status": "derived"
   },
   "FMA85120": {
-    "nameKo": "왼둘째온손바닥손발가락동맥",
-    "legacyKo": "좌제2총수장지동맥",
-    "hanja": "左第二總手掌指動脈",
+    "nameKo": "둘째온손바닥손발가락동맥",
+    "legacyKo": "제2총수장지동맥",
+    "hanja": "第二總手掌指動脈",
     "sourceNameEn": "left second common palmar digital artery",
     "status": "derived"
   },
   "FMA85121": {
-    "nameKo": "오른셋째온손바닥손발가락동맥",
-    "legacyKo": "우제3총수장지동맥",
-    "hanja": "右第三總手掌指動脈",
+    "nameKo": "셋째온손바닥손발가락동맥",
+    "legacyKo": "제3총수장지동맥",
+    "hanja": "第三總手掌指動脈",
     "sourceNameEn": "right third common palmar digital artery",
     "status": "derived"
   },
   "FMA85122": {
-    "nameKo": "왼셋째온손바닥손발가락동맥",
-    "legacyKo": "좌제3총수장지동맥",
-    "hanja": "左第三總手掌指動脈",
+    "nameKo": "셋째온손바닥손발가락동맥",
+    "legacyKo": "제3총수장지동맥",
+    "hanja": "第三總手掌指動脈",
     "sourceNameEn": "left third common palmar digital artery",
     "status": "derived"
   },
   "FMA85123": {
-    "nameKo": "오른넷째온손바닥손발가락동맥",
-    "legacyKo": "우제4총수장지동맥",
-    "hanja": "右第四總手掌指動脈",
+    "nameKo": "넷째온손바닥손발가락동맥",
+    "legacyKo": "제4총수장지동맥",
+    "hanja": "第四總手掌指動脈",
     "sourceNameEn": "right fourth common palmar digital artery",
     "status": "derived"
   },
   "FMA85124": {
-    "nameKo": "왼넷째온손바닥손발가락동맥",
-    "legacyKo": "좌제4총수장지동맥",
-    "hanja": "左第四總手掌指動脈",
+    "nameKo": "넷째온손바닥손발가락동맥",
+    "legacyKo": "제4총수장지동맥",
+    "hanja": "第四總手掌指動脈",
     "sourceNameEn": "left fourth common palmar digital artery",
     "status": "derived"
   },
