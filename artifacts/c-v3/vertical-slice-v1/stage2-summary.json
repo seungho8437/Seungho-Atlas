@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "artifact": "c-v3-vertical-slice-v1-stage2-summary",
-  "status": "AUTOMATED_STRUCTURAL_VALIDATION_PASS_HUMAN_SEMANTIC_AUDIT_REJECTED",
+  "status": "SEMANTIC_REPAIR_VALIDATED_HUMAN_REVIEW_PENDING",
   "workflow": {
     "name": "Validate C v3 Vertical Slice Stage 2",
     "run_id": 37438671650,
@@ -155,5 +155,44 @@
       "Pose/body-position conditions incompatible with default atlas pose must remain CONDITIONAL."
     ]
   },
-  "next_gate": "Repair composite-subfeature execution semantics and affected-point Stage 2 revalidation; Stage 3 remains blocked."
+  "next_gate": "Human review of stage2-semantic-repair-human-review.pdf/html; Stage 3 remains NOT_STARTED.",
+  "semantic_repair": {
+    "status": "PASS",
+    "workflow_run_id": 37444457416,
+    "artifact_commit": "29963a2",
+    "checks": 243,
+    "errors": 0,
+    "known_affected_repair": {
+      "TE20": "UNRESOLVED; body_position condition repaired to CONDITIONAL",
+      "ST10": "UNRESOLVED; SCM border whole-mesh collapse blocked",
+      "LI17": "UNRESOLVED; SCM posterior-border whole-mesh collapse blocked",
+      "LI18": "UNRESOLVED; anterior/posterior SCM border collapse and thyroid superior-border dependency blocked",
+      "BL17": "UNRESOLVED; inferior-border child required by same-level relation",
+      "BL23": "UNRESOLVED; inferior-border child required by same-level relation",
+      "BL25": "UNRESOLVED; inferior-border child required by same-level relation",
+      "ST9": "UNRESOLVED; thyroid superior-border and SCM border collapses blocked"
+    },
+    "repaired_primary_status_counts": {
+      "RESOLVED": 3,
+      "UNRESOLVED": 17
+    },
+    "pre_repair_regression_findings_outside_known8": 54,
+    "post_repair_counts": {
+      "parent_only_collapse": 0,
+      "unused_child_subfeature": 0,
+      "distinct_subfeature_identity_collapse": 0,
+      "condition_preservation_failure": 0,
+      "false_fallback": 0
+    },
+    "negative_tests": {
+      "child_removed_parent_whole_mesh": "PASS",
+      "distinct_borders_same_geometry_hash": "PASS",
+      "same_level_child_replaced_by_parent": "PASS",
+      "te20_conditional_to_resolved": "PASS",
+      "unknown_subfeature_whole_entity_fallback": "PASS"
+    },
+    "coordinate_generation_count": 0,
+    "legacy_c_coordinate_reference_count": 0,
+    "human_semantic_audit": "PENDING"
+  }
 }
