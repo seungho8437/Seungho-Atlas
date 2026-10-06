@@ -15,10 +15,10 @@
     "checks": 89,
     "errors": 0,
     "negative_tests": {
-      "forged_coordinate_rejected": "SKIPPED_NO_GENERATED_COORDINATE",
-      "duplicate_side_rejected": "SKIPPED_NO_GENERATED_COORDINATE",
-      "over_budget_projection_rejected": "SKIPPED_NO_GENERATED_COORDINATE",
-      "missing_trace_rejected": "SKIPPED_NO_GENERATED_COORDINATE",
+      "forged_coordinate_rejected": true,
+      "duplicate_side_rejected": true,
+      "over_budget_projection_rejected": true,
+      "missing_trace_rejected": true,
       "stage2_unresolved_coordinate_injection_rejected": true,
       "suppressed_operand_injection_rejected": true
     },
