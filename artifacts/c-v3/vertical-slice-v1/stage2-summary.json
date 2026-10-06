@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "artifact": "c-v3-vertical-slice-v1-stage2-summary",
-  "status": "AUTOMATED_STRUCTURAL_VALIDATION_PASS_SEMANTIC_REPAIR_VALIDATION_PASS_HUMAN_SEMANTIC_AUDIT_REJECTED",
+  "status": "AUTOMATED_STRUCTURAL_VALIDATION_PASS_SEMANTIC_REPAIR_VALIDATION_PASS_HUMAN_SEMANTIC_AUDIT_PASS",
   "workflow": {
     "name": "Validate C v3 Vertical Slice Stage 2",
     "run_id": 37438671650,
@@ -95,12 +95,13 @@
   "invariants": {
     "physical_coordinates_generated": false,
     "legacy_coordinate_input": false,
-    "stage3_blocked_until_human_approval": true
+    "stage3_blocked_until_human_approval": false,
+    "stage3_blocked_until_separate_command": true
   },
   "human_semantic_audit": {
-    "status": "REJECTED",
+    "status": "PASS",
     "reviewed_at": "2026-10-06",
-    "basis": "20-point Stage 2 human semantic review",
+    "basis": "Latest 20-point Stage 2 human semantic re-audit",
     "confirmed_defects": [
       {
         "point_id": "TE20",
@@ -199,9 +200,60 @@
         "synonym_left_unknown"
       ],
       "human_reaudit_required": true
-    }
+    },
+    "pass_scope": "Vertical Slice v1 20-point Stage 2 semantic execution only",
+    "resolved_defect_families": [
+      "parent-only composite resolution",
+      "unused child-subfeature execution",
+      "distinct-subfeature identity collapse",
+      "condition semantics/preservation failure",
+      "direction semantics loss",
+      "non-operand semantic loss",
+      "quantitative relation semantics loss",
+      "derived geometry output binding failure",
+      "false fallback",
+      "lexicalized anatomical entity false subfeature split",
+      "subfeature synonym normalization gap"
+    ],
+    "non_blocking_watchpoints": [
+      {
+        "watchpoint_id": "SUPPRESSED_PROVENANCE_EXECUTION_ISOLATION",
+        "blocking": false,
+        "description": "Suppressed/provenance-only parse nodes may remain in the audit graph, but they must never participate in canonical semantic execution, point-status determination, or false RESOLVED inference.",
+        "mandatory_expansion_metrics": {
+          "suppressed_executable_operand_count": {
+            "expected": 0
+          },
+          "suppressed_status_aggregation_influence_count": {
+            "expected": 0
+          },
+          "suppressed_only_resolved_path_count": {
+            "expected": 0
+          }
+        }
+      }
+    ],
+    "provenance_policy": {
+      "suppressed_parser_residue_is_blocking": false,
+      "provenance_only_shadow_parse_is_blocking": false,
+      "renderer_duplicate_diagnostic_node_is_blocking": false,
+      "condition_for_non_blocking": "The residue/edge must not participate in canonical execution, point-level status aggregation, or false RESOLVED inference."
+    },
+    "defect_family_promotion_criteria": [
+      "A. WHO/source semantics is actually lost or transformed.",
+      "B. An incorrect operand/operator/direction/measurement/condition is executed.",
+      "C. The issue can produce false RESOLVED or an incorrect coordinate.",
+      "D. The same structural failure repeats across independent source expressions.",
+      "E. A frozen semantic-contract invariant is violated."
+    ],
+    "point_specific_overfitting_forbidden": [
+      "acupoint-ID-specific rules",
+      "WHO-string-specific exceptions",
+      "point-specific suppression added only to pass a validator",
+      "individual point patch accepted as a defect-family fix"
+    ]
   },
-  "next_gate": "Human semantic re-audit of the latest 47-page lexical-normalization repair artifact; Stage 3 remains blocked.",
+  "next_gate": "Stage 2 Vertical Slice v1 is human-approved. Stage 3 remains NOT STARTED and requires a separate explicit command.",
   "semantic_repair": {
     "status": "PASS",
     "workflow_run_id": 37450405490,
@@ -246,6 +298,9 @@
     },
     "coordinate_generation_count": 0,
     "legacy_c_coordinate_reference_count": 0,
-    "human_semantic_audit": "PENDING"
+    "human_semantic_audit": "PASS",
+    "non_blocking_watchpoint_ids": [
+      "SUPPRESSED_PROVENANCE_EXECUTION_ISOLATION"
+    ]
   }
 }
