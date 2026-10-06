@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-stage2-census-summary",
+  "status": "CENSUS_COMPLETE_EXECUTION_NOT_VALIDATED",
+  "source": {
+    "b_v2_1_path": "public/knowledge/anatomy-acupoint-relations-v2.1.json",
+    "b_v2_1_sha256": "8126e20938a478a2d214f4a8487cabeebc8f3115f7a81ad30e46b594958fb2c1",
+    "source_statements": 583
+  },
+  "workflow": {
+    "name": "Validate C v3 Stage 2 semantic census",
+    "successful_run_id": 37427820349,
+    "head_sha": "56a9da2f57e648f90143db19c8074b2d921785bd",
+    "conclusion": "success",
+    "note": "An earlier run failed from a local variable shadowing bug before artifact write; the bug was fixed and the complete census reran successfully."
+  },
+  "counts": {
+    "points": 361,
+    "landmark_nodes": 2524,
+    "geometry_nodes": 107,
+    "relation_instances": 1993,
+    "conditions": 130,
+    "proportional_measurements": 305,
+    "composite_bindings": 332,
+    "relation_types": 16,
+    "landmark_classes": 27
+  },
+  "risk_inventory": {
+    "relation_instances_touching_hard_unresolved": 275,
+    "relation_instances_touching_registry_limited_or_specialized_anchor": 575,
+    "note": "These are static ontology-risk counts, not runtime unresolved counts."
+  },
+  "next_human_review_inputs": [
+    "surface-expression geometry-definition registry",
+    "WHO-cited B-cun/F-cun calibration table"
+  ]
+}
