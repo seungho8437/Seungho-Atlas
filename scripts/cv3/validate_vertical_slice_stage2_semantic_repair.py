@@ -362,13 +362,14 @@ def mutate_atomic_fma_internal_child_executable(out,g):
  raise RuntimeError("no suppressed atomic-FMA internal child found")
 
 def mutate_free_extremity_normalization_removed(out,g):
- m=copy.deepcopy(out)
+ m=copy.deepcopy(out);bound={x["child_landmark_id"] for x in g.get("composite_bindings",[])}
  for p in m["points"]:
   for nid,rec in p["landmarks"].items():
+   if nid not in bound:continue
    src=next((x for x in g["landmark_nodes"] if x["node_id"]==nid),{})
    if "free extremity" in norm(src.get("source_raw")):
     rec["semantic_normalization"]=None;rec["reason"]="child subfeature type not recognized";return m
- raise RuntimeError("no free extremity node found")
+ raise RuntimeError("no bound free extremity node found")
 
 def mutate_synonym_to_unknown(out,g):
  m=copy.deepcopy(out)
