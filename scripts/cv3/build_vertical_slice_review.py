@@ -18,6 +18,16 @@ B_SHA="8126e20938a478a2d214f4a8487cabeebc8f3115f7a81ad30e46b594958fb2c1"
 COHORT=("HT7","LI4","ST1","GB14","GB23","LU6","LI7","GB26","ST2","ST10","LI18","LI17","BL17","BL23","BL25","BL40","TE20","ST4","TE6","ST9")
 FORCED={"HT7":"known prior C failure: wrist/cardinality","LI4":"user-requested known-error/anchor test","ST1":"user-requested face/soft-tissue test","GB14":"user-requested B-cun/head test","GB23":"known prior C failure: intercostal/midaxillary","LU6":"known prior C failure: forearm line/B-cun","LI7":"known prior C failure: forearm line/cardinality","GB26":"known prior C failure: lateral abdomen/rib/level"}
 
+# Verified directly against the project primary WHO PDF (9789290613831-eng.pdf).
+# Values are 1-indexed PDF pages, not printed footer page numbers.
+WHO_PDF_PAGE={
+ "S:GB14:location":187,"S:GB23:location":192,
+ "S:LU6:location":37,"S:LU6:note:1":37,
+ "S:LI7:location":46,"S:BL17:location":117,
+ "S:BL23:location":120,"S:BL25:location":121,
+ "S:ST4:location":56,"S:TE6:location":169,"S:TE6:note:1":169,
+}
+
 REGISTRY=[
  {"id":"SR:dorsum_hand","group":"upper_limb","terms":["dorsum of the hand"],"kind":"surface_region","status":"DRAFT_HUMAN_REVIEW",
   "definition":"skin over the hand segment whose outward normal has positive component along the frozen hand dorsal axis; restricted distal to the wrist joint and to the hand skeletal envelope","render":"hand_dorsal","required_by":["LI4"]},
@@ -114,8 +124,8 @@ def main():
    s=sid[m["source_statement_id"]]
    calibration.append({"calibration_id":m["measurement_id"],"point_id":p,"unit_raw":m.get("unit"),"value":m.get("value"),"direction":m.get("direction"),
     "anchor_landmark_id":m.get("anchor_landmark_id"),"branch_id":m.get("branch_id"),
-    "who_citation":{"document":"WHO Standard Acupuncture Point Locations in the Western Pacific Region","edition":"Updated and Reprinted 2009 (project primary PDF)","page":s.get("page") or s.get("source_page") or s.get("pdf_page"),"source_statement_id":s["source_statement_id"],"section":s.get("section"),"source_text":s.get("text_canonical"),"measurement_span":m.get("source_value_span") or m.get("cue_span")},
-    "calibration_status":"DRAFT_AWAITING_HUMAN_FREEZE"})
+    "who_citation":{"document":"WHO Standard Acupuncture Point Locations in the Western Pacific Region","edition":"Updated and Reprinted 2009 (project primary PDF)","pdf_page":WHO_PDF_PAGE.get(s["source_statement_id"]),"page_basis":"1-indexed page in project primary PDF 9789290613831-eng.pdf; verified against WHO primary PDF text","source_statement_id":s["source_statement_id"],"section":s.get("section"),"source_text":s.get("text_canonical"),"measurement_span":m.get("source_value_span") or m.get("cue_span")},
+    "calibration_status":"DRAFT_AWAITING_HUMAN_FREEZE" if WHO_PDF_PAGE.get(s["source_statement_id"]) else "BLOCKED_MISSING_WHO_PAGE"})
  json.dump({"schema_version":"1.0.0","artifact":"c-v3-vertical-slice-v1-calibration","status":"DRAFT_AWAITING_HUMAN_REVIEW","rows":calibration,
    "normalization_rule":"F-cun/f-cun normalize to F-cun for execution while preserving source spelling in trace."},open(out/"calibration-draft.json","w"),ensure_ascii=False,indent=2)
 
