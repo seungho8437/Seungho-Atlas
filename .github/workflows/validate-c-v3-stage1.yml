@@ -35,7 +35,9 @@ jobs:
       - name: Atlas-backed spatial query validation
         run: python scripts/cv3/validate_stage1_queries.py --substrate .tmp/c-v3-stage1/spatial-substrate.json --report .tmp/c-v3-stage1/query-validation.json
       - name: Render Stage 1 human review
-        run: python scripts/cv3/render_stage1_review.py --substrate .tmp/c-v3-stage1/spatial-substrate.json --out .tmp/c-v3-stage1/stage1-review.html
+        run: python scripts/cv3/render_stage1_review.py --substrate .tmp/c-v3-stage1/spatial-substrate.json --out .tmp/c-v3-stage1/stage1-review.html --contract-out .tmp/c-v3-stage1/stage1-review-contract.json
+      - name: Independent review camera validation
+        run: python scripts/cv3/validate_stage1_review_views.py .tmp/c-v3-stage1/stage1-review-contract.json --report .tmp/c-v3-stage1/review-view-validation.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
