@@ -128,6 +128,9 @@ def scan(out,g):
    prod=dg.get("producer_relation_id")
    if prod not in p["relations"] or p["relations"][prod].get("status")!="RESOLVED":
     findings.append({"rule":"derived_geometry_output_not_bound","point_id":pid,"derived_geometry_id":dgid,"detail":"producer relation missing or not resolved"})
+   refs=[nid for nid,rec in p["landmarks"].items() if (rec.get("geometry") or {}).get("derived_geometry_id")==dgid]
+   if not refs:
+    findings.append({"rule":"derived_geometry_output_not_bound","point_id":pid,"derived_geometry_id":dgid,"detail":"resolved derived output is not bound to any semantic landmark"})
   for nid,rec in p["landmarks"].items():
    gref=rec.get("geometry") or {}
    if gref.get("kind")=="derived_relation_output":
