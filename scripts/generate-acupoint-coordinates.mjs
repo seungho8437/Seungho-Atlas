@@ -806,6 +806,95 @@ function semanticConceptHits(text,side){
   }
   return hits;
 }
+function specializedLandmark(raw,side){
+  const q=String(raw||'').toLowerCase(),ss=sideSignFor(side);
+  if(/cubital crease/.test(q)){
+    const c=regionalGeometrySeed('elbow',side);if(c){c[supAxis]=elbowLevel(side);return {point:c,kind:'constructed-cubital-crease'};}
+  }
+  if(/palmar wrist crease|dorsal wrist crease/.test(q)){
+    const c=regionalGeometrySeed('wrist',side);if(c){c[supAxis]=wristLevel(side);return {point:c,kind:'constructed-wrist-crease'};}
+  }
+  if(/popliteal crease/.test(q)){
+    const c=regionalGeometrySeed('knee',side);if(c){c[supAxis]=kneeLevel(side);c[apAxis]-=anteriorSign*extent[apAxis]*.06;return {point:c,kind:'constructed-popliteal-crease'};}
+  }
+  if(/suprasternal fossa/.test(q)){
+    const man=centerBounds(atlas.parts.filter(p=>/manubrium/i.test(p.name)));
+    if(man){const c=[...man.center];c[supAxis]=man.max[supAxis];c[lrAxis]=bodyCenter[lrAxis];return {point:c,kind:'constructed-suprasternal-fossa'};}
+  }
+  if(/biceps brachii tendon/.test(q)){
+    const a=statsSeed('FMA37682',side),b=statsSeed('FMA37683',side),c=averageCenters([a,b]);
+    if(c){c[supAxis]=Math.min(a?.min[supAxis]??c[supAxis],b?.min[supAxis]??c[supAxis]);return {point:c,kind:'derived-biceps-distal-tendon'};}
+  }
+  if(/medial malleolus/.test(q)){
+    const st=statsSeed('FMA24476',side);if(st){const c=[...st.center];c[supAxis]=st.min[supAxis];c[lrAxis]=ss*leftSign>0?st.min[lrAxis]:st.max[lrAxis];return {point:c,kind:'derived-medial-malleolus'};}
+  }
+  if(/lateral malleolus/.test(q)){
+    const st=statsSeed('FMA24479',side);if(st){const c=[...st.center];c[supAxis]=st.min[supAxis];c[lrAxis]=ss*leftSign>0?st.max[lrAxis]:st.min[lrAxis];return {point:c,kind:'derived-lateral-malleolus'};}
+  }
+  if(/mastoid process/.test(q)){
+    const st=centerBounds(atlas.parts.filter(p=>new RegExp(side==='left'?'left sternocleidomastoid':'right sternocleidomastoid','i').test(p.name)));
+    if(st){const c=[...st.center];c[supAxis]=st.max[supAxis];c[lrAxis]=ss*leftSign>0?st.max[lrAxis]:st.min[lrAxis];return {point:c,kind:'scm-mastoid-insertion-proxy'};}
+  }
+  if(/anterior hairline/.test(q)){const c=regionTarget('head',side);c[supAxis]=anteriorHairlineLevel;return {point:c,kind:'hair-mesh-boundary'};}
+  if(/umbilicus/.test(q)){const c=regionTarget('anterior abdomen',side);c[supAxis]=navelLevel;c[lrAxis]=bodyCenter[lrAxis];return {point:c,kind:'proportional-umbilicus'};}
+  if(/anterior median line/.test(q)){const c=regionTarget('anterior abdomen',side);c[lrAxis]=bodyCenter[lrAxis];return {point:c,kind:'anterior-median-line'};}
+  if(/pupil/.test(q)){const st=pupilAnchor(side);if(st)return {point:[...st],kind:'eyeball-anterior-chamber-proxy'};}
+  if(/navicular bone/.test(q)){const st=statsSeed('FMA24499',side);if(st)return {point:[...st.center],kind:'fma-navicular'};}
+  return null;
+}
+function resolveSemanticNode(nodeId,side){
+  const node=semanticNodeById.get(nodeId);if(!node)return null;
+  if(node.cross_reference_point_id)return {xref:node.cross_reference_point_id,kind:'reference-acupoint'};
+  if(node.fma_id){
+    const st=statsSeed(node.fma_id,side);
+    if(st)return {point:[...st.center],stats:st,kind:'fma',fmaId:node.fma_id};
+  }
+  return specializedLandmark(node.source_raw,side);
+}
+function contextCun(text,side){
+  if(/forearm|아래팔|wrist|손목/i.test(text))return forearmCun(side);
+  if(/leg|아래다리|종아리|정강|ankle|발목/i.test(text))return legCun(side);
+  return trunkCun;
+}
+function executeSemanticRelations(base,point,side){
+  const target=[...base],graphRelations=semanticRelationsByPoint.get(point.id)??[];
+  const measurements=semanticMeasurementsByPoint.get(point.id)??[];
+  const executed=[],unresolved=[];
+  for(const r of graphRelations){
+    const resolved=(r.argument_node_ids??[]).map(id=>({id,value:resolveSemanticNode(id,side)}));
+    const usable=resolved.filter(x=>x.value?.point);
+    const cue=String(r.cue_span?.source_raw||'').toLowerCase();
+    if((r.relation_type==='between'||r.relation_type==='midpoint-between')&&usable.length>=2){
+      for(let k=0;k<3;k++)target[k]=(usable[0].value.point[k]+usable[1].value.point[k])/2;
+      executed.push(r.relation_id);continue;
+    }
+    if((r.relation_type==='center-of'||r.relation_type==='midpoint-of-entity')&&usable.length>=1){
+      for(let k=0;k<3;k++)target[k]=usable[0].value.point[k];
+      executed.push(r.relation_id);continue;
+    }
+    if(r.relation_type==='same-level'&&usable.length>=1){
+      target[supAxis]=usable[0].value.point[supAxis];executed.push(r.relation_id);continue;
+    }
+    if(r.relation_type==='overlies'&&usable.length>=1){
+      target[lrAxis]=usable[0].value.point[lrAxis];target[supAxis]=usable[0].value.point[supAxis];executed.push(r.relation_id);continue;
+    }
+    if(r.relation_type==='relative-to'&&usable.length>=1){
+      const a=usable[0],p=a.value.point,measure=measurements.find(m=>m.anchor_landmark_id===a.id);
+      const amount=measure?.value?Number(measure.value)*contextCun(point.locationKo||'',side):Math.max(bodyDiag*.006,(a.value.stats?.diag||0)*.12);
+      if(measure?.direction==='lateral'||/lateral to/.test(cue)){target[lrAxis]=p[lrAxis]+(side==='left'?leftSign:-leftSign)*amount;executed.push(r.relation_id);continue;}
+      if(measure?.direction==='superior'||/superior to|proximal to/.test(cue)){target[supAxis]=p[supAxis]+amount;executed.push(r.relation_id);continue;}
+      if(measure?.direction==='inferior'||/inferior to|distal to/.test(cue)){target[supAxis]=p[supAxis]-amount;executed.push(r.relation_id);continue;}
+      if(measure?.direction==='anterior'||/anterior to/.test(cue)){target[apAxis]=p[apAxis]+anteriorSign*amount;executed.push(r.relation_id);continue;}
+      if(measure?.direction==='posterior'||/posterior to/.test(cue)){target[apAxis]=p[apAxis]-anteriorSign*amount;executed.push(r.relation_id);continue;}
+      if(/medial to/.test(cue)){target[lrAxis]=p[lrAxis]-(side==='left'?leftSign:-leftSign)*amount;executed.push(r.relation_id);continue;}
+    }
+    if(r.relation_type==='surface-landmark')continue;
+    if(r.relation_type==='reference-acupoint'||r.relation_type==='on-line'||r.relation_type==='fraction-along-line')continue;
+    unresolved.push(r.relation_id);
+  }
+  return {target,executed:[...new Set(executed)],unresolved:[...new Set(unresolved)]};
+}
+
 function relationTarget(point, side){
   const rels=relByPoint.get(point.id)||[]; const text=point.locationKo||''; let rt=regionTarget(text,side);
   let acc=[0,0,0], wsum=0, specific=0, textLandmarkCount=0, broadAcc=[0,0,0], broadN=0, vertebralSup=[];
@@ -844,18 +933,19 @@ function relationTarget(point, side){
   }
   const blended=wsum ? (()=>{const g=acc.map(v=>v/wsum),alpha=specific>=2?.82:.68;return g.map((v,i)=>v*alpha+rt[i]*(1-alpha));})() : rt;
   if(vertebralSup.length) blended[supAxis]=vertebralSup.reduce((a,b)=>a+b,0)/vertebralSup.length;
-  const who=applyWhoConstraints(blended,text,side);
+  const semanticExecution=executeSemanticRelations(blended,point,side);
+  const who=applyWhoConstraints(semanticExecution.target,text,side);
   const graphRelations=semanticRelationsByPoint.get(point.id) ?? [];
   const graphMeasurements=semanticMeasurementsByPoint.get(point.id) ?? [];
-  const nativeRelationIds=[...new Set(rels.map(r=>r.semanticRelationId).filter(Boolean))];
   return {
     target:who.target,
     specific,
     rels:graphRelations.length,
     whoConstraints:who.count,
     textLandmarkCount,
-    nativeRelationIds,
-    nativeOperationCount:nativeRelationIds.length,
+    nativeRelationIds:semanticExecution.executed,
+    nativeOperationCount:semanticExecution.executed.length,
+    unresolvedSemanticRelationIds:semanticExecution.unresolved,
     semanticMeasurementCount:graphMeasurements.length
   };
 }
@@ -864,7 +954,7 @@ const results=[];
 for(const p of acupoints){
   const sides=p.laterality==='midline'?['midline']:['left','right'];
   for(const side of sides){
-    const {target,specific,rels,whoConstraints,textLandmarkCount,nativeRelationIds,nativeOperationCount,semanticMeasurementCount}=relationTarget(p,side);
+    const {target,specific,rels,whoConstraints,textLandmarkCount,nativeRelationIds,nativeOperationCount,unresolvedSemanticRelationIds,semanticMeasurementCount}=relationTarget(p,side);
     if(side==='left' && Math.sign((target[lrAxis]-bodyCenter[lrAxis])||0)!==leftSign) target[lrAxis]=bodyCenter[lrAxis]+leftSign*Math.abs(target[lrAxis]-bodyCenter[lrAxis]);
     if(side==='right' && Math.sign((target[lrAxis]-bodyCenter[lrAxis])||0)!==-leftSign) target[lrAxis]=bodyCenter[lrAxis]-leftSign*Math.abs(target[lrAxis]-bodyCenter[lrAxis]);
     if(side==='midline') target[lrAxis]=bodyCenter[lrAxis];
@@ -884,7 +974,7 @@ for(const p of acupoints){
     results.push({
       acupointId:p.id,side,position:projected.point.map(v=>+v.toFixed(4)),model:'BodyParts3D-4.0',status:'validated',
       method:'WHO+B-v2.1-native-landmarks+laterality+surface-projection',confidence,
-      validation:{surfaceProjected:surfaceOk,lateralityConsistent:sideOk,projectionDistance:+projected.distance.toFixed(4),projectionDelta:projected.point.map((v,i)=>+(v-target[i]).toFixed(4)),regionConstrained:true,surfacePartId:projected.part,preProjectionTarget:target.map(v=>+v.toFixed(4)),relationCount:rels,specificLandmarkCount:specific,whoConstraintCount:whoConstraints,whoTextLandmarkCount:textLandmarkCount,semanticGraphVersion:semanticGraph.schema_version,nativeOperationCount,nativeRelationIds,semanticMeasurementCount},
+      validation:{surfaceProjected:surfaceOk,lateralityConsistent:sideOk,projectionDistance:+projected.distance.toFixed(4),projectionDelta:projected.point.map((v,i)=>+(v-target[i]).toFixed(4)),regionConstrained:true,surfacePartId:projected.part,preProjectionTarget:target.map(v=>+v.toFixed(4)),relationCount:rels,specificLandmarkCount:specific,whoConstraintCount:whoConstraints,whoTextLandmarkCount:textLandmarkCount,semanticGraphVersion:semanticGraph.schema_version,nativeOperationCount,nativeRelationIds,unresolvedSemanticRelationIds,semanticMeasurementCount},
       sourceIds:['WHO_ACUPOINT_2008','BODY_PARTS_3D_4','TARA_ACUPOINT_CURATED']
     });
   }
