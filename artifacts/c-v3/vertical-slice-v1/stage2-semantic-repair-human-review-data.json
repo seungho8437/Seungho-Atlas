@@ -3,7 +3,7 @@
   "artifact": "c-v3-stage2-semantic-repair-human-review-data",
   "human_review_disposition": "PENDING",
   "before_sha256": "d70c437a536d21765a91693fd8e292b47cb3f157f89b503b135e52b974b74d86",
-  "after_sha256": "fd666c447106cb4e1ea55cdb18f0d96714b43b5de16d62dc41010cf0102979dc",
+  "after_sha256": "4b33764765c0889ce557f535fa64166bc0c62ace7ada4cf4a09c84705b854448",
   "validation_status": "PASS",
   "stage3": "NOT_STARTED",
   "points": [
@@ -123,7 +123,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "no approved executable construction rule for subfeature 'superior border'"
+          "reason": "no approved executable construction rule for canonical subfeature 'superior_border'"
         },
         {
           "node_id": "LM:S:LI18:location:7-22",
@@ -695,7 +695,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "no approved executable construction rule for subfeature 'border'"
+          "reason": "no approved executable construction rule for canonical subfeature 'border'"
         },
         {
           "node_id": "LM:S:ST10:location:111-142",
@@ -1277,7 +1277,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "no approved executable construction rule for subfeature 'border'"
+          "reason": "no approved executable construction rule for canonical subfeature 'border'"
         },
         {
           "node_id": "LM:S:LI17:location:112-143",
@@ -2367,7 +2367,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "no approved executable construction rule for subfeature 'inferior border'"
+          "reason": "no approved executable construction rule for canonical subfeature 'inferior_border'"
         },
         {
           "node_id": "LM:S:BL17:location:7-24",
@@ -2400,11 +2400,11 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
-          "executor": "fma_mesh",
-          "status": "RESOLVED",
+          "executor": "bound_composite_subfeature",
+          "status": "UNRESOLVED",
           "identity": {
-            "kind": "fma_concept",
-            "fma_id": "FMA9968",
+            "kind": null,
+            "fma_id": null,
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -2417,7 +2417,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": null
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:BL17:note:1:64-116",
@@ -2425,11 +2425,11 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
-          "executor": "fma_mesh",
-          "status": "RESOLVED",
+          "executor": "bound_composite_subfeature",
+          "status": "UNRESOLVED",
           "identity": {
-            "kind": "fma_concept",
-            "fma_id": "FMA9968",
+            "kind": null,
+            "fma_id": null,
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -2442,7 +2442,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": null
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:BL17:note:1:75-83",
@@ -2467,7 +2467,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "child subfeature type not recognized"
+          "reason": "no approved executable construction rule for canonical subfeature 'process'"
         },
         {
           "node_id": "LM:S:BL17:note:1:87-116",
@@ -2499,10 +2499,10 @@
         {
           "parent_node_id": "LM:S:BL17:location:70-127",
           "parent_source_raw": "the spinous process of the seventh thoracic vertebra (T7)",
-          "parent_status": "RESOLVED",
+          "parent_status": "UNRESOLVED",
           "parent_semantic_identity": {
-            "kind": "fma_concept",
-            "fma_id": "FMA9968",
+            "kind": null,
+            "fma_id": null,
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -2675,7 +2675,7 @@
             "LM:S:BL17:note:1:64-116"
           ],
           "actual_executable_operand_ids": [
-            "LM:S:BL17:note:1:64-116"
+            "LM:S:BL17:note:1:75-83"
           ],
           "direction": null,
           "branch_id": null,
@@ -2684,8 +2684,8 @@
           "quantitative_constraints": [],
           "statement_measurement_ids": [],
           "semantic_fields_hash": "31a6d961162176ebafd9aa3c27d47efedeec7a2953c1f917973bc0d9b90b2f85",
-          "status": "RESOLVED",
-          "reason": null
+          "status": "UNRESOLVED",
+          "reason": "executable operand not uniquely executable"
         }
       ],
       "measurements": [
@@ -2747,6 +2747,11 @@
         },
         {
           "from": "LM:S:BL17:note:1:64-116",
+          "to": "LM:S:BL17:note:1:75-83",
+          "kind": "semantic_to_executable"
+        },
+        {
+          "from": "LM:S:BL17:note:1:75-83",
           "to": "RL:S:BL17:note:1:00:same-level",
           "kind": "executable_to_relation"
         },
@@ -2843,6 +2848,78 @@
               "concept_id": null,
               "reference_point_id": null,
               "parent_landmark_id": "LM:S:BL17:location:70-127",
+              "subfeature_type": null,
+              "construction_rule": null,
+              "producer_relation_id": null,
+              "derived_geometry_id": null
+            },
+            "after_status": "UNRESOLVED",
+            "after_identity": {
+              "kind": null,
+              "fma_id": null,
+              "registry_id": null,
+              "constructed_id": null,
+              "geometry_hash": null,
+              "part_id": null,
+              "concept_id": null,
+              "reference_point_id": null,
+              "parent_landmark_id": null,
+              "subfeature_type": null,
+              "construction_rule": null,
+              "producer_relation_id": null,
+              "derived_geometry_id": null
+            }
+          },
+          {
+            "node_id": "LM:S:BL17:location:70-127",
+            "source_raw": "the spinous process of the seventh thoracic vertebra (T7)",
+            "before_status": "RESOLVED",
+            "before_identity": {
+              "kind": "fma_concept",
+              "fma_id": "FMA9968",
+              "registry_id": null,
+              "constructed_id": null,
+              "geometry_hash": null,
+              "part_id": null,
+              "concept_id": null,
+              "reference_point_id": null,
+              "parent_landmark_id": null,
+              "subfeature_type": null,
+              "construction_rule": null,
+              "producer_relation_id": null,
+              "derived_geometry_id": null
+            },
+            "after_status": "UNRESOLVED",
+            "after_identity": {
+              "kind": null,
+              "fma_id": null,
+              "registry_id": null,
+              "constructed_id": null,
+              "geometry_hash": null,
+              "part_id": null,
+              "concept_id": null,
+              "reference_point_id": null,
+              "parent_landmark_id": null,
+              "subfeature_type": null,
+              "construction_rule": null,
+              "producer_relation_id": null,
+              "derived_geometry_id": null
+            }
+          },
+          {
+            "node_id": "LM:S:BL17:note:1:64-116",
+            "source_raw": "the spinous process of the seventh thoracic vertebra",
+            "before_status": "RESOLVED",
+            "before_identity": {
+              "kind": "fma_concept",
+              "fma_id": "FMA9968",
+              "registry_id": null,
+              "constructed_id": null,
+              "geometry_hash": null,
+              "part_id": null,
+              "concept_id": null,
+              "reference_point_id": null,
+              "parent_landmark_id": null,
               "subfeature_type": null,
               "construction_rule": null,
               "producer_relation_id": null,
@@ -3143,33 +3220,9 @@
               }
             },
             "after": {
-              "status": "RESOLVED",
+              "status": "UNRESOLVED",
               "executor": "same_level_plane",
-              "constraint": {
-                "op": "same_level_plane",
-                "relation_type": "same-level",
-                "source_statement_id": "S:BL17:note:1",
-                "branch_id": null,
-                "semantic_argument_node_ids": [
-                  "LM:S:BL17:note:1:64-116"
-                ],
-                "bound_measurement_ids": [],
-                "quantitative_constraints": [],
-                "statement_measurement_ids": [],
-                "argument_node_ids": [
-                  "LM:S:BL17:note:1:64-116"
-                ],
-                "executable_argument_node_ids": [
-                  "LM:S:BL17:note:1:64-116"
-                ],
-                "operand_binding_trace": [
-                  {
-                    "semantic_operand_id": "LM:S:BL17:note:1:64-116",
-                    "executable_operand_id": "LM:S:BL17:note:1:64-116",
-                    "binding": "identity"
-                  }
-                ]
-              },
+              "reason": "executable operand not uniquely executable",
               "semantic_fields": {
                 "op": "same_level_plane",
                 "relation_type": "same-level",
@@ -3186,13 +3239,13 @@
                 "LM:S:BL17:note:1:64-116"
               ],
               "executable_argument_node_ids": [
-                "LM:S:BL17:note:1:64-116"
+                "LM:S:BL17:note:1:75-83"
               ],
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:BL17:note:1:64-116",
-                  "executable_operand_id": "LM:S:BL17:note:1:64-116",
-                  "binding": "identity"
+                  "executable_operand_id": "LM:S:BL17:note:1:75-83",
+                  "binding": "child_subfeature"
                 }
               ],
               "semantic_fields_hash": "31a6d961162176ebafd9aa3c27d47efedeec7a2953c1f917973bc0d9b90b2f85"
@@ -3294,7 +3347,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "no approved executable construction rule for subfeature 'inferior border'"
+          "reason": "no approved executable construction rule for canonical subfeature 'inferior_border'"
         },
         {
           "node_id": "LM:S:BL23:location:66-120",
@@ -3302,11 +3355,11 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
-          "executor": "fma_mesh",
-          "status": "RESOLVED",
+          "executor": "bound_composite_subfeature",
+          "status": "UNRESOLVED",
           "identity": {
-            "kind": "fma_concept",
-            "fma_id": "FMA13073",
+            "kind": null,
+            "fma_id": null,
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -3319,7 +3372,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": null
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:BL23:location:7-20",
@@ -3351,10 +3404,10 @@
         {
           "parent_node_id": "LM:S:BL23:location:66-120",
           "parent_source_raw": "the spinous process of the second lumbar vertebra (L2)",
-          "parent_status": "RESOLVED",
+          "parent_status": "UNRESOLVED",
           "parent_semantic_identity": {
-            "kind": "fma_concept",
-            "fma_id": "FMA13073",
+            "kind": null,
+            "fma_id": null,
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -3610,6 +3663,42 @@
               "concept_id": null,
               "reference_point_id": null,
               "parent_landmark_id": "LM:S:BL23:location:66-120",
+              "subfeature_type": null,
+              "construction_rule": null,
+              "producer_relation_id": null,
+              "derived_geometry_id": null
+            },
+            "after_status": "UNRESOLVED",
+            "after_identity": {
+              "kind": null,
+              "fma_id": null,
+              "registry_id": null,
+              "constructed_id": null,
+              "geometry_hash": null,
+              "part_id": null,
+              "concept_id": null,
+              "reference_point_id": null,
+              "parent_landmark_id": null,
+              "subfeature_type": null,
+              "construction_rule": null,
+              "producer_relation_id": null,
+              "derived_geometry_id": null
+            }
+          },
+          {
+            "node_id": "LM:S:BL23:location:66-120",
+            "source_raw": "the spinous process of the second lumbar vertebra (L2)",
+            "before_status": "RESOLVED",
+            "before_identity": {
+              "kind": "fma_concept",
+              "fma_id": "FMA13073",
+              "registry_id": null,
+              "constructed_id": null,
+              "geometry_hash": null,
+              "part_id": null,
+              "concept_id": null,
+              "reference_point_id": null,
+              "parent_landmark_id": null,
               "subfeature_type": null,
               "construction_rule": null,
               "producer_relation_id": null,
@@ -3955,7 +4044,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "no approved executable construction rule for subfeature 'inferior border'"
+          "reason": "no approved executable construction rule for canonical subfeature 'inferior_border'"
         },
         {
           "node_id": "LM:S:BL25:location:66-120",
@@ -3963,11 +4052,11 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
-          "executor": "fma_mesh",
-          "status": "RESOLVED",
+          "executor": "bound_composite_subfeature",
+          "status": "UNRESOLVED",
           "identity": {
-            "kind": "fma_concept",
-            "fma_id": "FMA13075",
+            "kind": null,
+            "fma_id": null,
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -3980,7 +4069,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": null
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:BL25:location:7-20",
@@ -4012,10 +4101,10 @@
         {
           "parent_node_id": "LM:S:BL25:location:66-120",
           "parent_source_raw": "the spinous process of the fourth lumbar vertebra (L4)",
-          "parent_status": "RESOLVED",
+          "parent_status": "UNRESOLVED",
           "parent_semantic_identity": {
-            "kind": "fma_concept",
-            "fma_id": "FMA13075",
+            "kind": null,
+            "fma_id": null,
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -4271,6 +4360,42 @@
               "concept_id": null,
               "reference_point_id": null,
               "parent_landmark_id": "LM:S:BL25:location:66-120",
+              "subfeature_type": null,
+              "construction_rule": null,
+              "producer_relation_id": null,
+              "derived_geometry_id": null
+            },
+            "after_status": "UNRESOLVED",
+            "after_identity": {
+              "kind": null,
+              "fma_id": null,
+              "registry_id": null,
+              "constructed_id": null,
+              "geometry_hash": null,
+              "part_id": null,
+              "concept_id": null,
+              "reference_point_id": null,
+              "parent_landmark_id": null,
+              "subfeature_type": null,
+              "construction_rule": null,
+              "producer_relation_id": null,
+              "derived_geometry_id": null
+            }
+          },
+          {
+            "node_id": "LM:S:BL25:location:66-120",
+            "source_raw": "the spinous process of the fourth lumbar vertebra (L4)",
+            "before_status": "RESOLVED",
+            "before_identity": {
+              "kind": "fma_concept",
+              "fma_id": "FMA13075",
+              "registry_id": null,
+              "constructed_id": null,
+              "geometry_hash": null,
+              "part_id": null,
+              "concept_id": null,
+              "reference_point_id": null,
+              "parent_landmark_id": null,
               "subfeature_type": null,
               "construction_rule": null,
               "producer_relation_id": null,
@@ -4653,7 +4778,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "no approved executable construction rule for subfeature 'superior border'"
+          "reason": "no approved executable construction rule for canonical subfeature 'superior_border'"
         },
         {
           "node_id": "LM:S:ST9:location:7-34",
@@ -4853,7 +4978,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "no approved executable construction rule for subfeature 'superior border'"
+          "reason": "no approved executable construction rule for canonical subfeature 'superior_border'"
         },
         {
           "node_id": "LM:S:ST9:note:2:82-103",
@@ -13423,7 +13548,7 @@
           "semantic_class": "structure.part",
           "parent_entity": null,
           "child_subfeature": null,
-          "executor": "atlas_name_resolution",
+          "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
             "kind": null,
@@ -13440,7 +13565,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "no unique atlas name match"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:GB26:location:40-54",
@@ -13465,7 +13590,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "child subfeature type not recognized"
+          "reason": "no approved executable construction rule for canonical subfeature 'free_end'"
         },
         {
           "node_id": "LM:S:GB26:location:58-70",
@@ -13615,7 +13740,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "child subfeature type not recognized"
+          "reason": "parent entity is not uniquely resolved"
         },
         {
           "node_id": "LM:S:GB26:note:2:27-32",
@@ -13834,7 +13959,7 @@
             "LM:S:GB26:location:35-70"
           ],
           "actual_executable_operand_ids": [
-            "LM:S:GB26:location:35-70"
+            "LM:S:GB26:location:40-54"
           ],
           "direction": "inferior",
           "branch_id": null,
@@ -13982,6 +14107,11 @@
         },
         {
           "from": "LM:S:GB26:location:35-70",
+          "to": "LM:S:GB26:location:40-54",
+          "kind": "semantic_to_executable"
+        },
+        {
+          "from": "LM:S:GB26:location:40-54",
           "to": "RL:S:GB26:location:00:relative-to",
           "kind": "executable_to_relation"
         },
@@ -14093,6 +14223,42 @@
           "after": "UNRESOLVED"
         },
         "landmarks": [
+          {
+            "node_id": "LM:S:GB26:location:35-70",
+            "source_raw": " the free extremity of the 11th rib",
+            "before_status": "UNRESOLVED",
+            "before_identity": {
+              "kind": null,
+              "fma_id": null,
+              "registry_id": null,
+              "constructed_id": null,
+              "geometry_hash": null,
+              "part_id": null,
+              "concept_id": null,
+              "reference_point_id": null,
+              "parent_landmark_id": null,
+              "subfeature_type": null,
+              "construction_rule": null,
+              "producer_relation_id": null,
+              "derived_geometry_id": null
+            },
+            "after_status": "UNRESOLVED",
+            "after_identity": {
+              "kind": null,
+              "fma_id": null,
+              "registry_id": null,
+              "constructed_id": null,
+              "geometry_hash": null,
+              "part_id": null,
+              "concept_id": null,
+              "reference_point_id": null,
+              "parent_landmark_id": null,
+              "subfeature_type": null,
+              "construction_rule": null,
+              "producer_relation_id": null,
+              "derived_geometry_id": null
+            }
+          },
           {
             "node_id": "LM:S:GB26:location:40-54",
             "source_raw": "free extremity",
@@ -14348,13 +14514,13 @@
                 "LM:S:GB26:location:35-70"
               ],
               "executable_argument_node_ids": [
-                "LM:S:GB26:location:35-70"
+                "LM:S:GB26:location:40-54"
               ],
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:GB26:location:35-70",
-                  "executable_operand_id": "LM:S:GB26:location:35-70",
-                  "binding": "identity"
+                  "executable_operand_id": "LM:S:GB26:location:40-54",
+                  "binding": "child_subfeature"
                 }
               ],
               "semantic_fields_hash": "3cca02d971ab3af39c419f267949ebc29549b24e9dad210dcdf168fd53c88110"

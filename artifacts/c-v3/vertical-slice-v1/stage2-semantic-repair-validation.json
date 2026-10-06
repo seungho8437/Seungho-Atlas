@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "artifact": "c-v3-stage2-semantic-repair-validation",
   "status": "PASS",
-  "checks": 298,
+  "checks": 295,
   "errors": 0,
   "error_details": [],
   "coverage": {
