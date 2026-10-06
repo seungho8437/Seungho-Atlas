@@ -6,13 +6,13 @@ Final judgment: **B_V2_FREEZE_CANDIDATE**
 - Statements: 583
 - Exact semantic matches: 583/583
 - Remaining blocked/mismatched: 0
-- Landmark nodes: 2528
-- Relation instances: 885
-- Geometry nodes: 81
+- Landmark nodes: 2408
+- Relation instances: 1838
+- Geometry nodes: 104
 - Conditional branches: 115
-- Composite bindings: 210
+- Composite bindings: 332
 - Proportional measurements: 288
-- B-v2 source-backed derived landmarks: 72
+- B-v2 source-backed derived landmarks: 163
 
 ## Known defect repair
 - Repaired: 235/235
@@ -22,8 +22,8 @@ Final judgment: **B_V2_FREEZE_CANDIDATE**
 ## Mandatory regressions
 - CV1: PASS
 - CV12: PASS
-- GB26: PASS
 - ST35: PASS
+- GB26: PASS
 - ST29: PASS
 
 ## Negative validator tests
@@ -35,23 +35,26 @@ Final judgment: **B_V2_FREEZE_CANDIDATE**
 - S:ST18:note:1|replace_intersection_operand: PASS
 
 ## Upstream regression
+- 1A v1.0.5: UNCHANGED
+- Notes semantic-role v0.3: UNCHANGED
+- Location semantic target v0.1: UNCHANGED
+- Composite binding/decomposition v0.1: UNCHANGED
 - Location identity-resolution finalization v1: UNCHANGED
-- Notes anatomical identity mapping v1 (derived from frozen Notes semantic-role v0.3): UNCHANGED
-- Remarks adjudication v1 (1A-backed): UNCHANGED
+- FMA registry resolution policy v0.3.1: UNCHANGED
 
 - Orphan references: 0
 - Invalid FMA references: 0
-- Deterministic rebuild hash: `7c636f1fbadb1d367343b4ee7d5cf6a803e38b350cb72d739e8b4486fabef5f0`
+- Deterministic rebuild hash: `0b9aaf0d0ca29ebbc2a98a367e6fb7afdc513ae55e88fb0ed7600f4da8cbdae8`
 - Deterministic reproducibility: PASS
 
 ## v1 → v2 semantic diff
-- added_landmark: 1051
-- removed_landmark: 844
-- rebound_relation_argument: 355
+- added_landmark: 1344
+- removed_landmark: 1257
+- rebound_relation_argument: 381
 - changed_relation_type: 0
-- added_relation_semantics: 882
-- removed_relation_semantics: 2591
-- added_geometry: 0
-- removed_geometry: 16
+- added_relation_semantics: 1676
+- removed_relation_semantics: 2547
+- added_geometry: 7
+- removed_geometry: 0
 - added_conditional_branch: 115
-- composite_binding_change: 210
+- composite_binding_change: 332

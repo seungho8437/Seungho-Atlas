@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0.0",
+  "final_judgment": "B_V2_FREEZE_CANDIDATE",
+  "files": {
+    "B-v2-final-review.md": {
+      "sha256": "e2e2d7112673a82169395192ccc57ec24bfa97c8a7d8a22ff84ebcc3c407d86c",
+      "bytes": 455
+    },
+    "anatomy-acupoint-relations-v2.json": {
+      "sha256": "0a27c6c080479a87d7dcf84f1cb3a45633d20c09458e739ebfe084ce03dd9bda",
+      "bytes": 4234507
+    },
+    "b-semantic-integrity-defect-inventory-v1.json": {
+      "sha256": "2466816f7605ede7afd8c4681e64cf2b7af805302b2ffafc6a6cb854dc01642a",
+      "bytes": 371962
+    },
+    "b-semantic-integrity-regression-cases-v1.json": {
+      "sha256": "f8af1b284a7ce9751e0766c5cc1c2491f9bb1ca016d5d794bb8e6e39baf5402a",
+      "bytes": 15965
+    },
+    "b-semantic-integrity-statement-ledger-v1.json": {
+      "sha256": "ba4dab43579af1ffecd2a8936fbd775680a0f12ae90aff32850ec7c128a6e786",
+      "bytes": 1512603
+    },
+    "b-v2-compiled-source-spec.json": {
+      "sha256": "fc58f2db2aa29e1d1cc04392383984bf60f13d5bfa045715687fedcb18eb7778",
+      "bytes": 2070877
+    },
+    "b-v2-final-gate.json": {
+      "sha256": "46b1b18bc77b3f052dc7f52710faf2503fd614d449f28c77d6b4164502119c5f",
+      "bytes": 4334
+    },
+    "b-v2-known-defect-repair-verification.json": {
+      "sha256": "9e778750fb9bdd4c4e2d71dd38452ebeb5093ae2919b51434cf506e75e43fbb4",
+      "bytes": 145934
+    },
+    "b-v2-manifest.json": {
+      "sha256": "7218c27c52ea471a913e2865d2d925063ca9a739af116521abebe5629f48149f",
+      "bytes": 1832
+    },
+    "b-v2-negative-validator-tests.json": {
+      "sha256": "0dbf81acb19bbf0fbf9aa74350f72289bfc6f2121747c5983e5e2614a6128c47",
+      "bytes": 4364
+    },
+    "b-v2-rebuild-report.md": {
+      "sha256": "1858deccea815eca9431a98c284ae257930756c667e5908a04d61f6911b34c13",
+      "bytes": 1692
+    },
+    "b-v2-reproducibility.json": {
+      "sha256": "1a63344f88447047c3d672317529acfd2294a7507336e3315059e0158c9e0658",
+      "bytes": 1370
+    },
+    "b-v2-review-summary.json": {
+      "sha256": "59bb42252b60361fbb4423c58bfed89eb1120a39a3591ec6feb5f9492ff54097",
+      "bytes": 2691
+    },
+    "b-v2-semantic-diff-v1.json": {
+      "sha256": "18018096d1cec1f8666c3aed47528473c68797b682f25989789932eb3aff223f",
+      "bytes": 382
+    },
+    "b-v2-source-semantics.py": {
+      "sha256": "5c9a01deba074e2c4a2a5138b4521afed532cd506614bb31d98c4edbf4883406",
+      "bytes": 14932
+    },
+    "b-v2-upstream-regression.json": {
+      "sha256": "5489bb269360bb789ea6052f403a0608749e648a98775351188bdcdc01b7158b",
+      "bytes": 1434
+    },
+    "b-v2-validator-results.json": {
+      "sha256": "df098d6403b9a907440692a341a6cf1a038a7b49d27d4cc8da30bbdacd20368d",
+      "bytes": 296790
+    },
+    "build-anatomy-acupoint-relations-v2.py": {
+      "sha256": "87c82b2329804e82edc60594db5b1494ca6b4df3de3a955106cdae95026ff572",
+      "bytes": 84296
+    }
+  },
+  "graph_sha256": "0a27c6c080479a87d7dcf84f1cb3a45633d20c09458e739ebfe084ce03dd9bda",
+  "builder_sha256": "87c82b2329804e82edc60594db5b1494ca6b4df3de3a955106cdae95026ff572",
+  "source_parser_sha256": "5c9a01deba074e2c4a2a5138b4521afed532cd506614bb31d98c4edbf4883406"
+}

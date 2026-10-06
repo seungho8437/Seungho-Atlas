@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0.0",
+  "final_judgment": "B_V2_FREEZE_CANDIDATE",
+  "content_manifest_sha256": "20b2af4c49206b7d1aa0da133fb1c8f7d07d2e0f017de675487fd3a55c6c6dd7",
+  "zip_integrity_sha256": "d0fde8e4daf7ac32bf0f4180d3a801772c0799b14caa90ee20c8b678f9df6d19",
+  "review_zip_sha256": "1e630d2ad4bf7df5965aa2b04659376af3745dd7ac0b6f15285f3a4d15a101bc",
+  "integrity_PASS": true,
+  "hard_gate_PASS": true
+}

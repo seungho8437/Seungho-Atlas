@@ -3,48 +3,48 @@
   "final_judgment": "B_V2_FREEZE_CANDIDATE",
   "files": {
     "anatomy-acupoint-relations-v2.json": {
-      "sha256": "50cebfd51e9a697bfb07226748e42a964604fc173facc14bbadafeaf382385ed",
-      "bytes": 3322184
+      "sha256": "0a27c6c080479a87d7dcf84f1cb3a45633d20c09458e739ebfe084ce03dd9bda",
+      "bytes": 4234507
     },
     "b-v2-compiled-source-spec.json": {
-      "sha256": "a7fb9162af9bb9d3d730b9246499c631a0366ceee8926855738dea0bd2008ec5",
-      "bytes": 1318343
+      "sha256": "fc58f2db2aa29e1d1cc04392383984bf60f13d5bfa045715687fedcb18eb7778",
+      "bytes": 2070877
     },
     "b-v2-known-defect-repair-verification.json": {
-      "sha256": "76368ab0d0a40ae9c9e8b0a782208c8900d34264de1502bb44bd42e27d2639d6",
-      "bytes": 138372
+      "sha256": "9e778750fb9bdd4c4e2d71dd38452ebeb5093ae2919b51434cf506e75e43fbb4",
+      "bytes": 145934
     },
     "b-v2-negative-validator-tests.json": {
       "sha256": "0dbf81acb19bbf0fbf9aa74350f72289bfc6f2121747c5983e5e2614a6128c47",
       "bytes": 4364
     },
     "b-v2-rebuild-report.md": {
-      "sha256": "2512a40b13612e30194fc2b11322785dc75ef079af08026c0c5ebbb6bb6767f1",
-      "bytes": 1629
+      "sha256": "1858deccea815eca9431a98c284ae257930756c667e5908a04d61f6911b34c13",
+      "bytes": 1692
     },
     "b-v2-review-summary.json": {
-      "sha256": "4f3cee459642b4cd6773e2f50c66c8f76131f003fc0a33511763cde4918c1ba9",
-      "bytes": 2131
+      "sha256": "59bb42252b60361fbb4423c58bfed89eb1120a39a3591ec6feb5f9492ff54097",
+      "bytes": 2691
     },
     "b-v2-semantic-diff-v1.json": {
-      "sha256": "b4f0de46fa758b9aefcbca33b2e6745c314bb3100cd301a88f267df301cea759",
-      "bytes": 381
+      "sha256": "18018096d1cec1f8666c3aed47528473c68797b682f25989789932eb3aff223f",
+      "bytes": 382
     },
     "b-v2-upstream-regression.json": {
-      "sha256": "1ef1a24ccbec1b67a6ea578a6988b57f536388709edd6f1486bace58e5bae12c",
-      "bytes": 1108
+      "sha256": "5489bb269360bb789ea6052f403a0608749e648a98775351188bdcdc01b7158b",
+      "bytes": 1434
     },
     "b-v2-validator-results.json": {
-      "sha256": "d534c36877be32b36562ca49d02c47937fd26b02c9b49cdd41bf8efc226db318",
-      "bytes": 296196
+      "sha256": "df098d6403b9a907440692a341a6cf1a038a7b49d27d4cc8da30bbdacd20368d",
+      "bytes": 296790
     }
   },
-  "graph_sha256": "50cebfd51e9a697bfb07226748e42a964604fc173facc14bbadafeaf382385ed",
-  "deterministic_canonical_hash": "7c636f1fbadb1d367343b4ee7d5cf6a803e38b350cb72d739e8b4486fabef5f0",
+  "graph_sha256": "0a27c6c080479a87d7dcf84f1cb3a45633d20c09458e739ebfe084ce03dd9bda",
+  "deterministic_canonical_hash": "0b9aaf0d0ca29ebbc2a98a367e6fb7afdc513ae55e88fb0ed7600f4da8cbdae8",
   "zip": {
     "path": "b-v2-review-bundle.zip",
-    "sha256": "f67fa5f9a56bc93efabec4534366cff850240d551bf337efd911ca22123a8344",
-    "bytes": 275001,
+    "sha256": "20eff5ccebe2bc759ce4f5a9be96683b9de3061d44b330d38a97f2bb8ae51bf5",
+    "bytes": 376219,
     "integrity_PASS": true
   }
 }

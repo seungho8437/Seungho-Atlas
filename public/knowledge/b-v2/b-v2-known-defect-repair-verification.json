@@ -8,11 +8,12 @@
       "v1_defect_class": "SOURCE_LANDMARK_EXTRACTION_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:LU3:note:1:122-138",
         "LM:S:LU3:note:1:139-148",
+        "LM:S:LU3:note:1:154-176",
         "LM:S:LU3:note:1:154-183",
         "RL:S:LU3:note:1:00:on-line",
-        "RL:S:LU3:note:1:01:fraction-along-line"
+        "RL:S:LU3:note:1:01:fraction-along-line",
+        "RL:S:LU3:note:1:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "B-v2 source-backed derived landmark node with upstream-absence provenance",
@@ -25,9 +26,9 @@
       "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:KI1:note:1:157-173",
         "LM:S:KI1:note:1:174-182",
         "LM:S:KI1:note:1:188-249",
+        "LM:S:KI1:note:1:215-234",
         "RL:S:KI1:note:1:00:on-line",
         "RL:S:KI1:note:1:01:between",
         "RL:S:KI1:note:1:02:surface-landmark"
@@ -43,9 +44,9 @@
       "v1_defect_class": "SOURCE_LANDMARK_EXTRACTION_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:KI1:note:1:157-173",
         "LM:S:KI1:note:1:174-182",
         "LM:S:KI1:note:1:188-249",
+        "LM:S:KI1:note:1:215-234",
         "RL:S:KI1:note:1:00:on-line",
         "RL:S:KI1:note:1:01:between",
         "RL:S:KI1:note:1:02:surface-landmark"
@@ -61,11 +62,12 @@
       "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:TE18:location:118-129",
         "LM:S:TE18:location:135-139",
         "LM:S:TE18:location:143-147",
+        "LM:S:TE18:location:20-26",
         "RL:S:TE18:location:00:on-line",
-        "RL:S:TE18:location:01:fraction-along-line"
+        "RL:S:TE18:location:01:fraction-along-line",
+        "RL:S:TE18:location:02:center-of"
       ],
       "repaired": true,
       "repair_mechanism": "source endpoint-complete geometry constructor",
@@ -80,9 +82,10 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:TE19:location:106-110",
         "LM:S:TE19:location:7-11",
-        "LM:S:TE19:location:81-92",
+        "LM:S:TE19:location:98-102",
         "RL:S:TE19:location:00:on-line",
-        "RL:S:TE19:location:01:fraction-along-line"
+        "RL:S:TE19:location:01:fraction-along-line",
+        "RL:S:TE19:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source endpoint-complete geometry constructor",
@@ -99,7 +102,8 @@
         "LM:S:GB4:location:108-111",
         "LM:S:GB4:location:7-11",
         "RL:S:GB4:location:00:on-line",
-        "RL:S:GB4:location:01:fraction-along-line"
+        "RL:S:GB4:location:01:fraction-along-line",
+        "RL:S:GB4:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source endpoint-complete geometry constructor",
@@ -112,11 +116,12 @@
       "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:GB5:location:36-47",
         "LM:S:GB5:location:53-56",
         "LM:S:GB5:location:60-63",
+        "LM:S:GB5:location:7-11",
         "RL:S:GB5:location:00:on-line",
-        "RL:S:GB5:location:01:midpoint-between"
+        "RL:S:GB5:location:01:midpoint-between",
+        "RL:S:GB5:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source endpoint-complete geometry constructor",
@@ -133,7 +138,8 @@
         "LM:S:GB6:location:108-111",
         "LM:S:GB6:location:7-11",
         "RL:S:GB6:location:00:on-line",
-        "RL:S:GB6:location:01:fraction-along-line"
+        "RL:S:GB6:location:01:fraction-along-line",
+        "RL:S:GB6:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source endpoint-complete geometry constructor",
@@ -146,9 +152,9 @@
       "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:GB10:location:120-131",
         "LM:S:GB10:location:137-140",
         "LM:S:GB10:location:144-148",
+        "LM:S:GB10:location:31-51",
         "RL:S:GB10:location:00:on-line",
         "RL:S:GB10:location:01:relative-to",
         "RL:S:GB10:location:02:fraction-along-line"
@@ -164,9 +170,9 @@
       "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:GB11:location:128-139",
         "LM:S:GB11:location:145-149",
         "LM:S:GB11:location:153-157",
+        "LM:S:GB11:location:38-58",
         "RL:S:GB11:location:00:on-line",
         "RL:S:GB11:location:01:relative-to",
         "RL:S:GB11:location:02:fraction-along-line"
@@ -184,7 +190,6 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:GB13:note:1:102-106",
         "LM:S:GB13:note:1:110-113",
-        "LM:S:GB13:note:1:85-96",
         "RL:S:GB13:note:1:00:on-line",
         "RL:S:GB13:note:1:01:fraction-along-line"
       ],
@@ -199,9 +204,9 @@
       "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:GB15:note:1:103-114",
         "LM:S:GB15:note:1:120-124",
         "LM:S:GB15:note:1:128-131",
+        "LM:S:GB15:note:1:54-78",
         "RL:S:GB15:note:1:00:on-line",
         "RL:S:GB15:note:1:01:midpoint-between",
         "RL:S:GB15:note:1:02:relative-to"
@@ -217,12 +222,12 @@
       "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:CV1:location:102-180",
-        "LM:S:CV1:location:131-169",
-        "LM:S:CV1:location:47-62",
-        "RL:S:CV1:location:00:on-line:male",
-        "RL:S:CV1:location:01:midpoint-between:male",
-        "RL:S:CV1:location:02:on-line:female"
+        "LM:S:CV1:location:102-113",
+        "LM:S:CV1:location:131-151",
+        "LM:S:CV1:location:155-169",
+        "RL:S:CV1:location:00:surface-landmark",
+        "RL:S:CV1:location:01:on-line:male",
+        "RL:S:CV1:location:02:midpoint-between:male"
       ],
       "repaired": true,
       "repair_mechanism": "source endpoint-complete geometry constructor",
@@ -235,11 +240,12 @@
       "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:CV12:note:1:45-60",
+        "LM:S:CV12:note:1:106-115",
         "LM:S:CV12:note:1:61-87",
         "LM:S:CV12:note:1:92-115",
         "RL:S:CV12:note:1:00:on-line",
-        "RL:S:CV12:note:1:01:midpoint-between"
+        "RL:S:CV12:note:1:01:midpoint-between",
+        "RL:S:CV12:note:1:02:center-of"
       ],
       "repaired": true,
       "repair_mechanism": "source endpoint-complete geometry constructor",
@@ -252,11 +258,12 @@
       "v1_defect_class": "SOURCE_LANDMARK_EXTRACTION_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:CV12:note:1:45-60",
+        "LM:S:CV12:note:1:106-115",
         "LM:S:CV12:note:1:61-87",
         "LM:S:CV12:note:1:92-115",
         "RL:S:CV12:note:1:00:on-line",
-        "RL:S:CV12:note:1:01:midpoint-between"
+        "RL:S:CV12:note:1:01:midpoint-between",
+        "RL:S:CV12:note:1:02:center-of"
       ],
       "repaired": true,
       "repair_mechanism": "B-v2 source-backed derived landmark node with upstream-absence provenance",
@@ -269,11 +276,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:LU5:location:30-35",
         "LM:S:LU5:location:44-58",
         "LM:S:LU5:location:67-77",
+        "LM:S:LU5:location:7-22",
         "RL:S:LU5:location:00:relative-to",
-        "RL:S:LU5:location:01:surface-landmark"
+        "RL:S:LU5:location:01:surface-landmark",
+        "RL:S:LU5:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -288,7 +296,7 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:LU9:location:107-117",
         "LM:S:LU9:location:126-162",
-        "LM:S:LU9:location:35-40",
+        "LM:S:LU9:location:54-76",
         "RL:S:LU9:location:00:between",
         "RL:S:LU9:location:01:relative-to",
         "RL:S:LU9:location:02:surface-landmark"
@@ -323,10 +331,11 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:LI5:location:135-145",
-        "LM:S:LI5:location:153-172",
-        "LM:S:LI5:location:36-41",
+        "LM:S:LI5:location:50-61",
+        "LM:S:LI5:location:7-28",
         "RL:S:LI5:location:00:relative-to",
-        "RL:S:LI5:location:01:surface-landmark"
+        "RL:S:LI5:location:01:surface-landmark",
+        "RL:S:LI5:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -342,7 +351,9 @@
         "LM:S:LI11:note:1:61-71",
         "LM:S:LI11:note:1:79-90",
         "LM:S:LI11:note:1:94-112",
-        "RL:S:LI11:note:1:00:surface-landmark"
+        "RL:S:LI11:note:1:00:surface-landmark",
+        "RL:S:LI11:note:1:01:surface-landmark",
+        "RL:S:LI11:note:1:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -356,10 +367,11 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:LI15:location:105-140",
+        "LM:S:LI15:location:109-125",
         "LM:S:LI15:location:133-140",
-        "LM:S:LI15:location:31-41",
         "RL:S:LI15:location:00:between",
-        "RL:S:LI15:location:01:surface-landmark"
+        "RL:S:LI15:location:01:surface-landmark",
+        "RL:S:LI15:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -374,9 +386,10 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:LI16:location:104-111",
         "LM:S:LI16:location:31-41",
-        "LM:S:LI16:location:54-82",
+        "LM:S:LI16:location:54-66",
         "RL:S:LI16:location:00:between",
-        "RL:S:LI16:location:01:surface-landmark"
+        "RL:S:LI16:location:01:surface-landmark",
+        "RL:S:LI16:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -390,6 +403,7 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:LI16:note:1:13-23",
+        "LM:S:LI16:note:1:32-80",
         "LM:S:LI16:note:1:56-80",
         "RL:S:LI16:note:1:00:between",
         "RL:S:LI16:note:1:01:relative-to",
@@ -408,7 +422,7 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:ST5:location:116-129",
         "LM:S:ST5:location:24-50",
-        "LM:S:ST5:location:42-50",
+        "LM:S:ST5:location:29-50",
         "RL:S:ST5:location:00:relative-to",
         "RL:S:ST5:location:01:relative-to",
         "RL:S:ST5:location:02:surface-landmark"
@@ -424,10 +438,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST6:note:1:152-160",
+        "LM:S:ST6:note:1:13-50",
+        "LM:S:ST6:note:1:134-224",
         "LM:S:ST6:note:1:172-182",
-        "LM:S:ST6:note:1:29-50",
-        "RL:S:ST6:note:1:00:surface-landmark"
+        "RL:S:ST6:note:1:00:surface-landmark",
+        "RL:S:ST6:note:1:01:surface-landmark",
+        "RL:S:ST6:note:1:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -444,7 +460,8 @@
         "LM:S:ST7:location:20-30",
         "LM:S:ST7:location:43-97",
         "RL:S:ST7:location:00:between",
-        "RL:S:ST7:location:01:surface-landmark"
+        "RL:S:ST7:location:01:surface-landmark",
+        "RL:S:ST7:location:02:midpoint-of-entity"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -476,9 +493,11 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:ST31:location:105-126",
-        "LM:S:ST31:location:132-148",
-        "LM:S:ST31:location:157-184",
-        "RL:S:ST31:location:00:surface-landmark"
+        "LM:S:ST31:location:128-148",
+        "LM:S:ST31:location:153-184",
+        "RL:S:ST31:location:00:surface-landmark",
+        "RL:S:ST31:location:01:surface-landmark",
+        "RL:S:ST31:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -491,9 +510,9 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST31:note:1:151-156",
-        "LM:S:ST31:note:1:160-181",
-        "LM:S:ST31:note:1:171-181",
+        "LM:S:ST31:note:1:257-267",
+        "LM:S:ST31:note:1:280-305",
+        "LM:S:ST31:note:1:310-350",
         "RL:S:ST31:note:1:00:between",
         "RL:S:ST31:note:1:01:relative-to",
         "RL:S:ST31:note:1:02:surface-landmark"
@@ -509,9 +528,9 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST31:note:1:151-156",
-        "LM:S:ST31:note:1:160-181",
-        "LM:S:ST31:note:1:171-181",
+        "LM:S:ST31:note:1:257-267",
+        "LM:S:ST31:note:1:280-305",
+        "LM:S:ST31:note:1:310-350",
         "RL:S:ST31:note:1:00:between",
         "RL:S:ST31:note:1:01:relative-to",
         "RL:S:ST31:note:1:02:surface-landmark"
@@ -527,11 +546,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST35:location:30-34",
         "LM:S:ST35:location:43-53",
         "LM:S:ST35:location:64-86",
+        "LM:S:ST35:location:7-22",
         "RL:S:ST35:location:00:relative-to",
-        "RL:S:ST35:location:01:surface-landmark"
+        "RL:S:ST35:location:01:surface-landmark",
+        "RL:S:ST35:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -546,8 +566,10 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:ST35:note:1:55-65",
         "LM:S:ST35:note:1:89-101",
+        "LM:S:ST35:note:1:90-101",
         "RL:S:ST35:note:1:00:relative-to",
-        "RL:S:ST35:note:1:01:surface-landmark"
+        "RL:S:ST35:note:1:01:surface-landmark",
+        "RL:S:ST35:note:1:02:relative-to"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -560,11 +582,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST41:location:122-157",
-        "LM:S:ST41:location:162-188",
-        "LM:S:ST41:location:30-35",
+        "LM:S:ST41:location:133-157:003a872a",
+        "LM:S:ST41:location:162-188:6feacc7a",
+        "LM:S:ST41:location:44-54",
         "RL:S:ST41:location:00:between",
-        "RL:S:ST41:location:01:surface-landmark"
+        "RL:S:ST41:location:01:surface-landmark",
+        "RL:S:ST41:location:02:center-of"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -578,8 +601,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:ST43:location:103-141",
-        "LM:S:ST43:location:21-25",
         "LM:S:ST43:location:39-72:156c28b5",
+        "LM:S:ST43:location:50-72",
         "RL:S:ST43:location:00:between",
         "RL:S:ST43:location:01:relative-to",
         "RL:S:ST43:location:02:surface-landmark"
@@ -617,7 +640,8 @@
         "LM:S:SP4:note:1:111-116",
         "LM:S:SP4:note:1:120-145",
         "RL:S:SP4:note:1:00:relative-to",
-        "RL:S:SP4:note:1:01:surface-landmark"
+        "RL:S:SP4:note:1:01:surface-landmark",
+        "RL:S:SP4:note:1:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -652,7 +676,8 @@
         "LM:S:HT7:note:1:33-75",
         "LM:S:HT7:note:1:38-54",
         "RL:S:HT7:note:1:00:relative-to",
-        "RL:S:HT7:note:1:01:surface-landmark"
+        "RL:S:HT7:note:1:01:surface-landmark",
+        "RL:S:HT7:note:1:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -666,8 +691,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:HT8:location:101-138",
-        "LM:S:HT8:location:19-23",
         "LM:S:HT8:location:32-42",
+        "LM:S:HT8:location:55-88:f036fedf",
         "RL:S:HT8:location:00:between",
         "RL:S:HT8:location:01:relative-to",
         "RL:S:HT8:location:02:surface-landmark"
@@ -720,10 +745,11 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:SI4:note:1:142-152",
+        "LM:S:SI4:note:1:161-176",
         "LM:S:SI4:note:1:32-35",
-        "LM:S:SI4:note:1:73-95",
         "RL:S:SI4:note:1:00:between",
-        "RL:S:SI4:note:1:01:surface-landmark"
+        "RL:S:SI4:note:1:01:surface-landmark",
+        "RL:S:SI4:note:1:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -736,11 +762,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:SI5:location:35-40",
         "LM:S:SI5:location:49-59",
         "LM:S:SI5:location:7-27",
+        "LM:S:SI5:location:72-87",
         "RL:S:SI5:location:00:between",
-        "RL:S:SI5:location:01:surface-landmark"
+        "RL:S:SI5:location:01:surface-landmark",
+        "RL:S:SI5:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -754,8 +781,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:SI6:location:120-144",
-        "LM:S:SI6:location:35-43",
         "LM:S:SI6:location:52-62",
+        "LM:S:SI6:location:7-27",
         "RL:S:SI6:location:00:relative-to",
         "RL:S:SI6:location:01:relative-to",
         "RL:S:SI6:location:02:surface-landmark"
@@ -771,11 +798,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:SI8:location:111-127",
-        "LM:S:SI8:location:35-40",
+        "LM:S:SI8:location:115-127",
         "LM:S:SI8:location:49-59",
+        "LM:S:SI8:location:7-27",
         "RL:S:SI8:location:00:between",
-        "RL:S:SI8:location:01:surface-landmark"
+        "RL:S:SI8:location:01:surface-landmark",
+        "RL:S:SI8:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -807,8 +835,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:SI11:location:114-154",
-        "LM:S:SI11:location:147-154",
-        "LM:S:SI11:location:160-193",
+        "LM:S:SI11:location:130-193",
+        "LM:S:SI11:location:134-154",
         "RL:S:SI11:location:00:on-line",
         "RL:S:SI11:location:01:between",
         "RL:S:SI11:location:02:surface-landmark"
@@ -828,7 +856,8 @@
         "LM:S:SI13:location:53-96",
         "LM:S:SI13:location:58-68",
         "RL:S:SI13:location:00:relative-to",
-        "RL:S:SI13:location:01:surface-landmark"
+        "RL:S:SI13:location:01:surface-landmark",
+        "RL:S:SI13:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -841,9 +870,9 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:SI18:location:109-112",
         "LM:S:SI18:location:24-43",
         "LM:S:SI18:location:52-62",
+        "LM:S:SI18:location:7-11",
         "RL:S:SI18:location:00:relative-to",
         "RL:S:SI18:location:01:relative-to",
         "RL:S:SI18:location:02:surface-landmark"
@@ -860,10 +889,11 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:SI19:location:119-135",
+        "LM:S:SI19:location:119-151",
         "LM:S:SI19:location:143-151",
-        "LM:S:SI19:location:20-30",
         "RL:S:SI19:location:00:between",
-        "RL:S:SI19:location:01:surface-landmark"
+        "RL:S:SI19:location:01:surface-landmark",
+        "RL:S:SI19:location:02:center-of"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -876,9 +906,9 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
+        "LM:S:SI19:note:1:101-111",
         "LM:S:SI19:note:1:121-125",
         "LM:S:SI19:note:1:130-133",
-        "LM:S:SI19:note:1:64-74",
         "RL:S:SI19:note:1:00:between",
         "RL:S:SI19:note:1:01:relative-to",
         "RL:S:SI19:note:1:02:surface-landmark"
@@ -895,10 +925,11 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:BL1:location:102-113",
-        "LM:S:BL1:location:117-126",
+        "LM:S:BL1:location:121-126",
         "LM:S:BL1:location:20-30",
         "RL:S:BL1:location:00:between",
-        "RL:S:BL1:location:01:surface-landmark"
+        "RL:S:BL1:location:01:surface-landmark",
+        "RL:S:BL1:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -911,11 +942,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:BL1:note:1:122-125",
-        "LM:S:BL1:note:1:15-18",
         "LM:S:BL1:note:1:53-63",
+        "LM:S:BL1:note:1:96-125",
+        "LM:S:BL1:note:1:97-125",
         "RL:S:BL1:note:1:00:relative-to",
-        "RL:S:BL1:note:1:01:surface-landmark"
+        "RL:S:BL1:note:1:01:surface-landmark",
+        "RL:S:BL1:note:1:02:relative-to"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -930,8 +962,10 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:BL2:location:20-30",
         "LM:S:BL2:location:38-48",
-        "LM:S:BL2:location:52-63",
-        "RL:S:BL2:location:00:surface-landmark"
+        "LM:S:BL2:location:38-63",
+        "RL:S:BL2:location:00:surface-landmark",
+        "RL:S:BL2:location:01:surface-landmark",
+        "RL:S:BL2:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -946,9 +980,10 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:BL10:location:147-157",
         "LM:S:BL10:location:168-189",
-        "LM:S:BL10:location:62-77",
+        "LM:S:BL10:location:58-138",
         "RL:S:BL10:location:00:relative-to",
-        "RL:S:BL10:location:01:surface-landmark"
+        "RL:S:BL10:location:01:surface-landmark",
+        "RL:S:BL10:location:02:same-level"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -961,10 +996,11 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:BL31:note:1:10-40",
         "LM:S:BL31:note:1:60-70",
         "LM:S:BL31:note:1:96-100",
-        "RL:S:BL31:note:1:00:surface-landmark"
+        "RL:S:BL31:note:1:00:surface-landmark",
+        "RL:S:BL31:note:1:01:superior-to",
+        "RL:S:BL31:note:1:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -977,9 +1013,9 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:BL32:note:1:10-41",
-        "LM:S:BL32:note:1:111-122",
+        "LM:S:BL32:note:1:127-176",
         "LM:S:BL32:note:1:138-146",
+        "LM:S:BL32:note:1:150-176",
         "RL:S:BL32:note:1:00:midpoint-between",
         "RL:S:BL32:note:1:01:between",
         "RL:S:BL32:note:1:02:surface-landmark"
@@ -996,10 +1032,11 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:BL60:location:113-133",
-        "LM:S:BL60:location:36-41",
         "LM:S:BL60:location:50-60",
+        "LM:S:BL60:location:7-28",
         "RL:S:BL60:location:00:between",
-        "RL:S:BL60:location:01:surface-landmark"
+        "RL:S:BL60:location:01:surface-landmark",
+        "RL:S:BL60:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1030,11 +1067,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
+        "LM:S:BL62:note:1:143-148",
         "LM:S:BL62:note:1:152-155",
         "LM:S:BL62:note:1:29-39",
-        "LM:S:BL62:note:1:49-94",
         "RL:S:BL62:note:1:00:relative-to",
-        "RL:S:BL62:note:1:01:surface-landmark"
+        "RL:S:BL62:note:1:01:surface-landmark",
+        "RL:S:BL62:note:1:02:cross-reference"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1047,9 +1085,9 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:BL63:location:118-140",
         "LM:S:BL63:location:149-159",
         "LM:S:BL63:location:171-187",
+        "LM:S:BL63:location:36-81",
         "RL:S:BL63:location:00:relative-to",
         "RL:S:BL63:location:01:relative-to",
         "RL:S:BL63:location:02:relative-to"
@@ -1101,10 +1139,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:KI1:location:19-23",
+        "LM:S:KI1:location:32-87",
         "LM:S:KI1:location:40-50",
         "LM:S:KI1:location:7-23",
-        "RL:S:KI1:location:00:surface-landmark"
+        "RL:S:KI1:location:00:surface-landmark",
+        "RL:S:KI1:location:01:surface-landmark",
+        "RL:S:KI1:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1117,9 +1157,9 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:KI1:note:1:157-173",
         "LM:S:KI1:note:1:174-182",
         "LM:S:KI1:note:1:188-249",
+        "LM:S:KI1:note:1:215-234",
         "RL:S:KI1:note:1:00:on-line",
         "RL:S:KI1:note:1:01:between",
         "RL:S:KI1:note:1:02:surface-landmark"
@@ -1136,10 +1176,11 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:KI3:location:111-131",
-        "LM:S:KI3:location:35-40",
         "LM:S:KI3:location:49-59",
+        "LM:S:KI3:location:7-27",
         "RL:S:KI3:location:00:between",
-        "RL:S:KI3:location:01:surface-landmark"
+        "RL:S:KI3:location:01:surface-landmark",
+        "RL:S:KI3:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1154,7 +1195,7 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:KI4:location:110-120",
         "LM:S:KI4:location:132-178",
-        "LM:S:KI4:location:162-178",
+        "LM:S:KI4:location:137-154",
         "RL:S:KI4:location:00:relative-to",
         "RL:S:KI4:location:01:relative-to",
         "RL:S:KI4:location:02:relative-to"
@@ -1170,9 +1211,9 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:KI5:location:28-32",
         "LM:S:KI5:location:53-57",
         "LM:S:KI5:location:66-76",
+        "LM:S:KI5:location:7-20",
         "RL:S:KI5:location:00:relative-to",
         "RL:S:KI5:location:01:relative-to",
         "RL:S:KI5:location:02:surface-landmark"
@@ -1190,7 +1231,7 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:KI6:location:101-111",
         "LM:S:KI6:location:123-144",
-        "LM:S:KI6:location:28-32",
+        "LM:S:KI6:location:53-92",
         "RL:S:KI6:location:00:relative-to",
         "RL:S:KI6:location:01:relative-to",
         "RL:S:KI6:location:02:surface-landmark"
@@ -1207,8 +1248,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:KI8:location:121-160",
-        "LM:S:KI8:location:28-31",
         "LM:S:KI8:location:40-50",
+        "LM:S:KI8:location:63-100",
         "RL:S:KI8:location:00:relative-to",
         "RL:S:KI8:location:01:relative-to",
         "RL:S:KI8:location:02:surface-landmark"
@@ -1224,11 +1265,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:PC3:location:30-35",
         "LM:S:PC3:location:44-58",
         "LM:S:PC3:location:67-77",
+        "LM:S:PC3:location:7-22",
         "RL:S:PC3:location:00:relative-to",
-        "RL:S:PC3:location:01:surface-landmark"
+        "RL:S:PC3:location:01:surface-landmark",
+        "RL:S:PC3:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1242,8 +1284,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:PC8:location:101-133",
-        "LM:S:PC8:location:19-23",
         "LM:S:PC8:location:32-42",
+        "LM:S:PC8:location:55-88:f036fedf",
         "RL:S:PC8:location:00:between",
         "RL:S:PC8:location:01:relative-to",
         "RL:S:PC8:location:02:surface-landmark"
@@ -1278,8 +1320,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:TE3:location:103-141",
-        "LM:S:TE3:location:21-25",
         "LM:S:TE3:location:39-72:156c28b5",
+        "LM:S:TE3:location:50-72",
         "RL:S:TE3:location:00:between",
         "RL:S:TE3:location:01:relative-to",
         "RL:S:TE3:location:02:surface-landmark"
@@ -1296,10 +1338,11 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:TE4:location:103-122",
-        "LM:S:TE4:location:31-36",
         "LM:S:TE4:location:45-55",
+        "LM:S:TE4:location:64-94",
         "RL:S:TE4:location:00:relative-to",
-        "RL:S:TE4:location:01:surface-landmark"
+        "RL:S:TE4:location:01:surface-landmark",
+        "RL:S:TE4:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1312,9 +1355,9 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:TE5:note:1:125-128",
         "LM:S:TE5:note:1:25-29",
         "LM:S:TE5:note:1:38-48",
+        "LM:S:TE5:note:1:61-67",
         "RL:S:TE5:note:1:00:between",
         "RL:S:TE5:note:1:01:relative-to",
         "RL:S:TE5:note:1:02:surface-landmark"
@@ -1330,11 +1373,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:TE10:location:31-36",
         "LM:S:TE10:location:45-55",
         "LM:S:TE10:location:7-23",
+        "LM:S:TE10:location:75-108",
         "RL:S:TE10:location:00:relative-to",
-        "RL:S:TE10:location:01:surface-landmark"
+        "RL:S:TE10:location:01:surface-landmark",
+        "RL:S:TE10:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1347,11 +1391,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
+        "LM:S:TE14:location:101-108",
         "LM:S:TE14:location:31-41",
         "LM:S:TE14:location:54-68",
-        "LM:S:TE14:location:7-22",
         "RL:S:TE14:location:00:between",
-        "RL:S:TE14:location:01:surface-landmark"
+        "RL:S:TE14:location:01:surface-landmark",
+        "RL:S:TE14:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1366,9 +1411,10 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:TE15:location:31-41",
         "LM:S:TE15:location:54-88",
-        "LM:S:TE15:location:7-22",
+        "LM:S:TE15:location:59-88",
         "RL:S:TE15:location:00:relative-to",
-        "RL:S:TE15:location:01:surface-landmark"
+        "RL:S:TE15:location:01:surface-landmark",
+        "RL:S:TE15:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1382,10 +1428,11 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:TE16:location:114-146",
+        "LM:S:TE16:location:57-82",
         "LM:S:TE16:location:61-82",
-        "LM:S:TE16:location:7-34",
         "RL:S:TE16:location:00:relative-to",
-        "RL:S:TE16:location:01:surface-landmark"
+        "RL:S:TE16:location:01:surface-landmark",
+        "RL:S:TE16:location:02:same-level"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1420,7 +1467,8 @@
         "LM:S:TE21:location:43-60",
         "LM:S:TE21:location:65-101",
         "RL:S:TE21:location:00:between",
-        "RL:S:TE21:location:01:surface-landmark"
+        "RL:S:TE21:location:01:surface-landmark",
+        "RL:S:TE21:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1453,8 +1501,10 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:TE23:location:20-30",
         "LM:S:TE23:location:38-49",
-        "LM:S:TE23:location:53-64",
-        "RL:S:TE23:location:00:surface-landmark"
+        "LM:S:TE23:location:38-64",
+        "RL:S:TE23:location:00:surface-landmark",
+        "RL:S:TE23:location:01:surface-landmark",
+        "RL:S:TE23:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1471,7 +1521,8 @@
         "LM:S:GB1:location:52-81",
         "LM:S:GB1:location:7-11",
         "RL:S:GB1:location:00:relative-to",
-        "RL:S:GB1:location:01:surface-landmark"
+        "RL:S:GB1:location:01:surface-landmark",
+        "RL:S:GB1:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1488,7 +1539,8 @@
         "LM:S:GB2:location:43-60",
         "LM:S:GB2:location:65-101",
         "RL:S:GB2:location:00:between",
-        "RL:S:GB2:location:01:surface-landmark"
+        "RL:S:GB2:location:01:surface-landmark",
+        "RL:S:GB2:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1504,7 +1556,8 @@
         "LM:S:GB2:note:1:54-64",
         "LM:S:GB2:note:1:76-98",
         "RL:S:GB2:note:1:00:relative-to",
-        "RL:S:GB2:note:1:01:surface-landmark"
+        "RL:S:GB2:note:1:01:surface-landmark",
+        "RL:S:GB2:note:1:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1519,9 +1572,10 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:GB3:location:20-30",
         "LM:S:GB3:location:42-77",
-        "LM:S:GB3:location:7-11",
+        "LM:S:GB3:location:59-77",
         "RL:S:GB3:location:00:relative-to",
-        "RL:S:GB3:location:01:surface-landmark"
+        "RL:S:GB3:location:01:surface-landmark",
+        "RL:S:GB3:location:02:midpoint-of-entity"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1556,7 +1610,8 @@
         "LM:S:GB12:location:7-34",
         "LM:S:GB12:location:72-92",
         "RL:S:GB12:location:00:relative-to",
-        "RL:S:GB12:location:01:surface-landmark"
+        "RL:S:GB12:location:01:surface-landmark",
+        "RL:S:GB12:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1588,10 +1643,11 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:GB31:location:104-127",
-        "LM:S:GB31:location:182-187",
-        "LM:S:GB31:location:29-34",
+        "LM:S:GB31:location:43-53",
+        "LM:S:GB31:location:66-127",
         "RL:S:GB31:location:00:relative-to",
-        "RL:S:GB31:location:01:surface-landmark"
+        "RL:S:GB31:location:01:surface-landmark",
+        "RL:S:GB31:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1604,11 +1660,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:GB34:location:29-32",
         "LM:S:GB34:location:41-51",
+        "LM:S:GB34:location:7-13",
         "LM:S:GB34:location:7-21",
         "RL:S:GB34:location:00:relative-to",
-        "RL:S:GB34:location:01:surface-landmark"
+        "RL:S:GB34:location:01:surface-landmark",
+        "RL:S:GB34:location:02:relative-to"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1622,7 +1679,7 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:GB40:location:132-154",
-        "LM:S:GB40:location:35-40",
+        "LM:S:GB40:location:133-154",
         "LM:S:GB40:location:49-59",
         "RL:S:GB40:location:00:relative-to",
         "RL:S:GB40:location:01:relative-to",
@@ -1641,7 +1698,7 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:GB41:location:112-122",
         "LM:S:GB41:location:134-177",
-        "LM:S:GB41:location:21-25",
+        "LM:S:GB41:location:36-103",
         "RL:S:GB41:location:00:relative-to",
         "RL:S:GB41:location:01:relative-to",
         "RL:S:GB41:location:02:surface-landmark"
@@ -1658,8 +1715,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:GB42:location:103-141",
-        "LM:S:GB42:location:21-25",
         "LM:S:GB42:location:39-72:156c28b5",
+        "LM:S:GB42:location:50-72",
         "RL:S:GB42:location:00:between",
         "RL:S:GB42:location:01:relative-to",
         "RL:S:GB42:location:02:surface-landmark"
@@ -1679,7 +1736,8 @@
         "LM:S:LR3:note:1:140-145",
         "LM:S:LR3:note:1:149-169",
         "RL:S:LR3:note:1:00:between",
-        "RL:S:LR3:note:1:01:surface-landmark"
+        "RL:S:LR3:note:1:01:surface-landmark",
+        "RL:S:LR3:note:1:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1693,8 +1751,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:LR4:location:111-132",
-        "LM:S:LR4:location:34-39",
         "LM:S:LR4:location:48-58",
+        "LM:S:LR4:location:68-98",
         "RL:S:LR4:location:00:relative-to",
         "RL:S:LR4:location:01:relative-to",
         "RL:S:LR4:location:02:surface-landmark"
@@ -1710,11 +1768,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:LR8:location:104-119",
         "LM:S:LR8:location:136-146",
-        "LM:S:LR8:location:150-170",
+        "LM:S:LR8:location:136-170",
+        "LM:S:LR8:location:154-170",
         "RL:S:LR8:location:00:relative-to",
-        "RL:S:LR8:location:01:surface-landmark"
+        "RL:S:LR8:location:01:surface-landmark",
+        "RL:S:LR8:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1731,7 +1790,8 @@
         "LM:S:LR8:note:1:119-139",
         "LM:S:LR8:note:1:51-61",
         "RL:S:LR8:note:1:00:relative-to",
-        "RL:S:LR8:note:1:01:surface-landmark"
+        "RL:S:LR8:note:1:01:surface-landmark",
+        "RL:S:LR8:note:1:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1748,7 +1808,8 @@
         "LM:S:GV3:location:29-39",
         "LM:S:GV3:location:51-106",
         "RL:S:GV3:location:00:relative-to",
-        "RL:S:GV3:location:01:surface-landmark"
+        "RL:S:GV3:location:01:surface-landmark",
+        "RL:S:GV3:location:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1765,7 +1826,8 @@
         "LM:S:GV4:location:29-39",
         "LM:S:GV4:location:51-107",
         "RL:S:GV4:location:00:relative-to",
-        "RL:S:GV4:location:01:surface-landmark"
+        "RL:S:GV4:location:01:surface-landmark",
+        "RL:S:GV4:location:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1782,7 +1844,8 @@
         "LM:S:GV5:location:29-39",
         "LM:S:GV5:location:51-105",
         "RL:S:GV5:location:00:relative-to",
-        "RL:S:GV5:location:01:surface-landmark"
+        "RL:S:GV5:location:01:surface-landmark",
+        "RL:S:GV5:location:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1799,7 +1862,8 @@
         "LM:S:GV6:location:33-43",
         "LM:S:GV6:location:55-111",
         "RL:S:GV6:location:00:relative-to",
-        "RL:S:GV6:location:01:surface-landmark"
+        "RL:S:GV6:location:01:surface-landmark",
+        "RL:S:GV6:location:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1816,7 +1880,8 @@
         "LM:S:GV7:location:33-43",
         "LM:S:GV7:location:55-112",
         "RL:S:GV7:location:00:relative-to",
-        "RL:S:GV7:location:01:surface-landmark"
+        "RL:S:GV7:location:01:surface-landmark",
+        "RL:S:GV7:location:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1833,7 +1898,8 @@
         "LM:S:GV8:location:33-43",
         "LM:S:GV8:location:55-111",
         "RL:S:GV8:location:00:relative-to",
-        "RL:S:GV8:location:01:surface-landmark"
+        "RL:S:GV8:location:01:surface-landmark",
+        "RL:S:GV8:location:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1850,7 +1916,8 @@
         "LM:S:GV9:location:33-43",
         "LM:S:GV9:location:55-114",
         "RL:S:GV9:location:00:relative-to",
-        "RL:S:GV9:location:01:surface-landmark"
+        "RL:S:GV9:location:01:surface-landmark",
+        "RL:S:GV9:location:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1867,7 +1934,8 @@
         "LM:S:GV10:location:33-43",
         "LM:S:GV10:location:55-111",
         "RL:S:GV10:location:00:relative-to",
-        "RL:S:GV10:location:01:surface-landmark"
+        "RL:S:GV10:location:01:surface-landmark",
+        "RL:S:GV10:location:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1884,7 +1952,8 @@
         "LM:S:GV11:location:33-43",
         "LM:S:GV11:location:55-111",
         "RL:S:GV11:location:00:relative-to",
-        "RL:S:GV11:location:01:surface-landmark"
+        "RL:S:GV11:location:01:surface-landmark",
+        "RL:S:GV11:location:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1901,7 +1970,8 @@
         "LM:S:GV12:location:33-43",
         "LM:S:GV12:location:55-111",
         "RL:S:GV12:location:00:relative-to",
-        "RL:S:GV12:location:01:surface-landmark"
+        "RL:S:GV12:location:01:surface-landmark",
+        "RL:S:GV12:location:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1918,7 +1988,8 @@
         "LM:S:GV13:location:33-43",
         "LM:S:GV13:location:55-111",
         "RL:S:GV13:location:00:relative-to",
-        "RL:S:GV13:location:01:surface-landmark"
+        "RL:S:GV13:location:01:surface-landmark",
+        "RL:S:GV13:location:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1935,7 +2006,8 @@
         "LM:S:GV14:location:44-54",
         "LM:S:GV14:location:66-124",
         "RL:S:GV14:location:00:relative-to",
-        "RL:S:GV14:location:01:surface-landmark"
+        "RL:S:GV14:location:01:surface-landmark",
+        "RL:S:GV14:location:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1952,7 +2024,8 @@
         "LM:S:GV15:location:44-54",
         "LM:S:GV15:location:66-123",
         "RL:S:GV15:location:00:relative-to",
-        "RL:S:GV15:location:01:surface-landmark"
+        "RL:S:GV15:location:01:surface-landmark",
+        "RL:S:GV15:location:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -1966,7 +2039,7 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:GV16:location:103-113",
-        "LM:S:GV16:location:126-144",
+        "LM:S:GV16:location:122-144",
         "LM:S:GV16:location:57-94",
         "RL:S:GV16:location:00:between",
         "RL:S:GV16:location:01:relative-to",
@@ -1987,7 +2060,8 @@
         "LM:S:GV17:location:42-78",
         "LM:S:GV17:location:7-11",
         "RL:S:GV17:location:00:relative-to",
-        "RL:S:GV17:location:01:surface-landmark"
+        "RL:S:GV17:location:01:surface-landmark",
+        "RL:S:GV17:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -2001,10 +2075,11 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:GV17:note:1:135-217",
-        "LM:S:GV17:note:1:139-154",
         "LM:S:GV17:note:1:162-178",
+        "LM:S:GV17:note:1:182-217",
         "RL:S:GV17:note:1:00:at-junction",
-        "RL:S:GV17:note:1:01:surface-landmark"
+        "RL:S:GV17:note:1:01:surface-landmark",
+        "RL:S:GV17:note:1:02:same-level"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -2020,7 +2095,8 @@
         "LM:S:GV18:note:1:29-39",
         "LM:S:GV18:note:1:61-66",
         "RL:S:GV18:note:1:00:relative-to",
-        "RL:S:GV18:note:1:01:surface-landmark"
+        "RL:S:GV18:note:1:01:surface-landmark",
+        "RL:S:GV18:note:1:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -2033,11 +2109,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
+        "LM:S:GV20:note:1:117-139",
         "LM:S:GV20:note:1:31-41",
         "LM:S:GV20:note:1:61-139",
-        "LM:S:GV20:note:1:96-113",
         "RL:S:GV20:note:1:00:relative-to",
-        "RL:S:GV20:note:1:01:surface-landmark"
+        "RL:S:GV20:note:1:01:surface-landmark",
+        "RL:S:GV20:note:1:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -2051,7 +2128,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:CV22:note:1:29-39",
-        "LM:S:CV22:note:1:79-87",
+        "LM:S:CV22:note:1:55-87",
+        "LM:S:CV22:note:1:59-70",
         "RL:S:CV22:note:1:00:midpoint-between",
         "RL:S:CV22:note:1:01:between",
         "RL:S:CV22:note:1:02:surface-landmark"
@@ -2086,9 +2164,11 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:CV24:location:20-30",
-        "LM:S:CV24:location:52-70",
-        "LM:S:CV24:location:7-11",
-        "RL:S:CV24:location:00:surface-landmark"
+        "LM:S:CV24:location:38-44",
+        "LM:S:CV24:location:48-70",
+        "RL:S:CV24:location:00:surface-landmark",
+        "RL:S:CV24:location:01:center-of",
+        "RL:S:CV24:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -2102,10 +2182,11 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:LU11:location:134-172",
-        "LM:S:LU11:location:159-172",
         "LM:S:LU11:location:177-226",
+        "LM:S:LU11:location:203-208",
         "RL:S:LU11:location:00:at-junction",
-        "RL:S:LU11:location:01:relative-to"
+        "RL:S:LU11:location:01:relative-to",
+        "RL:S:LU11:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-cue typed relation compiler",
@@ -2118,11 +2199,12 @@
       "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:LI1:location:102-122",
+        "LM:S:LI1:location:106-122",
+        "LM:S:LI1:location:112-122",
         "LM:S:LI1:location:147-203",
-        "LM:S:LI1:location:172-185",
         "RL:S:LI1:location:00:at-junction",
-        "RL:S:LI1:location:01:relative-to"
+        "RL:S:LI1:location:01:relative-to",
+        "RL:S:LI1:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-cue typed relation compiler",
@@ -2151,10 +2233,11 @@
       "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST18:note:1:152-167",
-        "LM:S:ST18:note:1:161-167",
+        "LM:S:ST18:note:1:148-181",
         "LM:S:ST18:note:1:55-66",
-        "RL:S:ST18:note:1:00:at-junction"
+        "LM:S:ST18:note:1:71-99",
+        "RL:S:ST18:note:1:00:at-junction",
+        "RL:S:ST18:note:1:01:midpoint-of-entity"
       ],
       "repaired": true,
       "repair_mechanism": "source-cue typed relation compiler",
@@ -2167,11 +2250,12 @@
       "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST31:note:2:102-109",
         "LM:S:ST31:note:2:115-149",
         "LM:S:ST31:note:2:155-220",
+        "LM:S:ST31:note:2:182-197",
         "RL:S:ST31:note:2:00:on-line",
-        "RL:S:ST31:note:2:01:at-junction"
+        "RL:S:ST31:note:2:01:at-junction",
+        "RL:S:ST31:note:2:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "source-cue typed relation compiler",
@@ -2184,11 +2268,12 @@
       "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST45:location:102-120",
+        "LM:S:ST45:location:106-120",
         "LM:S:ST45:location:145-184",
-        "LM:S:ST45:location:149-162",
+        "LM:S:ST45:location:189-242",
         "RL:S:ST45:location:00:at-junction",
-        "RL:S:ST45:location:01:relative-to"
+        "RL:S:ST45:location:01:relative-to",
+        "RL:S:ST45:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-cue typed relation compiler",
@@ -2201,11 +2286,12 @@
       "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:SP1:location:100-111",
+        "LM:S:SP1:location:104-111",
         "LM:S:SP1:location:136-174",
-        "LM:S:SP1:location:161-174",
+        "LM:S:SP1:location:179-221",
         "RL:S:SP1:location:00:at-junction",
-        "RL:S:SP1:location:01:relative-to"
+        "RL:S:SP1:location:01:relative-to",
+        "RL:S:SP1:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-cue typed relation compiler",
@@ -2220,7 +2306,7 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:SP5:note:1:111-202",
         "LM:S:SP5:note:1:136-202",
-        "LM:S:SP5:note:1:140-155",
+        "LM:S:SP5:note:1:46-131",
         "RL:S:SP5:note:1:00:at-junction"
       ],
       "repaired": true,
@@ -2249,11 +2335,12 @@
       "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:HT9:location:103-124",
+        "LM:S:HT9:location:107-124",
+        "LM:S:HT9:location:120-124",
         "LM:S:HT9:location:149-199",
-        "LM:S:HT9:location:174-187",
         "RL:S:HT9:location:00:at-junction",
-        "RL:S:HT9:location:01:relative-to"
+        "RL:S:HT9:location:01:relative-to",
+        "RL:S:HT9:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-cue typed relation compiler",
@@ -2266,11 +2353,12 @@
       "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:SI1:location:100-121",
+        "LM:S:SI1:location:104-121",
+        "LM:S:SI1:location:117-121",
         "LM:S:SI1:location:146-191",
-        "LM:S:SI1:location:167-179",
         "RL:S:SI1:location:00:at-junction",
-        "RL:S:SI1:location:01:relative-to"
+        "RL:S:SI1:location:01:relative-to",
+        "RL:S:SI1:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-cue typed relation compiler",
@@ -2284,8 +2372,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:SI14:note:1:113-229",
-        "LM:S:SI14:note:1:130-137",
         "LM:S:SI14:note:1:142-229",
+        "LM:S:SI14:note:1:173-229",
         "RL:S:SI14:note:1:00:at-junction",
         "RL:S:SI14:note:1:01:relative-to"
       ],
@@ -2301,8 +2389,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:SI15:note:1:129-331",
-        "LM:S:SI15:note:1:158-173",
         "LM:S:SI15:note:1:174-199",
+        "LM:S:SI15:note:1:174-237",
         "RL:S:SI15:note:1:00:on-line",
         "RL:S:SI15:note:1:01:at-junction",
         "RL:S:SI15:note:1:02:relative-to"
@@ -2320,8 +2408,9 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:BL9:note:1:108-214",
         "LM:S:BL9:note:1:133-214",
-        "LM:S:BL9:note:1:137-152",
-        "RL:S:BL9:note:1:00:at-junction"
+        "LM:S:BL9:note:1:237-241",
+        "RL:S:BL9:note:1:00:at-junction",
+        "RL:S:BL9:note:1:01:same-level"
       ],
       "repaired": true,
       "repair_mechanism": "source-cue typed relation compiler",
@@ -2335,8 +2424,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:BL67:location:131-180",
-        "LM:S:BL67:location:156-168",
-        "LM:S:BL67:location:176-180",
+        "LM:S:BL67:location:185-231",
+        "LM:S:BL67:location:211-216",
         "RL:S:BL67:location:00:at-junction",
         "RL:S:BL67:location:01:relative-to",
         "RL:S:BL67:location:02:relative-to"
@@ -2354,9 +2443,10 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:PC9:remarks:105-126",
         "LM:S:PC9:remarks:151-199",
-        "LM:S:PC9:remarks:176-187",
+        "LM:S:PC9:remarks:204-253",
         "RL:S:PC9:remarks:00:at-junction",
-        "RL:S:PC9:remarks:01:relative-to"
+        "RL:S:PC9:remarks:01:relative-to",
+        "RL:S:PC9:remarks:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-cue typed relation compiler",
@@ -2370,8 +2460,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:TE1:location:130-177",
-        "LM:S:TE1:location:155-165",
-        "LM:S:TE1:location:173-177",
+        "LM:S:TE1:location:182-231",
+        "LM:S:TE1:location:208-213",
         "RL:S:TE1:location:00:at-junction",
         "RL:S:TE1:location:01:relative-to",
         "RL:S:TE1:location:02:relative-to"
@@ -2403,8 +2493,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:GB44:location:130-179",
-        "LM:S:GB44:location:155-167",
-        "LM:S:GB44:location:175-179",
+        "LM:S:GB44:location:184-237",
+        "LM:S:GB44:location:210-215",
         "RL:S:GB44:location:00:at-junction",
         "RL:S:GB44:location:01:relative-to",
         "RL:S:GB44:location:02:relative-to"
@@ -2421,8 +2511,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:LR1:location:130-179",
-        "LM:S:LR1:location:155-167",
-        "LM:S:LR1:location:175-179",
+        "LM:S:LR1:location:184-230",
+        "LM:S:LR1:location:210-215",
         "RL:S:LR1:location:00:at-junction",
         "RL:S:LR1:location:01:relative-to",
         "RL:S:LR1:location:02:relative-to"
@@ -2456,9 +2546,9 @@
       "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:GV9:note:1:10-20",
         "LM:S:GV9:note:1:123-165",
         "LM:S:GV9:note:1:170-250",
+        "LM:S:GV9:note:1:32-250",
         "RL:S:GV9:note:1:00:at-junction",
         "RL:S:GV9:note:1:01:relative-to"
       ],
@@ -2473,9 +2563,9 @@
       "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:GV12:note:1:10-20",
         "LM:S:GV12:note:1:122-168",
         "LM:S:GV12:note:1:173-238",
+        "LM:S:GV12:note:1:32-238",
         "RL:S:GV12:note:1:00:at-junction",
         "RL:S:GV12:note:1:01:relative-to"
       ],
@@ -2491,10 +2581,11 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:GV17:note:1:135-217",
-        "LM:S:GV17:note:1:139-154",
         "LM:S:GV17:note:1:162-178",
+        "LM:S:GV17:note:1:182-217",
         "RL:S:GV17:note:1:00:at-junction",
-        "RL:S:GV17:note:1:01:surface-landmark"
+        "RL:S:GV17:note:1:01:surface-landmark",
+        "RL:S:GV17:note:1:02:same-level"
       ],
       "repaired": true,
       "repair_mechanism": "source-cue typed relation compiler",
@@ -2508,10 +2599,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:LU3:location:116-143",
-        "LM:S:LU3:location:35-38",
         "LM:S:LU3:location:55-95",
+        "LM:S:LU3:location:59-66",
         "RL:S:LU3:location:00:relative-to",
-        "RL:S:LU3:location:01:relative-to"
+        "RL:S:LU3:location:01:relative-to",
+        "RL:S:LU3:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2525,10 +2617,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:LU4:location:116-143",
-        "LM:S:LU4:location:35-38",
         "LM:S:LU4:location:55-95",
+        "LM:S:LU4:location:59-66",
         "RL:S:LU4:location:00:relative-to",
-        "RL:S:LU4:location:01:relative-to"
+        "RL:S:LU4:location:01:relative-to",
+        "RL:S:LU4:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2542,10 +2635,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:LU11:location:134-172",
-        "LM:S:LU11:location:159-172",
         "LM:S:LU11:location:177-226",
+        "LM:S:LU11:location:203-208",
         "RL:S:LU11:location:00:at-junction",
-        "RL:S:LU11:location:01:relative-to"
+        "RL:S:LU11:location:01:relative-to",
+        "RL:S:LU11:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2558,11 +2652,12 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:LI1:location:102-122",
+        "LM:S:LI1:location:106-122",
+        "LM:S:LI1:location:112-122",
         "LM:S:LI1:location:147-203",
-        "LM:S:LI1:location:172-185",
         "RL:S:LI1:location:00:at-junction",
-        "RL:S:LI1:location:01:relative-to"
+        "RL:S:LI1:location:01:relative-to",
+        "RL:S:LI1:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2575,11 +2670,12 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:LI1:location:102-122",
+        "LM:S:LI1:location:106-122",
+        "LM:S:LI1:location:112-122",
         "LM:S:LI1:location:147-203",
-        "LM:S:LI1:location:172-185",
         "RL:S:LI1:location:00:at-junction",
-        "RL:S:LI1:location:01:relative-to"
+        "RL:S:LI1:location:01:relative-to",
+        "RL:S:LI1:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2593,10 +2689,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:LI14:location:105-110",
-        "LM:S:LI14:location:29-32",
         "LM:S:LI14:location:51-84",
+        "LM:S:LI14:location:55-62",
         "RL:S:LI14:location:00:relative-to",
-        "RL:S:LI14:location:01:relative-to"
+        "RL:S:LI14:location:01:relative-to",
+        "RL:S:LI14:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2609,10 +2706,12 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:LI19:location:55-63",
-        "LM:S:LI19:location:7-11",
-        "LM:S:LI19:location:76-110",
-        "RL:S:LI19:location:00:relative-to"
+        "LM:S:LI19:location:103-110",
+        "LM:S:LI19:location:34-63",
+        "LM:S:LI19:location:51-63",
+        "RL:S:LI19:location:00:relative-to",
+        "RL:S:LI19:location:01:same-level",
+        "RL:S:LI19:location:02:midpoint-of-entity"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2626,8 +2725,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:LI20:location:20-37",
+        "LM:S:LI20:location:60-113",
         "LM:S:LI20:location:7-11",
-        "LM:S:LI20:location:76-90"
+        "RL:S:LI20:location:00:same-level",
+        "RL:S:LI20:location:01:midpoint-of-entity",
+        "RL:S:LI20:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2641,9 +2743,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:ST3:location:33-43",
+        "LM:S:ST3:location:66-108",
         "LM:S:ST3:location:7-11",
-        "LM:S:ST3:location:70-85",
-        "RL:S:ST3:location:00:relative-to"
+        "RL:S:ST3:location:00:relative-to",
+        "RL:S:ST3:location:01:same-level",
+        "RL:S:ST3:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2660,7 +2764,8 @@
         "LM:S:ST7:location:20-30",
         "LM:S:ST7:location:43-97",
         "RL:S:ST7:location:00:between",
-        "RL:S:ST7:location:01:surface-landmark"
+        "RL:S:ST7:location:01:surface-landmark",
+        "RL:S:ST7:location:02:midpoint-of-entity"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2675,8 +2780,10 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:ST30:location:104-129",
         "LM:S:ST30:location:140-154",
-        "LM:S:ST30:location:46-61",
-        "RL:S:ST30:location:00:relative-to"
+        "LM:S:ST30:location:42-84",
+        "RL:S:ST30:location:00:relative-to",
+        "RL:S:ST30:location:01:same-level",
+        "RL:S:ST30:location:02:overlies"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2689,11 +2796,12 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST34:location:104-129",
+        "LM:S:ST34:location:108-129",
         "LM:S:ST34:location:150-174",
         "LM:S:ST34:location:154-159",
         "RL:S:ST34:location:00:between",
-        "RL:S:ST34:location:01:relative-to"
+        "RL:S:ST34:location:01:relative-to",
+        "RL:S:ST34:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2706,11 +2814,12 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST45:location:102-120",
+        "LM:S:ST45:location:106-120",
         "LM:S:ST45:location:145-184",
-        "LM:S:ST45:location:149-162",
+        "LM:S:ST45:location:189-242",
         "RL:S:ST45:location:00:at-junction",
-        "RL:S:ST45:location:01:relative-to"
+        "RL:S:ST45:location:01:relative-to",
+        "RL:S:ST45:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2723,11 +2832,12 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:SP1:location:100-111",
+        "LM:S:SP1:location:104-111",
         "LM:S:SP1:location:136-174",
-        "LM:S:SP1:location:161-174",
+        "LM:S:SP1:location:179-221",
         "RL:S:SP1:location:00:at-junction",
-        "RL:S:SP1:location:01:relative-to"
+        "RL:S:SP1:location:01:relative-to",
+        "RL:S:SP1:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2740,11 +2850,12 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:HT9:location:103-124",
+        "LM:S:HT9:location:107-124",
+        "LM:S:HT9:location:120-124",
         "LM:S:HT9:location:149-199",
-        "LM:S:HT9:location:174-187",
         "RL:S:HT9:location:00:at-junction",
-        "RL:S:HT9:location:01:relative-to"
+        "RL:S:HT9:location:01:relative-to",
+        "RL:S:HT9:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2757,11 +2868,12 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:HT9:location:103-124",
+        "LM:S:HT9:location:107-124",
+        "LM:S:HT9:location:120-124",
         "LM:S:HT9:location:149-199",
-        "LM:S:HT9:location:174-187",
         "RL:S:HT9:location:00:at-junction",
-        "RL:S:HT9:location:01:relative-to"
+        "RL:S:HT9:location:01:relative-to",
+        "RL:S:HT9:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2774,11 +2886,12 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:SI1:location:100-121",
+        "LM:S:SI1:location:104-121",
+        "LM:S:SI1:location:117-121",
         "LM:S:SI1:location:146-191",
-        "LM:S:SI1:location:167-179",
         "RL:S:SI1:location:00:at-junction",
-        "RL:S:SI1:location:01:relative-to"
+        "RL:S:SI1:location:01:relative-to",
+        "RL:S:SI1:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2791,11 +2904,12 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:SI1:location:100-121",
+        "LM:S:SI1:location:104-121",
+        "LM:S:SI1:location:117-121",
         "LM:S:SI1:location:146-191",
-        "LM:S:SI1:location:167-179",
         "RL:S:SI1:location:00:at-junction",
-        "RL:S:SI1:location:01:relative-to"
+        "RL:S:SI1:location:01:relative-to",
+        "RL:S:SI1:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2809,10 +2923,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:SI7:location:145-169",
-        "LM:S:SI7:location:35-43",
         "LM:S:SI7:location:57-70",
+        "LM:S:SI7:location:57-88",
         "RL:S:SI7:location:00:between",
-        "RL:S:SI7:location:01:relative-to"
+        "RL:S:SI7:location:01:relative-to",
+        "RL:S:SI7:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2829,7 +2944,8 @@
         "LM:S:SI13:location:53-96",
         "LM:S:SI13:location:58-68",
         "RL:S:SI13:location:00:relative-to",
-        "RL:S:SI13:location:01:surface-landmark"
+        "RL:S:SI13:location:01:surface-landmark",
+        "RL:S:SI13:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2843,10 +2959,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:SI19:location:119-135",
+        "LM:S:SI19:location:119-151",
         "LM:S:SI19:location:143-151",
-        "LM:S:SI19:location:20-30",
         "RL:S:SI19:location:00:between",
-        "RL:S:SI19:location:01:surface-landmark"
+        "RL:S:SI19:location:01:surface-landmark",
+        "RL:S:SI19:location:02:center-of"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2860,10 +2977,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:BL1:location:102-113",
-        "LM:S:BL1:location:117-126",
+        "LM:S:BL1:location:121-126",
         "LM:S:BL1:location:20-30",
         "RL:S:BL1:location:00:between",
-        "RL:S:BL1:location:01:surface-landmark"
+        "RL:S:BL1:location:01:surface-landmark",
+        "RL:S:BL1:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2877,9 +2995,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:BL9:location:118-144",
+        "LM:S:BL9:location:34-92",
         "LM:S:BL9:location:38-53",
-        "LM:S:BL9:location:57-92",
-        "RL:S:BL9:location:00:relative-to"
+        "RL:S:BL9:location:00:relative-to",
+        "RL:S:BL9:location:01:same-level",
+        "RL:S:BL9:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2894,8 +3014,9 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:BL35:location:43-71",
         "LM:S:BL35:location:47-57",
-        "LM:S:BL35:location:61-71",
-        "RL:S:BL35:location:00:relative-to"
+        "LM:S:BL35:location:48-57",
+        "RL:S:BL35:location:00:relative-to",
+        "RL:S:BL35:location:01:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2909,10 +3030,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:BL55:location:123-144",
-        "LM:S:BL55:location:31-34",
         "LM:S:BL55:location:48-60",
+        "LM:S:BL55:location:65-104",
         "RL:S:BL55:location:00:between",
-        "RL:S:BL55:location:01:relative-to"
+        "RL:S:BL55:location:01:relative-to",
+        "RL:S:BL55:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2926,10 +3048,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:BL56:location:114-135",
-        "LM:S:BL56:location:31-34",
+        "LM:S:BL56:location:44-95",
         "LM:S:BL56:location:58-66",
         "RL:S:BL56:location:00:between",
-        "RL:S:BL56:location:01:relative-to"
+        "RL:S:BL56:location:01:relative-to",
+        "RL:S:BL56:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2944,7 +3067,9 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:BL57:location:103-111",
         "LM:S:BL57:location:115-140",
-        "LM:S:BL57:location:31-34"
+        "LM:S:BL57:location:63-83",
+        "RL:S:BL57:location:00:surface-landmark",
+        "RL:S:BL57:location:01:at-junction"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -2975,9 +3100,9 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:BL63:location:118-140",
         "LM:S:BL63:location:149-159",
         "LM:S:BL63:location:171-187",
+        "LM:S:BL63:location:36-81",
         "RL:S:BL63:location:00:relative-to",
         "RL:S:BL63:location:01:relative-to",
         "RL:S:BL63:location:02:relative-to"
@@ -2994,8 +3119,8 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:BL67:location:131-180",
-        "LM:S:BL67:location:156-168",
-        "LM:S:BL67:location:176-180",
+        "LM:S:BL67:location:185-231",
+        "LM:S:BL67:location:211-216",
         "RL:S:BL67:location:00:at-junction",
         "RL:S:BL67:location:01:relative-to",
         "RL:S:BL67:location:02:relative-to"
@@ -3012,8 +3137,8 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:KI8:location:121-160",
-        "LM:S:KI8:location:28-31",
         "LM:S:KI8:location:40-50",
+        "LM:S:KI8:location:63-100",
         "RL:S:KI8:location:00:relative-to",
         "RL:S:KI8:location:01:relative-to",
         "RL:S:KI8:location:02:surface-landmark"
@@ -3030,10 +3155,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:PC2:location:119-147",
-        "LM:S:PC2:location:30-33",
         "LM:S:PC2:location:47-56",
+        "LM:S:PC2:location:61-100",
         "RL:S:PC2:location:00:between",
-        "RL:S:PC2:location:01:relative-to"
+        "RL:S:PC2:location:01:relative-to",
+        "RL:S:PC2:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -3047,8 +3173,8 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:TE1:location:130-177",
-        "LM:S:TE1:location:155-165",
-        "LM:S:TE1:location:173-177",
+        "LM:S:TE1:location:182-231",
+        "LM:S:TE1:location:208-213",
         "RL:S:TE1:location:00:at-junction",
         "RL:S:TE1:location:01:relative-to",
         "RL:S:TE1:location:02:relative-to"
@@ -3065,10 +3191,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:TE13:location:109-128",
-        "LM:S:TE13:location:31-34",
         "LM:S:TE13:location:55-88",
+        "LM:S:TE13:location:59-66",
         "RL:S:TE13:location:00:relative-to",
-        "RL:S:TE13:location:01:relative-to"
+        "RL:S:TE13:location:01:relative-to",
+        "RL:S:TE13:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -3081,9 +3208,12 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:GB7:location:105-120",
-        "LM:S:GB7:location:36-49",
-        "LM:S:GB7:location:57-73"
+        "LM:S:GB7:location:101-147",
+        "LM:S:GB7:location:105-147",
+        "LM:S:GB7:location:32-96",
+        "RL:S:GB7:location:00:surface-landmark",
+        "RL:S:GB7:location:01:at-junction",
+        "RL:S:GB7:location:02:at-junction"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -3098,9 +3228,10 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:GB9:location:33-77",
         "LM:S:GB9:location:38-55",
-        "LM:S:GB9:location:59-77",
+        "LM:S:GB9:location:63-77",
         "RL:S:GB9:location:00:relative-to",
-        "RL:S:GB9:location:01:relative-to"
+        "RL:S:GB9:location:01:relative-to",
+        "RL:S:GB9:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -3114,9 +3245,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:GB19:location:116-121",
+        "LM:S:GB19:location:34-94",
         "LM:S:GB19:location:38-54",
-        "LM:S:GB19:location:58-94",
-        "RL:S:GB19:location:00:relative-to"
+        "RL:S:GB19:location:00:relative-to",
+        "RL:S:GB19:location:01:same-level",
+        "RL:S:GB19:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -3130,8 +3263,8 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:GB44:location:130-179",
-        "LM:S:GB44:location:155-167",
-        "LM:S:GB44:location:175-179",
+        "LM:S:GB44:location:184-237",
+        "LM:S:GB44:location:210-215",
         "RL:S:GB44:location:00:at-junction",
         "RL:S:GB44:location:01:relative-to",
         "RL:S:GB44:location:02:relative-to"
@@ -3148,8 +3281,8 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:LR1:location:130-179",
-        "LM:S:LR1:location:155-167",
-        "LM:S:LR1:location:175-179",
+        "LM:S:LR1:location:184-230",
+        "LM:S:LR1:location:210-215",
         "RL:S:LR1:location:00:at-junction",
         "RL:S:LR1:location:01:relative-to",
         "RL:S:LR1:location:02:relative-to"
@@ -3165,11 +3298,12 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:LR8:location:104-119",
         "LM:S:LR8:location:136-146",
-        "LM:S:LR8:location:150-170",
+        "LM:S:LR8:location:136-170",
+        "LM:S:LR8:location:154-170",
         "RL:S:LR8:location:00:relative-to",
-        "RL:S:LR8:location:01:surface-landmark"
+        "RL:S:LR8:location:01:surface-landmark",
+        "RL:S:LR8:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -3183,9 +3317,11 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:LR12:location:110-135",
+        "LM:S:LR12:location:42-84",
         "LM:S:LR12:location:46-61",
-        "LM:S:LR12:location:65-84",
-        "RL:S:LR12:location:00:relative-to"
+        "RL:S:LR12:location:00:relative-to",
+        "RL:S:LR12:location:01:same-level",
+        "RL:S:LR12:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -3198,12 +3334,12 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:CV1:location:102-180",
-        "LM:S:CV1:location:131-169",
-        "LM:S:CV1:location:47-62",
-        "RL:S:CV1:location:00:on-line:male",
-        "RL:S:CV1:location:01:midpoint-between:male",
-        "RL:S:CV1:location:02:on-line:female"
+        "LM:S:CV1:location:102-113",
+        "LM:S:CV1:location:131-151",
+        "LM:S:CV1:location:155-169",
+        "RL:S:CV1:location:00:surface-landmark",
+        "RL:S:CV1:location:01:on-line:male",
+        "RL:S:CV1:location:02:midpoint-between:male"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -3219,7 +3355,9 @@
         "LM:S:LI11:note:1:61-71",
         "LM:S:LI11:note:1:79-90",
         "LM:S:LI11:note:1:94-112",
-        "RL:S:LI11:note:1:00:surface-landmark"
+        "RL:S:LI11:note:1:00:surface-landmark",
+        "RL:S:LI11:note:1:01:surface-landmark",
+        "RL:S:LI11:note:1:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -3232,11 +3370,12 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST31:note:2:102-109",
         "LM:S:ST31:note:2:115-149",
         "LM:S:ST31:note:2:155-220",
+        "LM:S:ST31:note:2:182-197",
         "RL:S:ST31:note:2:00:on-line",
-        "RL:S:ST31:note:2:01:at-junction"
+        "RL:S:ST31:note:2:01:at-junction",
+        "RL:S:ST31:note:2:02:on-line"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -3249,9 +3388,9 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST33:note:1:37-52",
         "LM:S:ST33:note:1:53-57",
         "LM:S:ST33:note:1:63-105",
+        "LM:S:ST33:note:1:67-78",
         "RL:S:ST33:note:1:00:on-line",
         "RL:S:ST33:note:1:01:midpoint-between"
       ],
@@ -3268,7 +3407,7 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:HT3:note:1:105-164",
         "LM:S:HT3:note:1:128-164",
-        "LM:S:HT3:note:1:157-164",
+        "LM:S:HT3:note:1:87-123",
         "RL:S:HT3:note:1:00:on-line",
         "RL:S:HT3:note:1:01:midpoint-between"
       ],
@@ -3284,8 +3423,8 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:SI14:note:1:113-229",
-        "LM:S:SI14:note:1:130-137",
         "LM:S:SI14:note:1:142-229",
+        "LM:S:SI14:note:1:173-229",
         "RL:S:SI14:note:1:00:at-junction",
         "RL:S:SI14:note:1:01:relative-to"
       ],
@@ -3301,9 +3440,10 @@
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
         "LM:S:BL2:note:1:114-118",
-        "LM:S:BL2:note:1:24-37",
         "LM:S:BL2:note:1:68-78",
-        "RL:S:BL2:note:1:00:relative-to"
+        "LM:S:BL2:note:1:82-118",
+        "RL:S:BL2:note:1:00:relative-to",
+        "RL:S:BL2:note:1:01:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -3319,7 +3459,8 @@
         "LM:S:BL35:note:1:116-144",
         "LM:S:BL35:note:1:120-130",
         "LM:S:BL35:note:1:134-144",
-        "RL:S:BL35:note:1:00:relative-to"
+        "RL:S:BL35:note:1:00:relative-to",
+        "RL:S:BL35:note:1:01:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -3332,10 +3473,12 @@
       "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:PC7:note:1:134-153",
-        "LM:S:PC7:note:1:168-175",
-        "LM:S:PC7:note:1:247-250",
-        "RL:S:PC7:note:1:00:between"
+        "LM:S:PC7:note:1:130-153",
+        "LM:S:PC7:note:1:179-194:85f9e3d7",
+        "LM:S:PC7:note:1:203-224:c25f23ce",
+        "RL:S:PC7:note:1:00:between",
+        "RL:S:PC7:note:1:01:same-level",
+        "RL:S:PC7:note:1:02:midpoint-of-entity"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -3388,7 +3531,8 @@
         "LM:S:LR8:note:1:119-139",
         "LM:S:LR8:note:1:51-61",
         "RL:S:LR8:note:1:00:relative-to",
-        "RL:S:LR8:note:1:01:surface-landmark"
+        "RL:S:LR8:note:1:01:surface-landmark",
+        "RL:S:LR8:note:1:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -3403,9 +3547,10 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:PC9:remarks:105-126",
         "LM:S:PC9:remarks:151-199",
-        "LM:S:PC9:remarks:176-187",
+        "LM:S:PC9:remarks:204-253",
         "RL:S:PC9:remarks:00:at-junction",
-        "RL:S:PC9:remarks:01:relative-to"
+        "RL:S:PC9:remarks:01:relative-to",
+        "RL:S:PC9:remarks:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "explicit composite binding record",
@@ -3418,9 +3563,9 @@
       "v1_defect_class": "SOURCE_LANDMARK_EXTRACTION_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST31:note:1:151-156",
-        "LM:S:ST31:note:1:160-181",
-        "LM:S:ST31:note:1:171-181",
+        "LM:S:ST31:note:1:257-267",
+        "LM:S:ST31:note:1:280-305",
+        "LM:S:ST31:note:1:310-350",
         "RL:S:ST31:note:1:00:between",
         "RL:S:ST31:note:1:01:relative-to",
         "RL:S:ST31:note:1:02:surface-landmark"
@@ -3436,9 +3581,9 @@
       "v1_defect_class": "SOURCE_LANDMARK_EXTRACTION_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
+        "LM:S:SI19:note:1:101-111",
         "LM:S:SI19:note:1:121-125",
         "LM:S:SI19:note:1:130-133",
-        "LM:S:SI19:note:1:64-74",
         "RL:S:SI19:note:1:00:between",
         "RL:S:SI19:note:1:01:relative-to",
         "RL:S:SI19:note:1:02:surface-landmark"
@@ -3474,7 +3619,7 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:LR3:location:102-145",
         "LM:S:LR3:location:156-177",
-        "LM:S:LR3:location:21-25",
+        "LM:S:LR3:location:39-72:6c398dd4",
         "RL:S:LR3:location:00:between",
         "RL:S:LR3:location:01:relative-to",
         "RL:S:LR3:location:02:surface-landmark"
@@ -3490,8 +3635,9 @@
       "v1_defect_class": "SOURCE_LANDMARK_EXTRACTION_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:GV24:note:1:15-32",
-        "LM:S:GV24:note:1:95-148",
+        "LM:S:GV24:note:1:117-148",
+        "LM:S:GV24:note:1:121-132",
+        "LM:S:GV24:note:1:136-148",
         "RL:S:GV24:note:1:00:midpoint-between",
         "RL:S:GV24:note:1:01:between",
         "RL:S:GV24:note:1:02:relative-to"
@@ -3507,9 +3653,9 @@
       "v1_defect_class": "SOURCE_RELATION_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:BL64:note:1:10-49",
-        "LM:S:BL64:note:1:108-140",
-        "LM:S:BL64:note:1:28-49",
+        "LM:S:BL64:note:1:104-140",
+        "LM:S:BL64:note:1:91-99",
+        "LM:S:BL64:note:1:95-99",
         "RL:S:BL64:note:1:00:midpoint-between",
         "RL:S:BL64:note:1:01:between"
       ],
@@ -3524,8 +3670,9 @@
       "v1_defect_class": "SOURCE_RELATION_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:GV24:note:1:15-32",
-        "LM:S:GV24:note:1:95-148",
+        "LM:S:GV24:note:1:117-148",
+        "LM:S:GV24:note:1:121-132",
+        "LM:S:GV24:note:1:136-148",
         "RL:S:GV24:note:1:00:midpoint-between",
         "RL:S:GV24:note:1:01:between",
         "RL:S:GV24:note:1:02:relative-to"
@@ -3558,11 +3705,12 @@
       "v1_defect_class": "SOURCE_RELATION_OMISSION",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:CV12:note:1:45-60",
+        "LM:S:CV12:note:1:106-115",
         "LM:S:CV12:note:1:61-87",
         "LM:S:CV12:note:1:92-115",
         "RL:S:CV12:note:1:00:on-line",
-        "RL:S:CV12:note:1:01:midpoint-between"
+        "RL:S:CV12:note:1:01:midpoint-between",
+        "RL:S:CV12:note:1:02:center-of"
       ],
       "repaired": true,
       "repair_mechanism": "expected-relation compiler",
@@ -3576,7 +3724,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:CV22:note:1:29-39",
-        "LM:S:CV22:note:1:79-87",
+        "LM:S:CV22:note:1:55-87",
+        "LM:S:CV22:note:1:59-70",
         "RL:S:CV22:note:1:00:midpoint-between",
         "RL:S:CV22:note:1:01:between",
         "RL:S:CV22:note:1:02:surface-landmark"
@@ -3603,10 +3752,12 @@
       "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST4:note:1:117-134",
         "LM:S:ST4:note:1:16-39",
         "LM:S:ST4:note:1:69-86",
-        "RL:S:ST4:note:1:00:relative-to"
+        "LM:S:ST4:note:1:97-134",
+        "RL:S:ST4:note:1:00:relative-to",
+        "RL:S:ST4:note:1:01:surface-landmark",
+        "RL:S:ST4:note:1:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "condition/branch schema with branch relation and landmark IDs",
@@ -3619,8 +3770,11 @@
       "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST17:note:1:34-40",
-        "LM:S:ST17:note:1:59-83"
+        "LM:S:ST17:note:1:20-26",
+        "LM:S:ST17:note:1:30-83",
+        "LM:S:ST17:note:1:59-83",
+        "RL:S:ST17:note:1:00:center-of",
+        "RL:S:ST17:note:1:01:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "condition/branch schema with branch relation and landmark IDs",
@@ -3633,10 +3787,11 @@
       "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:ST18:note:1:152-167",
-        "LM:S:ST18:note:1:161-167",
+        "LM:S:ST18:note:1:148-181",
         "LM:S:ST18:note:1:55-66",
-        "RL:S:ST18:note:1:00:at-junction"
+        "LM:S:ST18:note:1:71-99",
+        "RL:S:ST18:note:1:00:at-junction",
+        "RL:S:ST18:note:1:01:midpoint-of-entity"
       ],
       "repaired": true,
       "repair_mechanism": "condition/branch schema with branch relation and landmark IDs",
@@ -3649,7 +3804,6 @@
       "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:PC4:note:2:15-37",
         "LM:S:PC4:note:2:70-103",
         "RL:S:PC4:note:2:00:relative-to"
       ],
@@ -3664,7 +3818,6 @@
       "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:PC5:note:2:15-37",
         "LM:S:PC5:note:2:70-103",
         "RL:S:PC5:note:2:00:relative-to"
       ],
@@ -3679,7 +3832,6 @@
       "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:PC6:note:2:15-37",
         "LM:S:PC6:note:2:70-103",
         "RL:S:PC6:note:2:00:relative-to"
       ],
@@ -3727,12 +3879,12 @@
       "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:CV1:location:102-180",
-        "LM:S:CV1:location:131-169",
-        "LM:S:CV1:location:47-62",
-        "RL:S:CV1:location:00:on-line:male",
-        "RL:S:CV1:location:01:midpoint-between:male",
-        "RL:S:CV1:location:02:on-line:female"
+        "LM:S:CV1:location:102-113",
+        "LM:S:CV1:location:131-151",
+        "LM:S:CV1:location:155-169",
+        "RL:S:CV1:location:00:surface-landmark",
+        "RL:S:CV1:location:01:on-line:male",
+        "RL:S:CV1:location:02:midpoint-between:male"
       ],
       "repaired": true,
       "repair_mechanism": "condition/branch schema with branch relation and landmark IDs",
@@ -3749,7 +3901,8 @@
         "LM:S:ST1:location:37-60",
         "LM:S:ST1:location:7-11",
         "RL:S:ST1:location:00:between",
-        "RL:S:ST1:location:01:relative-to"
+        "RL:S:ST1:location:01:relative-to",
+        "RL:S:ST1:location:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -3763,8 +3916,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:ST43:location:103-141",
-        "LM:S:ST43:location:21-25",
         "LM:S:ST43:location:39-72:156c28b5",
+        "LM:S:ST43:location:50-72",
         "RL:S:ST43:location:00:between",
         "RL:S:ST43:location:01:relative-to",
         "RL:S:ST43:location:02:surface-landmark"
@@ -3782,7 +3935,7 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:ST44:location:117-120",
         "LM:S:ST44:location:125-136",
-        "LM:S:ST44:location:21-25",
+        "LM:S:ST44:location:39-60:c30c4620",
         "RL:S:ST44:location:00:between",
         "RL:S:ST44:location:01:between",
         "RL:S:ST44:location:02:relative-to"
@@ -3799,8 +3952,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:HT8:location:101-138",
-        "LM:S:HT8:location:19-23",
         "LM:S:HT8:location:32-42",
+        "LM:S:HT8:location:55-88:f036fedf",
         "RL:S:HT8:location:00:between",
         "RL:S:HT8:location:01:relative-to",
         "RL:S:HT8:location:02:surface-landmark"
@@ -3819,7 +3972,9 @@
         "LM:S:HT8:note:1:137-140",
         "LM:S:HT8:note:1:18-52:c4aef829",
         "LM:S:HT8:note:1:29-52",
-        "RL:S:HT8:note:1:00:between"
+        "RL:S:HT8:note:1:00:between",
+        "RL:S:HT8:note:1:01:same-level",
+        "RL:S:HT8:note:1:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -3832,9 +3987,9 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:KI1:note:1:157-173",
         "LM:S:KI1:note:1:174-182",
         "LM:S:KI1:note:1:188-249",
+        "LM:S:KI1:note:1:215-234",
         "RL:S:KI1:note:1:00:on-line",
         "RL:S:KI1:note:1:01:between",
         "RL:S:KI1:note:1:02:surface-landmark"
@@ -3850,10 +4005,12 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:PC7:note:1:134-153",
-        "LM:S:PC7:note:1:168-175",
-        "LM:S:PC7:note:1:247-250",
-        "RL:S:PC7:note:1:00:between"
+        "LM:S:PC7:note:1:130-153",
+        "LM:S:PC7:note:1:179-194:85f9e3d7",
+        "LM:S:PC7:note:1:203-224:c25f23ce",
+        "RL:S:PC7:note:1:00:between",
+        "RL:S:PC7:note:1:01:same-level",
+        "RL:S:PC7:note:1:02:midpoint-of-entity"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -3867,8 +4024,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:PC8:location:101-133",
-        "LM:S:PC8:location:19-23",
         "LM:S:PC8:location:32-42",
+        "LM:S:PC8:location:55-88:f036fedf",
         "RL:S:PC8:location:00:between",
         "RL:S:PC8:location:01:relative-to",
         "RL:S:PC8:location:02:surface-landmark"
@@ -3903,8 +4060,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:TE3:location:103-141",
-        "LM:S:TE3:location:21-25",
         "LM:S:TE3:location:39-72:156c28b5",
+        "LM:S:TE3:location:50-72",
         "RL:S:TE3:location:00:between",
         "RL:S:TE3:location:01:relative-to",
         "RL:S:TE3:location:02:surface-landmark"
@@ -3920,10 +4077,11 @@
       "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:TE4:note:1:133-136",
-        "LM:S:TE4:note:1:141-144",
+        "LM:S:TE4:note:1:133-144",
         "LM:S:TE4:note:1:77-110:e741c38b",
-        "RL:S:TE4:note:1:00:between"
+        "LM:S:TE4:note:1:87-110",
+        "RL:S:TE4:note:1:00:between",
+        "RL:S:TE4:note:1:01:same-level"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -3937,8 +4095,8 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:GB42:location:103-141",
-        "LM:S:GB42:location:21-25",
         "LM:S:GB42:location:39-72:156c28b5",
+        "LM:S:GB42:location:50-72",
         "RL:S:GB42:location:00:between",
         "RL:S:GB42:location:01:relative-to",
         "RL:S:GB42:location:02:surface-landmark"
@@ -3956,7 +4114,7 @@
       "v2_affected_node_or_relation_ids": [
         "LM:S:LR3:location:102-145",
         "LM:S:LR3:location:156-177",
-        "LM:S:LR3:location:21-25",
+        "LM:S:LR3:location:39-72:6c398dd4",
         "RL:S:LR3:location:00:between",
         "RL:S:LR3:location:01:relative-to",
         "RL:S:LR3:location:02:surface-landmark"
@@ -3976,7 +4134,8 @@
         "LM:S:LR3:note:1:140-145",
         "LM:S:LR3:note:1:149-169",
         "RL:S:LR3:note:1:00:between",
-        "RL:S:LR3:note:1:01:surface-landmark"
+        "RL:S:LR3:note:1:01:surface-landmark",
+        "RL:S:LR3:note:1:02:surface-landmark"
       ],
       "repaired": true,
       "repair_mechanism": "source-span / expected-argument explicit binding",
@@ -3990,7 +4149,7 @@
       "severity": "CRITICAL",
       "v2_affected_node_or_relation_ids": [
         "LM:S:GV16:location:103-113",
-        "LM:S:GV16:location:126-144",
+        "LM:S:GV16:location:122-144",
         "LM:S:GV16:location:57-94",
         "RL:S:GV16:location:00:between",
         "RL:S:GV16:location:01:relative-to",
@@ -4007,9 +4166,9 @@
       "v1_defect_class": "SOURCE_RELATION_OVERGENERATION",
       "severity": "MAJOR",
       "v2_affected_node_or_relation_ids": [
-        "LM:S:KI1:note:1:157-173",
         "LM:S:KI1:note:1:174-182",
         "LM:S:KI1:note:1:188-249",
+        "LM:S:KI1:note:1:215-234",
         "RL:S:KI1:note:1:00:on-line",
         "RL:S:KI1:note:1:01:between",
         "RL:S:KI1:note:1:02:surface-landmark"
