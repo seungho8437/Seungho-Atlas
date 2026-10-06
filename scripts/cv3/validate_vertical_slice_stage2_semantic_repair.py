@@ -135,20 +135,26 @@ def mutate_distinct_same_hash(out,g):
  return m
 
 def mutate_same_level_parent(out,g):
- m=copy.deepcopy(out);bnodes,children,_=build_maps(g);p=next(x for x in m["points"] if x["point_id"]=="BL17")
- for rid,r in p["relations"].items():
-  con=r.setdefault("constraint",{})
-  op=con.get("op") or r.get("executor")
-  if op=="same_level_plane":
+ m=copy.deepcopy(out);bnodes,children,_=build_maps(g)
+ binding_by_child={x["child_landmark_id"]:x for x in g.get("composite_bindings",[])}
+ # Prefer BL17, then any same-level relation carrying a bound child operand.
+ points=sorted(m["points"],key=lambda x:(x["point_id"]!="BL17",x["point_id"]))
+ for p in points:
+  for rid,r in p["relations"].items():
+   con=r.setdefault("constraint",{});op=con.get("op") or r.get("executor")
+   if op!="same_level_plane":continue
    semantic=con.get("semantic_argument_node_ids") or r.get("semantic_argument_node_ids") or r.get("argument_node_ids") or []
-   for par in semantic:
-    kids=[k for k in children.get(par,[]) if sf(bnodes.get(k,{}).get("source_raw"))]
-    if kids:
+   executable=con.get("executable_argument_node_ids") or semantic
+   for child in list(executable)+list(semantic):
+    b=binding_by_child.get(child)
+    if b and sf(bnodes.get(child,{}).get("source_raw")):
+     par=b["parent_landmark_id"]
      p["landmarks"][par]={"status":"RESOLVED","executor":"fma_mesh","geometry":{"kind":"fma_concept","fma_id":"FMA_FORGED_PARENT","part_ids":["FORGED"]}}
-     con.update({"op":"same_level_plane","semantic_argument_node_ids":semantic,"executable_argument_node_ids":[par if x in kids else x for x in (con.get("executable_argument_node_ids") or semantic)],
-       "operand_binding_trace":[{"semantic_operand_id":par,"executable_operand_id":par,"binding":"identity"}]})
+     con.update({"op":"same_level_plane","semantic_argument_node_ids":semantic,
+       "executable_argument_node_ids":[par if x==child else x for x in executable],
+       "operand_binding_trace":[{"semantic_operand_id":child,"executable_operand_id":par,"binding":"FORGED_PARENT_REPLACEMENT"}]})
      r["status"]="RESOLVED";return m
- raise RuntimeError("BL17 same-level composite parent unavailable")
+ raise RuntimeError("no same-level bound child available")
 
 def mutate_te20_condition(out):
  m=copy.deepcopy(out);p=next(x for x in m["points"] if x["point_id"]=="TE20")
