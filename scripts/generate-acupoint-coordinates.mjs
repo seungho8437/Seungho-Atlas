@@ -392,6 +392,8 @@ function applyWhoConstraints(input,text,side){
   }
   if(/팔오금주름\s*위/.test(text)&&!/[0-9]\s*B-cun/.test(text)){t[supAxis]=elbowLevel(side);count++;}
   if(/손바닥쪽\s*손목주름\s*위에/.test(text)){t[supAxis]=wristLevel(side);count++;}
+  if(/손등쪽\s*손목주름/.test(text)&&!/(?:위로|아래로|몸쪽으로|먼쪽으로)[^,.]{0,20}\d+(?:\.\d+)?\s*B-cun/.test(text)){t[supAxis]=wristLevel(side);count++;}
+  if(/^손목/.test(text)&&!/\d+(?:\.\d+)?\s*B-cun/.test(text)){t[supAxis]=wristLevel(side);count++;}
   if(!/팔오금주름/.test(text)&&/오금주름의\s*가운데|오금주름\s*위/.test(text)){t[supAxis]=kneeLevel(side);count++;}
   if(/코끝/.test(text)&&noseTipAnchor){for(let k=0;k<3;k++)t[k]=noseTipAnchor[k];count+=3;}
   if(/인중(?:의)?\s*정중선|인중의\s*중점/.test(text)){t[supAxis]=norm(supAxis,.835);count++;}
