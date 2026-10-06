@@ -44,8 +44,9 @@ function evaluate(d){
   const confidence=records.map(p=>p.confidence);
   const lowGone=d.kind!=='low-confidence'||confidence.every(x=>x!=='low');
   const modelCaveat=d.kind==='low-confidence'&&records.some(p=>(p.validation.specificLandmarkCount||0)===0);
+  const quarantined=records.some(p=>p.status==='review-needed');
   const pass=surfaceOk&&separated&&directional&&lowGone;
-  return {...d,status:pass?(modelCaveat?'accepted-with-model-caveat':'pass'):'review-required',
+  return {...d,status:pass?(modelCaveat?'accepted-with-model-caveat':'pass'):(quarantined?'quarantined-review-needed':'review-required'),
     surfaceAndLaterality:surfaceOk,directionalConstraint:directional,separationThreshold:+(diag*.01).toFixed(4),
     pairDistances,confidence,projectionDistances:records.map(p=>({id:p.acupointId,side:p.side,distance:p.validation.projectionDistance})),
     caveat:modelCaveat?'WHO textual constraints and BodyParts3D surface projection carry this localization because no specific B-landmark mesh was counted.':null};
@@ -84,4 +85,4 @@ svg+=`<text x="70" y="${H-55}" class="s">Global QC: near clusters ${audit.duplic
 fs.writeFileSync(new URL('public/knowledge/acupoint-coordinate-exception-review.svg',root),svg);
 const reviewRequired=report.reviews.filter(r=>r.status==='review-required');
 if(reviewRequired.length)throw new Error('Focused acupoint exception review failed: '+JSON.stringify(reviewRequired.map(r=>r.key)));
-console.log(JSON.stringify({reviewedGroups:reviews.length,statuses:reviews.reduce((m,r)=>(m[r.status]=(m[r.status]||0)+1,m),{})},null,2));
+console.log(JSON.stringify({reviewedGroups:reviews.length,statuses:reviews.reduce((m,r)=>(m[r.status]=(m[r.status]||0)+1,m),{}),quarantinedGroups:reviews.filter(r=>r.status==='quarantined-review-needed').length},null,2));
