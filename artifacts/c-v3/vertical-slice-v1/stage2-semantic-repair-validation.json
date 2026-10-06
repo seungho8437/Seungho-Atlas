@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "artifact": "c-v3-stage2-semantic-repair-validation",
   "status": "PASS",
-  "checks": 295,
+  "checks": 304,
   "errors": 0,
   "error_details": [],
   "coverage": {
@@ -11,9 +11,20 @@
   },
   "remaining_defects": [],
   "pre_repair_scan": {
-    "total": 626,
-    "new_regression_defects_outside_known8": 385,
+    "total": 644,
+    "new_regression_defects_outside_known8": 391,
     "new_regression_findings": [
+      {
+        "rule": "subfeature_synonym_normalization_gap",
+        "point_id": "HT7",
+        "node_id": "LM:S:HT7:note:1:38-54",
+        "source_raw": "proxi-mal border",
+        "expected": {
+          "source_lexical_form": "border",
+          "canonical_subfeature_type": "border"
+        },
+        "actual": null
+      },
       {
         "rule": "relation_nonoperand_semantics_loss",
         "point_id": "HT7",
@@ -465,6 +476,17 @@
         "rule": "operand_trace_incomplete",
         "point_id": "ST1",
         "relation_id": "RL:S:ST1:location:02:surface-landmark"
+      },
+      {
+        "rule": "subfeature_synonym_normalization_gap",
+        "point_id": "GB14",
+        "node_id": "LM:S:GB14:location:72-78",
+        "source_raw": "centre",
+        "expected": {
+          "source_lexical_form": "centre",
+          "canonical_subfeature_type": "center"
+        },
+        "actual": null
       },
       {
         "rule": "relation_nonoperand_semantics_loss",
@@ -1824,6 +1846,39 @@
         "relation_id": "RL21:S:LI7:location:77-81:reference-acupoint:bbace3ac1c"
       },
       {
+        "rule": "subfeature_synonym_normalization_gap",
+        "point_id": "GB26",
+        "node_id": "LM:S:GB26:location:40-54",
+        "source_raw": "free extremity",
+        "expected": {
+          "source_lexical_form": "free extremity",
+          "canonical_subfeature_type": "free_end"
+        },
+        "actual": null
+      },
+      {
+        "rule": "subfeature_synonym_normalization_gap",
+        "point_id": "GB26",
+        "node_id": "LM:S:GB26:location:97-103",
+        "source_raw": "centre",
+        "expected": {
+          "source_lexical_form": "centre",
+          "canonical_subfeature_type": "center"
+        },
+        "actual": null
+      },
+      {
+        "rule": "subfeature_synonym_normalization_gap",
+        "point_id": "GB26",
+        "node_id": "LM:S:GB26:note:1:85-99",
+        "source_raw": "free extremity",
+        "expected": {
+          "source_lexical_form": "free extremity",
+          "canonical_subfeature_type": "free_end"
+        },
+        "actual": null
+      },
+      {
         "rule": "relation_nonoperand_semantics_loss",
         "point_id": "GB26",
         "relation_id": "RL:S:GB26:location:00:relative-to",
@@ -2109,6 +2164,14 @@
         "rule": "operand_trace_incomplete",
         "point_id": "GB26",
         "relation_id": "RL21:S:GB26:note:2:55-58:reference-acupoint:3e3fd2558d"
+      },
+      {
+        "rule": "child_subfeature_false_fallback",
+        "point_id": "GB26",
+        "node_id": "LM:S:GB26:location:40-54",
+        "subfeature": "free_end",
+        "geometry_kind": "entity_subfeature",
+        "identity": null
       },
       {
         "rule": "relation_nonoperand_semantics_loss",
@@ -2988,6 +3051,8 @@
     "condition_linkage_loss": 0,
     "quantitative_relation_semantics_loss": 0,
     "derived_geometry_output_not_bound": 0,
+    "lexicalized_anatomical_entity_false_subfeature_split": 0,
+    "subfeature_synonym_normalization_gap": 0,
     "false_fallback": 0
   },
   "negative_tests": {
@@ -3002,7 +3067,11 @@
     "direction_lateral_to_none": true,
     "quantitative_value_to_none": true,
     "quantitative_unit_to_none": true,
-    "derived_output_binding_removed": true
+    "derived_output_binding_removed": true,
+    "lexicalized_process_generic_split": true,
+    "atomic_fma_internal_child_executable": true,
+    "free_extremity_normalization_removed": true,
+    "synonym_left_unknown": true
   },
   "coordinate_generation_count": 0,
   "legacy_c_coordinate_reference_count": 0,

@@ -3,7 +3,7 @@
   "artifact": "c-v3-stage2-semantic-repair-human-review-data",
   "human_review_disposition": "PENDING",
   "before_sha256": "d70c437a536d21765a91693fd8e292b47cb3f157f89b503b135e52b974b74d86",
-  "after_sha256": "4b33764765c0889ce557f535fa64166bc0c62ace7ada4cf4a09c84705b854448",
+  "after_sha256": "e2f9edd26ef5fe40a45e5760d8d39b0120ce6e8b4e2089ab1fbf4de41a419b99",
   "validation_status": "PASS",
   "stage3": "NOT_STARTED",
   "points": [
@@ -31,6 +31,10 @@
           "semantic_class": "muscle",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -56,6 +60,10 @@
           "semantic_class": "muscle",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -81,6 +89,10 @@
           "semantic_class": "cartilage",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -106,6 +118,10 @@
           "semantic_class": "boundary.border",
           "parent_entity": "LM:S:LI18:location:84-101",
           "child_subfeature": "superior border",
+          "source_lexical_form": "superior border",
+          "canonical_subfeature_type": "superior_border",
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "composite_subfeature_binding",
           "status": "UNRESOLVED",
           "identity": {
@@ -131,6 +147,10 @@
           "semantic_class": "surface.aspect",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -156,6 +176,10 @@
           "semantic_class": "cartilage",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -201,7 +225,10 @@
               "node_id": "LM:S:LI18:location:61-76",
               "source_raw": "superior border",
               "semantic_identity": {
-                "landmark_class": "boundary.border"
+                "landmark_class": "boundary.border",
+                "source_lexical_form": "superior border",
+                "canonical_subfeature_type": "superior_border",
+                "semantic_suppressed": false
               },
               "executable_identity": {
                 "kind": null,
@@ -218,7 +245,8 @@
                 "producer_relation_id": null,
                 "derived_geometry_id": null
               },
-              "status": "UNRESOLVED"
+              "status": "UNRESOLVED",
+              "reason": "no approved executable construction rule for canonical subfeature 'superior_border'"
             }
           ]
         }
@@ -678,6 +706,10 @@
           "semantic_class": "boundary.border",
           "parent_entity": "LM:S:ST10:location:111-142",
           "child_subfeature": " border",
+          "source_lexical_form": "border",
+          "canonical_subfeature_type": "border",
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "composite_subfeature_binding",
           "status": "UNRESOLVED",
           "identity": {
@@ -703,6 +735,10 @@
           "semantic_class": "muscle",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -728,6 +764,10 @@
           "semantic_class": "cartilage",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -753,6 +793,10 @@
           "semantic_class": "region.body_region",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -778,6 +822,10 @@
           "semantic_class": "muscle",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -823,7 +871,10 @@
               "node_id": "LM:S:ST10:location:100-107",
               "source_raw": " border",
               "semantic_identity": {
-                "landmark_class": "boundary.border"
+                "landmark_class": "boundary.border",
+                "source_lexical_form": "border",
+                "canonical_subfeature_type": "border",
+                "semantic_suppressed": false
               },
               "executable_identity": {
                 "kind": null,
@@ -840,7 +891,8 @@
                 "producer_relation_id": null,
                 "derived_geometry_id": null
               },
-              "status": "UNRESOLVED"
+              "status": "UNRESOLVED",
+              "reason": "no approved executable construction rule for canonical subfeature 'border'"
             }
           ]
         }
@@ -1260,6 +1312,10 @@
           "semantic_class": "boundary.border",
           "parent_entity": "LM:S:LI17:location:112-143",
           "child_subfeature": " border",
+          "source_lexical_form": "border",
+          "canonical_subfeature_type": "border",
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "composite_subfeature_binding",
           "status": "UNRESOLVED",
           "identity": {
@@ -1285,6 +1341,10 @@
           "semantic_class": "muscle",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -1310,6 +1370,10 @@
           "semantic_class": "cartilage",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -1335,6 +1399,10 @@
           "semantic_class": "surface.aspect",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -1360,6 +1428,10 @@
           "semantic_class": "muscle",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -1385,6 +1457,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -1410,6 +1486,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -1455,7 +1535,10 @@
               "node_id": "LM:S:LI17:location:101-108",
               "source_raw": " border",
               "semantic_identity": {
-                "landmark_class": "boundary.border"
+                "landmark_class": "boundary.border",
+                "source_lexical_form": "border",
+                "canonical_subfeature_type": "border",
+                "semantic_suppressed": false
               },
               "executable_identity": {
                 "kind": null,
@@ -1472,7 +1555,8 @@
                 "producer_relation_id": null,
                 "derived_geometry_id": null
               },
-              "status": "UNRESOLVED"
+              "status": "UNRESOLVED",
+              "reason": "no approved executable construction rule for canonical subfeature 'border'"
             }
           ]
         }
@@ -2300,6 +2384,10 @@
           "semantic_class": "line.anatomical_line",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -2325,6 +2413,10 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -2350,6 +2442,10 @@
           "semantic_class": "boundary.border",
           "parent_entity": "LM:S:BL17:location:70-127",
           "child_subfeature": "inferior border",
+          "source_lexical_form": "inferior border",
+          "canonical_subfeature_type": "inferior_border",
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "composite_subfeature_binding",
           "status": "UNRESOLVED",
           "identity": {
@@ -2375,6 +2471,10 @@
           "semantic_class": "region.body_region",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -2400,11 +2500,15 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
-          "executor": "bound_composite_subfeature",
-          "status": "UNRESOLVED",
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
+          "executor": "fma_mesh",
+          "status": "RESOLVED",
           "identity": {
-            "kind": null,
-            "fma_id": null,
+            "kind": "fma_concept",
+            "fma_id": "FMA9968",
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -2417,7 +2521,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
+          "reason": null
         },
         {
           "node_id": "LM:S:BL17:note:1:64-116",
@@ -2425,11 +2529,15 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
-          "executor": "bound_composite_subfeature",
-          "status": "UNRESOLVED",
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
+          "executor": "fma_mesh",
+          "status": "RESOLVED",
           "identity": {
-            "kind": null,
-            "fma_id": null,
+            "kind": "fma_concept",
+            "fma_id": "FMA9968",
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -2442,7 +2550,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
+          "reason": null
         },
         {
           "node_id": "LM:S:BL17:note:1:75-83",
@@ -2450,7 +2558,11 @@
           "semantic_class": "bone.process_or_prominence",
           "parent_entity": "LM:S:BL17:note:1:87-116",
           "child_subfeature": " process",
-          "executor": "composite_subfeature_binding",
+          "source_lexical_form": "process",
+          "canonical_subfeature_type": "process",
+          "semantic_suppressed": true,
+          "suppressed_by_atomic_landmark_id": "LM:S:BL17:note:1:64-116",
+          "executor": "lexicalized_entity_guard",
           "status": "UNRESOLVED",
           "identity": {
             "kind": null,
@@ -2467,7 +2579,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "no approved executable construction rule for canonical subfeature 'process'"
+          "reason": "LEXICALIZED_ANATOMICAL_ENTITY_FALSE_SUBFEATURE_SPLIT_SUPPRESSED"
         },
         {
           "node_id": "LM:S:BL17:note:1:87-116",
@@ -2475,6 +2587,10 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -2499,10 +2615,10 @@
         {
           "parent_node_id": "LM:S:BL17:location:70-127",
           "parent_source_raw": "the spinous process of the seventh thoracic vertebra (T7)",
-          "parent_status": "UNRESOLVED",
+          "parent_status": "RESOLVED",
           "parent_semantic_identity": {
-            "kind": null,
-            "fma_id": null,
+            "kind": "fma_concept",
+            "fma_id": "FMA9968",
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -2520,7 +2636,10 @@
               "node_id": "LM:S:BL17:location:51-66",
               "source_raw": "inferior border",
               "semantic_identity": {
-                "landmark_class": "boundary.border"
+                "landmark_class": "boundary.border",
+                "source_lexical_form": "inferior border",
+                "canonical_subfeature_type": "inferior_border",
+                "semantic_suppressed": false
               },
               "executable_identity": {
                 "kind": null,
@@ -2537,7 +2656,8 @@
                 "producer_relation_id": null,
                 "derived_geometry_id": null
               },
-              "status": "UNRESOLVED"
+              "status": "UNRESOLVED",
+              "reason": "no approved executable construction rule for canonical subfeature 'inferior_border'"
             }
           ]
         },
@@ -2565,7 +2685,10 @@
               "node_id": "LM:S:BL17:note:1:75-83",
               "source_raw": " process",
               "semantic_identity": {
-                "landmark_class": "bone.process_or_prominence"
+                "landmark_class": "bone.process_or_prominence",
+                "source_lexical_form": "process",
+                "canonical_subfeature_type": "process",
+                "semantic_suppressed": true
               },
               "executable_identity": {
                 "kind": null,
@@ -2582,7 +2705,8 @@
                 "producer_relation_id": null,
                 "derived_geometry_id": null
               },
-              "status": "UNRESOLVED"
+              "status": "UNRESOLVED",
+              "reason": "LEXICALIZED_ANATOMICAL_ENTITY_FALSE_SUBFEATURE_SPLIT_SUPPRESSED"
             }
           ]
         }
@@ -2675,7 +2799,7 @@
             "LM:S:BL17:note:1:64-116"
           ],
           "actual_executable_operand_ids": [
-            "LM:S:BL17:note:1:75-83"
+            "LM:S:BL17:note:1:64-116"
           ],
           "direction": null,
           "branch_id": null,
@@ -2684,8 +2808,8 @@
           "quantitative_constraints": [],
           "statement_measurement_ids": [],
           "semantic_fields_hash": "31a6d961162176ebafd9aa3c27d47efedeec7a2953c1f917973bc0d9b90b2f85",
-          "status": "UNRESOLVED",
-          "reason": "executable operand not uniquely executable"
+          "status": "RESOLVED",
+          "reason": null
         }
       ],
       "measurements": [
@@ -2747,11 +2871,6 @@
         },
         {
           "from": "LM:S:BL17:note:1:64-116",
-          "to": "LM:S:BL17:note:1:75-83",
-          "kind": "semantic_to_executable"
-        },
-        {
-          "from": "LM:S:BL17:note:1:75-83",
           "to": "RL:S:BL17:note:1:00:same-level",
           "kind": "executable_to_relation"
         },
@@ -2848,78 +2967,6 @@
               "concept_id": null,
               "reference_point_id": null,
               "parent_landmark_id": "LM:S:BL17:location:70-127",
-              "subfeature_type": null,
-              "construction_rule": null,
-              "producer_relation_id": null,
-              "derived_geometry_id": null
-            },
-            "after_status": "UNRESOLVED",
-            "after_identity": {
-              "kind": null,
-              "fma_id": null,
-              "registry_id": null,
-              "constructed_id": null,
-              "geometry_hash": null,
-              "part_id": null,
-              "concept_id": null,
-              "reference_point_id": null,
-              "parent_landmark_id": null,
-              "subfeature_type": null,
-              "construction_rule": null,
-              "producer_relation_id": null,
-              "derived_geometry_id": null
-            }
-          },
-          {
-            "node_id": "LM:S:BL17:location:70-127",
-            "source_raw": "the spinous process of the seventh thoracic vertebra (T7)",
-            "before_status": "RESOLVED",
-            "before_identity": {
-              "kind": "fma_concept",
-              "fma_id": "FMA9968",
-              "registry_id": null,
-              "constructed_id": null,
-              "geometry_hash": null,
-              "part_id": null,
-              "concept_id": null,
-              "reference_point_id": null,
-              "parent_landmark_id": null,
-              "subfeature_type": null,
-              "construction_rule": null,
-              "producer_relation_id": null,
-              "derived_geometry_id": null
-            },
-            "after_status": "UNRESOLVED",
-            "after_identity": {
-              "kind": null,
-              "fma_id": null,
-              "registry_id": null,
-              "constructed_id": null,
-              "geometry_hash": null,
-              "part_id": null,
-              "concept_id": null,
-              "reference_point_id": null,
-              "parent_landmark_id": null,
-              "subfeature_type": null,
-              "construction_rule": null,
-              "producer_relation_id": null,
-              "derived_geometry_id": null
-            }
-          },
-          {
-            "node_id": "LM:S:BL17:note:1:64-116",
-            "source_raw": "the spinous process of the seventh thoracic vertebra",
-            "before_status": "RESOLVED",
-            "before_identity": {
-              "kind": "fma_concept",
-              "fma_id": "FMA9968",
-              "registry_id": null,
-              "constructed_id": null,
-              "geometry_hash": null,
-              "part_id": null,
-              "concept_id": null,
-              "reference_point_id": null,
-              "parent_landmark_id": null,
               "subfeature_type": null,
               "construction_rule": null,
               "producer_relation_id": null,
@@ -3220,9 +3267,33 @@
               }
             },
             "after": {
-              "status": "UNRESOLVED",
+              "status": "RESOLVED",
               "executor": "same_level_plane",
-              "reason": "executable operand not uniquely executable",
+              "constraint": {
+                "op": "same_level_plane",
+                "relation_type": "same-level",
+                "source_statement_id": "S:BL17:note:1",
+                "branch_id": null,
+                "semantic_argument_node_ids": [
+                  "LM:S:BL17:note:1:64-116"
+                ],
+                "bound_measurement_ids": [],
+                "quantitative_constraints": [],
+                "statement_measurement_ids": [],
+                "argument_node_ids": [
+                  "LM:S:BL17:note:1:64-116"
+                ],
+                "executable_argument_node_ids": [
+                  "LM:S:BL17:note:1:64-116"
+                ],
+                "operand_binding_trace": [
+                  {
+                    "semantic_operand_id": "LM:S:BL17:note:1:64-116",
+                    "executable_operand_id": "LM:S:BL17:note:1:64-116",
+                    "binding": "identity"
+                  }
+                ]
+              },
               "semantic_fields": {
                 "op": "same_level_plane",
                 "relation_type": "same-level",
@@ -3239,13 +3310,13 @@
                 "LM:S:BL17:note:1:64-116"
               ],
               "executable_argument_node_ids": [
-                "LM:S:BL17:note:1:75-83"
+                "LM:S:BL17:note:1:64-116"
               ],
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:BL17:note:1:64-116",
-                  "executable_operand_id": "LM:S:BL17:note:1:75-83",
-                  "binding": "child_subfeature"
+                  "executable_operand_id": "LM:S:BL17:note:1:64-116",
+                  "binding": "identity"
                 }
               ],
               "semantic_fields_hash": "31a6d961162176ebafd9aa3c27d47efedeec7a2953c1f917973bc0d9b90b2f85"
@@ -3280,6 +3351,10 @@
           "semantic_class": "line.anatomical_line",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -3305,6 +3380,10 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -3330,6 +3409,10 @@
           "semantic_class": "boundary.border",
           "parent_entity": "LM:S:BL23:location:66-120",
           "child_subfeature": "inferior border",
+          "source_lexical_form": "inferior border",
+          "canonical_subfeature_type": "inferior_border",
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "composite_subfeature_binding",
           "status": "UNRESOLVED",
           "identity": {
@@ -3355,11 +3438,15 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
-          "executor": "bound_composite_subfeature",
-          "status": "UNRESOLVED",
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
+          "executor": "fma_mesh",
+          "status": "RESOLVED",
           "identity": {
-            "kind": null,
-            "fma_id": null,
+            "kind": "fma_concept",
+            "fma_id": "FMA13073",
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -3372,7 +3459,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
+          "reason": null
         },
         {
           "node_id": "LM:S:BL23:location:7-20",
@@ -3380,6 +3467,10 @@
           "semantic_class": "region.body_region",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -3404,10 +3495,10 @@
         {
           "parent_node_id": "LM:S:BL23:location:66-120",
           "parent_source_raw": "the spinous process of the second lumbar vertebra (L2)",
-          "parent_status": "UNRESOLVED",
+          "parent_status": "RESOLVED",
           "parent_semantic_identity": {
-            "kind": null,
-            "fma_id": null,
+            "kind": "fma_concept",
+            "fma_id": "FMA13073",
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -3425,7 +3516,10 @@
               "node_id": "LM:S:BL23:location:47-62",
               "source_raw": "inferior border",
               "semantic_identity": {
-                "landmark_class": "boundary.border"
+                "landmark_class": "boundary.border",
+                "source_lexical_form": "inferior border",
+                "canonical_subfeature_type": "inferior_border",
+                "semantic_suppressed": false
               },
               "executable_identity": {
                 "kind": null,
@@ -3442,7 +3536,8 @@
                 "producer_relation_id": null,
                 "derived_geometry_id": null
               },
-              "status": "UNRESOLVED"
+              "status": "UNRESOLVED",
+              "reason": "no approved executable construction rule for canonical subfeature 'inferior_border'"
             }
           ]
         }
@@ -3663,42 +3758,6 @@
               "concept_id": null,
               "reference_point_id": null,
               "parent_landmark_id": "LM:S:BL23:location:66-120",
-              "subfeature_type": null,
-              "construction_rule": null,
-              "producer_relation_id": null,
-              "derived_geometry_id": null
-            },
-            "after_status": "UNRESOLVED",
-            "after_identity": {
-              "kind": null,
-              "fma_id": null,
-              "registry_id": null,
-              "constructed_id": null,
-              "geometry_hash": null,
-              "part_id": null,
-              "concept_id": null,
-              "reference_point_id": null,
-              "parent_landmark_id": null,
-              "subfeature_type": null,
-              "construction_rule": null,
-              "producer_relation_id": null,
-              "derived_geometry_id": null
-            }
-          },
-          {
-            "node_id": "LM:S:BL23:location:66-120",
-            "source_raw": "the spinous process of the second lumbar vertebra (L2)",
-            "before_status": "RESOLVED",
-            "before_identity": {
-              "kind": "fma_concept",
-              "fma_id": "FMA13073",
-              "registry_id": null,
-              "constructed_id": null,
-              "geometry_hash": null,
-              "part_id": null,
-              "concept_id": null,
-              "reference_point_id": null,
-              "parent_landmark_id": null,
               "subfeature_type": null,
               "construction_rule": null,
               "producer_relation_id": null,
@@ -3977,6 +4036,10 @@
           "semantic_class": "line.anatomical_line",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -4002,6 +4065,10 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -4027,6 +4094,10 @@
           "semantic_class": "boundary.border",
           "parent_entity": "LM:S:BL25:location:66-120",
           "child_subfeature": "inferior border",
+          "source_lexical_form": "inferior border",
+          "canonical_subfeature_type": "inferior_border",
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "composite_subfeature_binding",
           "status": "UNRESOLVED",
           "identity": {
@@ -4052,11 +4123,15 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
-          "executor": "bound_composite_subfeature",
-          "status": "UNRESOLVED",
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
+          "executor": "fma_mesh",
+          "status": "RESOLVED",
           "identity": {
-            "kind": null,
-            "fma_id": null,
+            "kind": "fma_concept",
+            "fma_id": "FMA13075",
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -4069,7 +4144,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
+          "reason": null
         },
         {
           "node_id": "LM:S:BL25:location:7-20",
@@ -4077,6 +4152,10 @@
           "semantic_class": "region.body_region",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -4101,10 +4180,10 @@
         {
           "parent_node_id": "LM:S:BL25:location:66-120",
           "parent_source_raw": "the spinous process of the fourth lumbar vertebra (L4)",
-          "parent_status": "UNRESOLVED",
+          "parent_status": "RESOLVED",
           "parent_semantic_identity": {
-            "kind": null,
-            "fma_id": null,
+            "kind": "fma_concept",
+            "fma_id": "FMA13075",
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -4122,7 +4201,10 @@
               "node_id": "LM:S:BL25:location:47-62",
               "source_raw": "inferior border",
               "semantic_identity": {
-                "landmark_class": "boundary.border"
+                "landmark_class": "boundary.border",
+                "source_lexical_form": "inferior border",
+                "canonical_subfeature_type": "inferior_border",
+                "semantic_suppressed": false
               },
               "executable_identity": {
                 "kind": null,
@@ -4139,7 +4221,8 @@
                 "producer_relation_id": null,
                 "derived_geometry_id": null
               },
-              "status": "UNRESOLVED"
+              "status": "UNRESOLVED",
+              "reason": "no approved executable construction rule for canonical subfeature 'inferior_border'"
             }
           ]
         }
@@ -4360,42 +4443,6 @@
               "concept_id": null,
               "reference_point_id": null,
               "parent_landmark_id": "LM:S:BL25:location:66-120",
-              "subfeature_type": null,
-              "construction_rule": null,
-              "producer_relation_id": null,
-              "derived_geometry_id": null
-            },
-            "after_status": "UNRESOLVED",
-            "after_identity": {
-              "kind": null,
-              "fma_id": null,
-              "registry_id": null,
-              "constructed_id": null,
-              "geometry_hash": null,
-              "part_id": null,
-              "concept_id": null,
-              "reference_point_id": null,
-              "parent_landmark_id": null,
-              "subfeature_type": null,
-              "construction_rule": null,
-              "producer_relation_id": null,
-              "derived_geometry_id": null
-            }
-          },
-          {
-            "node_id": "LM:S:BL25:location:66-120",
-            "source_raw": "the spinous process of the fourth lumbar vertebra (L4)",
-            "before_status": "RESOLVED",
-            "before_identity": {
-              "kind": "fma_concept",
-              "fma_id": "FMA13075",
-              "registry_id": null,
-              "constructed_id": null,
-              "geometry_hash": null,
-              "part_id": null,
-              "concept_id": null,
-              "reference_point_id": null,
-              "parent_landmark_id": null,
               "subfeature_type": null,
               "construction_rule": null,
               "producer_relation_id": null,
@@ -4686,6 +4733,10 @@
           "semantic_class": "muscle",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -4711,6 +4762,10 @@
           "semantic_class": "vessel",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -4736,6 +4791,10 @@
           "semantic_class": "cartilage",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -4761,6 +4820,10 @@
           "semantic_class": "boundary.border",
           "parent_entity": "LM:S:ST9:location:84-101",
           "child_subfeature": "superior border",
+          "source_lexical_form": "superior border",
+          "canonical_subfeature_type": "superior_border",
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "composite_subfeature_binding",
           "status": "UNRESOLVED",
           "identity": {
@@ -4786,6 +4849,10 @@
           "semantic_class": "region.body_region",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -4811,6 +4878,10 @@
           "semantic_class": "cartilage",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -4836,6 +4907,10 @@
           "semantic_class": "muscle",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -4861,6 +4936,10 @@
           "semantic_class": "muscle",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -4886,6 +4965,10 @@
           "semantic_class": "muscle",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -4911,6 +4994,10 @@
           "semantic_class": "muscle",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -4936,6 +5023,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -4961,6 +5052,10 @@
           "semantic_class": "boundary.border",
           "parent_entity": "LM:S:ST9:note:2:82-103",
           "child_subfeature": "superior border",
+          "source_lexical_form": "superior border",
+          "canonical_subfeature_type": "superior_border",
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "composite_subfeature_binding",
           "status": "UNRESOLVED",
           "identity": {
@@ -4986,6 +5081,10 @@
           "semantic_class": "cartilage",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -5011,6 +5110,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -5036,6 +5139,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -5061,6 +5168,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -5106,7 +5217,10 @@
               "node_id": "LM:S:ST9:location:61-76",
               "source_raw": "superior border",
               "semantic_identity": {
-                "landmark_class": "boundary.border"
+                "landmark_class": "boundary.border",
+                "source_lexical_form": "superior border",
+                "canonical_subfeature_type": "superior_border",
+                "semantic_suppressed": false
               },
               "executable_identity": {
                 "kind": null,
@@ -5123,7 +5237,8 @@
                 "producer_relation_id": null,
                 "derived_geometry_id": null
               },
-              "status": "UNRESOLVED"
+              "status": "UNRESOLVED",
+              "reason": "no approved executable construction rule for canonical subfeature 'superior_border'"
             }
           ]
         },
@@ -5151,7 +5266,10 @@
               "node_id": "LM:S:ST9:note:2:63-78",
               "source_raw": "superior border",
               "semantic_identity": {
-                "landmark_class": "boundary.border"
+                "landmark_class": "boundary.border",
+                "source_lexical_form": "superior border",
+                "canonical_subfeature_type": "superior_border",
+                "semantic_suppressed": false
               },
               "executable_identity": {
                 "kind": null,
@@ -5168,7 +5286,8 @@
                 "producer_relation_id": null,
                 "derived_geometry_id": null
               },
-              "status": "UNRESOLVED"
+              "status": "UNRESOLVED",
+              "reason": "no approved executable construction rule for canonical subfeature 'superior_border'"
             }
           ]
         }
@@ -6668,6 +6787,10 @@
           "semantic_class": "soft_tissue_feature",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -6693,6 +6816,10 @@
           "semantic_class": "region.body_region",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -6988,6 +7115,7 @@
       "previous_stage2_status": "UNRESOLVED",
       "repaired_stage2_status": "UNRESOLVED",
       "defect_family": [
+        "subfeature_synonym_normalization_gap",
         "relation_nonoperand_semantics_loss",
         "relation_nonoperand_semantics_loss",
         "relation_nonoperand_semantics_loss",
@@ -7040,6 +7168,10 @@
           "semantic_class": "tendon",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -7065,6 +7197,10 @@
           "semantic_class": "surface.aspect",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -7090,6 +7226,10 @@
           "semantic_class": "crease.skin_crease",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -7115,6 +7255,10 @@
           "semantic_class": "fossa_or_depression",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "explicit_unresolved_taxonomy",
           "status": "UNRESOLVED",
           "identity": {
@@ -7140,6 +7284,10 @@
           "semantic_class": "boundary.border",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -7165,6 +7313,10 @@
           "semantic_class": "boundary.border",
           "parent_entity": "LM:S:HT7:note:1:58-75",
           "child_subfeature": "proxi-mal border",
+          "source_lexical_form": "border",
+          "canonical_subfeature_type": "border",
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "composite_subfeature_binding",
           "status": "UNRESOLVED",
           "identity": {
@@ -7190,6 +7342,10 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "atlas_name_resolution",
           "status": "MULTIPLE",
           "identity": {
@@ -7215,6 +7371,10 @@
           "semantic_class": "crease.skin_crease",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -7260,7 +7420,10 @@
               "node_id": "LM:S:HT7:note:1:38-54",
               "source_raw": "proxi-mal border",
               "semantic_identity": {
-                "landmark_class": "boundary.border"
+                "landmark_class": "boundary.border",
+                "source_lexical_form": "border",
+                "canonical_subfeature_type": "border",
+                "semantic_suppressed": false
               },
               "executable_identity": {
                 "kind": null,
@@ -7277,7 +7440,8 @@
                 "producer_relation_id": null,
                 "derived_geometry_id": null
               },
-              "status": "UNRESOLVED"
+              "status": "UNRESOLVED",
+              "reason": "parent entity is not uniquely resolved"
             }
           ]
         }
@@ -7980,6 +8144,10 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "derived_relation_output",
           "status": "RESOLVED",
           "identity": {
@@ -8005,6 +8173,10 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -8030,6 +8202,10 @@
           "semantic_class": "surface.aspect",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -8482,6 +8658,10 @@
           "semantic_class": "soft_tissue_feature",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "atlas_name_resolution",
           "status": "MULTIPLE",
           "identity": {
@@ -8507,6 +8687,10 @@
           "semantic_class": "boundary.border",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -8532,6 +8716,10 @@
           "semantic_class": "region.body_region",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -8557,6 +8745,10 @@
           "semantic_class": "soft_tissue_feature",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "no_family_executor",
           "status": "UNRESOLVED",
           "identity": {
@@ -8935,6 +9127,7 @@
       "previous_stage2_status": "UNRESOLVED",
       "repaired_stage2_status": "UNRESOLVED",
       "defect_family": [
+        "subfeature_synonym_normalization_gap",
         "relation_nonoperand_semantics_loss",
         "relation_nonoperand_semantics_loss",
         "relation_nonoperand_semantics_loss",
@@ -8980,6 +9173,10 @@
           "semantic_class": "soft_tissue_feature",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -9005,6 +9202,10 @@
           "semantic_class": "soft_tissue_feature",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -9030,6 +9231,10 @@
           "semantic_class": "region.body_region",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -9055,6 +9260,10 @@
           "semantic_class": null,
           "parent_entity": "LM:S:GB14:location:82-91",
           "child_subfeature": "centre",
+          "source_lexical_form": "centre",
+          "canonical_subfeature_type": "center",
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "composite_subfeature_binding",
           "status": "UNRESOLVED",
           "identity": {
@@ -9080,6 +9289,10 @@
           "semantic_class": "soft_tissue_feature",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "no_family_executor",
           "status": "UNRESOLVED",
           "identity": {
@@ -9125,7 +9338,10 @@
               "node_id": "LM:S:GB14:location:72-78",
               "source_raw": "centre",
               "semantic_identity": {
-                "landmark_class": null
+                "landmark_class": null,
+                "source_lexical_form": "centre",
+                "canonical_subfeature_type": "center",
+                "semantic_suppressed": false
               },
               "executable_identity": {
                 "kind": null,
@@ -9142,7 +9358,8 @@
                 "producer_relation_id": null,
                 "derived_geometry_id": null
               },
-              "status": "UNRESOLVED"
+              "status": "UNRESOLVED",
+              "reason": "parent entity is not uniquely resolved"
             }
           ]
         }
@@ -9801,6 +10018,10 @@
           "semantic_class": "space.anatomical_space",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -9826,6 +10047,10 @@
           "semantic_class": "region.body_region",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -9851,6 +10076,10 @@
           "semantic_class": "line.anatomical_line",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -10399,6 +10628,10 @@
           "semantic_class": "crease.skin_crease",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -10424,6 +10657,10 @@
           "semantic_class": "line.reference_line",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "no_family_executor",
           "status": "UNRESOLVED",
           "identity": {
@@ -10449,6 +10686,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -10474,6 +10715,10 @@
           "semantic_class": "surface.aspect",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -10499,6 +10744,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -10524,6 +10773,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -10549,6 +10802,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -10574,6 +10831,10 @@
           "semantic_class": "line.reference_line",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "derived_relation_output",
           "status": "RESOLVED",
           "identity": {
@@ -10599,6 +10860,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -10624,6 +10889,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -10649,6 +10918,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -12516,6 +12789,10 @@
           "semantic_class": "crease.skin_crease",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -12541,6 +12818,10 @@
           "semantic_class": "line.reference_line",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "no_family_executor",
           "status": "UNRESOLVED",
           "identity": {
@@ -12566,6 +12847,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -12591,6 +12876,10 @@
           "semantic_class": "surface.aspect",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -12616,6 +12905,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -12641,6 +12934,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -12666,6 +12963,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -13455,6 +13756,9 @@
       "previous_stage2_status": "UNRESOLVED",
       "repaired_stage2_status": "UNRESOLVED",
       "defect_family": [
+        "subfeature_synonym_normalization_gap",
+        "subfeature_synonym_normalization_gap",
+        "subfeature_synonym_normalization_gap",
         "relation_nonoperand_semantics_loss",
         "relation_nonoperand_semantics_loss",
         "relation_nonoperand_semantics_loss",
@@ -13493,7 +13797,8 @@
         "relation_nonoperand_semantics_loss",
         "relation_nonoperand_semantics_loss",
         "relation_semantic_hash_mismatch",
-        "operand_trace_incomplete"
+        "operand_trace_incomplete",
+        "child_subfeature_false_fallback"
       ],
       "human_review_disposition": "PENDING",
       "who_source": [
@@ -13523,6 +13828,10 @@
           "semantic_class": "orifice_or_cavity",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "atlas_name_resolution",
           "status": "UNRESOLVED",
           "identity": {
@@ -13548,6 +13857,10 @@
           "semantic_class": "structure.part",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -13573,6 +13886,10 @@
           "semantic_class": "structure.part",
           "parent_entity": "LM:S:GB26:location:58-70",
           "child_subfeature": "free extremity",
+          "source_lexical_form": "free extremity",
+          "canonical_subfeature_type": "free_end",
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "composite_subfeature_binding",
           "status": "UNRESOLVED",
           "identity": {
@@ -13598,6 +13915,10 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -13623,6 +13944,10 @@
           "semantic_class": "region.body_region",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -13648,6 +13973,10 @@
           "semantic_class": "orifice_or_cavity",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -13673,6 +14002,10 @@
           "semantic_class": null,
           "parent_entity": "LM:S:GB26:location:107-116",
           "child_subfeature": "centre",
+          "source_lexical_form": "centre",
+          "canonical_subfeature_type": "center",
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "composite_subfeature_binding",
           "status": "UNRESOLVED",
           "identity": {
@@ -13698,6 +14031,10 @@
           "semantic_class": "boundary.border",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -13723,6 +14060,10 @@
           "semantic_class": "structure.part",
           "parent_entity": "LM:S:GB26:note:1:103-189",
           "child_subfeature": "free extremity",
+          "source_lexical_form": "free extremity",
+          "canonical_subfeature_type": "free_end",
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "composite_subfeature_binding",
           "status": "UNRESOLVED",
           "identity": {
@@ -13748,6 +14089,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -13773,6 +14118,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -13818,7 +14167,10 @@
               "node_id": "LM:S:GB26:location:40-54",
               "source_raw": "free extremity",
               "semantic_identity": {
-                "landmark_class": "structure.part"
+                "landmark_class": "structure.part",
+                "source_lexical_form": "free extremity",
+                "canonical_subfeature_type": "free_end",
+                "semantic_suppressed": false
               },
               "executable_identity": {
                 "kind": null,
@@ -13835,7 +14187,8 @@
                 "producer_relation_id": null,
                 "derived_geometry_id": null
               },
-              "status": "UNRESOLVED"
+              "status": "UNRESOLVED",
+              "reason": "no approved executable construction rule for canonical subfeature 'free_end'"
             }
           ]
         },
@@ -13863,7 +14216,10 @@
               "node_id": "LM:S:GB26:location:97-103",
               "source_raw": "centre",
               "semantic_identity": {
-                "landmark_class": null
+                "landmark_class": null,
+                "source_lexical_form": "centre",
+                "canonical_subfeature_type": "center",
+                "semantic_suppressed": false
               },
               "executable_identity": {
                 "kind": null,
@@ -13880,7 +14236,8 @@
                 "producer_relation_id": null,
                 "derived_geometry_id": null
               },
-              "status": "UNRESOLVED"
+              "status": "UNRESOLVED",
+              "reason": "parent entity is not uniquely resolved"
             }
           ]
         },
@@ -13908,7 +14265,10 @@
               "node_id": "LM:S:GB26:note:1:85-99",
               "source_raw": "free extremity",
               "semantic_identity": {
-                "landmark_class": "structure.part"
+                "landmark_class": "structure.part",
+                "source_lexical_form": "free extremity",
+                "canonical_subfeature_type": "free_end",
+                "semantic_suppressed": false
               },
               "executable_identity": {
                 "kind": null,
@@ -13925,7 +14285,8 @@
                 "producer_relation_id": null,
                 "derived_geometry_id": null
               },
-              "status": "UNRESOLVED"
+              "status": "UNRESOLVED",
+              "reason": "parent entity is not uniquely resolved"
             }
           ]
         }
@@ -14958,6 +15319,10 @@
           "semantic_class": "bone.opening",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "atlas_name_resolution",
           "status": "UNRESOLVED",
           "identity": {
@@ -14983,6 +15348,10 @@
           "semantic_class": "region.body_region",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -15233,6 +15602,10 @@
           "semantic_class": "crease.skin_crease",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -15258,6 +15631,10 @@
           "semantic_class": "surface.aspect",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -15591,6 +15968,10 @@
           "semantic_class": "orifice_or_cavity",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -15616,6 +15997,10 @@
           "semantic_class": "region.body_region",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -15641,6 +16026,10 @@
           "semantic_class": "orifice_or_cavity",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
@@ -15666,6 +16055,10 @@
           "semantic_class": "soft_tissue_feature",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "UNRESOLVED",
           "identity": {
@@ -15691,6 +16084,10 @@
           "semantic_class": "soft_tissue_feature",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "UNRESOLVED",
           "identity": {
@@ -16388,6 +16785,10 @@
           "semantic_class": "crease.skin_crease",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -16413,6 +16814,10 @@
           "semantic_class": "space.anatomical_space",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -16438,6 +16843,10 @@
           "semantic_class": "surface.aspect",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "approved_surface_registry",
           "status": "RESOLVED",
           "identity": {
@@ -16463,6 +16872,10 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -16488,6 +16901,10 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -16513,6 +16930,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -16538,6 +16959,10 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -16563,6 +16988,10 @@
           "semantic_class": "bone.bone",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "fma_mesh",
           "status": "RESOLVED",
           "identity": {
@@ -16588,6 +17017,10 @@
           "semantic_class": "acupoint_reference",
           "parent_entity": null,
           "child_subfeature": null,
+          "source_lexical_form": null,
+          "canonical_subfeature_type": null,
+          "semantic_suppressed": false,
+          "suppressed_by_atomic_landmark_id": null,
           "executor": "reference_acupoint",
           "status": "RESOLVED",
           "identity": {
@@ -17873,7 +18306,8 @@
         "direction_preservation_failure",
         "operand_trace_incomplete",
         "relation_nonoperand_semantics_loss",
-        "relation_semantic_hash_mismatch"
+        "relation_semantic_hash_mismatch",
+        "subfeature_synonym_normalization_gap"
       ],
       "post_repair_finding_count": 0
     },
@@ -17911,7 +18345,8 @@
         "operand_trace_incomplete",
         "quantitative_relation_semantics_loss",
         "relation_nonoperand_semantics_loss",
-        "relation_semantic_hash_mismatch"
+        "relation_semantic_hash_mismatch",
+        "subfeature_synonym_normalization_gap"
       ],
       "post_repair_finding_count": 0
     },
@@ -17959,10 +18394,12 @@
       "before_status": "UNRESOLVED",
       "after_status": "UNRESOLVED",
       "pre_repair_rules": [
+        "child_subfeature_false_fallback",
         "direction_preservation_failure",
         "operand_trace_incomplete",
         "relation_nonoperand_semantics_loss",
-        "relation_semantic_hash_mismatch"
+        "relation_semantic_hash_mismatch",
+        "subfeature_synonym_normalization_gap"
       ],
       "post_repair_finding_count": 0
     },
@@ -18018,7 +18455,7 @@
     }
   ],
   "regression_summary": {
-    "new_regression_defects_outside_known8": 385,
+    "new_regression_defects_outside_known8": 391,
     "post_repair_counts": {
       "parent_only_collapse": 0,
       "unused_child_subfeature": 0,
@@ -18029,6 +18466,8 @@
       "condition_linkage_loss": 0,
       "quantitative_relation_semantics_loss": 0,
       "derived_geometry_output_not_bound": 0,
+      "lexicalized_anatomical_entity_false_subfeature_split": 0,
+      "subfeature_synonym_normalization_gap": 0,
       "false_fallback": 0
     }
   }
