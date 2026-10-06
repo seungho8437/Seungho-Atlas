@@ -279,15 +279,15 @@ function unionStats(items){
 }
 function anatomicalEnvelope(text,side){
   let st=null,margin=[.045,.035,.065];
-  if(/손목|wrist/i.test(text)){
+  if(/아래팔|전완|forearm/i.test(text)){
+    st=unionStats([statsSeed('FMA23463',side),statsSeed('FMA23466',side)]);margin=[.050,.045,.070];
+  } else if(/위팔|상완|upper arm/i.test(text)){
+    st=unionStats([statsSeed('FMA13303',side)]);margin=[.055,.050,.075];
+  } else if(/손목|wrist/i.test(text)){
     const id=side==='left'?'FMA40121':side==='right'?'FMA40120':null;
     st=id?conceptStats(id):null;margin=[.050,.035,.075];
   } else if(/손등|손바닥|손가락|손허리|hand|finger|metacarp/i.test(text)){
     st=unionStats([statsSeed('FMA23900',side)]);margin=[.060,.060,.080];
-  } else if(/아래팔|전완|forearm/i.test(text)){
-    st=unionStats([statsSeed('FMA23463',side),statsSeed('FMA23466',side)]);margin=[.050,.045,.070];
-  } else if(/위팔|상완|upper arm/i.test(text)){
-    st=unionStats([statsSeed('FMA13303',side)]);margin=[.055,.050,.075];
   } else if(/볼기|둔부|buttock|glute/i.test(text)){
     st=glutealStatsBySide(side);margin=[.045,.040,.055];
   } else if(/무릎|오금|knee|poplite/i.test(text)){
@@ -975,6 +975,24 @@ function specializedLandmark(raw,side){
   if(/extensor hallucis longus/.test(q)){
     const st=statsSeed('FMA22533',side);if(st){const c=[...st.center];c[supAxis]=st.min[supAxis];return {point:c,stats:st,kind:'derived-ehl-distal-tendon'};}
   }
+  if(/pu-?bic symphysis|pubic symphysis/.test(q)){
+    if(pubicHairStats){const c=[...pubicHairStats.center];c[lrAxis]=bodyCenter[lrAxis];c[supAxis]=pubicProxyLevel;return {point:c,stats:pubicHairStats,kind:'pubic-region-symphysis-proxy'};}
+  }
+  if(/angle of the mandible|angle of mandible/.test(q)){
+    const st=statsSeed('FMA52748',side);
+    if(st){const c=[...st.center];c[supAxis]=st.min[supAxis]+(st.max[supAxis]-st.min[supAxis])*.18;c[lrAxis]=side==='left'?st.max[lrAxis]:side==='right'?st.min[lrAxis]:st.center[lrAxis];c[apAxis]=st.center[apAxis];return {point:c,stats:st,kind:'derived-mandibular-angle'};}
+  }
+  if(/gastrocnemius/.test(q)){
+    const c=averageCenters([statsSeed('FMA45956',side),statsSeed('FMA45959',side)]);
+    if(c)return {point:c,kind:'gastrocnemius-bellies'};
+  }
+  if(/flexor carpi ulnaris/.test(q)){
+    const c=averageCenters([statsSeed('FMA38615',side),statsSeed('FMA38616',side)]);
+    if(c)return {point:c,kind:'flexor-carpi-ulnaris'};
+  }
+  if(/abductor pollicis longus/.test(q)){
+    const st=statsSeed('FMA38515',side);if(st)return {point:[...st.center],stats:st,kind:'abductor-pollicis-longus'};
+  }
   return null;
 }
 function resolveSemanticNode(nodeId,side){
@@ -1020,9 +1038,9 @@ function executeSemanticRelations(base,point,side){
       let did=false;
       if(measure?.direction==='lateral'||/lateralto|radialto/.test(compactCue)){target[lrAxis]=p[lrAxis]+(side==='left'?leftSign:-leftSign)*amount;did=true;}
       if(/medialto|ulnarto/.test(compactCue)){target[lrAxis]=p[lrAxis]-(side==='left'?leftSign:-leftSign)*amount;did=true;}
-      if(measure?.direction==='superior'||/superiorto|proximalto/.test(compactCue)){target[supAxis]=p[supAxis]+amount;did=true;}
-      if(measure?.direction==='inferior'||/inferiorto|distalto|posteroinferiorto/.test(compactCue)){target[supAxis]=p[supAxis]-amount;did=true;}
-      if(measure?.direction==='anterior'||/anteriorto|anteroinferiorto/.test(compactCue)){target[apAxis]=p[apAxis]+anteriorSign*amount;did=true;}
+      if(measure?.direction==='superior'||/superiorto|proximalto|anterosuperiorto/.test(compactCue)){target[supAxis]=p[supAxis]+amount;did=true;}
+      if(measure?.direction==='inferior'||/inferiorto|distalto|posteroinferiorto|anteroinferiorto/.test(compactCue)){target[supAxis]=p[supAxis]-amount;did=true;}
+      if(measure?.direction==='anterior'||/anteriorto|anteroinferiorto|anterosuperiorto/.test(compactCue)){target[apAxis]=p[apAxis]+anteriorSign*amount;did=true;}
       if(measure?.direction==='posterior'||/posteriorto|posteroinferiorto/.test(compactCue)){target[apAxis]=p[apAxis]-anteriorSign*amount;did=true;}
       if(did){executed.push(r.relation_id);continue;}
     }
@@ -1113,6 +1131,7 @@ for(const p of acupoints){
     // relations (plus direct crease/midline anchors) hard-lock axes.
     const locks={
       sup:measureDirections.has('superior')||measureDirections.has('inferior')||
+          executedRelations.some(r=>r.relation_type==='center-of'||r.relation_type==='same-level')||
           /superior to|inferior to|proximal to|distal to|same level/.test(cueText)||
           /갈비사이공간|배꼽(?:\s*중심)?(?:보다|에서)?\s*(?:위|아래)로\s*\d|손(?:바닥|등)쪽\s*손목주름|팔오금주름|오금주름|머리선/.test(locText),
       lr:side==='midline'||measureDirections.has('lateral')||measureDirections.has('medial')||
