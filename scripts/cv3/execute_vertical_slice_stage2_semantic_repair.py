@@ -224,18 +224,19 @@ def main():
   # because B may bind the child to the entity fragment while a relation references
   # a larger composite phrase spanning both fragments.
   for n in lms:
-   nid=n["node_id"];sf=subfeature_type(n.get("source_raw"))
-   if not sf or nid in binding_by_child:continue
-   relevant=[k for k in contained_bound_children(nid,bindings) if subfeature_type(bnodes.get(k,{}).get("source_raw"))]
-   if len(relevant)==1 and lout.get(relevant[0],{}).get("status")=="RESOLVED":
-    child=relevant[0];cg=lout[child]["geometry"]
+   nid=n["node_id"];sfs=subfeature_types(n.get("source_raw"))
+   if not sfs or nid in binding_by_child:continue
+   relevant=[k for k in contained_bound_children(nid,bindings) if subfeature_types(bnodes.get(k,{}).get("source_raw"))]
+   resolved_children=[k for k in relevant if lout.get(k,{}).get("status")=="RESOLVED"]
+   if len(sfs)==1 and len(resolved_children)==1:
+    child=resolved_children[0];cg=lout[child]["geometry"]
     lout[nid]={"status":"RESOLVED","executor":"bound_composite_subfeature","geometry":{"kind":"bound_subfeature",
       "semantic_parent_landmark_id":nid,"executable_child_landmark_id":child,"constructed_id":cg.get("constructed_id"),"geometry_hash":cg.get("geometry_hash"),
-      "subfeature_type":cg.get("subfeature_type")},"provenance":{"child_landmark_ids":relevant}}
+      "subfeature_type":cg.get("subfeature_type")},"provenance":{"child_landmark_ids":relevant,"source_subfeature_types":sfs}}
    else:
     lout[nid]={"status":"UNRESOLVED","executor":"bound_composite_subfeature","geometry":None,
-      "reason":"composite contains subfeature semantics but no unique executable child subfeature geometry",
-      "provenance":{"child_landmark_ids":relevant,"subfeature_type":sf}}
+      "reason":"composite subfeature semantics lack a unique executable child geometry",
+      "provenance":{"child_landmark_ids":relevant,"resolved_child_landmark_ids":resolved_children,"source_subfeature_types":sfs}}
   mout={}
   for m in pms:
    row=cal.get(m["measurement_id"])
@@ -259,15 +260,16 @@ def main():
    semantic=list(r.get("argument_node_ids",[]));executable=[];binding_trace=[]
    ambiguous=False
    for a in semantic:
-    kids=[k for k in contained_bound_children(a,bindings) if subfeature_type(bnodes.get(k,{}).get("source_raw"))]
-    asf=subfeature_type(bnodes.get(a,{}).get("source_raw"))
+    asfs=subfeature_types(bnodes.get(a,{}).get("source_raw"))
+    kids=[k for k in contained_bound_children(a,bindings) if subfeature_types(bnodes.get(k,{}).get("source_raw"))] if asfs else []
+    resolved=[k for k in kids if lout.get(k,{}).get("status")=="RESOLVED"]
     if kids:
-     if len(kids)==1:
-      executable.append(kids[0]);binding_trace.append({"semantic_operand_id":a,"executable_operand_id":kids[0],"binding":"child_subfeature"})
+     if len(asfs)==1 and len(resolved)==1:
+      executable.append(resolved[0]);binding_trace.append({"semantic_operand_id":a,"executable_operand_id":resolved[0],"binding":"child_subfeature","source_subfeature_types":asfs})
      else:
-      ambiguous=True;binding_trace.append({"semantic_operand_id":a,"executable_operand_ids":kids,"binding":"ambiguous_multi_subfeature"})
-    elif asf:
-     ambiguous=True;binding_trace.append({"semantic_operand_id":a,"executable_operand_ids":[],"binding":"missing_executable_subfeature"})
+      ambiguous=True;binding_trace.append({"semantic_operand_id":a,"candidate_child_ids":kids,"resolved_child_ids":resolved,"binding":"unresolved_subfeature_binding","source_subfeature_types":asfs})
+    elif asfs:
+     ambiguous=True;binding_trace.append({"semantic_operand_id":a,"candidate_child_ids":[],"binding":"missing_executable_subfeature","source_subfeature_types":asfs})
     else:
      executable.append(a);binding_trace.append({"semantic_operand_id":a,"executable_operand_id":a,"binding":"identity"})
    if ambiguous:
@@ -281,7 +283,7 @@ def main():
    # Distinct semantic subfeatures used by a multi-operand relation require distinct executable identities.
    if len(executable)>1:
     fps=[geometry_identity(lout[x]) for x in executable]
-    sf=[subfeature_type(bnodes.get(x,{}).get("source_raw")) for x in executable]
+    sf=[tuple(subfeature_types(bnodes.get(x,{}).get("source_raw"))) for x in executable]
     for i in range(len(executable)):
      for j in range(i+1,len(executable)):
       if sf[i] and sf[j] and sf[i]!=sf[j] and fps[i] and fps[i]==fps[j]:
