@@ -113,17 +113,43 @@ def geometry_identity(rec):
  if g.get("point_id"):return "point:"+g["point_id"]
  return None
 
-def relation_semantic_fields(r,op,semantic):
+def relation_semantic_fields(r,op,semantic,bound_measurements,statement_measurements):
  fields={"op":op,"relation_type":r["relation_type"],"source_statement_id":r["source_statement_id"],
-         "branch_id":r.get("branch_id"),"semantic_argument_node_ids":semantic}
+         "branch_id":r.get("branch_id"),"semantic_argument_node_ids":semantic,
+         "bound_measurement_ids":[m["measurement_id"] for m in bound_measurements],
+         "quantitative_constraints":[m["constraint"] for m in bound_measurements],
+         "statement_measurement_ids":[m["measurement_id"] for m in statement_measurements]}
  if r["relation_type"]=="relative-to":
   fields["direction"]=relation_direction(r)
  return fields
+
+def relation_measurements(r,pms,mout):
+ same=[{"measurement_id":m["measurement_id"],"constraint":(mout.get(m["measurement_id"]) or {}).get("constraint")} for m in pms if m["source_statement_id"]==r["source_statement_id"] and (mout.get(m["measurement_id"]) or {}).get("constraint")]
+ if r["relation_type"]!="relative-to":return [],same
+ d=relation_direction(r)
+ bound=[x for x in same if (x["constraint"] or {}).get("direction")==d]
+ return bound,same
 
 def attach_semantic_hash(rec):
  fields=rec.get("semantic_fields") or {}
  rec["semantic_fields_hash"]=objhash(fields)
  return rec
+
+DERIVED_RELATION_TYPES={"midpoint-of-entity":"midpoint","center-of":"center","midpoint-between":"midpoint"}
+
+def derived_candidate_nodes(r,lms,bnodes):
+ token=DERIVED_RELATION_TYPES.get(r["relation_type"])
+ if not token:return []
+ args=list(r.get("argument_node_ids",[]));aspans=[span_info(a) for a in args]
+ out=[]
+ for n in lms:
+  raw=norm(n.get("source_raw"));sp=span_info(n["node_id"])
+  if not sp or token not in raw:continue
+  # Candidate must belong to same source statement and textually contain at least one producer operand span.
+  if n.get("source_statement_id")!=r.get("source_statement_id"):continue
+  if any(a and a[0]==sp[0] and sp[1]<=a[1] and a[2]<=sp[2] for a in aspans):
+   out.append(n["node_id"])
+ return sorted(out,key=lambda x:((span_info(x)[2]-span_info(x)[1]) if span_info(x) else 10**9,x))
 
 def main():
  ap=argparse.ArgumentParser()
@@ -150,7 +176,8 @@ def main():
  out={"schema_version":"2.0.0","artifact":"c-v3-vertical-slice-v1-stage2-semantic-repair","status":"GENERATED_NOT_VALIDATED",
   "scope":{"cohort":list(COHORT),"physical_coordinates_generated":False,"legacy_coordinate_input":False},
   "repair_contract":{"parent_only_composite_resolution_forbidden":True,"child_dependency_binding_required":True,
-   "distinct_subfeatures_require_distinct_executable_identity":True,"incompatible_body_position_must_be_conditional":True},
+   "distinct_subfeatures_require_distinct_executable_identity":True,"incompatible_body_position_must_be_conditional":True,
+   "quantitative_relation_semantics_loss_forbidden":True,"derived_operator_output_binding_required":True},
   "points":[]}
  for pid in COHORT:
   ss=[x for x in g["source_statements"] if x["point_id"]==pid];sm={x["source_statement_id"] for x in ss}
@@ -236,10 +263,42 @@ def main():
    cout[c["condition_id"]]={"status":st,"executor":"condition_contract","condition_type":c["condition_type"],"branch_id":c.get("branch_id"),
     "source_statement_id":c["source_statement_id"],"source_span":c.get("source_span"),
     "default_pose_compatible":False if pose_incompatible else None,"reason":reason}
-  rout={}
+  # Pre-execute named derived-geometry producers so their outputs can become
+  # executable operands of downstream relations in the same semantic statement.
+  rout={};derived_outputs={}
   for r in rels:
+   if r["relation_type"] not in DERIVED_RELATION_TYPES:continue
    rid=r["relation_id"];op=REL_OP.get(r["relation_type"]);semantic=list(r.get("argument_node_ids",[]))
-   semantic_fields=relation_semantic_fields(r,op,semantic)
+   bound_ms,stmt_ms=relation_measurements(r,pms,mout);semantic_fields=relation_semantic_fields(r,op,semantic,bound_ms,stmt_ms)
+   args=[lout.get(x,{"status":"INVALID"}) for x in semantic]
+   if not op or any(x.get("status")!="RESOLVED" for x in args):
+    rout[rid]=attach_semantic_hash({"status":"UNRESOLVED","executor":op or "relation_dispatch","reason":"derived geometry producer operand not executable",
+      "semantic_fields":semantic_fields,"semantic_argument_node_ids":semantic,"executable_argument_node_ids":semantic,
+      "operand_binding_trace":[{"semantic_operand_id":x,"executable_operand_id":x,"binding":"identity"} for x in semantic]})
+    continue
+   spec={"producer_relation_id":rid,"operator":op,"relation_type":r["relation_type"],
+         "source_statement_id":r["source_statement_id"],"argument_node_ids":semantic,
+         "argument_identities":[geometry_identity(lout[x]) for x in semantic]}
+   gh=objhash(spec);dgid=f"DERIVED:{rid}:{gh[:16]}"
+   derived_outputs[dgid]={"derived_geometry_id":dgid,"producer_relation_id":rid,"operator":op,"geometry_hash":gh,
+     "source_statement_id":r["source_statement_id"],"semantic_argument_node_ids":semantic}
+   candidates=derived_candidate_nodes(r,lms,bnodes)
+   for nid in candidates:
+    lout[nid]={"status":"RESOLVED","executor":"derived_relation_output","geometry":{"kind":"derived_relation_output",
+      "producer_relation_id":rid,"derived_geometry_id":dgid,"constructed_id":dgid,"geometry_hash":gh,
+      "construction_rule":op},"provenance":{"producer_relation_id":rid,"producer_argument_node_ids":semantic}}
+   con=dict(semantic_fields);con.update({"argument_node_ids":semantic,"executable_argument_node_ids":semantic,
+     "operand_binding_trace":[{"semantic_operand_id":x,"executable_operand_id":x,"binding":"identity"} for x in semantic],
+     "result_geometry_id":dgid,"result_geometry_hash":gh})
+   rout[rid]=attach_semantic_hash({"status":"RESOLVED","executor":op,"constraint":con,"semantic_fields":semantic_fields,
+     "semantic_argument_node_ids":semantic,"executable_argument_node_ids":semantic,
+     "operand_binding_trace":con["operand_binding_trace"],"result_geometry_id":dgid,"result_geometry_hash":gh})
+  for r in rels:
+   rid=r["relation_id"]
+   if rid in rout:continue
+   op=REL_OP.get(r["relation_type"]);semantic=list(r.get("argument_node_ids",[]))
+   bound_ms,stmt_ms=relation_measurements(r,pms,mout)
+   semantic_fields=relation_semantic_fields(r,op,semantic,bound_ms,stmt_ms)
    if not op:
     rout[rid]=attach_semantic_hash({"status":"INVALID","executor":"relation_dispatch","reason":"relation family has no slice executor",
       "semantic_fields":semantic_fields,"semantic_argument_node_ids":semantic,"executable_argument_node_ids":[],"operand_binding_trace":[]});continue
@@ -292,7 +351,8 @@ def main():
    base="RESOLVED" if not statuses else sorted(statuses,key=status_rank,reverse=True)[0]
    statements.append({"source_statement_id":sid,"section":s["section"],"status":base,"relation_ids":rr,"measurement_ids":mm,"condition_ids":cc})
   loc=next((x for x in statements if x["section"]=="location"),None)
-  out["points"].append({"point_id":pid,"primary_location_status":loc["status"] if loc else "UNRESOLVED","landmarks":lout,"relations":rout,"measurements":mout,"conditions":cout,"statements":statements})
+  out["points"].append({"point_id":pid,"primary_location_status":loc["status"] if loc else "UNRESOLVED","landmarks":lout,"relations":rout,
+    "measurements":mout,"derived_geometries":derived_outputs,"conditions":cout,"statements":statements})
  q=Path(args.out);q.parent.mkdir(parents=True,exist_ok=True);q.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n")
  print(json.dumps({"points":20,"primary":dict(collections.Counter(x["primary_location_status"] for x in out["points"])),
   "conditions":dict(collections.Counter(v["status"] for x in out["points"] for v in x["conditions"].values()))}))
