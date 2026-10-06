@@ -1361,8 +1361,8 @@ function deferredReferenceExecution(item){
   const unresolved=new Set(item.validation.unresolvedSemanticRelationIds??[]);
   for(const id of executed)unresolved.delete(id);
   item.validation.unresolvedSemanticRelationIds=[...unresolved];
-  item.validation.nativeRelationIds=[...new Set([...(item.validation.nativeRelationIds??[]),...executed])];
-  item.validation.nativeOperationCount=item.validation.nativeRelationIds.length;
+  item.validation.deferredReferenceRelationIds=[...new Set([...(item.validation.deferredReferenceRelationIds??[]),...executed])];
+  item.validation.deferredReferenceOperationCount=item.validation.deferredReferenceRelationIds.length;
   item.validation.deferredReferenceOperations=executed;
   return true;
 }
