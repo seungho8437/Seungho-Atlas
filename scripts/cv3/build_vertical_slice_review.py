@@ -51,8 +51,8 @@ REGISTRY=[
   "definition":"BodyParts3D skin has no explicit nasolabial crease annotation; no silent curvature-derived proxy is accepted in v1 slice","render":"none","required_by":["ST4"]},
  {"id":"SR:lateral_thorax","group":"trunk","terms":["lateral thoracic region"],"kind":"surface_region","status":"DRAFT_HUMAN_REVIEW",
   "definition":"lateral-facing trunk skin in the thoracic vertical interval, excluding upper-limb skin","render":"lateral_thorax","required_by":["GB23"]},
- {"id":"SR:midaxillary_line","group":"trunk","terms":["midaxillary line"],"kind":"surface_line","status":"PROPOSED_UNRESOLVED",
-  "definition":"requires an axillary-apex anchor and lateral thorax geodesic/plane construction; no global-x extreme substitute is permitted","render":"none","required_by":["GB23"]},
+ {"id":"SR:midaxillary_line","group":"trunk","terms":["midaxillary line"],"kind":"surface_line","status":"DRAFT_HUMAN_REVIEW",
+  "definition":"bilateral vertical skin curve on the lateral thorax defined by intersection with the coronal plane through the frozen trunk axial origin (midway between sternum and vertebral reference centroids), restricted to the thoracic interval","render":"midaxillary","required_by":["GB23"]},
  {"id":"SR:fourth_intercostal_space","group":"trunk","terms":["fourth intercostal space"],"kind":"surface_band","status":"DRAFT_HUMAN_REVIEW",
   "definition":"surface band obtained by projecting the anatomical gap between the fourth and fifth ribs to the lateral thoracic skin along the validated thoracic aspect direction","render":"intercostal4","required_by":["GB23"]},
  {"id":"SR:lateral_abdomen","group":"trunk","terms":["lateral abdomen"],"kind":"surface_region","status":"DRAFT_HUMAN_REVIEW",
@@ -132,6 +132,14 @@ def main():
  # Visual review: z-buffer surface plus rule overlays. Exact solver geometry is NOT produced here.
  sub=json.loads(Path(args.substrate).read_text());store=AtlasStore(Path(args.model_dir));pid=sub["surface_contract"]["skin_part_id"]
  verts=[list(v) for v in store.vertices(pid)];inds=list(store.indices(pid));gf=sub["global_frame"]
+ def pcent(ids):
+  pts=[]
+  for i in ids: pts.extend(store.vertices(i))
+  return [sum(p[k] for p in pts)/len(pts) for k in range(3)] if pts else None
+ def rib_ids(n):
+  pats={4:("rib 4","4th rib","fourth rib"),5:("rib 5","5th rib","fifth rib")}[n]
+  return [p["id"] for p in store.atlas["parts"] if p.get("system")=="skeletal" and any(q in p["name"].lower() for q in pats)]
+ rib4=pcent(rib_ids(4));rib5=pcent(rib_ids(5))
  review_specs={e["id"]:e for e in REGISTRY}
  html=f'''<!doctype html><meta charset="utf-8"><title>C v3 vertical slice registry review</title>
 <style>body{{font-family:system-ui;margin:18px;background:#f5f6f7;color:#111}}section{{background:#fff;border:1px solid #ccc;margin:16px 0;padding:14px}}canvas{{width:100%;max-width:760px;height:620px;border:1px solid #bbb}}table{{border-collapse:collapse;width:100%}}td,th{{border:1px solid #ccc;padding:6px;vertical-align:top}}.unresolved{{background:#fff3cd}}.draft{{background:#eef6ff}}code{{white-space:pre-wrap}}</style>
@@ -143,20 +151,27 @@ const verts={json.dumps(verts,separators=(',',':'))}, inds={json.dumps(inds,sepa
 const origin={json.dumps(gf["origin"])}, basis={{left:{json.dumps(gf["axes"]["left"])},superior:{json.dumps(gf["axes"]["superior"])},anterior:{json.dumps(gf["axes"]["anterior"])}}};
 const entries={json.dumps(REGISTRY,ensure_ascii=False,separators=(',',':'))};
 const sub={json.dumps({"frames":sub["frames"],"joints":sub["joints"]},separators=(',',':'))};
+const rib4={json.dumps(rib4)}, rib5={json.dumps(rib5)};
 function dot(a,b){{return a[0]*b[0]+a[1]*b[1]+a[2]*b[2]}} function sub3(a,b){{return [a[0]-b[0],a[1]-b[1],a[2]-b[2]]}}
 function cross(a,b){{return [a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]]}} function norm(a){{return Math.hypot(...a)}} function unit(a){{let n=norm(a)||1;return a.map(x=>x/n)}}
 function patient(p){{let r=sub3(p,origin);return [dot(r,basis.left),dot(r,basis.superior),dot(r,basis.anterior)]}} const pv=verts.map(patient);
 function Pworld(p){{return patient(p)}} function near(a,b,r){{return norm(sub3(a,b))<=r}}
+const trunkO=Pworld(sub.frames.trunk.origin), headO=Pworld(sub.frames.head_neck.origin);
+const shoulderY=(Pworld(sub.joints.left.shoulder.center)[1]+Pworld(sub.joints.right.shoulder.center)[1])/2;
+const hipY=(Pworld(sub.joints.left.hip.center)[1]+Pworld(sub.joints.right.hip.center)[1])/2;
+const rib4P=rib4?Pworld(rib4):null, rib5P=rib5?Pworld(rib5):null;
 function mask(id,q,n){{
  const y=q[1],x=q[0],z=q[2];
- if(id==='SR:face_region') return y>0.55&&y<0.75&&z>0.02;
- if(id==='SR:head_region') return y>0.62;
- if(id==='SR:lateral_thorax') return y>0.32&&y<0.58&&Math.abs(x)>0.09;
- if(id==='SR:lateral_abdomen') return y>0.05&&y<0.34&&Math.abs(x)>0.08;
- if(id==='SR:anterior_neck') return y>0.48&&y<0.66&&z>0.015;
- if(id==='SR:upper_back') return y>0.30&&y<0.58&&z<0;
- if(id==='SR:lumbar_region') return y>0.10&&y<0.34&&z<0;
- if(id==='SR:posterior_median_line') return Math.abs(x)<0.006&&z<0&&y>0.05&&y<0.62;
+ if(id==='SR:face_region') return y>headO[1]-0.10&&y<headO[1]+0.10&&z>headO[2]-0.02;
+ if(id==='SR:head_region') return y>headO[1]-0.08;
+ if(id==='SR:lateral_thorax') return y>hipY+0.42*(shoulderY-hipY)&&y<shoulderY&&Math.abs(x)>0.08;
+ if(id==='SR:midaxillary_line') return y>hipY+0.42*(shoulderY-hipY)&&y<shoulderY&&Math.abs(x)>0.08&&Math.abs(z-trunkO[2])<0.008;
+ if(id==='SR:fourth_intercostal_space'){{if(!rib4P||!rib5P)return false;let lo=Math.min(rib4P[1],rib5P[1]),hi=Math.max(rib4P[1],rib5P[1]);return y>lo&&y<hi&&Math.abs(x)>0.07;}}
+ if(id==='SR:lateral_abdomen') return y>hipY&&y<hipY+0.45*(shoulderY-hipY)&&Math.abs(x)>0.07;
+ if(id==='SR:anterior_neck') return y>shoulderY-0.02&&y<headO[1]+0.04&&z>trunkO[2];
+ if(id==='SR:upper_back') return y>hipY+0.45*(shoulderY-hipY)&&y<shoulderY&&z<trunkO[2];
+ if(id==='SR:lumbar_region') return y>hipY-0.02&&y<hipY+0.46*(shoulderY-hipY)&&z<trunkO[2];
+ if(id==='SR:posterior_median_line') return Math.abs(x)<0.006&&z<trunkO[2]&&y>hipY-0.02&&y<shoulderY;
  let side=x>=0?'left':'right',J=sub.joints[side]||sub.joints.left;
  if(id==='SR:posterior_knee'||id==='SR:popliteal_crease'){{let k=Pworld(J.knee.center);return near(q,k,id.endsWith('crease')?0.035:0.075)&&z<k[2];}}
  if(id.includes('wrist_crease')||id==='SR:anteromedial_wrist'){{let w=Pworld(J.wrist.center); if(!near(q,w,0.075))return false; if(id==='SR:anteromedial_wrist')return z>w[2]&&Math.abs(x)<Math.abs(w[0])+0.04; return id.includes('palmar')?z>w[2]:z<w[2];}}
@@ -164,8 +179,15 @@ function mask(id,q,n){{
  if(id==='SR:dorsum_hand'){{let w=Pworld(J.wrist.center);return y<w[1]+0.03&&y>w[1]-0.16&&z<w[2];}}
  return false;
 }}
+function viewFor(id){{
+ if(id.includes('posterior_median')||id.includes('upper_back')||id.includes('lumbar')||id.includes('posterior_knee')||id.includes('popliteal')||id.includes('posterolateral')||id==='SR:posterior_forearm'||id==='SR:dorsal_wrist_crease'||id==='SR:dorsum_hand')return 'back';
+ if(id.includes('lateral_thorax')||id.includes('midaxillary')||id.includes('intercostal')||id.includes('lateral_abdomen'))return 'left';
+ return 'front';
+}}
 function render(canvas,id){{
- const c=canvas,ctx=c.getContext('2d'),W=c.width,H=c.height,cam={{sx:[-1,0,0],sy:[0,1,0],d:[0,0,1]}};
+ const c=canvas,ctx=c.getContext('2d'),W=c.width,H=c.height,view=viewFor(id);
+ const cams={{front:{{sx:[-1,0,0],sy:[0,1,0],d:[0,0,1]}},back:{{sx:[1,0,0],sy:[0,1,0],d:[0,0,-1]}},left:{{sx:[0,0,-1],sy:[0,1,0],d:[1,0,0]}}}};
+ const cam=cams[view];
  const pr=pv.map(q=>[dot(q,cam.sx),dot(q,cam.sy),dot(q,cam.d)]);let xmin=1e9,xmax=-1e9,ymin=1e9,ymax=-1e9,zmin=1e9,zmax=-1e9;
  for(const q of pr){{xmin=Math.min(xmin,q[0]);xmax=Math.max(xmax,q[0]);ymin=Math.min(ymin,q[1]);ymax=Math.max(ymax,q[1]);zmin=Math.min(zmin,q[2]);zmax=Math.max(zmax,q[2])}}
  let sc=Math.min((W-50)/(xmax-xmin),(H-50)/(ymax-ymin)),X=x=>W/2+(x-(xmin+xmax)/2)*sc,Y=y=>H/2-(y-(ymin+ymax)/2)*sc;
@@ -178,7 +200,7 @@ function render(canvas,id){{
  let im=ctx.createImageData(W,H);for(let i=0;i<W*H;i++){{let o=i*4;if(zb[i]===-Infinity){{im.data[o]=im.data[o+1]=im.data[o+2]=255;im.data[o+3]=255;continue}}if(hi[i]){{im.data[o]=210;im.data[o+1]=70;im.data[o+2]=55}}else{{im.data[o]=im.data[o+1]=im.data[o+2]=col[i]}}im.data[o+3]=255}}ctx.putImageData(im,0,0);
 }}
 const groups={{}};for(const e of entries)(groups[e.group]??=[]).push(e);const app=document.getElementById('app');
-for(const [g,es] of Object.entries(groups)){{let sec=document.createElement('section');sec.innerHTML='<h2>'+g+'</h2>';for(const e of es){{let box=document.createElement('div');box.className=e.status.includes('UNRESOLVED')?'unresolved':'draft';box.style.padding='10px';box.style.margin='10px 0';box.innerHTML='<h3>'+e.id+'</h3><p><b>WHO term:</b> '+e.terms.join(' / ')+'</p><p><b>Definition:</b> '+e.definition+'</p><p><b>Required by:</b> '+e.required_by.join(', ')+'</p><p><b>Status:</b> '+e.status+'</p><p>☐ anatomical scope correct ☐ side/aspect correct ☐ extent correct ☐ line/crease placement correct ☐ ambiguity acceptable ☐ ACCEPT ☐ REJECT ☐ KEEP UNRESOLVED</p>';if(e.render!=='none'){{let cv=document.createElement('canvas');cv.width=700;cv.height=620;box.appendChild(cv);setTimeout(()=>render(cv,e.id),0)}}sec.appendChild(box)}}app.appendChild(sec)}}
+for(const [g,es] of Object.entries(groups)){{let sec=document.createElement('section');sec.innerHTML='<h2>'+g+'</h2>';for(const e of es){{let box=document.createElement('div');box.className=e.status.includes('UNRESOLVED')?'unresolved':'draft';box.style.padding='10px';box.style.margin='10px 0';box.innerHTML='<h3>'+e.id+'</h3><p><b>WHO term:</b> '+e.terms.join(' / ')+'</p><p><b>Definition:</b> '+e.definition+'</p><p><b>Required by:</b> '+e.required_by.join(', ')+'</p><p><b>Status:</b> '+e.status+'</p><p><b>Review view:</b> '+viewFor(e.id).toUpperCase()+'</p><p>☐ anatomical scope correct ☐ side/aspect correct ☐ extent correct ☐ line/crease placement correct ☐ ambiguity acceptable ☐ ACCEPT ☐ REJECT ☐ KEEP UNRESOLVED</p>';if(e.render!=='none'){{let cv=document.createElement('canvas');cv.width=700;cv.height=620;box.appendChild(cv);setTimeout(()=>render(cv,e.id),0)}}sec.appendChild(box)}}app.appendChild(sec)}}
 </script>'''
  (out/"surface-registry-review.html").write_text(html,encoding="utf-8")
  print(json.dumps({"cohort":list(COHORT),"registry_entries":len(REGISTRY),"calibration_rows":len(calibration),"out_dir":str(out)}))
