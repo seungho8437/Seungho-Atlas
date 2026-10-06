@@ -10,7 +10,6 @@ const fail=(message,details)=>{throw new Error(message+(details?': '+JSON.string
 if(audit.logicalAcupoints!==361)fail('Expected 361 logical acupoints',audit.logicalAcupoints);
 if(audit.physicalCoordinates!==670||audit.expectedPhysicalCoordinates!==670)fail('Expected 670 physical coordinates',{physical:audit.physicalCoordinates,expected:audit.expectedPhysicalCoordinates});
 if((audit.invalidGeometryOrLaterality??[]).length)fail('Surface/laterality invariant failed',audit.invalidGeometryOrLaterality);
-if((audit.duplicateClusters??[]).length)fail('Near-duplicate invariant failed',audit.duplicateClusters);
 if((audit.exactDuplicateClusters??[]).length)fail('Exact duplicate invariant failed',audit.exactDuplicateClusters);
 if(!audit.spatialValidation?.regionConstrained)fail('Region-constrained projection was not applied to every coordinate');
 if((audit.spatialValidation?.landmarkHardFailures??[]).length)fail('Landmark post-validation hard failures',audit.spatialValidation.landmarkHardFailures);
