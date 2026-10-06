@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-stage2-semantic-repair-validation",
+  "status": "PASS",
+  "checks": 243,
+  "errors": 0,
+  "error_details": [],
+  "coverage": {
+    "known_affected": 8,
+    "regression_points": 20
+  },
+  "remaining_defects": [],
+  "pre_repair_scan": {
+    "total": 119,
+    "new_regression_defects_outside_known8": 54,
+    "new_regression_findings": [
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:01:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:02:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:note:1:03:surface-landmark"
+      },
+      {
+        "rule": "parent_only_composite_resolution",
+        "point_id": "LI4",
+        "node_id": "LM:S:LI4:location:36-79",
+        "source_raw": " the midpoint of the second metacarpal bone",
+        "geometry_kind": "fma_concept",
+        "identity": "fma:FMA23900:FJ3243,FJ3352"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:00:relative-to"
+      },
+      {
+        "rule": "parent_only_composite_resolution",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:00:relative-to",
+        "node_id": "LM:S:LI4:location:36-79",
+        "source_raw": " the midpoint of the second metacarpal bone",
+        "detail": "subfeature-bearing relation operand has no executable child"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:01:midpoint-of-entity"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:02:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "ST1",
+        "relation_id": "RL:S:ST1:location:02:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:00:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:03:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:00:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:01:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:02:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:00:on-line"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:01:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:02:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:00:on-line"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:01:midpoint-between"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:02:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:67-70:reference-acupoint:f42e2db8d9"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:76-79:reference-acupoint:5171900d45"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:33-36:reference-acupoint:a79a726278"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:94-97:reference-acupoint:0d3fedaf0b"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:103-106:reference-acupoint:ffaf5ca270"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:00:on-line"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:01:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:02:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:68-71:reference-acupoint:931d5b1cfd"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:77-81:reference-acupoint:bbace3ac1c"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:03:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:note:2:00:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:note:2:01:same-level"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB26",
+        "relation_id": "RL21:S:GB26:note:2:28-32:reference-acupoint:260f7e9589"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB26",
+        "relation_id": "RL21:S:GB26:note:2:55-58:reference-acupoint:3e3fd2558d"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "ST2",
+        "relation_id": "RL:S:ST2:location:01:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "BL40",
+        "relation_id": "RL:S:BL40:location:00:midpoint-of-entity"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "BL40",
+        "relation_id": "RL:S:BL40:location:01:surface-landmark"
+      },
+      {
+        "rule": "parent_only_composite_resolution",
+        "point_id": "ST4",
+        "node_id": "LM:S:ST4:location:33-56",
+        "source_raw": " the angle of the mouth",
+        "geometry_kind": "fma_concept",
+        "identity": "fma:FMA49184:FJ1252,FJ1253,FJ2741,FJ2748,FJ2753,FJ2760,FJ2761,FJ2762,FJ2766,FJ2768,FJ3289"
+      },
+      {
+        "rule": "parent_only_composite_resolution",
+        "point_id": "ST4",
+        "node_id": "LM:S:ST4:note:1:16-39",
+        "source_raw": " the angle of the mouth",
+        "geometry_kind": "fma_concept",
+        "identity": "fma:FMA49184:FJ1252,FJ1253,FJ2741,FJ2748,FJ2753,FJ2760,FJ2761,FJ2762,FJ2766,FJ2768,FJ3289"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:00:relative-to"
+      },
+      {
+        "rule": "parent_only_composite_resolution",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:00:relative-to",
+        "node_id": "LM:S:ST4:location:33-56",
+        "source_raw": " the angle of the mouth",
+        "detail": "subfeature-bearing relation operand has no executable child"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:01:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:00:relative-to"
+      },
+      {
+        "rule": "parent_only_composite_resolution",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:00:relative-to",
+        "node_id": "LM:S:ST4:note:1:16-39",
+        "source_raw": " the angle of the mouth",
+        "detail": "subfeature-bearing relation operand has no executable child"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:00:between"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:01:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:02:midpoint-of-entity"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:03:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:00:between"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:01:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:02:same-level"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:26-29:reference-acupoint:87571bdea7"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:85-88:reference-acupoint:eeb3b40f1e"
+      }
+    ]
+  },
+  "post_repair_counts": {
+    "parent_only_collapse": 0,
+    "unused_child_subfeature": 0,
+    "distinct_subfeature_identity_collapse": 0,
+    "condition_preservation_failure": 0,
+    "false_fallback": 0
+  },
+  "negative_tests": {
+    "child_removed_parent_whole_mesh": true,
+    "distinct_borders_same_geometry_hash": true,
+    "same_level_child_replaced_by_parent": true,
+    "te20_conditional_to_resolved": true,
+    "unknown_subfeature_whole_entity_fallback": true
+  },
+  "coordinate_generation_count": 0,
+  "legacy_c_coordinate_reference_count": 0,
+  "final_state": {
+    "stage2_automated_structural_validation": "PASS",
+    "stage2_semantic_repair_validation": "PASS",
+    "stage2_human_semantic_audit": "PENDING",
+    "stage3": "NOT_STARTED"
+  }
+}
