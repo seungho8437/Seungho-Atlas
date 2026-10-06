@@ -173,6 +173,51 @@ function localSideLateral(y, sideSign, frac){
   return bodyCenter[lrAxis]+sideSign*(inner+(outer-inner)*Math.max(0,Math.min(1,frac)));
 }
 
+const xiphoidStats=conceptStats('FMA7488');
+const pubicHairStats=centerBounds(atlas.parts.filter(p=>/pubic hair/i.test(p.name)));
+const xiphoidLevel=xiphoidStats?.center[supAxis] ?? norm(supAxis,.72);
+const pubicProxyLevel=pubicHairStats?.center[supAxis] ?? norm(supAxis,.50);
+// WHO trunk proportional frame: xiphoid/sternocostal region -> umbilicus
+// is 8 B-cun and umbilicus -> superior pubic region is 5 B-cun.
+const trunkCun=Math.abs(xiphoidLevel-pubicProxyLevel)/13;
+const navelLevel=Math.min(xiphoidLevel,pubicProxyLevel)+5*trunkCun;
+
+function sideSignFor(side){return side==='left'?1:side==='right'?-1:0;}
+function statsSeed(id,side){
+  const ss=sideSignFor(side);
+  return conceptStats(id,ss,lrAxis,leftSign)||conceptStats(id,0,lrAxis,leftSign);
+}
+function averageCenters(stats){
+  const xs=stats.filter(Boolean);if(!xs.length)return null;
+  return [0,1,2].map(k=>xs.reduce((n,x)=>n+x.center[k],0)/xs.length);
+}
+function regionalGeometrySeed(text,side){
+  const ss=sideSignFor(side);
+  if(/손목|wrist/i.test(text)){
+    const id=side==='left'?'FMA40121':side==='right'?'FMA40120':null;
+    const st=id?conceptStats(id,0,lrAxis,leftSign):null;
+    if(st)return [...st.center];
+    return averageCenters([statsSeed('FMA23463',side),statsSeed('FMA23466',side)]);
+  }
+  if(/손등|손바닥|손가락|손허리|hand|finger|metacarp/i.test(text)){
+    const st=statsSeed('FMA23900',side);if(st)return [...st.center];
+  }
+  if(/아래팔|전완|forearm/i.test(text)){
+    const c=averageCenters([statsSeed('FMA23463',side),statsSeed('FMA23466',side)]);if(c)return c;
+  }
+  if(/팔꿈치|주와|elbow/i.test(text)){
+    const r=statsSeed('FMA23463',side),u=statsSeed('FMA23466',side);
+    const c=averageCenters([r,u]);if(c){c[supAxis]=Math.max(r?.max[supAxis]??c[supAxis],u?.max[supAxis]??c[supAxis]);return c;}
+  }
+  if(/위팔|상완|upper arm/i.test(text)){const st=statsSeed('FMA13303',side);if(st)return [...st.center];}
+  if(/넓적다리|대퇴|thigh/i.test(text)){const st=statsSeed('FMA9611',side);if(st)return [...st.center];}
+  if(/무릎|오금|knee|poplite/i.test(text)){const st=statsSeed('FMA24485',side);if(st)return [...st.center];}
+  if(/종아리|정강|하퇴|아래다리|leg/i.test(text)){const st=statsSeed('FMA24476',side);if(st)return [...st.center];}
+  if(/발목|복사|ankle|malleol/i.test(text)){const st=statsSeed('FMA9708',side);if(st)return [...st.center];}
+  if(/발등|발바닥|발가락|발허리|foot|toe|metatars/i.test(text)){const st=statsSeed('FMA24496',side);if(st)return [...st.center];}
+  return null;
+}
+
 const regionRules = [
   [/vertex|머리꼭대기|정수리|두정부|머리 위/, .97, .50],
   [/forehead|이마|눈썹|미간|코|입술|턱|얼굴|눈|귀|관자/, .91, .82],
@@ -180,41 +225,43 @@ const regionRules = [
   [/head|머리|두피/, .93, .55],
   [/neck|목|경부|목덜미/, .82, .52],
   [/shoulder|어깨|견갑|빗장|쇄골/, .76, .58],
-  [/chest|가슴|흉부|갈비|늑간|유두/, .69, .78],
-  [/upper abdomen|윗배|상복부|명치/, .59, .76],
-  [/abdomen|배꼽|복부|배 부위|아랫배/, .50, .77],
-  [/pelvis|샅|회음|두덩|치골|엉덩|볼기|천골|엉치/, .38, .50],
-  [/upper arm|위팔|상완/, .66, .60],
-  [/elbow|팔꿈치|주와/, .55, .58],
-  [/forearm|아래팔|전완/, .47, .58],
-  [/wrist|손목/, .38, .60],
-  [/hand|손등|손바닥|손가락|엄지|새끼손가락/, .32, .64],
-  [/thigh|넓적다리|대퇴/, .31, .53],
-  [/knee|무릎|오금|슬부/, .20, .50],
-  [/leg|종아리|정강|하퇴|아래다리/, .12, .52],
-  [/ankle|복사|발목/, .055, .53],
-  [/foot|발등|발바닥|발가락|엄지발가락/, .025, .62],
+  [/chest|가슴|흉부|갈비|늑간|유두/, .72, .78],
+  [/upper abdomen|윗배|상복부|명치/, .64, .82],
+  [/abdomen|배꼽|복부|배 부위|아랫배/, .59, .82],
+  [/pelvis|샅|회음|두덩|치골|엉덩|볼기|천골|엉치/, .52, .50],
 ];
 
-function regionTarget(text, side){
-  let z=.50, a=.55;
-  for(const [re,zz,aa] of regionRules){ if(re.test(text)){z=zz;a=aa;break;} }
+function regionTarget(text,side){
+  const geometrySeed=regionalGeometrySeed(text,side);
+  if(geometrySeed){
+    const t=[...geometrySeed], apHalf=extent[apAxis]/2;
+    if(/뒤|posterior|등쪽|배측|오금/.test(text))t[apAxis]-=anteriorSign*apHalf*.08;
+    if(/앞|anterior|배쪽|손바닥쪽/.test(text))t[apAxis]+=anteriorSign*apHalf*.08;
+    return t;
+  }
+  let z=.59,a=.72;
+  for(const [re,zz,aa] of regionRules){if(re.test(text)){z=zz;a=aa;break;}}
   const t=[...bodyCenter];
-  t[supAxis]=norm(supAxis,z);
+  t[supAxis]=/배꼽/.test(text)?navelLevel:norm(supAxis,z);
   const apHalf=extent[apAxis]/2;
-  t[apAxis]=bodyCenter[apAxis]+anteriorSign*apHalf*((a-.5)*1.75);
-  if(/뒤|posterior|등쪽|배측/.test(text)) t[apAxis]=bodyCenter[apAxis]-anteriorSign*apHalf*.75;
-  if(/앞|anterior|배쪽|손바닥쪽/.test(text)) t[apAxis]=bodyCenter[apAxis]+anteriorSign*apHalf*.72;
-  const lateralFrac = /정중|median|midline/.test(text) ? 0 : (/가쪽|lateral|외측/.test(text)?.62:.43);
-  const s=side==='left'?leftSign:side==='right'?-leftSign:0;
-  const coreRegion=/머리|두피|얼굴|이마|눈|귀|코|입술|턱|목|가슴|흉부|갈비|배|복부|배꼽|엉치|볼기|골반|등|천골|pelvis|chest|abdomen|head|face|neck|back/i.test(text);
-  const half=coreRegion?localHalfWidth(t[supAxis]):extent[lrAxis]/2;
-  t[lrAxis]=bodyCenter[lrAxis]+s*half*lateralFrac;
+  t[apAxis]=bodyCenter[apAxis]+anteriorSign*apHalf*((a-.5)*1.9);
+  if(/뒤|posterior|등쪽|배측/.test(text))t[apAxis]=bodyCenter[apAxis]-anteriorSign*apHalf*.78;
+  if(/앞|anterior|배쪽/.test(text))t[apAxis]=bodyCenter[apAxis]+anteriorSign*apHalf*.82;
+  const lateralFrac=/정중|median|midline/.test(text)?0:(/가쪽|lateral|외측/.test(text)?.62:.43);
+  const sideS=side==='left'?leftSign:side==='right'?-leftSign:0;
+  const half=localHalfWidth(t[supAxis]);
+  t[lrAxis]=bodyCenter[lrAxis]+sideS*half*lateralFrac;
   return t;
 }
 
-const cunY=extent[supAxis]/75;
+const cunY=trunkCun;
 const ordinalIntercostal={첫째:1,둘째:2,셋째:3,넷째:4,다섯째:5,여섯째:6,일곱째:7};
+function wristLevel(side){const id=side==='left'?'FMA40121':side==='right'?'FMA40120':null;return (id?conceptStats(id):null)?.center[supAxis]??regionalGeometrySeed('wrist',side)?.[supAxis]??norm(supAxis,.50);}
+function elbowLevel(side){const r=statsSeed('FMA23463',side),u=statsSeed('FMA23466',side);return Math.max(r?.max[supAxis]??0,u?.max[supAxis]??0)||norm(supAxis,.64);}
+function forearmCun(side){return Math.abs(elbowLevel(side)-wristLevel(side))/12;}
+function kneeLevel(side){return statsSeed('FMA24485',side)?.center[supAxis]??norm(supAxis,.27);}
+function ankleLevel(side){return statsSeed('FMA9708',side)?.center[supAxis]??norm(supAxis,.04);}
+function legCun(side){return Math.abs(kneeLevel(side)-ankleLevel(side))/16;}
 function applyWhoConstraints(input,text,side){
   const t=[...input]; let count=0;
   const explicitFoot=/발등|발바닥|발가락|발허리|발꿈치|복사|발목/.test(text) && !/아래다리|넓적다리|무릎/.test(text);
@@ -233,14 +280,14 @@ function applyWhoConstraints(input,text,side){
   }
   const nav=text.match(/배꼽(?:\s*중심)?(?:보다|에서)?\s*(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(nav){
-    const n=Number(nav[2]), navel=norm(supAxis,.455);
+    const n=Number(nav[2]), navel=navelLevel;
     t[supAxis]=nav[1]==='위'?navel+n*cunY:navel-n*cunY;
     count++;
   }
   const navLat=text.match(/배꼽(?:\s*중심)?으로부터\s*가쪽으로\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(navLat&&sideSign){
     const n=Number(navLat[1]);
-    t[supAxis]=norm(supAxis,.455);
+    t[supAxis]=navelLevel;
     t[lrAxis]=bodyCenter[lrAxis]+sideSign*localHalfWidth(t[supAxis])*Math.min(.82,n/4*.62);
     count+=2;
   }
@@ -275,7 +322,10 @@ function applyWhoConstraints(input,text,side){
   for(const [re,base] of refs){
     const m=text.match(re); if(!m)continue;
     const n=Number(m[2]), up=(m[1].startsWith('위')||m[1].startsWith('몸쪽'));
-    t[supAxis]=norm(supAxis,base)+(up?1:-1)*n*cunY; count++; break;
+    let anchorLevel=base===null?(/손목주름/.test(m[0])?wristLevel(side):/ST35/.test(m[0])?kneeLevel(side):null):norm(supAxis,base);
+    const localCun=/손목주름/.test(m[0])?forearmCun(side):/ST35/.test(m[0])?legCun(side):cunY;
+    if(anchorLevel===null)anchorLevel=t[supAxis];
+    t[supAxis]=anchorLevel+(up?1:-1)*n*localCun; count++; break;
   }
   const sacLat=text.match(/정중엉치뼈능선[^,.]{0,30}?가쪽으로\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(sacLat&&sideSign){
@@ -321,8 +371,8 @@ function applyWhoConstraints(input,text,side){
   if(browUp){t[supAxis]=norm(supAxis,.885)+Number(browUp[1])*cunY;count++;}
   if(/눈썹\s*안쪽끝/.test(text)){t[supAxis]=norm(supAxis,.885);count++;}
   if(/앞위쪽/.test(text)){t[supAxis]+=cunY*.7;count++;}
-  if(/배꼽\s*중심과\s*같은\s*높이/.test(text)){t[supAxis]=norm(supAxis,.455);count++;}
-  if(/배꼽(?:\s*중심)?에\s*있다/.test(text)){t[supAxis]=norm(supAxis,.455);count++;}
+  if(/배꼽\s*중심과\s*같은\s*높이/.test(text)){t[supAxis]=navelLevel;count++;}
+  if(/배꼽(?:\s*중심)?에\s*있다/.test(text)){t[supAxis]=navelLevel;count++;}
   if(/꼬리뼈\s*끝/.test(text)&&sideSign){
     t[supAxis]=norm(supAxis,.38);
     t[lrAxis]=localSideLateral(t[supAxis],sideSign,.20);
