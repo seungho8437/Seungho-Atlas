@@ -3,7 +3,7 @@
   "artifact": "c-v3-stage2-semantic-repair-human-review-data",
   "human_review_disposition": "PENDING",
   "before_sha256": "d70c437a536d21765a91693fd8e292b47cb3f157f89b503b135e52b974b74d86",
-  "after_sha256": "6e20cf61c7471b53bba441c2dc3fcc6336679ae723c0c1859d3eb6128fa50818",
+  "after_sha256": "58371121b4f2d0c615606689f16a7cdc4c6091edc052c340729e64b90463cdaf",
   "validation_status": "PASS",
   "stage3": "NOT_STARTED",
   "points": [
@@ -46,7 +46,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:LI18:location:128-180:9046d75e",
@@ -69,7 +69,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:LI18:location:57-101",
@@ -92,7 +92,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:LI18:location:61-76",
@@ -229,11 +229,13 @@
           "semantic_operand_ids": [
             "LM:S:LI18:location:57-101"
           ],
-          "actual_executable_operand_ids": [],
+          "actual_executable_operand_ids": [
+            "LM:S:LI18:location:61-76"
+          ],
           "direction": null,
           "modifier": null,
           "status": "UNRESOLVED",
-          "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
+          "reason": "executable operand not uniquely executable"
         },
         {
           "relation_id": "RL:S:LI18:location:02:surface-landmark",
@@ -252,6 +254,16 @@
         }
       ],
       "dependency_edges": [
+        {
+          "from": "LM:S:LI18:location:57-101",
+          "to": "LM:S:LI18:location:61-76",
+          "kind": "semantic_to_executable"
+        },
+        {
+          "from": "LM:S:LI18:location:61-76",
+          "to": "RL:S:LI18:location:01:same-level",
+          "kind": "executable_to_relation"
+        },
         {
           "from": "LM:S:LI18:location:7-22",
           "to": "RL:S:LI18:location:02:surface-landmark",
@@ -437,20 +449,13 @@
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:LI18:location:115-180:0f3e9745",
-                  "candidate_child_ids": [],
-                  "binding": "missing_executable_subfeature",
-                  "source_subfeature_types": [
-                    "anterior border",
-                    "posterior border"
-                  ]
+                  "executable_operand_ids": [],
+                  "binding": "missing_executable_subfeature"
                 },
                 {
                   "semantic_operand_id": "LM:S:LI18:location:128-180:9046d75e",
-                  "candidate_child_ids": [],
-                  "binding": "missing_executable_subfeature",
-                  "source_subfeature_types": [
-                    "posterior border"
-                  ]
+                  "executable_operand_ids": [],
+                  "binding": "missing_executable_subfeature"
                 }
               ]
             }
@@ -472,22 +477,18 @@
             "after": {
               "status": "UNRESOLVED",
               "executor": "same_level_plane",
-              "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "reason": "executable operand not uniquely executable",
               "semantic_argument_node_ids": [
                 "LM:S:LI18:location:57-101"
               ],
-              "executable_argument_node_ids": [],
+              "executable_argument_node_ids": [
+                "LM:S:LI18:location:61-76"
+              ],
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:LI18:location:57-101",
-                  "candidate_child_ids": [
-                    "LM:S:LI18:location:61-76"
-                  ],
-                  "resolved_child_ids": [],
-                  "binding": "unresolved_subfeature_binding",
-                  "source_subfeature_types": [
-                    "superior border"
-                  ]
+                  "executable_operand_id": "LM:S:LI18:location:61-76",
+                  "binding": "child_subfeature"
                 }
               ]
             }
@@ -668,7 +669,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         }
       ],
       "composite_binding_view": [
@@ -722,11 +723,13 @@
           "semantic_operand_ids": [
             "LM:S:ST10:location:96-142"
           ],
-          "actual_executable_operand_ids": [],
+          "actual_executable_operand_ids": [
+            "LM:S:ST10:location:100-107"
+          ],
           "direction": null,
           "modifier": null,
           "status": "UNRESOLVED",
-          "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
+          "reason": "executable operand not uniquely executable"
         },
         {
           "relation_id": "RL:S:ST10:location:01:same-level",
@@ -760,6 +763,16 @@
         }
       ],
       "dependency_edges": [
+        {
+          "from": "LM:S:ST10:location:96-142",
+          "to": "LM:S:ST10:location:100-107",
+          "kind": "semantic_to_executable"
+        },
+        {
+          "from": "LM:S:ST10:location:100-107",
+          "to": "RL:S:ST10:location:00:relative-to",
+          "kind": "executable_to_relation"
+        },
         {
           "from": "LM:S:ST10:location:57-78",
           "to": "RL:S:ST10:location:01:same-level",
@@ -882,22 +895,18 @@
             "after": {
               "status": "UNRESOLVED",
               "executor": "directional_relation",
-              "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "reason": "executable operand not uniquely executable",
               "semantic_argument_node_ids": [
                 "LM:S:ST10:location:96-142"
               ],
-              "executable_argument_node_ids": [],
+              "executable_argument_node_ids": [
+                "LM:S:ST10:location:100-107"
+              ],
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:ST10:location:96-142",
-                  "candidate_child_ids": [
-                    "LM:S:ST10:location:100-107"
-                  ],
-                  "resolved_child_ids": [],
-                  "binding": "unresolved_subfeature_binding",
-                  "source_subfeature_types": [
-                    "border"
-                  ]
+                  "executable_operand_id": "LM:S:ST10:location:100-107",
+                  "binding": "child_subfeature"
                 }
               ]
             }
@@ -1124,7 +1133,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:LI17:note:1:26-31",
@@ -1224,11 +1233,13 @@
           "semantic_operand_ids": [
             "LM:S:LI17:location:97-143"
           ],
-          "actual_executable_operand_ids": [],
+          "actual_executable_operand_ids": [
+            "LM:S:LI17:location:101-108"
+          ],
           "direction": null,
           "modifier": null,
           "status": "UNRESOLVED",
-          "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
+          "reason": "executable operand not uniquely executable"
         },
         {
           "relation_id": "RL:S:LI17:location:01:same-level",
@@ -1322,6 +1333,16 @@
         }
       ],
       "dependency_edges": [
+        {
+          "from": "LM:S:LI17:location:97-143",
+          "to": "LM:S:LI17:location:101-108",
+          "kind": "semantic_to_executable"
+        },
+        {
+          "from": "LM:S:LI17:location:101-108",
+          "to": "RL:S:LI17:location:00:relative-to",
+          "kind": "executable_to_relation"
+        },
         {
           "from": "LM:S:LI17:location:57-78",
           "to": "RL:S:LI17:location:01:same-level",
@@ -1489,22 +1510,18 @@
             "after": {
               "status": "UNRESOLVED",
               "executor": "directional_relation",
-              "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "reason": "executable operand not uniquely executable",
               "semantic_argument_node_ids": [
                 "LM:S:LI17:location:97-143"
               ],
-              "executable_argument_node_ids": [],
+              "executable_argument_node_ids": [
+                "LM:S:LI17:location:101-108"
+              ],
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:LI17:location:97-143",
-                  "candidate_child_ids": [
-                    "LM:S:LI17:location:101-108"
-                  ],
-                  "resolved_child_ids": [],
-                  "binding": "unresolved_subfeature_binding",
-                  "source_subfeature_types": [
-                    "border"
-                  ]
+                  "executable_operand_id": "LM:S:LI17:location:101-108",
+                  "binding": "child_subfeature"
                 }
               ]
             }
@@ -1824,7 +1841,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:BL17:location:51-66",
@@ -1939,7 +1956,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "child subfeature type is absent or semantically non-atomic"
+          "reason": "child subfeature type not recognized"
         },
         {
           "node_id": "LM:S:BL17:note:1:87-116",
@@ -2072,11 +2089,13 @@
           "semantic_operand_ids": [
             "LM:S:BL17:location:47-127"
           ],
-          "actual_executable_operand_ids": [],
+          "actual_executable_operand_ids": [
+            "LM:S:BL17:location:51-66"
+          ],
           "direction": null,
           "modifier": null,
           "status": "UNRESOLVED",
-          "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
+          "reason": "executable operand not uniquely executable"
         },
         {
           "relation_id": "RL:S:BL17:location:02:surface-landmark",
@@ -2119,6 +2138,16 @@
           "from": "RL:S:BL17:location:00:relative-to",
           "to": "S:BL17:location",
           "kind": "relation_to_statement"
+        },
+        {
+          "from": "LM:S:BL17:location:47-127",
+          "to": "LM:S:BL17:location:51-66",
+          "kind": "semantic_to_executable"
+        },
+        {
+          "from": "LM:S:BL17:location:51-66",
+          "to": "RL:S:BL17:location:01:same-level",
+          "kind": "executable_to_relation"
         },
         {
           "from": "LM:S:BL17:location:7-24",
@@ -2325,22 +2354,18 @@
             "after": {
               "status": "UNRESOLVED",
               "executor": "same_level_plane",
-              "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "reason": "executable operand not uniquely executable",
               "semantic_argument_node_ids": [
                 "LM:S:BL17:location:47-127"
               ],
-              "executable_argument_node_ids": [],
+              "executable_argument_node_ids": [
+                "LM:S:BL17:location:51-66"
+              ],
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:BL17:location:47-127",
-                  "candidate_child_ids": [
-                    "LM:S:BL17:location:51-66"
-                  ],
-                  "resolved_child_ids": [],
-                  "binding": "unresolved_subfeature_binding",
-                  "source_subfeature_types": [
-                    "inferior border"
-                  ]
+                  "executable_operand_id": "LM:S:BL17:location:51-66",
+                  "binding": "child_subfeature"
                 }
               ]
             }
@@ -2492,7 +2517,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:BL23:location:47-62",
@@ -2630,11 +2655,13 @@
           "semantic_operand_ids": [
             "LM:S:BL23:location:43-120"
           ],
-          "actual_executable_operand_ids": [],
+          "actual_executable_operand_ids": [
+            "LM:S:BL23:location:47-62"
+          ],
           "direction": null,
           "modifier": null,
           "status": "UNRESOLVED",
-          "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
+          "reason": "executable operand not uniquely executable"
         },
         {
           "relation_id": "RL:S:BL23:location:02:surface-landmark",
@@ -2662,6 +2689,16 @@
           "from": "RL:S:BL23:location:00:relative-to",
           "to": "S:BL23:location",
           "kind": "relation_to_statement"
+        },
+        {
+          "from": "LM:S:BL23:location:43-120",
+          "to": "LM:S:BL23:location:47-62",
+          "kind": "semantic_to_executable"
+        },
+        {
+          "from": "LM:S:BL23:location:47-62",
+          "to": "RL:S:BL23:location:01:same-level",
+          "kind": "executable_to_relation"
         },
         {
           "from": "LM:S:BL23:location:7-20",
@@ -2816,22 +2853,18 @@
             "after": {
               "status": "UNRESOLVED",
               "executor": "same_level_plane",
-              "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "reason": "executable operand not uniquely executable",
               "semantic_argument_node_ids": [
                 "LM:S:BL23:location:43-120"
               ],
-              "executable_argument_node_ids": [],
+              "executable_argument_node_ids": [
+                "LM:S:BL23:location:47-62"
+              ],
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:BL23:location:43-120",
-                  "candidate_child_ids": [
-                    "LM:S:BL23:location:47-62"
-                  ],
-                  "resolved_child_ids": [],
-                  "binding": "unresolved_subfeature_binding",
-                  "source_subfeature_types": [
-                    "inferior border"
-                  ]
+                  "executable_operand_id": "LM:S:BL23:location:47-62",
+                  "binding": "child_subfeature"
                 }
               ]
             }
@@ -2943,7 +2976,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:BL25:location:47-62",
@@ -3081,11 +3114,13 @@
           "semantic_operand_ids": [
             "LM:S:BL25:location:43-120"
           ],
-          "actual_executable_operand_ids": [],
+          "actual_executable_operand_ids": [
+            "LM:S:BL25:location:47-62"
+          ],
           "direction": null,
           "modifier": null,
           "status": "UNRESOLVED",
-          "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
+          "reason": "executable operand not uniquely executable"
         },
         {
           "relation_id": "RL:S:BL25:location:02:surface-landmark",
@@ -3113,6 +3148,16 @@
           "from": "RL:S:BL25:location:00:relative-to",
           "to": "S:BL25:location",
           "kind": "relation_to_statement"
+        },
+        {
+          "from": "LM:S:BL25:location:43-120",
+          "to": "LM:S:BL25:location:47-62",
+          "kind": "semantic_to_executable"
+        },
+        {
+          "from": "LM:S:BL25:location:47-62",
+          "to": "RL:S:BL25:location:01:same-level",
+          "kind": "executable_to_relation"
         },
         {
           "from": "LM:S:BL25:location:7-20",
@@ -3267,22 +3312,18 @@
             "after": {
               "status": "UNRESOLVED",
               "executor": "same_level_plane",
-              "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "reason": "executable operand not uniquely executable",
               "semantic_argument_node_ids": [
                 "LM:S:BL25:location:43-120"
               ],
-              "executable_argument_node_ids": [],
+              "executable_argument_node_ids": [
+                "LM:S:BL25:location:47-62"
+              ],
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:BL25:location:43-120",
-                  "candidate_child_ids": [
-                    "LM:S:BL25:location:47-62"
-                  ],
-                  "resolved_child_ids": [],
-                  "binding": "unresolved_subfeature_binding",
-                  "source_subfeature_types": [
-                    "inferior border"
-                  ]
+                  "executable_operand_id": "LM:S:BL25:location:47-62",
+                  "binding": "child_subfeature"
                 }
               ]
             }
@@ -3429,7 +3470,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:ST9:location:61-76",
@@ -3567,7 +3608,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:ST9:note:2:253-305:a442a1a4",
@@ -3590,7 +3631,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:ST9:note:2:44-48",
@@ -3838,11 +3879,13 @@
           "semantic_operand_ids": [
             "LM:S:ST9:location:57-101"
           ],
-          "actual_executable_operand_ids": [],
+          "actual_executable_operand_ids": [
+            "LM:S:ST9:location:61-76"
+          ],
           "direction": null,
           "modifier": null,
           "status": "UNRESOLVED",
-          "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
+          "reason": "executable operand not uniquely executable"
         },
         {
           "relation_id": "RL:S:ST9:location:02:overlies",
@@ -4004,6 +4047,16 @@
           "from": "RL:S:ST9:location:00:relative-to",
           "to": "S:ST9:location",
           "kind": "relation_to_statement"
+        },
+        {
+          "from": "LM:S:ST9:location:57-101",
+          "to": "LM:S:ST9:location:61-76",
+          "kind": "semantic_to_executable"
+        },
+        {
+          "from": "LM:S:ST9:location:61-76",
+          "to": "RL:S:ST9:location:01:same-level",
+          "kind": "executable_to_relation"
         },
         {
           "from": "LM:S:ST9:location:157-178",
@@ -4368,22 +4421,18 @@
             "after": {
               "status": "UNRESOLVED",
               "executor": "same_level_plane",
-              "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "reason": "executable operand not uniquely executable",
               "semantic_argument_node_ids": [
                 "LM:S:ST9:location:57-101"
               ],
-              "executable_argument_node_ids": [],
+              "executable_argument_node_ids": [
+                "LM:S:ST9:location:61-76"
+              ],
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:ST9:location:57-101",
-                  "candidate_child_ids": [
-                    "LM:S:ST9:location:61-76"
-                  ],
-                  "resolved_child_ids": [],
-                  "binding": "unresolved_subfeature_binding",
-                  "source_subfeature_types": [
-                    "superior border"
-                  ]
+                  "executable_operand_id": "LM:S:ST9:location:61-76",
+                  "binding": "child_subfeature"
                 }
               ]
             }
@@ -4495,20 +4544,13 @@
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:ST9:note:2:240-305:6f7a364e",
-                  "candidate_child_ids": [],
-                  "binding": "missing_executable_subfeature",
-                  "source_subfeature_types": [
-                    "anterior border",
-                    "posterior border"
-                  ]
+                  "executable_operand_ids": [],
+                  "binding": "missing_executable_subfeature"
                 },
                 {
                   "semantic_operand_id": "LM:S:ST9:note:2:253-305:a442a1a4",
-                  "candidate_child_ids": [],
-                  "binding": "missing_executable_subfeature",
-                  "source_subfeature_types": [
-                    "posterior border"
-                  ]
+                  "executable_operand_ids": [],
+                  "binding": "missing_executable_subfeature"
                 }
               ]
             }
@@ -4884,7 +4926,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:TE20:location:7-11",
@@ -5035,11 +5077,8 @@
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:TE20:location:29-48",
-                  "candidate_child_ids": [],
-                  "binding": "missing_executable_subfeature",
-                  "source_subfeature_types": [
-                    "apex"
-                  ]
+                  "executable_operand_ids": [],
+                  "binding": "missing_executable_subfeature"
                 }
               ]
             }
@@ -5140,7 +5179,7 @@
           "semantic_class": "tendon",
           "parent_entity": null,
           "child_subfeature": null,
-          "executor": "atlas_name_resolution",
+          "executor": "bound_composite_subfeature",
           "status": "UNRESOLVED",
           "identity": {
             "kind": null,
@@ -5155,7 +5194,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "no unique atlas name match"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:HT7:location:7-26",
@@ -5247,7 +5286,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:HT7:note:1:38-54",
@@ -5370,13 +5409,11 @@
           "semantic_operand_ids": [
             "LM:S:HT7:location:50-82"
           ],
-          "actual_executable_operand_ids": [
-            "LM:S:HT7:location:50-82"
-          ],
+          "actual_executable_operand_ids": [],
           "direction": null,
           "modifier": null,
           "status": "UNRESOLVED",
-          "reason": "executable operand not uniquely executable"
+          "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
         },
         {
           "relation_id": "RL:S:HT7:location:01:surface-landmark",
@@ -5415,11 +5452,13 @@
           "semantic_operand_ids": [
             "LM:S:HT7:note:1:33-75"
           ],
-          "actual_executable_operand_ids": [],
+          "actual_executable_operand_ids": [
+            "LM:S:HT7:note:1:38-54"
+          ],
           "direction": null,
           "modifier": null,
           "status": "UNRESOLVED",
-          "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
+          "reason": "executable operand not uniquely executable"
         },
         {
           "relation_id": "RL:S:HT7:note:1:01:surface-landmark",
@@ -5454,11 +5493,6 @@
       ],
       "dependency_edges": [
         {
-          "from": "LM:S:HT7:location:50-82",
-          "to": "RL:S:HT7:location:00:relative-to",
-          "kind": "executable_to_relation"
-        },
-        {
           "from": "LM:S:HT7:location:7-26",
           "to": "RL:S:HT7:location:01:surface-landmark",
           "kind": "executable_to_relation"
@@ -5477,6 +5511,16 @@
           "from": "RL:S:HT7:location:02:surface-landmark",
           "to": "S:HT7:location",
           "kind": "relation_to_statement"
+        },
+        {
+          "from": "LM:S:HT7:note:1:33-75",
+          "to": "LM:S:HT7:note:1:38-54",
+          "kind": "semantic_to_executable"
+        },
+        {
+          "from": "LM:S:HT7:note:1:38-54",
+          "to": "RL:S:HT7:note:1:00:relative-to",
+          "kind": "executable_to_relation"
         },
         {
           "from": "LM:S:HT7:note:1:13-23",
@@ -5516,6 +5560,38 @@
           "after": "UNRESOLVED"
         },
         "landmarks": [
+          {
+            "node_id": "LM:S:HT7:location:50-82",
+            "source_raw": " the flexor carpi ulnaris tendon",
+            "before_status": "UNRESOLVED",
+            "before_identity": {
+              "kind": null,
+              "fma_id": null,
+              "registry_id": null,
+              "constructed_id": null,
+              "geometry_hash": null,
+              "part_id": null,
+              "concept_id": null,
+              "reference_point_id": null,
+              "parent_landmark_id": null,
+              "subfeature_type": null,
+              "construction_rule": null
+            },
+            "after_status": "UNRESOLVED",
+            "after_identity": {
+              "kind": null,
+              "fma_id": null,
+              "registry_id": null,
+              "constructed_id": null,
+              "geometry_hash": null,
+              "part_id": null,
+              "concept_id": null,
+              "reference_point_id": null,
+              "parent_landmark_id": null,
+              "subfeature_type": null,
+              "construction_rule": null
+            }
+          },
           {
             "node_id": "LM:S:HT7:note:1:33-75",
             "source_raw": " the proxi-mal border of the pisiform bone",
@@ -5595,18 +5671,16 @@
             "after": {
               "status": "UNRESOLVED",
               "executor": "directional_relation",
-              "reason": "executable operand not uniquely executable",
+              "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
               "semantic_argument_node_ids": [
                 "LM:S:HT7:location:50-82"
               ],
-              "executable_argument_node_ids": [
-                "LM:S:HT7:location:50-82"
-              ],
+              "executable_argument_node_ids": [],
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:HT7:location:50-82",
-                  "executable_operand_id": "LM:S:HT7:location:50-82",
-                  "binding": "identity"
+                  "executable_operand_ids": [],
+                  "binding": "missing_executable_subfeature"
                 }
               ]
             }
@@ -5704,22 +5778,18 @@
             "after": {
               "status": "UNRESOLVED",
               "executor": "directional_relation",
-              "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "reason": "executable operand not uniquely executable",
               "semantic_argument_node_ids": [
                 "LM:S:HT7:note:1:33-75"
               ],
-              "executable_argument_node_ids": [],
+              "executable_argument_node_ids": [
+                "LM:S:HT7:note:1:38-54"
+              ],
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:HT7:note:1:33-75",
-                  "candidate_child_ids": [
-                    "LM:S:HT7:note:1:38-54"
-                  ],
-                  "resolved_child_ids": [],
-                  "binding": "unresolved_subfeature_binding",
-                  "source_subfeature_types": [
-                    "border"
-                  ]
+                  "executable_operand_id": "LM:S:HT7:note:1:38-54",
+                  "binding": "child_subfeature"
                 }
               ]
             }
@@ -5841,7 +5911,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:LI4:location:53-79",
@@ -6030,11 +6100,8 @@
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:LI4:location:36-79",
-                  "candidate_child_ids": [],
-                  "binding": "missing_executable_subfeature",
-                  "source_subfeature_types": [
-                    "midpoint"
-                  ]
+                  "executable_operand_ids": [],
+                  "binding": "missing_executable_subfeature"
                 }
               ]
             }
@@ -6186,7 +6253,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:ST1:location:7-11",
@@ -6414,11 +6481,8 @@
                 },
                 {
                   "semantic_operand_id": "LM:S:ST1:location:37-60",
-                  "candidate_child_ids": [],
-                  "binding": "missing_executable_subfeature",
-                  "source_subfeature_types": [
-                    "margin"
-                  ]
+                  "executable_operand_ids": [],
+                  "binding": "missing_executable_subfeature"
                 }
               ]
             }
@@ -6560,7 +6624,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:GB14:location:7-11",
@@ -6698,11 +6762,13 @@
           "semantic_operand_ids": [
             "LM:S:GB14:location:67-91"
           ],
-          "actual_executable_operand_ids": [],
+          "actual_executable_operand_ids": [
+            "LM:S:GB14:location:72-78"
+          ],
           "direction": null,
           "modifier": null,
           "status": "UNRESOLVED",
-          "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
+          "reason": "executable operand not uniquely executable"
         },
         {
           "relation_id": "RL:S:GB14:location:02:center-of",
@@ -6745,6 +6811,16 @@
           "from": "RL:S:GB14:location:00:relative-to",
           "to": "S:GB14:location",
           "kind": "relation_to_statement"
+        },
+        {
+          "from": "LM:S:GB14:location:67-91",
+          "to": "LM:S:GB14:location:72-78",
+          "kind": "semantic_to_executable"
+        },
+        {
+          "from": "LM:S:GB14:location:72-78",
+          "to": "RL:S:GB14:location:01:relative-to",
+          "kind": "executable_to_relation"
         },
         {
           "from": "LM:S:GB14:location:82-91",
@@ -6932,22 +7008,18 @@
             "after": {
               "status": "UNRESOLVED",
               "executor": "directional_relation",
-              "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "reason": "executable operand not uniquely executable",
               "semantic_argument_node_ids": [
                 "LM:S:GB14:location:67-91"
               ],
-              "executable_argument_node_ids": [],
+              "executable_argument_node_ids": [
+                "LM:S:GB14:location:72-78"
+              ],
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:GB14:location:67-91",
-                  "candidate_child_ids": [
-                    "LM:S:GB14:location:72-78"
-                  ],
-                  "resolved_child_ids": [],
-                  "binding": "unresolved_subfeature_binding",
-                  "source_subfeature_types": [
-                    "centre"
-                  ]
+                  "executable_operand_id": "LM:S:GB14:location:72-78",
+                  "binding": "child_subfeature"
                 }
               ]
             }
@@ -7552,7 +7624,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:LU6:note:1:94-97",
@@ -8362,11 +8434,8 @@
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:LU6:note:1:57-106",
-                  "candidate_child_ids": [],
-                  "binding": "missing_executable_subfeature",
-                  "source_subfeature_types": [
-                    "midpoint"
-                  ]
+                  "executable_operand_ids": [],
+                  "binding": "missing_executable_subfeature"
                 }
               ]
             }
@@ -9309,7 +9378,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "child subfeature type is absent or semantically non-atomic"
+          "reason": "child subfeature type not recognized"
         },
         {
           "node_id": "LM:S:GB26:location:58-70",
@@ -9378,7 +9447,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:GB26:location:97-103",
@@ -9424,7 +9493,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:GB26:note:1:85-99",
@@ -9447,7 +9516,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "child subfeature type is absent or semantically non-atomic"
+          "reason": "child subfeature type not recognized"
         },
         {
           "node_id": "LM:S:GB26:note:2:27-32",
@@ -9644,11 +9713,13 @@
           "semantic_operand_ids": [
             "LM:S:GB26:location:93-116"
           ],
-          "actual_executable_operand_ids": [],
+          "actual_executable_operand_ids": [
+            "LM:S:GB26:location:97-103"
+          ],
           "direction": null,
           "modifier": null,
           "status": "UNRESOLVED",
-          "reason": "semantic composite has multiple child subfeatures and no unique executable operand"
+          "reason": "executable operand not uniquely executable"
         },
         {
           "relation_id": "RL:S:GB26:location:02:center-of",
@@ -9745,6 +9816,16 @@
         {
           "from": "LM:S:GB26:location:35-70",
           "to": "RL:S:GB26:location:00:relative-to",
+          "kind": "executable_to_relation"
+        },
+        {
+          "from": "LM:S:GB26:location:93-116",
+          "to": "LM:S:GB26:location:97-103",
+          "kind": "semantic_to_executable"
+        },
+        {
+          "from": "LM:S:GB26:location:97-103",
+          "to": "RL:S:GB26:location:01:same-level",
           "kind": "executable_to_relation"
         },
         {
@@ -10044,22 +10125,18 @@
             "after": {
               "status": "UNRESOLVED",
               "executor": "same_level_plane",
-              "reason": "semantic composite has multiple child subfeatures and no unique executable operand",
+              "reason": "executable operand not uniquely executable",
               "semantic_argument_node_ids": [
                 "LM:S:GB26:location:93-116"
               ],
-              "executable_argument_node_ids": [],
+              "executable_argument_node_ids": [
+                "LM:S:GB26:location:97-103"
+              ],
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:GB26:location:93-116",
-                  "candidate_child_ids": [
-                    "LM:S:GB26:location:97-103"
-                  ],
-                  "resolved_child_ids": [],
-                  "binding": "unresolved_subfeature_binding",
-                  "source_subfeature_types": [
-                    "centre"
-                  ]
+                  "executable_operand_id": "LM:S:GB26:location:97-103",
+                  "binding": "child_subfeature"
                 }
               ]
             }
@@ -10772,7 +10849,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:ST4:location:7-11",
@@ -10818,7 +10895,7 @@
             "subfeature_type": null,
             "construction_rule": null
           },
-          "reason": "composite subfeature semantics lack a unique executable child geometry"
+          "reason": "composite contains subfeature semantics but no unique executable child subfeature geometry"
         },
         {
           "node_id": "LM:S:ST4:note:1:69-86",
@@ -11082,11 +11159,8 @@
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:ST4:location:33-56",
-                  "candidate_child_ids": [],
-                  "binding": "missing_executable_subfeature",
-                  "source_subfeature_types": [
-                    "angle"
-                  ]
+                  "executable_operand_ids": [],
+                  "binding": "missing_executable_subfeature"
                 }
               ]
             }
@@ -11157,11 +11231,8 @@
               "operand_binding_trace": [
                 {
                   "semantic_operand_id": "LM:S:ST4:note:1:16-39",
-                  "candidate_child_ids": [],
-                  "binding": "missing_executable_subfeature",
-                  "source_subfeature_types": [
-                    "angle"
-                  ]
+                  "executable_operand_ids": [],
+                  "binding": "missing_executable_subfeature"
                 }
               ]
             }

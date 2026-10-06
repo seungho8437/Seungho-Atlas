@@ -11,7 +11,7 @@
   },
   "remaining_defects": [],
   "pre_repair_scan": {
-    "total": 120,
+    "total": 119,
     "new_regression_defects_outside_known8": 54,
     "new_regression_findings": [
       {
