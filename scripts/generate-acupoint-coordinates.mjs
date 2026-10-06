@@ -339,11 +339,11 @@ function applyWhoConstraints(input,text,side){
     [/앞겨드랑주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .735],
     [/뒤겨드랑주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .735],
     [/봉우리각[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .76],
-    [/손바닥쪽\s*손목주름[^,.]{0,35}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/, .385],
-    [/손등쪽\s*손목주름[^,.]{0,35}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/, .385],
+    [/손바닥쪽\s*손목주름[^,.]{0,35}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/, null],
+    [/손등쪽\s*손목주름[^,.]{0,35}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/, null],
     [/팔오금주름[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .55],
     [/무릎뼈바닥[^,.]{0,35}?(위|아래)로\s*(\d+(?:\.\d+)?)\s*B-cun/, .215],
-    [/ST35[^,.]{0,35}?(위로|위쪽으로|아래로|아래쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/, .20],
+    [/ST35[^,.]{0,35}?(위로|위쪽으로|아래로|아래쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/, null],
     [/팔꿈치머리\s*융기[^,.]{0,35}?(몸쪽|먼쪽|위|아래)으로\s*(\d+(?:\.\d+)?)\s*B-cun/, .55],
   ];
   for(const [re,base] of refs){
@@ -363,16 +363,16 @@ function applyWhoConstraints(input,text,side){
   const malleolus=text.match(/(안쪽|가쪽)복사(?:\s*융기)?에서[^,.]{0,30}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(malleolus){
     const up=(malleolus[2].startsWith('위')||malleolus[2].startsWith('몸쪽'));
-    t[supAxis]=norm(supAxis,.055)+(up?1:-1)*Number(malleolus[3])*cunY;count++;
+    t[supAxis]=ankleLevel(side)+(up?1:-1)*Number(malleolus[3])*legCun(side);count++;
   }
   const popliteal=text.match(/(?<!팔)오금주름에서[^,.]{0,30}?(위로|아래로|몸쪽으로|먼쪽으로)\s*(\d+(?:\.\d+)?)\s*B-cun/);
   if(popliteal){
     const up=(popliteal[1].startsWith('위')||popliteal[1].startsWith('몸쪽'));
-    t[supAxis]=norm(supAxis,.20)+(up?1:-1)*Number(popliteal[2])*cunY;count++;
+    t[supAxis]=kneeLevel(side)+(up?1:-1)*Number(popliteal[2])*legCun(side);count++;
   }
-  if(/팔오금주름\s*위/.test(text)&&!/[0-9]\s*B-cun/.test(text)){t[supAxis]=norm(supAxis,.55);count++;}
-  if(/손바닥쪽\s*손목주름\s*위에/.test(text)){t[supAxis]=norm(supAxis,.385);count++;}
-  if(!/팔오금주름/.test(text)&&/오금주름의\s*가운데|오금주름\s*위/.test(text)){t[supAxis]=norm(supAxis,.20);count++;}
+  if(/팔오금주름\s*위/.test(text)&&!/[0-9]\s*B-cun/.test(text)){t[supAxis]=elbowLevel(side);count++;}
+  if(/손바닥쪽\s*손목주름\s*위에/.test(text)){t[supAxis]=wristLevel(side);count++;}
+  if(!/팔오금주름/.test(text)&&/오금주름의\s*가운데|오금주름\s*위/.test(text)){t[supAxis]=kneeLevel(side);count++;}
   if(/코끝/.test(text)&&noseTipAnchor){for(let k=0;k<3;k++)t[k]=noseTipAnchor[k];count+=3;}
   if(/인중(?:의)?\s*정중선|인중의\s*중점/.test(text)){t[supAxis]=norm(supAxis,.835);count++;}
   if(/윗입술결절/.test(text)){t[supAxis]=norm(supAxis,.82);count++;}
@@ -450,7 +450,7 @@ function applyWhoConstraints(input,text,side){
     t[lrAxis]=localSideLateral(t[supAxis],sideSign,.72);
     count++;
   }
-  if(/발목/.test(text)&&!/B-cun/.test(text)){t[supAxis]=norm(supAxis,.06);count++;}
+  if(/발목/.test(text)&&!/B-cun/.test(text)){t[supAxis]=ankleLevel(side);count++;}
   if(/발허리발가락관절[^,.]{0,12}먼쪽/.test(text)){t[apAxis]+=anteriorSign*extent[apAxis]*.045;count++;}
   if(/발허리발가락관절[^,.]{0,12}몸쪽/.test(text)){t[apAxis]-=anteriorSign*extent[apAxis]*.035;count++;}
   if(/손허리손가락관절[^,.]{0,12}먼쪽/.test(text)){t[supAxis]-=cunY*.8;count++;}
