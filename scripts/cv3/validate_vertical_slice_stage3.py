@@ -24,7 +24,7 @@ def sha256_file(p):
 
 def primary_statement(p):return next((x for x in p["statements"] if x.get("section")=="location"),None)
 
-def dedupe_geometric_hits(hits,tol_t=1e-6,tol_point=1e-6):
+def dedupe_geometric_hits(hits,tol_t=1.5e-3,tol_point=1.5e-3):
  groups=[]
  for h in hits:
   for g in groups:
