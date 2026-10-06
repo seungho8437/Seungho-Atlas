@@ -37,13 +37,15 @@ def expected_subfeature_normalization(raw):
 def sf(raw):
  x=expected_subfeature_normalization(raw);return x["canonical_subfeature_type"] if x else None
 def fma_atomic_at_same_granularity(node):
- if node.get("terminal_disposition")!="resolved_fma" or not node.get("fma_name"):return False
+ if node.get("terminal_disposition")!="resolved_fma":return False
  ex=expected_subfeature_normalization(node.get("source_raw"))
  if not ex:return True
- fname=norm(node.get("fma_name"));lex=ex["source_lexical_form"];canon=ex["canonical_subfeature_type"]
- if lex in fname:return True
- if canon=="free_end" and ("free end" in fname or "free extremity" in fname):return True
- if canon=="center" and ("center" in fname or "centre" in fname):return True
+ raw=norm(node.get("source_raw"));fname=norm(node.get("fma_name"));lex=ex["source_lexical_form"];canon=ex["canonical_subfeature_type"]
+ if fname:
+  if lex in fname:return True
+  if canon=="free_end" and ("free end" in fname or "free extremity" in fname):return True
+  if canon=="center" and ("center" in fname or "centre" in fname):return True
+ if canon=="process" and re.search(r"\b[a-z][a-z-]+\s+process\b",raw):return True
  return False
 def identity(rec):
  g=rec.get("geometry") or {}
