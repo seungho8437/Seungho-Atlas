@@ -24,6 +24,13 @@ def main():
  ck(close(cams["right"]["screen_x"],neg(cams["left"]["screen_x"])),"LEFT_RIGHT_SCREEN_X_NOT_MIRRORED")
  ck(c["invariants"].get("depth_aware_surface_rendering") is True,"DEPTH_RENDERING_NOT_DECLARED")
  ck(c["invariants"].get("raw_world_xyz_projection") is False,"RAW_WORLD_PROJECTION_FORBIDDEN")
+ render=c.get("rendering",{})
+ ck(render.get("normal_shading") is True,"NORMAL_SHADING_NOT_DECLARED")
+ ck(render.get("depth_cue") is True,"DEPTH_CUE_NOT_DECLARED")
+ ck(render.get("wireframe_overlay") is True,"WIREFRAME_NOT_DECLARED")
+ ck(render.get("oblique_views") is True,"OBLIQUE_VIEWS_NOT_DECLARED")
+ ck(render.get("acupoints_rendered") is False,"ACUPOINTS_MUST_NOT_BE_RENDERED")
+ ck("front_oblique" in cams and "back_oblique" in cams,"OBLIQUE_CAMERAS_MISSING")
  status="PASS" if not errors else "FAIL"
  out={"schema_version":"1.0.0","stage":"Stage1","test":"visual-view-contract","status":status,"checks":checks,"errors":errors,
  "note":"Camera/view semantics only; human visual QC remains mandatory."}
