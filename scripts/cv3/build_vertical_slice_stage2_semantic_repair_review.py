@@ -164,6 +164,8 @@ def build_pdf(data,path):
  from reportlab.lib.styles import getSampleStyleSheet,ParagraphStyle
  from reportlab.lib.units import mm
  from reportlab.platypus import SimpleDocTemplate,Paragraph,Spacer,PageBreak,KeepTogether
+ from reportlab.graphics.shapes import Drawing,Rect,String,Line
+ from reportlab.lib import colors
  from reportlab.pdfbase import pdfmetrics
  from reportlab.pdfbase.ttfonts import TTFont
  font="/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf";base="Helvetica"
@@ -173,6 +175,32 @@ def build_pdf(data,path):
  body=ParagraphStyle("bx",parent=styles["BodyText"],fontName=base,fontSize=7.8,leading=10)
  mono=ParagraphStyle("mx",parent=body,fontName=base,fontSize=6.5,leading=8.2,wordWrap="CJK")
  doc=SimpleDocTemplate(str(path),pagesize=A4,leftMargin=11*mm,rightMargin=11*mm,topMargin=11*mm,bottomMargin=11*mm)
+ def pdf_graph(p):
+  nodes=[]
+  for o in p["operands"]:nodes.append((o["node_id"],o["status"],"operand"))
+  for r in p["relations"]:nodes.append((r["relation_id"],r["status"],"relation"))
+  for s in p["who_source"]:nodes.append((s["source_statement_id"],"", "statement"))
+  nodes.append((p["point_id"],p["repaired_stage2_status"],"point"))
+  uniq=[];seen=set()
+  for x in nodes:
+   if x[0] not in seen:uniq.append(x);seen.add(x[0])
+  xmap={"operand":4,"relation":205,"statement":390,"point":515};count={};pos={}
+  maxrows=1
+  for nid,stt,typ in uniq:
+   row=count.get(typ,0);count[typ]=row+1;maxrows=max(maxrows,row+1);pos[nid]=(xmap[typ],row)
+  step=13;h=max(45,min(250,maxrows*step+22));d=Drawing(555,h)
+  for e in p["dependency_edges"]:
+   if e["from"] in pos and e["to"] in pos:
+    x1,r1=pos[e["from"]];x2,r2=pos[e["to"]];y1=h-15-r1*step;y2=h-15-r2*step
+    d.add(Line(x1+115,y1,x2,y2,strokeColor=colors.HexColor("#94a3b8"),strokeWidth=.45))
+  for nid,stt,typ in uniq:
+   x,row=pos[nid];y=h-22-row*step
+   fill=colors.HexColor("#dcfce7") if stt=="RESOLVED" else (colors.HexColor("#fef3c7") if stt in ("UNRESOLVED","CONDITIONAL","MULTIPLE") else colors.HexColor("#f1f5f9"))
+   w=115 if typ!="point" else 38
+   d.add(Rect(x,y,w,10,rx=2,ry=2,fillColor=fill,strokeColor=colors.HexColor("#64748b"),strokeWidth=.4))
+   lab=nid if len(nid)<=29 else nid[:26]+"..."
+   d.add(String(x+2,y+2.2,lab,fontName=base,fontSize=4.2,fillColor=colors.black))
+  return d
  st=[Paragraph("C v3 Vertical Slice v1 - Stage 2 Semantic Repair Human Review",h1),
      Paragraph(f"Repair validation: {data['validation_status']} | Human semantic audit: PENDING | Stage 3: NOT STARTED",body),
      Paragraph("20-point regression overview",h2)]
@@ -196,6 +224,7 @@ def build_pdf(data,path):
   if p["conditions"]:
    st.append(Paragraph("Conditions",h2))
    for c in p["conditions"]:st.append(Paragraph(html.escape(canon(c)),mono))
+  st.append(Paragraph("Dependency graph",h2));st.append(pdf_graph(p))
   st.append(Paragraph("Dependency graph edge list",h2))
   for e in p["dependency_edges"]:st.append(Paragraph(html.escape(f"{e['from']} -> {e['to']} [{e['kind']}]"),mono))
   if p["point_id"] in KNOWN:
