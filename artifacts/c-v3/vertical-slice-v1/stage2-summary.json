@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-vertical-slice-v1-stage2-summary",
+  "status": "AUTOMATED_VALIDATED_HUMAN_REVIEW_PENDING",
+  "workflow": {
+    "name": "Validate C v3 Vertical Slice Stage 2",
+    "run_id": 37438473939,
+    "head_sha": "fb6767a2f50af302741ccf3685a88e24a91275a9",
+    "conclusion": "success"
+  },
+  "coverage": {
+    "cohort_points": 20,
+    "primary_location_status": {
+      "RESOLVED": 12,
+      "UNRESOLVED": 8
+    },
+    "landmark_status": {
+      "RESOLVED": 98,
+      "UNRESOLVED": 24,
+      "MULTIPLE": 2
+    },
+    "relation_status": {
+      "RESOLVED": 84,
+      "UNRESOLVED": 17
+    },
+    "measurement_status": {
+      "RESOLVED": 12
+    },
+    "condition_status": {
+      "RESOLVED": 1,
+      "CONDITIONAL": 3
+    }
+  },
+  "primary_location_resolved": [
+    "LI4",
+    "GB23",
+    "ST10",
+    "LI18",
+    "LI17",
+    "BL17",
+    "BL23",
+    "BL25",
+    "BL40",
+    "ST4",
+    "TE6",
+    "ST9"
+  ],
+  "primary_location_unresolved": {
+    "HT7": [
+      "flexor carpi ulnaris tendon not uniquely realized",
+      "pisiform/proximal-border note dependencies remain unresolved or multiple"
+    ],
+    "ST1": [
+      "eyeball multiple",
+      "infraorbital margin unresolved",
+      "pupil unresolved"
+    ],
+    "GB14": [
+      "pupil/centre-of-pupil unresolved"
+    ],
+    "LU6": [
+      "reference-line landmark itself not yet constructed at Stage 2"
+    ],
+    "LI7": [
+      "reference-line landmark itself not yet constructed at Stage 2"
+    ],
+    "GB26": [
+      "umbilicus/centre and free extremity of 11th rib subfeatures not yet uniquely realized"
+    ],
+    "ST2": [
+      "infraorbital foramen unresolved by generic atlas-name resolver"
+    ],
+    "TE20": [
+      "auricular apex unresolved on default atlas realization"
+    ]
+  },
+  "automated_validation": {
+    "checks": 964,
+    "errors": 0,
+    "negative_tests": {
+      "forged_relation_operator_rejected": true,
+      "forged_fma_identity_rejected": true
+    },
+    "validator_independence": "does not import solver, surface-registry executor, or calibration table"
+  },
+  "invariants": {
+    "physical_coordinates_generated": false,
+    "legacy_coordinate_input": false,
+    "stage3_blocked_until_human_approval": true
+  }
+}
