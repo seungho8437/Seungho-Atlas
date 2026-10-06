@@ -69,7 +69,7 @@ def scan(out,g):
    psf=sf(bnodes.get(nid,{}).get("source_raw"))
    if psf and rec.get("status")=="RESOLVED":
     kind=(rec.get("geometry") or {}).get("kind")
-    if kind not in ("bound_subfeature","constructed_subfeature"):
+    if kind not in ("bound_subfeature","constructed_subfeature","derived_relation_output"):
      findings.append({"rule":"parent_only_composite_resolution","point_id":pid,"node_id":nid,"source_raw":bnodes.get(nid,{}).get("source_raw"),"geometry_kind":kind,"identity":identity(rec)})
   # Rules 2 / 3 + trace completeness.
   for rid,r in p["relations"].items():
