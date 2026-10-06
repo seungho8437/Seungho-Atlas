@@ -1308,6 +1308,19 @@ function updateFromRelativeDefinition(item,text){
     const upper=a.position[supAxis]>=b.position[supAxis]?a:b, lower=upper===a?b:a;
     target=upper.position.map((v,i)=>v*(1-f)+lower.position[i]*f);rule='relative-vertical-fraction';
   }
+  // A common WHO construction is "on the line connecting A with B" plus a
+  // proportional superior/inferior level.  The first pass can solve the level
+  // but cannot solve the line until A and B themselves have coordinates.
+  if(!target&&/B-cun/.test(text)){
+    const desired=item.validation.preProjectionTarget?.[supAxis];
+    const den=b.position[supAxis]-a.position[supAxis];
+    if(Number.isFinite(desired)&&Math.abs(den)>1e-6){
+      const f=Math.max(0,Math.min(1,(desired-a.position[supAxis])/den));
+      target=a.position.map((v,i)=>v+(b.position[i]-v)*f);
+      target[supAxis]=desired;
+      rule='relative-line-level';
+    }
+  }
   const lateral=text.match(/가쪽\s*(\d+)\/(\d+)(?:와|과)\s*안쪽\s*(\d+)\/(\d+)\s*경계/);
   if(lateral){
     const f=Number(lateral[1])/Number(lateral[2]);
@@ -1324,6 +1337,16 @@ function updateFromRelativeDefinition(item,text){
   item.validation.surfacePartId=pr.part;
   item.validation.preProjectionTarget=target.map(v=>+v.toFixed(4));
   item.validation.relativeConstraint=rule;
+  if(rule==='relative-line-level'){
+    const unresolved=new Set(item.validation.unresolvedSemanticRelationIds??[]);
+    const rels=semanticRelationsByPoint.get(item.acupointId)??[];
+    for(const r of rels){
+      if(r.relation_type==='relative-to'&&/B-cun/i.test(String(r.cue_span?.source_raw||''))) unresolved.delete(r.relation_id);
+    }
+    item.validation.unresolvedSemanticRelationIds=[...unresolved];
+    item.validation.deferredReferenceOperation='line-level';
+    item.validation.nativeOperationCount=(item.validation.nativeOperationCount??0)+1;
+  }
   if(item.confidence==='low')item.confidence='moderate';
   return true;
 }
