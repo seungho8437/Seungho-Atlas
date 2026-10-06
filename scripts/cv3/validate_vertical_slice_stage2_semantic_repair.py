@@ -58,6 +58,22 @@ def build_maps(g):
  rel={x["relation_id"]:x for x in g.get("relation_instances",[])}
  return bnodes,children,cond,rel
 
+def derived_target_candidates(src_rel,g,bnodes):
+ token={"midpoint-of-entity":"midpoint","center-of":"center","midpoint-between":"midpoint"}.get(src_rel.get("relation_type"))
+ if not token:return []
+ def span_info_local(node_id):
+  m=re.search(r":(\d+)-(\d+)(?::[^:]+)?$",node_id or "")
+  return (node_id[:m.start()],int(m.group(1)),int(m.group(2))) if m else None
+ args=list(src_rel.get("argument_node_ids",[]));asp=[span_info_local(a) for a in args]
+ out=[]
+ for n in g.get("landmark_nodes",[]):
+  if n.get("source_statement_id")!=src_rel.get("source_statement_id"):continue
+  if token not in norm(n.get("source_raw")):continue
+  sp=span_info_local(n["node_id"])
+  if not sp:continue
+  if any(a and a[0]==sp[0] and sp[1]<=a[1] and a[2]<=sp[2] for a in asp):out.append(n["node_id"])
+ return sorted(out)
+
 def scan(out,g):
  bnodes,children,condsrc,relsrc=build_maps(g);bindings=g.get("composite_bindings",[]);binding_by_child={x["child_landmark_id"]:x for x in bindings};findings=[]
  pby={x["point_id"]:x for x in out["points"]}
@@ -129,8 +145,10 @@ def scan(out,g):
    if prod not in p["relations"] or p["relations"][prod].get("status")!="RESOLVED":
     findings.append({"rule":"derived_geometry_output_not_bound","point_id":pid,"derived_geometry_id":dgid,"detail":"producer relation missing or not resolved"})
    refs=[nid for nid,rec in p["landmarks"].items() if (rec.get("geometry") or {}).get("derived_geometry_id")==dgid]
-   if not refs:
-    findings.append({"rule":"derived_geometry_output_not_bound","point_id":pid,"derived_geometry_id":dgid,"detail":"resolved derived output is not bound to any semantic landmark"})
+   src_rel=relsrc.get(prod,{})
+   expected_targets=derived_target_candidates(src_rel,g,bnodes)
+   if expected_targets and not refs:
+    findings.append({"rule":"derived_geometry_output_not_bound","point_id":pid,"derived_geometry_id":dgid,"detail":"named derived semantic operand exists but output is not bound","expected_targets":expected_targets})
   for nid,rec in p["landmarks"].items():
    gref=rec.get("geometry") or {}
    if gref.get("kind")=="derived_relation_output":
