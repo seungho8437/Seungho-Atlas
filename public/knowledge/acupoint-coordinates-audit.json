@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-10-06T05:02:20.232Z",
+  "generatedAt": "2026-10-06T05:03:23.958Z",
   "logicalAcupoints": 361,
   "physicalCoordinates": 670,
   "expectedPhysicalCoordinates": 670,
-  "validatedPhysicalCoordinates": 274,
-  "reviewNeededPhysicalCoordinates": 396,
+  "validatedPhysicalCoordinates": 272,
+  "reviewNeededPhysicalCoordinates": 398,
   "surfaceTriangleCount": 60362,
   "integumentaryPartCount": 5,
   "invalidGeometryOrLaterality": [],
@@ -14,16 +14,20 @@
       "PC7"
     ],
     [
+      "ST42",
+      "LR3"
+    ],
+    [
+      "ST42",
+      "LR3"
+    ],
+    [
       "BL3",
       "BL4"
     ],
     [
       "BL64",
       "GB43"
-    ],
-    [
-      "KI11",
-      "LR12"
     ],
     [
       "GB7",
@@ -35,6 +39,14 @@
     ]
   ],
   "exactDuplicateClusters": [
+    [
+      "ST42",
+      "LR3"
+    ],
+    [
+      "ST42",
+      "LR3"
+    ],
     [
       "GB7",
       "GB8"
@@ -51,7 +63,7 @@
   },
   "projectionDistance": {
     "max": 0.1695,
-    "mean": 0.037425223880597006
+    "mean": 0.03745567164179104
   },
   "spatialValidation": {
     "regionConstrained": true,
@@ -409,18 +421,6 @@
         "topologyStatus": "pass"
       },
       {
-        "acupointId": "SP13",
-        "side": "left",
-        "projectionDistance": 0.082,
-        "projectionDelta": [
-          0,
-          0,
-          -0.082
-        ],
-        "landmarkStatus": "pass",
-        "topologyStatus": "pass"
-      },
-      {
         "acupointId": "GB13",
         "side": "left",
         "projectionDistance": 0.082,
@@ -433,19 +433,31 @@
         "topologyStatus": "pass"
       },
       {
-        "acupointId": "SP13",
-        "side": "right",
-        "projectionDistance": 0.0814,
+        "acupointId": "GB27",
+        "side": "left",
+        "projectionDistance": 0.0816,
         "projectionDelta": [
           0,
           0,
-          -0.0814
+          -0.0816
         ],
         "landmarkStatus": "pass",
         "topologyStatus": "pass"
       },
       {
         "acupointId": "LU1",
+        "side": "right",
+        "projectionDistance": 0.0811,
+        "projectionDelta": [
+          0,
+          0,
+          -0.0811
+        ],
+        "landmarkStatus": "pass",
+        "topologyStatus": "pass"
+      },
+      {
+        "acupointId": "GB27",
         "side": "right",
         "projectionDistance": 0.0811,
         "projectionDelta": [

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-06T05:02:20.438Z",
+  "generatedAt": "2026-10-06T05:03:24.114Z",
   "scope": "Focused visual/anatomical exception review: four formerly low-confidence acupoints plus seven formerly near-duplicate clusters.",
   "coordinateModel": "BodyParts3D-4.0",
   "reviewedLogicalAcupoints": 18,
@@ -14,16 +14,20 @@
         "PC7"
       ],
       [
+        "ST42",
+        "LR3"
+      ],
+      [
+        "ST42",
+        "LR3"
+      ],
+      [
         "BL3",
         "BL4"
       ],
       [
         "BL64",
         "GB43"
-      ],
-      [
-        "KI11",
-        "LR12"
       ],
       [
         "GB7",
@@ -35,6 +39,14 @@
       ]
     ],
     "globalExactDuplicateClusters": [
+      [
+        "ST42",
+        "LR3"
+      ],
+      [
+        "ST42",
+        "LR3"
+      ],
       [
         "GB7",
         "GB8"

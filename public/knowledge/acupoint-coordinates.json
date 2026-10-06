@@ -1,7 +1,7 @@
 {
   "version": 1,
   "model": "BodyParts3D-4.0",
-  "generatedAt": "2026-10-06T05:02:20.224Z",
+  "generatedAt": "2026-10-06T05:03:23.952Z",
   "coordinateFrame": {
     "source": "native BodyParts3D 4.0 atlas coordinates",
     "axes": {
@@ -60,8 +60,8 @@
           "RL:S:LU1:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [
-          "RL:S:LU1:location:01:relative-to",
-          "RL:S:LU1:location:02:same-level"
+          "RL:S:LU1:location:02:same-level",
+          "RL:S:LU1:location:01:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": false,
@@ -129,8 +129,8 @@
           "RL:S:LU1:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [
-          "RL:S:LU1:location:01:relative-to",
-          "RL:S:LU1:location:02:same-level"
+          "RL:S:LU1:location:02:same-level",
+          "RL:S:LU1:location:01:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": false,
@@ -1234,9 +1234,9 @@
       "acupointId": "LU10",
       "side": "left",
       "position": [
-        0.2895,
-        0.8564,
-        0.0108
+        0.2976,
+        0.8557,
+        0.0152
       ],
       "model": "BodyParts3D-4.0",
       "status": "review-needed",
@@ -1245,16 +1245,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0066,
+        "projectionDistance": 0.0119,
         "projectionDelta": [
-          -0.0024,
-          0.0004,
-          0.0061
+          -0.0056,
+          -0.0003,
+          0.0105
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.2919,
+          0.3032,
           0.856,
           0.0047
         ],
@@ -1265,8 +1265,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:LU10:location:01:relative-to",
-          "RL:S:LU10:location:02:midpoint-of-entity"
+          "RL:S:LU10:location:02:midpoint-of-entity",
+          "RL:S:LU10:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [
           "RL:S:LU10:location:00:between"
@@ -1282,7 +1282,7 @@
         "landmarkPostValidation": {
           "status": "pass",
           "checked": 2,
-          "maxDistance": 0.0126,
+          "maxDistance": 0.0082,
           "issues": []
         },
         "topologyValidation": {
@@ -1303,9 +1303,9 @@
       "acupointId": "LU10",
       "side": "right",
       "position": [
-        -0.291,
-        0.8535,
-        0.0111
+        -0.299,
+        0.8531,
+        0.0153
       ],
       "model": "BodyParts3D-4.0",
       "status": "review-needed",
@@ -1314,16 +1314,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.007,
+        "projectionDistance": 0.0123,
         "projectionDelta": [
-          0.0029,
-          0.0003,
-          0.0064
+          0.0061,
+          -0.0001,
+          0.0107
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.2938,
+          -0.3051,
           0.8532,
           0.0047
         ],
@@ -1334,8 +1334,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:LU10:location:01:relative-to",
-          "RL:S:LU10:location:02:midpoint-of-entity"
+          "RL:S:LU10:location:02:midpoint-of-entity",
+          "RL:S:LU10:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [
           "RL:S:LU10:location:00:between"
@@ -1351,7 +1351,7 @@
         "landmarkPostValidation": {
           "status": "pass",
           "checked": 2,
-          "maxDistance": 0.0125,
+          "maxDistance": 0.0083,
           "issues": []
         },
         "topologyValidation": {
@@ -1938,9 +1938,9 @@
       "acupointId": "LI4",
       "side": "left",
       "position": [
-        0.2749,
-        0.837,
-        0.009
+        0.2852,
+        0.8376,
+        0.0117
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -1949,16 +1949,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0046,
+        "projectionDistance": 0.0075,
         "projectionDelta": [
-          -0.001,
-          0.0011,
-          0.0043
+          -0.002,
+          0.0018,
+          0.007
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.2759,
+          0.2872,
           0.8358,
           0.0047
         ],
@@ -1969,8 +1969,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:LI4:location:00:relative-to",
-          "RL:S:LI4:location:01:midpoint-of-entity"
+          "RL:S:LI4:location:01:midpoint-of-entity",
+          "RL:S:LI4:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 0,
@@ -1984,7 +1984,7 @@
         "landmarkPostValidation": {
           "status": "pass",
           "checked": 2,
-          "maxDistance": 0.0081,
+          "maxDistance": 0.0054,
           "issues": []
         },
         "topologyValidation": {
@@ -2003,9 +2003,9 @@
       "acupointId": "LI4",
       "side": "right",
       "position": [
-        -0.276,
-        0.8353,
-        0.0097
+        -0.2852,
+        0.8356,
+        0.0121
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -2014,16 +2014,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0053,
+        "projectionDistance": 0.008,
         "projectionDelta": [
-          0.0004,
-          0.0016,
-          0.005
+          0.0024,
+          0.0019,
+          0.0074
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.2764,
+          -0.2877,
           0.8337,
           0.0047
         ],
@@ -2034,8 +2034,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:LI4:location:00:relative-to",
-          "RL:S:LI4:location:01:midpoint-of-entity"
+          "RL:S:LI4:location:01:midpoint-of-entity",
+          "RL:S:LI4:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 0,
@@ -2049,7 +2049,7 @@
         "landmarkPostValidation": {
           "status": "pass",
           "checked": 2,
-          "maxDistance": 0.0074,
+          "maxDistance": 0.005,
           "issues": []
         },
         "topologyValidation": {
@@ -3665,8 +3665,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:LI17:location:00:relative-to",
-          "RL:S:LI17:location:01:same-level"
+          "RL:S:LI17:location:01:same-level",
+          "RL:S:LI17:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 0,
@@ -3730,8 +3730,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:LI17:location:00:relative-to",
-          "RL:S:LI17:location:01:same-level"
+          "RL:S:LI17:location:01:same-level",
+          "RL:S:LI17:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 0,
@@ -3926,9 +3926,9 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:LI19:location:00:relative-to",
+          "RL:S:LI19:location:02:midpoint-of-entity",
           "RL:S:LI19:location:01:same-level",
-          "RL:S:LI19:location:02:midpoint-of-entity"
+          "RL:S:LI19:location:00:relative-to"
         ],
         "semanticMeasurementCount": 0,
         "anatomicalEnvelopeApplied": false,
@@ -3994,9 +3994,9 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:LI19:location:00:relative-to",
+          "RL:S:LI19:location:02:midpoint-of-entity",
           "RL:S:LI19:location:01:same-level",
-          "RL:S:LI19:location:02:midpoint-of-entity"
+          "RL:S:LI19:location:00:relative-to"
         ],
         "semanticMeasurementCount": 0,
         "anatomicalEnvelopeApplied": false,
@@ -4062,8 +4062,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:LI20:location:00:same-level",
-          "RL:S:LI20:location:01:midpoint-of-entity"
+          "RL:S:LI20:location:01:midpoint-of-entity",
+          "RL:S:LI20:location:00:same-level"
         ],
         "semanticMeasurementCount": 0,
         "anatomicalEnvelopeApplied": false,
@@ -4129,8 +4129,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:LI20:location:00:same-level",
-          "RL:S:LI20:location:01:midpoint-of-entity"
+          "RL:S:LI20:location:01:midpoint-of-entity",
+          "RL:S:LI20:location:00:same-level"
         ],
         "semanticMeasurementCount": 0,
         "anatomicalEnvelopeApplied": false,
@@ -5249,8 +5249,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
-          "RL:S:ST9:location:00:relative-to",
           "RL:S:ST9:location:01:same-level",
+          "RL:S:ST9:location:00:relative-to",
           "RL:S:ST9:location:02:overlies"
         ],
         "unresolvedSemanticRelationIds": [],
@@ -5315,8 +5315,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
-          "RL:S:ST9:location:00:relative-to",
           "RL:S:ST9:location:01:same-level",
+          "RL:S:ST9:location:00:relative-to",
           "RL:S:ST9:location:02:overlies"
         ],
         "unresolvedSemanticRelationIds": [],
@@ -5381,8 +5381,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:ST10:location:00:relative-to",
-          "RL:S:ST10:location:01:same-level"
+          "RL:S:ST10:location:01:same-level",
+          "RL:S:ST10:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 0,
@@ -5446,8 +5446,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:ST10:location:00:relative-to",
-          "RL:S:ST10:location:01:same-level"
+          "RL:S:ST10:location:01:same-level",
+          "RL:S:ST10:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 0,
@@ -6520,7 +6520,7 @@
       "acupointId": "ST19",
       "side": "left",
       "position": [
-        0.0412,
+        0.0452,
         1.1996,
         0.1209
       ],
@@ -6531,16 +6531,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0328,
+        "projectionDistance": 0.0327,
         "projectionDelta": [
           0,
           0,
-          -0.0328
+          -0.0327
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.0412,
+          0.0452,
           1.1996,
           0.1536
         ],
@@ -6551,9 +6551,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST19:location:02:center-of",
           "RL:S:ST19:location:00:relative-to",
-          "RL:S:ST19:location:01:relative-to",
-          "RL:S:ST19:location:02:center-of"
+          "RL:S:ST19:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -6586,9 +6586,9 @@
       "acupointId": "ST19",
       "side": "right",
       "position": [
-        -0.0347,
+        -0.0387,
         1.1996,
-        0.1204
+        0.1207
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -6597,16 +6597,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0332,
+        "projectionDistance": 0.0329,
         "projectionDelta": [
           0,
           0,
-          -0.0332
+          -0.0329
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.0347,
+          -0.0387,
           1.1996,
           0.1536
         ],
@@ -6617,9 +6617,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST19:location:02:center-of",
           "RL:S:ST19:location:00:relative-to",
-          "RL:S:ST19:location:01:relative-to",
-          "RL:S:ST19:location:02:center-of"
+          "RL:S:ST19:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -6652,7 +6652,7 @@
       "acupointId": "ST20",
       "side": "left",
       "position": [
-        0.0412,
+        0.0439,
         1.1718,
         0.1195
       ],
@@ -6672,7 +6672,7 @@
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.0412,
+          0.0439,
           1.1718,
           0.1536
         ],
@@ -6683,9 +6683,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST20:location:02:center-of",
           "RL:S:ST20:location:00:relative-to",
-          "RL:S:ST20:location:01:relative-to",
-          "RL:S:ST20:location:02:center-of"
+          "RL:S:ST20:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -6718,7 +6718,7 @@
       "acupointId": "ST20",
       "side": "right",
       "position": [
-        -0.0347,
+        -0.0374,
         1.1718,
         0.1193
       ],
@@ -6729,16 +6729,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0344,
+        "projectionDistance": 0.0343,
         "projectionDelta": [
           0,
           0,
-          -0.0344
+          -0.0343
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.0347,
+          -0.0374,
           1.1718,
           0.1536
         ],
@@ -6749,9 +6749,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST20:location:02:center-of",
           "RL:S:ST20:location:00:relative-to",
-          "RL:S:ST20:location:01:relative-to",
-          "RL:S:ST20:location:02:center-of"
+          "RL:S:ST20:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -6815,9 +6815,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST21:location:02:center-of",
           "RL:S:ST21:location:00:relative-to",
-          "RL:S:ST21:location:01:relative-to",
-          "RL:S:ST21:location:02:center-of"
+          "RL:S:ST21:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -6881,9 +6881,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST21:location:02:center-of",
           "RL:S:ST21:location:00:relative-to",
-          "RL:S:ST21:location:01:relative-to",
-          "RL:S:ST21:location:02:center-of"
+          "RL:S:ST21:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -6947,9 +6947,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST22:location:02:center-of",
           "RL:S:ST22:location:00:relative-to",
-          "RL:S:ST22:location:01:relative-to",
-          "RL:S:ST22:location:02:center-of"
+          "RL:S:ST22:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -7013,9 +7013,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST22:location:02:center-of",
           "RL:S:ST22:location:00:relative-to",
-          "RL:S:ST22:location:01:relative-to",
-          "RL:S:ST22:location:02:center-of"
+          "RL:S:ST22:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -7079,9 +7079,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST23:location:02:center-of",
           "RL:S:ST23:location:00:relative-to",
-          "RL:S:ST23:location:01:relative-to",
-          "RL:S:ST23:location:02:center-of"
+          "RL:S:ST23:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -7145,9 +7145,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST23:location:02:center-of",
           "RL:S:ST23:location:00:relative-to",
-          "RL:S:ST23:location:01:relative-to",
-          "RL:S:ST23:location:02:center-of"
+          "RL:S:ST23:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -7211,9 +7211,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST24:location:02:center-of",
           "RL:S:ST24:location:00:relative-to",
-          "RL:S:ST24:location:01:relative-to",
-          "RL:S:ST24:location:02:center-of"
+          "RL:S:ST24:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -7277,9 +7277,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST24:location:02:center-of",
           "RL:S:ST24:location:00:relative-to",
-          "RL:S:ST24:location:01:relative-to",
-          "RL:S:ST24:location:02:center-of"
+          "RL:S:ST24:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -7343,8 +7343,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:ST25:location:00:relative-to",
-          "RL:S:ST25:location:01:center-of"
+          "RL:S:ST25:location:01:center-of",
+          "RL:S:ST25:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -7408,8 +7408,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:ST25:location:00:relative-to",
-          "RL:S:ST25:location:01:center-of"
+          "RL:S:ST25:location:01:center-of",
+          "RL:S:ST25:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -7473,9 +7473,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST26:location:02:center-of",
           "RL:S:ST26:location:00:relative-to",
-          "RL:S:ST26:location:01:relative-to",
-          "RL:S:ST26:location:02:center-of"
+          "RL:S:ST26:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -7539,9 +7539,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST26:location:02:center-of",
           "RL:S:ST26:location:00:relative-to",
-          "RL:S:ST26:location:01:relative-to",
-          "RL:S:ST26:location:02:center-of"
+          "RL:S:ST26:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -7605,9 +7605,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST27:location:02:center-of",
           "RL:S:ST27:location:00:relative-to",
-          "RL:S:ST27:location:01:relative-to",
-          "RL:S:ST27:location:02:center-of"
+          "RL:S:ST27:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -7671,9 +7671,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST27:location:02:center-of",
           "RL:S:ST27:location:00:relative-to",
-          "RL:S:ST27:location:01:relative-to",
-          "RL:S:ST27:location:02:center-of"
+          "RL:S:ST27:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -7706,9 +7706,9 @@
       "acupointId": "ST28",
       "side": "left",
       "position": [
-        0.0412,
+        0.0235,
         0.9492,
-        0.0864
+        0.0922
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -7717,16 +7717,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0672,
+        "projectionDistance": 0.0614,
         "projectionDelta": [
           0,
           0,
-          -0.0672
+          -0.0614
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.0412,
+          0.0235,
           0.9492,
           0.1536
         ],
@@ -7737,9 +7737,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST28:location:02:center-of",
           "RL:S:ST28:location:00:relative-to",
-          "RL:S:ST28:location:01:relative-to",
-          "RL:S:ST28:location:02:center-of"
+          "RL:S:ST28:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -7772,9 +7772,9 @@
       "acupointId": "ST28",
       "side": "right",
       "position": [
-        -0.0347,
+        -0.017,
         0.9492,
-        0.0888
+        0.094
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -7783,16 +7783,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0649,
+        "projectionDistance": 0.0596,
         "projectionDelta": [
           0,
           0,
-          -0.0649
+          -0.0596
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.0347,
+          -0.017,
           0.9492,
           0.1536
         ],
@@ -7803,9 +7803,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST28:location:02:center-of",
           "RL:S:ST28:location:00:relative-to",
-          "RL:S:ST28:location:01:relative-to",
-          "RL:S:ST28:location:02:center-of"
+          "RL:S:ST28:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -7838,9 +7838,9 @@
       "acupointId": "ST29",
       "side": "left",
       "position": [
-        0.0412,
+        0.0098,
         0.9214,
-        0.0811
+        0.0897
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -7849,16 +7849,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0725,
+        "projectionDistance": 0.0639,
         "projectionDelta": [
           0,
           0,
-          -0.0725
+          -0.0639
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.0412,
+          0.0098,
           0.9214,
           0.1536
         ],
@@ -7869,9 +7869,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST29:location:02:center-of",
           "RL:S:ST29:location:00:relative-to",
-          "RL:S:ST29:location:01:relative-to",
-          "RL:S:ST29:location:02:center-of"
+          "RL:S:ST29:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -7904,9 +7904,9 @@
       "acupointId": "ST29",
       "side": "right",
       "position": [
-        -0.0347,
+        -0.0033,
         0.9214,
-        0.0832
+        0.0911
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -7915,16 +7915,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0704,
+        "projectionDistance": 0.0625,
         "projectionDelta": [
           0,
           0,
-          -0.0704
+          -0.0625
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.0347,
+          -0.0033,
           0.9214,
           0.1536
         ],
@@ -7935,9 +7935,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:ST29:location:02:center-of",
           "RL:S:ST29:location:00:relative-to",
-          "RL:S:ST29:location:01:relative-to",
-          "RL:S:ST29:location:02:center-of"
+          "RL:S:ST29:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -8001,8 +8001,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
-          "RL:S:ST30:location:00:relative-to",
           "RL:S:ST30:location:01:same-level",
+          "RL:S:ST30:location:00:relative-to",
           "RL:S:ST30:location:02:overlies"
         ],
         "unresolvedSemanticRelationIds": [],
@@ -8067,8 +8067,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
-          "RL:S:ST30:location:00:relative-to",
           "RL:S:ST30:location:01:same-level",
+          "RL:S:ST30:location:00:relative-to",
           "RL:S:ST30:location:02:overlies"
         ],
         "unresolvedSemanticRelationIds": [],
@@ -9570,28 +9570,28 @@
       "acupointId": "ST42",
       "side": "left",
       "position": [
-        0.1194,
-        0.0493,
-        0.0581
+        0.1113,
+        0.062,
+        0.0499
       ],
       "model": "BodyParts3D-4.0",
-      "status": "validated",
+      "status": "review-needed",
       "method": "WHO+B-v2.1-native-landmarks+laterality+surface-projection",
       "confidence": "high",
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0038,
+        "projectionDistance": 0.014,
         "projectionDelta": [
-          0.0028,
-          0.0025,
-          0.0009
+          -0.0053,
+          -0.0107,
+          -0.0073
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
           0.1166,
-          0.0468,
+          0.0728,
           0.0573
         ],
         "relationCount": 3,
@@ -9601,8 +9601,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:ST42:location:00:overlies",
-          "RL:S:ST42:location:02:at-junction"
+          "RL:S:ST42:location:02:at-junction",
+          "RL:S:ST42:location:00:overlies"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 0,
@@ -9616,14 +9616,16 @@
         "landmarkPostValidation": {
           "status": "pass",
           "checked": 2,
-          "maxDistance": 0.0328,
+          "maxDistance": 0.0217,
           "issues": []
         },
         "topologyValidation": {
           "status": "pass"
         },
         "envelopeClampMagnitude": 0,
-        "reviewReasons": []
+        "reviewReasons": [
+          "exact-coordinate-collision"
+        ]
       },
       "sourceIds": [
         "WHO_ACUPOINT_2008",
@@ -9635,28 +9637,28 @@
       "acupointId": "ST42",
       "side": "right",
       "position": [
-        -0.1138,
-        0.0517,
-        0.06
+        -0.1112,
+        0.0622,
+        0.0497
       ],
       "model": "BodyParts3D-4.0",
-      "status": "validated",
+      "status": "review-needed",
       "method": "WHO+B-v2.1-native-landmarks+laterality+surface-projection",
       "confidence": "high",
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0064,
+        "projectionDistance": 0.013,
         "projectionDelta": [
-          -0.0037,
-          0.0044,
-          0.0028
+          -0.0011,
+          -0.0106,
+          -0.0075
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
           -0.1101,
-          0.0474,
+          0.0728,
           0.0573
         ],
         "relationCount": 3,
@@ -9666,8 +9668,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:ST42:location:00:overlies",
-          "RL:S:ST42:location:02:at-junction"
+          "RL:S:ST42:location:02:at-junction",
+          "RL:S:ST42:location:00:overlies"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 0,
@@ -9681,14 +9683,16 @@
         "landmarkPostValidation": {
           "status": "pass",
           "checked": 2,
-          "maxDistance": 0.0317,
+          "maxDistance": 0.0213,
           "issues": []
         },
         "topologyValidation": {
           "status": "pass"
         },
         "envelopeClampMagnitude": 0,
-        "reviewReasons": []
+        "reviewReasons": [
+          "exact-coordinate-collision"
+        ]
       },
       "sourceIds": [
         "WHO_ACUPOINT_2008",
@@ -11692,9 +11696,9 @@
       "acupointId": "SP13",
       "side": "left",
       "position": [
-        0.0792,
+        0.0163,
         0.913,
-        0.0716
+        0.0866
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -11703,16 +11707,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.082,
+        "projectionDistance": 0.067,
         "projectionDelta": [
           0,
           0,
-          -0.082
+          -0.067
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.0792,
+          0.0163,
           0.913,
           0.1536
         ],
@@ -11723,9 +11727,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:SP13:location:02:center-of",
           "RL:S:SP13:location:00:relative-to",
-          "RL:S:SP13:location:01:relative-to",
-          "RL:S:SP13:location:02:center-of"
+          "RL:S:SP13:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -11758,9 +11762,9 @@
       "acupointId": "SP13",
       "side": "right",
       "position": [
-        -0.0727,
+        -0.0098,
         0.913,
-        0.0722
+        0.0881
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -11769,16 +11773,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0814,
+        "projectionDistance": 0.0655,
         "projectionDelta": [
           0,
           0,
-          -0.0814
+          -0.0655
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.0727,
+          -0.0098,
           0.913,
           0.1536
         ],
@@ -11789,9 +11793,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:SP13:location:02:center-of",
           "RL:S:SP13:location:00:relative-to",
-          "RL:S:SP13:location:01:relative-to",
-          "RL:S:SP13:location:02:center-of"
+          "RL:S:SP13:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -11855,9 +11859,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:SP14:location:02:center-of",
           "RL:S:SP14:location:00:relative-to",
-          "RL:S:SP14:location:01:relative-to",
-          "RL:S:SP14:location:02:center-of"
+          "RL:S:SP14:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -11921,9 +11925,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:SP14:location:02:center-of",
           "RL:S:SP14:location:00:relative-to",
-          "RL:S:SP14:location:01:relative-to",
-          "RL:S:SP14:location:02:center-of"
+          "RL:S:SP14:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -11987,8 +11991,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:SP15:location:00:relative-to",
-          "RL:S:SP15:location:01:center-of"
+          "RL:S:SP15:location:01:center-of",
+          "RL:S:SP15:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -12052,8 +12056,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:SP15:location:00:relative-to",
-          "RL:S:SP15:location:01:center-of"
+          "RL:S:SP15:location:01:center-of",
+          "RL:S:SP15:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -12117,9 +12121,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:SP16:location:02:center-of",
           "RL:S:SP16:location:00:relative-to",
-          "RL:S:SP16:location:01:relative-to",
-          "RL:S:SP16:location:02:center-of"
+          "RL:S:SP16:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -12183,9 +12187,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:SP16:location:02:center-of",
           "RL:S:SP16:location:00:relative-to",
-          "RL:S:SP16:location:01:relative-to",
-          "RL:S:SP16:location:02:center-of"
+          "RL:S:SP16:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -15568,8 +15572,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:SI12:location:00:relative-to",
-          "RL:S:SI12:location:01:midpoint-of-entity"
+          "RL:S:SI12:location:01:midpoint-of-entity",
+          "RL:S:SI12:location:00:relative-to"
         ],
         "semanticMeasurementCount": 0,
         "anatomicalEnvelopeApplied": false,
@@ -15635,8 +15639,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:SI12:location:00:relative-to",
-          "RL:S:SI12:location:01:midpoint-of-entity"
+          "RL:S:SI12:location:01:midpoint-of-entity",
+          "RL:S:SI12:location:00:relative-to"
         ],
         "semanticMeasurementCount": 0,
         "anatomicalEnvelopeApplied": false,
@@ -16105,8 +16109,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:SI16:location:00:relative-to",
-          "RL:S:SI16:location:01:same-level"
+          "RL:S:SI16:location:01:same-level",
+          "RL:S:SI16:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 0,
@@ -16170,8 +16174,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:SI16:location:00:relative-to",
-          "RL:S:SI16:location:01:same-level"
+          "RL:S:SI16:location:01:same-level",
+          "RL:S:SI16:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 0,
@@ -20134,8 +20138,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL27:location:00:relative-to",
-          "RL:S:BL27:location:01:same-level"
+          "RL:S:BL27:location:01:same-level",
+          "RL:S:BL27:location:00:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": false,
@@ -20201,8 +20205,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL27:location:00:relative-to",
-          "RL:S:BL27:location:01:same-level"
+          "RL:S:BL27:location:01:same-level",
+          "RL:S:BL27:location:00:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": false,
@@ -20268,8 +20272,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL28:location:00:relative-to",
-          "RL:S:BL28:location:01:same-level"
+          "RL:S:BL28:location:01:same-level",
+          "RL:S:BL28:location:00:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": false,
@@ -20335,8 +20339,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL28:location:00:relative-to",
-          "RL:S:BL28:location:01:same-level"
+          "RL:S:BL28:location:01:same-level",
+          "RL:S:BL28:location:00:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": false,
@@ -20402,8 +20406,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL29:location:00:relative-to",
-          "RL:S:BL29:location:01:same-level"
+          "RL:S:BL29:location:01:same-level",
+          "RL:S:BL29:location:00:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": false,
@@ -20469,8 +20473,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL29:location:00:relative-to",
-          "RL:S:BL29:location:01:same-level"
+          "RL:S:BL29:location:01:same-level",
+          "RL:S:BL29:location:00:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": false,
@@ -20536,8 +20540,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL30:location:00:relative-to",
-          "RL:S:BL30:location:01:same-level"
+          "RL:S:BL30:location:01:same-level",
+          "RL:S:BL30:location:00:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": false,
@@ -20603,8 +20607,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL30:location:00:relative-to",
-          "RL:S:BL30:location:01:same-level"
+          "RL:S:BL30:location:01:same-level",
+          "RL:S:BL30:location:00:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": false,
@@ -23596,8 +23600,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL53:location:00:relative-to",
-          "RL:S:BL53:location:01:same-level"
+          "RL:S:BL53:location:01:same-level",
+          "RL:S:BL53:location:00:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": true,
@@ -23663,8 +23667,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL53:location:00:relative-to",
-          "RL:S:BL53:location:01:same-level"
+          "RL:S:BL53:location:01:same-level",
+          "RL:S:BL53:location:00:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": true,
@@ -23730,8 +23734,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL54:location:00:relative-to",
-          "RL:S:BL54:location:01:same-level"
+          "RL:S:BL54:location:01:same-level",
+          "RL:S:BL54:location:00:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": true,
@@ -23797,8 +23801,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL54:location:00:relative-to",
-          "RL:S:BL54:location:01:same-level"
+          "RL:S:BL54:location:01:same-level",
+          "RL:S:BL54:location:00:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": true,
@@ -24266,8 +24270,8 @@
           "RL:S:BL58:location:00:between"
         ],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL58:location:01:relative-to",
-          "RL:S:BL58:location:02:same-level"
+          "RL:S:BL58:location:02:same-level",
+          "RL:S:BL58:location:01:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": true,
@@ -24335,8 +24339,8 @@
           "RL:S:BL58:location:00:between"
         ],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL58:location:01:relative-to",
-          "RL:S:BL58:location:02:same-level"
+          "RL:S:BL58:location:02:same-level",
+          "RL:S:BL58:location:01:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": true,
@@ -24404,8 +24408,8 @@
           "RL:S:BL59:location:00:between"
         ],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL59:location:01:relative-to",
-          "RL:S:BL59:location:02:same-level"
+          "RL:S:BL59:location:02:same-level",
+          "RL:S:BL59:location:01:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": true,
@@ -24473,8 +24477,8 @@
           "RL:S:BL59:location:00:between"
         ],
         "unresolvedSemanticRelationIds": [
-          "RL:S:BL59:location:01:relative-to",
-          "RL:S:BL59:location:02:same-level"
+          "RL:S:BL59:location:02:same-level",
+          "RL:S:BL59:location:01:relative-to"
         ],
         "semanticMeasurementCount": 1,
         "anatomicalEnvelopeApplied": true,
@@ -26939,9 +26943,9 @@
       "acupointId": "KI11",
       "side": "left",
       "position": [
-        0.0127,
+        0.0049,
         0.8935,
-        0.0851
+        0.0849
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -26950,16 +26954,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0685,
+        "projectionDistance": 0.0687,
         "projectionDelta": [
           0,
           0,
-          -0.0685
+          -0.0687
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2815",
         "preProjectionTarget": [
-          0.0127,
+          0.0049,
           0.8935,
           0.1536
         ],
@@ -26970,9 +26974,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI11:location:02:center-of",
           "RL:S:KI11:location:00:relative-to",
-          "RL:S:KI11:location:01:relative-to",
-          "RL:S:KI11:location:02:center-of"
+          "RL:S:KI11:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -27005,9 +27009,9 @@
       "acupointId": "KI11",
       "side": "right",
       "position": [
-        -0.0062,
+        0.0016,
         0.8935,
-        0.0854
+        0.0849
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -27016,16 +27020,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0682,
+        "projectionDistance": 0.0687,
         "projectionDelta": [
           0,
           0,
-          -0.0682
+          -0.0687
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2815",
         "preProjectionTarget": [
-          -0.0062,
+          0.0016,
           0.8935,
           0.1536
         ],
@@ -27036,9 +27040,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI11:location:02:center-of",
           "RL:S:KI11:location:00:relative-to",
-          "RL:S:KI11:location:01:relative-to",
-          "RL:S:KI11:location:02:center-of"
+          "RL:S:KI11:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -27071,9 +27075,9 @@
       "acupointId": "KI12",
       "side": "left",
       "position": [
-        0.0127,
+        0.0049,
         0.9214,
-        0.0892
+        0.0904
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -27082,16 +27086,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0644,
+        "projectionDistance": 0.0632,
         "projectionDelta": [
           0,
           0,
-          -0.0644
+          -0.0632
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.0127,
+          0.0049,
           0.9214,
           0.1536
         ],
@@ -27102,9 +27106,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI12:location:02:center-of",
           "RL:S:KI12:location:00:relative-to",
-          "RL:S:KI12:location:01:relative-to",
-          "RL:S:KI12:location:02:center-of"
+          "RL:S:KI12:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -27137,9 +27141,9 @@
       "acupointId": "KI12",
       "side": "right",
       "position": [
-        -0.0062,
+        0.0016,
         0.9214,
-        0.0908
+        0.091
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -27148,16 +27152,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0628,
+        "projectionDistance": 0.0626,
         "projectionDelta": [
           0,
           0,
-          -0.0628
+          -0.0626
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.0062,
+          0.0016,
           0.9214,
           0.1536
         ],
@@ -27168,9 +27172,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI12:location:02:center-of",
           "RL:S:KI12:location:00:relative-to",
-          "RL:S:KI12:location:01:relative-to",
-          "RL:S:KI12:location:02:center-of"
+          "RL:S:KI12:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -27203,9 +27207,9 @@
       "acupointId": "KI13",
       "side": "left",
       "position": [
-        0.0127,
+        0.0083,
         0.9492,
-        0.0947
+        0.0955
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -27214,16 +27218,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0589,
+        "projectionDistance": 0.0581,
         "projectionDelta": [
           0,
           0,
-          -0.0589
+          -0.0581
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.0127,
+          0.0083,
           0.9492,
           0.1536
         ],
@@ -27234,9 +27238,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI13:location:02:center-of",
           "RL:S:KI13:location:00:relative-to",
-          "RL:S:KI13:location:01:relative-to",
-          "RL:S:KI13:location:02:center-of"
+          "RL:S:KI13:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -27269,9 +27273,9 @@
       "acupointId": "KI13",
       "side": "right",
       "position": [
-        -0.0062,
+        -0.0018,
         0.9492,
-        0.0958
+        0.0963
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -27280,16 +27284,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0578,
+        "projectionDistance": 0.0573,
         "projectionDelta": [
           0,
           0,
-          -0.0578
+          -0.0573
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.0062,
+          -0.0018,
           0.9492,
           0.1536
         ],
@@ -27300,9 +27304,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI13:location:02:center-of",
           "RL:S:KI13:location:00:relative-to",
-          "RL:S:KI13:location:01:relative-to",
-          "RL:S:KI13:location:02:center-of"
+          "RL:S:KI13:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -27366,9 +27370,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI14:location:02:center-of",
           "RL:S:KI14:location:00:relative-to",
-          "RL:S:KI14:location:01:relative-to",
-          "RL:S:KI14:location:02:center-of"
+          "RL:S:KI14:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -27432,9 +27436,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI14:location:02:center-of",
           "RL:S:KI14:location:00:relative-to",
-          "RL:S:KI14:location:01:relative-to",
-          "RL:S:KI14:location:02:center-of"
+          "RL:S:KI14:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -27628,8 +27632,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:KI16:location:00:relative-to",
-          "RL:S:KI16:location:01:center-of"
+          "RL:S:KI16:location:01:center-of",
+          "RL:S:KI16:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -27693,8 +27697,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:KI16:location:00:relative-to",
-          "RL:S:KI16:location:01:center-of"
+          "RL:S:KI16:location:01:center-of",
+          "RL:S:KI16:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -27758,9 +27762,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI17:location:02:center-of",
           "RL:S:KI17:location:00:relative-to",
-          "RL:S:KI17:location:01:relative-to",
-          "RL:S:KI17:location:02:center-of"
+          "RL:S:KI17:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -27824,9 +27828,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI17:location:02:center-of",
           "RL:S:KI17:location:00:relative-to",
-          "RL:S:KI17:location:01:relative-to",
-          "RL:S:KI17:location:02:center-of"
+          "RL:S:KI17:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -27890,9 +27894,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI18:location:02:center-of",
           "RL:S:KI18:location:00:relative-to",
-          "RL:S:KI18:location:01:relative-to",
-          "RL:S:KI18:location:02:center-of"
+          "RL:S:KI18:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -27956,9 +27960,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI18:location:02:center-of",
           "RL:S:KI18:location:00:relative-to",
-          "RL:S:KI18:location:01:relative-to",
-          "RL:S:KI18:location:02:center-of"
+          "RL:S:KI18:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -28022,9 +28026,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI19:location:02:center-of",
           "RL:S:KI19:location:00:relative-to",
-          "RL:S:KI19:location:01:relative-to",
-          "RL:S:KI19:location:02:center-of"
+          "RL:S:KI19:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -28088,9 +28092,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI19:location:02:center-of",
           "RL:S:KI19:location:00:relative-to",
-          "RL:S:KI19:location:01:relative-to",
-          "RL:S:KI19:location:02:center-of"
+          "RL:S:KI19:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -28123,9 +28127,9 @@
       "acupointId": "KI20",
       "side": "left",
       "position": [
-        0.0127,
+        0.0134,
         1.1718,
-        0.1174
+        0.1175
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -28134,16 +28138,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0362,
+        "projectionDistance": 0.0361,
         "projectionDelta": [
           0,
           0,
-          -0.0362
+          -0.0361
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.0127,
+          0.0134,
           1.1718,
           0.1536
         ],
@@ -28154,9 +28158,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI20:location:02:center-of",
           "RL:S:KI20:location:00:relative-to",
-          "RL:S:KI20:location:01:relative-to",
-          "RL:S:KI20:location:02:center-of"
+          "RL:S:KI20:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -28189,7 +28193,7 @@
       "acupointId": "KI20",
       "side": "right",
       "position": [
-        -0.0062,
+        -0.0069,
         1.1718,
         0.1162
       ],
@@ -28200,16 +28204,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0375,
+        "projectionDistance": 0.0374,
         "projectionDelta": [
           0,
           0,
-          -0.0375
+          -0.0374
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.0062,
+          -0.0069,
           1.1718,
           0.1536
         ],
@@ -28220,9 +28224,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI20:location:02:center-of",
           "RL:S:KI20:location:00:relative-to",
-          "RL:S:KI20:location:01:relative-to",
-          "RL:S:KI20:location:02:center-of"
+          "RL:S:KI20:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -28255,9 +28259,9 @@
       "acupointId": "KI21",
       "side": "left",
       "position": [
-        0.0127,
+        0.0137,
         1.1996,
-        0.1181
+        0.1183
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -28266,16 +28270,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0355,
+        "projectionDistance": 0.0354,
         "projectionDelta": [
           0,
           0,
-          -0.0355
+          -0.0354
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.0127,
+          0.0137,
           1.1996,
           0.1536
         ],
@@ -28286,9 +28290,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI21:location:02:center-of",
           "RL:S:KI21:location:00:relative-to",
-          "RL:S:KI21:location:01:relative-to",
-          "RL:S:KI21:location:02:center-of"
+          "RL:S:KI21:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -28321,9 +28325,9 @@
       "acupointId": "KI21",
       "side": "right",
       "position": [
-        -0.0062,
+        -0.0072,
         1.1996,
-        0.1171
+        0.1172
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -28332,16 +28336,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0365,
+        "projectionDistance": 0.0364,
         "projectionDelta": [
           0,
           0,
-          -0.0365
+          -0.0364
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          -0.0062,
+          -0.0072,
           1.1996,
           0.1536
         ],
@@ -28352,9 +28356,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:KI21:location:02:center-of",
           "RL:S:KI21:location:00:relative-to",
-          "RL:S:KI21:location:01:relative-to",
-          "RL:S:KI21:location:02:center-of"
+          "RL:S:KI21:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 2,
@@ -31477,8 +31481,8 @@
         "nativeOperationCount": 3,
         "nativeRelationIds": [
           "RL:S:TE9:location:00:between",
-          "RL:S:TE9:location:01:relative-to",
-          "RL:S:TE9:location:02:midpoint-of-entity"
+          "RL:S:TE9:location:02:midpoint-of-entity",
+          "RL:S:TE9:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -31543,8 +31547,8 @@
         "nativeOperationCount": 3,
         "nativeRelationIds": [
           "RL:S:TE9:location:00:between",
-          "RL:S:TE9:location:01:relative-to",
-          "RL:S:TE9:location:02:midpoint-of-entity"
+          "RL:S:TE9:location:02:midpoint-of-entity",
+          "RL:S:TE9:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -32400,8 +32404,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:TE16:location:00:relative-to",
-          "RL:S:TE16:location:02:same-level"
+          "RL:S:TE16:location:02:same-level",
+          "RL:S:TE16:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 0,
@@ -32479,8 +32483,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:TE16:location:00:relative-to",
-          "RL:S:TE16:location:02:same-level"
+          "RL:S:TE16:location:02:same-level",
+          "RL:S:TE16:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 0,
@@ -33739,8 +33743,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:GB3:location:00:relative-to",
-          "RL:S:GB3:location:02:midpoint-of-entity"
+          "RL:S:GB3:location:02:midpoint-of-entity",
+          "RL:S:GB3:location:00:relative-to"
         ],
         "semanticMeasurementCount": 0,
         "anatomicalEnvelopeApplied": false,
@@ -33806,8 +33810,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:GB3:location:00:relative-to",
-          "RL:S:GB3:location:02:midpoint-of-entity"
+          "RL:S:GB3:location:02:midpoint-of-entity",
+          "RL:S:GB3:location:00:relative-to"
         ],
         "semanticMeasurementCount": 0,
         "anatomicalEnvelopeApplied": false,
@@ -35194,9 +35198,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:GB14:location:02:center-of",
           "RL:S:GB14:location:00:relative-to",
-          "RL:S:GB14:location:01:relative-to",
-          "RL:S:GB14:location:02:center-of"
+          "RL:S:GB14:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -35274,9 +35278,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:GB14:location:02:center-of",
           "RL:S:GB14:location:00:relative-to",
-          "RL:S:GB14:location:01:relative-to",
-          "RL:S:GB14:location:02:center-of"
+          "RL:S:GB14:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -35354,8 +35358,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:GB15:location:00:relative-to",
-          "RL:S:GB15:location:01:center-of"
+          "RL:S:GB15:location:01:center-of",
+          "RL:S:GB15:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -35433,8 +35437,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:GB15:location:00:relative-to",
-          "RL:S:GB15:location:01:center-of"
+          "RL:S:GB15:location:01:center-of",
+          "RL:S:GB15:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -35512,8 +35516,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:GB16:location:00:relative-to",
-          "RL:S:GB16:location:01:center-of"
+          "RL:S:GB16:location:01:center-of",
+          "RL:S:GB16:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -35577,8 +35581,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:GB16:location:00:relative-to",
-          "RL:S:GB16:location:01:center-of"
+          "RL:S:GB16:location:01:center-of",
+          "RL:S:GB16:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -35642,8 +35646,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:GB17:location:00:relative-to",
-          "RL:S:GB17:location:01:center-of"
+          "RL:S:GB17:location:01:center-of",
+          "RL:S:GB17:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -35721,8 +35725,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:GB17:location:00:relative-to",
-          "RL:S:GB17:location:01:center-of"
+          "RL:S:GB17:location:01:center-of",
+          "RL:S:GB17:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -35800,8 +35804,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:GB18:location:00:relative-to",
-          "RL:S:GB18:location:01:center-of"
+          "RL:S:GB18:location:01:center-of",
+          "RL:S:GB18:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -35879,8 +35883,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:GB18:location:00:relative-to",
-          "RL:S:GB18:location:01:center-of"
+          "RL:S:GB18:location:01:center-of",
+          "RL:S:GB18:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -35959,8 +35963,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:GB19:location:00:relative-to",
-          "RL:S:GB19:location:01:same-level"
+          "RL:S:GB19:location:01:same-level",
+          "RL:S:GB19:location:00:relative-to"
         ],
         "semanticMeasurementCount": 0,
         "anatomicalEnvelopeApplied": false,
@@ -36026,8 +36030,8 @@
         "nativeOperationCount": 0,
         "nativeRelationIds": [],
         "unresolvedSemanticRelationIds": [
-          "RL:S:GB19:location:00:relative-to",
-          "RL:S:GB19:location:01:same-level"
+          "RL:S:GB19:location:01:same-level",
+          "RL:S:GB19:location:00:relative-to"
         ],
         "semanticMeasurementCount": 0,
         "anatomicalEnvelopeApplied": false,
@@ -36926,8 +36930,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:GB26:location:01:same-level",
-          "RL:S:GB26:location:02:center-of"
+          "RL:S:GB26:location:02:center-of",
+          "RL:S:GB26:location:01:same-level"
         ],
         "unresolvedSemanticRelationIds": [
           "RL:S:GB26:location:00:relative-to"
@@ -36995,8 +36999,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:GB26:location:01:same-level",
-          "RL:S:GB26:location:02:center-of"
+          "RL:S:GB26:location:02:center-of",
+          "RL:S:GB26:location:01:same-level"
         ],
         "unresolvedSemanticRelationIds": [
           "RL:S:GB26:location:00:relative-to"
@@ -37033,9 +37037,9 @@
       "acupointId": "GB27",
       "side": "left",
       "position": [
-        0.0042,
+        0.1105,
         0.9492,
-        0.094
+        0.072
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -37044,16 +37048,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0597,
+        "projectionDistance": 0.0816,
         "projectionDelta": [
-          0.001,
           0,
-          -0.0597
+          0,
+          -0.0816
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.0033,
+          0.1105,
           0.9492,
           0.1536
         ],
@@ -37064,9 +37068,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:GB27:location:02:center-of",
           "RL:S:GB27:location:00:relative-to",
-          "RL:S:GB27:location:01:relative-to",
-          "RL:S:GB27:location:02:center-of"
+          "RL:S:GB27:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -37099,9 +37103,9 @@
       "acupointId": "GB27",
       "side": "right",
       "position": [
-        0.0032,
+        -0.1106,
         0.9492,
-        0.096
+        0.0725
       ],
       "model": "BodyParts3D-4.0",
       "status": "validated",
@@ -37110,16 +37114,16 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0576,
+        "projectionDistance": 0.0811,
         "projectionDelta": [
-          -0.0001,
           0,
-          -0.0576
+          0,
+          -0.0811
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
-          0.0033,
+          -0.1106,
           0.9492,
           0.1536
         ],
@@ -37130,9 +37134,9 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 3,
         "nativeRelationIds": [
+          "RL:S:GB27:location:02:center-of",
           "RL:S:GB27:location:00:relative-to",
-          "RL:S:GB27:location:01:relative-to",
-          "RL:S:GB27:location:02:center-of"
+          "RL:S:GB27:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -38909,9 +38913,9 @@
           "RL:S:GB41:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [
-          "RL:S:GB41:location:00:relative-to",
           "RL:S:GB41:location:05:at-junction",
-          "RL:S:GB41:location:06:at-junction"
+          "RL:S:GB41:location:06:at-junction",
+          "RL:S:GB41:location:00:relative-to"
         ],
         "semanticMeasurementCount": 0,
         "anatomicalEnvelopeApplied": true,
@@ -38979,9 +38983,9 @@
           "RL:S:GB41:location:01:relative-to"
         ],
         "unresolvedSemanticRelationIds": [
-          "RL:S:GB41:location:00:relative-to",
           "RL:S:GB41:location:05:at-junction",
-          "RL:S:GB41:location:06:at-junction"
+          "RL:S:GB41:location:06:at-junction",
+          "RL:S:GB41:location:00:relative-to"
         ],
         "semanticMeasurementCount": 0,
         "anatomicalEnvelopeApplied": true,
@@ -39695,9 +39699,9 @@
       "acupointId": "LR3",
       "side": "left",
       "position": [
-        0.124,
-        0.0436,
-        0.0596
+        0.1113,
+        0.062,
+        0.0499
       ],
       "model": "BodyParts3D-4.0",
       "status": "review-needed",
@@ -39706,17 +39710,17 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0103,
+        "projectionDistance": 0.014,
         "projectionDelta": [
-          0.0074,
-          0.0067,
-          0.0024
+          -0.0053,
+          -0.0107,
+          -0.0073
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
           0.1166,
-          0.0369,
+          0.0728,
           0.0573
         ],
         "relationCount": 6,
@@ -39727,8 +39731,8 @@
         "nativeOperationCount": 3,
         "nativeRelationIds": [
           "RL:S:LR3:location:00:between",
-          "RL:S:LR3:location:03:overlies",
-          "RL:S:LR3:location:06:at-junction"
+          "RL:S:LR3:location:06:at-junction",
+          "RL:S:LR3:location:03:overlies"
         ],
         "unresolvedSemanticRelationIds": [
           "RL:S:LR3:location:01:relative-to"
@@ -39744,7 +39748,7 @@
         "landmarkPostValidation": {
           "status": "pass",
           "checked": 1,
-          "maxDistance": 0.0357,
+          "maxDistance": 0.0195,
           "issues": []
         },
         "topologyValidation": {
@@ -39752,7 +39756,8 @@
         },
         "envelopeClampMagnitude": 0,
         "reviewReasons": [
-          "unresolved-semantic-relations"
+          "unresolved-semantic-relations",
+          "exact-coordinate-collision"
         ]
       },
       "sourceIds": [
@@ -39765,9 +39770,9 @@
       "acupointId": "LR3",
       "side": "right",
       "position": [
-        -0.1117,
-        0.0491,
-        0.0639
+        -0.1112,
+        0.0622,
+        0.0497
       ],
       "model": "BodyParts3D-4.0",
       "status": "review-needed",
@@ -39776,17 +39781,17 @@
       "validation": {
         "surfaceProjected": true,
         "lateralityConsistent": true,
-        "projectionDistance": 0.0133,
+        "projectionDistance": 0.013,
         "projectionDelta": [
-          -0.0016,
-          0.0114,
-          0.0067
+          -0.0011,
+          -0.0106,
+          -0.0075
         ],
         "regionConstrained": true,
         "surfacePartId": "FJ2810",
         "preProjectionTarget": [
           -0.1101,
-          0.0377,
+          0.0728,
           0.0573
         ],
         "relationCount": 6,
@@ -39797,8 +39802,8 @@
         "nativeOperationCount": 3,
         "nativeRelationIds": [
           "RL:S:LR3:location:00:between",
-          "RL:S:LR3:location:03:overlies",
-          "RL:S:LR3:location:06:at-junction"
+          "RL:S:LR3:location:06:at-junction",
+          "RL:S:LR3:location:03:overlies"
         ],
         "unresolvedSemanticRelationIds": [
           "RL:S:LR3:location:01:relative-to"
@@ -39814,7 +39819,7 @@
         "landmarkPostValidation": {
           "status": "pass",
           "checked": 1,
-          "maxDistance": 0.0256,
+          "maxDistance": 0.0194,
           "issues": []
         },
         "topologyValidation": {
@@ -39822,7 +39827,8 @@
         },
         "envelopeClampMagnitude": 0,
         "reviewReasons": [
-          "unresolved-semantic-relations"
+          "unresolved-semantic-relations",
+          "exact-coordinate-collision"
         ]
       },
       "sourceIds": [
@@ -40002,8 +40008,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:LR5:location:00:relative-to",
-          "RL:S:LR5:location:01:center-of"
+          "RL:S:LR5:location:01:center-of",
+          "RL:S:LR5:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -40067,8 +40073,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:LR5:location:00:relative-to",
-          "RL:S:LR5:location:01:center-of"
+          "RL:S:LR5:location:01:center-of",
+          "RL:S:LR5:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -40132,8 +40138,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:LR6:location:00:relative-to",
-          "RL:S:LR6:location:01:center-of"
+          "RL:S:LR6:location:01:center-of",
+          "RL:S:LR6:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -40197,8 +40203,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:LR6:location:00:relative-to",
-          "RL:S:LR6:location:01:center-of"
+          "RL:S:LR6:location:01:center-of",
+          "RL:S:LR6:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -40928,8 +40934,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:LR12:location:00:relative-to",
-          "RL:S:LR12:location:01:same-level"
+          "RL:S:LR12:location:01:same-level",
+          "RL:S:LR12:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -40993,8 +40999,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:LR12:location:00:relative-to",
-          "RL:S:LR12:location:01:same-level"
+          "RL:S:LR12:location:01:same-level",
+          "RL:S:LR12:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -43265,8 +43271,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:CV3:location:00:relative-to",
-          "RL:S:CV3:location:01:center-of"
+          "RL:S:CV3:location:01:center-of",
+          "RL:S:CV3:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -43330,8 +43336,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:CV4:location:00:relative-to",
-          "RL:S:CV4:location:01:center-of"
+          "RL:S:CV4:location:01:center-of",
+          "RL:S:CV4:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -43395,8 +43401,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:CV5:location:00:relative-to",
-          "RL:S:CV5:location:01:center-of"
+          "RL:S:CV5:location:01:center-of",
+          "RL:S:CV5:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -43460,8 +43466,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:CV6:location:00:relative-to",
-          "RL:S:CV6:location:01:center-of"
+          "RL:S:CV6:location:01:center-of",
+          "RL:S:CV6:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -43525,8 +43531,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:CV7:location:00:relative-to",
-          "RL:S:CV7:location:01:center-of"
+          "RL:S:CV7:location:01:center-of",
+          "RL:S:CV7:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -43654,8 +43660,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:CV9:location:00:relative-to",
-          "RL:S:CV9:location:01:center-of"
+          "RL:S:CV9:location:01:center-of",
+          "RL:S:CV9:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -43719,8 +43725,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:CV10:location:00:relative-to",
-          "RL:S:CV10:location:01:center-of"
+          "RL:S:CV10:location:01:center-of",
+          "RL:S:CV10:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -43784,8 +43790,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:CV11:location:00:relative-to",
-          "RL:S:CV11:location:01:center-of"
+          "RL:S:CV11:location:01:center-of",
+          "RL:S:CV11:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -43849,8 +43855,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:CV12:location:00:relative-to",
-          "RL:S:CV12:location:01:center-of"
+          "RL:S:CV12:location:01:center-of",
+          "RL:S:CV12:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -43914,8 +43920,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:CV13:location:00:relative-to",
-          "RL:S:CV13:location:01:center-of"
+          "RL:S:CV13:location:01:center-of",
+          "RL:S:CV13:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
@@ -43979,8 +43985,8 @@
         "semanticGraphVersion": "2.1.0",
         "nativeOperationCount": 2,
         "nativeRelationIds": [
-          "RL:S:CV14:location:00:relative-to",
-          "RL:S:CV14:location:01:center-of"
+          "RL:S:CV14:location:01:center-of",
+          "RL:S:CV14:location:00:relative-to"
         ],
         "unresolvedSemanticRelationIds": [],
         "semanticMeasurementCount": 1,
