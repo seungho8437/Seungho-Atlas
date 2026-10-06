@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "artifact": "c-v3-stage2-semantic-repair-validation",
   "status": "PASS",
-  "checks": 304,
+  "checks": 307,
   "errors": 0,
   "error_details": [],
   "coverage": {
@@ -11,7 +11,7 @@
   },
   "remaining_defects": [],
   "pre_repair_scan": {
-    "total": 644,
+    "total": 645,
     "new_regression_defects_outside_known8": 391,
     "new_regression_findings": [
       {
@@ -3053,6 +3053,7 @@
     "derived_geometry_output_not_bound": 0,
     "lexicalized_anatomical_entity_false_subfeature_split": 0,
     "subfeature_synonym_normalization_gap": 0,
+    "lexicalized_entity_shadow_parse_not_fully_suppressed": 0,
     "false_fallback": 0
   },
   "negative_tests": {
@@ -3071,7 +3072,9 @@
     "lexicalized_process_generic_split": true,
     "atomic_fma_internal_child_executable": true,
     "free_extremity_normalization_removed": true,
-    "synonym_left_unknown": true
+    "synonym_left_unknown": true,
+    "shadow_parent_unsuppressed": true,
+    "shadow_parse_edge_unquarantined": true
   },
   "coordinate_generation_count": 0,
   "legacy_c_coordinate_reference_count": 0,

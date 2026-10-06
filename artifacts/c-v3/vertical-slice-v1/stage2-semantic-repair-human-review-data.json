@@ -3,7 +3,7 @@
   "artifact": "c-v3-stage2-semantic-repair-human-review-data",
   "human_review_disposition": "PENDING",
   "before_sha256": "d70c437a536d21765a91693fd8e292b47cb3f157f89b503b135e52b974b74d86",
-  "after_sha256": "e2f9edd26ef5fe40a45e5760d8d39b0120ce6e8b4e2089ab1fbf4de41a419b99",
+  "after_sha256": "9832ba7884275bb309ab92f17a52d6f697f9ac4549e9bba193b4aa7d83918985",
   "validation_status": "PASS",
   "stage3": "NOT_STARTED",
   "points": [
@@ -246,7 +246,8 @@
                 "derived_geometry_id": null
               },
               "status": "UNRESOLVED",
-              "reason": "no approved executable construction rule for canonical subfeature 'superior_border'"
+              "reason": "no approved executable construction rule for canonical subfeature 'superior_border'",
+              "shadow_edge_quarantined": false
             }
           ]
         }
@@ -314,6 +315,7 @@
       ],
       "measurements": [],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "RL:S:LI18:location:00:between",
@@ -892,7 +894,8 @@
                 "derived_geometry_id": null
               },
               "status": "UNRESOLVED",
-              "reason": "no approved executable construction rule for canonical subfeature 'border'"
+              "reason": "no approved executable construction rule for canonical subfeature 'border'",
+              "shadow_edge_quarantined": false
             }
           ]
         }
@@ -961,6 +964,7 @@
       ],
       "measurements": [],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "LM:S:ST10:location:96-142",
@@ -1556,7 +1560,8 @@
                 "derived_geometry_id": null
               },
               "status": "UNRESOLVED",
-              "reason": "no approved executable construction rule for canonical subfeature 'border'"
+              "reason": "no approved executable construction rule for canonical subfeature 'border'",
+              "shadow_edge_quarantined": false
             }
           ]
         }
@@ -1705,6 +1710,7 @@
       ],
       "measurements": [],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "LM:S:LI17:location:97-143",
@@ -2589,13 +2595,13 @@
           "child_subfeature": null,
           "source_lexical_form": null,
           "canonical_subfeature_type": null,
-          "semantic_suppressed": false,
+          "semantic_suppressed": true,
           "suppressed_by_atomic_landmark_id": null,
-          "executor": "fma_mesh",
-          "status": "RESOLVED",
+          "executor": "lexicalized_shadow_guard",
+          "status": "UNRESOLVED",
           "identity": {
-            "kind": "fma_concept",
-            "fma_id": "FMA9968",
+            "kind": null,
+            "fma_id": null,
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -2608,7 +2614,7 @@
             "producer_relation_id": null,
             "derived_geometry_id": null
           },
-          "reason": null
+          "reason": "LEXICALIZED_ENTITY_SHADOW_PARSE_NOT_FULLY_SUPPRESSED_PREVENTED"
         }
       ],
       "composite_binding_view": [
@@ -2657,17 +2663,18 @@
                 "derived_geometry_id": null
               },
               "status": "UNRESOLVED",
-              "reason": "no approved executable construction rule for canonical subfeature 'inferior_border'"
+              "reason": "no approved executable construction rule for canonical subfeature 'inferior_border'",
+              "shadow_edge_quarantined": false
             }
           ]
         },
         {
           "parent_node_id": "LM:S:BL17:note:1:87-116",
           "parent_source_raw": "the seventh thoracic vertebra",
-          "parent_status": "RESOLVED",
+          "parent_status": "UNRESOLVED",
           "parent_semantic_identity": {
-            "kind": "fma_concept",
-            "fma_id": "FMA9968",
+            "kind": null,
+            "fma_id": null,
             "registry_id": null,
             "constructed_id": null,
             "geometry_hash": null,
@@ -2706,7 +2713,8 @@
                 "derived_geometry_id": null
               },
               "status": "UNRESOLVED",
-              "reason": "LEXICALIZED_ANATOMICAL_ENTITY_FALSE_SUBFEATURE_SPLIT_SUPPRESSED"
+              "reason": "LEXICALIZED_ANATOMICAL_ENTITY_FALSE_SUBFEATURE_SPLIT_SUPPRESSED",
+              "shadow_edge_quarantined": true
             }
           ]
         }
@@ -2828,6 +2836,17 @@
         }
       ],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [
+        {
+          "binding_id": "CB:S:BL17:note:1:00",
+          "accepted_atomic_landmark_id": "LM:S:BL17:note:1:64-116",
+          "shadow_parent_landmark_id": "LM:S:BL17:note:1:87-116",
+          "shadow_child_landmark_id": "LM:S:BL17:note:1:75-83",
+          "edge_quarantined": true,
+          "shadow_parent_independently_referenced": false,
+          "shadow_parent_suppressed": true
+        }
+      ],
       "dependency_edges": [
         {
           "from": "LM:S:BL17:location:149-175",
@@ -2882,11 +2901,6 @@
         {
           "from": "LM:S:BL17:location:70-127",
           "to": "LM:S:BL17:location:51-66",
-          "kind": "parent_to_child_subfeature"
-        },
-        {
-          "from": "LM:S:BL17:note:1:87-116",
-          "to": "LM:S:BL17:note:1:75-83",
           "kind": "parent_to_child_subfeature"
         },
         {
@@ -3000,6 +3014,42 @@
               "constructed_id": null,
               "geometry_hash": null,
               "part_id": "FJ3153",
+              "concept_id": null,
+              "reference_point_id": null,
+              "parent_landmark_id": null,
+              "subfeature_type": null,
+              "construction_rule": null,
+              "producer_relation_id": null,
+              "derived_geometry_id": null
+            },
+            "after_status": "UNRESOLVED",
+            "after_identity": {
+              "kind": null,
+              "fma_id": null,
+              "registry_id": null,
+              "constructed_id": null,
+              "geometry_hash": null,
+              "part_id": null,
+              "concept_id": null,
+              "reference_point_id": null,
+              "parent_landmark_id": null,
+              "subfeature_type": null,
+              "construction_rule": null,
+              "producer_relation_id": null,
+              "derived_geometry_id": null
+            }
+          },
+          {
+            "node_id": "LM:S:BL17:note:1:87-116",
+            "source_raw": "the seventh thoracic vertebra",
+            "before_status": "RESOLVED",
+            "before_identity": {
+              "kind": "fma_concept",
+              "fma_id": "FMA9968",
+              "registry_id": null,
+              "constructed_id": null,
+              "geometry_hash": null,
+              "part_id": null,
               "concept_id": null,
               "reference_point_id": null,
               "parent_landmark_id": null,
@@ -3537,7 +3587,8 @@
                 "derived_geometry_id": null
               },
               "status": "UNRESOLVED",
-              "reason": "no approved executable construction rule for canonical subfeature 'inferior_border'"
+              "reason": "no approved executable construction rule for canonical subfeature 'inferior_border'",
+              "shadow_edge_quarantined": false
             }
           ]
         }
@@ -3639,6 +3690,7 @@
         }
       ],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "LM:S:BL23:location:142-168",
@@ -4222,7 +4274,8 @@
                 "derived_geometry_id": null
               },
               "status": "UNRESOLVED",
-              "reason": "no approved executable construction rule for canonical subfeature 'inferior_border'"
+              "reason": "no approved executable construction rule for canonical subfeature 'inferior_border'",
+              "shadow_edge_quarantined": false
             }
           ]
         }
@@ -4324,6 +4377,7 @@
         }
       ],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "LM:S:BL25:location:142-168",
@@ -5238,7 +5292,8 @@
                 "derived_geometry_id": null
               },
               "status": "UNRESOLVED",
-              "reason": "no approved executable construction rule for canonical subfeature 'superior_border'"
+              "reason": "no approved executable construction rule for canonical subfeature 'superior_border'",
+              "shadow_edge_quarantined": false
             }
           ]
         },
@@ -5287,7 +5342,8 @@
                 "derived_geometry_id": null
               },
               "status": "UNRESOLVED",
-              "reason": "no approved executable construction rule for canonical subfeature 'superior_border'"
+              "reason": "no approved executable construction rule for canonical subfeature 'superior_border'",
+              "shadow_edge_quarantined": false
             }
           ]
         }
@@ -5535,6 +5591,7 @@
       ],
       "measurements": [],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "LM:S:ST9:location:114-146",
@@ -6883,6 +6940,7 @@
       ],
       "measurements": [],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "RL:S:TE20:location:00:relative-to",
@@ -7441,7 +7499,8 @@
                 "derived_geometry_id": null
               },
               "status": "UNRESOLVED",
-              "reason": "parent entity is not uniquely resolved"
+              "reason": "parent entity is not uniquely resolved",
+              "shadow_edge_quarantined": false
             }
           ]
         }
@@ -7568,6 +7627,7 @@
       ],
       "measurements": [],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "RL:S:HT7:location:00:relative-to",
@@ -8302,6 +8362,7 @@
           ]
         }
       ],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "LM:S:LI4:location:53-79",
@@ -8835,6 +8896,7 @@
       ],
       "measurements": [],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "LM:S:ST1:location:25-32",
@@ -9359,7 +9421,8 @@
                 "derived_geometry_id": null
               },
               "status": "UNRESOLVED",
-              "reason": "parent entity is not uniquely resolved"
+              "reason": "parent entity is not uniquely resolved",
+              "shadow_edge_quarantined": false
             }
           ]
         }
@@ -9496,6 +9559,7 @@
         }
       ],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "LM:S:GB14:location:82-91",
@@ -10198,6 +10262,7 @@
         }
       ],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "LM:S:GB23:location:84-105",
@@ -11337,6 +11402,7 @@
           ]
         }
       ],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "LM:S:LU6:note:1:94-97",
@@ -13153,6 +13219,7 @@
         }
       ],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "LM:S:LI7:location:68-71",
@@ -14188,7 +14255,8 @@
                 "derived_geometry_id": null
               },
               "status": "UNRESOLVED",
-              "reason": "no approved executable construction rule for canonical subfeature 'free_end'"
+              "reason": "no approved executable construction rule for canonical subfeature 'free_end'",
+              "shadow_edge_quarantined": false
             }
           ]
         },
@@ -14237,7 +14305,8 @@
                 "derived_geometry_id": null
               },
               "status": "UNRESOLVED",
-              "reason": "parent entity is not uniquely resolved"
+              "reason": "parent entity is not uniquely resolved",
+              "shadow_edge_quarantined": false
             }
           ]
         },
@@ -14286,7 +14355,8 @@
                 "derived_geometry_id": null
               },
               "status": "UNRESOLVED",
-              "reason": "parent entity is not uniquely resolved"
+              "reason": "parent entity is not uniquely resolved",
+              "shadow_edge_quarantined": false
             }
           ]
         }
@@ -14455,6 +14525,7 @@
       ],
       "measurements": [],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "LM:S:GB26:location:107-116",
@@ -15417,6 +15488,7 @@
       ],
       "measurements": [],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "LM:S:ST2:location:20-40",
@@ -15711,6 +15783,7 @@
           ]
         }
       ],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "LM:S:BL40:location:56-76",
@@ -16240,6 +16313,7 @@
         }
       ],
       "derived_geometries": [],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "PM:S:ST4:location:00",
@@ -17312,6 +17386,7 @@
           ]
         }
       ],
+      "quarantined_shadow_parse_branches": [],
       "dependency_edges": [
         {
           "from": "LM:S:TE6:location:52-106",
@@ -18468,6 +18543,7 @@
       "derived_geometry_output_not_bound": 0,
       "lexicalized_anatomical_entity_false_subfeature_split": 0,
       "subfeature_synonym_normalization_gap": 0,
+      "lexicalized_entity_shadow_parse_not_fully_suppressed": 0,
       "false_fallback": 0
     }
   }
