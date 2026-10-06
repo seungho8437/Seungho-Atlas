@@ -10,7 +10,6 @@
     "build": "vite build",
     "build:vercel": "vite build",
     "check": "tsc --noEmit",
-    "validate:knowledge": "node scripts/validate-knowledge.mjs",
     "audit:korean": "node scripts/audit-korean-coverage.mjs"
   },
   "dependencies": {
