@@ -1,0 +1,254 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-vertical-slice-v1-stage3-synthesis",
+  "status": "GENERATED_NOT_VALIDATED",
+  "deployable": false,
+  "scope": "Vertical Slice v1",
+  "input_identity": {
+    "stage2_sha256": "e2f9edd26ef5fe40a45e5760d8d39b0120ce6e8b4e2089ab1fbf4de41a419b99",
+    "calibration_sha256": "c36b929b1cb8d2e36a8af1ae3fadcca19995e54e3818567c7d1ae58bf900d106",
+    "input_lock_sha256": "6e7500cdf5b1479ee87fced0e6b70e73bdf571f8a3aac51f702eeecdfcfeed74"
+  },
+  "production_write": false,
+  "legacy_coordinate_input": false,
+  "projection_contract": {
+    "direct_surface_family": {
+      "method": "aspect_directed_ray_cast",
+      "budget_m": 0.03,
+      "inward_offset_m": 0.012,
+      "candidate_match_budget_m": 0.006
+    }
+  },
+  "points": [
+    {
+      "point_id": "HT7",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:HT7:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    },
+    {
+      "point_id": "LI4",
+      "stage2_primary_status": "RESOLVED",
+      "stage3_status": "UNRESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:LI4:location",
+        "directional_relation_ids": [
+          "RL:S:LI4:location:00:relative-to"
+        ],
+        "rule": "Stage3 refuses nearest/distance heuristics for unquantified directional language."
+      },
+      "blocking_reason": "QUALITATIVE_DIRECTION_HAS_NO_FROZEN_PHYSICAL_DISPLACEMENT_RULE"
+    },
+    {
+      "point_id": "ST1",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:ST1:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    },
+    {
+      "point_id": "GB14",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:GB14:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    },
+    {
+      "point_id": "GB23",
+      "stage2_primary_status": "RESOLVED",
+      "stage3_status": "UNRESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:GB23:location",
+        "measurement_ids": [
+          "PM:S:GB23:location:00"
+        ],
+        "non_metric_calibration_ids": [
+          "PM:S:GB23:location:00"
+        ],
+        "rule": "Stage3 does not infer metres-per-cun from atlas joint distances."
+      },
+      "blocking_reason": "APPROVED_CALIBRATION_HAS_NO_EXPLICIT_PHYSICAL_CUN_SCALE"
+    },
+    {
+      "point_id": "LU6",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:LU6:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    },
+    {
+      "point_id": "LI7",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:LI7:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    },
+    {
+      "point_id": "GB26",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:GB26:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    },
+    {
+      "point_id": "ST2",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:ST2:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    },
+    {
+      "point_id": "ST10",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:ST10:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    },
+    {
+      "point_id": "LI18",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:LI18:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    },
+    {
+      "point_id": "LI17",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:LI17:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    },
+    {
+      "point_id": "BL17",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:BL17:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    },
+    {
+      "point_id": "BL23",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:BL23:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    },
+    {
+      "point_id": "BL25",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:BL25:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    },
+    {
+      "point_id": "BL40",
+      "stage2_primary_status": "RESOLVED",
+      "stage3_status": "UNRESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:BL40:location",
+        "primary_relation_ids": [
+          "RL:S:BL40:location:00:midpoint-of-entity",
+          "RL:S:BL40:location:01:surface-landmark"
+        ]
+      },
+      "blocking_reason": "LEFT_ASPECT_RAY_ELIGIBLE_GEOMETRIC_HIT_CARDINALITY_2"
+    },
+    {
+      "point_id": "TE20",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:TE20:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    },
+    {
+      "point_id": "ST4",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:ST4:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    },
+    {
+      "point_id": "TE6",
+      "stage2_primary_status": "RESOLVED",
+      "stage3_status": "UNRESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:TE6:location",
+        "measurement_ids": [
+          "PM:S:TE6:location:00"
+        ],
+        "non_metric_calibration_ids": [
+          "PM:S:TE6:location:00"
+        ],
+        "rule": "Stage3 does not infer metres-per-cun from atlas joint distances."
+      },
+      "blocking_reason": "APPROVED_CALIBRATION_HAS_NO_EXPLICIT_PHYSICAL_CUN_SCALE"
+    },
+    {
+      "point_id": "ST9",
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:ST9:location"
+      },
+      "blocking_reason": "Stage2 primary location is not RESOLVED"
+    }
+  ],
+  "summary": {
+    "logical_points": 20,
+    "generated_points": 0,
+    "generated_coordinates": 0,
+    "unresolved_stage3": 4,
+    "blocked_by_stage2": 16,
+    "legacy_coordinate_inputs": 0
+  }
+}

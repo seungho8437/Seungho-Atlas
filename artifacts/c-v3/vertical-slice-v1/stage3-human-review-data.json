@@ -1,0 +1,493 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-vertical-slice-v1-stage3-human-review-data",
+  "human_audit_status": "PENDING",
+  "stage3_sha256": "c7a481d2402e242c40201e2090d55b8e7b2c1fdaf05e3b6148b96a3c4e542db9",
+  "validation_sha256": "51d97df3cdc10fe591373cb3ab9a070b81b7cfff876e58e5a3608fa53ee66d4e",
+  "validation_status": "PASS",
+  "validation_checks": 89,
+  "validation_errors": 0,
+  "suppressed_provenance_watchpoint_metrics": {
+    "suppressed_executable_operand_count": 0,
+    "suppressed_status_aggregation_influence_count": 0,
+    "suppressed_only_resolved_path_count": 0
+  },
+  "summary": {
+    "logical_points": 20,
+    "generated_points": 0,
+    "generated_coordinates": 0,
+    "unresolved_stage3": 4,
+    "blocked_by_stage2": 16,
+    "legacy_coordinate_inputs": 0
+  },
+  "points": [
+    {
+      "point_id": "LI4",
+      "who_source": [
+        {
+          "source_statement_id": "S:LI4:location",
+          "section": "location",
+          "text": "On the dorsum of the hand, radial to the midpoint of the second metacarpal bone.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "RESOLVED",
+      "stage3_status": "UNRESOLVED",
+      "blocking_reason": "QUALITATIVE_DIRECTION_HAS_NO_FROZEN_PHYSICAL_DISPLACEMENT_RULE",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:LI4:location",
+        "directional_relation_ids": [
+          "RL:S:LI4:location:00:relative-to"
+        ],
+        "rule": "Stage3 refuses nearest/distance heuristics for unquantified directional language."
+      },
+      "visual": null
+    },
+    {
+      "point_id": "GB23",
+      "who_source": [
+        {
+          "source_statement_id": "S:GB23:location",
+          "section": "location",
+          "text": "In the lateral thoracic region, in the fourth intercostal space, 1 B-cun anterior to the midaxillary line.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "RESOLVED",
+      "stage3_status": "UNRESOLVED",
+      "blocking_reason": "APPROVED_CALIBRATION_HAS_NO_EXPLICIT_PHYSICAL_CUN_SCALE",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:GB23:location",
+        "measurement_ids": [
+          "PM:S:GB23:location:00"
+        ],
+        "non_metric_calibration_ids": [
+          "PM:S:GB23:location:00"
+        ],
+        "rule": "Stage3 does not infer metres-per-cun from atlas joint distances."
+      },
+      "visual": null
+    },
+    {
+      "point_id": "BL40",
+      "who_source": [
+        {
+          "source_statement_id": "S:BL40:location",
+          "section": "location",
+          "text": "On the posterior aspect of the knee, at the midpoint of the popliteal crease.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "RESOLVED",
+      "stage3_status": "UNRESOLVED",
+      "blocking_reason": "LEFT_ASPECT_RAY_ELIGIBLE_GEOMETRIC_HIT_CARDINALITY_2",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:BL40:location",
+        "primary_relation_ids": [
+          "RL:S:BL40:location:00:midpoint-of-entity",
+          "RL:S:BL40:location:01:surface-landmark"
+        ]
+      },
+      "visual": null
+    },
+    {
+      "point_id": "TE6",
+      "who_source": [
+        {
+          "source_statement_id": "S:TE6:location",
+          "section": "location",
+          "text": "On the posterior aspect of the forearm, midpoint of the interosseous space between the radius and the ulna, 3 B-cun proximal to the dorsal wrist crease.",
+          "page": null
+        },
+        {
+          "source_statement_id": "S:TE6:note:1",
+          "section": "note",
+          "text": "Note: 1 B-cun proximal to TE5, between the radius and the ulna, at the same level as tE7.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "RESOLVED",
+      "stage3_status": "UNRESOLVED",
+      "blocking_reason": "APPROVED_CALIBRATION_HAS_NO_EXPLICIT_PHYSICAL_CUN_SCALE",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:TE6:location",
+        "measurement_ids": [
+          "PM:S:TE6:location:00"
+        ],
+        "non_metric_calibration_ids": [
+          "PM:S:TE6:location:00"
+        ],
+        "rule": "Stage3 does not infer metres-per-cun from atlas joint distances."
+      },
+      "visual": null
+    },
+    {
+      "point_id": "HT7",
+      "who_source": [
+        {
+          "source_statement_id": "S:HT7:location",
+          "section": "location",
+          "text": "On the anteromedial aspect of the wrist, radial to the flexor carpi ulnaris tendon, on the palmar wrist crease.",
+          "page": null
+        },
+        {
+          "source_statement_id": "S:HT7:note:1",
+          "section": "note",
+          "text": "Note: In the depression radial to the proxi-mal border of the pisiform bone, on the palmar wrist crease.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:HT7:location"
+      },
+      "visual": null
+    },
+    {
+      "point_id": "ST1",
+      "who_source": [
+        {
+          "source_statement_id": "S:ST1:location",
+          "section": "location",
+          "text": "On the face, between the eyeball and the infraorbital margin, directly inferior to the pupil.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:ST1:location"
+      },
+      "visual": null
+    },
+    {
+      "point_id": "GB14",
+      "who_source": [
+        {
+          "source_statement_id": "S:GB14:location",
+          "section": "location",
+          "text": "On the head, 1 B-cun superior to the eye-brow, directly superior to the centre of the pupil.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:GB14:location"
+      },
+      "visual": null
+    },
+    {
+      "point_id": "LU6",
+      "who_source": [
+        {
+          "source_statement_id": "S:LU6:location",
+          "section": "location",
+          "text": "On the anterolateral aspect of the forearm, on the line connecting LU5 with LU9, 7 B-cun superior to the palmar wrist crease.",
+          "page": null
+        },
+        {
+          "source_statement_id": "S:LU6:note:1",
+          "section": "note",
+          "text": "Note: LU6 is 5 B-cun inferior to LU5, 1 B-cun superior to the midpoint of the line connecting LU5 with LU9.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:LU6:location"
+      },
+      "visual": null
+    },
+    {
+      "point_id": "LI7",
+      "who_source": [
+        {
+          "source_statement_id": "S:LI7:location",
+          "section": "location",
+          "text": "On the posterolateral aspect of the forearm, on the line connecting LI5 with LI11, 5 B-cun superior to the dorsal wrist crease.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:LI7:location"
+      },
+      "visual": null
+    },
+    {
+      "point_id": "GB26",
+      "who_source": [
+        {
+          "source_statement_id": "S:GB26:location",
+          "section": "location",
+          "text": "On the lateral abdomen, inferior to the free extremity of the 11th rib, at the same level as the centre of umbilicus.",
+          "page": null
+        },
+        {
+          "source_statement_id": "S:GB26:note:1",
+          "section": "note",
+          "text": "Note 1: GB26 can be located by first locat-ing the tenth rib, then searching for the free extremity of the 11th rib that is situated immediately below the inferior border of the costal arch.",
+          "page": null
+        },
+        {
+          "source_statement_id": "S:GB26:note:2",
+          "section": "note",
+          "text": "Note 2: GB26 is inferior to LR13, at the same level as CV8.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:GB26:location"
+      },
+      "visual": null
+    },
+    {
+      "point_id": "ST2",
+      "who_source": [
+        {
+          "source_statement_id": "S:ST2:location",
+          "section": "location",
+          "text": "On the face, in the infraorbital foramen.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:ST2:location"
+      },
+      "visual": null
+    },
+    {
+      "point_id": "ST10",
+      "who_source": [
+        {
+          "source_statement_id": "S:ST10:location",
+          "section": "location",
+          "text": "In the anterior region of the neck, at the same level as the cricoid cartilage, just anterior to the border of the sternocleido-mastoid muscle.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:ST10:location"
+      },
+      "visual": null
+    },
+    {
+      "point_id": "LI18",
+      "who_source": [
+        {
+          "source_statement_id": "S:LI18:location",
+          "section": "location",
+          "text": "On the anterior aspect of the neck, at the same level as the superior border of the thyroid cartilage, between the anterior and posterior borders of the sternocleidomas-toid muscle.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:LI18:location"
+      },
+      "visual": null
+    },
+    {
+      "point_id": "LI17",
+      "who_source": [
+        {
+          "source_statement_id": "S:LI17:location",
+          "section": "location",
+          "text": "On the anterior aspect of the neck, at the same level as the cricoid cartilage, just posterior to the border of the sternocleido-mastoid muscle.",
+          "page": null
+        },
+        {
+          "source_statement_id": "S:LI17:note:1",
+          "section": "note",
+          "text": "Note: Directly inferior to LI18, at the same level as St10.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:LI17:location"
+      },
+      "visual": null
+    },
+    {
+      "point_id": "BL17",
+      "who_source": [
+        {
+          "source_statement_id": "S:BL17:location",
+          "section": "location",
+          "text": "In the upper back region, at the same level as the inferior border of the spinous process of the seventh thoracic vertebra (T7), 1.5 B-cun lateral to the posterior median line.",
+          "page": null
+        },
+        {
+          "source_statement_id": "S:BL17:note:1",
+          "section": "note",
+          "text": "Note: The inferior angle of the scapula is at the same level as the spinous process of the seventh thoracic vertebra.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:BL17:location"
+      },
+      "visual": null
+    },
+    {
+      "point_id": "BL23",
+      "who_source": [
+        {
+          "source_statement_id": "S:BL23:location",
+          "section": "location",
+          "text": "In the lumbar region, at the same level as the inferior border of the spinous process of the second lumbar vertebra (L2), 1.5 B-cun lateral to the posterior median line.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:BL23:location"
+      },
+      "visual": null
+    },
+    {
+      "point_id": "BL25",
+      "who_source": [
+        {
+          "source_statement_id": "S:BL25:location",
+          "section": "location",
+          "text": "In the lumbar region, at the same level as the inferior border of the spinous process of the fourth lumbar vertebra (L4), 1.5 B-cun lateral to the posterior median line.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:BL25:location"
+      },
+      "visual": null
+    },
+    {
+      "point_id": "TE20",
+      "who_source": [
+        {
+          "source_statement_id": "S:TE20:location",
+          "section": "location",
+          "text": "On the head, just superior to the auricular apex.",
+          "page": null
+        },
+        {
+          "source_statement_id": "S:TE20:note:1",
+          "section": "note",
+          "text": "Note: With the auricle folded forward and pressed against the head, the point is located where the auricular apex touches the head.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:TE20:location"
+      },
+      "visual": null
+    },
+    {
+      "point_id": "ST4",
+      "who_source": [
+        {
+          "source_statement_id": "S:ST4:location",
+          "section": "location",
+          "text": "On the face, 0.4 f-cun lateral to the angle of the mouth.",
+          "page": null
+        },
+        {
+          "source_statement_id": "S:ST4:note:1",
+          "section": "note",
+          "text": "Note: Lateral to the angle of the mouth, the point is located in the nasolabial sulcus or on the continuation of the nasolabial sulcus.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:ST4:location"
+      },
+      "visual": null
+    },
+    {
+      "point_id": "ST9",
+      "who_source": [
+        {
+          "source_statement_id": "S:ST9:location",
+          "section": "location",
+          "text": "In the anterior region of the neck, at the same level as the superior border of the thyroid cartilage, anterior to the sterno-cleidomastoid muscle, over the common carotid artery.",
+          "page": null
+        },
+        {
+          "source_statement_id": "S:ST9:note:1",
+          "section": "note",
+          "text": "Note 1: The sternocleidomastoid muscle is more distinct when the head is turned to the opposite side against resistance.",
+          "page": null
+        },
+        {
+          "source_statement_id": "S:ST9:note:2",
+          "section": "note",
+          "text": "Note 2: ST9 is located at the same level as LI18, SI16 and the superior border of the thyroid cartilage. St9 is located anterior to the sternocleidomastoid muscle, and SI16, posterior to the sternocleidomastoid muscle and LI18, between the anterior and pos-terior borders of the sternocleidomastoid muscle.",
+          "page": null
+        }
+      ],
+      "stage2_primary_status": "UNRESOLVED",
+      "stage3_status": "BLOCKED_BY_STAGE2",
+      "blocking_reason": "Stage2 primary location is not RESOLVED",
+      "coordinates": [],
+      "trace": {
+        "location_statement_id": "S:ST9:location"
+      },
+      "visual": null
+    }
+  ]
+}
