@@ -59,16 +59,18 @@ def point_projection(pid,before,after,g,validation,rejection):
  rels=[]
  edges=[]
  for rid,r in a["relations"].items():
-  c=r.get("constraint") or {}
-  sem=c.get("semantic_argument_node_ids") or r.get("semantic_argument_node_ids") or r.get("argument_node_ids") or []
-  exe=c.get("executable_argument_node_ids") or r.get("executable_argument_node_ids") or []
+  con=r.get("constraint") or {};sflds=r.get("semantic_fields") or {}
+  sem=sflds.get("semantic_argument_node_ids") or con.get("semantic_argument_node_ids") or r.get("semantic_argument_node_ids") or r.get("argument_node_ids") or []
+  exe=con.get("executable_argument_node_ids") or r.get("executable_argument_node_ids") or []
   rels.append({"relation_id":rid,"source_phrase":next(iter([((x.get("cue_span") or {}).get("source_raw") or x.get("source_raw")) for x in g["relation_instances"] if x["relation_id"]==rid]),None),
-   "operator":c.get("op") or r.get("executor"),"semantic_operand_ids":sem,"actual_executable_operand_ids":exe,
-   "direction":c.get("direction"),"modifier":None,"status":r.get("status"),"reason":r.get("reason")})
+   "operator":sflds.get("op") or con.get("op") or r.get("executor"),"semantic_operand_ids":sem,"actual_executable_operand_ids":exe,
+   "direction":sflds.get("direction") if "direction" in sflds else con.get("direction"),
+   "branch_id":sflds.get("branch_id"),"source_statement_id":sflds.get("source_statement_id") or con.get("source_statement_id"),
+   "semantic_fields_hash":r.get("semantic_fields_hash"),"status":r.get("status"),"reason":r.get("reason")})
   for s,e in zip(sem,exe):
    if s!=e:edges.append({"from":s,"to":e,"kind":"semantic_to_executable"})
   for e in exe:edges.append({"from":e,"to":rid,"kind":"executable_to_relation"})
-  sid=c.get("source_statement_id")
+  sid=sflds.get("source_statement_id") or con.get("source_statement_id")
   if sid:edges.append({"from":rid,"to":sid,"kind":"relation_to_statement"})
  for h in hierarchy:
   for ch in h["children"]:edges.append({"from":h["parent_node_id"],"to":ch["node_id"],"kind":"parent_to_child_subfeature"})
@@ -77,8 +79,8 @@ def point_projection(pid,before,after,g,validation,rejection):
  condsrc={x["condition_id"]:x for x in g.get("conditions",[])}
  for cid,c in a["conditions"].items():
   src=condsrc.get(cid,{})
-  conditions.append({"condition_id":cid,"source_statement_id":src.get("source_statement_id"),"source_raw":(src.get("source_span") or {}).get("source_raw"),
-   "condition_type":src.get("condition_type"),"repaired_status":c.get("status"),"default_pose_compatible":c.get("default_pose_compatible"),"reason":c.get("reason")})
+  conditions.append({"condition_id":cid,"source_statement_id":c.get("source_statement_id") or src.get("source_statement_id"),"source_raw":(c.get("source_span") or src.get("source_span") or {}).get("source_raw"),
+   "condition_type":src.get("condition_type"),"branch_id":c.get("branch_id"),"repaired_status":c.get("status"),"default_pose_compatible":c.get("default_pose_compatible"),"reason":c.get("reason")})
  defects=[x for x in rejection.get("human_semantic_audit",{}).get("confirmed_defects",[]) if x.get("point_id")==pid]
  prefind=[x for x in validation.get("pre_repair_scan",{}).get("new_regression_findings",[]) if x.get("point_id")==pid]
  before_after={
@@ -140,9 +142,9 @@ def build_html(data,path):
    out.append(f'<div class="mono"><b>{html.escape(str(h["parent_source_raw"]))}</b> [{h["parent_node_id"]}] status={h["parent_status"]}<br>semantic/executable identity={html.escape(canon(h["parent_semantic_identity"]))}')
    for ch in h["children"]:out.append(f'<br>&nbsp;&nbsp;└─ {html.escape(str(ch["source_raw"]))} [{ch["node_id"]}] semantic={html.escape(canon(ch["semantic_identity"]))} executable={html.escape(canon(ch["executable_identity"]))} status={ch["status"]}')
    out.append('</div>')
-  out.append('<h3>Relation execution</h3><table><tr><th>ID</th><th>operator</th><th>semantic operand IDs</th><th>actual executable operand IDs</th><th>direction</th><th>status</th><th>reason</th></tr>')
+  out.append('<h3>Relation execution</h3><table><tr><th>ID</th><th>operator</th><th>semantic operand IDs</th><th>actual executable operand IDs</th><th>direction</th><th>branch</th><th>source statement</th><th>semantic hash</th><th>status</th><th>reason</th></tr>')
   for r in p["relations"]:
-   vals=[r["relation_id"],r["operator"],", ".join(r["semantic_operand_ids"]),", ".join(r["actual_executable_operand_ids"]),r["direction"],r["status"],r["reason"]]
+   vals=[r["relation_id"],r["operator"],", ".join(r["semantic_operand_ids"]),", ".join(r["actual_executable_operand_ids"]),r["direction"],r["branch_id"],r["source_statement_id"],r["semantic_fields_hash"],r["status"],r["reason"]]
    out.append("<tr>"+"".join(f"<td class='mono'>{html.escape(str(v))}</td>" for v in vals)+"</tr>")
   out.append('</table>')
   if p["conditions"]:
@@ -220,7 +222,7 @@ def build_pdf(data,path):
    st.append(Paragraph(html.escape(f"PARENT {h['parent_node_id']} {h['parent_source_raw']} status={h['parent_status']} identity={canon(h['parent_semantic_identity'])}"),mono))
    for ch in h["children"]:st.append(Paragraph(html.escape(f"  -> CHILD {ch['node_id']} {ch['source_raw']} status={ch['status']} executable={canon(ch['executable_identity'])}"),mono))
   st.append(Paragraph("Relation execution",h2))
-  for r in p["relations"]:st.append(Paragraph(html.escape(f"{r['relation_id']} | op={r['operator']} | semantic={r['semantic_operand_ids']} | executable={r['actual_executable_operand_ids']} | dir={r['direction']} | status={r['status']} | reason={r['reason']}"),mono))
+  for r in p["relations"]:st.append(Paragraph(html.escape(f"{r['relation_id']} | op={r['operator']} | semantic={r['semantic_operand_ids']} | executable={r['actual_executable_operand_ids']} | dir={r['direction']} | branch={r['branch_id']} | source={r['source_statement_id']} | semantic_hash={r['semantic_fields_hash']} | status={r['status']} | reason={r['reason']}"),mono))
   if p["conditions"]:
    st.append(Paragraph("Conditions",h2))
    for c in p["conditions"]:st.append(Paragraph(html.escape(canon(c)),mono))
