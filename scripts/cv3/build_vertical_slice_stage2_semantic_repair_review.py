@@ -33,7 +33,7 @@ def identity(rec):
  return {"kind":g.get("kind"),"fma_id":g.get("fma_id"),"registry_id":g.get("registry_id"),"constructed_id":g.get("constructed_id"),
   "geometry_hash":g.get("geometry_hash"),"part_id":g.get("part_id"),"concept_id":g.get("concept_id"),
   "reference_point_id":g.get("point_id"),"parent_landmark_id":g.get("parent_landmark_id"),"subfeature_type":g.get("subfeature_type"),
-  "construction_rule":g.get("construction_rule")}
+  "construction_rule":g.get("construction_rule"),"producer_relation_id":g.get("producer_relation_id"),"derived_geometry_id":g.get("derived_geometry_id")}
 
 def point_projection(pid,before,after,g,validation,rejection):
  b=next(x for x in before["points"] if x["point_id"]==pid);a=next(x for x in after["points"] if x["point_id"]==pid)
@@ -74,7 +74,27 @@ def point_projection(pid,before,after,g,validation,rejection):
   if sid:edges.append({"from":rid,"to":sid,"kind":"relation_to_statement"})
  for h in hierarchy:
   for ch in h["children"]:edges.append({"from":h["parent_node_id"],"to":ch["node_id"],"kind":"parent_to_child_subfeature"})
+ for m in measurements:
+  if m.get("anchor_landmark_id"):edges.append({"from":m["anchor_landmark_id"],"to":m["measurement_id"],"kind":"anchor_to_measurement"})
+  if m.get("source_statement_id"):edges.append({"from":m["measurement_id"],"to":m["source_statement_id"],"kind":"measurement_to_statement"})
+ for dg in derived_geometries:
+  for a0 in dg.get("semantic_argument_node_ids",[]):edges.append({"from":a0,"to":dg["producer_relation_id"],"kind":"operand_to_derived_operator"})
+  edges.append({"from":dg["producer_relation_id"],"to":dg["derived_geometry_id"],"kind":"operator_to_derived_geometry"})
+ for o in operands:
+  ident=o.get("identity") or {}
+  if ident.get("kind")=="derived_relation_output" and ident.get("constructed_id"):
+   edges.append({"from":ident["constructed_id"],"to":o["node_id"],"kind":"derived_geometry_to_semantic_operand"})
+  for r0 in rels:
+  rr=a["relations"].get(r0["relation_id"],{});sf=rr.get("semantic_fields") or {}
+  for mid in sf.get("bound_measurement_ids",[]):edges.append({"from":mid,"to":r0["relation_id"],"kind":"measurement_to_relation"})
  for s in stm:edges.append({"from":s["source_statement_id"],"to":pid,"kind":"statement_to_point"})
+ measurements=[]
+ for mid,m in a.get("measurements",{}).items():
+  con=m.get("constraint") or {}
+  measurements.append({"measurement_id":mid,"status":m.get("status"),"executor":m.get("executor"),
+   "value":con.get("value"),"unit":con.get("unit"),"source_unit":con.get("source_unit"),"direction":con.get("direction"),
+   "anchor_landmark_id":con.get("anchor_landmark_id"),"source_statement_id":con.get("source_statement_id"),"who_pdf_page":con.get("who_pdf_page"),"reason":m.get("reason")})
+ derived_geometries=list(a.get("derived_geometries",{}).values())
  conditions=[]
  condsrc={x["condition_id"]:x for x in g.get("conditions",[])}
  for cid,c in a["conditions"].items():
@@ -94,19 +114,21 @@ def point_projection(pid,before,after,g,validation,rejection):
  return {"point_id":pid,"previous_stage2_status":b.get("primary_location_status"),"repaired_stage2_status":a.get("primary_location_status"),
   "defect_family":[x.get("type") for x in defects] or [x.get("rule") for x in prefind] or ["regression_scan_no_known_defect"],
   "human_review_disposition":"PENDING","who_source":related,"operands":operands,"composite_binding_view":hierarchy,
-  "relations":rels,"dependency_edges":edges,"conditions":conditions,"before_after_diff":before_after,
+  "relations":rels,"measurements":measurements,"derived_geometries":derived_geometries,"dependency_edges":edges,"conditions":conditions,"before_after_diff":before_after,
   "coordinates_generated":0,"legacy_c_coordinate_references":0}
 
 def graph_svg(p):
  nodes=[]
  for o in p["operands"]:nodes.append((o["node_id"],o["status"],"operand"))
  for r in p["relations"]:nodes.append((r["relation_id"],r["status"],"relation"))
+ for m in p["measurements"]:nodes.append((m["measurement_id"],m["status"],"measurement"))
+ for dg in p["derived_geometries"]:nodes.append((dg["derived_geometry_id"],"RESOLVED","derived"))
  for s in p["who_source"]:nodes.append((s["source_statement_id"],"", "statement"))
  nodes.append((p["point_id"],p["repaired_stage2_status"],"point"))
  uniq=[];seen=set()
  for x in nodes:
   if x[0] not in seen:uniq.append(x);seen.add(x[0])
- xmap={"operand":20,"relation":530,"statement":950,"point":1270};count={};pos={};elts=[]
+ xmap={"operand":20,"measurement":430,"relation":690,"derived":1010,"statement":1290,"point":1610};count={};pos={};elts=[]
  for nid,st,typ in uniq:
   y=count.get(typ,0)*42+25;count[typ]=count.get(typ,0)+1;pos[nid]=(xmap[typ],y)
   fill="#dcfce7" if st=="RESOLVED" else ("#fef3c7" if st in ("UNRESOLVED","CONDITIONAL","MULTIPLE") else "#f1f5f9")
@@ -147,6 +169,18 @@ def build_html(data,path):
    vals=[r["relation_id"],r["operator"],", ".join(r["semantic_operand_ids"]),", ".join(r["actual_executable_operand_ids"]),r["direction"],r["branch_id"],r["source_statement_id"],r["semantic_fields_hash"],r["status"],r["reason"]]
    out.append("<tr>"+"".join(f"<td class='mono'>{html.escape(str(v))}</td>" for v in vals)+"</tr>")
   out.append('</table>')
+  if p["measurements"]:
+   out.append('<h3>Quantitative measurement semantics</h3><table><tr><th>ID</th><th>status</th><th>value</th><th>unit</th><th>direction</th><th>anchor</th><th>WHO PDF page</th><th>source statement</th></tr>')
+   for m in p["measurements"]:
+    vals=[m["measurement_id"],m["status"],m["value"],m["unit"],m["direction"],m["anchor_landmark_id"],m["who_pdf_page"],m["source_statement_id"]]
+    out.append("<tr>"+"".join(f"<td class='mono'>{html.escape(str(v))}</td>" for v in vals)+"</tr>")
+   out.append('</table>')
+  if p["derived_geometries"]:
+   out.append('<h3>Derived geometry outputs</h3><table><tr><th>derived geometry ID</th><th>producer relation</th><th>operator</th><th>geometry hash</th><th>source statement</th></tr>')
+   for d in p["derived_geometries"]:
+    vals=[d["derived_geometry_id"],d["producer_relation_id"],d["operator"],d["geometry_hash"],d["source_statement_id"]]
+    out.append("<tr>"+"".join(f"<td class='mono'>{html.escape(str(v))}</td>" for v in vals)+"</tr>")
+   out.append('</table>')
   if p["conditions"]:
    out.append('<h3>Conditions</h3><table><tr><th>ID</th><th>source</th><th>type</th><th>repaired status</th><th>default pose compatible</th><th>reason</th></tr>')
    for c in p["conditions"]:
@@ -223,6 +257,12 @@ def build_pdf(data,path):
    for ch in h["children"]:st.append(Paragraph(html.escape(f"  -> CHILD {ch['node_id']} {ch['source_raw']} status={ch['status']} executable={canon(ch['executable_identity'])}"),mono))
   st.append(Paragraph("Relation execution",h2))
   for r in p["relations"]:st.append(Paragraph(html.escape(f"{r['relation_id']} | op={r['operator']} | semantic={r['semantic_operand_ids']} | executable={r['actual_executable_operand_ids']} | dir={r['direction']} | branch={r['branch_id']} | source={r['source_statement_id']} | semantic_hash={r['semantic_fields_hash']} | status={r['status']} | reason={r['reason']}"),mono))
+  if p["measurements"]:
+   st.append(Paragraph("Quantitative measurement semantics",h2))
+   for m in p["measurements"]:st.append(Paragraph(html.escape(canon(m)),mono))
+  if p["derived_geometries"]:
+   st.append(Paragraph("Derived geometry outputs",h2))
+   for d in p["derived_geometries"]:st.append(Paragraph(html.escape(canon(d)),mono))
   if p["conditions"]:
    st.append(Paragraph("Conditions",h2))
    for c in p["conditions"]:st.append(Paragraph(html.escape(canon(c)),mono))
