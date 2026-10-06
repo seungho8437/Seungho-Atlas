@@ -45,6 +45,39 @@ These requirements are mandatory and apply in addition to each stage's local con
 7. **Validator independence is structural, not nominal.**
    Stage 2–4 validators must not import or share the solver's execution spec, numeric tolerances/constants, geometric-definition registry objects, calibration tables, projection budgets, or relation implementation functions. Validator-side expectations are built from separately frozen review inputs / source-derived contracts and independent code paths. Sharing B v2.1 and immutable primary-source evidence is allowed; sharing solver-derived expected values is not. Any validator that merely replays solver constants or accepts solver trace claims without recomputation is invalid.
 
+
+## Vertical-slice pilot before full Stage 2 execution
+
+Before Stage 2 is expanded to all 361 points, C v3 must complete one end-to-end **vertical slice** across Stages 2–5.
+
+The pilot cohort is approximately 20 logical acupoints. Selection favors high `resolved_fma` coverage and low surface-expression burden, but deliberately includes known-error/regression points so that the pilot cannot pass by testing only easy anatomy. The frozen cohort and its selection evidence live under `artifacts/c-v3/vertical-slice-v1/`.
+
+Pilot order:
+1. freeze cohort + rationale from the B v2.1 census;
+2. create **only** the surface-expression registry entries and B/F-cun calibrations required by that cohort;
+3. human-review those registry/calibration inputs before solver execution;
+4. run the cohort through Stage 2 semantic execution;
+5. synthesize only trace-complete, hard-constraint-satisfied coordinates in Stage 3; unresolved/conditional cases remain explicit and are not force-solved;
+6. run independent Stage 4 validation, including legacy-collision and fabricated-trace negative tests;
+7. integrate the vertical-slice result into the application as **Stage 5 — pilot app integration**, displaying solved / unresolved / conditional status and trace provenance without changing the production 361-point dataset;
+8. human-review the end-to-end slice before any full-graph expansion.
+
+### Vertical-slice human registry review
+
+Registry review is not text-only. Entries are grouped by anatomical region and rendered on the Stage 1 z-buffer body surface. Each review panel must show the proposed region/line geometry and a checklist with at least:
+- anatomical scope correct / incorrect;
+- side/aspect direction correct / incorrect;
+- proximal-distal or superior-inferior extent correct / incorrect;
+- line/crease/boundary placement correct / incorrect;
+- ambiguity or missing source geometry present / absent;
+- accept definition / reject definition / keep UNRESOLVED.
+
+A definition rejected by human review cannot be used by the pilot solver. A surface expression that cannot be represented faithfully on BodyParts3D remains `UNRESOLVED` rather than being approximated silently.
+
+### Stage 5 — pilot app integration
+
+Stage 5 exists first as a vertical-slice-only integration gate. It must consume Stage 4-validated pilot output, never raw solver output. It must not overwrite or shadow the production coordinate dataset. The app must expose status, coordinate only when validated, source/trace provenance, and explicit unresolved/conditional reasons. Full Stage 5 rollout to all points is blocked until the vertical slice is approved and Stages 2–4 are expanded and approved.
+
 ---
 
 # Stage 1 — Spatial substrate
