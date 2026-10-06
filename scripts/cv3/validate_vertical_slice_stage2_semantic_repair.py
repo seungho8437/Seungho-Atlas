@@ -13,6 +13,11 @@ KNOWN={"TE20","ST10","LI17","LI18","BL17","BL23","BL25","ST9"}
 SUBFEATURES=("superior border","inferior border","anterior border","posterior border","free end","midpoint","centre","center","margin","edge","angle","apex","border","end")
 
 def norm(s):return re.sub(r"[^a-z0-9]+"," ",(s or "").lower()).strip()
+def expected_direction(rel):
+ cue=norm((rel.get("cue_span") or {}).get("source_raw"))
+ return next((x for x in ("radial","ulnar","anterior","posterior","superior","inferior","medial","lateral","proximal","distal") if x in cue),None)
+def canon(x):return json.dumps(x,sort_keys=True,separators=(",",":"))
+def objhash(x):return hashlib.sha256(canon(x).encode()).hexdigest()
 def sf(raw):
  n=norm(raw);return next((x for x in SUBFEATURES if x in n),None)
 def identity(rec):
@@ -45,10 +50,11 @@ def build_maps(g):
  bnodes={x["node_id"]:x for x in g["landmark_nodes"]};children={}
  for b in g.get("composite_bindings",[]):children.setdefault(b["parent_landmark_id"],[]).append(b["child_landmark_id"])
  cond={x["condition_id"]:x for x in g.get("conditions",[])}
- return bnodes,children,cond
+ rel={x["relation_id"]:x for x in g.get("relation_instances",[])}
+ return bnodes,children,cond,rel
 
 def scan(out,g):
- bnodes,children,condsrc=build_maps(g);bindings=g.get("composite_bindings",[]);binding_by_child={x["child_landmark_id"]:x for x in bindings};findings=[]
+ bnodes,children,condsrc,relsrc=build_maps(g);bindings=g.get("composite_bindings",[]);binding_by_child={x["child_landmark_id"]:x for x in bindings};findings=[]
  pby={x["point_id"]:x for x in out["points"]}
  for pid,p in pby.items():
   # Rule 1 / 5: any non-child semantic node carrying subfeature language may not
@@ -64,6 +70,21 @@ def scan(out,g):
   for rid,r in p["relations"].items():
    semantic=(r.get("constraint") or {}).get("semantic_argument_node_ids") or (r.get("constraint") or {}).get("argument_node_ids") or r.get("semantic_argument_node_ids") or r.get("argument_node_ids") or []
    executable=(r.get("constraint") or {}).get("executable_argument_node_ids") or r.get("executable_argument_node_ids") or semantic
+   src=relsrc.get(rid,{})
+   sflds=r.get("semantic_fields") or {}
+   exp_dir=expected_direction(src) if src.get("relation_type")=="relative-to" else None
+   if sflds.get("op")!=r.get("executor"):
+    findings.append({"rule":"relation_nonoperand_semantics_loss","point_id":pid,"relation_id":rid,"field":"op","expected":r.get("executor"),"actual":sflds.get("op")})
+   if sflds.get("source_statement_id")!=src.get("source_statement_id"):
+    findings.append({"rule":"relation_nonoperand_semantics_loss","point_id":pid,"relation_id":rid,"field":"source_statement_id","expected":src.get("source_statement_id"),"actual":sflds.get("source_statement_id")})
+   if sflds.get("branch_id")!=src.get("branch_id"):
+    findings.append({"rule":"relation_nonoperand_semantics_loss","point_id":pid,"relation_id":rid,"field":"branch_id","expected":src.get("branch_id"),"actual":sflds.get("branch_id")})
+   if sflds.get("semantic_argument_node_ids")!=list(src.get("argument_node_ids",[])):
+    findings.append({"rule":"relation_nonoperand_semantics_loss","point_id":pid,"relation_id":rid,"field":"semantic_argument_node_ids","expected":src.get("argument_node_ids",[]),"actual":sflds.get("semantic_argument_node_ids")})
+   if src.get("relation_type")=="relative-to" and sflds.get("direction")!=exp_dir:
+    findings.append({"rule":"direction_preservation_failure","point_id":pid,"relation_id":rid,"expected":exp_dir,"actual":sflds.get("direction")})
+   if r.get("semantic_fields_hash")!=objhash(sflds):
+    findings.append({"rule":"relation_semantic_hash_mismatch","point_id":pid,"relation_id":rid})
    if r.get("status")=="RESOLVED" and ("semantic_argument_node_ids" not in (r.get("constraint") or {}) or "executable_argument_node_ids" not in (r.get("constraint") or {})):
     findings.append({"rule":"operand_trace_incomplete","point_id":pid,"relation_id":rid})
    for a in semantic:
@@ -94,6 +115,10 @@ def scan(out,g):
    incompatible=(src.get("condition_type")=="body_position" and any(x in raw for x in ("auricle folded","folded forward","folded forwards","head is turned","head turned","against resistance","pressed against")))
    if incompatible and c.get("status")=="RESOLVED":
     findings.append({"rule":"condition_preservation_failure","point_id":pid,"condition_id":cid,"source_raw":raw})
+   if c.get("source_statement_id")!=src.get("source_statement_id"):
+    findings.append({"rule":"condition_linkage_loss","point_id":pid,"condition_id":cid,"expected":src.get("source_statement_id"),"actual":c.get("source_statement_id")})
+   if c.get("branch_id")!=src.get("branch_id"):
+    findings.append({"rule":"condition_linkage_loss","point_id":pid,"condition_id":cid,"field":"branch_id","expected":src.get("branch_id"),"actual":c.get("branch_id")})
  return findings
 
 def validate(out,before,g):
@@ -109,7 +134,7 @@ def validate(out,before,g):
  findings=scan(out,g)
  grouped={}
  for f in findings:grouped.setdefault(f["rule"],[]).append(f)
- for rule in ("parent_only_composite_resolution","child_subfeature_unused_by_relation","distinct_subfeature_identity_collapse","condition_preservation_failure","child_subfeature_false_fallback","operand_trace_incomplete"):
+ for rule in ("parent_only_composite_resolution","child_subfeature_unused_by_relation","distinct_subfeature_identity_collapse","condition_preservation_failure","condition_linkage_loss","child_subfeature_false_fallback","operand_trace_incomplete","relation_nonoperand_semantics_loss","direction_preservation_failure","relation_semantic_hash_mismatch"):
   ck(len(grouped.get(rule,[]))==0,rule.upper(),grouped.get(rule,[]))
  # Trace completeness for every relation.
  for p in out["points"]:
@@ -120,12 +145,20 @@ def validate(out,before,g):
     for x in con.get("executable_argument_node_ids",[]):
      ck(x in p["landmarks"],"EXECUTABLE_OPERAND_NOT_LANDMARK_NODE",{"point":p["point_id"],"relation":rid,"operand":x})
      ck(p["landmarks"][x].get("status")=="RESOLVED","RESOLVED_RELATION_USES_NONRESOLVED_OPERAND",{"point":p["point_id"],"relation":rid,"operand":x})
+ # Lossless measurement/value/unit/source semantics.
+ pmap={x["point_id"]:x for x in out["points"]}
+ for p in out["points"]:
+  for mid,m in p["measurements"].items():
+   con=m.get("constraint") or {}
+   ck(con.get("value") is not None,"MEASUREMENT_VALUE_LOST",{"point":p["point_id"],"measurement":mid})
+   ck(con.get("unit") is not None,"MEASUREMENT_UNIT_LOST",{"point":p["point_id"],"measurement":mid})
+   ck(con.get("source_statement_id") is not None,"MEASUREMENT_SOURCE_LINK_LOST",{"point":p["point_id"],"measurement":mid})
  # Before/after regression inventory.
  pre=scan(before,g);new_pre=[f for f in pre if f["point_id"] not in KNOWN]
  return checks,errors,findings,pre,new_pre
 
 def mutate_child_to_parent(out,g):
- m=copy.deepcopy(out);bnodes,children,_=build_maps(g)
+ m=copy.deepcopy(out);bnodes,children,_,relsrc=build_maps(g)
  for p in m["points"]:
   for rid,r in p["relations"].items():
    con=r.setdefault("constraint",{})
@@ -141,7 +174,7 @@ def mutate_child_to_parent(out,g):
  raise RuntimeError("no composite parent relation for negative test")
 
 def mutate_distinct_same_hash(out,g):
- m=copy.deepcopy(out);bnodes,children,_=build_maps(g);p=next(x for x in m["points"] if x["point_id"]=="LI18")
+ m=copy.deepcopy(out);bnodes,children,_,relsrc=build_maps(g);p=next(x for x in m["points"] if x["point_id"]=="LI18")
  candidates=[nid for nid in p["landmarks"] if sf(bnodes.get(nid,{}).get("source_raw")) in ("anterior border","posterior border")]
  if len(candidates)<2:
   candidates=[nid for nid in p["landmarks"] if sf(bnodes.get(nid,{}).get("source_raw"))]
@@ -154,7 +187,7 @@ def mutate_distinct_same_hash(out,g):
  return m
 
 def mutate_same_level_parent(out,g):
- m=copy.deepcopy(out);bnodes,children,_=build_maps(g)
+ m=copy.deepcopy(out);bnodes,children,_,relsrc=build_maps(g)
  binding_by_child={x["child_landmark_id"]:x for x in g.get("composite_bindings",[])}
  # Prefer BL17, then any same-level relation carrying a bound child operand.
  points=sorted(m["points"],key=lambda x:(x["point_id"]!="BL17",x["point_id"]))
@@ -182,7 +215,7 @@ def mutate_te20_condition(out):
  raise RuntimeError("TE20 conditional unavailable")
 
 def mutate_unknown_subfeature_fallback(out,g):
- m=copy.deepcopy(out);bnodes,children,_=build_maps(g)
+ m=copy.deepcopy(out);bnodes,children,_,relsrc=build_maps(g)
  for p in m["points"]:
   for child,rec in p["landmarks"].items():
    if sf(bnodes.get(child,{}).get("source_raw")) and rec.get("status")=="UNRESOLVED":
@@ -190,6 +223,18 @@ def mutate_unknown_subfeature_fallback(out,g):
     rec.clear();rec.update({"status":"RESOLVED","executor":"fma_mesh","geometry":{"kind":"fma_concept","fma_id":"FMA_FORGED_PARENT","part_ids":["FORGED"]}})
     return m
  raise RuntimeError("no unresolved subfeature available")
+
+def mutate_direction_to_none(out,g,direction):
+ m=copy.deepcopy(out);rels={x["relation_id"]:x for x in g.get("relation_instances",[])}
+ for p in m["points"]:
+  for rid,r in p["relations"].items():
+   src=rels.get(rid,{})
+   if src.get("relation_type")=="relative-to" and expected_direction(src)==direction:
+    sflds=r.setdefault("semantic_fields",{});sflds["direction"]=None
+    r["semantic_fields_hash"]=objhash(sflds)
+    if "constraint" in r and isinstance(r["constraint"],dict):r["constraint"]["direction"]=None
+    return m
+ raise RuntimeError(f"no {direction} relation for negative test")
 
 def rejected(mut,before,g):
  _,errs,find,_,_=validate(mut,before,g)
@@ -204,7 +249,11 @@ def main():
   "distinct_borders_same_geometry_hash":mutate_distinct_same_hash(after,g),
   "same_level_child_replaced_by_parent":mutate_same_level_parent(after,g),
   "te20_conditional_to_resolved":mutate_te20_condition(after),
-  "unknown_subfeature_whole_entity_fallback":mutate_unknown_subfeature_fallback(after,g)
+  "unknown_subfeature_whole_entity_fallback":mutate_unknown_subfeature_fallback(after,g),
+  "direction_anterior_to_none":mutate_direction_to_none(after,g,"anterior"),
+  "direction_posterior_to_none":mutate_direction_to_none(after,g,"posterior"),
+  "direction_radial_to_none":mutate_direction_to_none(after,g,"radial"),
+  "direction_lateral_to_none":mutate_direction_to_none(after,g,"lateral")
  }
  neg={k:rejected(v,before,g) for k,v in muts.items()}
  for k,v in neg.items():
@@ -222,6 +271,9 @@ def main():
    "unused_child_subfeature":count("child_subfeature_unused_by_relation",remaining),
    "distinct_subfeature_identity_collapse":count("distinct_subfeature_identity_collapse",remaining),
    "condition_preservation_failure":count("condition_preservation_failure",remaining),
+   "direction_preservation_failure":count("direction_preservation_failure",remaining),
+   "relation_nonoperand_semantics_loss":count("relation_nonoperand_semantics_loss",remaining),
+   "condition_linkage_loss":count("condition_linkage_loss",remaining),
    "false_fallback":count("child_subfeature_false_fallback",remaining)},
   "negative_tests":neg,"coordinate_generation_count":0,"legacy_c_coordinate_reference_count":0,
   "final_state":{"stage2_automated_structural_validation":"PASS","stage2_semantic_repair_validation":status,"stage2_human_semantic_audit":"PENDING","stage3":"NOT_STARTED"}}
