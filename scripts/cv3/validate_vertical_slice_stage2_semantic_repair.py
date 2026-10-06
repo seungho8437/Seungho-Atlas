@@ -109,14 +109,17 @@ def mutate_child_to_parent(out,g):
  m=copy.deepcopy(out);bnodes,children,_=build_maps(g)
  for p in m["points"]:
   for rid,r in p["relations"].items():
-   con=r.get("constraint") or {}
-   for tr in con.get("operand_binding_trace",[]):
-    if tr.get("binding")=="child_subfeature":
-     par=tr["semantic_operand_id"];child=tr["executable_operand_id"]
-     con["executable_argument_node_ids"]=[par if x==child else x for x in con["executable_argument_node_ids"]]
-     tr["executable_operand_id"]=par
+   con=r.setdefault("constraint",{})
+   semantic=con.get("semantic_argument_node_ids") or r.get("semantic_argument_node_ids") or r.get("argument_node_ids") or []
+   for par in semantic:
+    kids=[k for k in children.get(par,[]) if sf(bnodes.get(k,{}).get("source_raw"))]
+    if kids:
+     # Forge exactly the forbidden parent-only execution.
+     prec=p["landmarks"][par];prec["status"]="RESOLVED";prec["executor"]="fma_mesh";prec["geometry"]={"kind":"fma_concept","fma_id":"FMA_FORGED_PARENT","part_ids":["FORGED"]}
+     con.update({"semantic_argument_node_ids":semantic,"executable_argument_node_ids":[par if x in kids else x for x in (con.get("executable_argument_node_ids") or semantic)],
+       "operand_binding_trace":[{"semantic_operand_id":par,"executable_operand_id":par,"binding":"identity"}],"op":con.get("op") or r.get("executor")})
      r["status"]="RESOLVED";return m
- raise RuntimeError("no child-bound relation for negative test")
+ raise RuntimeError("no composite parent relation for negative test")
 
 def mutate_distinct_same_hash(out,g):
  m=copy.deepcopy(out);bnodes,children,_=build_maps(g);p=next(x for x in m["points"] if x["point_id"]=="LI18")
@@ -134,12 +137,18 @@ def mutate_distinct_same_hash(out,g):
 def mutate_same_level_parent(out,g):
  m=copy.deepcopy(out);bnodes,children,_=build_maps(g);p=next(x for x in m["points"] if x["point_id"]=="BL17")
  for rid,r in p["relations"].items():
-  con=r.get("constraint") or {}
-  if con.get("op")=="same_level_plane":
-   for tr in con.get("operand_binding_trace",[]):
-    if tr.get("binding")=="child_subfeature":
-     par=tr["semantic_operand_id"];child=tr["executable_operand_id"];con["executable_argument_node_ids"]=[par if x==child else x for x in con["executable_argument_node_ids"]];r["status"]="RESOLVED";return m
- raise RuntimeError("BL17 same-level child binding unavailable")
+  con=r.setdefault("constraint",{})
+  op=con.get("op") or r.get("executor")
+  if op=="same_level_plane":
+   semantic=con.get("semantic_argument_node_ids") or r.get("semantic_argument_node_ids") or r.get("argument_node_ids") or []
+   for par in semantic:
+    kids=[k for k in children.get(par,[]) if sf(bnodes.get(k,{}).get("source_raw"))]
+    if kids:
+     p["landmarks"][par]={"status":"RESOLVED","executor":"fma_mesh","geometry":{"kind":"fma_concept","fma_id":"FMA_FORGED_PARENT","part_ids":["FORGED"]}}
+     con.update({"op":"same_level_plane","semantic_argument_node_ids":semantic,"executable_argument_node_ids":[par if x in kids else x for x in (con.get("executable_argument_node_ids") or semantic)],
+       "operand_binding_trace":[{"semantic_operand_id":par,"executable_operand_id":par,"binding":"identity"}]})
+     r["status"]="RESOLVED";return m
+ raise RuntimeError("BL17 same-level composite parent unavailable")
 
 def mutate_te20_condition(out):
  m=copy.deepcopy(out);p=next(x for x in m["points"] if x["point_id"]=="TE20")
