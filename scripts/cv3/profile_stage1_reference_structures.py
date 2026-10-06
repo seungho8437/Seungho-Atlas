@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Profile candidate reference structures for C v3 Stage 1 frame design."""
+"""Profile candidate reference structures for C v3 Stage 1 frame design.\nThis is a deterministic design input artifact, not a coordinate product.\n"""
 from __future__ import annotations
 import argparse,json
 from pathlib import Path
