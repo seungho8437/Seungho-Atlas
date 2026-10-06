@@ -41,8 +41,6 @@ def point_projection(pid,before,after,g,validation,rejection):
  binds=[x for x in g.get("composite_bindings",[]) if x.get("parent_landmark_id") in bnodes or x.get("child_landmark_id") in bnodes]
  children={}
  for x in binds:children.setdefault(x["parent_landmark_id"],[]).append(x["child_landmark_id"])
- quarantined_shadow_parse_branches=list(a.get("quarantined_shadow_parse_branches",{}).values())
- quarantined_pairs={(q["shadow_parent_landmark_id"],q["shadow_child_landmark_id"]) for q in quarantined_shadow_parse_branches}
  related=[{"source_statement_id":s["source_statement_id"],"section":s.get("section"),"page":page_of(s),"text":s.get("text_canonical")} for s in stm if s.get("section") in ("location","note","remarks")]
  operands=[]
  for nid,rec in a["landmarks"].items():
@@ -65,8 +63,7 @@ def point_projection(pid,before,after,g,validation,rejection):
       "canonical_subfeature_type":((a["landmarks"].get(k,{}) or {}).get("semantic_normalization") or {}).get("canonical_subfeature_type"),
       "semantic_suppressed":(a["landmarks"].get(k,{}) or {}).get("semantic_suppressed",False)},
     "executable_identity":identity(a["landmarks"].get(k,{})),
-    "status":a["landmarks"].get(k,{}).get("status"),"reason":a["landmarks"].get(k,{}).get("reason"),
-    "shadow_edge_quarantined":(par,k) in quarantined_pairs} for k in kids]})
+    "status":a["landmarks"].get(k,{}).get("status"),"reason":a["landmarks"].get(k,{}).get("reason")} for k in kids]})
  rels=[]
  for rid,r in a["relations"].items():
   con=r.get("constraint") or {};sflds=r.get("semantic_fields") or {}
@@ -95,9 +92,7 @@ def point_projection(pid,before,after,g,validation,rejection):
   for mid in r0.get("bound_measurement_ids",[]):edges.append({"from":mid,"to":rid,"kind":"measurement_to_relation"})
   if r0.get("source_statement_id"):edges.append({"from":rid,"to":r0["source_statement_id"],"kind":"relation_to_statement"})
  for h in hierarchy:
-  for ch in h["children"]:
-   if not ch.get("shadow_edge_quarantined"):
-    edges.append({"from":h["parent_node_id"],"to":ch["node_id"],"kind":"parent_to_child_subfeature"})
+  for ch in h["children"]:edges.append({"from":h["parent_node_id"],"to":ch["node_id"],"kind":"parent_to_child_subfeature"})
  for m in measurements:
   if m.get("anchor_landmark_id"):edges.append({"from":m["anchor_landmark_id"],"to":m["measurement_id"],"kind":"anchor_to_measurement"})
   if m.get("source_statement_id"):edges.append({"from":m["measurement_id"],"to":m["source_statement_id"],"kind":"measurement_to_statement"})
@@ -128,9 +123,7 @@ def point_projection(pid,before,after,g,validation,rejection):
  return {"point_id":pid,"previous_stage2_status":b.get("primary_location_status"),"repaired_stage2_status":a.get("primary_location_status"),
   "defect_family":[x.get("type") for x in defects] or [x.get("rule") for x in prefind] or ["regression_scan_no_known_defect"],
   "human_review_disposition":"PENDING","who_source":related,"operands":operands,"composite_binding_view":hierarchy,
-  "relations":rels,"measurements":measurements,"derived_geometries":derived_geometries,
-  "quarantined_shadow_parse_branches":quarantined_shadow_parse_branches,
-  "dependency_edges":edges,"conditions":conditions,"before_after_diff":before_after,
+  "relations":rels,"measurements":measurements,"derived_geometries":derived_geometries,"dependency_edges":edges,"conditions":conditions,"before_after_diff":before_after,
   "coordinates_generated":0,"legacy_c_coordinate_references":0}
 
 def graph_svg(p):
@@ -180,12 +173,6 @@ def build_html(data,path):
    out.append(f'<div class="mono"><b>{html.escape(str(h["parent_source_raw"]))}</b> [{h["parent_node_id"]}] status={h["parent_status"]}<br>semantic/executable identity={html.escape(canon(h["parent_semantic_identity"]))}')
    for ch in h["children"]:out.append(f'<br>&nbsp;&nbsp;└─ {html.escape(str(ch["source_raw"]))} [{ch["node_id"]}] semantic={html.escape(canon(ch["semantic_identity"]))} executable={html.escape(canon(ch["executable_identity"]))} status={ch["status"]}')
    out.append('</div>')
-  if p["quarantined_shadow_parse_branches"]:
-   out.append('<h3>Quarantined lexical parse provenance (non-executable)</h3><table><tr><th>binding</th><th>accepted atomic entity</th><th>shadow parent</th><th>shadow child</th><th>edge quarantined</th><th>parent independently referenced</th><th>parent suppressed</th></tr>')
-   for q in p["quarantined_shadow_parse_branches"]:
-    vals=[q["binding_id"],q["accepted_atomic_landmark_id"],q["shadow_parent_landmark_id"],q["shadow_child_landmark_id"],q["edge_quarantined"],q["shadow_parent_independently_referenced"],q["shadow_parent_suppressed"]]
-    out.append("<tr>"+"".join(f"<td class='mono'>{html.escape(str(v))}</td>" for v in vals)+"</tr>")
-   out.append('</table><p><b>These edges are provenance only and are intentionally absent from the executable dependency graph.</b></p>')
   out.append('<h3>Relation execution</h3><table><tr><th>ID</th><th>operator</th><th>semantic operand IDs</th><th>actual executable operand IDs</th><th>direction</th><th>branch</th><th>source statement</th><th>semantic hash</th><th>status</th><th>reason</th></tr>')
   for r in p["relations"]:
    vals=[r["relation_id"],r["operator"],", ".join(r["semantic_operand_ids"]),", ".join(r["actual_executable_operand_ids"]),r["direction"],r["branch_id"],r["source_statement_id"],r["semantic_fields_hash"],r["status"],r["reason"]]
@@ -214,7 +201,7 @@ def build_html(data,path):
    out.append('<h3>BEFORE / AFTER machine-readable diff</h3><div class="before"><b>BEFORE</b><pre class="mono">'+html.escape(json.dumps({"status":p["before_after_diff"]["status"]["before"],"landmarks":[{"node_id":x["node_id"],"status":x["before_status"],"identity":x["before_identity"]} for x in p["before_after_diff"]["landmarks"]],"relations":[x["before"] for x in p["before_after_diff"]["relations"]],"conditions":[x["before"] for x in p["before_after_diff"]["conditions"]]},ensure_ascii=False,indent=2))+'</pre></div>')
    out.append('<div class="after"><b>AFTER</b><pre class="mono">'+html.escape(json.dumps({"status":p["before_after_diff"]["status"]["after"],"landmarks":[{"node_id":x["node_id"],"status":x["after_status"],"identity":x["after_identity"]} for x in p["before_after_diff"]["landmarks"]],"relations":[x["after"] for x in p["before_after_diff"]["relations"]],"conditions":[x["after"] for x in p["before_after_diff"]["conditions"]]},ensure_ascii=False,indent=2))+'</pre></div>')
   out.append('<p><b>Coordinates generated:</b> 0 · <b>Legacy C coordinate references:</b> 0</p>')
-  out.append('<div class="check">[ ] WHO source phrase가 정확히 반영됨<br>[ ] semantic granularity 보존됨<br>[ ] child subfeature가 실제 execution에 사용됨<br>[ ] distinct subfeatures가 distinct executable identity를 가짐<br>[ ] relation operator가 올바른 operand를 참조함<br>[ ] condition state가 정확히 보존됨<br>[ ] RESOLVED/UNRESOLVED 판정이 타당함<br>[ ] lexicalized anatomical entity를 false subfeature로 재분해하지 않음<br>[ ] subfeature synonym이 canonical type으로 정규화됨<br>[ ] lexicalized entity의 rejected shadow parse branch 전체가 quarantine됨<br>[ ] ACCEPT<br>[ ] REJECT</div></section>')
+  out.append('<div class="check">[ ] WHO source phrase가 정확히 반영됨<br>[ ] semantic granularity 보존됨<br>[ ] child subfeature가 실제 execution에 사용됨<br>[ ] distinct subfeatures가 distinct executable identity를 가짐<br>[ ] relation operator가 올바른 operand를 참조함<br>[ ] condition state가 정확히 보존됨<br>[ ] RESOLVED/UNRESOLVED 판정이 타당함<br>[ ] lexicalized anatomical entity를 false subfeature로 재분해하지 않음<br>[ ] subfeature synonym이 canonical type으로 정규화됨<br>[ ] ACCEPT<br>[ ] REJECT</div></section>')
  path.write_text("".join(out),encoding="utf-8")
 
 def build_pdf(data,path):
@@ -277,11 +264,6 @@ def build_pdf(data,path):
   for h in p["composite_binding_view"]:
    st.append(Paragraph(html.escape(f"PARENT {h['parent_node_id']} {h['parent_source_raw']} status={h['parent_status']} identity={canon(h['parent_semantic_identity'])}"),mono))
    for ch in h["children"]:st.append(Paragraph(html.escape(f"  -> CHILD {ch['node_id']} {ch['source_raw']} status={ch['status']} executable={canon(ch['executable_identity'])}"),mono))
-  if p["quarantined_shadow_parse_branches"]:
-   st.append(Paragraph("Quarantined lexical parse provenance (non-executable)",h2))
-   for q in p["quarantined_shadow_parse_branches"]:
-    st.append(Paragraph(html.escape(canon(q)),mono))
-   st.append(Paragraph("Quarantined shadow parent-child edges are provenance only and are absent from the executable dependency graph.",body))
   st.append(Paragraph("Relation execution",h2))
   for r in p["relations"]:st.append(Paragraph(html.escape(f"{r['relation_id']} | op={r['operator']} | semantic={r['semantic_operand_ids']} | executable={r['actual_executable_operand_ids']} | dir={r['direction']} | branch={r['branch_id']} | source={r['source_statement_id']} | semantic_hash={r['semantic_fields_hash']} | status={r['status']} | reason={r['reason']}"),mono))
   if p["measurements"]:
