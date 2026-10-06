@@ -24,6 +24,7 @@ COHORT=("HT7","LI4","ST1","GB14","GB23","LU6","LI7","GB26","ST2","ST10",
 SKIN_PART="FJ2810"
 DIRECT_SURFACE_PROJECTION_BUDGET_M=0.03
 DIRECT_SURFACE_INWARD_OFFSET_M=0.012
+DIRECT_SURFACE_CANDIDATE_MATCH_M=0.006
 
 def sha256_file(p):
  h=hashlib.sha256()
@@ -101,6 +102,15 @@ def synthesize_surface_line_midpoint(point,surface,sub,store):
  geom=surface.get(regid)
  if not geom or geom.status!="RESOLVED":return None,"SURFACE_LINE_GEOMETRY_UNRESOLVED"
  if geom.geometry_hash()!=stage2_hash:return None,"STAGE2_REGISTRY_GEOMETRY_HASH_MISMATCH"
+ # Primary surface-membership geometry provides the admissible final skin patch.
+ membership_geoms=[]
+ for rrid,rr in membership:
+  mnid,mreg,mhash=registry_operand(point,rr)
+  if mreg and mreg in surface and surface[mreg].status=="RESOLVED":
+   if surface[mreg].geometry_hash()!=mhash:return None,"STAGE2_MEMBERSHIP_REGISTRY_HASH_MISMATCH"
+   membership_geoms.append((mreg,surface[mreg]))
+ if not membership_geoms:return None,"NO_RESOLVED_PRIMARY_SURFACE_MEMBERSHIP_GEOMETRY"
+ eligible_vertices=set().union(*(set(g.surface_vertex_indices) for _,g in membership_geoms))
  curves=[c for c in geom.curves if len(c)>=2]
  if not curves:return None,"SURFACE_LINE_HAS_NO_EXECUTABLE_CURVE"
 
@@ -119,11 +129,18 @@ def synthesize_surface_line_midpoint(point,surface,sub,store):
   candidate=arc_midpoint(side_curves[side])
   if candidate is None:return None,f"{side.upper()}_CURVE_MIDPOINT_UNRESOLVED"
   origin=vadd(candidate,vmul(ant,DIRECT_SURFACE_INWARD_OFFSET_M))
-  raw_hits=[h for h in ray_hits_part(store,SKIN_PART,origin,posterior) if h.t>1e-7 and h.t<=DIRECT_SURFACE_PROJECTION_BUDGET_M]
+  ii=store.indices(SKIN_PART)
+  raw_hits=[]
+  for h in ray_hits_part(store,SKIN_PART,origin,posterior):
+   if not (h.t>1e-7 and h.t<=DIRECT_SURFACE_PROJECTION_BUDGET_M):continue
+   tri=ii[3*h.triangle_index:3*h.triangle_index+3]
+   if not all(v in eligible_vertices for v in tri):continue
+   if distance(h.point,candidate)>DIRECT_SURFACE_CANDIDATE_MATCH_M:continue
+   raw_hits.append(h)
   hits=dedupe_geometric_ray_hits(raw_hits)
-  # Triangulation can produce duplicate hits at a shared edge/vertex; those are one
-  # geometric surface hit. Distinct depth/position clusters remain ambiguous.
-  if len(hits)!=1:return None,f"{side.upper()}_ASPECT_RAY_GEOMETRIC_HIT_CARDINALITY_{len(hits)}"
+  # Coincident triangle hits are one geometric hit. Distinct eligible hits near
+  # the source curve remain ambiguous and are not force-selected.
+  if len(hits)!=1:return None,f"{side.upper()}_ASPECT_RAY_ELIGIBLE_GEOMETRIC_HIT_CARDINALITY_{len(hits)}"
   h=hits[0]
   coords.append({
    "side":side,
@@ -141,11 +158,13 @@ def synthesize_surface_line_midpoint(point,surface,sub,store):
     "t_m":float(h.t),
     "budget_m":DIRECT_SURFACE_PROJECTION_BUDGET_M,
     "inward_offset_m":DIRECT_SURFACE_INWARD_OFFSET_M,
-    "raw_triangle_hit_count_within_budget":len(raw_hits),
-    "distinct_geometric_hit_count_within_budget":len(hits)
+    "raw_eligible_triangle_hit_count_within_budget":len(raw_hits),
+    "distinct_eligible_geometric_hit_count_within_budget":len(hits),
+    "candidate_match_budget_m":DIRECT_SURFACE_CANDIDATE_MATCH_M
    },
    "source_geometry":{
     "registry_id":regid,
+    "membership_registry_ids":[x[0] for x in membership_geoms],
     "registry_geometry_hash":geom.geometry_hash(),
     "stage2_registry_geometry_hash":stage2_hash,
     "derived_relation_id":mrid,
@@ -178,7 +197,8 @@ def main():
                     "input_lock_sha256":sha256_file(Path(args.input_lock))},
   "production_write":False,"legacy_coordinate_input":False,
   "projection_contract":{"direct_surface_family":{"method":"aspect_directed_ray_cast",
-    "budget_m":DIRECT_SURFACE_PROJECTION_BUDGET_M,"inward_offset_m":DIRECT_SURFACE_INWARD_OFFSET_M}},
+    "budget_m":DIRECT_SURFACE_PROJECTION_BUDGET_M,"inward_offset_m":DIRECT_SURFACE_INWARD_OFFSET_M,
+    "candidate_match_budget_m":DIRECT_SURFACE_CANDIDATE_MATCH_M}},
   "points":[]}
  for p in stage2["points"]:
   pid=p["point_id"];loc=primary_statement(p);entry={"point_id":pid,"stage2_primary_status":p["primary_location_status"],
