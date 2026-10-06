@@ -16,7 +16,7 @@ on:
       - .github/workflows/generate-acupoint-coordinates.yml
 
 concurrency:
-  group: generate-acupoint-coordinates-${{ github.ref }}
+  group: generate-acupoint-coordinates-v2-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
