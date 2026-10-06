@@ -309,7 +309,7 @@ Protection:
 Independent Stage 3 guard validation: **89 checks / 0 errors / PASS**.
 The mandatory `SUPPRESSED_PROVENANCE_EXECUTION_ISOLATION` metrics are **0 / 0 / 0**.
 
-The coordinate-tampering mutations that require a generated coordinate are explicitly marked `SKIPPED_NO_GENERATED_COORDINATE`; Stage-2-unresolved coordinate injection and suppressed-operand injection were both actively rejected. These skipped tests become mandatory once Stage 3 emits at least one coordinate.
+Independent Stage 3 guard validation reports **89 checks / 0 errors / PASS**. The protected validation harness actively rejects forged-coordinate, duplicate-side, over-budget-projection, missing-trace, Stage-2-unresolved coordinate injection, and suppressed-operand injection mutations. The latest pilot still emits 0 coordinates; these mutation checks use guarded synthetic injection rather than treating absence of a generated coordinate as automatic success.
 
 Human audit artifacts:
 - `artifacts/c-v3/vertical-slice-v1/stage3-human-review.pdf`
