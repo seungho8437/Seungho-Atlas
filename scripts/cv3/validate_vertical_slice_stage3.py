@@ -138,40 +138,67 @@ def validate(output,stage2,sub,store,lock):
  ck(output.get("summary",{}).get("generated_coordinates")==sum(len(x["coordinates"]) for x in p3.values()),"SUMMARY_COORDINATE_COUNT_MISMATCH")
  return checks,errors,metrics
 
+def _forged_generated_point(output,stage2,store,sub):
+ m=copy.deepcopy(output);p2={x["point_id"]:x for x in stage2["points"]}
+ dst=next((p for p in m["points"] if p2[p["point_id"]]["primary_location_status"]=="RESOLVED"),None)
+ if dst is None:raise RuntimeError("no Stage2-resolved point available for mutation fixture")
+ vv=store.vertices(SKIN_PART);ii=store.indices(SKIN_PART);ids=ii[:3]
+ q=[sum(vv[i][k] for i in ids)/3 for k in range(3)]
+ gf=sub["global_frame"];ant=normalize(tuple(gf["axes"]["anterior"]));d=[-x for x in ant]
+ origin=[q[k]-d[k]*0.001 for k in range(3)]
+ coord={"side":"left","coordinate_world_m":list(q),"skin_part_id":SKIN_PART,"triangle_index":0,
+   "barycentric":[1/3,1/3,1/3],"candidate_world_m":list(q),"candidate_to_hit_m":0.0,
+   "projection":{"method":"aspect_directed_ray_cast","aspect":"posterior","origin_world_m":origin,
+     "direction_world":d,"t_m":0.001,"budget_m":0.01,"inward_offset_m":0.001,
+     "raw_eligible_triangle_hit_count_within_budget":1,"distinct_eligible_geometric_hit_count_within_budget":1,
+     "candidate_match_budget_m":0.006},
+   "source_geometry":{"registry_id":"FORGED_NEGATIVE_FIXTURE","membership_registry_ids":[],
+     "registry_geometry_hash":"FORGED_HASH","stage2_registry_geometry_hash":"FORGED_HASH",
+     "derived_relation_id":"FORGED_REL","derived_geometry_id":"FORGED_DERIVED","derived_geometry_hash":"FORGED_DERIVED_HASH"}}
+ dst["stage3_status"]="GENERATED";dst["blocking_reason"]=None;dst["coordinates"]=[coord,copy.deepcopy(coord)]
+ dst["coordinates"][0]["side"]="left";dst["coordinates"][1]["side"]="right"
+ dst["trace"]={"location_statement_id":(primary_statement(p2[dst["point_id"]]) or {}).get("source_statement_id"),
+   "primary_relation_ids":(primary_statement(p2[dst["point_id"]]) or {}).get("relation_ids",[]),
+   "primary_measurement_ids":(primary_statement(p2[dst["point_id"]]) or {}).get("measurement_ids",[]),
+   "synthesis_family":"surface_line_arc_midpoint_then_aspect_ray","hard_constraints_all_stage2_resolved":True,
+   "cardinality":{"expected":["left","right"],"actual":["left","right"]},"trace_hash":"FORGED_NEGATIVE_FIXTURE"}
+ m["summary"]["generated_points"]=sum(bool(p["coordinates"]) for p in m["points"])
+ m["summary"]["generated_coordinates"]=sum(len(p["coordinates"]) for p in m["points"])
+ return m,dst["point_id"]
+
 def negative_tests(output,stage2,sub,store,lock):
  tests={}
- def rejected(o,s=stage2):
-  _,e,_=validate(o,s,sub,store,lock);return bool(e)
- # 1. coordinate tamper
- m=copy.deepcopy(output)
- target=next((p for p in m["points"] if p["coordinates"]),None)
- if target:
-  target["coordinates"][0]["coordinate_world_m"][0]+=0.01
-  tests["forged_coordinate_rejected"]=rejected(m)
-  m=copy.deepcopy(output);t=next(p for p in m["points"] if p["coordinates"]);t["coordinates"].append(copy.deepcopy(t["coordinates"][0]))
-  tests["duplicate_side_rejected"]=rejected(m)
-  m=copy.deepcopy(output);t=next(p for p in m["points"] if p["coordinates"]);t["coordinates"][0]["projection"]["t_m"]=t["coordinates"][0]["projection"]["budget_m"]+0.01
-  tests["over_budget_projection_rejected"]=rejected(m)
-  m=copy.deepcopy(output);t=next(p for p in m["points"] if p["coordinates"]);t["trace"].pop("trace_hash",None)
-  tests["missing_trace_rejected"]=rejected(m)
- else:
-  tests.update({"forged_coordinate_rejected":"SKIPPED_NO_GENERATED_COORDINATE",
-                "duplicate_side_rejected":"SKIPPED_NO_GENERATED_COORDINATE",
-                "over_budget_projection_rejected":"SKIPPED_NO_GENERATED_COORDINATE",
-                "missing_trace_rejected":"SKIPPED_NO_GENERATED_COORDINATE"})
- # 2. coordinate injected into a Stage2-unresolved point
+ def codes(o,s=stage2):
+  _,e,_=validate(o,s,sub,store,lock);return {x["code"] for x in e}
+ # Exercise coordinate-protection contracts even when the conservative real
+ # Stage3 result emits zero coordinates. Each mutation must trigger its own
+ # specific validator code, not merely any unrelated failure.
+ m,pid=_forged_generated_point(output,stage2,store,sub)
+ m["points"][[x["point_id"] for x in m["points"]].index(pid)]["coordinates"][0]["coordinate_world_m"][0]+=0.01
+ tests["forged_coordinate_rejected"]="COORDINATE_NOT_TRIANGLE_RECONSTRUCTION" in codes(m)
+
+ m,pid=_forged_generated_point(output,stage2,store,sub);t=next(x for x in m["points"] if x["point_id"]==pid)
+ t["coordinates"][1]["side"]="left"
+ tests["duplicate_side_rejected"]=bool({"BILATERAL_CARDINALITY_OR_SIDE_MISMATCH","DUPLICATE_SIDE"} & codes(m))
+
+ m,pid=_forged_generated_point(output,stage2,store,sub);t=next(x for x in m["points"] if x["point_id"]==pid)
+ t["coordinates"][0]["projection"]["t_m"]=0.02;t["coordinates"][0]["projection"]["budget_m"]=0.01
+ tests["over_budget_projection_rejected"]="PROJECTION_OVER_DECLARED_BUDGET" in codes(m)
+
+ m,pid=_forged_generated_point(output,stage2,store,sub);t=next(x for x in m["points"] if x["point_id"]==pid)
+ t["trace"].pop("trace_hash",None)
+ tests["missing_trace_rejected"]="TRACE_HASH_MISSING" in codes(m)
+
+ # Coordinate injected into an explicitly Stage2-unresolved point.
  m=copy.deepcopy(output);dst=next((p for p in m["points"] if p["stage2_primary_status"]!="RESOLVED"),None)
  if dst:
-  vv=store.vertices(SKIN_PART);ii=store.indices(SKIN_PART);ids=ii[:3]
-  xyz=[sum(vv[i][k] for i in ids)/3 for k in range(3)]
-  dst["coordinates"]=[{"side":"left","coordinate_world_m":xyz,"skin_part_id":SKIN_PART,"triangle_index":0,
-    "barycentric":[1/3,1/3,1/3],"candidate_world_m":xyz,
-    "projection":{"method":"aspect_directed_ray_cast","origin_world_m":xyz,"direction_world":[0,0,-1],"t_m":0.001,"budget_m":0.01},
-    "source_geometry":{"registry_geometry_hash":"FORGED","stage2_registry_geometry_hash":"FORGED"}}]
-  dst["stage3_status"]="GENERATED";dst["trace"]={"synthesis_family":"surface_line_arc_midpoint_then_aspect_ray","trace_hash":"FORGED","hard_constraints_all_stage2_resolved":True}
-  tests["stage2_unresolved_coordinate_injection_rejected"]=rejected(m)
- else:tests["stage2_unresolved_coordinate_injection_rejected"]="SKIPPED_NO_STAGE2_UNRESOLVED_POINT"
- # 3. suppressed Stage2 operand injection
+  fixture,_=_forged_generated_point(output,stage2,store,sub);src=next(p for p in fixture["points"] if p["coordinates"])
+  dst["coordinates"]=[copy.deepcopy(src["coordinates"][0])];dst["stage3_status"]="GENERATED";dst["trace"]=copy.deepcopy(src["trace"])
+  m["summary"]["generated_points"]=sum(bool(p["coordinates"]) for p in m["points"]);m["summary"]["generated_coordinates"]=sum(len(p["coordinates"]) for p in m["points"])
+  tests["stage2_unresolved_coordinate_injection_rejected"]="COORDINATE_FROM_STAGE2_UNRESOLVED" in codes(m)
+ else:tests["stage2_unresolved_coordinate_injection_rejected"]=False
+
+ # Suppressed Stage2 operand injection.
  s=copy.deepcopy(stage2);done=False
  for p in s["points"]:
   suppressed=[nid for nid,r in p["landmarks"].items() if r.get("semantic_suppressed") is True]
@@ -179,7 +206,10 @@ def negative_tests(output,stage2,sub,store,lock):
   rel=next(iter(p["relations"].values()),None)
   if rel is None:continue
   con=rel.setdefault("constraint",{});con.setdefault("executable_argument_node_ids",[]).append(suppressed[0]);rel["status"]="RESOLVED";done=True;break
- tests["suppressed_operand_injection_rejected"]=done and rejected(copy.deepcopy(output),s)
+ if done:
+  sm=suppressed_metrics(s)
+  tests["suppressed_operand_injection_rejected"]=sm["suppressed_executable_operand_count"]>0 and bool(codes(copy.deepcopy(output),s))
+ else:tests["suppressed_operand_injection_rejected"]=False
  return tests
 
 def main():
