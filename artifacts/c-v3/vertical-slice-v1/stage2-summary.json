@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "artifact": "c-v3-vertical-slice-v1-stage2-summary",
-  "status": "AUTOMATED_VALIDATED_HUMAN_REVIEW_PENDING",
+  "status": "AUTOMATED_STRUCTURAL_VALIDATION_PASS_HUMAN_SEMANTIC_AUDIT_REJECTED",
   "workflow": {
     "name": "Validate C v3 Vertical Slice Stage 2",
     "run_id": 37438671650,
@@ -96,5 +96,64 @@
     "physical_coordinates_generated": false,
     "legacy_coordinate_input": false,
     "stage3_blocked_until_human_approval": true
-  }
+  },
+  "human_semantic_audit": {
+    "status": "REJECTED",
+    "reviewed_at": "2026-10-06",
+    "basis": "20-point Stage 2 human semantic review",
+    "confirmed_defects": [
+      {
+        "point_id": "TE20",
+        "type": "condition_semantics_loss",
+        "detail": "body-position condition 'with the auricle folded' preserved as node but marked RESOLVED instead of CONDITIONAL"
+      },
+      {
+        "point_id": "ST10",
+        "type": "composite_subfeature_collapse",
+        "detail": "border of SCM collapses to whole SCM FMA mesh while border subfeature remains unresolved"
+      },
+      {
+        "point_id": "LI17",
+        "type": "composite_subfeature_collapse",
+        "detail": "posterior border of SCM collapses to whole SCM FMA mesh"
+      },
+      {
+        "point_id": "LI18",
+        "type": "composite_subfeature_collapse",
+        "detail": "anterior/posterior SCM borders collapse to identical whole SCM identity; between constraint loses border distinction"
+      },
+      {
+        "point_id": "LI18",
+        "type": "modifier_dependency_loss",
+        "detail": "superior border of thyroid cartilage subfeature exists but same-level relation depends on whole thyroid cartilage composite"
+      },
+      {
+        "point_id": "BL17",
+        "type": "modifier_dependency_loss",
+        "detail": "inferior-border subfeature exists but same-level relation depends on whole vertebral/spinous-process composite identity"
+      },
+      {
+        "point_id": "BL23",
+        "type": "modifier_dependency_loss",
+        "detail": "inferior-border subfeature exists but same-level relation depends on whole vertebral/spinous-process composite identity"
+      },
+      {
+        "point_id": "BL25",
+        "type": "modifier_dependency_loss",
+        "detail": "inferior-border subfeature exists but same-level relation depends on whole vertebral/spinous-process composite identity"
+      },
+      {
+        "point_id": "ST9",
+        "type": "modifier_dependency_loss",
+        "detail": "superior-border subfeature not bound into same-level relation; SCM border note also collapses to whole SCM identity"
+      }
+    ],
+    "structural_root_cause": "Composite semantic landmark containing a modifier/subfeature may currently be promoted using only parent whole-entity FMA geometry, while the extracted child subfeature is not required to participate in the executable dependency chain.",
+    "required_contracts": [
+      "A composite operand containing border/superior border/inferior border/midpoint/anterior border/posterior border/end/apex or equivalent subfeature cannot be RESOLVED solely by the parent whole-entity mesh.",
+      "If a relation uses a composite landmark with an extracted child subfeature, the executable dependency chain must bind and use that child subfeature or remain UNRESOLVED.",
+      "Pose/body-position conditions incompatible with default atlas pose must remain CONDITIONAL."
+    ]
+  },
+  "next_gate": "Repair composite-subfeature execution semantics and affected-point Stage 2 revalidation; Stage 3 remains blocked."
 }
