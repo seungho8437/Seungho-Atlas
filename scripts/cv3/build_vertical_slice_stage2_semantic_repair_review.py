@@ -47,15 +47,23 @@ def point_projection(pid,before,after,g,validation,rejection):
   n=bnodes.get(nid,{})
   bind=next((x for x in binds if x["child_landmark_id"]==nid),None)
   parent=bind.get("parent_landmark_id") if bind else None
+  normrec=rec.get("semantic_normalization")
   operands.append({"node_id":nid,"source_raw":n.get("source_raw"),"semantic_class":n.get("landmark_class"),"parent_entity":parent,
-    "child_subfeature":n.get("source_raw") if bind else None,"executor":rec.get("executor"),"status":rec.get("status"),
-    "identity":identity(rec),"reason":rec.get("reason")})
+    "child_subfeature":n.get("source_raw") if bind else None,"source_lexical_form":(normrec or {}).get("source_lexical_form"),
+    "canonical_subfeature_type":(normrec or {}).get("canonical_subfeature_type"),
+    "semantic_suppressed":rec.get("semantic_suppressed",False),
+    "suppressed_by_atomic_landmark_id":(rec.get("provenance") or {}).get("suppressed_by_atomic_landmark_id"),
+    "executor":rec.get("executor"),"status":rec.get("status"),"identity":identity(rec),"reason":rec.get("reason")})
  hierarchy=[]
  for par,kids in children.items():
   hierarchy.append({"parent_node_id":par,"parent_source_raw":bnodes.get(par,{}).get("source_raw"),"parent_status":a["landmarks"].get(par,{}).get("status"),
    "parent_semantic_identity":identity(a["landmarks"].get(par,{})),"children":[{"node_id":k,"source_raw":bnodes.get(k,{}).get("source_raw"),
-    "semantic_identity":{"landmark_class":bnodes.get(k,{}).get("landmark_class")},"executable_identity":identity(a["landmarks"].get(k,{})),
-    "status":a["landmarks"].get(k,{}).get("status")} for k in kids]})
+    "semantic_identity":{"landmark_class":bnodes.get(k,{}).get("landmark_class"),
+      "source_lexical_form":((a["landmarks"].get(k,{}) or {}).get("semantic_normalization") or {}).get("source_lexical_form"),
+      "canonical_subfeature_type":((a["landmarks"].get(k,{}) or {}).get("semantic_normalization") or {}).get("canonical_subfeature_type"),
+      "semantic_suppressed":(a["landmarks"].get(k,{}) or {}).get("semantic_suppressed",False)},
+    "executable_identity":identity(a["landmarks"].get(k,{})),
+    "status":a["landmarks"].get(k,{}).get("status"),"reason":a["landmarks"].get(k,{}).get("reason")} for k in kids]})
  rels=[]
  for rid,r in a["relations"].items():
   con=r.get("constraint") or {};sflds=r.get("semantic_fields") or {}
@@ -156,9 +164,9 @@ def build_html(data,path):
   out.append(f'<section class="pt"><h2>{p["point_id"]}: {p["previous_stage2_status"]} → {p["repaired_stage2_status"]}</h2><p><b>Defect family:</b> {html.escape(", ".join(p["defect_family"]))}<br><b>Human review disposition:</b> PENDING</p>')
   out.append('<h3>WHO source</h3>')
   for s in p["who_source"]:out.append(f'<div class="src"><b>{html.escape(str(s["section"]))} · {html.escape(str(s["source_statement_id"]))} · page {html.escape(str(s["page"]))}</b><br>{html.escape(str(s["text"]))}</div>')
-  out.append('<h3>Semantic decomposition</h3><table><tr><th>source raw</th><th>node ID</th><th>class</th><th>parent entity</th><th>child subfeature</th><th>executor</th><th>status</th><th>identity / geometry hash</th><th>reason</th></tr>')
+  out.append('<h3>Semantic decomposition</h3><table><tr><th>source raw</th><th>node ID</th><th>class</th><th>parent entity</th><th>child subfeature</th><th>source lexical form</th><th>canonical subfeature type</th><th>suppressed?</th><th>suppressed by atomic entity</th><th>executor</th><th>status</th><th>identity / geometry hash</th><th>reason</th></tr>')
   for o in p["operands"]:
-   vals=[o["source_raw"],o["node_id"],o["semantic_class"],o["parent_entity"],o["child_subfeature"],o["executor"],o["status"],canon(o["identity"]),o["reason"]]
+   vals=[o["source_raw"],o["node_id"],o["semantic_class"],o["parent_entity"],o["child_subfeature"],o["source_lexical_form"],o["canonical_subfeature_type"],o["semantic_suppressed"],o["suppressed_by_atomic_landmark_id"],o["executor"],o["status"],canon(o["identity"]),o["reason"]]
    out.append("<tr>"+"".join(f"<td class='mono'>{html.escape(str(v))}</td>" for v in vals)+"</tr>")
   out.append('</table><h3>Composite binding view</h3>')
   for h in p["composite_binding_view"]:
@@ -193,7 +201,7 @@ def build_html(data,path):
    out.append('<h3>BEFORE / AFTER machine-readable diff</h3><div class="before"><b>BEFORE</b><pre class="mono">'+html.escape(json.dumps({"status":p["before_after_diff"]["status"]["before"],"landmarks":[{"node_id":x["node_id"],"status":x["before_status"],"identity":x["before_identity"]} for x in p["before_after_diff"]["landmarks"]],"relations":[x["before"] for x in p["before_after_diff"]["relations"]],"conditions":[x["before"] for x in p["before_after_diff"]["conditions"]]},ensure_ascii=False,indent=2))+'</pre></div>')
    out.append('<div class="after"><b>AFTER</b><pre class="mono">'+html.escape(json.dumps({"status":p["before_after_diff"]["status"]["after"],"landmarks":[{"node_id":x["node_id"],"status":x["after_status"],"identity":x["after_identity"]} for x in p["before_after_diff"]["landmarks"]],"relations":[x["after"] for x in p["before_after_diff"]["relations"]],"conditions":[x["after"] for x in p["before_after_diff"]["conditions"]]},ensure_ascii=False,indent=2))+'</pre></div>')
   out.append('<p><b>Coordinates generated:</b> 0 · <b>Legacy C coordinate references:</b> 0</p>')
-  out.append('<div class="check">[ ] WHO source phrase가 정확히 반영됨<br>[ ] semantic granularity 보존됨<br>[ ] child subfeature가 실제 execution에 사용됨<br>[ ] distinct subfeatures가 distinct executable identity를 가짐<br>[ ] relation operator가 올바른 operand를 참조함<br>[ ] condition state가 정확히 보존됨<br>[ ] RESOLVED/UNRESOLVED 판정이 타당함<br>[ ] ACCEPT<br>[ ] REJECT</div></section>')
+  out.append('<div class="check">[ ] WHO source phrase가 정확히 반영됨<br>[ ] semantic granularity 보존됨<br>[ ] child subfeature가 실제 execution에 사용됨<br>[ ] distinct subfeatures가 distinct executable identity를 가짐<br>[ ] relation operator가 올바른 operand를 참조함<br>[ ] condition state가 정확히 보존됨<br>[ ] RESOLVED/UNRESOLVED 판정이 타당함<br>[ ] lexicalized anatomical entity를 false subfeature로 재분해하지 않음<br>[ ] subfeature synonym이 canonical type으로 정규화됨<br>[ ] ACCEPT<br>[ ] REJECT</div></section>')
  path.write_text("".join(out),encoding="utf-8")
 
 def build_pdf(data,path):
@@ -250,7 +258,7 @@ def build_pdf(data,path):
   for s in p["who_source"]:st.append(Paragraph(html.escape(f"{s['section']} | {s['source_statement_id']} | page {s['page']} | {s['text']}"),body))
   st.append(Paragraph("Semantic decomposition",h2))
   for o in p["operands"]:
-   txt=f"{o['node_id']} | source={o['source_raw']} | class={o['semantic_class']} | parent={o['parent_entity']} | child={o['child_subfeature']} | executor={o['executor']} | status={o['status']} | identity={canon(o['identity'])} | reason={o['reason']}"
+   txt=f"{o['node_id']} | source={o['source_raw']} | class={o['semantic_class']} | parent={o['parent_entity']} | child={o['child_subfeature']} | lexical={o['source_lexical_form']} | canonical={o['canonical_subfeature_type']} | suppressed={o['semantic_suppressed']} | suppressed_by={o['suppressed_by_atomic_landmark_id']} | executor={o['executor']} | status={o['status']} | identity={canon(o['identity'])} | reason={o['reason']}"
    st.append(KeepTogether([Paragraph(html.escape(txt),mono),Spacer(1,2)]))
   st.append(Paragraph("Composite binding view",h2))
   for h in p["composite_binding_view"]:
