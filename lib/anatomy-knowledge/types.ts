@@ -21,6 +21,7 @@ export type MeridianInfo = {
   code: MeridianId;
   nameKo: string;
   nameHanja: string;
+  color: string;
 };
 
 export type KnowledgeSource = {
