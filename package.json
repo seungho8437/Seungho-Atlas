@@ -18,7 +18,7 @@
     "hash:atlas": "node scripts/hash-atlas.mjs",
     "build:acupoints": "node scripts/build-acupoint-render.mjs",
     "validate:acupoints": "node scripts/validate-acupoint-placements.mjs",
-    "precheck": "npm run validate:acupoints",
+    "precheck": "npm run validate:acupoints && node --check scripts/build-meridian-lines.mjs && node --check scripts/eval/compare-solver-to-reference.mjs && node --check scripts/check-no-placement-leak.mjs",
     "build:meridians": "node scripts/build-meridian-lines.mjs",
     "check:isolation": "node scripts/check-no-placement-leak.mjs",
     "eval:solver": "node scripts/eval/compare-solver-to-reference.mjs"
