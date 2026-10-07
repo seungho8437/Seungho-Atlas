@@ -145,7 +145,7 @@ export default function AnatomyScene({atlas,state,acupointRender,showAcupoints,m
    }
    return bestHit&&bestPartIndex>=0?{partIndex:bestPartIndex,hit:bestHit}:null;
   };
-  const skinPartIndex=atlas.parts.findIndex(p=>p.id==='FJ2810'),midlineX=0;
+  const skinPartIndex=atlas.parts.findIndex(p=>p.id==='FJ2810'),skinPart=skinPartIndex>=0?atlas.parts[skinPartIndex]:null,midlineX=0;
   const clearMeridianLines=()=>{for(const child of [...meridianLineGroup.children])meridianLineGroup.remove(child);meridianLineGeometries.forEach(g=>g.dispose());meridianLineMaterials.forEach(m=>m.dispose());meridianLineGeometries=[];meridianLineMaterials=[];};
   const rebuildMeridianLines=()=>{
    clearMeridianLines();const registry=meridianLinesRef.current,mesh=skinPartIndex>=0?pickers[skinPartIndex]:undefined;if(!ready||!registry||!mesh||!skinPart)return;
@@ -153,7 +153,6 @@ export default function AnatomyScene({atlas,state,acupointRender,showAcupoints,m
    const a=new T.Vector3(),b=new T.Vector3(),c=new T.Vector3(),ab=new T.Vector3(),ac=new T.Vector3(),normal=new T.Vector3(),p=new T.Vector3(),outward=new T.Vector3();
    const offset=(v:{position:[number,number,number];triangle_index:number})=>{p.fromArray(v.position);const tri=v.triangle_index;if(Number.isInteger(tri)&&tri>=0&&tri*3+2<index.count){a.fromBufferAttribute(position,index.getX(tri*3));b.fromBufferAttribute(position,index.getX(tri*3+1));c.fromBufferAttribute(position,index.getX(tri*3+2));ab.subVectors(b,a);ac.subVectors(c,a);normal.crossVectors(ab,ac).normalize();outward.subVectors(p,center);if(normal.dot(outward)<0)normal.multiplyScalar(-1);if(Number.isFinite(normal.x))p.addScaledVector(normal,.001);}return[p.x,p.y,p.z];};
    for(const path of registry.paths){if(!allowed.has(path.meridian))continue;for(const polyline of path.polylines){if(polyline.vertices.length<2)continue;const positions:number[]=[];polyline.vertices.forEach(v=>positions.push(...offset(v)));const geometry=new LineGeometry();geometry.setPositions(positions);const material=new LineMaterial({color:new T.Color(MERIDIAN_INFO[path.meridian].color).getHex(),linewidth:2.2,transparent:true,opacity:.88,depthTest:true,depthWrite:false});material.resolution.set(el.clientWidth,el.clientHeight);const line=new Line2(geometry,material);line.computeLineDistances();line.frustumCulled=false;line.renderOrder=18;meridianLineGroup.add(line);meridianLineGeometries.push(geometry);meridianLineMaterials.push(material);}}
-   }
   };
   const closestSkinSurface=(worldPoint:T.Vector3)=>{
    const mesh=skinPartIndex>=0?pickers[skinPartIndex]:undefined;if(!mesh)return null;const geometry=mesh.geometry,index=geometry.index,position=geometry.getAttribute('position');if(!index||!position)return null;
