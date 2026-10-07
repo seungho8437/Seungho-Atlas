@@ -15,7 +15,10 @@
     "audit:terminology": "node scripts/audit-anatomy-terminology-semantics.mjs",
     "validate:cloudflare": "node scripts/validate-cloudflare-pages.mjs",
     "preview:cloudflare": "npm run build && wrangler pages dev dist",
-    "hash:atlas": "node scripts/hash-atlas.mjs"
+    "hash:atlas": "node scripts/hash-atlas.mjs",
+    "build:acupoints": "node scripts/build-acupoint-render.mjs",
+    "validate:acupoints": "node scripts/validate-acupoint-placements.mjs",
+    "precheck": "npm run validate:acupoints"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

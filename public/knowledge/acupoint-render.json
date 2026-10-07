@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "mesh_binding": {
+    "atlas_sha256": "c359f4bcd2cba90b7411d66d5e9fc04dc81294d46cd5c1e8b212c824f2e5bbee",
+    "skin_part_id": "FJ2810",
+    "frame": {
+      "units": "m",
+      "left": "+x",
+      "anterior": "+z",
+      "up": "+y"
+    }
+  },
+  "midline_x": -0.000647,
+  "generated_at": "2026-10-07T00:00:00.000Z",
+  "counts": {
+    "source_entries": 0,
+    "render_points": 0,
+    "placed": 0,
+    "mirrored": 0,
+    "flagged": 0,
+    "skipped": 0
+  },
+  "points": []
+}
