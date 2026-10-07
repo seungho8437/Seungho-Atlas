@@ -7,18 +7,21 @@ import {createExplosionLayout} from './explosion-layout';
 import {decodeModelResponse} from './model-download';
 import {PointerTap} from './pointer-tap';
 import {SYSTEMS,type Atlas,type SceneState} from './anatomy';
-import type {AcupointCoordinate} from '@/lib/anatomy-knowledge/types';
+import type {AcupointPlacementCandidate,AcupointPlacementPoint,AcupointRenderPoint} from '@/lib/anatomy-knowledge/acupoint-placement';
 import type {LandmarkAnchorCandidate,LandmarkAnchorSide} from '@/lib/anatomy-knowledge/landmark-anchors';
 interface Props {
- atlas:Atlas;state:SceneState;acupointCoordinates:AcupointCoordinate[];showAcupoints:boolean;
+ atlas:Atlas;state:SceneState;acupointRender:AcupointRenderPoint[];showAcupoints:boolean;visibleMeridians:string[];
+ placementMode:boolean;placementTarget:{id:string;laterality:'midline'|'bilateral'}|null;placementPoints:AcupointPlacementPoint[];placementDraft:AcupointPlacementCandidate|null;onPlacementPick:(candidate:AcupointPlacementCandidate)=>void;
  anchorTarget:string|null;anchorDraft:LandmarkAnchorCandidate|null;detectorProposal:LandmarkAnchorCandidate|null;detectorSide:LandmarkAnchorSide;
  onAnchorPick:(candidate:LandmarkAnchorCandidate)=>void;onDetectorProposal:(candidate:LandmarkAnchorCandidate|null)=>void;
  onSelect:(id:string)=>void;onSelectAcupoint:(id:string)=>void;onProgress:(n:number)=>void;onError:(s:string)=>void
 }
-export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoints,anchorTarget,anchorDraft,detectorProposal,detectorSide,onAnchorPick,onDetectorProposal,onSelect,onSelectAcupoint,onProgress,onError}:Props){
+export default function AnatomyScene({atlas,state,acupointRender,showAcupoints,visibleMeridians,placementMode,placementTarget,placementPoints,placementDraft,onPlacementPick,anchorTarget,anchorDraft,detectorProposal,detectorSide,onAnchorPick,onDetectorProposal,onSelect,onSelectAcupoint,onProgress,onError}:Props){
  const host=useRef<HTMLDivElement>(null),latest=useRef(state),select=useRef(onSelect),selectAcupoint=useRef(onSelectAcupoint),showAcupointsRef=useRef(showAcupoints);
+ const renderPointsRef=useRef(acupointRender),visibleMeridiansRef=useRef(visibleMeridians),placementModeRef=useRef(placementMode),placementTargetRef=useRef(placementTarget),placementPointsRef=useRef(placementPoints),placementDraftRef=useRef(placementDraft),placementPickRef=useRef(onPlacementPick),markerVersionRef=useRef(0);
  const anchorTargetRef=useRef(anchorTarget),anchorDraftRef=useRef(anchorDraft),detectorProposalStateRef=useRef(detectorProposal),detectorSideRef=useRef(detectorSide),anchorPickRef=useRef(onAnchorPick),detectorProposalRef=useRef(onDetectorProposal);
  latest.current=state;select.current=onSelect;selectAcupoint.current=onSelectAcupoint;showAcupointsRef.current=showAcupoints;
+ renderPointsRef.current=acupointRender;visibleMeridiansRef.current=visibleMeridians;placementModeRef.current=placementMode;placementTargetRef.current=placementTarget;placementPointsRef.current=placementPoints;placementDraftRef.current=placementDraft;placementPickRef.current=onPlacementPick;markerVersionRef.current++;
  anchorTargetRef.current=anchorTarget;anchorDraftRef.current=anchorDraft;detectorProposalStateRef.current=detectorProposal;detectorSideRef.current=detectorSide;anchorPickRef.current=onAnchorPick;detectorProposalRef.current=onDetectorProposal;
  useEffect(()=>{
   const el=host.current!;let disposed=false,frame=0,dirty=true,ready=false,lastView='',lastReset=-1,lastIsolate='',layoutKey='',amount=0;
@@ -47,21 +50,20 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
   const markerMaterial=new T.PointsMaterial({color:0x64748b,size:5,sizeAttenuation:false,transparent:true,opacity:.72,depthTest:false});
   markerMaterial.onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <clipping_planes_fragment>','#include <clipping_planes_fragment>\nif (distance(gl_PointCoord, vec2(0.5)) > 0.5) discard;');};
   const markers=new T.Points(markerGeometry,markerMaterial);markers.frustumCulled=false;markers.renderOrder=10;markers.visible=false;scene.add(markers);
-  const acupointPositions=new Float32Array(acupointCoordinates.length*3);acupointCoordinates.forEach((point,i)=>acupointPositions.set(point.position,i*3));
-  const acupointGeometry=new T.BufferGeometry();acupointGeometry.setAttribute('position',new T.BufferAttribute(acupointPositions,3));
-  const markerCanvas=document.createElement('canvas');markerCanvas.width=markerCanvas.height=64;
-  const markerCtx=markerCanvas.getContext('2d')!;
-  markerCtx.clearRect(0,0,64,64);markerCtx.beginPath();markerCtx.arc(32,32,25,0,Math.PI*2);markerCtx.fillStyle='#ff2d55';markerCtx.fill();
-  markerCtx.lineWidth=8;markerCtx.strokeStyle='#ffffff';markerCtx.stroke();
+  const MAX_ACUPOINT_MARKERS=1024,acupointPositions=new Float32Array(MAX_ACUPOINT_MARKERS*3),acupointColors=new Float32Array(MAX_ACUPOINT_MARKERS*3);
+  const acupointGeometry=new T.BufferGeometry();acupointGeometry.setAttribute('position',new T.BufferAttribute(acupointPositions,3));acupointGeometry.setAttribute('color',new T.BufferAttribute(acupointColors,3));acupointGeometry.setDrawRange(0,0);
+  const markerCanvas=document.createElement('canvas');markerCanvas.width=markerCanvas.height=64;const markerCtx=markerCanvas.getContext('2d')!;markerCtx.beginPath();markerCtx.arc(32,32,25,0,Math.PI*2);markerCtx.fillStyle='#fff';markerCtx.fill();markerCtx.lineWidth=8;markerCtx.strokeStyle='#fff';markerCtx.stroke();
   const acupointTexture=new T.CanvasTexture(markerCanvas);acupointTexture.colorSpace=T.SRGBColorSpace;acupointTexture.needsUpdate=true;
-  // Acupoints must obey the anatomy depth buffer. Keeping depthWrite off avoids
-  // markers occluding one another, while depthTest hides points on the far side
-  // of the body as the camera orbits.
-  // Use a world-space marker diameter with perspective attenuation. The old
-  // fixed 15px markers stayed the same screen size while the body shrank,
-  // causing distant acupoints to visually pile up when zoomed out.
-  const acupointMaterial=new T.PointsMaterial({map:acupointTexture,color:0xffffff,size:.035,sizeAttenuation:true,transparent:true,alphaTest:.18,opacity:1,depthTest:true,depthWrite:false,toneMapped:false});
+  const acupointMaterial=new T.PointsMaterial({map:acupointTexture,vertexColors:true,size:.009,sizeAttenuation:true,transparent:true,alphaTest:.18,opacity:1,depthTest:true,depthWrite:false,toneMapped:false});
   const acupointMarkers=new T.Points(acupointGeometry,acupointMaterial);acupointMarkers.frustumCulled=false;acupointMarkers.renderOrder=20;acupointMarkers.visible=false;scene.add(acupointMarkers);
+  const flaggedPositions=new Float32Array(MAX_ACUPOINT_MARKERS*3),flaggedGeometry=new T.BufferGeometry();flaggedGeometry.setAttribute('position',new T.BufferAttribute(flaggedPositions,3));flaggedGeometry.setDrawRange(0,0);
+  const flagCanvas=document.createElement('canvas');flagCanvas.width=flagCanvas.height=64;const flagCtx=flagCanvas.getContext('2d')!;flagCtx.beginPath();flagCtx.arc(32,32,25,0,Math.PI*2);flagCtx.lineWidth=10;flagCtx.strokeStyle='#f97316';flagCtx.stroke();
+  const flaggedTexture=new T.CanvasTexture(flagCanvas);flaggedTexture.colorSpace=T.SRGBColorSpace;flaggedTexture.needsUpdate=true;
+  const flaggedMaterial=new T.PointsMaterial({map:flaggedTexture,color:0xffffff,size:.012,sizeAttenuation:true,transparent:true,alphaTest:.1,depthTest:true,depthWrite:false,toneMapped:false});
+  const flaggedMarkers=new T.Points(flaggedGeometry,flaggedMaterial);flaggedMarkers.frustumCulled=false;flaggedMarkers.renderOrder=21;flaggedMarkers.visible=false;scene.add(flaggedMarkers);
+  type MarkerRecord={id:string;side:'left'|'right'|'midline';status:'PLACED'|'FLAGGED';origin:'placed'|'mirrored';position:[number,number,number]};let markerRecords:MarkerRecord[]=[];
+  const placementMarker=new T.Mesh(new T.SphereGeometry(.005,18,18),new T.MeshBasicMaterial({color:0x16a34a,depthTest:true,depthWrite:false,toneMapped:false}));placementMarker.visible=false;placementMarker.renderOrder=27;scene.add(placementMarker);
+  const mirrorMarker=new T.Mesh(new T.SphereGeometry(.005,18,18),new T.MeshBasicMaterial({color:0x06b6d4,depthTest:true,depthWrite:false,toneMapped:false,transparent:true,opacity:.9}));mirrorMarker.visible=false;mirrorMarker.renderOrder=26;scene.add(mirrorMarker);
   const anchorMarkerMaterial=new T.MeshBasicMaterial({color:0x16a34a,depthTest:true,depthWrite:false,toneMapped:false});
   const anchorMarker=new T.Mesh(new T.SphereGeometry(.006,18,18),anchorMarkerMaterial);anchorMarker.visible=false;anchorMarker.renderOrder=25;scene.add(anchorMarker);
   const proposalMarkerMaterial=new T.MeshBasicMaterial({color:0xf59e0b,depthTest:true,depthWrite:false,toneMapped:false,transparent:true,opacity:.95});
@@ -111,7 +113,7 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
    controls.target.set(extent>.1&&el.clientWidth>767?-packingWidth*.12:0,extent>.1||mobile?.85:.68,0);camera.position.copy(controls.target).addScaledVector(direction,distance);controls.update();dirty=true;
   };
   const resize=()=>{layoutKey='';lastState=null;renderer.setPixelRatio(Math.min(devicePixelRatio,el.clientWidth<768||el.clientHeight<600?1.5:2));camera.aspect=el.clientWidth/el.clientHeight;camera.updateProjectionMatrix();renderer.setSize(el.clientWidth,el.clientHeight);if(!anchorTargetRef.current)fit(latest.current.view,amount);};const observer=new ResizeObserver(resize);observer.observe(el);
-  const raycaster=new T.Raycaster(),pointer=new T.Vector2(),tap=new PointerTap(),worldBox=new T.Box3(),hitPoint=new T.Vector3();raycaster.params.Points={threshold:.025};
+  const raycaster=new T.Raycaster(),pointer=new T.Vector2(),tap=new PointerTap(),worldBox=new T.Box3(),hitPoint=new T.Vector3();raycaster.params.Points={threshold:.006};
   const baryA=new T.Vector3(),baryB=new T.Vector3(),baryC=new T.Vector3(),baryP=new T.Vector3(),baryOut=new T.Vector3();
   const candidateFromHit=(landmarkId:string,partIndex:number,hit:T.Intersection<T.Object3D>,method:LandmarkAnchorCandidate['method'],side?:LandmarkAnchorSide,detectorId?:string):LandmarkAnchorCandidate|null=>{
    if(hit.faceIndex===undefined||hit.faceIndex<0)return null;
@@ -137,6 +139,19 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
     if(hit&&(!bestHit||hit.distance<bestHit.distance)){bestPartIndex=i;bestHit=hit;}
    }
    return bestHit&&bestPartIndex>=0?{partIndex:bestPartIndex,hit:bestHit}:null;
+  };
+  const skinPartIndex=atlas.parts.findIndex(p=>p.id==='FJ2810'),skinPart=skinPartIndex>=0?atlas.parts[skinPartIndex]:null,midlineX=skinPart?(skinPart.bounds[0][0]+skinPart.bounds[1][0])/2:0;
+  const closestSkinSurface=(worldPoint:T.Vector3)=>{
+   const mesh=skinPartIndex>=0?pickers[skinPartIndex]:undefined;if(!mesh)return null;const geometry=mesh.geometry,index=geometry.index,position=geometry.getAttribute('position');if(!index||!position)return null;
+   const local=mesh.worldToLocal(worldPoint.clone()),a=new T.Vector3(),b=new T.Vector3(),c=new T.Vector3(),q=new T.Vector3(),best=new T.Vector3(),triObj=new T.Triangle(),bary=new T.Vector3(),bestBary=new T.Vector3();let bestTri=-1,bestD=Infinity;
+   for(let tri=0;tri<index.count/3;tri++){a.fromBufferAttribute(position,index.getX(tri*3));b.fromBufferAttribute(position,index.getX(tri*3+1));c.fromBufferAttribute(position,index.getX(tri*3+2));triObj.set(a,b,c).closestPointToPoint(local,q);const d=q.distanceToSquared(local);if(d<bestD){bestD=d;bestTri=tri;best.copy(q);T.Triangle.getBarycoord(q,a,b,c,bary);bestBary.copy(bary);if(d<1e-14)break;}}
+   if(bestTri<0)return null;const world=mesh.localToWorld(best.clone());return{position:[world.x,world.y,world.z] as [number,number,number],surface:{mesh_id:'FJ2810',triangle_index:bestTri,barycentric:[bestBary.x,bestBary.y,bestBary.z] as [number,number,number]},distance:Math.sqrt(bestD)};
+  };
+  const placementCandidateFromHit=(target:{id:string;laterality:'midline'|'bilateral'},partIndex:number,hit:T.Intersection<T.Object3D>):AcupointPlacementCandidate|null=>{
+   const base=candidateFromHit(target.id,partIndex,hit,'manual-anchor');if(!base)return null;const side=target.laterality==='midline'?'midline':hit.point.x>midlineX?'left':'right';
+   const candidate:AcupointPlacementCandidate={id:target.id,side,position:base.position,surface:{mesh_id:base.surfaceProjection.meshId,triangle_index:base.surfaceProjection.triangleIndex,barycentric:base.surfaceProjection.barycentric}};
+   if(side!=='midline'){const snap=closestSkinSurface(new T.Vector3(2*midlineX-hit.point.x,hit.point.y,hit.point.z));if(snap)candidate.mirror_preview={side:side==='left'?'right':'left',position:snap.position,surface:snap.surface,snap_distance_m:snap.distance};}
+   return candidate;
   };
   const partSearchText=(i:number)=>`${atlas.parts[i].name} ${atlas.concepts.find(c=>c.id===atlas.parts[i].conceptId)?.name??''}`.toLowerCase();
   const findPhalanxPart=(side:LandmarkAnchorSide,segment:'proximal'|'middle'|'distal')=>{
@@ -227,7 +242,9 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
    camera.clearViewOffset();controls.target.copy(target);camera.position.copy(target).addScaledVector(direction,distance);controls.update();dirty=true;
   };
   const down=(e:PointerEvent)=>{hover.hidden=true;tap.down(e.pointerId,e.clientX,e.clientY,e.pointerType==='touch'?12:5);};
-  const move=(e:PointerEvent)=>{tap.move(e.pointerId,e.clientX,e.clientY);if(anchorTargetRef.current){hover.hidden=true;renderer.domElement.style.cursor='crosshair';return;}if(e.buttons||amount<.5||e.pointerType==='touch'){hover.hidden=true;renderer.domElement.style.cursor='grab';return;}const rect=el.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top,index=findTarget(x,y,12);hover.hidden=index<0;renderer.domElement.style.cursor=index<0?'grab':'pointer';if(index>=0){hover.textContent=atlas.parts[index].name;hover.style.left=`${Math.max(8,Math.min(x+14,el.clientWidth-260))}px`;hover.style.top=`${Math.max(8,Math.min(y+18,el.clientHeight-55))}px`;}};
+  const move=(e:PointerEvent)=>{tap.move(e.pointerId,e.clientX,e.clientY);if(anchorTargetRef.current||placementModeRef.current){hover.hidden=true;renderer.domElement.style.cursor='crosshair';return;}if(e.buttons||e.pointerType==='touch'){hover.hidden=true;renderer.domElement.style.cursor='grab';return;}const rect=el.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top;
+   if(amount<.5&&acupointMarkers.visible){pointer.set(x/rect.width*2-1,-y/rect.height*2+1);raycaster.setFromCamera(pointer,camera);const pointHit=raycaster.intersectObject(acupointMarkers,false)[0],skinHit=nearestSkinHit(raycaster);if(pointHit&&pointHit.index!==undefined&&(!skinHit||pointHit.distance<=skinHit.hit.distance+.018)){const point=markerRecords[pointHit.index];if(point){const side=point.side==='left'?'환자 왼쪽':point.side==='right'?'환자 오른쪽':'정중선',origin=point.origin==='placed'?'직접 배치':'좌우 미러';hover.hidden=false;hover.textContent=`${point.id} · ${side} · ${origin} · ${point.status}`;hover.style.left=`${Math.max(8,Math.min(x+14,el.clientWidth-300))}px`;hover.style.top=`${Math.max(8,Math.min(y+18,el.clientHeight-55))}px`;renderer.domElement.style.cursor='pointer';return;}}}
+   if(amount<.5){hover.hidden=true;renderer.domElement.style.cursor='grab';return;}const index=findTarget(x,y,12);hover.hidden=index<0;renderer.domElement.style.cursor=index<0?'grab':'pointer';if(index>=0){hover.textContent=atlas.parts[index].name;hover.style.left=`${Math.max(8,Math.min(x+14,el.clientWidth-260))}px`;hover.style.top=`${Math.max(8,Math.min(y+18,el.clientHeight-55))}px`;}};
   const cancel=(e:PointerEvent)=>tap.cancel(e.pointerId);
   const up=(e:PointerEvent)=>{
    const validTap=tap.up(e.pointerId,e.clientX,e.clientY);if(!validTap||!ready)return;const rect=renderer.domElement.getBoundingClientRect();pointer.set((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);
@@ -239,6 +256,7 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
      if(candidate){hover.hidden=true;anchorPickRef.current(candidate);return;}
     }
    }
+   const activePlacement=placementTargetRef.current;if(placementModeRef.current&&activePlacement){const skinHit=nearestSkinHit(raycaster);if(skinHit){const candidate=placementCandidateFromHit(activePlacement,skinHit.partIndex,skinHit.hit);if(candidate){hover.hidden=true;placementPickRef.current(candidate);return;}}}
    let nearest=Infinity,found=-1;const hasSolid=atlas.parts.some((p,i)=>p.system!=='integumentary'&&data[i*4+3]>.5);
    pickers.forEach((mesh,i)=>{if(!mesh||data[i*4+3]<.5||(hasSolid&&atlas.parts[i].system==='integumentary'))return;worldBox.copy(bounds[i]).translate(mesh.position);if(!raycaster.ray.intersectBox(worldBox,hitPoint))return;const hits=raycaster.intersectObject(mesh,false);if(hits[0]&&hits[0].distance<nearest){nearest=hits[0].distance;found=i;}});
    if(acupointMarkers.visible){
@@ -247,22 +265,30 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
     // be selectable through the body. A small tolerance accounts for a marker
     // sitting immediately outside the visible surface.
     if(acupointHit&&acupointHit.index!==undefined&&acupointHit.distance<=nearest+.018){
-     const point=acupointCoordinates[acupointHit.index];
-     if(point){hover.hidden=true;selectAcupoint.current(point.acupointId);return;}
+     const point=markerRecords[acupointHit.index];
+     if(point){hover.hidden=true;selectAcupoint.current(point.id);return;}
     }
    }
    if(found<0&&amount>.45)found=findTarget(e.clientX-rect.left,e.clientY-rect.top,e.pointerType==='touch'?24:16);if(found>=0){hover.hidden=true;select.current(atlas.parts[found].id);}
   };
   renderer.domElement.addEventListener('pointerdown',down);renderer.domElement.addEventListener('pointermove',move);renderer.domElement.addEventListener('pointerup',up);renderer.domElement.addEventListener('pointercancel',cancel);
-  const clock=new T.Clock();let lastExtent=-1,lastShowAcupoints=showAcupointsRef.current,lastDetectorKey='';
+  const clock=new T.Clock();let lastExtent=-1,lastShowAcupoints=showAcupointsRef.current,lastDetectorKey='',lastMarkerVersion=-1;
   const animate=()=>{
    if(disposed)return;frame=requestAnimationFrame(animate);const dt=Math.min(clock.getDelta(),.05),s=latest.current;
    const changed=lastState?.visible!==s.visible||lastState?.selected!==s.selected||lastState?.isolate!==s.isolate;
+   if(markerVersionRef.current!==lastMarkerVersion){
+    lastMarkerVersion=markerVersionRef.current;const meridians=new Set(visibleMeridiansRef.current);
+    const local=placementPointsRef.current.filter(p=>p.status!=='SKIPPED'&&p.position).map(p=>({id:p.id,side:p.side,status:p.status as 'PLACED'|'FLAGGED',origin:'placed' as const,position:p.position!}));
+    markerRecords=(placementModeRef.current?local:renderPointsRef.current.filter(p=>meridians.has(p.id.replace(/\d+$/,''))).map(p=>({id:p.id,side:p.side,status:p.status,origin:p.origin,position:p.position}))).slice(0,MAX_ACUPOINT_MARKERS);
+    let flags=0;const placedColor=new T.Color('#dc2626'),mirroredColor=new T.Color('#fca5a5');
+    markerRecords.forEach((p,i)=>{acupointPositions.set(p.position,i*3);const color=p.origin==='mirrored'?mirroredColor:placedColor;acupointColors.set([color.r,color.g,color.b],i*3);if(p.status==='FLAGGED'){flaggedPositions.set(p.position,flags*3);flags++;}});
+    acupointGeometry.setDrawRange(0,markerRecords.length);flaggedGeometry.setDrawRange(0,flags);(acupointGeometry.getAttribute('position') as T.BufferAttribute).needsUpdate=true;(acupointGeometry.getAttribute('color') as T.BufferAttribute).needsUpdate=true;(flaggedGeometry.getAttribute('position') as T.BufferAttribute).needsUpdate=true;dirty=true;
+   }
    const moving=Math.abs(amount-s.explode)>.0001;
    if(moving){amount=T.MathUtils.damp(amount,s.explode,8,dt);dirty=true;}
    if(changed||moving||lastExtent<0){
     const visible=new Set(s.visible),selection=new Set(s.selected);
-    const visibleParts=atlas.parts.filter(p=>s.isolate?selection.has(p.id):visible.has(p.system)||selection.has(p.id));
+    const visibleParts=atlas.parts.filter(p=>s.isolate?selection.has(p.id):visible.has(p.system)||selection.has(p.id)||(placementModeRef.current&&p.id==='FJ2810'));
     const nextLayoutKey=visibleParts.map(p=>p.id).join(',')+':'+camera.aspect.toFixed(3);
     if(nextLayoutKey!==layoutKey){const layout=createExplosionLayout(visibleParts,camera.aspect);packingWidth=layout.width;packingHeight=layout.height;atlas.parts.forEach((p,i)=>{const cell=layout.cells.get(p.id);offsets[i]=cell?new T.Vector3(cell.x,cell.y+.85,0):centers[i].clone();});layoutKey=nextLayoutKey;if(amount>.05&&!s.isolate)fit(s.view,Math.max(0,(amount-.3)/.7));}
 
@@ -270,7 +296,7 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
      const c=centers[i],destination=offsets[i];let dx=0,dy=0,dz=0;
      if(amount<=.45){const t=amount/.45;const group=SYSTEMS.findIndex(sys=>sys.id===p.system);const angle=group/SYSTEMS.length*Math.PI*2;dx=Math.sin(angle)*t*.48;dy=(c.y-.85)*t*.28;dz=Math.cos(angle)*t*.48;}
      else {const t=(amount-.45)/.55,group=SYSTEMS.findIndex(sys=>sys.id===p.system),angle=group/SYSTEMS.length*Math.PI*2;dx=T.MathUtils.lerp(Math.sin(angle)*.48,destination.x-c.x,t);dy=T.MathUtils.lerp((c.y-.85)*.28,destination.y-c.y,t);dz=T.MathUtils.lerp(Math.cos(angle)*.48,-c.z,t);}
-     const selected=selection.has(p.id);data.set([dx,dy,dz,(s.isolate?selected:visible.has(p.system)||selected)?1:0],i*4);selectedData[i*4]=selected?255:0;
+     const selected=selection.has(p.id),placementSkin=placementModeRef.current&&p.id==='FJ2810';data.set([dx,dy,dz,(s.isolate?selected:visible.has(p.system)||selected||placementSkin)?1:0],i*4);selectedData[i*4]=selected?255:0;
      markerPositions.set(data[i*4+3]>.5?[c.x+dx,c.y+dy,c.z+dz]:[10000,10000,10000],i*3);const mesh=pickers[i];if(mesh){mesh.position.set(dx,dy,dz);mesh.updateMatrix();mesh.updateMatrixWorld(true);}
     });partTexture.needsUpdate=true;selectionTexture.needsUpdate=true;markerGeometry.attributes.position.needsUpdate=true;lastState=s;lastExtent=amount;dirty=true;
    }
@@ -293,17 +319,18 @@ export default function AnatomyScene({atlas,state,acupointCoordinates,showAcupoi
    }
    const draft=anchorDraftRef.current,proposalState=detectorProposalStateRef.current;
    const integumentaryMaterial=mats.get('integumentary') as T.MeshStandardMaterial|undefined;
-   if(integumentaryMaterial){const opacity=anchorTargetRef.current?.length?.55:.1;if(integumentaryMaterial.opacity!==opacity){integumentaryMaterial.opacity=opacity;integumentaryMaterial.needsUpdate=true;dirty=true;}}
+   if(integumentaryMaterial){const opacity=(anchorTargetRef.current?.length||placementModeRef.current)?.55:.1;if(integumentaryMaterial.opacity!==opacity){integumentaryMaterial.opacity=opacity;integumentaryMaterial.needsUpdate=true;dirty=true;}}
+   const placementState=placementDraftRef.current;placementMarker.visible=!!placementState&&placementModeRef.current;mirrorMarker.visible=!!placementState?.mirror_preview&&placementModeRef.current;if(placementState)placementMarker.position.fromArray(placementState.position);if(placementState?.mirror_preview)mirrorMarker.position.fromArray(placementState.mirror_preview.position);
    anchorMarker.visible=!!draft&&!!anchorTargetRef.current;proposalMarker.visible=!!proposalState&&!!anchorTargetRef.current;
    if(draft)anchorMarker.position.fromArray(draft.position);
    if(proposalState)proposalMarker.position.fromArray(proposalState.position);
    const fingerQc=!!anchorTargetRef.current?.includes('middle-finger');anchorMarker.scale.setScalar(fingerQc?.55:1);proposalMarker.scale.setScalar(fingerQc?.5:1);
-   controls.enableRotate=amount<.8;controls.mouseButtons.LEFT=amount<.8?T.MOUSE.ROTATE:T.MOUSE.PAN;controls.touches.ONE=amount<.8?T.TOUCH.ROTATE:T.TOUCH.PAN;ground.visible=platform.visible=ring.visible=innerRing.visible=amount<.5&&!s.isolate;markers.visible=amount>.75;const nextShowAcupoints=showAcupointsRef.current&&acupointCoordinates.length>0&&amount<.45&&!s.isolate&&!anchorTargetRef.current;if(nextShowAcupoints!==lastShowAcupoints){lastShowAcupoints=nextShowAcupoints;dirty=true;}acupointMarkers.visible=nextShowAcupoints;controls.autoRotate=s.rotate&&!s.isolate&&amount<.4&&!anchorTargetRef.current;controls.autoRotateSpeed=.65;controls.update();if(controls.autoRotate)dirty=true;
+   controls.enableRotate=amount<.8;controls.mouseButtons.LEFT=amount<.8?T.MOUSE.ROTATE:T.MOUSE.PAN;controls.touches.ONE=amount<.8?T.TOUCH.ROTATE:T.TOUCH.PAN;ground.visible=platform.visible=ring.visible=innerRing.visible=amount<.5&&!s.isolate;markers.visible=amount>.75;const nextShowAcupoints=(placementModeRef.current||showAcupointsRef.current)&&markerRecords.length>0&&amount<.45&&!s.isolate&&!anchorTargetRef.current;if(nextShowAcupoints!==lastShowAcupoints){lastShowAcupoints=nextShowAcupoints;dirty=true;}acupointMarkers.visible=nextShowAcupoints;flaggedMarkers.visible=nextShowAcupoints&&flaggedGeometry.drawRange.count>0;controls.autoRotate=s.rotate&&!s.isolate&&amount<.4&&!anchorTargetRef.current&&!placementModeRef.current;controls.autoRotateSpeed=.65;controls.update();if(controls.autoRotate)dirty=true;
    if(dirty){renderer.render(scene,camera);targets=[];if(amount>.45){const hasSolid=atlas.parts.some((p,i)=>p.system!=='integumentary'&&data[i*4+3]>.5);atlas.parts.forEach((p,i)=>{if(data[i*4+3]<.5||(hasSolid&&p.system==='integumentary'))return;let left=Infinity,right=-Infinity,top=Infinity,bottom=-Infinity;for(let corner=0;corner<8;corner++){projected.set(p.bounds[(corner&1)?1:0][0]+data[i*4],p.bounds[(corner&2)?1:0][1]+data[i*4+1],p.bounds[(corner&4)?1:0][2]+data[i*4+2]).project(camera);const x=(projected.x+1)*el.clientWidth/2,y=(1-projected.y)*el.clientHeight/2;left=Math.min(left,x);right=Math.max(right,x);top=Math.min(top,y);bottom=Math.max(bottom,y);}projected.copy(centers[i]).add(new T.Vector3(data[i*4],data[i*4+1],data[i*4+2])).project(camera);if(projected.z< -1||projected.z>1)return;targets.push({index:i,x:(projected.x+1)*el.clientWidth/2,y:(1-projected.y)*el.clientHeight/2,left,right,top,bottom});});}dirty=false;}
 
   };animate();
   const contextLost=(e:Event)=>{e.preventDefault();onError('The 3D session was paused by your device. Reload to continue.');};renderer.domElement.addEventListener('webglcontextlost',contextLost);
-  return()=>{disposed=true;abort.abort();cancelAnimationFrame(frame);observer.disconnect();controls.dispose();acupointTexture.dispose();acupointGeometry.dispose();acupointMaterial.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());scene.traverse(o=>{if(o instanceof T.Mesh&&!geometries.includes(o.geometry)){o.geometry.dispose();const ms=Array.isArray(o.material)?o.material:[o.material];ms.forEach(m=>m.dispose());}});env.dispose();partTexture.dispose();selectionTexture.dispose();markerGeometry.dispose();markerMaterial.dispose();acupointGeometry.dispose();acupointMaterial.dispose();hover.remove();renderer.dispose();renderer.domElement.remove();};
- },[atlas,acupointCoordinates]);
+  return()=>{disposed=true;abort.abort();cancelAnimationFrame(frame);observer.disconnect();controls.dispose();acupointTexture.dispose();flaggedTexture.dispose();acupointGeometry.dispose();flaggedGeometry.dispose();acupointMaterial.dispose();flaggedMaterial.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());scene.traverse(o=>{if(o instanceof T.Mesh&&!geometries.includes(o.geometry)){o.geometry.dispose();const ms=Array.isArray(o.material)?o.material:[o.material];ms.forEach(m=>m.dispose());}});env.dispose();partTexture.dispose();selectionTexture.dispose();markerGeometry.dispose();markerMaterial.dispose();hover.remove();renderer.dispose();renderer.domElement.remove();};
+ },[atlas]);
  return <div className="scene" ref={host}/>;
 }
