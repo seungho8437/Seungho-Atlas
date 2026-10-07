@@ -12,6 +12,8 @@ function validate(source,render){
  const errors=[],warns=[],seen=new Set();
  if(source.schema_version!==1)errors.push(issue('SCHEMA',null,'schema_version must be 1'));
  if(source.mesh_binding?.atlas_sha256!==binding.hash.atlas_sha256)errors.push(issue('HASH_MISMATCH',null,'source atlas_sha256 differs from atlas.hash.json'));
+ if(source.mesh_binding?.skin_part_id!==binding.skin.id)errors.push(issue('SKIN_BINDING',null,'source skin_part_id differs from atlas.hash.json'));
+ const frame=source.mesh_binding?.frame;if(frame?.units!=='m'||frame?.left!=='+x'||frame?.anterior!=='+z'||frame?.up!=='+y')errors.push(issue('FRAME_BINDING',null,'source frame must be m / left +x / anterior +z / up +y'));
  if(source.mesh_binding?.skin_part_id!==binding.skin.id)errors.push(issue('SKIN_ID',null,'skin_part_id differs from atlas'));
  for(const p of source.points??[]){
   const def=defs.get(p.id);
@@ -32,6 +34,11 @@ function validate(source,render){
   if(p.side==='midline'&&Math.abs(p.position[0]-binding.midlineX)>.005)errors.push(issue('MIDLINE',p.id,'midline point exceeds 5 mm from midline_x'));
  }
  if(render.mesh_binding?.atlas_sha256!==binding.hash.atlas_sha256)errors.push(issue('RENDER_HASH',null,'render atlas_sha256 differs from atlas.hash.json'));
+ try{
+  const expected=buildRenderRegistry(source,acupoints,binding,'VALIDATION');
+  const comparable=x=>({schema_version:x.schema_version,mesh_binding:x.mesh_binding,midline_x:x.midline_x,counts:x.counts,points:x.points});
+  if(JSON.stringify(comparable(expected))!==JSON.stringify(comparable(render)))errors.push(issue('RENDER_DRIFT',null,'acupoint-render.json does not match a deterministic build from the source placements'));
+ }catch(e){if(!errors.some(x=>x.code==='HASH_MISMATCH'))errors.push(issue('RENDER_BUILD',null,e.message));}
  for(const p of render.points??[])if(p.origin==='mirrored'&&p.snap_distance_m>.003){
   if(p.status!=='FLAGGED')errors.push(issue('MIRROR_FLAG',p.id,'mirror snap >3 mm must be FLAGGED'));
   warns.push(issue('MIRROR_SNAP',p.id,'mirror snap '+(p.snap_distance_m*1000).toFixed(2)+' mm'));
