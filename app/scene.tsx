@@ -140,7 +140,7 @@ export default function AnatomyScene({atlas,state,acupointRender,showAcupoints,v
    }
    return bestHit&&bestPartIndex>=0?{partIndex:bestPartIndex,hit:bestHit}:null;
   };
-  const skinPartIndex=atlas.parts.findIndex(p=>p.id==='FJ2810'),skinPart=skinPartIndex>=0?atlas.parts[skinPartIndex]:null,midlineX=skinPart?(skinPart.bounds[0][0]+skinPart.bounds[1][0])/2:0;
+  const skinPartIndex=atlas.parts.findIndex(p=>p.id==='FJ2810'),midlineX=0;
   const closestSkinSurface=(worldPoint:T.Vector3)=>{
    const mesh=skinPartIndex>=0?pickers[skinPartIndex]:undefined;if(!mesh)return null;const geometry=mesh.geometry,index=geometry.index,position=geometry.getAttribute('position');if(!index||!position)return null;
    const local=mesh.worldToLocal(worldPoint.clone()),a=new T.Vector3(),b=new T.Vector3(),c=new T.Vector3(),q=new T.Vector3(),best=new T.Vector3(),triObj=new T.Triangle(),bary=new T.Vector3(),bestBary=new T.Vector3();let bestTri=-1,bestD=Infinity;
@@ -275,7 +275,8 @@ export default function AnatomyScene({atlas,state,acupointRender,showAcupoints,v
   const clock=new T.Clock();let lastExtent=-1,lastShowAcupoints=showAcupointsRef.current,lastDetectorKey='',lastMarkerVersion=-1,lastPlacementMode=placementModeRef.current;
   const animate=()=>{
    if(disposed)return;frame=requestAnimationFrame(animate);const dt=Math.min(clock.getDelta(),.05),s=latest.current;
-   const placementChanged=lastPlacementMode!==placementModeRef.current;if(placementChanged){lastPlacementMode=placementModeRef.current;layoutKey='';}\n   const changed=lastState?.visible!==s.visible||lastState?.selected!==s.selected||lastState?.isolate!==s.isolate;
+   const placementChanged=lastPlacementMode!==placementModeRef.current;if(placementChanged){lastPlacementMode=placementModeRef.current;layoutKey='';}
+   const changed=lastState?.visible!==s.visible||lastState?.selected!==s.selected||lastState?.isolate!==s.isolate;
    if(markerVersionRef.current!==lastMarkerVersion){
     lastMarkerVersion=markerVersionRef.current;const meridians=new Set(visibleMeridiansRef.current);
     const local=placementPointsRef.current.filter(p=>p.status!=='SKIPPED'&&p.position).map(p=>({id:p.id,side:p.side,status:p.status as 'PLACED'|'FLAGGED',origin:'placed' as const,position:p.position!}));
