@@ -3,7 +3,7 @@ import {readdirSync,readFileSync,writeFileSync} from 'node:fs';
 import {join} from 'node:path';
 
 const modelDir='public/models';
-const bodyFiles=readdirSync(modelDir).filter(name=>/^body-\\d+\\.bin$/.test(name)).sort((a,b)=>Number(a.match(/\\d+/)?.[0])-Number(b.match(/\\d+/)?.[0]));
+const bodyFiles=readdirSync(modelDir).filter(name=>/^body-\d+\.bin$/.test(name)).sort((a,b)=>Number(a.match(/\d+/)?.[0])-Number(b.match(/\\d+/)?.[0]));
 const files=['atlas.json',...bodyFiles];
 const hash=createHash('sha256');
 for(const name of files)hash.update(readFileSync(join(modelDir,name)));
