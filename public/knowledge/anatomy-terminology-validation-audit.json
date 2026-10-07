@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "sourceId": "KAA_TERMINOLOGY_6",
+  "scope": "Korean-English matching only",
+  "totalRecords": 3432,
+  "directVerified": 697,
+  "derivedFromKaaComponent": 11,
+  "derivedFromKaaLateralBase": 754,
+  "safeLateralCandidates": 754,
+  "changedFieldCount": 0,
+  "changed": [],
+  "hardFailureCount": 0,
+  "hardFailures": []
+}

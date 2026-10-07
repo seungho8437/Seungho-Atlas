@@ -1,0 +1,37 @@
+name: Validate C v3 Vertical Slice Stage 2
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/korean-tcm-knowledge]
+    paths:
+      - 'scripts/cv3/execute_vertical_slice_stage2.py'
+      - 'scripts/cv3/validate_vertical_slice_stage2.py'
+      - 'scripts/cv3/stage2_semantic.py'
+      - 'artifacts/c-v3/vertical-slice-v1/approved-inputs.lock.json'
+      - '.github/workflows/validate-c-v3-vertical-slice-stage2.yml'
+permissions:
+  contents: read
+jobs:
+  execute-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: feature/korean-tcm-knowledge}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Build approved Stage 1 substrate
+        run: python scripts/cv3/build_stage1_substrate.py --out .tmp/c-v3-slice/spatial-substrate.json
+      - name: Regenerate approved review/calibration inputs
+        run: python scripts/cv3/build_vertical_slice_review.py --substrate .tmp/c-v3-slice/spatial-substrate.json --out-dir .tmp/c-v3-slice/review
+      - name: Recheck review/solver registry identity
+        run: python scripts/cv3/validate_vertical_slice_review_identity.py --substrate .tmp/c-v3-slice/spatial-substrate.json --payload .tmp/c-v3-slice/review/registry-geometry-payload.json --html .tmp/c-v3-slice/review/surface-registry-review.html --out .tmp/c-v3-slice/review/review-identity-validation.json
+      - name: Execute Stage 2 symbolic semantics
+        run: python scripts/cv3/execute_vertical_slice_stage2.py --substrate .tmp/c-v3-slice/spatial-substrate.json --calibration .tmp/c-v3-slice/review/calibration-draft.json --out .tmp/c-v3-slice/stage2-execution.json
+      - name: Independent Stage 2 validation
+        run: python scripts/cv3/validate_vertical_slice_stage2.py .tmp/c-v3-slice/stage2-execution.json --report .tmp/c-v3-slice/stage2-validation.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: c-v3-vertical-slice-stage2
+          path: .tmp/c-v3-slice/
+          if-no-files-found: error

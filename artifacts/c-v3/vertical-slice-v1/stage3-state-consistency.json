@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-vertical-slice-v1-stage3-state-consistency",
+  "status": "PASS",
+  "checks": 10,
+  "errors": 0,
+  "check_results": [
+    {
+      "name": "stage3_summary_status",
+      "status": "PASS",
+      "detail": "AUTOMATED_VALIDATED_HUMAN_AUDIT_PENDING"
+    },
+    {
+      "name": "validation_pass",
+      "status": "PASS",
+      "detail": {
+        "status": "PASS",
+        "checks": 89,
+        "errors": 0
+      }
+    },
+    {
+      "name": "result_lock_pending",
+      "status": "PASS",
+      "detail": "AUTOMATED_VALIDATED_HUMAN_AUDIT_PENDING"
+    },
+    {
+      "name": "non_deployable",
+      "status": "PASS",
+      "detail": {
+        "summary": false,
+        "lock": false
+      }
+    },
+    {
+      "name": "production_write_false",
+      "status": "PASS",
+      "detail": {
+        "summary": false,
+        "lock": false
+      }
+    },
+    {
+      "name": "stage4_not_started",
+      "status": "PASS",
+      "detail": {
+        "summary": "NOT_STARTED",
+        "lock": false
+      }
+    },
+    {
+      "name": "coordinates_zero",
+      "status": "PASS",
+      "detail": {
+        "summary": 0,
+        "validation": 0
+      }
+    },
+    {
+      "name": "legacy_zero",
+      "status": "PASS",
+      "detail": {
+        "summary": 0,
+        "validation": 0
+      }
+    },
+    {
+      "name": "watchpoint_zero",
+      "status": "PASS",
+      "detail": {
+        "suppressed_executable_operand_count": 0,
+        "suppressed_status_aggregation_influence_count": 0,
+        "suppressed_only_resolved_path_count": 0
+      }
+    },
+    {
+      "name": "all_negative_tests_pass",
+      "status": "PASS",
+      "detail": {
+        "forged_coordinate_rejected": true,
+        "duplicate_side_rejected": true,
+        "over_budget_projection_rejected": true,
+        "missing_trace_rejected": true,
+        "stage2_unresolved_coordinate_injection_rejected": true,
+        "suppressed_operand_injection_rejected": true
+      }
+    }
+  ],
+  "current_state": {
+    "stage3": "AUTOMATED_VALIDATED_HUMAN_AUDIT_PENDING",
+    "human_audit": "PENDING",
+    "generated_points": 0,
+    "generated_coordinates": 0,
+    "unresolved_stage3": 4,
+    "blocked_by_stage2": 16,
+    "deployable": false,
+    "production_coordinate_dataset_written": false,
+    "legacy_c_coordinate_reference_count": 0,
+    "stage4": "NOT_STARTED"
+  }
+}

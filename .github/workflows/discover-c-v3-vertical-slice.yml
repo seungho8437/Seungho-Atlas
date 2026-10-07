@@ -1,0 +1,23 @@
+name: Discover C v3 vertical slice cohort
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/korean-tcm-knowledge]
+    paths:
+      - 'scripts/cv3/discover_vertical_slice.py'
+      - '.github/workflows/discover-c-v3-vertical-slice.yml'
+permissions:
+  contents: read
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: feature/korean-tcm-knowledge}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python scripts/cv3/discover_vertical_slice.py --out .tmp/c-v3-slice/cohort-discovery.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v3-vertical-slice-discovery
+          path: .tmp/c-v3-slice/

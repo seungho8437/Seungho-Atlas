@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "calibrationEndpointCount": 32,
+  "calibrationEndpoints": {
+    "resolvedAtlasGeometry": 6,
+    "modelDerivedRequired": 15,
+    "reviewRequired": 11,
+    "unmappedDefinition": 0
+  },
+  "calibrationCount": 22,
+  "calibrationGeometryReady": 4,
+  "calibrationGeometryNotReady": 18,
+  "acupointEntityRecords": 361,
+  "anatomyEntities": 578,
+  "hardLandmarkUsableEntities": 297,
+  "proxyGeometryEntities": 281,
+  "invariants": {
+    "noProxyUsedAsHardLandmark": true,
+    "noFabricatedCoordinateForDerivedLandmark": true,
+    "everyCalibrationEndpointAudited": true,
+    "canonicalCoordinatesOnlyFromActualModelVerticesOrCentroids": true
+  }
+}

@@ -1,0 +1,41 @@
+name: Validate C v3 Stage 2 semantic census
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/korean-tcm-knowledge]
+    paths:
+      - 'scripts/cv3/stage2_semantic.py'
+      - 'scripts/cv3/build_stage2_census.py'
+      - '.github/workflows/validate-c-v3-stage2.yml'
+permissions:
+  contents: read
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/korean-tcm-knowledge
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile Stage 2 framework
+        run: python -m py_compile scripts/cv3/stage2_semantic.py scripts/cv3/build_stage2_census.py
+      - name: Build full B v2.1 semantic census
+        run: python scripts/cv3/build_stage2_census.py --out .tmp/c-v3-stage2/semantic-census.json
+      - name: Guard family-level executor registry
+        run: |
+          python - <<'PY'
+          import pathlib
+          src=pathlib.Path('scripts/cv3/stage2_semantic.py').read_text()
+          assert 'SemanticRegistry' in src
+          assert 'ExecStatus' in src
+          for bad in ('LU1','HT7','GB26','LI7'):
+              assert bad not in src
+          print('Stage 2 family-registry guard: PASS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v3-stage2-census
+          path: .tmp/c-v3-stage2/
+          if-no-files-found: error

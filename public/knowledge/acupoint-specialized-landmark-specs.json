@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 1,
+  "title": "Specialized detector and manual-anchor specification for unresolved acupoint calibration landmarks",
+  "principles": [
+    "No unresolved landmark receives a coordinate by generic anthropometric ratio alone.",
+    "Detector proposals and accepted landmark anchors are separate objects.",
+    "Manual anchors must lie on the body-surface mesh and carry explicit provenance and reviewer status.",
+    "Detector-derived anchors are not accepted automatically unless landmark-specific QC passes.",
+    "Bilateral landmarks require laterality checks and paired plausibility checks, but symmetry never overrides source anatomy.",
+    "All accepted anchors are tied to the exact atlas/model revision.",
+    "The explicit BodyParts3D Hair of head mesh may provide a segmentation-boundary proposal for hairline landmarks; the proposal must be projected to Skin and manually confirmed."
+  ],
+  "statuses": {
+    "detector": [
+      "not-applicable",
+      "candidate-only",
+      "requires-manual-confirmation",
+      "validated-for-this-model"
+    ],
+    "anchor": [
+      "missing",
+      "proposed",
+      "reviewed",
+      "accepted",
+      "rejected"
+    ]
+  },
+  "landmarks": [
+    {
+      "landmarkId": "midpoint-anterior-hairline",
+      "class": "soft-surface-boundary",
+      "primaryMethod": "segmentation-detector-with-manual-confirmation",
+      "detector": {
+        "type": "bodyparts3d-hair-boundary-to-skin-projection",
+        "status": "requires-manual-confirmation",
+        "requiredSignals": [
+          "BodyParts3D Hair of head mesh",
+          "BodyParts3D Skin mesh",
+          "hair-mesh surface boundary"
+        ],
+        "forbiddenFallbacks": [
+          "fixed cranial-height fraction",
+          "generic body-height ratio",
+          "blind bilateral mirroring"
+        ],
+        "output": "midpoint-anterior-hairline candidate derived from the explicit Hair of head mesh boundary and projected to Skin"
+      },
+      "manualAnchor": {
+        "geometryType": "point-on-surface",
+        "definition": "midpoint of the anterior hairline on the midsagittal plane",
+        "constraints": [
+          "midsagittal",
+          "anterior-scalp",
+          "on-surface"
+        ],
+        "requiredEvidence": [
+          "orthogonal front view",
+          "orthogonal lateral view",
+          "BodyParts3D Hair of head boundary visible at the proposed location",
+          "proposal projected to Skin surface"
+        ]
+      }
+    },
+    {
+      "landmarkId": "midpoint-posterior-hairline",
+      "class": "soft-surface-boundary",
+      "primaryMethod": "segmentation-detector-with-manual-confirmation",
+      "detector": {
+        "type": "bodyparts3d-hair-boundary-to-skin-projection",
+        "status": "requires-manual-confirmation",
+        "requiredSignals": [
+          "BodyParts3D Hair of head mesh",
+          "BodyParts3D Skin mesh",
+          "hair-mesh surface boundary"
+        ],
+        "forbiddenFallbacks": [
+          "fixed cranial-height fraction",
+          "generic body-height ratio",
+          "blind bilateral mirroring"
+        ],
+        "output": "midpoint-posterior-hairline candidate derived from the explicit Hair of head mesh boundary and projected to Skin"
+      },
+      "manualAnchor": {
+        "geometryType": "point-on-surface",
+        "definition": "midpoint of the posterior hairline on the midsagittal plane",
+        "constraints": [
+          "midsagittal",
+          "posterior-scalp",
+          "on-surface"
+        ],
+        "requiredEvidence": [
+          "orthogonal posterior view",
+          "orthogonal lateral view",
+          "BodyParts3D Hair of head boundary visible at the proposed location",
+          "proposal projected to Skin surface"
+        ]
+      }
+    },
+    {
+      "landmarkId": "left-anterior-hairline-corner",
+      "class": "soft-surface-boundary",
+      "laterality": "left",
+      "primaryMethod": "segmentation-detector-with-manual-confirmation",
+      "detector": {
+        "type": "bodyparts3d-hair-boundary-to-skin-projection",
+        "status": "requires-manual-confirmation",
+        "requiredSignals": [
+          "BodyParts3D Hair of head mesh",
+          "BodyParts3D Skin mesh",
+          "hair-mesh surface boundary"
+        ],
+        "forbiddenFallbacks": [
+          "fixed cranial-height fraction",
+          "generic body-height ratio",
+          "blind bilateral mirroring"
+        ],
+        "output": "left-anterior-hairline-corner candidate derived from the explicit Hair of head mesh boundary and projected to Skin"
+      },
+      "manualAnchor": {
+        "geometryType": "point-on-surface",
+        "definition": "left corner of the anterior hairline",
+        "constraints": [
+          "left",
+          "frontotemporal-boundary",
+          "on-surface"
+        ],
+        "requiredEvidence": [
+          "front view",
+          "left oblique view",
+          "BodyParts3D Hair of head boundary visible at the proposed location",
+          "proposal projected to Skin surface"
+        ]
+      }
+    },
+    {
+      "landmarkId": "right-anterior-hairline-corner",
+      "class": "soft-surface-boundary",
+      "laterality": "right",
+      "primaryMethod": "segmentation-detector-with-manual-confirmation",
+      "detector": {
+        "type": "bodyparts3d-hair-boundary-to-skin-projection",
+        "status": "requires-manual-confirmation",
+        "requiredSignals": [
+          "BodyParts3D Hair of head mesh",
+          "BodyParts3D Skin mesh",
+          "hair-mesh surface boundary"
+        ],
+        "forbiddenFallbacks": [
+          "fixed cranial-height fraction",
+          "generic body-height ratio",
+          "blind bilateral mirroring"
+        ],
+        "output": "right-anterior-hairline-corner candidate derived from the explicit Hair of head mesh boundary and projected to Skin"
+      },
+      "manualAnchor": {
+        "geometryType": "point-on-surface",
+        "definition": "right corner of the anterior hairline",
+        "constraints": [
+          "right",
+          "frontotemporal-boundary",
+          "on-surface"
+        ],
+        "requiredEvidence": [
+          "front view",
+          "right oblique view",
+          "BodyParts3D Hair of head boundary visible at the proposed location",
+          "proposal projected to Skin surface"
+        ]
+      }
+    },
+    {
+      "landmarkId": "left-nipple-center",
+      "class": "soft-tissue-surface-feature",
+      "laterality": "left",
+      "primaryMethod": "manual-anchor",
+      "detector": {
+        "type": "local-surface-feature-detector",
+        "status": "requires-manual-confirmation",
+        "requiredSignals": [
+          "explicit nipple/areola segmentation, texture, or trusted external annotation"
+        ],
+        "forbiddenFallbacks": [
+          "fixed fourth-intercostal placement",
+          "mirror right side blindly",
+          "breast-centroid approximation"
+        ],
+        "output": "left nipple-center candidate on skin"
+      },
+      "manualAnchor": {
+        "geometryType": "point-on-surface",
+        "definition": "center of the left nipple",
+        "constraints": [
+          "left",
+          "anterior-thorax",
+          "on-surface"
+        ],
+        "requiredEvidence": [
+          "front view",
+          "left oblique view"
+        ]
+      }
+    },
+    {
+      "landmarkId": "right-nipple-center",
+      "class": "soft-tissue-surface-feature",
+      "laterality": "right",
+      "primaryMethod": "manual-anchor",
+      "detector": {
+        "type": "local-surface-feature-detector",
+        "status": "requires-manual-confirmation",
+        "requiredSignals": [
+          "explicit nipple/areola segmentation, texture, or trusted external annotation"
+        ],
+        "forbiddenFallbacks": [
+          "fixed fourth-intercostal placement",
+          "mirror left side blindly",
+          "breast-centroid approximation"
+        ],
+        "output": "right nipple-center candidate on skin"
+      },
+      "manualAnchor": {
+        "geometryType": "point-on-surface",
+        "definition": "center of the right nipple",
+        "constraints": [
+          "right",
+          "anterior-thorax",
+          "on-surface"
+        ],
+        "requiredEvidence": [
+          "front view",
+          "right oblique view"
+        ]
+      }
+    },
+    {
+      "landmarkId": "umbilicus-center",
+      "class": "soft-tissue-surface-feature",
+      "primaryMethod": "manual-anchor",
+      "detector": {
+        "type": "local-depression-detector",
+        "status": "requires-manual-confirmation",
+        "requiredSignals": [
+          "anterior abdominal surface",
+          "local curvature/depression field",
+          "midsagittal proximity"
+        ],
+        "forbiddenFallbacks": [
+          "fixed body-height percentage",
+          "xiphoid-pubis midpoint without visible umbilicus"
+        ],
+        "output": "umbilical-depression candidate on anterior abdominal skin"
+      },
+      "manualAnchor": {
+        "geometryType": "point-on-surface",
+        "definition": "center of the umbilicus",
+        "constraints": [
+          "anterior-abdomen",
+          "near-midsagittal",
+          "on-surface"
+        ],
+        "requiredEvidence": [
+          "front view",
+          "lateral or oblique view showing local depression"
+        ]
+      }
+    },
+    {
+      "landmarkId": "radial-crease-proximal-interphalangeal-middle-finger",
+      "class": "joint-crease-surface-feature",
+      "primaryMethod": "specialized-detector-with-manual-confirmation",
+      "detector": {
+        "type": "joint-plane-surface-intersection",
+        "status": "requires-manual-confirmation",
+        "requiredSignals": [
+          "middle-finger proximal interphalangeal joint geometry",
+          "radial side of digit",
+          "skin surface"
+        ],
+        "forbiddenFallbacks": [
+          "fixed fraction of finger length without joint geometry"
+        ],
+        "output": "radial skin intersection at PIP joint level"
+      },
+      "manualAnchor": {
+        "geometryType": "point-on-surface",
+        "definition": "radial end of the proximal interphalangeal crease of the middle finger used for F-cun measurement",
+        "constraints": [
+          "middle-finger",
+          "PIP-level",
+          "radial-side",
+          "on-surface"
+        ],
+        "requiredEvidence": [
+          "palmar view",
+          "radial oblique view"
+        ]
+      }
+    },
+    {
+      "landmarkId": "radial-crease-distal-interphalangeal-middle-finger",
+      "class": "joint-crease-surface-feature",
+      "primaryMethod": "specialized-detector-with-manual-confirmation",
+      "detector": {
+        "type": "joint-plane-surface-intersection",
+        "status": "requires-manual-confirmation",
+        "requiredSignals": [
+          "middle-finger distal interphalangeal joint geometry",
+          "radial side of digit",
+          "skin surface"
+        ],
+        "forbiddenFallbacks": [
+          "fixed fraction of finger length without joint geometry"
+        ],
+        "output": "radial skin intersection at DIP joint level"
+      },
+      "manualAnchor": {
+        "geometryType": "point-on-surface",
+        "definition": "radial end of the distal interphalangeal crease of the middle finger used for F-cun measurement",
+        "constraints": [
+          "middle-finger",
+          "DIP-level",
+          "radial-side",
+          "on-surface"
+        ],
+        "requiredEvidence": [
+          "palmar view",
+          "radial oblique view"
+        ]
+      }
+    }
+  ],
+  "acceptancePolicy": {
+    "acceptedAnchorRequiredFields": [
+      "landmarkId",
+      "modelRevision",
+      "method",
+      "position",
+      "surfaceProjection",
+      "reviewStatus",
+      "evidence",
+      "provenance"
+    ],
+    "reviewStatusToUseAsCalibration": [
+      "accepted"
+    ],
+    "detectorOnlyMayNotCalibrate": true,
+    "positionTolerance": {
+      "surfaceDistanceMaxModelUnits": 0.01,
+      "pairedLateralityMustMatch": true,
+      "pairedSymmetryIsSupportingOnly": true
+    }
+  }
+}

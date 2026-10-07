@@ -1,0 +1,435 @@
+{
+  "schemaVersion": 1,
+  "reviewPerspective": "objective pre-geometry review for acceptability to a Korean-medicine/acupuncture-trained reviewer",
+  "standardAcupointCount": 361,
+  "sourceIntegrity": {
+    "all361Covered": true,
+    "exactReconstruction": true,
+    "uncoveredCharacterCount": 0,
+    "assessment": "acceptable"
+  },
+  "semanticPipeline": {
+    "entityResolutionCoverage": 361,
+    "measurementFrameCoverage": 361,
+    "constraintAtomCoverage": 361,
+    "solverPlanCoverage": 361,
+    "noGlobalBodyHeightCun": true,
+    "assessment": "acceptable-with-explicit-model-limitations"
+  },
+  "measurementInterpretation": {
+    "directHighConfidence": 186,
+    "fingerMethodBound": 11,
+    "provisionalRegionalReferences": 40,
+    "assessment": "not-acceptable-as-fully-expert-validated",
+    "rule": "Provisional regional references may be used to plan geometry but may not be represented as WHO-direct or automatically validated."
+  },
+  "finalVerdict": "acceptable-to-proceed-to-landmark-geometry-resolution-with-provisional-bindings-gated",
+  "limitations": [
+    "This is not a substitute for signed human expert review.",
+    "Regional proportional-cun bindings not explicitly anchored by the point text remain provisional.",
+    "Model-derived depressions, folds, hairlines and other soft-tissue landmarks require separate geometric or manual validation."
+  ],
+  "concernCount": 40,
+  "concerns": [
+    {
+      "acupointId": "ST12",
+      "frameId": "ST12:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "adjacent-anterior-trunk-reference",
+      "evidence": "목 앞쪽·빗장뼈 부위 횡방향",
+      "rationale": "The source is at the anterior root of the neck adjacent to the thorax; WHO anterior thoracic transverse reference is the non-contradictory proportional frame."
+    },
+    {
+      "acupointId": "ST19",
+      "frameId": "ST19:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "ST20",
+      "frameId": "ST20:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "ST21",
+      "frameId": "ST21:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "ST22",
+      "frameId": "ST22:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "ST23",
+      "frameId": "ST23:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "ST24",
+      "frameId": "ST24:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "ST25",
+      "frameId": "ST25:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "ST26",
+      "frameId": "ST26:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "ST27",
+      "frameId": "ST27:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "ST28",
+      "frameId": "ST28:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "ST29",
+      "frameId": "ST29:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "ST30",
+      "frameId": "ST30:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "샅고랑/앞정중선 가쪽",
+      "rationale": "Anterior pelvic offset from the anterior median line uses the WHO anterior-trunk transverse B-cun reference."
+    },
+    {
+      "acupointId": "SP13",
+      "frameId": "SP13:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "SP14",
+      "frameId": "SP14:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "SP15",
+      "frameId": "SP15:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "SP16",
+      "frameId": "SP16:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "SI9",
+      "frameId": "SI9:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "UPPER_ARM_AXILLARY_TO_CUBITAL",
+      "basis": "adjacent-upper-limb-reference",
+      "evidence": "어깨/상완 이행부",
+      "rationale": "Use the WHO axillary-fold to cubital-crease upper-limb proportional frame; source meaning is longitudinal upper-limb distance."
+    },
+    {
+      "acupointId": "BL27",
+      "frameId": "BL27:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "basis": "posterior-trunk-transverse-reference",
+      "evidence": "엉치/뒤정중계열 가쪽",
+      "rationale": "Posterior pelvic offsets continue the posterior trunk transverse B-cun convention; WHO back/lumbar table supplies the 6 B-cun transverse reference."
+    },
+    {
+      "acupointId": "BL28",
+      "frameId": "BL28:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "basis": "posterior-trunk-transverse-reference",
+      "evidence": "엉치/뒤정중계열 가쪽",
+      "rationale": "Posterior pelvic offsets continue the posterior trunk transverse B-cun convention; WHO back/lumbar table supplies the 6 B-cun transverse reference."
+    },
+    {
+      "acupointId": "BL29",
+      "frameId": "BL29:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "basis": "posterior-trunk-transverse-reference",
+      "evidence": "엉치/뒤정중계열 가쪽",
+      "rationale": "Posterior pelvic offsets continue the posterior trunk transverse B-cun convention; WHO back/lumbar table supplies the 6 B-cun transverse reference."
+    },
+    {
+      "acupointId": "BL30",
+      "frameId": "BL30:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "basis": "posterior-trunk-transverse-reference",
+      "evidence": "엉치/뒤정중계열 가쪽",
+      "rationale": "Posterior pelvic offsets continue the posterior trunk transverse B-cun convention; WHO back/lumbar table supplies the 6 B-cun transverse reference."
+    },
+    {
+      "acupointId": "BL35",
+      "frameId": "BL35:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "basis": "posterior-trunk-transverse-reference",
+      "evidence": "엉치/뒤정중계열 가쪽",
+      "rationale": "Posterior pelvic offsets continue the posterior trunk transverse B-cun convention; WHO back/lumbar table supplies the 6 B-cun transverse reference."
+    },
+    {
+      "acupointId": "BL38",
+      "frameId": "BL38:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS",
+      "basis": "knee-leg-reference",
+      "evidence": "오금주름에서 몸쪽/먼쪽",
+      "rationale": "WHO lower-limb table uses the popliteal crease as the proximal anchor of the 16 B-cun lateral-leg interval."
+    },
+    {
+      "acupointId": "BL53",
+      "frameId": "BL53:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "basis": "posterior-trunk-transverse-reference",
+      "evidence": "엉치/뒤정중계열 가쪽",
+      "rationale": "Posterior pelvic offsets continue the posterior trunk transverse B-cun convention; WHO back/lumbar table supplies the 6 B-cun transverse reference."
+    },
+    {
+      "acupointId": "BL54",
+      "frameId": "BL54:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "basis": "posterior-trunk-transverse-reference",
+      "evidence": "엉치/뒤정중계열 가쪽",
+      "rationale": "Posterior pelvic offsets continue the posterior trunk transverse B-cun convention; WHO back/lumbar table supplies the 6 B-cun transverse reference."
+    },
+    {
+      "acupointId": "KI5",
+      "frameId": "KI5:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE",
+      "basis": "regional-WHO-reference",
+      "evidence": "발목/발의 짧은 국소 B-cun",
+      "rationale": "WHO lower-limb table supplies medial malleolus to sole as the explicit ankle-foot proportional interval."
+    },
+    {
+      "acupointId": "KI11",
+      "frameId": "KI11:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "KI12",
+      "frameId": "KI12:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "KI13",
+      "frameId": "KI13:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "KI14",
+      "frameId": "KI14:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "KI15",
+      "frameId": "KI15:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "KI16",
+      "frameId": "KI16:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "KI17",
+      "frameId": "KI17:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "KI18",
+      "frameId": "KI18:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "KI19",
+      "frameId": "KI19:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "KI20",
+      "frameId": "KI20:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "KI21",
+      "frameId": "KI21:MF2",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "앞정중선/배꼽에서 가쪽",
+      "rationale": "WHO provides an 8 B-cun anterior-trunk transverse reference between nipples; the source asks only for a lateral B-cun scalar from the anterior median line, without a contradictory local interval."
+    },
+    {
+      "acupointId": "TE10",
+      "frameId": "TE10:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "UPPER_ARM_AXILLARY_TO_CUBITAL",
+      "basis": "adjacent-upper-limb-reference",
+      "evidence": "팔꿈치에서 몸쪽/위팔 방향",
+      "rationale": "The source moves from the elbow into the upper arm, matching the WHO 9 B-cun upper-arm interval."
+    },
+    {
+      "acupointId": "LR12",
+      "frameId": "LR12:MF1",
+      "severity": "review-required",
+      "issue": "WHO source text does not explicitly identify both endpoints of the selected proportional interval; the binding is a regional implementation choice, not a direct statement of the point location.",
+      "selectedCalibrationId": "CHEST_NIPPLE_TO_NIPPLE",
+      "basis": "anterior-trunk-transverse-reference",
+      "evidence": "샅고랑/앞정중선 가쪽",
+      "rationale": "Anterior pelvic offset from the anterior median line uses the WHO anterior-trunk transverse B-cun reference."
+    }
+  ]
+}

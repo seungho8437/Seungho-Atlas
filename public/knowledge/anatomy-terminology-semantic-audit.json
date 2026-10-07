@@ -1,0 +1,2312 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-04T13:35:43.503Z",
+  "source": "대한해부학회 해부학용어 제6판 + atlas/FMA semantic inheritance",
+  "totalRecords": 3432,
+  "sourceConfirmedBaseCount": 22,
+  "pairedLaterality": 732,
+  "canonicalizedLaterality": 254,
+  "fieldChangeCount": 326,
+  "changes": [
+    {
+      "id": "FMA22765",
+      "field": "nameKo",
+      "before": "가슴가시근",
+      "after": "등가시근",
+      "reason": "KAA-base-correction"
+    },
+    {
+      "id": "FMA22846",
+      "field": "nameKo",
+      "before": "가슴가시사이근",
+      "after": "등가시사이근",
+      "reason": "KAA-base-correction"
+    },
+    {
+      "id": "FMA37452",
+      "field": "nameKo",
+      "before": "덧굽힘근",
+      "after": "발바닥네모근",
+      "reason": "KAA-base-correction"
+    },
+    {
+      "id": "FMA37452",
+      "field": "legacyKo",
+      "before": "부굴근",
+      "after": "족저방형근",
+      "reason": "KAA-base-correction"
+    },
+    {
+      "id": "FMA37452",
+      "field": "hanja",
+      "before": "副屈筋",
+      "after": "足底方形筋",
+      "reason": "KAA-base-correction"
+    },
+    {
+      "id": "FMA46621",
+      "field": "nameKo",
+      "before": "위인두조임근",
+      "after": "위인두수축근",
+      "reason": "KAA-base-correction"
+    },
+    {
+      "id": "FMA46622",
+      "field": "nameKo",
+      "before": "중간인두조임근",
+      "after": "중간인두수축근",
+      "reason": "KAA-base-correction"
+    },
+    {
+      "id": "FMA46623",
+      "field": "nameKo",
+      "before": "아래인두조임근",
+      "after": "아래인두수축근",
+      "reason": "KAA-base-correction"
+    },
+    {
+      "id": "FMA3992",
+      "field": "nameKo",
+      "before": "오른갑상목줄기",
+      "after": "오른갑상목동맥",
+      "reason": "laterality-from-base:FMA3990"
+    },
+    {
+      "id": "FMA4057",
+      "field": "nameKo",
+      "before": "오른등쪽어깨뼈동맥",
+      "after": "오른등쪽어깨동맥",
+      "reason": "laterality-from-base:FMA79658"
+    },
+    {
+      "id": "FMA4084",
+      "field": "nameKo",
+      "before": "왼갑상목줄기",
+      "after": "왼갑상목동맥",
+      "reason": "laterality-from-base:FMA3990"
+    },
+    {
+      "id": "FMA4086",
+      "field": "nameKo",
+      "before": "왼갈비목줄기",
+      "after": "왼목갈비동맥",
+      "reason": "laterality-from-base:FMA10636"
+    },
+    {
+      "id": "FMA5039",
+      "field": "nameKo",
+      "before": "오른갈비목줄기",
+      "after": "오른목갈비동맥",
+      "reason": "laterality-from-base:FMA10636"
+    },
+    {
+      "id": "FMA8620",
+      "field": "nameKo",
+      "before": "오른앞분절동맥",
+      "after": "오른앞구역동맥",
+      "reason": "laterality-from-base:FMA13278"
+    },
+    {
+      "id": "FMA8634",
+      "field": "nameKo",
+      "before": "왼끝분절동맥",
+      "after": "왼꼭대기구역동맥",
+      "reason": "laterality-from-base:FMA8707"
+    },
+    {
+      "id": "FMA8635",
+      "field": "nameKo",
+      "before": "왼뒤분절동맥",
+      "after": "왼뒤구역동맥",
+      "reason": "laterality-from-base:FMA13280"
+    },
+    {
+      "id": "FMA8642",
+      "field": "nameKo",
+      "before": "왼위분절동맥",
+      "after": "왼위구역동맥",
+      "reason": "laterality-from-base:FMA8714"
+    },
+    {
+      "id": "FMA8644",
+      "field": "nameKo",
+      "before": "왼안쪽바닥분절동맥",
+      "after": "왼안쪽바닥구역동맥",
+      "reason": "laterality-from-base:FMA8716"
+    },
+    {
+      "id": "FMA8645",
+      "field": "nameKo",
+      "before": "왼앞바닥분절동맥",
+      "after": "왼앞바닥구역동맥",
+      "reason": "laterality-from-base:FMA8717"
+    },
+    {
+      "id": "FMA8646",
+      "field": "nameKo",
+      "before": "왼가쪽바닥분절동맥",
+      "after": "왼가쪽바닥구역동맥",
+      "reason": "laterality-from-base:FMA8718"
+    },
+    {
+      "id": "FMA8647",
+      "field": "nameKo",
+      "before": "왼뒤바닥분절동맥",
+      "after": "왼뒤바닥구역동맥",
+      "reason": "laterality-from-base:FMA8719"
+    },
+    {
+      "id": "FMA10552",
+      "field": "nameKo",
+      "before": "왼등쪽어깨뼈동맥",
+      "after": "왼등쪽어깨동맥",
+      "reason": "laterality-from-base:FMA79658"
+    },
+    {
+      "id": "FMA10680",
+      "field": "nameKo",
+      "before": "왼아래갑상샘동맥",
+      "after": "왼아래갑상동맥",
+      "reason": "laterality-from-base:FMA10662"
+    },
+    {
+      "id": "FMA10697",
+      "field": "nameKo",
+      "before": "오른아래갑상샘동맥",
+      "after": "오른아래갑상동맥",
+      "reason": "laterality-from-base:FMA10662"
+    },
+    {
+      "id": "FMA13279",
+      "field": "nameKo",
+      "before": "왼앞분절동맥",
+      "after": "왼앞구역동맥",
+      "reason": "laterality-from-base:FMA13278"
+    },
+    {
+      "id": "FMA13322",
+      "field": "nameKo",
+      "before": "오른쪽 빗장뼈",
+      "after": "오른빗장뼈",
+      "reason": "laterality-from-base:FMA13321"
+    },
+    {
+      "id": "FMA13322",
+      "field": "legacyKo",
+      "before": "우측 쇄골",
+      "after": "우쇄골",
+      "reason": "laterality-from-base:FMA13321"
+    },
+    {
+      "id": "FMA13323",
+      "field": "nameKo",
+      "before": "왼쪽 빗장뼈",
+      "after": "왼빗장뼈",
+      "reason": "laterality-from-base:FMA13321"
+    },
+    {
+      "id": "FMA13323",
+      "field": "legacyKo",
+      "before": "좌측 쇄골",
+      "after": "좌쇄골",
+      "reason": "laterality-from-base:FMA13321"
+    },
+    {
+      "id": "FMA13336",
+      "field": "nameKo",
+      "before": "오른바깥빗",
+      "after": "오른배바깥빗근",
+      "reason": "laterality-from-base:FMA13335"
+    },
+    {
+      "id": "FMA13336",
+      "field": "legacyKo",
+      "before": "우외사",
+      "after": "우외복사근",
+      "reason": "laterality-from-base:FMA13335"
+    },
+    {
+      "id": "FMA13336",
+      "field": "hanja",
+      "before": "右外斜",
+      "after": "右外腹斜筋",
+      "reason": "laterality-from-base:FMA13335"
+    },
+    {
+      "id": "FMA13337",
+      "field": "nameKo",
+      "before": "왼바깥빗",
+      "after": "왼배바깥빗근",
+      "reason": "laterality-from-base:FMA13335"
+    },
+    {
+      "id": "FMA13337",
+      "field": "legacyKo",
+      "before": "좌외사",
+      "after": "좌외복사근",
+      "reason": "laterality-from-base:FMA13335"
+    },
+    {
+      "id": "FMA13337",
+      "field": "hanja",
+      "before": "左外斜",
+      "after": "左外腹斜筋",
+      "reason": "laterality-from-base:FMA13335"
+    },
+    {
+      "id": "FMA13352",
+      "field": "nameKo",
+      "before": "오른방패목뿔",
+      "after": "오른방패목뿔근",
+      "reason": "laterality-from-base:FMA13344"
+    },
+    {
+      "id": "FMA13353",
+      "field": "nameKo",
+      "before": "왼방패목뿔",
+      "after": "왼방패목뿔근",
+      "reason": "laterality-from-base:FMA13344"
+    },
+    {
+      "id": "FMA13375",
+      "field": "nameKo",
+      "before": "오른가슴작은",
+      "after": "오른작은가슴근",
+      "reason": "laterality-from-base:FMA13109"
+    },
+    {
+      "id": "FMA13375",
+      "field": "legacyKo",
+      "before": "우흉근소",
+      "after": "우소흉근",
+      "reason": "laterality-from-base:FMA13109"
+    },
+    {
+      "id": "FMA13375",
+      "field": "hanja",
+      "before": "右胸筋小",
+      "after": "右小胸筋",
+      "reason": "laterality-from-base:FMA13109"
+    },
+    {
+      "id": "FMA13376",
+      "field": "nameKo",
+      "before": "왼가슴작은",
+      "after": "왼작은가슴근",
+      "reason": "laterality-from-base:FMA13109"
+    },
+    {
+      "id": "FMA13376",
+      "field": "legacyKo",
+      "before": "좌흉근소",
+      "after": "좌소흉근",
+      "reason": "laterality-from-base:FMA13109"
+    },
+    {
+      "id": "FMA13376",
+      "field": "hanja",
+      "before": "左胸筋小",
+      "after": "左小胸筋",
+      "reason": "laterality-from-base:FMA13109"
+    },
+    {
+      "id": "FMA13381",
+      "field": "nameKo",
+      "before": "오른마름모큰",
+      "after": "오른큰마름근",
+      "reason": "laterality-from-base:FMA13379"
+    },
+    {
+      "id": "FMA13382",
+      "field": "nameKo",
+      "before": "왼마름모큰",
+      "after": "왼큰마름근",
+      "reason": "laterality-from-base:FMA13379"
+    },
+    {
+      "id": "FMA13383",
+      "field": "nameKo",
+      "before": "오른마름모작은",
+      "after": "오른작은마름근",
+      "reason": "laterality-from-base:FMA13380"
+    },
+    {
+      "id": "FMA13384",
+      "field": "nameKo",
+      "before": "왼마름모작은",
+      "after": "왼작은마름근",
+      "reason": "laterality-from-base:FMA13380"
+    },
+    {
+      "id": "FMA13388",
+      "field": "nameKo",
+      "before": "오른목갈비뒤",
+      "after": "오른뒤목갈비근",
+      "reason": "laterality-from-base:FMA13387"
+    },
+    {
+      "id": "FMA13389",
+      "field": "nameKo",
+      "before": "왼목갈비뒤",
+      "after": "왼뒤목갈비근",
+      "reason": "laterality-from-base:FMA13387"
+    },
+    {
+      "id": "FMA13392",
+      "field": "nameKo",
+      "before": "오른목갈비앞",
+      "after": "오른앞목갈비근",
+      "reason": "laterality-from-base:FMA13385"
+    },
+    {
+      "id": "FMA13393",
+      "field": "nameKo",
+      "before": "왼목갈비앞",
+      "after": "왼앞목갈비근",
+      "reason": "laterality-from-base:FMA13385"
+    },
+    {
+      "id": "FMA13395",
+      "field": "nameKo",
+      "before": "오른쪽 어깨뼈",
+      "after": "오른어깨뼈",
+      "reason": "laterality-from-base:FMA13394"
+    },
+    {
+      "id": "FMA13395",
+      "field": "legacyKo",
+      "before": "우측 견갑골",
+      "after": "우견갑골",
+      "reason": "laterality-from-base:FMA13394"
+    },
+    {
+      "id": "FMA13396",
+      "field": "nameKo",
+      "before": "왼쪽 어깨뼈",
+      "after": "왼어깨뼈",
+      "reason": "laterality-from-base:FMA13394"
+    },
+    {
+      "id": "FMA13396",
+      "field": "legacyKo",
+      "before": "좌측 견갑골",
+      "after": "좌견갑골",
+      "reason": "laterality-from-base:FMA13394"
+    },
+    {
+      "id": "FMA13398",
+      "field": "nameKo",
+      "before": "오른톱니앞",
+      "after": "오른앞톱니근",
+      "reason": "laterality-from-base:FMA13397"
+    },
+    {
+      "id": "FMA13399",
+      "field": "nameKo",
+      "before": "왼톱니앞",
+      "after": "왼앞톱니근",
+      "reason": "laterality-from-base:FMA13397"
+    },
+    {
+      "id": "FMA13403",
+      "field": "nameKo",
+      "before": "오른톱니뒤위",
+      "after": "오른위뒤톱니근",
+      "reason": "laterality-from-base:FMA13401"
+    },
+    {
+      "id": "FMA13404",
+      "field": "nameKo",
+      "before": "왼톱니뒤위",
+      "after": "왼위뒤톱니근",
+      "reason": "laterality-from-base:FMA13401"
+    },
+    {
+      "id": "FMA13405",
+      "field": "nameKo",
+      "before": "오른톱니뒤아래",
+      "after": "오른아래뒤톱니근",
+      "reason": "laterality-from-base:FMA13402"
+    },
+    {
+      "id": "FMA13406",
+      "field": "nameKo",
+      "before": "왼톱니뒤아래",
+      "after": "왼아래뒤톱니근",
+      "reason": "laterality-from-base:FMA13402"
+    },
+    {
+      "id": "FMA20735",
+      "field": "nameKo",
+      "before": "오른얕은윗배동맥",
+      "after": "오른얕은배벽동맥",
+      "reason": "laterality-from-base:FMA20734"
+    },
+    {
+      "id": "FMA20736",
+      "field": "nameKo",
+      "before": "왼얕은윗배동맥",
+      "after": "왼얕은배벽동맥",
+      "reason": "laterality-from-base:FMA20734"
+    },
+    {
+      "id": "FMA20801",
+      "field": "nameKo",
+      "before": "오른가쪽휘돌이넙다리동맥",
+      "after": "오른가쪽넙다리휘돌이동맥",
+      "reason": "laterality-from-base:FMA20798"
+    },
+    {
+      "id": "FMA20802",
+      "field": "nameKo",
+      "before": "왼가쪽휘돌이넙다리동맥",
+      "after": "왼가쪽넙다리휘돌이동맥",
+      "reason": "laterality-from-base:FMA20798"
+    },
+    {
+      "id": "FMA20818",
+      "field": "nameKo",
+      "before": "음경오른등쪽동맥",
+      "after": "오른음경등동맥",
+      "reason": "laterality-from-base:FMA19795"
+    },
+    {
+      "id": "FMA20818",
+      "field": "legacyKo",
+      "before": "음경우배측동맥",
+      "after": "우음경배측동맥",
+      "reason": "laterality-from-base:FMA19795"
+    },
+    {
+      "id": "FMA20818",
+      "field": "hanja",
+      "before": "陰莖右背側動脈",
+      "after": "右陰莖背側動脈",
+      "reason": "laterality-from-base:FMA19795"
+    },
+    {
+      "id": "FMA20819",
+      "field": "nameKo",
+      "before": "음경왼등쪽동맥",
+      "after": "왼음경등동맥",
+      "reason": "laterality-from-base:FMA19795"
+    },
+    {
+      "id": "FMA20819",
+      "field": "legacyKo",
+      "before": "음경좌배측동맥",
+      "after": "좌음경배측동맥",
+      "reason": "laterality-from-base:FMA19795"
+    },
+    {
+      "id": "FMA20819",
+      "field": "hanja",
+      "before": "陰莖左背側動脈",
+      "after": "左陰莖背側動脈",
+      "reason": "laterality-from-base:FMA19795"
+    },
+    {
+      "id": "FMA21385",
+      "field": "nameKo",
+      "before": "음경오른얕은등쪽정맥",
+      "after": "오른얕은음경등정맥",
+      "reason": "laterality-from-base:FMA21384"
+    },
+    {
+      "id": "FMA21385",
+      "field": "legacyKo",
+      "before": "음경우천배측정맥",
+      "after": "우음경천배측정맥",
+      "reason": "laterality-from-base:FMA21384"
+    },
+    {
+      "id": "FMA21385",
+      "field": "hanja",
+      "before": "陰莖右淺背側靜脈",
+      "after": "右陰莖淺背側靜脈",
+      "reason": "laterality-from-base:FMA21384"
+    },
+    {
+      "id": "FMA21386",
+      "field": "nameKo",
+      "before": "음경왼얕은등쪽정맥",
+      "after": "왼얕은음경등정맥",
+      "reason": "laterality-from-base:FMA21384"
+    },
+    {
+      "id": "FMA21386",
+      "field": "legacyKo",
+      "before": "음경좌천배측정맥",
+      "after": "좌음경천배측정맥",
+      "reason": "laterality-from-base:FMA21384"
+    },
+    {
+      "id": "FMA21386",
+      "field": "hanja",
+      "before": "陰莖左淺背側靜脈",
+      "after": "左陰莖淺背側靜脈",
+      "reason": "laterality-from-base:FMA21384"
+    },
+    {
+      "id": "FMA22330",
+      "field": "nameKo",
+      "before": "오른볼기중간",
+      "after": "오른중간볼기근",
+      "reason": "laterality-from-base:FMA22315"
+    },
+    {
+      "id": "FMA22331",
+      "field": "nameKo",
+      "before": "왼볼기중간",
+      "after": "왼중간볼기근",
+      "reason": "laterality-from-base:FMA22315"
+    },
+    {
+      "id": "FMA22332",
+      "field": "nameKo",
+      "before": "오른볼기최소",
+      "after": "오른작은볼기근",
+      "reason": "laterality-from-base:FMA22317"
+    },
+    {
+      "id": "FMA22333",
+      "field": "nameKo",
+      "before": "왼볼기최소",
+      "after": "왼작은볼기근",
+      "reason": "laterality-from-base:FMA22317"
+    },
+    {
+      "id": "FMA22452",
+      "field": "nameKo",
+      "before": "오른모음근짧은",
+      "after": "오른짧은모음근",
+      "reason": "laterality-from-base:FMA22442"
+    },
+    {
+      "id": "FMA22454",
+      "field": "nameKo",
+      "before": "왼모음근짧은",
+      "after": "왼짧은모음근",
+      "reason": "laterality-from-base:FMA22442"
+    },
+    {
+      "id": "FMA22456",
+      "field": "nameKo",
+      "before": "오른모음근긴",
+      "after": "오른긴모음근",
+      "reason": "laterality-from-base:FMA22441"
+    },
+    {
+      "id": "FMA22457",
+      "field": "nameKo",
+      "before": "왼모음근긴",
+      "after": "왼긴모음근",
+      "reason": "laterality-from-base:FMA22441"
+    },
+    {
+      "id": "FMA22507",
+      "field": "nameKo",
+      "before": "오른내림무릎동맥",
+      "after": "오른무릎내림동맥",
+      "reason": "laterality-from-base:FMA22506"
+    },
+    {
+      "id": "FMA22508",
+      "field": "nameKo",
+      "before": "왼내림무릎동맥",
+      "after": "왼무릎내림동맥",
+      "reason": "laterality-from-base:FMA22506"
+    },
+    {
+      "id": "FMA22544",
+      "field": "nameKo",
+      "before": "오른쪽 앞정강근",
+      "after": "오른앞정강근",
+      "reason": "laterality-from-base:FMA22532"
+    },
+    {
+      "id": "FMA22544",
+      "field": "legacyKo",
+      "before": "우측 전경골근",
+      "after": "우전경골근",
+      "reason": "laterality-from-base:FMA22532"
+    },
+    {
+      "id": "FMA22545",
+      "field": "nameKo",
+      "before": "왼쪽 앞정강근",
+      "after": "왼앞정강근",
+      "reason": "laterality-from-base:FMA22532"
+    },
+    {
+      "id": "FMA22545",
+      "field": "legacyKo",
+      "before": "좌측 전경골근",
+      "after": "좌전경골근",
+      "reason": "laterality-from-base:FMA22532"
+    },
+    {
+      "id": "FMA22546",
+      "field": "nameKo",
+      "before": "오른폄근엄지발가락긴",
+      "after": "오른긴엄지폄근",
+      "reason": "laterality-from-base:FMA22533"
+    },
+    {
+      "id": "FMA22547",
+      "field": "nameKo",
+      "before": "왼폄근엄지발가락긴",
+      "after": "왼긴엄지폄근",
+      "reason": "laterality-from-base:FMA22533"
+    },
+    {
+      "id": "FMA22548",
+      "field": "nameKo",
+      "before": "오른폄근손가락긴",
+      "after": "오른긴발가락폄근",
+      "reason": "laterality-from-base:FMA22534"
+    },
+    {
+      "id": "FMA22548",
+      "field": "legacyKo",
+      "before": "우신근지장",
+      "after": "우장지신근",
+      "reason": "laterality-from-base:FMA22534"
+    },
+    {
+      "id": "FMA22548",
+      "field": "hanja",
+      "before": "右伸筋指長",
+      "after": "右長趾伸筋",
+      "reason": "laterality-from-base:FMA22534"
+    },
+    {
+      "id": "FMA22549",
+      "field": "nameKo",
+      "before": "왼폄근손가락긴",
+      "after": "왼긴발가락폄근",
+      "reason": "laterality-from-base:FMA22534"
+    },
+    {
+      "id": "FMA22549",
+      "field": "legacyKo",
+      "before": "좌신근지장",
+      "after": "좌장지신근",
+      "reason": "laterality-from-base:FMA22534"
+    },
+    {
+      "id": "FMA22549",
+      "field": "hanja",
+      "before": "左伸筋指長",
+      "after": "左長趾伸筋",
+      "reason": "laterality-from-base:FMA22534"
+    },
+    {
+      "id": "FMA22552",
+      "field": "nameKo",
+      "before": "오른종아리긴",
+      "after": "오른긴종아리근",
+      "reason": "laterality-from-base:FMA22539"
+    },
+    {
+      "id": "FMA22553",
+      "field": "nameKo",
+      "before": "왼종아리긴",
+      "after": "왼긴종아리근",
+      "reason": "laterality-from-base:FMA22539"
+    },
+    {
+      "id": "FMA22554",
+      "field": "nameKo",
+      "before": "오른종아리짧은",
+      "after": "오른짧은종아리근",
+      "reason": "laterality-from-base:FMA22540"
+    },
+    {
+      "id": "FMA22555",
+      "field": "nameKo",
+      "before": "왼종아리짧은",
+      "after": "왼짧은종아리근",
+      "reason": "laterality-from-base:FMA22540"
+    },
+    {
+      "id": "FMA22682",
+      "field": "nameKo",
+      "before": "오른앞휘돌이위팔뼈동맥",
+      "after": "오른앞위팔휘돌이동맥",
+      "reason": "laterality-from-base:FMA22680"
+    },
+    {
+      "id": "FMA22683",
+      "field": "nameKo",
+      "before": "왼앞휘돌이위팔뼈동맥",
+      "after": "왼앞위팔휘돌이동맥",
+      "reason": "laterality-from-base:FMA22680"
+    },
+    {
+      "id": "FMA22685",
+      "field": "nameKo",
+      "before": "오른뒤휘돌이위팔뼈동맥",
+      "after": "오른뒤위팔휘돌이동맥",
+      "reason": "laterality-from-base:FMA22684"
+    },
+    {
+      "id": "FMA22687",
+      "field": "nameKo",
+      "before": "왼뒤휘돌이위팔뼈동맥",
+      "after": "왼뒤위팔휘돌이동맥",
+      "reason": "laterality-from-base:FMA22684"
+    },
+    {
+      "id": "FMA22733",
+      "field": "nameKo",
+      "before": "오른노쪽동맥",
+      "after": "오른노동맥",
+      "reason": "laterality-from-base:FMA22730"
+    },
+    {
+      "id": "FMA22733",
+      "field": "legacyKo",
+      "before": "우요측동맥",
+      "after": "우요골동맥",
+      "reason": "laterality-from-base:FMA22730"
+    },
+    {
+      "id": "FMA22733",
+      "field": "hanja",
+      "before": "右橈側動脈",
+      "after": "右橈骨動脈",
+      "reason": "laterality-from-base:FMA22730"
+    },
+    {
+      "id": "FMA22734",
+      "field": "nameKo",
+      "before": "왼노쪽동맥",
+      "after": "왼노동맥",
+      "reason": "laterality-from-base:FMA22730"
+    },
+    {
+      "id": "FMA22734",
+      "field": "legacyKo",
+      "before": "좌요측동맥",
+      "after": "좌요골동맥",
+      "reason": "laterality-from-base:FMA22730"
+    },
+    {
+      "id": "FMA22734",
+      "field": "hanja",
+      "before": "左橈側動脈",
+      "after": "左橈骨動脈",
+      "reason": "laterality-from-base:FMA22730"
+    },
+    {
+      "id": "FMA22779",
+      "field": "nameKo",
+      "before": "오른가슴가시근",
+      "after": "오른등가시근",
+      "reason": "laterality-from-base:FMA22765"
+    },
+    {
+      "id": "FMA22780",
+      "field": "nameKo",
+      "before": "왼가슴가시근",
+      "after": "왼등가시근",
+      "reason": "laterality-from-base:FMA22765"
+    },
+    {
+      "id": "FMA22797",
+      "field": "nameKo",
+      "before": "오른자쪽동맥",
+      "after": "오른자동맥",
+      "reason": "laterality-from-base:FMA22796"
+    },
+    {
+      "id": "FMA22797",
+      "field": "legacyKo",
+      "before": "우척측동맥",
+      "after": "우척골동맥",
+      "reason": "laterality-from-base:FMA22796"
+    },
+    {
+      "id": "FMA22797",
+      "field": "hanja",
+      "before": "右尺側動脈",
+      "after": "右尺骨動脈",
+      "reason": "laterality-from-base:FMA22796"
+    },
+    {
+      "id": "FMA22798",
+      "field": "nameKo",
+      "before": "왼자쪽동맥",
+      "after": "왼자동맥",
+      "reason": "laterality-from-base:FMA22796"
+    },
+    {
+      "id": "FMA22798",
+      "field": "legacyKo",
+      "before": "좌척측동맥",
+      "after": "좌척골동맥",
+      "reason": "laterality-from-base:FMA22796"
+    },
+    {
+      "id": "FMA22798",
+      "field": "hanja",
+      "before": "左尺側動脈",
+      "after": "左尺骨動脈",
+      "reason": "laterality-from-base:FMA22796"
+    },
+    {
+      "id": "FMA22864",
+      "field": "nameKo",
+      "before": "오른손바닥손허리동맥",
+      "after": "오른바닥쪽손허리동맥",
+      "reason": "laterality-from-base:FMA22863"
+    },
+    {
+      "id": "FMA22865",
+      "field": "nameKo",
+      "before": "왼손바닥손허리동맥",
+      "after": "왼바닥쪽손허리동맥",
+      "reason": "laterality-from-base:FMA22863"
+    },
+    {
+      "id": "FMA22890",
+      "field": "nameKo",
+      "before": "오른가슴가시사이근",
+      "after": "오른등가시사이근",
+      "reason": "laterality-from-base:FMA22846"
+    },
+    {
+      "id": "FMA22891",
+      "field": "nameKo",
+      "before": "왼가슴가시사이근",
+      "after": "왼등가시사이근",
+      "reason": "laterality-from-base:FMA22846"
+    },
+    {
+      "id": "FMA22920",
+      "field": "nameKo",
+      "before": "오른손바닥손허리정맥",
+      "after": "오른바닥쪽손허리정맥",
+      "reason": "laterality-from-base:FMA22919"
+    },
+    {
+      "id": "FMA22921",
+      "field": "nameKo",
+      "before": "왼손바닥손허리정맥",
+      "after": "왼바닥쪽손허리정맥",
+      "reason": "laterality-from-base:FMA22919"
+    },
+    {
+      "id": "FMA22948",
+      "field": "nameKo",
+      "before": "오른노쪽정맥",
+      "after": "오른노정맥",
+      "reason": "laterality-from-base:FMA22947"
+    },
+    {
+      "id": "FMA22949",
+      "field": "nameKo",
+      "before": "왼노쪽정맥",
+      "after": "왼노정맥",
+      "reason": "laterality-from-base:FMA22947"
+    },
+    {
+      "id": "FMA22951",
+      "field": "nameKo",
+      "before": "오른자쪽정맥",
+      "after": "오른자정맥",
+      "reason": "laterality-from-base:FMA22950"
+    },
+    {
+      "id": "FMA22952",
+      "field": "nameKo",
+      "before": "왼자쪽정맥",
+      "after": "왼자정맥",
+      "reason": "laterality-from-base:FMA22950"
+    },
+    {
+      "id": "FMA23130",
+      "field": "nameKo",
+      "before": "오른쪽 위팔뼈",
+      "after": "오른위팔뼈",
+      "reason": "laterality-from-base:FMA13303"
+    },
+    {
+      "id": "FMA23130",
+      "field": "legacyKo",
+      "before": "우측 상완골",
+      "after": "우상완골",
+      "reason": "laterality-from-base:FMA13303"
+    },
+    {
+      "id": "FMA23131",
+      "field": "nameKo",
+      "before": "왼쪽 위팔뼈",
+      "after": "왼위팔뼈",
+      "reason": "laterality-from-base:FMA13303"
+    },
+    {
+      "id": "FMA23131",
+      "field": "legacyKo",
+      "before": "좌측 상완골",
+      "after": "좌상완골",
+      "reason": "laterality-from-base:FMA13303"
+    },
+    {
+      "id": "FMA23180",
+      "field": "nameKo",
+      "before": "오른휘돌이어깨뼈동맥",
+      "after": "오른어깨휘돌이동맥",
+      "reason": "laterality-from-base:FMA23179"
+    },
+    {
+      "id": "FMA23181",
+      "field": "nameKo",
+      "before": "왼휘돌이어깨뼈동맥",
+      "after": "왼어깨휘돌이동맥",
+      "reason": "laterality-from-base:FMA23179"
+    },
+    {
+      "id": "FMA23464",
+      "field": "nameKo",
+      "before": "오른쪽 노뼈",
+      "after": "오른노뼈",
+      "reason": "laterality-from-base:FMA23463"
+    },
+    {
+      "id": "FMA23464",
+      "field": "legacyKo",
+      "before": "우측 요골",
+      "after": "우요골",
+      "reason": "laterality-from-base:FMA23463"
+    },
+    {
+      "id": "FMA23465",
+      "field": "nameKo",
+      "before": "왼쪽 노뼈",
+      "after": "왼노뼈",
+      "reason": "laterality-from-base:FMA23463"
+    },
+    {
+      "id": "FMA23465",
+      "field": "legacyKo",
+      "before": "좌측 요골",
+      "after": "좌요골",
+      "reason": "laterality-from-base:FMA23463"
+    },
+    {
+      "id": "FMA23467",
+      "field": "nameKo",
+      "before": "오른쪽 자뼈",
+      "after": "오른자뼈",
+      "reason": "laterality-from-base:FMA23466"
+    },
+    {
+      "id": "FMA23467",
+      "field": "legacyKo",
+      "before": "우측 척골",
+      "after": "우척골",
+      "reason": "laterality-from-base:FMA23466"
+    },
+    {
+      "id": "FMA23468",
+      "field": "nameKo",
+      "before": "왼쪽 자뼈",
+      "after": "왼자뼈",
+      "reason": "laterality-from-base:FMA23466"
+    },
+    {
+      "id": "FMA23468",
+      "field": "legacyKo",
+      "before": "좌측 척골",
+      "after": "좌척골",
+      "reason": "laterality-from-base:FMA23466"
+    },
+    {
+      "id": "FMA24474",
+      "field": "nameKo",
+      "before": "오른쪽 넙다리뼈",
+      "after": "오른넙다리뼈",
+      "reason": "laterality-from-base:FMA9611"
+    },
+    {
+      "id": "FMA24474",
+      "field": "legacyKo",
+      "before": "우측 대퇴골",
+      "after": "우대퇴골",
+      "reason": "laterality-from-base:FMA9611"
+    },
+    {
+      "id": "FMA24475",
+      "field": "nameKo",
+      "before": "왼쪽 넙다리뼈",
+      "after": "왼넙다리뼈",
+      "reason": "laterality-from-base:FMA9611"
+    },
+    {
+      "id": "FMA24475",
+      "field": "legacyKo",
+      "before": "좌측 대퇴골",
+      "after": "좌대퇴골",
+      "reason": "laterality-from-base:FMA9611"
+    },
+    {
+      "id": "FMA24477",
+      "field": "nameKo",
+      "before": "오른쪽 정강뼈",
+      "after": "오른정강뼈",
+      "reason": "laterality-from-base:FMA24476"
+    },
+    {
+      "id": "FMA24477",
+      "field": "legacyKo",
+      "before": "우측 경골",
+      "after": "우경골",
+      "reason": "laterality-from-base:FMA24476"
+    },
+    {
+      "id": "FMA24478",
+      "field": "nameKo",
+      "before": "왼쪽 정강뼈",
+      "after": "왼정강뼈",
+      "reason": "laterality-from-base:FMA24476"
+    },
+    {
+      "id": "FMA24478",
+      "field": "legacyKo",
+      "before": "좌측 경골",
+      "after": "좌경골",
+      "reason": "laterality-from-base:FMA24476"
+    },
+    {
+      "id": "FMA24480",
+      "field": "nameKo",
+      "before": "오른쪽 종아리뼈",
+      "after": "오른종아리뼈",
+      "reason": "laterality-from-base:FMA24479"
+    },
+    {
+      "id": "FMA24480",
+      "field": "legacyKo",
+      "before": "우측 비골",
+      "after": "우비골",
+      "reason": "laterality-from-base:FMA24479"
+    },
+    {
+      "id": "FMA24481",
+      "field": "nameKo",
+      "before": "왼쪽 종아리뼈",
+      "after": "왼종아리뼈",
+      "reason": "laterality-from-base:FMA24479"
+    },
+    {
+      "id": "FMA24481",
+      "field": "legacyKo",
+      "before": "좌측 비골",
+      "after": "좌비골",
+      "reason": "laterality-from-base:FMA24479"
+    },
+    {
+      "id": "FMA24486",
+      "field": "nameKo",
+      "before": "오른쪽 무릎뼈",
+      "after": "오른무릎뼈",
+      "reason": "laterality-from-base:FMA24485"
+    },
+    {
+      "id": "FMA24486",
+      "field": "legacyKo",
+      "before": "우측 슬개골",
+      "after": "우슬개골",
+      "reason": "laterality-from-base:FMA24485"
+    },
+    {
+      "id": "FMA24487",
+      "field": "nameKo",
+      "before": "왼쪽 무릎뼈",
+      "after": "왼무릎뼈",
+      "reason": "laterality-from-base:FMA24485"
+    },
+    {
+      "id": "FMA24487",
+      "field": "legacyKo",
+      "before": "좌측 슬개골",
+      "after": "좌슬개골",
+      "reason": "laterality-from-base:FMA24485"
+    },
+    {
+      "id": "FMA32530",
+      "field": "nameKo",
+      "before": "오른곧은머리뒤큰",
+      "after": "오른큰뒤머리곧은근",
+      "reason": "laterality-from-base:FMA32525"
+    },
+    {
+      "id": "FMA32531",
+      "field": "nameKo",
+      "before": "왼곧은머리뒤큰",
+      "after": "왼큰뒤머리곧은근",
+      "reason": "laterality-from-base:FMA32525"
+    },
+    {
+      "id": "FMA32532",
+      "field": "nameKo",
+      "before": "오른곧은머리뒤작은",
+      "after": "오른작은뒤머리곧은근",
+      "reason": "laterality-from-base:FMA32526"
+    },
+    {
+      "id": "FMA32533",
+      "field": "nameKo",
+      "before": "왼곧은머리뒤작은",
+      "after": "왼작은뒤머리곧은근",
+      "reason": "laterality-from-base:FMA32526"
+    },
+    {
+      "id": "FMA32551",
+      "field": "nameKo",
+      "before": "오른원큰",
+      "after": "오른큰원근",
+      "reason": "laterality-from-base:FMA32549"
+    },
+    {
+      "id": "FMA32552",
+      "field": "nameKo",
+      "before": "왼원큰",
+      "after": "왼큰원근",
+      "reason": "laterality-from-base:FMA32549"
+    },
+    {
+      "id": "FMA32553",
+      "field": "nameKo",
+      "before": "오른원작은",
+      "after": "오른작은원근",
+      "reason": "laterality-from-base:FMA32550"
+    },
+    {
+      "id": "FMA32554",
+      "field": "nameKo",
+      "before": "왼원작은",
+      "after": "왼작은원근",
+      "reason": "laterality-from-base:FMA32550"
+    },
+    {
+      "id": "FMA37386",
+      "field": "nameKo",
+      "before": "오른벌림근엄지손가락짧은",
+      "after": "오른짧은엄지벌림근",
+      "reason": "laterality-from-base:FMA37373"
+    },
+    {
+      "id": "FMA37387",
+      "field": "nameKo",
+      "before": "왼벌림근엄지손가락짧은",
+      "after": "왼짧은엄지벌림근",
+      "reason": "laterality-from-base:FMA37373"
+    },
+    {
+      "id": "FMA37388",
+      "field": "nameKo",
+      "before": "오른굽힘근엄지손가락짧은",
+      "after": "오른짧은엄지굽힘근",
+      "reason": "laterality-from-base:FMA37378"
+    },
+    {
+      "id": "FMA37389",
+      "field": "nameKo",
+      "before": "왼굽힘근엄지손가락짧은",
+      "after": "왼짧은엄지굽힘근",
+      "reason": "laterality-from-base:FMA37378"
+    },
+    {
+      "id": "FMA37459",
+      "field": "nameKo",
+      "before": "오른벌림근엄지발가락",
+      "after": "오른엄지벌림근",
+      "reason": "laterality-from-base:FMA37448"
+    },
+    {
+      "id": "FMA37460",
+      "field": "nameKo",
+      "before": "왼벌림근엄지발가락",
+      "after": "왼엄지벌림근",
+      "reason": "laterality-from-base:FMA37448"
+    },
+    {
+      "id": "FMA37461",
+      "field": "nameKo",
+      "before": "오른굽힘근손가락짧은",
+      "after": "오른짧은발가락굽힘근",
+      "reason": "laterality-from-base:FMA37450"
+    },
+    {
+      "id": "FMA37462",
+      "field": "nameKo",
+      "before": "왼굽힘근손가락짧은",
+      "after": "왼짧은발가락굽힘근",
+      "reason": "laterality-from-base:FMA37450"
+    },
+    {
+      "id": "FMA37465",
+      "field": "nameKo",
+      "before": "오른덧굽힘근",
+      "after": "오른발바닥네모근",
+      "reason": "laterality-from-base:FMA37452"
+    },
+    {
+      "id": "FMA37465",
+      "field": "legacyKo",
+      "before": "우부굴근",
+      "after": "우족저방형근",
+      "reason": "laterality-from-base:FMA37452"
+    },
+    {
+      "id": "FMA37465",
+      "field": "hanja",
+      "before": "右副屈筋",
+      "after": "右足底方形筋",
+      "reason": "laterality-from-base:FMA37452"
+    },
+    {
+      "id": "FMA37466",
+      "field": "nameKo",
+      "before": "왼덧굽힘근",
+      "after": "왼발바닥네모근",
+      "reason": "laterality-from-base:FMA37452"
+    },
+    {
+      "id": "FMA37466",
+      "field": "legacyKo",
+      "before": "좌부굴근",
+      "after": "좌족저방형근",
+      "reason": "laterality-from-base:FMA37452"
+    },
+    {
+      "id": "FMA37466",
+      "field": "hanja",
+      "before": "左副屈筋",
+      "after": "左足底方形筋",
+      "reason": "laterality-from-base:FMA37452"
+    },
+    {
+      "id": "FMA38454",
+      "field": "nameKo",
+      "before": "오른엎침근네모",
+      "after": "오른네모엎침근",
+      "reason": "laterality-from-base:FMA38453"
+    },
+    {
+      "id": "FMA38455",
+      "field": "nameKo",
+      "before": "왼엎침근네모",
+      "after": "왼네모엎침근",
+      "reason": "laterality-from-base:FMA38453"
+    },
+    {
+      "id": "FMA38460",
+      "field": "nameKo",
+      "before": "오른굽힘근손목노쪽",
+      "after": "오른노쪽손목굽힘근",
+      "reason": "laterality-from-base:FMA38459"
+    },
+    {
+      "id": "FMA38461",
+      "field": "nameKo",
+      "before": "왼굽힘근손목노쪽",
+      "after": "왼노쪽손목굽힘근",
+      "reason": "laterality-from-base:FMA38459"
+    },
+    {
+      "id": "FMA38482",
+      "field": "nameKo",
+      "before": "오른굽힘근엄지손가락긴",
+      "after": "오른긴엄지굽힘근",
+      "reason": "laterality-from-base:FMA38481"
+    },
+    {
+      "id": "FMA38484",
+      "field": "nameKo",
+      "before": "왼굽힘근엄지손가락긴",
+      "after": "왼긴엄지굽힘근",
+      "reason": "laterality-from-base:FMA38481"
+    },
+    {
+      "id": "FMA38495",
+      "field": "nameKo",
+      "before": "오른폄근손목노쪽긴",
+      "after": "오른긴노쪽손목폄근",
+      "reason": "laterality-from-base:FMA38494"
+    },
+    {
+      "id": "FMA38496",
+      "field": "nameKo",
+      "before": "왼폄근손목노쪽긴",
+      "after": "왼긴노쪽손목폄근",
+      "reason": "laterality-from-base:FMA38494"
+    },
+    {
+      "id": "FMA38498",
+      "field": "nameKo",
+      "before": "오른폄근손목노쪽짧은",
+      "after": "오른짧은노쪽손목폄근",
+      "reason": "laterality-from-base:FMA38497"
+    },
+    {
+      "id": "FMA38499",
+      "field": "nameKo",
+      "before": "왼폄근손목노쪽짧은",
+      "after": "왼짧은노쪽손목폄근",
+      "reason": "laterality-from-base:FMA38497"
+    },
+    {
+      "id": "FMA38501",
+      "field": "nameKo",
+      "before": "오른폄근손가락",
+      "after": "오른손가락폄근",
+      "reason": "laterality-from-base:FMA38500"
+    },
+    {
+      "id": "FMA38502",
+      "field": "nameKo",
+      "before": "왼폄근손가락",
+      "after": "왼손가락폄근",
+      "reason": "laterality-from-base:FMA38500"
+    },
+    {
+      "id": "FMA38504",
+      "field": "nameKo",
+      "before": "오른폄근손가락새끼",
+      "after": "오른새끼폄근",
+      "reason": "laterality-from-base:FMA38503"
+    },
+    {
+      "id": "FMA38505",
+      "field": "nameKo",
+      "before": "왼폄근손가락새끼",
+      "after": "왼새끼폄근",
+      "reason": "laterality-from-base:FMA38503"
+    },
+    {
+      "id": "FMA38513",
+      "field": "nameKo",
+      "before": "오른뒤침근",
+      "after": "오른손뒤침근",
+      "reason": "laterality-from-base:FMA38512"
+    },
+    {
+      "id": "FMA38514",
+      "field": "nameKo",
+      "before": "왼뒤침근",
+      "after": "왼손뒤침근",
+      "reason": "laterality-from-base:FMA38512"
+    },
+    {
+      "id": "FMA38516",
+      "field": "nameKo",
+      "before": "오른벌림근엄지손가락긴",
+      "after": "오른긴엄지벌림근",
+      "reason": "laterality-from-base:FMA38515"
+    },
+    {
+      "id": "FMA38517",
+      "field": "nameKo",
+      "before": "왼벌림근엄지손가락긴",
+      "after": "왼긴엄지벌림근",
+      "reason": "laterality-from-base:FMA38515"
+    },
+    {
+      "id": "FMA38519",
+      "field": "nameKo",
+      "before": "오른폄근엄지손가락짧은",
+      "after": "오른짧은엄지폄근",
+      "reason": "laterality-from-base:FMA38518"
+    },
+    {
+      "id": "FMA38520",
+      "field": "nameKo",
+      "before": "왼폄근엄지손가락짧은",
+      "after": "왼짧은엄지폄근",
+      "reason": "laterality-from-base:FMA38518"
+    },
+    {
+      "id": "FMA38522",
+      "field": "nameKo",
+      "before": "오른폄근엄지손가락긴",
+      "after": "오른긴엄지폄근",
+      "reason": "laterality-from-base:FMA38521"
+    },
+    {
+      "id": "FMA38523",
+      "field": "nameKo",
+      "before": "왼폄근엄지손가락긴",
+      "after": "왼긴엄지폄근",
+      "reason": "laterality-from-base:FMA38521"
+    },
+    {
+      "id": "FMA38525",
+      "field": "nameKo",
+      "before": "오른폄근집게손가락",
+      "after": "오른집게폄근",
+      "reason": "laterality-from-base:FMA38524"
+    },
+    {
+      "id": "FMA38526",
+      "field": "nameKo",
+      "before": "왼폄근집게손가락",
+      "after": "왼집게폄근",
+      "reason": "laterality-from-base:FMA38524"
+    },
+    {
+      "id": "FMA38928",
+      "field": "nameKo",
+      "before": "오른곧은넙다리",
+      "after": "오른넙다리곧은근",
+      "reason": "laterality-from-base:FMA22430"
+    },
+    {
+      "id": "FMA38928",
+      "field": "legacyKo",
+      "before": "우직대퇴",
+      "after": "우대퇴직근",
+      "reason": "laterality-from-base:FMA22430"
+    },
+    {
+      "id": "FMA38928",
+      "field": "hanja",
+      "before": "右直大腿",
+      "after": "右大腿直筋",
+      "reason": "laterality-from-base:FMA22430"
+    },
+    {
+      "id": "FMA38929",
+      "field": "nameKo",
+      "before": "왼곧은넙다리",
+      "after": "왼넙다리곧은근",
+      "reason": "laterality-from-base:FMA22430"
+    },
+    {
+      "id": "FMA38929",
+      "field": "legacyKo",
+      "before": "좌직대퇴",
+      "after": "좌대퇴직근",
+      "reason": "laterality-from-base:FMA22430"
+    },
+    {
+      "id": "FMA38929",
+      "field": "hanja",
+      "before": "左直大腿",
+      "after": "左大腿直筋",
+      "reason": "laterality-from-base:FMA22430"
+    },
+    {
+      "id": "FMA43886",
+      "field": "nameKo",
+      "before": "오른모음근최소",
+      "after": "오른작은모음근",
+      "reason": "laterality-from-base:FMA43885"
+    },
+    {
+      "id": "FMA43887",
+      "field": "nameKo",
+      "before": "왼모음근최소",
+      "after": "왼작은모음근",
+      "reason": "laterality-from-base:FMA43885"
+    },
+    {
+      "id": "FMA43890",
+      "field": "nameKo",
+      "before": "오른아래안쪽무릎동맥",
+      "after": "오른안쪽아래무릎동맥",
+      "reason": "laterality-from-base:FMA43889"
+    },
+    {
+      "id": "FMA43891",
+      "field": "nameKo",
+      "before": "왼아래안쪽무릎동맥",
+      "after": "왼안쪽아래무릎동맥",
+      "reason": "laterality-from-base:FMA43889"
+    },
+    {
+      "id": "FMA43892",
+      "field": "nameKo",
+      "before": "오른아래가쪽무릎동맥",
+      "after": "오른가쪽아래무릎동맥",
+      "reason": "laterality-from-base:FMA43888"
+    },
+    {
+      "id": "FMA43893",
+      "field": "nameKo",
+      "before": "왼아래가쪽무릎동맥",
+      "after": "왼가쪽아래무릎동맥",
+      "reason": "laterality-from-base:FMA43888"
+    },
+    {
+      "id": "FMA43943",
+      "field": "nameKo",
+      "before": "오른발바닥활",
+      "after": "오른발바닥동맥활",
+      "reason": "laterality-from-base:FMA43942"
+    },
+    {
+      "id": "FMA43944",
+      "field": "nameKo",
+      "before": "왼발바닥활",
+      "after": "왼발바닥동맥활",
+      "reason": "laterality-from-base:FMA43942"
+    },
+    {
+      "id": "FMA44340",
+      "field": "nameKo",
+      "before": "오른얕은윗배정맥",
+      "after": "오른얕은배벽정맥",
+      "reason": "laterality-from-base:FMA44318"
+    },
+    {
+      "id": "FMA44341",
+      "field": "nameKo",
+      "before": "왼얕은윗배정맥",
+      "after": "왼얕은배벽정맥",
+      "reason": "laterality-from-base:FMA44318"
+    },
+    {
+      "id": "FMA44918",
+      "field": "nameKo",
+      "before": "오른안쪽휘돌이넙다리정맥",
+      "after": "오른안쪽넙다리휘돌이정맥",
+      "reason": "laterality-from-base:FMA44325"
+    },
+    {
+      "id": "FMA44919",
+      "field": "nameKo",
+      "before": "왼안쪽휘돌이넙다리정맥",
+      "after": "왼안쪽넙다리휘돌이정맥",
+      "reason": "laterality-from-base:FMA44325"
+    },
+    {
+      "id": "FMA44920",
+      "field": "nameKo",
+      "before": "오른가쪽휘돌이넙다리정맥",
+      "after": "오른가쪽넙다리휘돌이정맥",
+      "reason": "laterality-from-base:FMA44326"
+    },
+    {
+      "id": "FMA44922",
+      "field": "nameKo",
+      "before": "왼가쪽휘돌이넙다리정맥",
+      "after": "왼가쪽넙다리휘돌이정맥",
+      "reason": "laterality-from-base:FMA44326"
+    },
+    {
+      "id": "FMA45826",
+      "field": "nameKo",
+      "before": "오른붓돌기목뿔",
+      "after": "오른붓목뿔근",
+      "reason": "laterality-from-base:FMA9625"
+    },
+    {
+      "id": "FMA45827",
+      "field": "nameKo",
+      "before": "왼붓돌기목뿔",
+      "after": "왼붓목뿔근",
+      "reason": "laterality-from-base:FMA9625"
+    },
+    {
+      "id": "FMA46292",
+      "field": "nameKo",
+      "before": "오른두힘살근",
+      "after": "오른턱두힘살근",
+      "reason": "laterality-from-base:FMA46291"
+    },
+    {
+      "id": "FMA46293",
+      "field": "nameKo",
+      "before": "왼두힘살근",
+      "after": "왼턱두힘살근",
+      "reason": "laterality-from-base:FMA46291"
+    },
+    {
+      "id": "FMA46309",
+      "field": "nameKo",
+      "before": "오른긴머리",
+      "after": "오른머리긴근",
+      "reason": "laterality-from-base:FMA46308"
+    },
+    {
+      "id": "FMA46310",
+      "field": "nameKo",
+      "before": "왼긴머리",
+      "after": "왼머리긴근",
+      "reason": "laterality-from-base:FMA46308"
+    },
+    {
+      "id": "FMA46313",
+      "field": "nameKo",
+      "before": "오른곧은머리앞",
+      "after": "오른앞머리곧은근",
+      "reason": "laterality-from-base:FMA46312"
+    },
+    {
+      "id": "FMA46314",
+      "field": "nameKo",
+      "before": "왼곧은머리앞",
+      "after": "왼앞머리곧은근",
+      "reason": "laterality-from-base:FMA46312"
+    },
+    {
+      "id": "FMA46317",
+      "field": "nameKo",
+      "before": "오른곧은머리가쪽",
+      "after": "오른가쪽머리곧은근",
+      "reason": "laterality-from-base:FMA46316"
+    },
+    {
+      "id": "FMA46318",
+      "field": "nameKo",
+      "before": "왼곧은머리가쪽",
+      "after": "왼가쪽머리곧은근",
+      "reason": "laterality-from-base:FMA46316"
+    },
+    {
+      "id": "FMA46584",
+      "field": "nameKo",
+      "before": "오른빗모뿔",
+      "after": "오른빗모뿔근",
+      "reason": "laterality-from-base:FMA46583"
+    },
+    {
+      "id": "FMA46585",
+      "field": "nameKo",
+      "before": "왼빗모뿔",
+      "after": "왼빗모뿔근",
+      "reason": "laterality-from-base:FMA46583"
+    },
+    {
+      "id": "FMA46631",
+      "field": "nameKo",
+      "before": "오른위인두조임근",
+      "after": "오른위인두수축근",
+      "reason": "laterality-from-base:FMA46621"
+    },
+    {
+      "id": "FMA46632",
+      "field": "nameKo",
+      "before": "왼위인두조임근",
+      "after": "왼위인두수축근",
+      "reason": "laterality-from-base:FMA46621"
+    },
+    {
+      "id": "FMA46633",
+      "field": "nameKo",
+      "before": "오른중간인두조임근",
+      "after": "오른중간인두수축근",
+      "reason": "laterality-from-base:FMA46622"
+    },
+    {
+      "id": "FMA46634",
+      "field": "nameKo",
+      "before": "왼중간인두조임근",
+      "after": "왼중간인두수축근",
+      "reason": "laterality-from-base:FMA46622"
+    },
+    {
+      "id": "FMA46635",
+      "field": "nameKo",
+      "before": "오른아래인두조임근",
+      "after": "오른아래인두수축근",
+      "reason": "laterality-from-base:FMA46623"
+    },
+    {
+      "id": "FMA46636",
+      "field": "nameKo",
+      "before": "왼아래인두조임근",
+      "after": "왼아래인두수축근",
+      "reason": "laterality-from-base:FMA46623"
+    },
+    {
+      "id": "FMA46669",
+      "field": "nameKo",
+      "before": "오른귀인두관인두근",
+      "after": "오른귀관인두근",
+      "reason": "laterality-from-base:FMA46665"
+    },
+    {
+      "id": "FMA46670",
+      "field": "nameKo",
+      "before": "왼귀인두관인두근",
+      "after": "왼귀관인두근",
+      "reason": "laterality-from-base:FMA46665"
+    },
+    {
+      "id": "FMA49044",
+      "field": "nameKo",
+      "before": "오른위곧은",
+      "after": "오른위곧은근",
+      "reason": "laterality-from-base:FMA49035"
+    },
+    {
+      "id": "FMA49045",
+      "field": "nameKo",
+      "before": "왼위곧은",
+      "after": "왼위곧은근",
+      "reason": "laterality-from-base:FMA49035"
+    },
+    {
+      "id": "FMA49046",
+      "field": "nameKo",
+      "before": "오른아래곧은",
+      "after": "오른아래곧은근",
+      "reason": "laterality-from-base:FMA49036"
+    },
+    {
+      "id": "FMA49047",
+      "field": "nameKo",
+      "before": "왼아래곧은",
+      "after": "왼아래곧은근",
+      "reason": "laterality-from-base:FMA49036"
+    },
+    {
+      "id": "FMA49048",
+      "field": "nameKo",
+      "before": "오른위눈꺼풀올림근",
+      "after": "오른눈꺼풀올림근",
+      "reason": "laterality-from-base:FMA49041"
+    },
+    {
+      "id": "FMA49049",
+      "field": "nameKo",
+      "before": "왼위눈꺼풀올림근",
+      "after": "왼눈꺼풀올림근",
+      "reason": "laterality-from-base:FMA49041"
+    },
+    {
+      "id": "FMA49050",
+      "field": "nameKo",
+      "before": "오른아래빗",
+      "after": "오른아래빗근",
+      "reason": "laterality-from-base:FMA49040"
+    },
+    {
+      "id": "FMA49051",
+      "field": "nameKo",
+      "before": "왼아래빗",
+      "after": "왼아래빗근",
+      "reason": "laterality-from-base:FMA49040"
+    },
+    {
+      "id": "FMA49052",
+      "field": "nameKo",
+      "before": "오른위빗",
+      "after": "오른위빗근",
+      "reason": "laterality-from-base:FMA49039"
+    },
+    {
+      "id": "FMA49053",
+      "field": "nameKo",
+      "before": "왼위빗",
+      "after": "왼위빗근",
+      "reason": "laterality-from-base:FMA49039"
+    },
+    {
+      "id": "FMA49054",
+      "field": "nameKo",
+      "before": "오른가쪽곧은",
+      "after": "오른가쪽곧은근",
+      "reason": "laterality-from-base:FMA49038"
+    },
+    {
+      "id": "FMA49055",
+      "field": "nameKo",
+      "before": "왼가쪽곧은",
+      "after": "왼가쪽곧은근",
+      "reason": "laterality-from-base:FMA49038"
+    },
+    {
+      "id": "FMA49056",
+      "field": "nameKo",
+      "before": "오른안쪽곧은",
+      "after": "오른안쪽곧은근",
+      "reason": "laterality-from-base:FMA49037"
+    },
+    {
+      "id": "FMA49057",
+      "field": "nameKo",
+      "before": "왼안쪽곧은",
+      "after": "왼안쪽곧은근",
+      "reason": "laterality-from-base:FMA49037"
+    },
+    {
+      "id": "FMA50088",
+      "field": "nameKo",
+      "before": "오른앞맥락막동맥",
+      "after": "오른앞맥락동맥",
+      "reason": "laterality-from-base:FMA50087"
+    },
+    {
+      "id": "FMA50089",
+      "field": "nameKo",
+      "before": "왼앞맥락막동맥",
+      "after": "왼앞맥락동맥",
+      "reason": "laterality-from-base:FMA50087"
+    },
+    {
+      "id": "FMA50343",
+      "field": "nameKo",
+      "before": "오른안쪽이마바닥동맥",
+      "after": "오른안쪽눈확이마동맥",
+      "reason": "laterality-from-base:FMA50328"
+    },
+    {
+      "id": "FMA50344",
+      "field": "nameKo",
+      "before": "왼안쪽이마바닥동맥",
+      "after": "왼안쪽눈확이마동맥",
+      "reason": "laterality-from-base:FMA50328"
+    },
+    {
+      "id": "FMA50380",
+      "field": "nameKo",
+      "before": "오른극관자동맥",
+      "after": "오른관자극동맥",
+      "reason": "laterality-from-base:FMA50379"
+    },
+    {
+      "id": "FMA50381",
+      "field": "nameKo",
+      "before": "왼극관자동맥",
+      "after": "왼관자극동맥",
+      "reason": "laterality-from-base:FMA50379"
+    },
+    {
+      "id": "FMA50443",
+      "field": "nameKo",
+      "before": "오른가쪽이마바닥동맥",
+      "after": "오른가쪽눈확이마동맥",
+      "reason": "laterality-from-base:FMA50442"
+    },
+    {
+      "id": "FMA50444",
+      "field": "nameKo",
+      "before": "왼가쪽이마바닥동맥",
+      "after": "왼가쪽눈확이마동맥",
+      "reason": "laterality-from-base:FMA50442"
+    },
+    {
+      "id": "FMA50445",
+      "field": "nameKo",
+      "before": "오른앞이마동맥",
+      "after": "오른이마앞동맥",
+      "reason": "laterality-from-base:FMA50437"
+    },
+    {
+      "id": "FMA50478",
+      "field": "nameKo",
+      "before": "왼앞이마동맥",
+      "after": "왼이마앞동맥",
+      "reason": "laterality-from-base:FMA50437"
+    },
+    {
+      "id": "FMA51144",
+      "field": "nameKo",
+      "before": "오른폄근엄지발가락짧은",
+      "after": "오른짧은엄지폄근",
+      "reason": "laterality-from-base:FMA51141"
+    },
+    {
+      "id": "FMA51145",
+      "field": "nameKo",
+      "before": "왼폄근엄지발가락짧은",
+      "after": "왼짧은엄지폄근",
+      "reason": "laterality-from-base:FMA51141"
+    },
+    {
+      "id": "FMA52629",
+      "field": "nameKo",
+      "before": "오른눈물신경",
+      "after": "오른눈물샘신경",
+      "reason": "laterality-from-base:FMA52628"
+    },
+    {
+      "id": "FMA52630",
+      "field": "nameKo",
+      "before": "왼눈물신경",
+      "after": "왼눈물샘신경",
+      "reason": "laterality-from-base:FMA52628"
+    },
+    {
+      "id": "FMA52676",
+      "field": "nameKo",
+      "before": "오른앞벌집뼈신경",
+      "after": "오른앞벌집신경",
+      "reason": "laterality-from-base:FMA52675"
+    },
+    {
+      "id": "FMA52677",
+      "field": "nameKo",
+      "before": "왼앞벌집뼈신경",
+      "after": "왼앞벌집신경",
+      "reason": "laterality-from-base:FMA52675"
+    },
+    {
+      "id": "FMA52715",
+      "field": "nameKo",
+      "before": "오른뒤벌집뼈신경",
+      "after": "오른뒤벌집신경",
+      "reason": "laterality-from-base:FMA52714"
+    },
+    {
+      "id": "FMA52716",
+      "field": "nameKo",
+      "before": "왼뒤벌집뼈신경",
+      "after": "왼뒤벌집신경",
+      "reason": "laterality-from-base:FMA52714"
+    },
+    {
+      "id": "FMA52738",
+      "field": "nameKo",
+      "before": "오른쪽 관자뼈",
+      "after": "오른관자뼈",
+      "reason": "laterality-from-base:FMA52737"
+    },
+    {
+      "id": "FMA52738",
+      "field": "legacyKo",
+      "before": "우측 측두골",
+      "after": "우측두골",
+      "reason": "laterality-from-base:FMA52737"
+    },
+    {
+      "id": "FMA52739",
+      "field": "nameKo",
+      "before": "왼쪽 관자뼈",
+      "after": "왼관자뼈",
+      "reason": "laterality-from-base:FMA52737"
+    },
+    {
+      "id": "FMA52739",
+      "field": "legacyKo",
+      "before": "좌측 측두골",
+      "after": "좌측두골",
+      "reason": "laterality-from-base:FMA52737"
+    },
+    {
+      "id": "FMA52788",
+      "field": "nameKo",
+      "before": "오른쪽 마루뼈",
+      "after": "오른마루뼈",
+      "reason": "laterality-from-base:FMA9613"
+    },
+    {
+      "id": "FMA52788",
+      "field": "legacyKo",
+      "before": "우측 두정골",
+      "after": "우두정골",
+      "reason": "laterality-from-base:FMA9613"
+    },
+    {
+      "id": "FMA52789",
+      "field": "nameKo",
+      "before": "왼쪽 마루뼈",
+      "after": "왼마루뼈",
+      "reason": "laterality-from-base:FMA9613"
+    },
+    {
+      "id": "FMA52789",
+      "field": "legacyKo",
+      "before": "좌측 두정골",
+      "after": "좌두정골",
+      "reason": "laterality-from-base:FMA9613"
+    },
+    {
+      "id": "FMA59505",
+      "field": "nameKo",
+      "before": "오른큰날개연골",
+      "after": "오른큰콧방울연골",
+      "reason": "laterality-from-base:FMA59504"
+    },
+    {
+      "id": "FMA59506",
+      "field": "nameKo",
+      "before": "왼큰날개연골",
+      "after": "왼큰콧방울연골",
+      "reason": "laterality-from-base:FMA59504"
+    },
+    {
+      "id": "FMA59541",
+      "field": "nameKo",
+      "before": "오른눈물호수",
+      "after": "오른눈물못",
+      "reason": "laterality-from-base:FMA59402"
+    },
+    {
+      "id": "FMA59542",
+      "field": "nameKo",
+      "before": "왼눈물호수",
+      "after": "왼눈물못",
+      "reason": "laterality-from-base:FMA59402"
+    },
+    {
+      "id": "FMA62382",
+      "field": "nameKo",
+      "before": "오른시각다발",
+      "after": "오른시각로",
+      "reason": "laterality-from-base:FMA62046"
+    },
+    {
+      "id": "FMA65014",
+      "field": "nameKo",
+      "before": "오른굽힘근엄지발가락긴",
+      "after": "오른긴엄지굽힘근",
+      "reason": "laterality-from-base:FMA22593"
+    },
+    {
+      "id": "FMA65015",
+      "field": "nameKo",
+      "before": "왼굽힘근엄지발가락긴",
+      "after": "왼긴엄지굽힘근",
+      "reason": "laterality-from-base:FMA22593"
+    },
+    {
+      "id": "FMA65016",
+      "field": "nameKo",
+      "before": "오른굽힘근손가락긴",
+      "after": "오른긴발가락굽힘근",
+      "reason": "laterality-from-base:FMA51071"
+    },
+    {
+      "id": "FMA65017",
+      "field": "nameKo",
+      "before": "왼굽힘근손가락긴",
+      "after": "왼긴발가락굽힘근",
+      "reason": "laterality-from-base:FMA51071"
+    },
+    {
+      "id": "FMA67936",
+      "field": "nameKo",
+      "before": "왼시각다발",
+      "after": "왼시각로",
+      "reason": "laterality-from-base:FMA62046"
+    },
+    {
+      "id": "FMA72309",
+      "field": "nameKo",
+      "before": "오른붓돌기목뿔인대",
+      "after": "오른붓목뿔인대",
+      "reason": "laterality-from-base:FMA72308"
+    },
+    {
+      "id": "FMA72311",
+      "field": "nameKo",
+      "before": "왼붓돌기목뿔인대",
+      "after": "왼붓목뿔인대",
+      "reason": "laterality-from-base:FMA72308"
+    },
+    {
+      "id": "FMA72906",
+      "field": "nameKo",
+      "before": "오른속주머니",
+      "after": "오른속섬유막",
+      "reason": "laterality-from-base:FMA61950"
+    },
+    {
+      "id": "FMA72907",
+      "field": "nameKo",
+      "before": "왼속주머니",
+      "after": "왼속섬유막",
+      "reason": "laterality-from-base:FMA61950"
+    },
+    {
+      "id": "FMA72940",
+      "field": "nameKo",
+      "before": "왼종말줄무늬",
+      "after": "왼분계섬유줄",
+      "reason": "laterality-from-base:FMA61974"
+    },
+    {
+      "id": "FMA72977",
+      "field": "nameKo",
+      "before": "오른섬",
+      "after": "오른대뇌섬",
+      "reason": "laterality-from-base:FMA67329"
+    },
+    {
+      "id": "FMA72978",
+      "field": "nameKo",
+      "before": "왼섬",
+      "after": "왼대뇌섬",
+      "reason": "laterality-from-base:FMA67329"
+    },
+    {
+      "id": "FMA73413",
+      "field": "nameKo",
+      "before": "시상오른줄무늬수질",
+      "after": "오른시상섬유줄",
+      "reason": "laterality-from-base:FMA62080"
+    },
+    {
+      "id": "FMA73413",
+      "field": "legacyKo",
+      "before": "시상우선조수질",
+      "after": "우시상수질선조",
+      "reason": "laterality-from-base:FMA62080"
+    },
+    {
+      "id": "FMA73413",
+      "field": "hanja",
+      "before": "視床右線條髓質",
+      "after": "右視床髓質線條",
+      "reason": "laterality-from-base:FMA62080"
+    },
+    {
+      "id": "FMA73414",
+      "field": "nameKo",
+      "before": "시상왼줄무늬수질",
+      "after": "왼시상섬유줄",
+      "reason": "laterality-from-base:FMA62080"
+    },
+    {
+      "id": "FMA73414",
+      "field": "legacyKo",
+      "before": "시상좌선조수질",
+      "after": "좌시상수질선조",
+      "reason": "laterality-from-base:FMA62080"
+    },
+    {
+      "id": "FMA73414",
+      "field": "hanja",
+      "before": "視床左線條髓質",
+      "after": "左視床髓質線條",
+      "reason": "laterality-from-base:FMA62080"
+    },
+    {
+      "id": "FMA77949",
+      "field": "nameKo",
+      "before": "오른휘돌이어깨뼈정맥",
+      "after": "오른어깨휘돌이정맥",
+      "reason": "laterality-from-base:FMA77498"
+    },
+    {
+      "id": "FMA77950",
+      "field": "nameKo",
+      "before": "왼휘돌이어깨뼈정맥",
+      "after": "왼어깨휘돌이정맥",
+      "reason": "laterality-from-base:FMA77498"
+    },
+    {
+      "id": "FMA77954",
+      "field": "nameKo",
+      "before": "오른앞휘돌이위팔뼈정맥",
+      "after": "오른앞위팔휘돌이정맥",
+      "reason": "laterality-from-base:FMA77499"
+    },
+    {
+      "id": "FMA77955",
+      "field": "nameKo",
+      "before": "왼앞휘돌이위팔뼈정맥",
+      "after": "왼앞위팔휘돌이정맥",
+      "reason": "laterality-from-base:FMA77499"
+    },
+    {
+      "id": "FMA78449",
+      "field": "nameKo",
+      "before": "오른가쪽심실",
+      "after": "오른가쪽뇌실",
+      "reason": "laterality-from-base:FMA78448"
+    },
+    {
+      "id": "FMA78450",
+      "field": "nameKo",
+      "before": "왼가쪽심실",
+      "after": "왼가쪽뇌실",
+      "reason": "laterality-from-base:FMA78448"
+    },
+    {
+      "id": "FMA7187",
+      "field": "nameKo",
+      "before": "오른아래팔다리",
+      "after": "오른다리",
+      "reason": "laterality-from-base:FMA7184"
+    },
+    {
+      "id": "FMA7188",
+      "field": "nameKo",
+      "before": "왼아래팔다리",
+      "after": "왼다리",
+      "reason": "laterality-from-base:FMA7184"
+    },
+    {
+      "id": "FMA8617",
+      "field": "nameKo",
+      "before": "오른끝분절동맥",
+      "after": "오른꼭대기구역동맥",
+      "reason": "laterality-from-base:FMA8707"
+    },
+    {
+      "id": "FMA8619",
+      "field": "nameKo",
+      "before": "오른뒤분절동맥",
+      "after": "오른뒤구역동맥",
+      "reason": "laterality-from-base:FMA13280"
+    },
+    {
+      "id": "FMA8627",
+      "field": "nameKo",
+      "before": "오른위분절동맥",
+      "after": "오른위구역동맥",
+      "reason": "laterality-from-base:FMA8714"
+    },
+    {
+      "id": "FMA8630",
+      "field": "nameKo",
+      "before": "오른앞바닥분절동맥",
+      "after": "오른앞바닥구역동맥",
+      "reason": "laterality-from-base:FMA8717"
+    },
+    {
+      "id": "FMA8631",
+      "field": "nameKo",
+      "before": "오른가쪽바닥분절동맥",
+      "after": "오른가쪽바닥구역동맥",
+      "reason": "laterality-from-base:FMA8718"
+    },
+    {
+      "id": "FMA8632",
+      "field": "nameKo",
+      "before": "오른뒤바닥분절동맥",
+      "after": "오른뒤바닥구역동맥",
+      "reason": "laterality-from-base:FMA8719"
+    },
+    {
+      "id": "FMA16582",
+      "field": "nameKo",
+      "before": "오른골반이음",
+      "after": "오른다리이음부위",
+      "reason": "laterality-from-base:FMA16581"
+    },
+    {
+      "id": "FMA16583",
+      "field": "nameKo",
+      "before": "왼골반이음",
+      "after": "왼다리이음부위",
+      "reason": "laterality-from-base:FMA16581"
+    }
+  ],
+  "rules": {
+    "directVerifiedTargetsProtected": true,
+    "verifiedTargetsProtected": true,
+    "nestedLateralityAutoRepair": false,
+    "lateralityDerivedOnlyFromTrustedExactBase": true,
+    "nameKoPrefix": {
+      "right": "오른",
+      "left": "왼"
+    },
+    "legacyKoPrefix": {
+      "right": "우",
+      "left": "좌"
+    },
+    "hanjaPrefix": {
+      "right": "右",
+      "left": "左"
+    }
+  }
+}

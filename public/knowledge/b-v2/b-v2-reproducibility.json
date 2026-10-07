@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0.0",
+  "independent_fresh_runs": 2,
+  "files": {
+    "anatomy-acupoint-relations-v2.json": {
+      "run1_sha256": "0a27c6c080479a87d7dcf84f1cb3a45633d20c09458e739ebfe084ce03dd9bda",
+      "run2_sha256": "0a27c6c080479a87d7dcf84f1cb3a45633d20c09458e739ebfe084ce03dd9bda",
+      "byte_identical": true
+    },
+    "b-v2-compiled-source-spec.json": {
+      "run1_sha256": "fc58f2db2aa29e1d1cc04392383984bf60f13d5bfa045715687fedcb18eb7778",
+      "run2_sha256": "fc58f2db2aa29e1d1cc04392383984bf60f13d5bfa045715687fedcb18eb7778",
+      "byte_identical": true
+    },
+    "b-v2-validator-results.json": {
+      "run1_sha256": "df098d6403b9a907440692a341a6cf1a038a7b49d27d4cc8da30bbdacd20368d",
+      "run2_sha256": "df098d6403b9a907440692a341a6cf1a038a7b49d27d4cc8da30bbdacd20368d",
+      "byte_identical": true
+    },
+    "b-v2-negative-validator-tests.json": {
+      "run1_sha256": "0dbf81acb19bbf0fbf9aa74350f72289bfc6f2121747c5983e5e2614a6128c47",
+      "run2_sha256": "0dbf81acb19bbf0fbf9aa74350f72289bfc6f2121747c5983e5e2614a6128c47",
+      "byte_identical": true
+    },
+    "b-v2-upstream-regression.json": {
+      "run1_sha256": "5489bb269360bb789ea6052f403a0608749e648a98775351188bdcdc01b7158b",
+      "run2_sha256": "5489bb269360bb789ea6052f403a0608749e648a98775351188bdcdc01b7158b",
+      "byte_identical": true
+    }
+  },
+  "PASS": true
+}

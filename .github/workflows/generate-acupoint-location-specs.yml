@@ -1,0 +1,47 @@
+name: Generate Acupoint Location Specs
+
+on:
+  push:
+    branches:
+      - feature/korean-tcm-knowledge
+    paths:
+      - public/knowledge/acupoints.json
+      - scripts/generate-acupoint-location-specs.mjs
+      - scripts/validate-acupoint-location-specs.mjs
+      - public/knowledge/acupoint-location-spec.schema.json
+      - .github/workflows/generate-acupoint-location-specs.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.0'
+      - name: Generate lossless specifications
+        run: node scripts/generate-acupoint-location-specs.mjs
+      - name: Validate and write audit
+        run: node scripts/validate-acupoint-location-specs.mjs
+      - name: Ensure generated registry is lossless
+        run: |
+          node scripts/validate-acupoint-location-specs.mjs
+          test "$(node -e "const a=require('./public/knowledge/acupoint-location-specs-audit.json');process.stdout.write(String(a.specificationCount))")" = "361"
+          test "$(node -e "const a=require('./public/knowledge/acupoint-location-specs-audit.json');process.stdout.write(String(a.losslessVerification.uncoveredCharacterCount))")" = "0"
+          test "$(node -e "const a=require('./public/knowledge/acupoint-location-specs-audit.json');process.stdout.write(String(a.losslessVerification.lossyTransformationCount))")" = "0"
+      - name: Commit generated registry and audit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/knowledge/acupoint-location-specs.json public/knowledge/acupoint-location-specs-audit.json
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+          else
+            git commit -m "data: generate lossless acupoint location specs"
+            git pull --rebase origin feature/korean-tcm-knowledge
+            git push
+          fi

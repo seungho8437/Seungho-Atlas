@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-vertical-slice-v1-approved-input-lock",
+  "status": "FROZEN",
+  "approved_at": "2026-10-06",
+  "b_v2_1": {
+    "path": "public/knowledge/anatomy-acupoint-relations-v2.1.json",
+    "sha256": "8126e20938a478a2d214f4a8487cabeebc8f3115f7a81ad30e46b594958fb2c1"
+  },
+  "stage1": {
+    "status": "APPROVED",
+    "approval_path": "artifacts/c-v3/stage1/approval.json"
+  },
+  "human_approved_review": {
+    "workflow_run_id": 37435690131,
+    "head_sha": "1d4fc9c5b4922bbbeb99de7ecbc0b801101b50f0",
+    "geometry_executor": {
+      "path": "scripts/cv3/slice_surface_registry.py",
+      "git_blob_sha": "efb078aaecc08af1a4491cb40e9c84fd4e4443fa"
+    },
+    "review_builder": {
+      "path": "scripts/cv3/build_vertical_slice_review.py",
+      "git_blob_sha": "1c3a05ceb4b6f84ee670b6d6cf2c50c6f8349b5a"
+    },
+    "identity_validator": {
+      "path": "scripts/cv3/validate_vertical_slice_review_identity.py",
+      "git_blob_sha": "a0a9b066c04d80b4cbd27f205afcaae4dbf3ea44"
+    },
+    "automated_validation": "193 checks / 0 errors / PASS"
+  },
+  "approved_registry": {
+    "entries": 21,
+    "resolved": 20,
+    "intentional_unresolved": [
+      "SR:nasolabial_sulcus"
+    ]
+  },
+  "approved_calibration": {
+    "rows": 12
+  },
+  "rule": "Any change to the frozen geometry executor or review/calibration generator invalidates this lock and requires renewed human review before solver execution."
+}

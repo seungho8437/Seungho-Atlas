@@ -1,0 +1,51 @@
+name: Generate Acupoint Coordinates
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/korean-tcm-knowledge
+    paths:
+      - scripts/build-acupoint-coordinate-solver.mjs
+      - scripts/validate-acupoint-coordinate-solver.mjs
+      - public/knowledge/acupoint-coordinate-review-decisions.json
+      - scripts/generate-acupoint-coordinates.mjs
+      - scripts/generate-acupoint-exception-review.mjs
+      - scripts/validate-acupoint-spatial.mjs
+      - .github/workflows/generate-acupoint-coordinates.yml
+
+concurrency:
+  group: generate-acupoint-coordinates-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/korean-tcm-knowledge
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.0'
+      - run: node scripts/build-acupoint-coordinate-solver.mjs
+      - run: node scripts/validate-acupoint-coordinate-solver.mjs
+      - run: node scripts/generate-acupoint-coordinates.mjs
+      - run: node scripts/generate-acupoint-exception-review.mjs
+      - run: node scripts/validate-acupoint-spatial.mjs
+      - run: node scripts/validate-atlas.mjs
+      - run: node scripts/validate-knowledge.mjs
+      - name: Commit generated coordinate registry
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/knowledge/acupoint-coordinate-solver.json public/knowledge/acupoint-coordinate-solver-audit.json public/knowledge/acupoint-coordinates.json public/knowledge/acupoint-coordinates-audit.json public/knowledge/acupoint-coordinate-exception-review.json public/knowledge/acupoint-coordinate-exception-review.svg
+          if git diff --cached --quiet; then
+            echo "No generated coordinate changes."
+          else
+            git commit -m "data: generate BodyParts3D acupoint coordinates"
+            git push
+          fi

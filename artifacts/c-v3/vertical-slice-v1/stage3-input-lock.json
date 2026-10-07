@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-vertical-slice-v1-stage3-input-lock",
+  "status": "FROZEN_FOR_STAGE3",
+  "scope": "Vertical Slice v1 (20 points)",
+  "stage1": {
+    "approval_path": "artifacts/c-v3/stage1/approval.json",
+    "status": "APPROVED",
+    "b_v2_1_sha256": "8126e20938a478a2d214f4a8487cabeebc8f3115f7a81ad30e46b594958fb2c1",
+    "atlas_sha256": "c359f4bcd2cba90b7411d66d5e9fc04dc81294d46cd5c1e8b212c824f2e5bbee"
+  },
+  "registry_calibration": {
+    "approval_path": "artifacts/c-v3/vertical-slice-v1/registry-calibration-approval.json",
+    "status": "APPROVED",
+    "workflow_run_id": 37435690131,
+    "workflow_artifact_id": 11399287163,
+    "workflow_artifact_digest": "sha256:2ec304602685ebdc58c54159d68549e5ef4e222d9b8f1920776bf226ced697c1",
+    "calibration_sha256": "c36b929b1cb8d2e36a8af1ae3fadcca19995e54e3818567c7d1ae58bf900d106",
+    "registry_geometry_payload_sha256": "67846b1d56293fdbffcefe3cb5ee49e0ade4e81a94d1b9e86892d0ddb81f39db",
+    "review_identity_validation_sha256": "39319ecea9937a819b01eb333ec4d476a2d2f016aa4028478525b7c80bdf9865"
+  },
+  "stage2": {
+    "approval_path": "artifacts/c-v3/vertical-slice-v1/stage2-human-semantic-audit-approval.json",
+    "status": "PASS",
+    "workflow_run_id": 37450405490,
+    "workflow_artifact_id": 11405617578,
+    "workflow_artifact_digest": "sha256:ede6133664634230fdc4d5bd6159131477cdb7618ffd0f3ca1821089a35f1fd4",
+    "repaired_execution_sha256": "e2f9edd26ef5fe40a45e5760d8d39b0120ce6e8b4e2089ab1fbf4de41a419b99"
+  },
+  "forbidden_inputs": {
+    "legacy_c_coordinates": true,
+    "production_coordinate_dataset": true,
+    "point_specific_coordinate_overrides": true
+  },
+  "output_policy": {
+    "pilot_only": true,
+    "deployable": false,
+    "production_dataset_write_forbidden": true,
+    "requires_human_audit_after_automated_validation": true,
+    "stage4_not_in_scope": true
+  }
+}

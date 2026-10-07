@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "acupoint-location-spec.schema.json",
+  "title": "Acupoint Location Specification v2",
+  "description": "Lossless semantic intermediate representation of WHO standard acupoint location statements. Source text and spans are canonical; normalized solver semantics are layered on top.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "acupointId",
+    "source",
+    "context",
+    "statements",
+    "measurements",
+    "fractions",
+    "pointReferences",
+    "conditions",
+    "constraints",
+    "preservation",
+    "resolution"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 2
+    },
+    "acupointId": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "textKo",
+        "sha256",
+        "sourceIds",
+        "who2008Page"
+      ]
+    },
+    "context": {
+      "type": "object",
+      "required": [
+        "bodyRegion",
+        "surface",
+        "laterality"
+      ],
+      "properties": {
+        "surface": {
+          "const": "body-surface"
+        }
+      }
+    },
+    "statements": {
+      "type": "array",
+      "minItems": 1
+    },
+    "measurements": {
+      "type": "array"
+    },
+    "fractions": {
+      "type": "array"
+    },
+    "pointReferences": {
+      "type": "array"
+    },
+    "conditions": {
+      "type": "array"
+    },
+    "constraints": {
+      "type": "array",
+      "minItems": 1
+    },
+    "preservation": {
+      "type": "object",
+      "required": [
+        "lossless",
+        "reconstruction",
+        "lossyTransformations",
+        "uncoveredText"
+      ],
+      "properties": {
+        "lossless": {
+          "const": true
+        }
+      }
+    },
+    "resolution": {
+      "type": "object"
+    }
+  }
+}

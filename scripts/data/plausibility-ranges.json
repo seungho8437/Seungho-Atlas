@@ -1,0 +1,9 @@
+{
+  "ST36": {"side":"left","reference":{"part_name":"Left patella","offset_y_m":[-0.12,-0.03]}},
+  "CV12": {"reference":{"part_name":"Xiphoid process","offset_y_m":[-0.17,-0.05]}},
+  "CV17": {"reference":{"part_name":"Body of sternum","offset_y_m":[-0.05,0.05]}},
+  "CV8": {"absolute_y_m":[0.98,1.08]},
+  "CV1": {"absolute_y_m":[0.70,0.82]},
+  "KI1": {"absolute_y_m":[0.0,0.06]},
+  "GV20": {"reference":{"skin_top":true,"offset_y_m":[-0.07,0.01]}}
+}

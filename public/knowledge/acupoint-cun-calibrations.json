@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "WHO_ACUPOINT_2008",
+  "title": "WHO proportional bone and finger-cun calibration registry",
+  "principle": "B-cun is calibrated from region-specific landmark intervals; never from a single global body-height scale. F-cun remains a separate finger-based unit.",
+  "calibrations": [
+    {
+      "id": "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+      "unit": "B-cun",
+      "cun": 12,
+      "region": "head",
+      "axis": "longitudinal",
+      "from": "midpoint-anterior-hairline",
+      "to": "midpoint-posterior-hairline"
+    },
+    {
+      "id": "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE",
+      "unit": "B-cun",
+      "cun": 3,
+      "region": "head",
+      "axis": "longitudinal",
+      "from": "glabella",
+      "to": "midpoint-anterior-hairline"
+    },
+    {
+      "id": "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+      "unit": "B-cun",
+      "cun": 9,
+      "region": "head",
+      "axis": "transverse",
+      "from": "left-anterior-hairline-corner",
+      "to": "right-anterior-hairline-corner"
+    },
+    {
+      "id": "HEAD_MASTOID_TO_MASTOID",
+      "unit": "B-cun",
+      "cun": 9,
+      "region": "head",
+      "axis": "transverse",
+      "from": "left-mastoid-process",
+      "to": "right-mastoid-process"
+    },
+    {
+      "id": "CHEST_SUPRASTERNAL_TO_XIPHISTERNAL",
+      "unit": "B-cun",
+      "cun": 9,
+      "region": "chest",
+      "axis": "longitudinal",
+      "from": "suprasternal-notch",
+      "to": "midpoint-xiphisternal-junction"
+    },
+    {
+      "id": "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+      "unit": "B-cun",
+      "cun": 8,
+      "region": "abdomen",
+      "axis": "longitudinal",
+      "from": "midpoint-xiphisternal-junction",
+      "to": "umbilicus-center"
+    },
+    {
+      "id": "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS",
+      "unit": "B-cun",
+      "cun": 5,
+      "region": "abdomen",
+      "axis": "longitudinal",
+      "from": "umbilicus-center",
+      "to": "superior-border-pubic-symphysis"
+    },
+    {
+      "id": "CHEST_NIPPLE_TO_NIPPLE",
+      "unit": "B-cun",
+      "cun": 8,
+      "region": "chest",
+      "axis": "transverse",
+      "from": "left-nipple-center",
+      "to": "right-nipple-center"
+    },
+    {
+      "id": "BACK_SCAPULAR_MEDIAL_BORDERS",
+      "unit": "B-cun",
+      "cun": 6,
+      "region": "back",
+      "axis": "transverse",
+      "from": "left-medial-border-scapula",
+      "to": "right-medial-border-scapula"
+    },
+    {
+      "id": "UPPER_ARM_AXILLARY_TO_CUBITAL",
+      "unit": "B-cun",
+      "cun": 9,
+      "region": "upper-arm",
+      "axis": "longitudinal",
+      "from": [
+        "anterior-axillary-fold",
+        "posterior-axillary-fold"
+      ],
+      "to": "cubital-crease",
+      "alternativeFrom": true
+    },
+    {
+      "id": "FOREARM_CUBITAL_TO_WRIST",
+      "unit": "B-cun",
+      "cun": 12,
+      "region": "forearm",
+      "axis": "longitudinal",
+      "from": "cubital-crease",
+      "to": [
+        "palmar-wrist-crease",
+        "dorsal-wrist-crease"
+      ],
+      "alternativeTo": true
+    },
+    {
+      "id": "THIGH_PUBIC_TO_PATELLA_BASE",
+      "unit": "B-cun",
+      "cun": 18,
+      "region": "thigh",
+      "axis": "longitudinal",
+      "from": "superior-border-pubic-symphysis",
+      "to": "base-of-patella"
+    },
+    {
+      "id": "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+      "unit": "B-cun",
+      "cun": 15,
+      "region": "leg",
+      "axis": "longitudinal",
+      "from": [
+        "apex-of-patella",
+        "center-popliteal-fossa"
+      ],
+      "to": "prominence-medial-malleolus",
+      "alternativeFrom": true
+    },
+    {
+      "id": "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+      "unit": "B-cun",
+      "cun": 13,
+      "region": "leg",
+      "axis": "longitudinal",
+      "from": "inferior-border-medial-condyle-tibia",
+      "to": "prominence-medial-malleolus"
+    },
+    {
+      "id": "KNEE_MEDIAL_TIBIAL_CONDYLE_TO_PATELLA_APEX",
+      "unit": "B-cun",
+      "cun": 2,
+      "region": "knee",
+      "axis": "longitudinal",
+      "from": "inferior-border-medial-condyle-tibia",
+      "to": "apex-of-patella"
+    },
+    {
+      "id": "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+      "unit": "B-cun",
+      "cun": 19,
+      "region": "thigh",
+      "axis": "longitudinal",
+      "from": "lateral-prominence-greater-trochanter",
+      "to": "popliteal-crease"
+    },
+    {
+      "id": "THIGH_GLUTEAL_FOLD_TO_POPLITEAL",
+      "unit": "B-cun",
+      "cun": 14,
+      "region": "thigh",
+      "axis": "longitudinal",
+      "from": "gluteal-fold",
+      "to": "popliteal-crease"
+    },
+    {
+      "id": "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS",
+      "unit": "B-cun",
+      "cun": 16,
+      "region": "leg",
+      "axis": "longitudinal",
+      "from": "popliteal-crease",
+      "to": "prominence-lateral-malleolus"
+    },
+    {
+      "id": "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE",
+      "unit": "B-cun",
+      "cun": 3,
+      "region": "ankle-foot",
+      "axis": "surface-geodesic",
+      "from": "prominence-medial-malleolus",
+      "to": "sole"
+    },
+    {
+      "id": "F_CUN_MIDDLE_FINGER",
+      "unit": "F-cun",
+      "cun": 1,
+      "region": "generic",
+      "axis": "finger-measurement",
+      "from": "radial-crease-proximal-interphalangeal-middle-finger",
+      "to": "radial-crease-distal-interphalangeal-middle-finger",
+      "condition": "thumb-and-middle-finger-flexed-to-form-circle"
+    },
+    {
+      "id": "F_CUN_THUMB_WIDTH",
+      "unit": "F-cun",
+      "cun": 1,
+      "region": "generic",
+      "axis": "finger-measurement",
+      "measure": "width-interphalangeal-joint-thumb"
+    },
+    {
+      "id": "F_CUN_FOUR_FINGER_WIDTH",
+      "unit": "F-cun",
+      "cun": 3,
+      "region": "generic",
+      "axis": "finger-measurement",
+      "measure": "width-index-middle-ring-little-fingers-at-dorsal-PIP-crease"
+    }
+  ]
+}

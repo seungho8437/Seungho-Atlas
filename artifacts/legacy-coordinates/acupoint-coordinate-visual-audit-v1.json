@@ -1,0 +1,250 @@
+{
+  "version": 1,
+  "generatedAt": "2026-10-04T12:55:37.028Z",
+  "coordinateSource": "public/knowledge/acupoint-coordinates.json @ 2026-10-04T12:09:50.030Z",
+  "method": {
+    "highRiskDetailed": "85 physical coordinates: 22 fixed-camera contact sheets, each with local front/side + full front/side, WHO text, projection vector, nearby acupoints, and available landmark meshes.",
+    "remainingSweep": "585 remaining physical coordinates: 14 meridian front/side full-coordinate sweeps, checking gross region errors, sequence reversals, discontinuities, and bilateral asymmetry.",
+    "verdicts": [
+      "PASS",
+      "CORRECT",
+      "MODEL-LIMITATION"
+    ],
+    "caveat": "Visual/model-level anatomical audit of BodyParts3D/WHO-derived coordinates; not cadaveric or imaging ground truth."
+  },
+  "coverage": {
+    "logicalAcupoints": 361,
+    "physicalCoordinates": 670,
+    "detailedHighRisk": 85,
+    "remainingSweep": 585,
+    "totalVisuallyExposed": 670,
+    "meridianSweeps": [
+      "LU",
+      "LI",
+      "ST",
+      "SP",
+      "HT",
+      "SI",
+      "BL",
+      "KI",
+      "PC",
+      "TE",
+      "GB",
+      "LR",
+      "GV",
+      "CV"
+    ]
+  },
+  "definiteCorrect": [
+    {
+      "id": "CV1",
+      "sides": [
+        "midline"
+      ],
+      "reason": "WHO perineal midpoint, but sweep places it at upper trunk level between thoracoabdominal CV points. Gross body-region error."
+    },
+    {
+      "id": "CV24",
+      "sides": [
+        "midline"
+      ],
+      "reason": "WHO mentolabial groove; current SI coordinate is inferior to CV23/CV22. Facial point is vertically misordered relative to neck points."
+    },
+    {
+      "id": "GB26",
+      "sides": [
+        "left",
+        "right"
+      ],
+      "reason": "WHO lateral abdomen below free end of 11th rib at umbilical level; both points are nearly on the anterior midline in the visual review."
+    },
+    {
+      "id": "ST29",
+      "sides": [
+        "left",
+        "right"
+      ],
+      "reason": "WHO 2 B-cun lateral to anterior midline; sweep shows both sides excessively medial, especially the left, with marked bilateral asymmetry."
+    },
+    {
+      "id": "ST35",
+      "sides": [
+        "left",
+        "right"
+      ],
+      "reason": "WHO inferolateral patellar depression; detailed overlays place ST35 superior to the patellar region/ST34 relationship rather than at the inferolateral patellar depression."
+    }
+  ],
+  "ambiguousUserRecheck": [
+    {
+      "id": "LU5",
+      "sides": [
+        "left",
+        "right"
+      ],
+      "provisional": "MODEL-LIMITATION",
+      "reason": "Elbow points should be bilaterally analogous; visual sweep shows marked left/right LR asymmetry (~6 cm equivalent model displacement)."
+    },
+    {
+      "id": "BL40",
+      "sides": [
+        "left",
+        "right"
+      ],
+      "provisional": "MODEL-LIMITATION",
+      "reason": "Popliteal-crease midpoint should be bilaterally analogous; visual sweep shows large left/right displacement."
+    },
+    {
+      "id": "LR9",
+      "sides": [
+        "left",
+        "right"
+      ],
+      "provisional": "MODEL-LIMITATION",
+      "reason": "Same WHO bilateral thigh relation but marked left/right lateral asymmetry in the full LR sweep."
+    },
+    {
+      "id": "KI13",
+      "sides": [
+        "left",
+        "right"
+      ],
+      "provisional": "MODEL-LIMITATION",
+      "reason": "0.5 B-cun bilateral lower-abdominal pair shows large AP/LR asymmetry; left point nearly collapses toward midline/posterior surface."
+    },
+    {
+      "id": "KI14",
+      "sides": [
+        "left",
+        "right"
+      ],
+      "provisional": "MODEL-LIMITATION",
+      "reason": "Same bilateral asymmetry pattern as KI13."
+    },
+    {
+      "id": "KI15",
+      "sides": [
+        "left",
+        "right"
+      ],
+      "provisional": "MODEL-LIMITATION",
+      "reason": "Same bilateral asymmetry pattern as KI13-14."
+    },
+    {
+      "id": "LR10",
+      "sides": [
+        "left",
+        "right"
+      ],
+      "provisional": "MODEL-LIMITATION",
+      "reason": "Both coordinates are low-confidence; generator recognized no specific landmark/WHO constraints for the ST30-relative arterial location."
+    },
+    {
+      "id": "HT7",
+      "sides": [
+        "left",
+        "right"
+      ],
+      "provisional": "MODEL-LIMITATION",
+      "reason": "Gross wrist region is plausible, but detailed overlay remains inconsistent/too distant from the pisiform reference landmark; exact FCU/pisiform relation cannot be accepted visually."
+    }
+  ],
+  "modelLimitationsFromDetailedReview": [
+    "GB28:left",
+    "GB28:right",
+    "BL65:left",
+    "BL65:right",
+    "BL66:left",
+    "BL66:right",
+    "TE17:left",
+    "TE17:right",
+    "LI1:left",
+    "LI1:right",
+    "BL53:left",
+    "BL53:right",
+    "BL54:left",
+    "BL54:right",
+    "GB10:left",
+    "GB10:right",
+    "GB12:left",
+    "GB12:right",
+    "GB29:left",
+    "GB29:right",
+    "LI9:left",
+    "LI10:left",
+    "LI10:right",
+    "GV18:midline",
+    "PC7:left",
+    "PC7:right",
+    "CV17:midline",
+    "BL39:right",
+    "LI5:left",
+    "LI5:right",
+    "LR4:left",
+    "LR4:right",
+    "GB32:left",
+    "GB32:right"
+  ],
+  "detailedPass": [
+    "BL62:left",
+    "BL62:right",
+    "TE15:left",
+    "TE15:right",
+    "GB23:left",
+    "SI14:left",
+    "SI14:right",
+    "LR2:left",
+    "LR2:right",
+    "TE7:left",
+    "TE7:right",
+    "SP9:left",
+    "SP9:right",
+    "ST31:left",
+    "ST31:right",
+    "PC8:left",
+    "PC8:right",
+    "HT4:left",
+    "HT4:right",
+    "HT5:left",
+    "HT5:right",
+    "HT6:left",
+    "HT6:right",
+    "SI9:left",
+    "SI9:right",
+    "ST40:left",
+    "ST40:right",
+    "TE16:left",
+    "TE16:right",
+    "BL57:left",
+    "BL57:right",
+    "SI4:left",
+    "SI4:right",
+    "SP4:left",
+    "SP4:right",
+    "LR5:left",
+    "LR5:right",
+    "LR6:left",
+    "LR6:right",
+    "ST3:right",
+    "ST7:left",
+    "ST7:right",
+    "LU8:left",
+    "LU8:right"
+  ],
+  "sweepResult": {
+    "result": "PASS except the explicitly listed CORRECT and ambiguous/model-limitation cases.",
+    "notes": [
+      "All 14 meridians were reviewed in front and side projections.",
+      "No additional gross cross-region displacement or exact overlap was accepted outside the listed cases.",
+      "Long segment lines between anatomically distant consecutive meridian points were not treated as errors by themselves; they were judged against WHO regional sequence."
+    ]
+  },
+  "nextStep": "User re-confirms definiteCorrect and ambiguousUserRecheck groups. Only then modify generator rules, regenerate all 361/670 coordinates, rerun hard gates, and repeat focused visual regression.",
+  "summary": {
+    "PASS": 612,
+    "CORRECT": 8,
+    "MODEL_LIMITATION": 50,
+    "userRecheckPhysicalCoordinates": 58,
+    "note": "PASS includes 44 detailed high-risk points and 568 points accepted at meridian-sweep level. CORRECT includes 5 detailed high-risk points and 3 additional sweep-detected points. MODEL_LIMITATION includes 36 detailed/ambiguous high-risk points and 14 additional sweep-detected points."
+  }
+}

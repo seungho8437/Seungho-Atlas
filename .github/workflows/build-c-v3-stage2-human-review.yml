@@ -1,0 +1,81 @@
+name: Build C v3 Stage 2 human semantic review
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/korean-tcm-knowledge]
+    paths:
+      - 'scripts/cv3/build_vertical_slice_stage2_human_review.py'
+      - 'scripts/cv3/validate_vertical_slice_stage2_human_review.py'
+      - 'artifacts/c-v3/vertical-slice-v1/stage2-output.lock.json'
+      - '.github/workflows/build-c-v3-stage2-human-review.yml'
+permissions:
+  contents: write
+  actions: read
+jobs:
+  build-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/korean-tcm-knowledge
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF renderer dependency
+        run: python -m pip install --quiet reportlab
+      - name: Download exact frozen Stage 2 output artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p .tmp/stage2-frozen
+          curl -L --fail -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/seungho8437/Seungho-Atlas/actions/artifacts/11399852799/zip \
+            -o .tmp/stage2-frozen/source.zip
+          unzip -q .tmp/stage2-frozen/source.zip -d .tmp/stage2-frozen/extracted
+          test -f .tmp/stage2-frozen/extracted/stage2-execution.json
+      - name: Verify frozen Stage 2 source SHA
+        run: |
+          python - <<'PY'
+          import hashlib,pathlib,json
+          p=pathlib.Path('.tmp/stage2-frozen/extracted/stage2-execution.json')
+          h=hashlib.sha256(p.read_bytes()).hexdigest()
+          exp=json.load(open('artifacts/c-v3/vertical-slice-v1/stage2-output.lock.json'))['stage2_execution_sha256']
+          assert h==exp,(h,exp)
+          print('Frozen Stage 2 source identity: PASS',h)
+          PY
+      - name: Build renderer-only human review artifacts
+        run: |
+          python scripts/cv3/build_vertical_slice_stage2_human_review.py \
+            --stage2 .tmp/stage2-frozen/extracted/stage2-execution.json \
+            --out-dir artifacts/c-v3/vertical-slice-v1
+      - name: Independently validate review identity and negative mutations
+        run: |
+          python scripts/cv3/validate_vertical_slice_stage2_human_review.py \
+            --stage2 .tmp/stage2-frozen/extracted/stage2-execution.json \
+            --review-data artifacts/c-v3/vertical-slice-v1/stage2-human-review-data.json \
+            --review-html artifacts/c-v3/vertical-slice-v1/stage2-human-review.html \
+            --out artifacts/c-v3/vertical-slice-v1/stage2-human-review-validation.json
+      - name: Commit generated review artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add artifacts/c-v3/vertical-slice-v1/stage2-human-review.html \
+                  artifacts/c-v3/vertical-slice-v1/stage2-human-review.pdf \
+                  artifacts/c-v3/vertical-slice-v1/stage2-human-review-data.json \
+                  artifacts/c-v3/vertical-slice-v1/stage2-human-review-validation.json
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+          else
+            git commit -m "audit: generate Vertical Slice Stage 2 human semantic review"
+            git push origin HEAD:feature/korean-tcm-knowledge
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: c-v3-stage2-human-review
+          path: |
+            artifacts/c-v3/vertical-slice-v1/stage2-human-review.html
+            artifacts/c-v3/vertical-slice-v1/stage2-human-review.pdf
+            artifacts/c-v3/vertical-slice-v1/stage2-human-review-data.json
+            artifacts/c-v3/vertical-slice-v1/stage2-human-review-validation.json
+          if-no-files-found: error

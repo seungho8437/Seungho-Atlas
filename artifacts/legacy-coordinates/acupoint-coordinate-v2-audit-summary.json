@@ -1,0 +1,949 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "acupoint-coordinate-v2-audit-summary.json",
+  "generated_at": "2026-10-05T22:39:27.205Z",
+  "baseline": {
+    "v1_preserved": true,
+    "v1_reinterpreted_as": "provisional_projected_candidate",
+    "v1_solved_physical": 401,
+    "v1_legacy_candidate_reused": 401,
+    "v1_native_relation_executed": 0
+  },
+  "attribution_sample": {
+    "audited_physical_records": 23,
+    "normal_controls": 11,
+    "visually_wrong_records": 6,
+    "visual_review_problem_records": 6,
+    "first_failing_layer_counts": {
+      "RELATION_SOLVER_NOT_EXECUTED": 21,
+      "MEASUREMENT_CALIBRATION_ERROR": 2
+    },
+    "classification_counts": {
+      "LEGACY_COORDINATE_CANDIDATE_ERROR": 23,
+      "RELATION_SOLVER_NOT_EXECUTED": 23,
+      "SURFACE_PROJECTION_ERROR": 5,
+      "MEASUREMENT_CALIBRATION_ERROR": 2
+    },
+    "B_layer_error_suspected_records": 2,
+    "realization_error_records": 0,
+    "anchor_or_calibration_error_records": 2,
+    "legacy_candidate_error_records": 23,
+    "surface_projection_error_records": 5,
+    "unknown_records": 0
+  },
+  "frozen_B": {
+    "sha256": "6dd00d386a6262d02900ec5a30ea9b18aace899f071159e772c12679740b1d06",
+    "modified": false,
+    "minimal_reopen_candidates": {
+      "issue_count": 2,
+      "affected_point_count": 2,
+      "affected_points": [
+        "CV1",
+        "CV12"
+      ],
+      "issues": [
+        {
+          "kind": "GEOMETRY_LINE_CARDINALITY",
+          "node_id": "G:S:CV1:location:line:0",
+          "point_id": "CV1",
+          "geometry_type": "reference_line",
+          "endpoint_count": 1,
+          "endpoint_node_ids": [
+            "L:1562"
+          ],
+          "source_raw": "line connecting"
+        },
+        {
+          "kind": "GEOMETRY_LINE_CARDINALITY",
+          "node_id": "G:S:CV12:note:1:line:0",
+          "point_id": "CV12",
+          "geometry_type": "reference_line",
+          "endpoint_count": 1,
+          "endpoint_node_ids": [
+            "N:CV12:1:m2"
+          ],
+          "source_raw": "line connecting"
+        }
+      ]
+    }
+  },
+  "anchor_corrections": [
+    {
+      "anchor_id": "suprasternal-notch",
+      "old": {
+        "position": [
+          0.0009273688491848132,
+          1.3162882934480313,
+          0.08471770976887753
+        ],
+        "provenance": {
+          "kind": "derived_geometry_v1",
+          "id": "suprasternal-notch",
+          "status": "resolved-atlas-geometry",
+          "method": null
+        }
+      },
+      "v2": null,
+      "shift": null
+    },
+    {
+      "anchor_id": "superior-border-pubic-symphysis",
+      "old": {
+        "position": [
+          0.08211909979581833,
+          1.0090532302856445,
+          0.08333799988031387
+        ],
+        "provenance": {
+          "kind": "derived_geometry_v1",
+          "id": "superior-border-pubic-symphysis",
+          "status": "constructed-surface-geometry",
+          "method": "superomedial pubic-bone guided anterior surface projection"
+        }
+      },
+      "v2": null,
+      "shift": null
+    },
+    {
+      "anchor_id": "inferior-border-medial-condyle-tibia:left",
+      "old": {
+        "position": [
+          0.05520709976553917,
+          0.07201586663722992,
+          -0.01443410012871027
+        ],
+        "provenance": {
+          "kind": "derived_geometry_v1",
+          "id": "inferior-border-medial-condyle-tibia",
+          "status": "resolved-atlas-geometry",
+          "method": null
+        }
+      },
+      "v2": {
+        "position": [
+          0.05654269829392433,
+          0.3977021872997284,
+          -0.01810299977660179
+        ],
+        "provenance": {
+          "kind": "v2_corrected_anchor",
+          "id": "inferior-border-medial-condyle-tibia",
+          "method": "side-specific proximal tibia medial-condyle inferior band",
+          "sourceConcept": "FMA24478"
+        }
+      },
+      "shift": 0.3257097237030714
+    },
+    {
+      "anchor_id": "inferior-border-medial-condyle-tibia:right",
+      "old": {
+        "position": [
+          0.05520709976553917,
+          0.07201586663722992,
+          -0.01443410012871027
+        ],
+        "provenance": {
+          "kind": "derived_geometry_v1",
+          "id": "inferior-border-medial-condyle-tibia",
+          "status": "resolved-atlas-geometry",
+          "method": null
+        }
+      },
+      "v2": {
+        "position": [
+          -0.0582129992544651,
+          0.39231520891189575,
+          -0.016091199591755867
+        ],
+        "provenance": {
+          "kind": "v2_corrected_anchor",
+          "id": "inferior-border-medial-condyle-tibia",
+          "method": "side-specific proximal tibia medial-condyle inferior band",
+          "sourceConcept": "FMA24477"
+        }
+      },
+      "shift": 0.3397918973458925
+    },
+    {
+      "anchor_id": "prominence-medial-malleolus:left",
+      "old": {
+        "position": [
+          0.044721800833940506,
+          0.08634377270936966,
+          -0.020071599632501602
+        ],
+        "provenance": {
+          "kind": "derived_geometry_v1",
+          "id": "prominence-medial-malleolus",
+          "status": "constructed-atlas-geometry",
+          "method": "model-specific bone extremum constrained to relevant segment"
+        }
+      },
+      "v2": {
+        "position": [
+          0.044721800833940506,
+          0.08634377270936966,
+          -0.020071599632501602
+        ],
+        "provenance": {
+          "kind": "v2_corrected_anchor",
+          "id": "prominence-medial-malleolus",
+          "method": "side-specific distal tibia medial extremum",
+          "sourceConcept": "FMA24478"
+        }
+      },
+      "shift": 0
+    },
+    {
+      "anchor_id": "prominence-medial-malleolus:right",
+      "old": {
+        "position": [
+          -0.04493439942598343,
+          0.08590435236692429,
+          -0.018172800540924072
+        ],
+        "provenance": {
+          "kind": "derived_geometry_v1",
+          "id": "prominence-medial-malleolus",
+          "status": "constructed-atlas-geometry",
+          "method": "model-specific bone extremum constrained to relevant segment"
+        }
+      },
+      "v2": {
+        "position": [
+          -0.04493439942598343,
+          0.08590435236692429,
+          -0.018172800540924072
+        ],
+        "provenance": {
+          "kind": "v2_corrected_anchor",
+          "id": "prominence-medial-malleolus",
+          "method": "side-specific distal tibia medial extremum",
+          "sourceConcept": "FMA24477"
+        }
+      },
+      "shift": 0
+    }
+  ],
+  "calibration": {
+    "frame_side_records": 711,
+    "unique_calibration_side_records": 51,
+    "unique_usable": 35,
+    "unique_blocked": 16,
+    "blocked_unique": [
+      {
+        "point_id": "LU1",
+        "frame_id": "LU1:MF2",
+        "side": "left",
+        "calibration_id": "CHEST_SUPRASTERNAL_TO_XIPHISTERNAL",
+        "from": "suprasternal-notch",
+        "to": "midpoint-xiphisternal-junction",
+        "axis": "longitudinal",
+        "expected_cun": 9,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": null,
+          "to": {
+            "kind": "derived_geometry_v1",
+            "id": "midpoint-xiphisternal-junction",
+            "status": "constructed-surface-geometry",
+            "method": "superior xiphoid guided anterior surface projection"
+          }
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      },
+      {
+        "point_id": "LU1",
+        "frame_id": "LU1:MF2",
+        "side": "right",
+        "calibration_id": "CHEST_SUPRASTERNAL_TO_XIPHISTERNAL",
+        "from": "suprasternal-notch",
+        "to": "midpoint-xiphisternal-junction",
+        "axis": "longitudinal",
+        "expected_cun": 9,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": null,
+          "to": {
+            "kind": "derived_geometry_v1",
+            "id": "midpoint-xiphisternal-junction",
+            "status": "constructed-surface-geometry",
+            "method": "superior xiphoid guided anterior surface projection"
+          }
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      },
+      {
+        "point_id": "LU1",
+        "frame_id": "LU1:MF2",
+        "side": "midline",
+        "calibration_id": "CHEST_SUPRASTERNAL_TO_XIPHISTERNAL",
+        "from": "suprasternal-notch",
+        "to": "midpoint-xiphisternal-junction",
+        "axis": "longitudinal",
+        "expected_cun": 9,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": null,
+          "to": {
+            "kind": "derived_geometry_v1",
+            "id": "midpoint-xiphisternal-junction",
+            "status": "constructed-surface-geometry",
+            "method": "superior xiphoid guided anterior surface projection"
+          }
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      },
+      {
+        "point_id": "LU3",
+        "frame_id": "LU3:MF1",
+        "side": "midline",
+        "calibration_id": "UPPER_ARM_AXILLARY_TO_CUBITAL",
+        "from": "anterior-axillary-fold",
+        "to": "cubital-crease",
+        "axis": "longitudinal",
+        "expected_cun": 9,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": null,
+          "to": null
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      },
+      {
+        "point_id": "LU6",
+        "frame_id": "LU6:MF1",
+        "side": "midline",
+        "calibration_id": "FOREARM_CUBITAL_TO_WRIST",
+        "from": "cubital-crease",
+        "to": "palmar-wrist-crease",
+        "axis": "longitudinal",
+        "expected_cun": 12,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": null,
+          "to": null
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      },
+      {
+        "point_id": "ST26",
+        "frame_id": "ST26:MF1",
+        "side": "left",
+        "calibration_id": "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS",
+        "from": "umbilicus-center",
+        "to": "superior-border-pubic-symphysis",
+        "axis": "longitudinal",
+        "expected_cun": 5,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": {
+            "kind": "accepted_specialized_anchor",
+            "id": "umbilicus-center",
+            "method": "manual-anchor",
+            "surfaceProjection": {
+              "meshId": "FJ2810",
+              "triangleIndex": 21236,
+              "barycentric": [
+                0.26334359166574917,
+                0.5214837903356819,
+                0.21517261799856885
+              ],
+              "distance": 0
+            }
+          },
+          "to": null
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      },
+      {
+        "point_id": "ST26",
+        "frame_id": "ST26:MF1",
+        "side": "right",
+        "calibration_id": "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS",
+        "from": "umbilicus-center",
+        "to": "superior-border-pubic-symphysis",
+        "axis": "longitudinal",
+        "expected_cun": 5,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": {
+            "kind": "accepted_specialized_anchor",
+            "id": "umbilicus-center",
+            "method": "manual-anchor",
+            "surfaceProjection": {
+              "meshId": "FJ2810",
+              "triangleIndex": 21236,
+              "barycentric": [
+                0.26334359166574917,
+                0.5214837903356819,
+                0.21517261799856885
+              ],
+              "distance": 0
+            }
+          },
+          "to": null
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      },
+      {
+        "point_id": "ST26",
+        "frame_id": "ST26:MF1",
+        "side": "midline",
+        "calibration_id": "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS",
+        "from": "umbilicus-center",
+        "to": "superior-border-pubic-symphysis",
+        "axis": "longitudinal",
+        "expected_cun": 5,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": {
+            "kind": "accepted_specialized_anchor",
+            "id": "umbilicus-center",
+            "method": "manual-anchor",
+            "surfaceProjection": {
+              "meshId": "FJ2810",
+              "triangleIndex": 21236,
+              "barycentric": [
+                0.26334359166574917,
+                0.5214837903356819,
+                0.21517261799856885
+              ],
+              "distance": 0
+            }
+          },
+          "to": null
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      },
+      {
+        "point_id": "ST32",
+        "frame_id": "ST32:MF1",
+        "side": "left",
+        "calibration_id": "THIGH_PUBIC_TO_PATELLA_BASE",
+        "from": "superior-border-pubic-symphysis",
+        "to": "base-of-patella",
+        "axis": "longitudinal",
+        "expected_cun": 18,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": null,
+          "to": {
+            "kind": "derived_geometry_v1",
+            "id": "base-of-patella",
+            "status": "resolved-atlas-geometry",
+            "method": null
+          }
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      },
+      {
+        "point_id": "ST32",
+        "frame_id": "ST32:MF1",
+        "side": "right",
+        "calibration_id": "THIGH_PUBIC_TO_PATELLA_BASE",
+        "from": "superior-border-pubic-symphysis",
+        "to": "base-of-patella",
+        "axis": "longitudinal",
+        "expected_cun": 18,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": null,
+          "to": {
+            "kind": "derived_geometry_v1",
+            "id": "base-of-patella",
+            "status": "resolved-atlas-geometry",
+            "method": null
+          }
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      },
+      {
+        "point_id": "ST32",
+        "frame_id": "ST32:MF1",
+        "side": "midline",
+        "calibration_id": "THIGH_PUBIC_TO_PATELLA_BASE",
+        "from": "superior-border-pubic-symphysis",
+        "to": "base-of-patella",
+        "axis": "longitudinal",
+        "expected_cun": 18,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": null,
+          "to": null
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      },
+      {
+        "point_id": "ST36",
+        "frame_id": "ST36:MF1",
+        "side": "midline",
+        "calibration_id": "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS",
+        "from": "popliteal-crease",
+        "to": "prominence-lateral-malleolus",
+        "axis": "longitudinal",
+        "expected_cun": 16,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": null,
+          "to": null
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      },
+      {
+        "point_id": "SP6",
+        "frame_id": "SP6:MF1",
+        "side": "midline",
+        "calibration_id": "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+        "from": "inferior-border-medial-condyle-tibia",
+        "to": "prominence-medial-malleolus",
+        "axis": "longitudinal",
+        "expected_cun": 13,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": null,
+          "to": null
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      },
+      {
+        "point_id": "BL37",
+        "frame_id": "BL37:MF1",
+        "side": "midline",
+        "calibration_id": "THIGH_GLUTEAL_FOLD_TO_POPLITEAL",
+        "from": "gluteal-fold",
+        "to": "popliteal-crease",
+        "axis": "longitudinal",
+        "expected_cun": 14,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": null,
+          "to": null
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      },
+      {
+        "point_id": "KI5",
+        "frame_id": "KI5:MF1",
+        "side": "midline",
+        "calibration_id": "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE",
+        "from": "prominence-medial-malleolus",
+        "to": "sole",
+        "axis": "surface-geodesic",
+        "expected_cun": 3,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": null,
+          "to": null
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      },
+      {
+        "point_id": "LR11",
+        "frame_id": "LR11:MF1",
+        "side": "midline",
+        "calibration_id": "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+        "from": "lateral-prominence-greater-trochanter",
+        "to": "popliteal-crease",
+        "axis": "longitudinal",
+        "expected_cun": 19,
+        "interval": null,
+        "model_unit_per_cun": null,
+        "endpoint_provenance": {
+          "from": null,
+          "to": null
+        },
+        "status": "blocked",
+        "issues": [
+          "endpoint_unresolved"
+        ]
+      }
+    ]
+  },
+  "c_v2": {
+    "physical_records": 670,
+    "dependency_ready": 668,
+    "relation_executed": 199,
+    "relation_satisfied": 0,
+    "surface_projected": 199,
+    "visual_QC_passed": 0,
+    "final_validated": 0,
+    "unresolved": 471,
+    "pending_visual_qc": 0,
+    "raw_relation_residual_pass": 294,
+    "raw_relation_residual_review": 12,
+    "raw_relation_residual_fail": 4,
+    "projected_relation_residual_pass": 310,
+    "projected_relation_residual_review": 0,
+    "projected_relation_residual_fail": 0,
+    "large_legacy_discrepancy": 177,
+    "relation_types_present": [
+      "at-border",
+      "at-junction",
+      "between",
+      "fraction-along-line",
+      "midpoint-between",
+      "on-line",
+      "overlies",
+      "reference-landmark",
+      "relative-to",
+      "surface-landmark"
+    ],
+    "native_execution_by_method": {
+      "native_proportional_measurement_offset": 184,
+      "direct-specialized-anchor": 15
+    },
+    "raw_required_uncomputable_by_type": {
+      "relative-to": 271,
+      "on-line": 38,
+      "between": 34,
+      "midpoint-between": 8
+    },
+    "raw_required_fail_by_type": {
+      "surface-landmark": 4
+    }
+  },
+  "regression_subset": [
+    {
+      "point_id": "ST7",
+      "side": "left",
+      "v1_visual_label": "control_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "ST29",
+      "side": "left",
+      "v1_visual_label": "known_wrong_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "ST29",
+      "side": "right",
+      "v1_visual_label": "known_wrong_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "ST31",
+      "side": "left",
+      "v1_visual_label": "control_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "ST31",
+      "side": "right",
+      "v1_visual_label": "control_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "ST35",
+      "side": "left",
+      "v1_visual_label": "known_wrong_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "ST35",
+      "side": "right",
+      "v1_visual_label": "known_wrong_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "HT4",
+      "side": "left",
+      "v1_visual_label": "control_v1",
+      "status": "surface_projected_relation_incomplete_or_review",
+      "relation_executed": true,
+      "relation_satisfied": false,
+      "surface_projected": true,
+      "visual_QC_passed": false,
+      "coordinate_raw": [
+        0.2588669955730438,
+        0.9256232976913452,
+        0.03639199957251549
+      ],
+      "coordinate_projected": [
+        0.25728067341637784,
+        0.9247132252717114,
+        0.030856379513106783
+      ],
+      "legacy_discrepancy": 0.24915985861230144,
+      "uncomputable_required": [
+        "REL:807"
+      ]
+    },
+    {
+      "point_id": "SI14",
+      "side": "left",
+      "v1_visual_label": "control_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "PC8",
+      "side": "left",
+      "v1_visual_label": "control_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "TE16",
+      "side": "left",
+      "v1_visual_label": "control_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "GB23",
+      "side": "left",
+      "v1_visual_label": "control_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "GB26",
+      "side": "left",
+      "v1_visual_label": "known_wrong_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "GB26",
+      "side": "right",
+      "v1_visual_label": "known_wrong_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "LR2",
+      "side": "left",
+      "v1_visual_label": "control_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "GV14",
+      "side": "midline",
+      "v1_visual_label": "control_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "CV1",
+      "side": "midline",
+      "v1_visual_label": "known_wrong_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "CV12",
+      "side": "midline",
+      "v1_visual_label": "control_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    },
+    {
+      "point_id": "CV24",
+      "side": "midline",
+      "v1_visual_label": "known_wrong_v1",
+      "status": "unresolved",
+      "relation_executed": false,
+      "relation_satisfied": false,
+      "surface_projected": false,
+      "visual_QC_passed": false,
+      "coordinate_raw": null,
+      "coordinate_projected": null,
+      "legacy_discrepancy": null,
+      "uncomputable_required": []
+    }
+  ],
+  "decision": {
+    "B_scope": "keep frozen globally; propose minimal review of CV1/CV12 geometry nodes only",
+    "C_status": "provisional v2; NOT frozen; NOT final validated",
+    "reason": "native execution exists, but zero physical records currently satisfy every material source relation numerically; visual QC is pending for all."
+  }
+}

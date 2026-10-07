@@ -1,0 +1,42 @@
+name: Audit provisional acupoint-coordinate-v1
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/korean-tcm-knowledge
+    paths:
+      - scripts/audit-acupoint-coordinate-v1.mjs
+      - .github/workflows/audit-acupoint-coordinate-v1.yml
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/korean-tcm-knowledge
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.0'
+      - name: Verify frozen B baseline
+        run: |
+          base64 -d scripts/data/anatomy-acupoint-relations-v1.json.gz.b64.txt | gzip -dc > /tmp/B.json
+          echo "6dd00d386a6262d02900ec5a30ea9b18aace899f071159e772c12679740b1d06  /tmp/B.json" | sha256sum -c -
+      - name: Run error attribution, provenance, anchor and calibration audits
+        run: node scripts/audit-acupoint-coordinate-v1.mjs
+      - name: Commit audit outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/knowledge/acupoint-coordinate-v1-error-attribution-audit.json public/knowledge/acupoint-coordinate-v1-provenance-census.json public/knowledge/acupoint-specialized-anchor-audit-v1.json public/knowledge/acupoint-calibration-audit-v1.json
+          if git diff --cached --quiet; then
+            echo "No audit changes."
+          else
+            git commit -m "audit: attribute provisional acupoint coordinate v1 errors"
+            git pull --rebase origin feature/korean-tcm-knowledge
+            git push origin HEAD:feature/korean-tcm-knowledge
+          fi

@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-vertical-slice-v1-stage2-state-consistency",
+  "status": "PASS",
+  "checks": 14,
+  "errors": 0,
+  "check_results": [
+    {
+      "name": "summary_stage2_human_pass",
+      "status": "PASS",
+      "detail": "PASS"
+    },
+    {
+      "name": "summary_semantic_repair_pass",
+      "status": "PASS",
+      "detail": "PASS"
+    },
+    {
+      "name": "approval_stage2_human_pass",
+      "status": "PASS",
+      "detail": "PASS"
+    },
+    {
+      "name": "approval_stage3_not_started",
+      "status": "PASS",
+      "detail": "NOT_STARTED"
+    },
+    {
+      "name": "design_stage2_approved",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "design_stage3_not_started",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "watchpoint_registered",
+      "status": "PASS",
+      "detail": "SUPPRESSED_PROVENANCE_EXECUTION_ISOLATION"
+    },
+    {
+      "name": "watchpoint_metrics_three",
+      "status": "PASS",
+      "detail": [
+        "suppressed_executable_operand_count",
+        "suppressed_status_aggregation_influence_count",
+        "suppressed_only_resolved_path_count"
+      ]
+    },
+    {
+      "name": "watchpoint_expected_zero",
+      "status": "PASS",
+      "detail": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "prior_rejection_superseded",
+      "status": "PASS",
+      "detail": {
+        "historical": true,
+        "superseded": true,
+        "current": "PASS"
+      }
+    },
+    {
+      "name": "task_no_graph_changes_recorded",
+      "status": "PASS",
+      "detail": 0
+    },
+    {
+      "name": "task_no_point_patches_recorded",
+      "status": "PASS",
+      "detail": 0
+    },
+    {
+      "name": "task_no_coordinates",
+      "status": "PASS",
+      "detail": 0
+    },
+    {
+      "name": "task_no_legacy_refs",
+      "status": "PASS",
+      "detail": 0
+    }
+  ],
+  "current_state": {
+    "stage2_structural": "PASS",
+    "stage2_semantic_repair": "PASS",
+    "stage2_human_semantic_audit": "PASS",
+    "non_blocking_watchpoints": [
+      "SUPPRESSED_PROVENANCE_EXECUTION_ISOLATION"
+    ],
+    "semantic_graph_modifications_in_this_task": 0,
+    "point_specific_patches_in_this_task": 0,
+    "coordinates_generated_in_this_task": 0,
+    "legacy_c_coordinate_references_introduced": 0,
+    "stage3": "NOT_STARTED"
+  }
+}

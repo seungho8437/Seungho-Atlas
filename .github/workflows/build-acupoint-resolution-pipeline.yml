@@ -1,0 +1,79 @@
+name: Build Acupoint Resolution Pipeline
+
+on:
+  push:
+    branches:
+      - feature/korean-tcm-knowledge
+    paths:
+      - public/knowledge/acupoint-location-specs.json
+      - public/knowledge/anatomy-acupoint-relations.json
+      - public/knowledge/anatomy-ko.json
+      - public/models/atlas.json
+      - scripts/build-acupoint-resolution-pipeline.mjs
+      - scripts/validate-acupoint-resolution-pipeline.mjs
+      - public/knowledge/acupoint-specialized-landmark-anchors.json
+      - scripts/construct-acupoint-derived-surface-landmarks.mjs
+      - scripts/resolve-acupoint-final-calibration-geometry.mjs
+      - scripts/validate-acupoint-final-calibration-geometry.mjs
+      - .github/workflows/build-acupoint-resolution-pipeline.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.0'
+      - name: Build semantic resolution layers
+        run: node scripts/build-acupoint-resolution-pipeline.mjs
+      - name: Validate all 361 acupoints
+        run: node scripts/validate-acupoint-resolution-pipeline.mjs
+      - name: Bind WHO B-cun/F-cun calibrations
+        run: node scripts/resolve-acupoint-measurement-calibrations.mjs
+      - name: Validate measurement calibration bindings
+        run: node scripts/validate-acupoint-measurement-calibrations.mjs
+      - name: Disambiguate measurement frames by WHO source intent
+        run: node scripts/disambiguate-acupoint-measurement-frames.mjs
+      - name: Validate WHO-intent-preserving disambiguation
+        run: node scripts/validate-acupoint-measurement-disambiguation.mjs
+      - name: Audit expert-facing pregeometry acceptability
+        run: node scripts/audit-acupoint-pregeometry-expert-review.mjs
+      - name: Validate expert-facing pregeometry gate
+        run: node scripts/validate-acupoint-pregeometry-expert-review.mjs
+      - name: Resolve landmark geometry
+        run: node scripts/resolve-acupoint-landmark-geometry.mjs
+      - name: Validate landmark geometry
+        run: node scripts/validate-acupoint-landmark-geometry.mjs
+      - name: Construct derived surface landmarks
+        run: node scripts/construct-acupoint-derived-surface-landmarks.mjs
+      - name: Validate derived surface landmarks
+        run: node scripts/validate-acupoint-derived-surface-landmarks.mjs
+      - name: Validate specialized detector/manual anchor system
+        run: node scripts/validate-acupoint-specialized-landmarks.mjs
+      - name: Resolve final WHO calibration geometry
+        run: node scripts/resolve-acupoint-final-calibration-geometry.mjs
+      - name: Validate final WHO calibration geometry
+        run: node scripts/validate-acupoint-final-calibration-geometry.mjs
+      - name: Build 361-point coordinate solver connection
+        run: node scripts/build-acupoint-coordinate-solver.mjs
+      - name: Validate 361-point coordinate solver connection
+        run: node scripts/validate-acupoint-coordinate-solver.mjs
+      - name: Commit generated semantic layers
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/knowledge/acupoint-entity-resolution.json public/knowledge/acupoint-measurement-frames.json public/knowledge/acupoint-constraint-atoms.json public/knowledge/acupoint-solver-plans.json public/knowledge/acupoint-resolution-audit.json public/knowledge/acupoint-measurement-frame-bindings.json public/knowledge/acupoint-measurement-calibration-audit.json public/knowledge/acupoint-measurement-frame-disambiguation.json public/knowledge/acupoint-measurement-disambiguation-audit.json public/knowledge/acupoint-pregeometry-expert-review.json public/knowledge/acupoint-landmark-geometry.json public/knowledge/acupoint-landmark-geometry-audit.json public/knowledge/acupoint-derived-surface-landmarks.json public/knowledge/acupoint-derived-surface-landmarks-audit.json public/knowledge/acupoint-specialized-landmark-specs.json public/knowledge/acupoint-specialized-landmark-anchors.json public/knowledge/acupoint-specialized-landmark-anchor-audit.json public/knowledge/acupoint-final-calibration-geometry.json public/knowledge/acupoint-final-calibration-geometry-audit.json public/knowledge/acupoint-coordinate-solver.json public/knowledge/acupoint-coordinate-solver-audit.json
+          if git diff --cached --quiet; then
+            echo "No generated changes."
+          else
+            git commit -m "data: build acupoint semantic resolution layers"
+            git pull --rebase origin feature/korean-tcm-knowledge
+            git push
+          fi
+
+# semantic pipeline v1.3

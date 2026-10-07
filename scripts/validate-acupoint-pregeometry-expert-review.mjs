@@ -1,0 +1,11 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const root=new URL('../',import.meta.url);const read=p=>JSON.parse(fs.readFileSync(new URL(p,root),'utf8'));
+const r=read('public/knowledge/acupoint-pregeometry-expert-review.json');
+assert.equal(r.standardAcupointCount,361);
+assert.equal(r.sourceIntegrity.all361Covered,true);
+assert.equal(r.sourceIntegrity.exactReconstruction,true);
+assert.equal(r.sourceIntegrity.uncoveredCharacterCount,0);
+assert.equal(r.semanticPipeline.noGlobalBodyHeightCun,true);
+assert.equal(r.finalVerdict,'acceptable-to-proceed-to-landmark-geometry-resolution-with-provisional-bindings-gated');
+for(const c of r.concerns)assert.notEqual(c.severity,'blocking');
+console.log('Pre-geometry expert-facing review gate passed; provisional regional references remain explicitly gated.');

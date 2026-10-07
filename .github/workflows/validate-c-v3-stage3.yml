@@ -1,0 +1,176 @@
+name: Validate C v3 Stage 3 vertical-slice synthesis
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/korean-tcm-knowledge]
+    paths:
+      - 'scripts/cv3/execute_vertical_slice_stage3.py'
+      - 'scripts/cv3/validate_vertical_slice_stage3.py'
+      - 'scripts/cv3/build_vertical_slice_stage3_human_review.py'
+      - 'artifacts/c-v3/vertical-slice-v1/stage3-input-lock.json'
+      - '.github/workflows/validate-c-v3-stage3.yml'
+permissions:
+  contents: write
+  actions: read
+jobs:
+  stage3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/korean-tcm-knowledge
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install audit dependencies
+        run: |
+          python -m pip install --quiet reportlab pillow
+          command -v pdftoppm >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y poppler-utils)
+      - name: Download approved Stage 2 repaired output
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p .tmp/stage3/stage2
+          curl -L --fail -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/seungho8437/Seungho-Atlas/actions/artifacts/11405617578/zip \
+            -o .tmp/stage3/stage2/source.zip
+          unzip -q .tmp/stage3/stage2/source.zip -d .tmp/stage3/stage2/extracted
+          test -f .tmp/stage3/stage2/extracted/.tmp/c-v3-repair/stage2-repaired-execution.json
+          cp .tmp/stage3/stage2/extracted/.tmp/c-v3-repair/stage2-repaired-execution.json .tmp/stage3/stage2-execution.json
+      - name: Download approved registry/calibration artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p .tmp/stage3/registry
+          curl -L --fail -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/seungho8437/Seungho-Atlas/actions/artifacts/11399287163/zip \
+            -o .tmp/stage3/registry/source.zip
+          unzip -q .tmp/stage3/registry/source.zip -d .tmp/stage3/registry/extracted
+          test -f .tmp/stage3/registry/extracted/calibration-draft.json
+      - name: Verify exact frozen input identities
+        run: |
+          python - <<'PY'
+          import hashlib,json,pathlib
+          lock=json.load(open('artifacts/c-v3/vertical-slice-v1/stage3-input-lock.json'))
+          def h(p):
+            x=hashlib.sha256()
+            with open(p,'rb') as f:
+              for b in iter(lambda:f.read(1<<20),b''):x.update(b)
+            return x.hexdigest()
+          pairs=[
+            ('.tmp/stage3/stage2-execution.json',lock['stage2']['repaired_execution_sha256']),
+            ('.tmp/stage3/registry/extracted/calibration-draft.json',lock['registry_calibration']['calibration_sha256']),
+            ('.tmp/stage3/registry/extracted/registry-geometry-payload.json',lock['registry_calibration']['registry_geometry_payload_sha256']),
+            ('.tmp/stage3/registry/extracted/review-identity-validation.json',lock['registry_calibration']['review_identity_validation_sha256']),
+          ]
+          for p,e in pairs:
+            a=h(p);assert a==e,(p,a,e);print('PASS',p,a)
+          PY
+      - name: Build approved Stage 1 substrate
+        run: python scripts/cv3/build_stage1_substrate.py --out .tmp/stage3/spatial-substrate.json
+      - name: Execute Stage 3 pilot synthesis
+        run: |
+          python scripts/cv3/execute_vertical_slice_stage3.py \
+            --stage2 .tmp/stage3/stage2-execution.json \
+            --calibration .tmp/stage3/registry/extracted/calibration-draft.json \
+            --substrate .tmp/stage3/spatial-substrate.json \
+            --out artifacts/c-v3/vertical-slice-v1/stage3-output.json
+      - name: Independent Stage 3 guard validation
+        run: |
+          python scripts/cv3/validate_vertical_slice_stage3.py \
+            --output artifacts/c-v3/vertical-slice-v1/stage3-output.json \
+            --stage2 .tmp/stage3/stage2-execution.json \
+            --substrate .tmp/stage3/spatial-substrate.json \
+            --out artifacts/c-v3/vertical-slice-v1/stage3-validation.json
+      - name: Build human audit artifacts
+        run: |
+          python scripts/cv3/build_vertical_slice_stage3_human_review.py \
+            --stage3 artifacts/c-v3/vertical-slice-v1/stage3-output.json \
+            --validation artifacts/c-v3/vertical-slice-v1/stage3-validation.json \
+            --stage2 .tmp/stage3/stage2-execution.json \
+            --substrate .tmp/stage3/spatial-substrate.json \
+            --out-dir artifacts/c-v3/vertical-slice-v1
+      - name: Create protected result lock and summary
+        run: |
+          python - <<'PY'
+          import hashlib,json,pathlib
+          root=pathlib.Path('artifacts/c-v3/vertical-slice-v1')
+          def h(p):
+            x=hashlib.sha256()
+            with open(p,'rb') as f:
+              for b in iter(lambda:f.read(1<<20),b''):x.update(b)
+            return x.hexdigest()
+          out=json.load(open(root/'stage3-output.json'));val=json.load(open(root/'stage3-validation.json'))
+          lock={
+            'schema_version':'1.0.0','artifact':'c-v3-vertical-slice-v1-stage3-result-lock',
+            'status':'AUTOMATED_VALIDATED_HUMAN_AUDIT_PENDING','deployable':False,
+            'stage3_output_sha256':h(root/'stage3-output.json'),
+            'stage3_validation_sha256':h(root/'stage3-validation.json'),
+            'human_review_data_sha256':h(root/'stage3-human-review-data.json'),
+            'human_review_html_sha256':h(root/'stage3-human-review.html'),
+            'human_review_pdf_sha256':h(root/'stage3-human-review.pdf'),
+            'input_lock_sha256':h(root/'stage3-input-lock.json'),
+            'production_coordinate_dataset_written':False,
+            'legacy_c_coordinate_input':False,
+            'stage4_started':False
+          }
+          (root/'stage3-result-lock.json').write_text(json.dumps(lock,indent=2)+'\n')
+          summary={
+            'schema_version':'1.0.0','artifact':'c-v3-vertical-slice-v1-stage3-summary',
+            'status':'AUTOMATED_VALIDATED_HUMAN_AUDIT_PENDING',
+            'summary':out['summary'],'validation':{'status':val['status'],'checks':val['checks'],'errors':val['errors'],
+            'negative_tests':val['negative_tests'],'suppressed_provenance_watchpoint_metrics':val['suppressed_provenance_watchpoint_metrics']},
+            'deployable':False,'production_write':False,'stage4':'NOT_STARTED'
+          }
+          (root/'stage3-summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+          PY
+      - name: Render-verify human audit PDF
+        run: |
+          mkdir -p .tmp/stage3/pdf-render
+          pdfinfo artifacts/c-v3/vertical-slice-v1/stage3-human-review.pdf | tee .tmp/stage3/pdfinfo.txt
+          pdftoppm -png -r 100 artifacts/c-v3/vertical-slice-v1/stage3-human-review.pdf .tmp/stage3/pdf-render/page >/dev/null 2>&1
+          test "$(find .tmp/stage3/pdf-render -name 'page-*.png' | wc -l)" -ge 20
+          test -s "$(find .tmp/stage3/pdf-render -name 'page-*.png' | head -1)"
+      - name: Production-write guard
+        run: |
+          test -z "$(git status --porcelain -- public/knowledge public/models)"
+          python - <<'PY'
+          import json
+          o=json.load(open('artifacts/c-v3/vertical-slice-v1/stage3-output.json'))
+          assert o['deployable'] is False
+          assert o['production_write'] is False
+          assert o['legacy_coordinate_input'] is False
+          PY
+      - name: Commit protected Stage 3 artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add artifacts/c-v3/vertical-slice-v1/stage3-output.json \
+                  artifacts/c-v3/vertical-slice-v1/stage3-validation.json \
+                  artifacts/c-v3/vertical-slice-v1/stage3-summary.json \
+                  artifacts/c-v3/vertical-slice-v1/stage3-result-lock.json \
+                  artifacts/c-v3/vertical-slice-v1/stage3-human-review-data.json \
+                  artifacts/c-v3/vertical-slice-v1/stage3-human-review.html \
+                  artifacts/c-v3/vertical-slice-v1/stage3-human-review.pdf \
+                  artifacts/c-v3/vertical-slice-v1/stage3-review-images
+          if git diff --cached --quiet; then
+            echo "No generated Stage 3 changes."
+          else
+            git commit -m "audit: generate protected Stage 3 pilot and human review"
+            git push origin HEAD:feature/korean-tcm-knowledge
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: c-v3-stage3-vertical-slice
+          path: |
+            artifacts/c-v3/vertical-slice-v1/stage3-output.json
+            artifacts/c-v3/vertical-slice-v1/stage3-validation.json
+            artifacts/c-v3/vertical-slice-v1/stage3-summary.json
+            artifacts/c-v3/vertical-slice-v1/stage3-result-lock.json
+            artifacts/c-v3/vertical-slice-v1/stage3-human-review-data.json
+            artifacts/c-v3/vertical-slice-v1/stage3-human-review.html
+            artifacts/c-v3/vertical-slice-v1/stage3-human-review.pdf
+            artifacts/c-v3/vertical-slice-v1/stage3-review-images
+            .tmp/stage3/pdfinfo.txt
+          if-no-files-found: warn

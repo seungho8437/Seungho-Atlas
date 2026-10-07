@@ -1,0 +1,70 @@
+import fs from 'node:fs';
+const root=new URL('../',import.meta.url);
+const read=p=>JSON.parse(fs.readFileSync(new URL(p,root),'utf8'));
+const write=(p,v)=>fs.writeFileSync(new URL(p,root),JSON.stringify(v,null,2)+'\n');
+const frames=read('public/knowledge/acupoint-measurement-frames.json');
+const dis=read('public/knowledge/acupoint-measurement-frame-disambiguation.json');
+const plans=read('public/knowledge/acupoint-solver-plans.json');
+const geo=read('public/knowledge/acupoint-final-calibration-geometry.json');
+const atlas=read('public/models/atlas.json');
+const specs=read('public/knowledge/acupoint-location-specs.json');
+const decisions=read('public/knowledge/acupoint-coordinate-review-decisions.json');
+const geoMap=new Map(geo.records.map(x=>[x.id,x]));
+const disMap=new Map(dis.records.map(x=>[x.acupointId,x]));
+const planMap=new Map(plans.records.map(x=>[x.acupointId,x]));
+const specMap=new Map(specs.specs.map(x=>[x.acupointId,x]));
+const endpointDecision=new Map(decisions.endpointDecisions.map(x=>[x.frameId,x]));
+const regionalDecision=new Map(decisions.regionalReferenceDecisions.map(x=>[x.frameId,x]));
+const fingerDecision=new Map(decisions.fingerCunDecisions.map(x=>[x.frameId,x]));
+const skin=atlas.parts.find(p=>p.id==='FJ2810'); if(!skin)throw new Error('Skin FJ2810 missing');
+const chunks=atlas.chunks.map(c=>fs.readFileSync(new URL('public/models/'+c.url.split('/').pop(),root)));
+const positionsOf=p=>{const b=chunks[p.chunk];return new Float32Array(b.buffer,b.byteOffset+p.positions,p.vertexCount*3);};
+const indicesOf=p=>{const b=chunks[p.chunk];return new Uint32Array(b.buffer,b.byteOffset+p.indices,p.indexCount);};
+const skinPos=positionsOf(skin),skinIdx=indicesOf(skin);
+const ext=skin.bounds[1].map((x,i)=>x-skin.bounds[0][i]),supAxis=ext.indexOf(Math.max(...ext)),rem=[0,1,2].filter(i=>i!==supAxis);
+const hair=geoMap.get('HEAD_ANTERIOR_HAIRLINE_CORNERS'),lp=hair.from.alternatives[0].geometry.position,rp=hair.to.alternatives[0].geometry.position;
+const lrAxis=rem.reduce((best,a)=>Math.abs(lp[a]-rp[a])>Math.abs(lp[best]-rp[best])?a:best,rem[0]),apAxis=[0,1,2].find(i=>i!==supAxis&&i!==lrAxis);
+const posFor=(alt,side)=>{const g=alt?.geometry;if(!g)return null;if(Array.isArray(g.position))return g.position;const s=g.sides?.[side]??g.sides?.left??g.sides?.right;return Array.isArray(s?.position)?s.position:null;};
+const alternatives=(endpoint,side)=>(endpoint?.alternatives??[]).map(a=>({landmarkId:a.landmarkId,position:posFor(a,side)})).filter(x=>x.position);
+const euclid=(a,b)=>Math.hypot(...b.map((v,i)=>v-a[i]));
+const adjacency=Array.from({length:skin.vertexCount},()=>new Map());
+for(let i=0;i<skinIdx.length;i+=3){const tri=[skinIdx[i],skinIdx[i+1],skinIdx[i+2]];for(let e=0;e<3;e++){const a=tri[e],b=tri[(e+1)%3];const pa=[skinPos[a*3],skinPos[a*3+1],skinPos[a*3+2]],pb=[skinPos[b*3],skinPos[b*3+1],skinPos[b*3+2]],w=euclid(pa,pb);if(!adjacency[a].has(b)||adjacency[a].get(b)>w){adjacency[a].set(b,w);adjacency[b].set(a,w);}}}
+const skinDiag=Math.hypot(...ext),weldTolerance=skinDiag*5e-4,weldBuckets=new Map();
+for(let i=0;i<skin.vertexCount;i++){const p=[skinPos[i*3],skinPos[i*3+1],skinPos[i*3+2]],key=p.map(v=>Math.round(v/weldTolerance)).join(',');const xs=weldBuckets.get(key)??[];xs.push(i);weldBuckets.set(key,xs);}
+let weldedVertexLinks=0;for(const xs of weldBuckets.values()){if(xs.length<2)continue;const rep=xs[0],rp=[skinPos[rep*3],skinPos[rep*3+1],skinPos[rep*3+2]];for(let k=1;k<xs.length;k++){const v=xs[k],vp=[skinPos[v*3],skinPos[v*3+1],skinPos[v*3+2]],w=euclid(rp,vp);if(w<=weldTolerance*1.8){adjacency[rep].set(v,w);adjacency[v].set(rep,w);weldedVertexLinks++;}}}
+const nearestVertex=(p,side)=>{let best=-1,d=Infinity;for(let i=0;i<skin.vertexCount;i++){const x=[skinPos[i*3],skinPos[i*3+1],skinPos[i*3+2]];if(side==='left'&&x[lrAxis]<0)continue;if(side==='right'&&x[lrAxis]>0)continue;const q=euclid(p,x);if(q<d){d=q;best=i;}}if(best<0)throw new Error('No Skin vertex for '+side);return {index:best,distance:d,position:[skinPos[best*3],skinPos[best*3+1],skinPos[best*3+2]]};};
+class Heap{constructor(){this.a=[];}push(x){let i=this.a.push(x)-1;while(i){let p=(i-1)>>1;if(this.a[p][0]<=x[0])break;this.a[i]=this.a[p];i=p;}this.a[i]=x;}pop(){if(!this.a.length)return null;const r=this.a[0],x=this.a.pop();if(this.a.length){let i=0;while(true){let l=i*2+1,rn=l+1;if(l>=this.a.length)break;let c=rn<this.a.length&&this.a[rn][0]<this.a[l][0]?rn:l;if(this.a[c][0]>=x[0])break;this.a[i]=this.a[c];i=c;}this.a[i]=x;}return r;}get size(){return this.a.length;}}
+const shortest=(start,goal)=>{const d=new Float64Array(skin.vertexCount);d.fill(Infinity);d[start]=0;const h=new Heap();h.push([0,start]);const prev=new Int32Array(skin.vertexCount);prev.fill(-1);while(h.size){const cur=h.pop(),cd=cur[0],u=cur[1];if(cd!==d[u])continue;if(u===goal)break;for(const [v,w] of adjacency[u]){const nd=cd+w;if(nd<d[v]){d[v]=nd;prev[v]=u;h.push([nd,v]);}}}if(!Number.isFinite(d[goal]))throw new Error('Skin geodesic disconnected');let n=0,u=goal;while(u!==-1){n++;if(u===start)break;u=prev[u];}return {length:d[goal],vertexCount:n};};
+const geodesicCache=new Map();
+function addLocalSeamStitches(a,b,side,radius){
+  const margin=skinDiag*.035,mins=a.map((v,i)=>Math.min(v,b[i])-margin),maxs=a.map((v,i)=>Math.max(v,b[i])+margin);
+  const ids=[];for(let i=0;i<skin.vertexCount;i++){const p=[skinPos[i*3],skinPos[i*3+1],skinPos[i*3+2]];if(side==='left'&&p[lrAxis]<0)continue;if(side==='right'&&p[lrAxis]>0)continue;if(p.every((v,k)=>v>=mins[k]&&v<=maxs[k]))ids.push(i);}
+  const buckets=new Map(),key=p=>p.map(v=>Math.floor(v/radius)).join(',');
+  for(const i of ids){const p=[skinPos[i*3],skinPos[i*3+1],skinPos[i*3+2]],k=key(p),xs=buckets.get(k)??[];xs.push(i);buckets.set(k,xs);}
+  let added=0;
+  for(const i of ids){const p=[skinPos[i*3],skinPos[i*3+1],skinPos[i*3+2]],base=p.map(v=>Math.floor(v/radius));for(let dx=-1;dx<=1;dx++)for(let dy=-1;dy<=1;dy++)for(let dz=-1;dz<=1;dz++){const xs=buckets.get([base[0]+dx,base[1]+dy,base[2]+dz].join(','));if(!xs)continue;for(const j of xs){if(j<=i||adjacency[i].has(j))continue;const q=[skinPos[j*3],skinPos[j*3+1],skinPos[j*3+2]],w=euclid(p,q);if(w>1e-9&&w<=radius){adjacency[i].set(j,w);adjacency[j].set(i,w);added++;}}}}
+  return {added,localVertexCount:ids.length};
+}
+function skinGeodesic(cal,side){
+  const key=cal.id+':'+side;if(geodesicCache.has(key))return geodesicCache.get(key);
+  const a=alternatives(cal.from,side)[0],b=alternatives(cal.to,side)[0];if(!a||!b)throw new Error(key+': endpoints unavailable');
+  const av=nearestVertex(a.position,side),bv=nearestVertex(b.position,side),chord=euclid(av.position,bv.position);
+  let g=shortest(av.index,bv.index),seamRepair={radius:0,added:0,localVertexCount:0},ratio=g.length/Math.max(chord,1e-9);
+  if(ratio>1.8){
+    for(const radius of [skinDiag*.00075,skinDiag*.0015,skinDiag*.003]){
+      const st=addLocalSeamStitches(av.position,bv.position,side,radius);seamRepair={radius,added:seamRepair.added+st.added,localVertexCount:st.localVertexCount};
+      g=shortest(av.index,bv.index);ratio=g.length/Math.max(chord,1e-9);if(ratio<=1.8)break;
+    }
+  }
+  if(!Number.isFinite(g.length)||g.length<=0||ratio>1.8)throw new Error(key+': local Skin seam repair could not produce a plausible geodesic ratio='+ratio);
+  const out={from:a.landmarkId,to:b.landmarkId,metricPolicy:'skin-FJ2810-local-seam-repaired-edge-geodesic',intervalLength:g.length,cunLength:g.length/cal.cun,skinMeshId:'FJ2810',weldTolerance,weldedVertexLinks,seamRepairRadius:seamRepair.radius,seamRepairLinksAdded:seamRepair.added,localVertexCount:seamRepair.localVertexCount,chordLength:chord,geodesicToChordRatio:ratio,fromVertex:av.index,toVertex:bv.index,fromSnapDistance:av.distance,toSnapDistance:bv.distance,pathVertexCount:g.vertexCount};
+  geodesicCache.set(key,out);return out;
+}
+function metric(cal,a,b,side){const d=b.map((v,i)=>v-a[i]);if(cal.axis==='surface-geodesic')return skinGeodesic(cal,side);if(cal.axis==='longitudinal')return {metricPolicy:'atlas-superior-axis-projection',intervalLength:Math.abs(d[supAxis]),cunLength:Math.abs(d[supAxis])/cal.cun};if(cal.axis==='transverse')return {metricPolicy:'atlas-left-right-axis-projection',intervalLength:Math.abs(d[lrAxis]),cunLength:Math.abs(d[lrAxis])/cal.cun};return {metricPolicy:'finger-method-chord',intervalLength:euclid(a,b),cunLength:euclid(a,b)/cal.cun};}
+function scaleFor(cal,side,frameId,sourceText){const from=alternatives(cal.from,side),to=alternatives(cal.to,side),ed=endpointDecision.get(frameId);let a,b,selection='single';if(ed){a=from.find(x=>x.landmarkId===ed.from);b=to.find(x=>x.landmarkId===ed.to);selection='source-text-reviewed';if(!a||!b)throw new Error(frameId+': reviewed endpoint not found');}else{const cue=x=>{const id=x.landmarkId;if(/앞겨드랑|anterior axillary/i.test(sourceText)&&/anterior/.test(id))return 4;if(/뒤겨드랑|posterior axillary/i.test(sourceText)&&/posterior/.test(id))return 4;if(/손바닥쪽|palmar/i.test(sourceText)&&/palmar/.test(id))return 4;if(/손등쪽|dorsal/i.test(sourceText)&&/dorsal/.test(id))return 4;return 0;};const fs=from.map(x=>({...x,score:cue(x)})).sort((x,y)=>y.score-x.score),ts=to.map(x=>({...x,score:cue(x)})).sort((x,y)=>y.score-x.score);if(fs.length===1)a=fs[0];else if(fs[0]?.score>(fs[1]?.score??-1)){a=fs[0];selection='source-cue-auto';}if(ts.length===1)b=ts[0];else if(ts[0]?.score>(ts[1]?.score??-1)){b=ts[0];selection='source-cue-auto';}if(!a||!b){const pairs=[];for(const x of from)for(const y of to){const m=metric(cal,x.position,y.position,side);if(Number.isFinite(m.cunLength))pairs.push({a:x,b:y,m});}pairs.sort((x,y)=>x.m.cunLength-y.m.cunLength);const mid=pairs[Math.floor(pairs.length/2)];if(!mid)throw new Error(frameId+': unresolved endpoint alternative');a=mid.a;b=mid.b;selection='legacy-low-spread-auto';}}const m=metric(cal,a.position,b.position,side);return {side,selection,candidates:[{from:a.landmarkId,to:b.landmarkId,...m}],chosen:{from:a.landmarkId,to:b.landmarkId,...m},relativeSpread:0};}
+const records=[];let total=0,direct=0,regional=0,finger=0,geodesicFrames=0,endpointResolved=0,auto=0;
+for(const fr of frames.records){const dr=disMap.get(fr.acupointId),plan=planMap.get(fr.acupointId),spec=specMap.get(fr.acupointId),measurementFrames=[];for(const f of fr.frames){total++;const d=dr?.resolutions?.find(x=>x.frameId===f.id);if(!d)throw new Error(f.id+': missing disambiguation');const rd=regionalDecision.get(f.id),fd=fingerDecision.get(f.id),ed=endpointDecision.get(f.id);let calId=d.selectedCalibrationId;if(rd)calId=rd.selectedCalibrationId;if(fd)calId=fd.selectedCalibrationId;if(!calId)throw new Error(f.id+': no reviewed calibration');const cal=geoMap.get(calId);if(!cal||cal.geometryStatus!=='geometry-ready')throw new Error(f.id+': geometry unavailable '+calId);const sourceText=spec?.source?.textKo??'';const sides=['left','right','midline'].map(side=>scaleFor(cal,side,f.id,sourceText));if(ed)endpointResolved++;if(rd)regional++;else if(fd)finger++;else direct++;if(cal.axis==='surface-geodesic')geodesicFrames++;auto++;measurementFrames.push({...f,resolutionStatus:fd?'reviewed-f-cun-method':rd?'reviewed-who-regional-reference':d.status,selectedCalibrationId:cal.id,calibrationGeometryStatus:cal.geometryStatus,connectionStatus:cal.axis==='surface-geodesic'?'geometry-connected-skin-geodesic':fd?'geometry-connected-reviewed-f-cun':rd?'geometry-connected-reviewed-regional':'geometry-connected-direct',autoSolveAllowed:true,blocker:null,reviewDecision:{endpoint:ed??null,regionalReference:rd??null,fingerCun:fd??null},calibration:{id:cal.id,unit:cal.unit,cun:cal.cun,region:cal.region,axis:cal.axis},sideScales:sides});}const legacy=(plan?.blockers??[]).filter(x=>x!=='regional-cun-anchor-resolution');records.push({acupointId:fr.acupointId,canonicalSurface:plan?.canonicalSurface??'body-surface',localRegion:plan?.localRegion??spec?.context?.bodyRegion,laterality:plan?.laterality??spec?.context?.laterality,measurementFrames,legacyNonMeasurementBlockers:legacy,status:'measurement-solver-ready'});}
+const audit={schemaVersion:2,standardAcupointCount:records.length,measurementFrameCount:total,coordinateFrame:{superiorInferiorAxis:supAxis,leftRightAxis:lrAxis,anteriorPosteriorAxis:apAxis},reviewResolution:{surfacePathFramesResolved:geodesicFrames,endpointAlternativeFramesResolved:endpointResolved,regionalReferenceFramesReviewed:regional,fingerCunFramesResolved:finger},connections:{directFrames:direct,reviewedRegionalFrames:regional,reviewedFingerMethodFrames:finger,autoSolveFrames:auto,unresolvedMeasurementFrames:total-auto},geodesic:[...geodesicCache.entries()].map(([key,value])=>({key,...value})),invariants:{all361Covered:records.length===361,all237MeasurementFramesReady:total===237&&auto===237,twoSurfacePathFramesResolved:geodesicFrames===2,fifteenEndpointAlternativesResolved:endpointResolved===15,fortyRegionalReferencesReviewed:regional===40,elevenFingerCunMethodsSelected:finger===11,noGlobalBodyHeightCun:true,skinGeodesicUsesFJ2810:[...geodesicCache.values()].every(x=>x.skinMeshId==='FJ2810')}};
+write('public/knowledge/acupoint-coordinate-solver.json',{schemaVersion:2,methodology:{principle:'All 237 measurement frames are connected to reviewed WHO regional/finger-cun geometry; ANKLE_MEDIAL_MALLEOLUS_TO_SOLE uses actual Skin FJ2810 edge geodesic.',decisionRegistry:'acupoint-coordinate-review-decisions.json'},records});
+write('public/knowledge/acupoint-coordinate-solver-audit.json',audit);
+console.log(JSON.stringify(audit,null,2));

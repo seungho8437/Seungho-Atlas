@@ -1,0 +1,137 @@
+{
+  "schema_version": "1.0.0",
+  "final_judgment": "B_V2_FREEZE_CANDIDATE",
+  "hard_gate": {
+    "statements_583": true,
+    "exact_583": true,
+    "known_defects_235_repaired": true,
+    "unresolved_critical_zero": true,
+    "unresolved_major_zero": true,
+    "semantic_cardinality_zero": true,
+    "source_provenance_complete": true,
+    "orphan_zero": true,
+    "invalid_fma_zero": true,
+    "upstream_diff_zero": true,
+    "mandatory_regressions_pass": true,
+    "negative_validator_tests_pass": true,
+    "independent_reproducibility_pass": true
+  },
+  "counts": {
+    "B_v2_statements": 583,
+    "exact_semantic_matches": 583,
+    "remaining_blocked_or_mismatched": 0,
+    "total_landmark_nodes": 2408,
+    "total_relation_instances": 1838,
+    "total_geometry_nodes": 104,
+    "total_conditional_branches": 115,
+    "total_composite_bindings": 332,
+    "total_proportional_measurements": 288,
+    "known_defects_total": 235,
+    "known_defects_repaired": 235,
+    "unresolved_CRITICAL": 0,
+    "unresolved_MAJOR": 0
+  },
+  "semantic_diff": {
+    "added_landmark": 1344,
+    "removed_landmark": 1257,
+    "rebound_relation_argument": 381,
+    "changed_relation_type": 0,
+    "added_relation_semantics": 1676,
+    "removed_relation_semantics": 2547,
+    "added_geometry": 7,
+    "removed_geometry": 0,
+    "added_conditional_branch": 115,
+    "composite_binding_change": 332
+  },
+  "mandatory_regression": {
+    "CV1": {
+      "PASS": true,
+      "checks": {
+        "male_line": true,
+        "male_midpoint": true,
+        "female_line": true,
+        "female_midpoint": true,
+        "male_composite": true,
+        "female_composite": true,
+        "sex_branches": true
+      }
+    },
+    "CV12": {
+      "PASS": true,
+      "checks": {
+        "line": true,
+        "midpoint": true,
+        "two_endpoint_geometry": true
+      }
+    },
+    "ST35": {
+      "PASS": true,
+      "checks": {
+        "location_depression": true,
+        "location_patellar_ligament_anchor": true,
+        "note_depression": true,
+        "note_lateral_patella": true,
+        "note_inferior_patella": true,
+        "knee_flexed_condition": true
+      }
+    },
+    "GB26": {
+      "PASS": true,
+      "checks": {
+        "rib_relation": true,
+        "umbilical_level": true,
+        "rib_composite": true,
+        "note2_cv8_level": true
+      }
+    },
+    "ST29": {
+      "PASS": true,
+      "checks": {
+        "location_4cun_inferior": true,
+        "location_2cun_lateral": true,
+        "note_regression": true
+      }
+    }
+  },
+  "negative_validator_tests_PASS": true,
+  "upstream_frozen_diff": {
+    "1A v1.0.5": false,
+    "Notes semantic-role v0.3": false,
+    "Location semantic target v0.1": false,
+    "Composite binding/decomposition v0.1": false,
+    "Location identity-resolution finalization v1": false,
+    "FMA registry resolution policy v0.3.1": false
+  },
+  "independent_reproducibility": {
+    "schema_version": "1.0.0",
+    "independent_fresh_runs": 2,
+    "files": {
+      "anatomy-acupoint-relations-v2.json": {
+        "run1_sha256": "0a27c6c080479a87d7dcf84f1cb3a45633d20c09458e739ebfe084ce03dd9bda",
+        "run2_sha256": "0a27c6c080479a87d7dcf84f1cb3a45633d20c09458e739ebfe084ce03dd9bda",
+        "byte_identical": true
+      },
+      "b-v2-compiled-source-spec.json": {
+        "run1_sha256": "fc58f2db2aa29e1d1cc04392383984bf60f13d5bfa045715687fedcb18eb7778",
+        "run2_sha256": "fc58f2db2aa29e1d1cc04392383984bf60f13d5bfa045715687fedcb18eb7778",
+        "byte_identical": true
+      },
+      "b-v2-validator-results.json": {
+        "run1_sha256": "df098d6403b9a907440692a341a6cf1a038a7b49d27d4cc8da30bbdacd20368d",
+        "run2_sha256": "df098d6403b9a907440692a341a6cf1a038a7b49d27d4cc8da30bbdacd20368d",
+        "byte_identical": true
+      },
+      "b-v2-negative-validator-tests.json": {
+        "run1_sha256": "0dbf81acb19bbf0fbf9aa74350f72289bfc6f2121747c5983e5e2614a6128c47",
+        "run2_sha256": "0dbf81acb19bbf0fbf9aa74350f72289bfc6f2121747c5983e5e2614a6128c47",
+        "byte_identical": true
+      },
+      "b-v2-upstream-regression.json": {
+        "run1_sha256": "5489bb269360bb789ea6052f403a0608749e648a98775351188bdcdc01b7158b",
+        "run2_sha256": "5489bb269360bb789ea6052f403a0608749e648a98775351188bdcdc01b7158b",
+        "byte_identical": true
+      }
+    },
+    "PASS": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-stage1-approval",
+  "stage": "Stage 1 — Spatial substrate",
+  "status": "APPROVED",
+  "approved_at": "2026-10-06",
+  "automated_validation": {
+    "workflow": "Validate C v3 Stage 1 spatial substrate",
+    "workflow_run_id": 37426246511,
+    "head_sha": "c5946ace1162cdcaf83aa5fea59220bdcc1f55d3",
+    "conclusion": "success",
+    "required_checks": [
+      "atlas integrity baseline",
+      "spatial kernel unit tests",
+      "canonical mesh registry",
+      "independent registry validation",
+      "independent skin topology validation",
+      "spatial substrate build",
+      "independent frame validation",
+      "atlas-backed spatial query validation",
+      "z-buffer review rendering",
+      "independent review camera validation"
+    ]
+  },
+  "human_validation": {
+    "status": "APPROVED",
+    "reviewer": "user",
+    "evidence": "User approved the final z-buffer QC after confirming FRONT/BACK differentiation and prior LEFT/RIGHT, joint-position, and limb-chain continuity checks.",
+    "superseded_visual_qc": "Earlier silhouette/wireframe review renderers were rejected and are not approval evidence."
+  },
+  "scope_of_approval": [
+    "BodyParts3D atlas/binary integrity",
+    "canonical mesh registry",
+    "global/local anatomical frames",
+    "joint-chain ordering",
+    "component-aware indexed skin surface",
+    "typed spatial query substrate",
+    "hidden-surface visual QC"
+  ],
+  "explicitly_not_approved": [
+    "WHO landmark realization",
+    "WHO semantic relation execution",
+    "acupoint coordinates",
+    "361-point synthesis",
+    "global acupoint validation"
+  ],
+  "next_stage": "Stage 2 — Semantic execution layer"
+}

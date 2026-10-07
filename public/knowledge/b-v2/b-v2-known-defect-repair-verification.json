@@ -1,0 +1,4181 @@
+{
+  "schema_version": "1.0.0",
+  "repairs": [
+    {
+      "original_defect_id": "D0001",
+      "point_id": "LU3",
+      "statement_id": "S:LU3:note:1",
+      "v1_defect_class": "SOURCE_LANDMARK_EXTRACTION_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LU3:note:1:139-148",
+        "LM:S:LU3:note:1:154-176",
+        "LM:S:LU3:note:1:154-183",
+        "RL:S:LU3:note:1:00:on-line",
+        "RL:S:LU3:note:1:01:fraction-along-line",
+        "RL:S:LU3:note:1:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "B-v2 source-backed derived landmark node with upstream-absence provenance",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0002",
+      "point_id": "KI1",
+      "statement_id": "S:KI1:note:1",
+      "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:KI1:note:1:174-182",
+        "LM:S:KI1:note:1:188-249",
+        "LM:S:KI1:note:1:215-234",
+        "RL:S:KI1:note:1:00:on-line",
+        "RL:S:KI1:note:1:01:between",
+        "RL:S:KI1:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source endpoint-complete geometry constructor",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0003",
+      "point_id": "KI1",
+      "statement_id": "S:KI1:note:1",
+      "v1_defect_class": "SOURCE_LANDMARK_EXTRACTION_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:KI1:note:1:174-182",
+        "LM:S:KI1:note:1:188-249",
+        "LM:S:KI1:note:1:215-234",
+        "RL:S:KI1:note:1:00:on-line",
+        "RL:S:KI1:note:1:01:between",
+        "RL:S:KI1:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "B-v2 source-backed derived landmark node with upstream-absence provenance",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0004",
+      "point_id": "TE18",
+      "statement_id": "S:TE18:location",
+      "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE18:location:135-139",
+        "LM:S:TE18:location:143-147",
+        "LM:S:TE18:location:20-26",
+        "RL:S:TE18:location:00:on-line",
+        "RL:S:TE18:location:01:fraction-along-line",
+        "RL:S:TE18:location:02:center-of"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source endpoint-complete geometry constructor",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0005",
+      "point_id": "TE19",
+      "statement_id": "S:TE19:location",
+      "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE19:location:106-110",
+        "LM:S:TE19:location:7-11",
+        "LM:S:TE19:location:98-102",
+        "RL:S:TE19:location:00:on-line",
+        "RL:S:TE19:location:01:fraction-along-line",
+        "RL:S:TE19:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source endpoint-complete geometry constructor",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0006",
+      "point_id": "GB4",
+      "statement_id": "S:GB4:location",
+      "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB4:location:101-104",
+        "LM:S:GB4:location:108-111",
+        "LM:S:GB4:location:7-11",
+        "RL:S:GB4:location:00:on-line",
+        "RL:S:GB4:location:01:fraction-along-line",
+        "RL:S:GB4:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source endpoint-complete geometry constructor",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0007",
+      "point_id": "GB5",
+      "statement_id": "S:GB5:location",
+      "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB5:location:53-56",
+        "LM:S:GB5:location:60-63",
+        "LM:S:GB5:location:7-11",
+        "RL:S:GB5:location:00:on-line",
+        "RL:S:GB5:location:01:midpoint-between",
+        "RL:S:GB5:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source endpoint-complete geometry constructor",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0008",
+      "point_id": "GB6",
+      "statement_id": "S:GB6:location",
+      "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB6:location:101-104",
+        "LM:S:GB6:location:108-111",
+        "LM:S:GB6:location:7-11",
+        "RL:S:GB6:location:00:on-line",
+        "RL:S:GB6:location:01:fraction-along-line",
+        "RL:S:GB6:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source endpoint-complete geometry constructor",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0009",
+      "point_id": "GB10",
+      "statement_id": "S:GB10:location",
+      "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB10:location:137-140",
+        "LM:S:GB10:location:144-148",
+        "LM:S:GB10:location:31-51",
+        "RL:S:GB10:location:00:on-line",
+        "RL:S:GB10:location:01:relative-to",
+        "RL:S:GB10:location:02:fraction-along-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source endpoint-complete geometry constructor",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0010",
+      "point_id": "GB11",
+      "statement_id": "S:GB11:location",
+      "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB11:location:145-149",
+        "LM:S:GB11:location:153-157",
+        "LM:S:GB11:location:38-58",
+        "RL:S:GB11:location:00:on-line",
+        "RL:S:GB11:location:01:relative-to",
+        "RL:S:GB11:location:02:fraction-along-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source endpoint-complete geometry constructor",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0011",
+      "point_id": "GB13",
+      "statement_id": "S:GB13:note:1",
+      "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB13:note:1:102-106",
+        "LM:S:GB13:note:1:110-113",
+        "RL:S:GB13:note:1:00:on-line",
+        "RL:S:GB13:note:1:01:fraction-along-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source endpoint-complete geometry constructor",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0012",
+      "point_id": "GB15",
+      "statement_id": "S:GB15:note:1",
+      "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB15:note:1:120-124",
+        "LM:S:GB15:note:1:128-131",
+        "LM:S:GB15:note:1:54-78",
+        "RL:S:GB15:note:1:00:on-line",
+        "RL:S:GB15:note:1:01:midpoint-between",
+        "RL:S:GB15:note:1:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source endpoint-complete geometry constructor",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0013",
+      "point_id": "CV1",
+      "statement_id": "S:CV1:location",
+      "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:CV1:location:102-113",
+        "LM:S:CV1:location:131-151",
+        "LM:S:CV1:location:155-169",
+        "RL:S:CV1:location:00:surface-landmark",
+        "RL:S:CV1:location:01:on-line:male",
+        "RL:S:CV1:location:02:midpoint-between:male"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source endpoint-complete geometry constructor",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0014",
+      "point_id": "CV12",
+      "statement_id": "S:CV12:note:1",
+      "v1_defect_class": "REFERENCE_LINE_ENDPOINT_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:CV12:note:1:106-115",
+        "LM:S:CV12:note:1:61-87",
+        "LM:S:CV12:note:1:92-115",
+        "RL:S:CV12:note:1:00:on-line",
+        "RL:S:CV12:note:1:01:midpoint-between",
+        "RL:S:CV12:note:1:02:center-of"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source endpoint-complete geometry constructor",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0015",
+      "point_id": "CV12",
+      "statement_id": "S:CV12:note:1",
+      "v1_defect_class": "SOURCE_LANDMARK_EXTRACTION_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:CV12:note:1:106-115",
+        "LM:S:CV12:note:1:61-87",
+        "LM:S:CV12:note:1:92-115",
+        "RL:S:CV12:note:1:00:on-line",
+        "RL:S:CV12:note:1:01:midpoint-between",
+        "RL:S:CV12:note:1:02:center-of"
+      ],
+      "repaired": true,
+      "repair_mechanism": "B-v2 source-backed derived landmark node with upstream-absence provenance",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0016",
+      "point_id": "LU5",
+      "statement_id": "S:LU5:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LU5:location:44-58",
+        "LM:S:LU5:location:67-77",
+        "LM:S:LU5:location:7-22",
+        "RL:S:LU5:location:00:relative-to",
+        "RL:S:LU5:location:01:surface-landmark",
+        "RL:S:LU5:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0017",
+      "point_id": "LU9",
+      "statement_id": "S:LU9:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LU9:location:107-117",
+        "LM:S:LU9:location:126-162",
+        "LM:S:LU9:location:54-76",
+        "RL:S:LU9:location:00:between",
+        "RL:S:LU9:location:01:relative-to",
+        "RL:S:LU9:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0018",
+      "point_id": "LI2",
+      "statement_id": "S:LI2:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LI2:location:114-120",
+        "LM:S:LI2:location:133-136",
+        "LM:S:LI2:location:141-152",
+        "RL:S:LI2:location:00:between",
+        "RL:S:LI2:location:01:relative-to",
+        "RL:S:LI2:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0019",
+      "point_id": "LI5",
+      "statement_id": "S:LI5:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LI5:location:135-145",
+        "LM:S:LI5:location:50-61",
+        "LM:S:LI5:location:7-28",
+        "RL:S:LI5:location:00:relative-to",
+        "RL:S:LI5:location:01:surface-landmark",
+        "RL:S:LI5:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0020",
+      "point_id": "LI11",
+      "statement_id": "S:LI11:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LI11:note:1:61-71",
+        "LM:S:LI11:note:1:79-90",
+        "LM:S:LI11:note:1:94-112",
+        "RL:S:LI11:note:1:00:surface-landmark",
+        "RL:S:LI11:note:1:01:surface-landmark",
+        "RL:S:LI11:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0021",
+      "point_id": "LI15",
+      "statement_id": "S:LI15:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LI15:location:105-140",
+        "LM:S:LI15:location:109-125",
+        "LM:S:LI15:location:133-140",
+        "RL:S:LI15:location:00:between",
+        "RL:S:LI15:location:01:surface-landmark",
+        "RL:S:LI15:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0022",
+      "point_id": "LI16",
+      "statement_id": "S:LI16:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LI16:location:104-111",
+        "LM:S:LI16:location:31-41",
+        "LM:S:LI16:location:54-66",
+        "RL:S:LI16:location:00:between",
+        "RL:S:LI16:location:01:surface-landmark",
+        "RL:S:LI16:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0023",
+      "point_id": "LI16",
+      "statement_id": "S:LI16:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LI16:note:1:13-23",
+        "LM:S:LI16:note:1:32-80",
+        "LM:S:LI16:note:1:56-80",
+        "RL:S:LI16:note:1:00:between",
+        "RL:S:LI16:note:1:01:relative-to",
+        "RL:S:LI16:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0024",
+      "point_id": "ST5",
+      "statement_id": "S:ST5:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST5:location:116-129",
+        "LM:S:ST5:location:24-50",
+        "LM:S:ST5:location:29-50",
+        "RL:S:ST5:location:00:relative-to",
+        "RL:S:ST5:location:01:relative-to",
+        "RL:S:ST5:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0025",
+      "point_id": "ST6",
+      "statement_id": "S:ST6:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST6:note:1:13-50",
+        "LM:S:ST6:note:1:134-224",
+        "LM:S:ST6:note:1:172-182",
+        "RL:S:ST6:note:1:00:surface-landmark",
+        "RL:S:ST6:note:1:01:surface-landmark",
+        "RL:S:ST6:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0026",
+      "point_id": "ST7",
+      "statement_id": "S:ST7:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST7:location:102-122",
+        "LM:S:ST7:location:20-30",
+        "LM:S:ST7:location:43-97",
+        "RL:S:ST7:location:00:between",
+        "RL:S:ST7:location:01:surface-landmark",
+        "RL:S:ST7:location:02:midpoint-of-entity"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0027",
+      "point_id": "ST12",
+      "statement_id": "S:ST12:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST12:location:126-136",
+        "LM:S:ST12:location:148-161",
+        "LM:S:ST12:location:43-72",
+        "RL:S:ST12:location:00:relative-to",
+        "RL:S:ST12:location:01:relative-to",
+        "RL:S:ST12:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0028",
+      "point_id": "ST31",
+      "statement_id": "S:ST31:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST31:location:105-126",
+        "LM:S:ST31:location:128-148",
+        "LM:S:ST31:location:153-184",
+        "RL:S:ST31:location:00:surface-landmark",
+        "RL:S:ST31:location:01:surface-landmark",
+        "RL:S:ST31:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0029",
+      "point_id": "ST31",
+      "statement_id": "S:ST31:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST31:note:1:257-267",
+        "LM:S:ST31:note:1:280-305",
+        "LM:S:ST31:note:1:310-350",
+        "RL:S:ST31:note:1:00:between",
+        "RL:S:ST31:note:1:01:relative-to",
+        "RL:S:ST31:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0030",
+      "point_id": "ST31",
+      "statement_id": "S:ST31:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST31:note:1:257-267",
+        "LM:S:ST31:note:1:280-305",
+        "LM:S:ST31:note:1:310-350",
+        "RL:S:ST31:note:1:00:between",
+        "RL:S:ST31:note:1:01:relative-to",
+        "RL:S:ST31:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0031",
+      "point_id": "ST35",
+      "statement_id": "S:ST35:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST35:location:43-53",
+        "LM:S:ST35:location:64-86",
+        "LM:S:ST35:location:7-22",
+        "RL:S:ST35:location:00:relative-to",
+        "RL:S:ST35:location:01:surface-landmark",
+        "RL:S:ST35:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0032",
+      "point_id": "ST35",
+      "statement_id": "S:ST35:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST35:note:1:55-65",
+        "LM:S:ST35:note:1:89-101",
+        "LM:S:ST35:note:1:90-101",
+        "RL:S:ST35:note:1:00:relative-to",
+        "RL:S:ST35:note:1:01:surface-landmark",
+        "RL:S:ST35:note:1:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0033",
+      "point_id": "ST41",
+      "statement_id": "S:ST41:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST41:location:133-157:003a872a",
+        "LM:S:ST41:location:162-188:6feacc7a",
+        "LM:S:ST41:location:44-54",
+        "RL:S:ST41:location:00:between",
+        "RL:S:ST41:location:01:surface-landmark",
+        "RL:S:ST41:location:02:center-of"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0034",
+      "point_id": "ST43",
+      "statement_id": "S:ST43:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST43:location:103-141",
+        "LM:S:ST43:location:39-72:156c28b5",
+        "LM:S:ST43:location:50-72",
+        "RL:S:ST43:location:00:between",
+        "RL:S:ST43:location:01:relative-to",
+        "RL:S:ST43:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0035",
+      "point_id": "SP2",
+      "statement_id": "S:SP2:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SP2:location:109-112",
+        "LM:S:SP2:location:117-128",
+        "LM:S:SP2:location:25-35",
+        "RL:S:SP2:location:00:between",
+        "RL:S:SP2:location:01:relative-to",
+        "RL:S:SP2:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0036",
+      "point_id": "SP4",
+      "statement_id": "S:SP4:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SP4:note:1:107-145",
+        "LM:S:SP4:note:1:111-116",
+        "LM:S:SP4:note:1:120-145",
+        "RL:S:SP4:note:1:00:relative-to",
+        "RL:S:SP4:note:1:01:surface-landmark",
+        "RL:S:SP4:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0037",
+      "point_id": "SP5",
+      "statement_id": "S:SP5:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SP5:location:108-144",
+        "LM:S:SP5:location:112-144",
+        "LM:S:SP5:location:130-144",
+        "RL:S:SP5:location:00:midpoint-between",
+        "RL:S:SP5:location:01:between",
+        "RL:S:SP5:location:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0038",
+      "point_id": "HT7",
+      "statement_id": "S:HT7:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:HT7:note:1:13-23",
+        "LM:S:HT7:note:1:33-75",
+        "LM:S:HT7:note:1:38-54",
+        "RL:S:HT7:note:1:00:relative-to",
+        "RL:S:HT7:note:1:01:surface-landmark",
+        "RL:S:HT7:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0039",
+      "point_id": "HT8",
+      "statement_id": "S:HT8:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:HT8:location:101-138",
+        "LM:S:HT8:location:32-42",
+        "LM:S:HT8:location:55-88:f036fedf",
+        "RL:S:HT8:location:00:between",
+        "RL:S:HT8:location:01:relative-to",
+        "RL:S:HT8:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0040",
+      "point_id": "SI2",
+      "statement_id": "S:SI2:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI2:location:113-119",
+        "LM:S:SI2:location:132-135",
+        "LM:S:SI2:location:140-151",
+        "RL:S:SI2:location:00:between",
+        "RL:S:SI2:location:01:relative-to",
+        "RL:S:SI2:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0041",
+      "point_id": "SI4",
+      "statement_id": "S:SI4:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI4:location:110-129",
+        "LM:S:SI4:location:138-144",
+        "LM:S:SI4:location:157-160",
+        "RL:S:SI4:location:00:between",
+        "RL:S:SI4:location:01:between",
+        "RL:S:SI4:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0042",
+      "point_id": "SI4",
+      "statement_id": "S:SI4:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI4:note:1:142-152",
+        "LM:S:SI4:note:1:161-176",
+        "LM:S:SI4:note:1:32-35",
+        "RL:S:SI4:note:1:00:between",
+        "RL:S:SI4:note:1:01:surface-landmark",
+        "RL:S:SI4:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0043",
+      "point_id": "SI5",
+      "statement_id": "S:SI5:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI5:location:49-59",
+        "LM:S:SI5:location:7-27",
+        "LM:S:SI5:location:72-87",
+        "RL:S:SI5:location:00:between",
+        "RL:S:SI5:location:01:surface-landmark",
+        "RL:S:SI5:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0044",
+      "point_id": "SI6",
+      "statement_id": "S:SI6:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI6:location:120-144",
+        "LM:S:SI6:location:52-62",
+        "LM:S:SI6:location:7-27",
+        "RL:S:SI6:location:00:relative-to",
+        "RL:S:SI6:location:01:relative-to",
+        "RL:S:SI6:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0045",
+      "point_id": "SI8",
+      "statement_id": "S:SI8:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI8:location:115-127",
+        "LM:S:SI8:location:49-59",
+        "LM:S:SI8:location:7-27",
+        "RL:S:SI8:location:00:between",
+        "RL:S:SI8:location:01:surface-landmark",
+        "RL:S:SI8:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0046",
+      "point_id": "SI10",
+      "statement_id": "S:SI10:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI10:location:112-119",
+        "LM:S:SI10:location:35-63",
+        "LM:S:SI10:location:7-22",
+        "RL:S:SI10:location:00:relative-to",
+        "RL:S:SI10:location:01:relative-to",
+        "RL:S:SI10:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0047",
+      "point_id": "SI11",
+      "statement_id": "S:SI11:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI11:location:114-154",
+        "LM:S:SI11:location:130-193",
+        "LM:S:SI11:location:134-154",
+        "RL:S:SI11:location:00:on-line",
+        "RL:S:SI11:location:01:between",
+        "RL:S:SI11:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0048",
+      "point_id": "SI13",
+      "statement_id": "S:SI13:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI13:location:31-41",
+        "LM:S:SI13:location:53-96",
+        "LM:S:SI13:location:58-68",
+        "RL:S:SI13:location:00:relative-to",
+        "RL:S:SI13:location:01:surface-landmark",
+        "RL:S:SI13:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0049",
+      "point_id": "SI18",
+      "statement_id": "S:SI18:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI18:location:24-43",
+        "LM:S:SI18:location:52-62",
+        "LM:S:SI18:location:7-11",
+        "RL:S:SI18:location:00:relative-to",
+        "RL:S:SI18:location:01:relative-to",
+        "RL:S:SI18:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0050",
+      "point_id": "SI19",
+      "statement_id": "S:SI19:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI19:location:119-135",
+        "LM:S:SI19:location:119-151",
+        "LM:S:SI19:location:143-151",
+        "RL:S:SI19:location:00:between",
+        "RL:S:SI19:location:01:surface-landmark",
+        "RL:S:SI19:location:02:center-of"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0051",
+      "point_id": "SI19",
+      "statement_id": "S:SI19:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI19:note:1:101-111",
+        "LM:S:SI19:note:1:121-125",
+        "LM:S:SI19:note:1:130-133",
+        "RL:S:SI19:note:1:00:between",
+        "RL:S:SI19:note:1:01:relative-to",
+        "RL:S:SI19:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0052",
+      "point_id": "BL1",
+      "statement_id": "S:BL1:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL1:location:102-113",
+        "LM:S:BL1:location:121-126",
+        "LM:S:BL1:location:20-30",
+        "RL:S:BL1:location:00:between",
+        "RL:S:BL1:location:01:surface-landmark",
+        "RL:S:BL1:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0053",
+      "point_id": "BL1",
+      "statement_id": "S:BL1:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL1:note:1:53-63",
+        "LM:S:BL1:note:1:96-125",
+        "LM:S:BL1:note:1:97-125",
+        "RL:S:BL1:note:1:00:relative-to",
+        "RL:S:BL1:note:1:01:surface-landmark",
+        "RL:S:BL1:note:1:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0054",
+      "point_id": "BL2",
+      "statement_id": "S:BL2:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL2:location:20-30",
+        "LM:S:BL2:location:38-48",
+        "LM:S:BL2:location:38-63",
+        "RL:S:BL2:location:00:surface-landmark",
+        "RL:S:BL2:location:01:surface-landmark",
+        "RL:S:BL2:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0055",
+      "point_id": "BL10",
+      "statement_id": "S:BL10:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL10:location:147-157",
+        "LM:S:BL10:location:168-189",
+        "LM:S:BL10:location:58-138",
+        "RL:S:BL10:location:00:relative-to",
+        "RL:S:BL10:location:01:surface-landmark",
+        "RL:S:BL10:location:02:same-level"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0056",
+      "point_id": "BL31",
+      "statement_id": "S:BL31:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL31:note:1:60-70",
+        "LM:S:BL31:note:1:96-100",
+        "RL:S:BL31:note:1:00:surface-landmark",
+        "RL:S:BL31:note:1:01:superior-to",
+        "RL:S:BL31:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0057",
+      "point_id": "BL32",
+      "statement_id": "S:BL32:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL32:note:1:127-176",
+        "LM:S:BL32:note:1:138-146",
+        "LM:S:BL32:note:1:150-176",
+        "RL:S:BL32:note:1:00:midpoint-between",
+        "RL:S:BL32:note:1:01:between",
+        "RL:S:BL32:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0058",
+      "point_id": "BL60",
+      "statement_id": "S:BL60:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL60:location:113-133",
+        "LM:S:BL60:location:50-60",
+        "LM:S:BL60:location:7-28",
+        "RL:S:BL60:location:00:between",
+        "RL:S:BL60:location:01:surface-landmark",
+        "RL:S:BL60:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0059",
+      "point_id": "BL62",
+      "statement_id": "S:BL62:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL62:location:104-114",
+        "LM:S:BL62:location:127-142",
+        "LM:S:BL62:location:127-167",
+        "RL:S:BL62:location:00:between",
+        "RL:S:BL62:location:01:relative-to",
+        "RL:S:BL62:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0060",
+      "point_id": "BL62",
+      "statement_id": "S:BL62:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL62:note:1:143-148",
+        "LM:S:BL62:note:1:152-155",
+        "LM:S:BL62:note:1:29-39",
+        "RL:S:BL62:note:1:00:relative-to",
+        "RL:S:BL62:note:1:01:surface-landmark",
+        "RL:S:BL62:note:1:02:cross-reference"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0061",
+      "point_id": "BL63",
+      "statement_id": "S:BL63:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL63:location:149-159",
+        "LM:S:BL63:location:171-187",
+        "LM:S:BL63:location:36-81",
+        "RL:S:BL63:location:00:relative-to",
+        "RL:S:BL63:location:01:relative-to",
+        "RL:S:BL63:location:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0062",
+      "point_id": "BL65",
+      "statement_id": "S:BL65:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL65:location:110-116",
+        "LM:S:BL65:location:129-132",
+        "LM:S:BL65:location:137-148",
+        "RL:S:BL65:location:00:between",
+        "RL:S:BL65:location:01:relative-to",
+        "RL:S:BL65:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0063",
+      "point_id": "BL66",
+      "statement_id": "S:BL66:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL66:location:103-109",
+        "LM:S:BL66:location:122-125",
+        "LM:S:BL66:location:130-141",
+        "RL:S:BL66:location:00:between",
+        "RL:S:BL66:location:01:relative-to",
+        "RL:S:BL66:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0064",
+      "point_id": "KI1",
+      "statement_id": "S:KI1:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:KI1:location:32-87",
+        "LM:S:KI1:location:40-50",
+        "LM:S:KI1:location:7-23",
+        "RL:S:KI1:location:00:surface-landmark",
+        "RL:S:KI1:location:01:surface-landmark",
+        "RL:S:KI1:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0065",
+      "point_id": "KI1",
+      "statement_id": "S:KI1:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:KI1:note:1:174-182",
+        "LM:S:KI1:note:1:188-249",
+        "LM:S:KI1:note:1:215-234",
+        "RL:S:KI1:note:1:00:on-line",
+        "RL:S:KI1:note:1:01:between",
+        "RL:S:KI1:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0066",
+      "point_id": "KI3",
+      "statement_id": "S:KI3:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:KI3:location:111-131",
+        "LM:S:KI3:location:49-59",
+        "LM:S:KI3:location:7-27",
+        "RL:S:KI3:location:00:between",
+        "RL:S:KI3:location:01:surface-landmark",
+        "RL:S:KI3:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0067",
+      "point_id": "KI4",
+      "statement_id": "S:KI4:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:KI4:location:110-120",
+        "LM:S:KI4:location:132-178",
+        "LM:S:KI4:location:137-154",
+        "RL:S:KI4:location:00:relative-to",
+        "RL:S:KI4:location:01:relative-to",
+        "RL:S:KI4:location:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0068",
+      "point_id": "KI5",
+      "statement_id": "S:KI5:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:KI5:location:53-57",
+        "LM:S:KI5:location:66-76",
+        "LM:S:KI5:location:7-20",
+        "RL:S:KI5:location:00:relative-to",
+        "RL:S:KI5:location:01:relative-to",
+        "RL:S:KI5:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0069",
+      "point_id": "KI6",
+      "statement_id": "S:KI6:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:KI6:location:101-111",
+        "LM:S:KI6:location:123-144",
+        "LM:S:KI6:location:53-92",
+        "RL:S:KI6:location:00:relative-to",
+        "RL:S:KI6:location:01:relative-to",
+        "RL:S:KI6:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0070",
+      "point_id": "KI8",
+      "statement_id": "S:KI8:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:KI8:location:121-160",
+        "LM:S:KI8:location:40-50",
+        "LM:S:KI8:location:63-100",
+        "RL:S:KI8:location:00:relative-to",
+        "RL:S:KI8:location:01:relative-to",
+        "RL:S:KI8:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0071",
+      "point_id": "PC3",
+      "statement_id": "S:PC3:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:PC3:location:44-58",
+        "LM:S:PC3:location:67-77",
+        "LM:S:PC3:location:7-22",
+        "RL:S:PC3:location:00:relative-to",
+        "RL:S:PC3:location:01:surface-landmark",
+        "RL:S:PC3:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0072",
+      "point_id": "PC8",
+      "statement_id": "S:PC8:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:PC8:location:101-133",
+        "LM:S:PC8:location:32-42",
+        "LM:S:PC8:location:55-88:f036fedf",
+        "RL:S:PC8:location:00:between",
+        "RL:S:PC8:location:01:relative-to",
+        "RL:S:PC8:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0073",
+      "point_id": "PC8",
+      "statement_id": "S:PC8:remarks",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:PC8:remarks:106-129",
+        "LM:S:PC8:remarks:142-174",
+        "LM:S:PC8:remarks:47-51",
+        "RL:S:PC8:remarks:00:between",
+        "RL:S:PC8:remarks:01:relative-to",
+        "RL:S:PC8:remarks:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0074",
+      "point_id": "TE3",
+      "statement_id": "S:TE3:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE3:location:103-141",
+        "LM:S:TE3:location:39-72:156c28b5",
+        "LM:S:TE3:location:50-72",
+        "RL:S:TE3:location:00:between",
+        "RL:S:TE3:location:01:relative-to",
+        "RL:S:TE3:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0075",
+      "point_id": "TE4",
+      "statement_id": "S:TE4:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE4:location:103-122",
+        "LM:S:TE4:location:45-55",
+        "LM:S:TE4:location:64-94",
+        "RL:S:TE4:location:00:relative-to",
+        "RL:S:TE4:location:01:surface-landmark",
+        "RL:S:TE4:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0076",
+      "point_id": "TE5",
+      "statement_id": "S:TE5:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE5:note:1:25-29",
+        "LM:S:TE5:note:1:38-48",
+        "LM:S:TE5:note:1:61-67",
+        "RL:S:TE5:note:1:00:between",
+        "RL:S:TE5:note:1:01:relative-to",
+        "RL:S:TE5:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0077",
+      "point_id": "TE10",
+      "statement_id": "S:TE10:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE10:location:45-55",
+        "LM:S:TE10:location:7-23",
+        "LM:S:TE10:location:75-108",
+        "RL:S:TE10:location:00:relative-to",
+        "RL:S:TE10:location:01:surface-landmark",
+        "RL:S:TE10:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0078",
+      "point_id": "TE14",
+      "statement_id": "S:TE14:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE14:location:101-108",
+        "LM:S:TE14:location:31-41",
+        "LM:S:TE14:location:54-68",
+        "RL:S:TE14:location:00:between",
+        "RL:S:TE14:location:01:surface-landmark",
+        "RL:S:TE14:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0079",
+      "point_id": "TE15",
+      "statement_id": "S:TE15:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE15:location:31-41",
+        "LM:S:TE15:location:54-88",
+        "LM:S:TE15:location:59-88",
+        "RL:S:TE15:location:00:relative-to",
+        "RL:S:TE15:location:01:surface-landmark",
+        "RL:S:TE15:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0080",
+      "point_id": "TE16",
+      "statement_id": "S:TE16:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE16:location:114-146",
+        "LM:S:TE16:location:57-82",
+        "LM:S:TE16:location:61-82",
+        "RL:S:TE16:location:00:relative-to",
+        "RL:S:TE16:location:01:surface-landmark",
+        "RL:S:TE16:location:02:same-level"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0081",
+      "point_id": "TE17",
+      "statement_id": "S:TE17:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE17:location:113-132",
+        "LM:S:TE17:location:48-61",
+        "LM:S:TE17:location:7-34",
+        "RL:S:TE17:location:00:relative-to",
+        "RL:S:TE17:location:01:relative-to",
+        "RL:S:TE17:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0082",
+      "point_id": "TE21",
+      "statement_id": "S:TE21:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE21:location:20-30",
+        "LM:S:TE21:location:43-60",
+        "LM:S:TE21:location:65-101",
+        "RL:S:TE21:location:00:between",
+        "RL:S:TE21:location:01:surface-landmark",
+        "RL:S:TE21:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0083",
+      "point_id": "TE21",
+      "statement_id": "S:TE21:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE21:note:1:130-135",
+        "LM:S:TE21:note:1:64-74",
+        "LM:S:TE21:note:1:86-108",
+        "RL:S:TE21:note:1:00:relative-to",
+        "RL:S:TE21:note:1:01:relative-to",
+        "RL:S:TE21:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0084",
+      "point_id": "TE23",
+      "statement_id": "S:TE23:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE23:location:20-30",
+        "LM:S:TE23:location:38-49",
+        "LM:S:TE23:location:38-64",
+        "RL:S:TE23:location:00:surface-landmark",
+        "RL:S:TE23:location:01:surface-landmark",
+        "RL:S:TE23:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0085",
+      "point_id": "GB1",
+      "statement_id": "S:GB1:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB1:location:20-30",
+        "LM:S:GB1:location:52-81",
+        "LM:S:GB1:location:7-11",
+        "RL:S:GB1:location:00:relative-to",
+        "RL:S:GB1:location:01:surface-landmark",
+        "RL:S:GB1:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0086",
+      "point_id": "GB2",
+      "statement_id": "S:GB2:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB2:location:20-30",
+        "LM:S:GB2:location:43-60",
+        "LM:S:GB2:location:65-101",
+        "RL:S:GB2:location:00:between",
+        "RL:S:GB2:location:01:surface-landmark",
+        "RL:S:GB2:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0087",
+      "point_id": "GB2",
+      "statement_id": "S:GB2:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB2:note:1:54-64",
+        "LM:S:GB2:note:1:76-98",
+        "RL:S:GB2:note:1:00:relative-to",
+        "RL:S:GB2:note:1:01:surface-landmark",
+        "RL:S:GB2:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0088",
+      "point_id": "GB3",
+      "statement_id": "S:GB3:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB3:location:20-30",
+        "LM:S:GB3:location:42-77",
+        "LM:S:GB3:location:59-77",
+        "RL:S:GB3:location:00:relative-to",
+        "RL:S:GB3:location:01:surface-landmark",
+        "RL:S:GB3:location:02:midpoint-of-entity"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0089",
+      "point_id": "GB3",
+      "statement_id": "S:GB3:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB3:note:1:13-23",
+        "LM:S:GB3:note:1:35-54",
+        "LM:S:GB3:note:1:67-71",
+        "RL:S:GB3:note:1:00:relative-to",
+        "RL:S:GB3:note:1:01:relative-to",
+        "RL:S:GB3:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0090",
+      "point_id": "GB12",
+      "statement_id": "S:GB12:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB12:location:43-53",
+        "LM:S:GB12:location:7-34",
+        "LM:S:GB12:location:72-92",
+        "RL:S:GB12:location:00:relative-to",
+        "RL:S:GB12:location:01:surface-landmark",
+        "RL:S:GB12:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0091",
+      "point_id": "GB20",
+      "statement_id": "S:GB20:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB20:location:133-154",
+        "LM:S:GB20:location:47-66",
+        "LM:S:GB20:location:7-34",
+        "RL:S:GB20:location:00:between",
+        "RL:S:GB20:location:01:relative-to",
+        "RL:S:GB20:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0092",
+      "point_id": "GB31",
+      "statement_id": "S:GB31:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB31:location:104-127",
+        "LM:S:GB31:location:43-53",
+        "LM:S:GB31:location:66-127",
+        "RL:S:GB31:location:00:relative-to",
+        "RL:S:GB31:location:01:surface-landmark",
+        "RL:S:GB31:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0093",
+      "point_id": "GB34",
+      "statement_id": "S:GB34:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB34:location:41-51",
+        "LM:S:GB34:location:7-13",
+        "LM:S:GB34:location:7-21",
+        "RL:S:GB34:location:00:relative-to",
+        "RL:S:GB34:location:01:surface-landmark",
+        "RL:S:GB34:location:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0094",
+      "point_id": "GB40",
+      "statement_id": "S:GB40:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB40:location:132-154",
+        "LM:S:GB40:location:133-154",
+        "LM:S:GB40:location:49-59",
+        "RL:S:GB40:location:00:relative-to",
+        "RL:S:GB40:location:01:relative-to",
+        "RL:S:GB40:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0095",
+      "point_id": "GB41",
+      "statement_id": "S:GB41:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB41:location:112-122",
+        "LM:S:GB41:location:134-177",
+        "LM:S:GB41:location:36-103",
+        "RL:S:GB41:location:00:relative-to",
+        "RL:S:GB41:location:01:relative-to",
+        "RL:S:GB41:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0096",
+      "point_id": "GB42",
+      "statement_id": "S:GB42:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB42:location:103-141",
+        "LM:S:GB42:location:39-72:156c28b5",
+        "LM:S:GB42:location:50-72",
+        "RL:S:GB42:location:00:between",
+        "RL:S:GB42:location:01:relative-to",
+        "RL:S:GB42:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0097",
+      "point_id": "LR3",
+      "statement_id": "S:LR3:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LR3:note:1:105-169",
+        "LM:S:LR3:note:1:140-145",
+        "LM:S:LR3:note:1:149-169",
+        "RL:S:LR3:note:1:00:between",
+        "RL:S:LR3:note:1:01:surface-landmark",
+        "RL:S:LR3:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0098",
+      "point_id": "LR4",
+      "statement_id": "S:LR4:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LR4:location:111-132",
+        "LM:S:LR4:location:48-58",
+        "LM:S:LR4:location:68-98",
+        "RL:S:LR4:location:00:relative-to",
+        "RL:S:LR4:location:01:relative-to",
+        "RL:S:LR4:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0099",
+      "point_id": "LR8",
+      "statement_id": "S:LR8:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LR8:location:136-146",
+        "LM:S:LR8:location:136-170",
+        "LM:S:LR8:location:154-170",
+        "RL:S:LR8:location:00:relative-to",
+        "RL:S:LR8:location:01:surface-landmark",
+        "RL:S:LR8:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0100",
+      "point_id": "LR8",
+      "statement_id": "S:LR8:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LR8:note:1:105-115",
+        "LM:S:LR8:note:1:119-139",
+        "LM:S:LR8:note:1:51-61",
+        "RL:S:LR8:note:1:00:relative-to",
+        "RL:S:LR8:note:1:01:surface-landmark",
+        "RL:S:LR8:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0101",
+      "point_id": "GV3",
+      "statement_id": "S:GV3:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV3:location:115-136",
+        "LM:S:GV3:location:29-39",
+        "LM:S:GV3:location:51-106",
+        "RL:S:GV3:location:00:relative-to",
+        "RL:S:GV3:location:01:surface-landmark",
+        "RL:S:GV3:location:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0102",
+      "point_id": "GV4",
+      "statement_id": "S:GV4:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV4:location:116-137",
+        "LM:S:GV4:location:29-39",
+        "LM:S:GV4:location:51-107",
+        "RL:S:GV4:location:00:relative-to",
+        "RL:S:GV4:location:01:surface-landmark",
+        "RL:S:GV4:location:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0103",
+      "point_id": "GV5",
+      "statement_id": "S:GV5:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV5:location:114-135",
+        "LM:S:GV5:location:29-39",
+        "LM:S:GV5:location:51-105",
+        "RL:S:GV5:location:00:relative-to",
+        "RL:S:GV5:location:01:surface-landmark",
+        "RL:S:GV5:location:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0104",
+      "point_id": "GV6",
+      "statement_id": "S:GV6:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV6:location:120-141",
+        "LM:S:GV6:location:33-43",
+        "LM:S:GV6:location:55-111",
+        "RL:S:GV6:location:00:relative-to",
+        "RL:S:GV6:location:01:surface-landmark",
+        "RL:S:GV6:location:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0105",
+      "point_id": "GV7",
+      "statement_id": "S:GV7:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV7:location:121-142",
+        "LM:S:GV7:location:33-43",
+        "LM:S:GV7:location:55-112",
+        "RL:S:GV7:location:00:relative-to",
+        "RL:S:GV7:location:01:surface-landmark",
+        "RL:S:GV7:location:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0106",
+      "point_id": "GV8",
+      "statement_id": "S:GV8:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV8:location:120-141",
+        "LM:S:GV8:location:33-43",
+        "LM:S:GV8:location:55-111",
+        "RL:S:GV8:location:00:relative-to",
+        "RL:S:GV8:location:01:surface-landmark",
+        "RL:S:GV8:location:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0107",
+      "point_id": "GV9",
+      "statement_id": "S:GV9:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV9:location:123-145",
+        "LM:S:GV9:location:33-43",
+        "LM:S:GV9:location:55-114",
+        "RL:S:GV9:location:00:relative-to",
+        "RL:S:GV9:location:01:surface-landmark",
+        "RL:S:GV9:location:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0108",
+      "point_id": "GV10",
+      "statement_id": "S:GV10:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV10:location:120-141",
+        "LM:S:GV10:location:33-43",
+        "LM:S:GV10:location:55-111",
+        "RL:S:GV10:location:00:relative-to",
+        "RL:S:GV10:location:01:surface-landmark",
+        "RL:S:GV10:location:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0109",
+      "point_id": "GV11",
+      "statement_id": "S:GV11:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV11:location:120-141",
+        "LM:S:GV11:location:33-43",
+        "LM:S:GV11:location:55-111",
+        "RL:S:GV11:location:00:relative-to",
+        "RL:S:GV11:location:01:surface-landmark",
+        "RL:S:GV11:location:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0110",
+      "point_id": "GV12",
+      "statement_id": "S:GV12:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV12:location:120-141",
+        "LM:S:GV12:location:33-43",
+        "LM:S:GV12:location:55-111",
+        "RL:S:GV12:location:00:relative-to",
+        "RL:S:GV12:location:01:surface-landmark",
+        "RL:S:GV12:location:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0111",
+      "point_id": "GV13",
+      "statement_id": "S:GV13:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV13:location:120-141",
+        "LM:S:GV13:location:33-43",
+        "LM:S:GV13:location:55-111",
+        "RL:S:GV13:location:00:relative-to",
+        "RL:S:GV13:location:01:surface-landmark",
+        "RL:S:GV13:location:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0112",
+      "point_id": "GV14",
+      "statement_id": "S:GV14:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV14:location:133-154",
+        "LM:S:GV14:location:44-54",
+        "LM:S:GV14:location:66-124",
+        "RL:S:GV14:location:00:relative-to",
+        "RL:S:GV14:location:01:surface-landmark",
+        "RL:S:GV14:location:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0113",
+      "point_id": "GV15",
+      "statement_id": "S:GV15:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV15:location:132-153",
+        "LM:S:GV15:location:44-54",
+        "LM:S:GV15:location:66-123",
+        "RL:S:GV15:location:00:relative-to",
+        "RL:S:GV15:location:01:surface-landmark",
+        "RL:S:GV15:location:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0114",
+      "point_id": "GV16",
+      "statement_id": "S:GV16:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV16:location:103-113",
+        "LM:S:GV16:location:122-144",
+        "LM:S:GV16:location:57-94",
+        "RL:S:GV16:location:00:between",
+        "RL:S:GV16:location:01:relative-to",
+        "RL:S:GV16:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0115",
+      "point_id": "GV17",
+      "statement_id": "S:GV17:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV17:location:20-30",
+        "LM:S:GV17:location:42-78",
+        "LM:S:GV17:location:7-11",
+        "RL:S:GV17:location:00:relative-to",
+        "RL:S:GV17:location:01:surface-landmark",
+        "RL:S:GV17:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0116",
+      "point_id": "GV17",
+      "statement_id": "S:GV17:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV17:note:1:135-217",
+        "LM:S:GV17:note:1:162-178",
+        "LM:S:GV17:note:1:182-217",
+        "RL:S:GV17:note:1:00:at-junction",
+        "RL:S:GV17:note:1:01:surface-landmark",
+        "RL:S:GV17:note:1:02:same-level"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0117",
+      "point_id": "GV18",
+      "statement_id": "S:GV18:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV18:note:1:29-39",
+        "LM:S:GV18:note:1:61-66",
+        "RL:S:GV18:note:1:00:relative-to",
+        "RL:S:GV18:note:1:01:surface-landmark",
+        "RL:S:GV18:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0118",
+      "point_id": "GV20",
+      "statement_id": "S:GV20:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV20:note:1:117-139",
+        "LM:S:GV20:note:1:31-41",
+        "LM:S:GV20:note:1:61-139",
+        "RL:S:GV20:note:1:00:relative-to",
+        "RL:S:GV20:note:1:01:surface-landmark",
+        "RL:S:GV20:note:1:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0119",
+      "point_id": "CV22",
+      "statement_id": "S:CV22:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:CV22:note:1:29-39",
+        "LM:S:CV22:note:1:55-87",
+        "LM:S:CV22:note:1:59-70",
+        "RL:S:CV22:note:1:00:midpoint-between",
+        "RL:S:CV22:note:1:01:between",
+        "RL:S:CV22:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0120",
+      "point_id": "CV23",
+      "statement_id": "S:CV23:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:CV23:location:115-130",
+        "LM:S:CV23:location:139-159",
+        "LM:S:CV23:location:47-84",
+        "RL:S:CV23:location:00:relative-to",
+        "RL:S:CV23:location:01:relative-to",
+        "RL:S:CV23:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0121",
+      "point_id": "CV24",
+      "statement_id": "S:CV24:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:CV24:location:20-30",
+        "LM:S:CV24:location:38-44",
+        "LM:S:CV24:location:48-70",
+        "RL:S:CV24:location:00:surface-landmark",
+        "RL:S:CV24:location:01:center-of",
+        "RL:S:CV24:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0122",
+      "point_id": "LU11",
+      "statement_id": "S:LU11:location",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LU11:location:134-172",
+        "LM:S:LU11:location:177-226",
+        "LM:S:LU11:location:203-208",
+        "RL:S:LU11:location:00:at-junction",
+        "RL:S:LU11:location:01:relative-to",
+        "RL:S:LU11:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0123",
+      "point_id": "LI1",
+      "statement_id": "S:LI1:location",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LI1:location:106-122",
+        "LM:S:LI1:location:112-122",
+        "LM:S:LI1:location:147-203",
+        "RL:S:LI1:location:00:at-junction",
+        "RL:S:LI1:location:01:relative-to",
+        "RL:S:LI1:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0124",
+      "point_id": "ST3",
+      "statement_id": "S:ST3:note:1",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST3:note:1:108-173",
+        "LM:S:ST3:note:1:135-150",
+        "LM:S:ST3:note:1:154-173",
+        "RL:S:ST3:note:1:00:at-junction"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0125",
+      "point_id": "ST18",
+      "statement_id": "S:ST18:note:1",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST18:note:1:148-181",
+        "LM:S:ST18:note:1:55-66",
+        "LM:S:ST18:note:1:71-99",
+        "RL:S:ST18:note:1:00:at-junction",
+        "RL:S:ST18:note:1:01:midpoint-of-entity"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0126",
+      "point_id": "ST31",
+      "statement_id": "S:ST31:note:2",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST31:note:2:115-149",
+        "LM:S:ST31:note:2:155-220",
+        "LM:S:ST31:note:2:182-197",
+        "RL:S:ST31:note:2:00:on-line",
+        "RL:S:ST31:note:2:01:at-junction",
+        "RL:S:ST31:note:2:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0127",
+      "point_id": "ST45",
+      "statement_id": "S:ST45:location",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST45:location:106-120",
+        "LM:S:ST45:location:145-184",
+        "LM:S:ST45:location:189-242",
+        "RL:S:ST45:location:00:at-junction",
+        "RL:S:ST45:location:01:relative-to",
+        "RL:S:ST45:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0128",
+      "point_id": "SP1",
+      "statement_id": "S:SP1:location",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SP1:location:104-111",
+        "LM:S:SP1:location:136-174",
+        "LM:S:SP1:location:179-221",
+        "RL:S:SP1:location:00:at-junction",
+        "RL:S:SP1:location:01:relative-to",
+        "RL:S:SP1:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0129",
+      "point_id": "SP5",
+      "statement_id": "S:SP5:note:1",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SP5:note:1:111-202",
+        "LM:S:SP5:note:1:136-202",
+        "LM:S:SP5:note:1:46-131",
+        "RL:S:SP5:note:1:00:at-junction"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0130",
+      "point_id": "SP21",
+      "statement_id": "S:SP21:note:1",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SP21:note:1:102-122",
+        "LM:S:SP21:note:1:127-154",
+        "RL:S:SP21:note:1:00:at-junction"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0131",
+      "point_id": "HT9",
+      "statement_id": "S:HT9:location",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:HT9:location:107-124",
+        "LM:S:HT9:location:120-124",
+        "LM:S:HT9:location:149-199",
+        "RL:S:HT9:location:00:at-junction",
+        "RL:S:HT9:location:01:relative-to",
+        "RL:S:HT9:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0132",
+      "point_id": "SI1",
+      "statement_id": "S:SI1:location",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI1:location:104-121",
+        "LM:S:SI1:location:117-121",
+        "LM:S:SI1:location:146-191",
+        "RL:S:SI1:location:00:at-junction",
+        "RL:S:SI1:location:01:relative-to",
+        "RL:S:SI1:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0133",
+      "point_id": "SI14",
+      "statement_id": "S:SI14:note:1",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI14:note:1:113-229",
+        "LM:S:SI14:note:1:142-229",
+        "LM:S:SI14:note:1:173-229",
+        "RL:S:SI14:note:1:00:at-junction",
+        "RL:S:SI14:note:1:01:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0134",
+      "point_id": "SI15",
+      "statement_id": "S:SI15:note:1",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI15:note:1:129-331",
+        "LM:S:SI15:note:1:174-199",
+        "LM:S:SI15:note:1:174-237",
+        "RL:S:SI15:note:1:00:on-line",
+        "RL:S:SI15:note:1:01:at-junction",
+        "RL:S:SI15:note:1:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0135",
+      "point_id": "BL9",
+      "statement_id": "S:BL9:note:1",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL9:note:1:108-214",
+        "LM:S:BL9:note:1:133-214",
+        "LM:S:BL9:note:1:237-241",
+        "RL:S:BL9:note:1:00:at-junction",
+        "RL:S:BL9:note:1:01:same-level"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0136",
+      "point_id": "BL67",
+      "statement_id": "S:BL67:location",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL67:location:131-180",
+        "LM:S:BL67:location:185-231",
+        "LM:S:BL67:location:211-216",
+        "RL:S:BL67:location:00:at-junction",
+        "RL:S:BL67:location:01:relative-to",
+        "RL:S:BL67:location:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0137",
+      "point_id": "PC9",
+      "statement_id": "S:PC9:remarks",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:PC9:remarks:105-126",
+        "LM:S:PC9:remarks:151-199",
+        "LM:S:PC9:remarks:204-253",
+        "RL:S:PC9:remarks:00:at-junction",
+        "RL:S:PC9:remarks:01:relative-to",
+        "RL:S:PC9:remarks:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0138",
+      "point_id": "TE1",
+      "statement_id": "S:TE1:location",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE1:location:130-177",
+        "LM:S:TE1:location:182-231",
+        "LM:S:TE1:location:208-213",
+        "RL:S:TE1:location:00:at-junction",
+        "RL:S:TE1:location:01:relative-to",
+        "RL:S:TE1:location:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0139",
+      "point_id": "GB24",
+      "statement_id": "S:GB24:note:2",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB24:note:2:61-83",
+        "LM:S:GB24:note:2:88-117",
+        "RL:S:GB24:note:2:00:at-junction"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0140",
+      "point_id": "GB44",
+      "statement_id": "S:GB44:location",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB44:location:130-179",
+        "LM:S:GB44:location:184-237",
+        "LM:S:GB44:location:210-215",
+        "RL:S:GB44:location:00:at-junction",
+        "RL:S:GB44:location:01:relative-to",
+        "RL:S:GB44:location:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0141",
+      "point_id": "LR1",
+      "statement_id": "S:LR1:location",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LR1:location:130-179",
+        "LM:S:LR1:location:184-230",
+        "LM:S:LR1:location:210-215",
+        "RL:S:LR1:location:00:at-junction",
+        "RL:S:LR1:location:01:relative-to",
+        "RL:S:LR1:location:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0142",
+      "point_id": "LR14",
+      "statement_id": "S:LR14:note:1",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LR14:note:1:128-150",
+        "LM:S:LR14:note:1:155-182",
+        "LM:S:LR14:note:1:25-50",
+        "RL:S:LR14:note:1:00:at-junction",
+        "RL:S:LR14:note:1:01:relative-to",
+        "RL:S:LR14:note:1:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0143",
+      "point_id": "GV9",
+      "statement_id": "S:GV9:note:1",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV9:note:1:123-165",
+        "LM:S:GV9:note:1:170-250",
+        "LM:S:GV9:note:1:32-250",
+        "RL:S:GV9:note:1:00:at-junction",
+        "RL:S:GV9:note:1:01:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0144",
+      "point_id": "GV12",
+      "statement_id": "S:GV12:note:1",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV12:note:1:122-168",
+        "LM:S:GV12:note:1:173-238",
+        "LM:S:GV12:note:1:32-238",
+        "RL:S:GV12:note:1:00:at-junction",
+        "RL:S:GV12:note:1:01:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0145",
+      "point_id": "GV17",
+      "statement_id": "S:GV17:note:1",
+      "v1_defect_class": "RELATION_TYPE_MISCLASSIFICATION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV17:note:1:135-217",
+        "LM:S:GV17:note:1:162-178",
+        "LM:S:GV17:note:1:182-217",
+        "RL:S:GV17:note:1:00:at-junction",
+        "RL:S:GV17:note:1:01:surface-landmark",
+        "RL:S:GV17:note:1:02:same-level"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-cue typed relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0146",
+      "point_id": "LU3",
+      "statement_id": "S:LU3:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LU3:location:116-143",
+        "LM:S:LU3:location:55-95",
+        "LM:S:LU3:location:59-66",
+        "RL:S:LU3:location:00:relative-to",
+        "RL:S:LU3:location:01:relative-to",
+        "RL:S:LU3:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0147",
+      "point_id": "LU4",
+      "statement_id": "S:LU4:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LU4:location:116-143",
+        "LM:S:LU4:location:55-95",
+        "LM:S:LU4:location:59-66",
+        "RL:S:LU4:location:00:relative-to",
+        "RL:S:LU4:location:01:relative-to",
+        "RL:S:LU4:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0148",
+      "point_id": "LU11",
+      "statement_id": "S:LU11:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LU11:location:134-172",
+        "LM:S:LU11:location:177-226",
+        "LM:S:LU11:location:203-208",
+        "RL:S:LU11:location:00:at-junction",
+        "RL:S:LU11:location:01:relative-to",
+        "RL:S:LU11:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0149",
+      "point_id": "LI1",
+      "statement_id": "S:LI1:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LI1:location:106-122",
+        "LM:S:LI1:location:112-122",
+        "LM:S:LI1:location:147-203",
+        "RL:S:LI1:location:00:at-junction",
+        "RL:S:LI1:location:01:relative-to",
+        "RL:S:LI1:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0150",
+      "point_id": "LI1",
+      "statement_id": "S:LI1:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LI1:location:106-122",
+        "LM:S:LI1:location:112-122",
+        "LM:S:LI1:location:147-203",
+        "RL:S:LI1:location:00:at-junction",
+        "RL:S:LI1:location:01:relative-to",
+        "RL:S:LI1:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0151",
+      "point_id": "LI14",
+      "statement_id": "S:LI14:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LI14:location:105-110",
+        "LM:S:LI14:location:51-84",
+        "LM:S:LI14:location:55-62",
+        "RL:S:LI14:location:00:relative-to",
+        "RL:S:LI14:location:01:relative-to",
+        "RL:S:LI14:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0152",
+      "point_id": "LI19",
+      "statement_id": "S:LI19:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LI19:location:103-110",
+        "LM:S:LI19:location:34-63",
+        "LM:S:LI19:location:51-63",
+        "RL:S:LI19:location:00:relative-to",
+        "RL:S:LI19:location:01:same-level",
+        "RL:S:LI19:location:02:midpoint-of-entity"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0153",
+      "point_id": "LI20",
+      "statement_id": "S:LI20:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LI20:location:20-37",
+        "LM:S:LI20:location:60-113",
+        "LM:S:LI20:location:7-11",
+        "RL:S:LI20:location:00:same-level",
+        "RL:S:LI20:location:01:midpoint-of-entity",
+        "RL:S:LI20:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0154",
+      "point_id": "ST3",
+      "statement_id": "S:ST3:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST3:location:33-43",
+        "LM:S:ST3:location:66-108",
+        "LM:S:ST3:location:7-11",
+        "RL:S:ST3:location:00:relative-to",
+        "RL:S:ST3:location:01:same-level",
+        "RL:S:ST3:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0155",
+      "point_id": "ST7",
+      "statement_id": "S:ST7:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST7:location:102-122",
+        "LM:S:ST7:location:20-30",
+        "LM:S:ST7:location:43-97",
+        "RL:S:ST7:location:00:between",
+        "RL:S:ST7:location:01:surface-landmark",
+        "RL:S:ST7:location:02:midpoint-of-entity"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0156",
+      "point_id": "ST30",
+      "statement_id": "S:ST30:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST30:location:104-129",
+        "LM:S:ST30:location:140-154",
+        "LM:S:ST30:location:42-84",
+        "RL:S:ST30:location:00:relative-to",
+        "RL:S:ST30:location:01:same-level",
+        "RL:S:ST30:location:02:overlies"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0157",
+      "point_id": "ST34",
+      "statement_id": "S:ST34:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST34:location:108-129",
+        "LM:S:ST34:location:150-174",
+        "LM:S:ST34:location:154-159",
+        "RL:S:ST34:location:00:between",
+        "RL:S:ST34:location:01:relative-to",
+        "RL:S:ST34:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0158",
+      "point_id": "ST45",
+      "statement_id": "S:ST45:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST45:location:106-120",
+        "LM:S:ST45:location:145-184",
+        "LM:S:ST45:location:189-242",
+        "RL:S:ST45:location:00:at-junction",
+        "RL:S:ST45:location:01:relative-to",
+        "RL:S:ST45:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0159",
+      "point_id": "SP1",
+      "statement_id": "S:SP1:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SP1:location:104-111",
+        "LM:S:SP1:location:136-174",
+        "LM:S:SP1:location:179-221",
+        "RL:S:SP1:location:00:at-junction",
+        "RL:S:SP1:location:01:relative-to",
+        "RL:S:SP1:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0160",
+      "point_id": "HT9",
+      "statement_id": "S:HT9:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:HT9:location:107-124",
+        "LM:S:HT9:location:120-124",
+        "LM:S:HT9:location:149-199",
+        "RL:S:HT9:location:00:at-junction",
+        "RL:S:HT9:location:01:relative-to",
+        "RL:S:HT9:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0161",
+      "point_id": "HT9",
+      "statement_id": "S:HT9:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:HT9:location:107-124",
+        "LM:S:HT9:location:120-124",
+        "LM:S:HT9:location:149-199",
+        "RL:S:HT9:location:00:at-junction",
+        "RL:S:HT9:location:01:relative-to",
+        "RL:S:HT9:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0162",
+      "point_id": "SI1",
+      "statement_id": "S:SI1:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI1:location:104-121",
+        "LM:S:SI1:location:117-121",
+        "LM:S:SI1:location:146-191",
+        "RL:S:SI1:location:00:at-junction",
+        "RL:S:SI1:location:01:relative-to",
+        "RL:S:SI1:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0163",
+      "point_id": "SI1",
+      "statement_id": "S:SI1:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI1:location:104-121",
+        "LM:S:SI1:location:117-121",
+        "LM:S:SI1:location:146-191",
+        "RL:S:SI1:location:00:at-junction",
+        "RL:S:SI1:location:01:relative-to",
+        "RL:S:SI1:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0164",
+      "point_id": "SI7",
+      "statement_id": "S:SI7:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI7:location:145-169",
+        "LM:S:SI7:location:57-70",
+        "LM:S:SI7:location:57-88",
+        "RL:S:SI7:location:00:between",
+        "RL:S:SI7:location:01:relative-to",
+        "RL:S:SI7:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0165",
+      "point_id": "SI13",
+      "statement_id": "S:SI13:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI13:location:31-41",
+        "LM:S:SI13:location:53-96",
+        "LM:S:SI13:location:58-68",
+        "RL:S:SI13:location:00:relative-to",
+        "RL:S:SI13:location:01:surface-landmark",
+        "RL:S:SI13:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0166",
+      "point_id": "SI19",
+      "statement_id": "S:SI19:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI19:location:119-135",
+        "LM:S:SI19:location:119-151",
+        "LM:S:SI19:location:143-151",
+        "RL:S:SI19:location:00:between",
+        "RL:S:SI19:location:01:surface-landmark",
+        "RL:S:SI19:location:02:center-of"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0167",
+      "point_id": "BL1",
+      "statement_id": "S:BL1:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL1:location:102-113",
+        "LM:S:BL1:location:121-126",
+        "LM:S:BL1:location:20-30",
+        "RL:S:BL1:location:00:between",
+        "RL:S:BL1:location:01:surface-landmark",
+        "RL:S:BL1:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0168",
+      "point_id": "BL9",
+      "statement_id": "S:BL9:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL9:location:118-144",
+        "LM:S:BL9:location:34-92",
+        "LM:S:BL9:location:38-53",
+        "RL:S:BL9:location:00:relative-to",
+        "RL:S:BL9:location:01:same-level",
+        "RL:S:BL9:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0169",
+      "point_id": "BL35",
+      "statement_id": "S:BL35:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL35:location:43-71",
+        "LM:S:BL35:location:47-57",
+        "LM:S:BL35:location:48-57",
+        "RL:S:BL35:location:00:relative-to",
+        "RL:S:BL35:location:01:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0170",
+      "point_id": "BL55",
+      "statement_id": "S:BL55:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL55:location:123-144",
+        "LM:S:BL55:location:48-60",
+        "LM:S:BL55:location:65-104",
+        "RL:S:BL55:location:00:between",
+        "RL:S:BL55:location:01:relative-to",
+        "RL:S:BL55:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0171",
+      "point_id": "BL56",
+      "statement_id": "S:BL56:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL56:location:114-135",
+        "LM:S:BL56:location:44-95",
+        "LM:S:BL56:location:58-66",
+        "RL:S:BL56:location:00:between",
+        "RL:S:BL56:location:01:relative-to",
+        "RL:S:BL56:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0172",
+      "point_id": "BL57",
+      "statement_id": "S:BL57:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL57:location:103-111",
+        "LM:S:BL57:location:115-140",
+        "LM:S:BL57:location:63-83",
+        "RL:S:BL57:location:00:surface-landmark",
+        "RL:S:BL57:location:01:at-junction"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0173",
+      "point_id": "BL62",
+      "statement_id": "S:BL62:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL62:location:104-114",
+        "LM:S:BL62:location:127-142",
+        "LM:S:BL62:location:127-167",
+        "RL:S:BL62:location:00:between",
+        "RL:S:BL62:location:01:relative-to",
+        "RL:S:BL62:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0174",
+      "point_id": "BL63",
+      "statement_id": "S:BL63:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL63:location:149-159",
+        "LM:S:BL63:location:171-187",
+        "LM:S:BL63:location:36-81",
+        "RL:S:BL63:location:00:relative-to",
+        "RL:S:BL63:location:01:relative-to",
+        "RL:S:BL63:location:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0175",
+      "point_id": "BL67",
+      "statement_id": "S:BL67:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL67:location:131-180",
+        "LM:S:BL67:location:185-231",
+        "LM:S:BL67:location:211-216",
+        "RL:S:BL67:location:00:at-junction",
+        "RL:S:BL67:location:01:relative-to",
+        "RL:S:BL67:location:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0176",
+      "point_id": "KI8",
+      "statement_id": "S:KI8:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:KI8:location:121-160",
+        "LM:S:KI8:location:40-50",
+        "LM:S:KI8:location:63-100",
+        "RL:S:KI8:location:00:relative-to",
+        "RL:S:KI8:location:01:relative-to",
+        "RL:S:KI8:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0177",
+      "point_id": "PC2",
+      "statement_id": "S:PC2:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:PC2:location:119-147",
+        "LM:S:PC2:location:47-56",
+        "LM:S:PC2:location:61-100",
+        "RL:S:PC2:location:00:between",
+        "RL:S:PC2:location:01:relative-to",
+        "RL:S:PC2:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0178",
+      "point_id": "TE1",
+      "statement_id": "S:TE1:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE1:location:130-177",
+        "LM:S:TE1:location:182-231",
+        "LM:S:TE1:location:208-213",
+        "RL:S:TE1:location:00:at-junction",
+        "RL:S:TE1:location:01:relative-to",
+        "RL:S:TE1:location:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0179",
+      "point_id": "TE13",
+      "statement_id": "S:TE13:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE13:location:109-128",
+        "LM:S:TE13:location:55-88",
+        "LM:S:TE13:location:59-66",
+        "RL:S:TE13:location:00:relative-to",
+        "RL:S:TE13:location:01:relative-to",
+        "RL:S:TE13:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0180",
+      "point_id": "GB7",
+      "statement_id": "S:GB7:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB7:location:101-147",
+        "LM:S:GB7:location:105-147",
+        "LM:S:GB7:location:32-96",
+        "RL:S:GB7:location:00:surface-landmark",
+        "RL:S:GB7:location:01:at-junction",
+        "RL:S:GB7:location:02:at-junction"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0181",
+      "point_id": "GB9",
+      "statement_id": "S:GB9:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB9:location:33-77",
+        "LM:S:GB9:location:38-55",
+        "LM:S:GB9:location:63-77",
+        "RL:S:GB9:location:00:relative-to",
+        "RL:S:GB9:location:01:relative-to",
+        "RL:S:GB9:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0182",
+      "point_id": "GB19",
+      "statement_id": "S:GB19:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB19:location:116-121",
+        "LM:S:GB19:location:34-94",
+        "LM:S:GB19:location:38-54",
+        "RL:S:GB19:location:00:relative-to",
+        "RL:S:GB19:location:01:same-level",
+        "RL:S:GB19:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0183",
+      "point_id": "GB44",
+      "statement_id": "S:GB44:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB44:location:130-179",
+        "LM:S:GB44:location:184-237",
+        "LM:S:GB44:location:210-215",
+        "RL:S:GB44:location:00:at-junction",
+        "RL:S:GB44:location:01:relative-to",
+        "RL:S:GB44:location:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0184",
+      "point_id": "LR1",
+      "statement_id": "S:LR1:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LR1:location:130-179",
+        "LM:S:LR1:location:184-230",
+        "LM:S:LR1:location:210-215",
+        "RL:S:LR1:location:00:at-junction",
+        "RL:S:LR1:location:01:relative-to",
+        "RL:S:LR1:location:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0185",
+      "point_id": "LR8",
+      "statement_id": "S:LR8:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LR8:location:136-146",
+        "LM:S:LR8:location:136-170",
+        "LM:S:LR8:location:154-170",
+        "RL:S:LR8:location:00:relative-to",
+        "RL:S:LR8:location:01:surface-landmark",
+        "RL:S:LR8:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0186",
+      "point_id": "LR12",
+      "statement_id": "S:LR12:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LR12:location:110-135",
+        "LM:S:LR12:location:42-84",
+        "LM:S:LR12:location:46-61",
+        "RL:S:LR12:location:00:relative-to",
+        "RL:S:LR12:location:01:same-level",
+        "RL:S:LR12:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0187",
+      "point_id": "CV1",
+      "statement_id": "S:CV1:location",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:CV1:location:102-113",
+        "LM:S:CV1:location:131-151",
+        "LM:S:CV1:location:155-169",
+        "RL:S:CV1:location:00:surface-landmark",
+        "RL:S:CV1:location:01:on-line:male",
+        "RL:S:CV1:location:02:midpoint-between:male"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0188",
+      "point_id": "LI11",
+      "statement_id": "S:LI11:note:1",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LI11:note:1:61-71",
+        "LM:S:LI11:note:1:79-90",
+        "LM:S:LI11:note:1:94-112",
+        "RL:S:LI11:note:1:00:surface-landmark",
+        "RL:S:LI11:note:1:01:surface-landmark",
+        "RL:S:LI11:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0189",
+      "point_id": "ST31",
+      "statement_id": "S:ST31:note:2",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST31:note:2:115-149",
+        "LM:S:ST31:note:2:155-220",
+        "LM:S:ST31:note:2:182-197",
+        "RL:S:ST31:note:2:00:on-line",
+        "RL:S:ST31:note:2:01:at-junction",
+        "RL:S:ST31:note:2:02:on-line"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0190",
+      "point_id": "ST33",
+      "statement_id": "S:ST33:note:1",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST33:note:1:53-57",
+        "LM:S:ST33:note:1:63-105",
+        "LM:S:ST33:note:1:67-78",
+        "RL:S:ST33:note:1:00:on-line",
+        "RL:S:ST33:note:1:01:midpoint-between"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0191",
+      "point_id": "HT3",
+      "statement_id": "S:HT3:note:1",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:HT3:note:1:105-164",
+        "LM:S:HT3:note:1:128-164",
+        "LM:S:HT3:note:1:87-123",
+        "RL:S:HT3:note:1:00:on-line",
+        "RL:S:HT3:note:1:01:midpoint-between"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0192",
+      "point_id": "SI14",
+      "statement_id": "S:SI14:note:1",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI14:note:1:113-229",
+        "LM:S:SI14:note:1:142-229",
+        "LM:S:SI14:note:1:173-229",
+        "RL:S:SI14:note:1:00:at-junction",
+        "RL:S:SI14:note:1:01:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0193",
+      "point_id": "BL2",
+      "statement_id": "S:BL2:note:1",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL2:note:1:114-118",
+        "LM:S:BL2:note:1:68-78",
+        "LM:S:BL2:note:1:82-118",
+        "RL:S:BL2:note:1:00:relative-to",
+        "RL:S:BL2:note:1:01:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0194",
+      "point_id": "BL35",
+      "statement_id": "S:BL35:note:1",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL35:note:1:116-144",
+        "LM:S:BL35:note:1:120-130",
+        "LM:S:BL35:note:1:134-144",
+        "RL:S:BL35:note:1:00:relative-to",
+        "RL:S:BL35:note:1:01:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0195",
+      "point_id": "PC7",
+      "statement_id": "S:PC7:note:1",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:PC7:note:1:130-153",
+        "LM:S:PC7:note:1:179-194:85f9e3d7",
+        "LM:S:PC7:note:1:203-224:c25f23ce",
+        "RL:S:PC7:note:1:00:between",
+        "RL:S:PC7:note:1:01:same-level",
+        "RL:S:PC7:note:1:02:midpoint-of-entity"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0196",
+      "point_id": "GB35",
+      "statement_id": "S:GB35:note:1",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB35:note:1:120-159",
+        "LM:S:GB35:note:1:124-135",
+        "LM:S:GB35:note:1:139-159",
+        "RL:S:GB35:note:1:00:on-line",
+        "RL:S:GB35:note:1:01:midpoint-between",
+        "RL:S:GB35:note:1:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0197",
+      "point_id": "GB36",
+      "statement_id": "S:GB36:note:1",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB36:note:1:120-159",
+        "LM:S:GB36:note:1:124-135",
+        "LM:S:GB36:note:1:139-159",
+        "RL:S:GB36:note:1:00:on-line",
+        "RL:S:GB36:note:1:01:midpoint-between",
+        "RL:S:GB36:note:1:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0198",
+      "point_id": "LR8",
+      "statement_id": "S:LR8:note:1",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LR8:note:1:105-115",
+        "LM:S:LR8:note:1:119-139",
+        "LM:S:LR8:note:1:51-61",
+        "RL:S:LR8:note:1:00:relative-to",
+        "RL:S:LR8:note:1:01:surface-landmark",
+        "RL:S:LR8:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0199",
+      "point_id": "PC9",
+      "statement_id": "S:PC9:remarks",
+      "v1_defect_class": "COMPOSITE_PARENT_BINDING_ERROR",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:PC9:remarks:105-126",
+        "LM:S:PC9:remarks:151-199",
+        "LM:S:PC9:remarks:204-253",
+        "RL:S:PC9:remarks:00:at-junction",
+        "RL:S:PC9:remarks:01:relative-to",
+        "RL:S:PC9:remarks:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "explicit composite binding record",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0200",
+      "point_id": "ST31",
+      "statement_id": "S:ST31:note:1",
+      "v1_defect_class": "SOURCE_LANDMARK_EXTRACTION_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST31:note:1:257-267",
+        "LM:S:ST31:note:1:280-305",
+        "LM:S:ST31:note:1:310-350",
+        "RL:S:ST31:note:1:00:between",
+        "RL:S:ST31:note:1:01:relative-to",
+        "RL:S:ST31:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "B-v2 source-backed derived landmark node with upstream-absence provenance",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0201",
+      "point_id": "SI19",
+      "statement_id": "S:SI19:note:1",
+      "v1_defect_class": "SOURCE_LANDMARK_EXTRACTION_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:SI19:note:1:101-111",
+        "LM:S:SI19:note:1:121-125",
+        "LM:S:SI19:note:1:130-133",
+        "RL:S:SI19:note:1:00:between",
+        "RL:S:SI19:note:1:01:relative-to",
+        "RL:S:SI19:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "B-v2 source-backed derived landmark node with upstream-absence provenance",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0202",
+      "point_id": "TE17",
+      "statement_id": "S:TE17:location",
+      "v1_defect_class": "SOURCE_LANDMARK_EXTRACTION_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE17:location:113-132",
+        "LM:S:TE17:location:48-61",
+        "LM:S:TE17:location:7-34",
+        "RL:S:TE17:location:00:relative-to",
+        "RL:S:TE17:location:01:relative-to",
+        "RL:S:TE17:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "B-v2 source-backed derived landmark node with upstream-absence provenance",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0203",
+      "point_id": "LR3",
+      "statement_id": "S:LR3:location",
+      "v1_defect_class": "SOURCE_LANDMARK_EXTRACTION_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LR3:location:102-145",
+        "LM:S:LR3:location:156-177",
+        "LM:S:LR3:location:39-72:6c398dd4",
+        "RL:S:LR3:location:00:between",
+        "RL:S:LR3:location:01:relative-to",
+        "RL:S:LR3:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "B-v2 source-backed derived landmark node with upstream-absence provenance",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0204",
+      "point_id": "GV24",
+      "statement_id": "S:GV24:note:1",
+      "v1_defect_class": "SOURCE_LANDMARK_EXTRACTION_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV24:note:1:117-148",
+        "LM:S:GV24:note:1:121-132",
+        "LM:S:GV24:note:1:136-148",
+        "RL:S:GV24:note:1:00:midpoint-between",
+        "RL:S:GV24:note:1:01:between",
+        "RL:S:GV24:note:1:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "B-v2 source-backed derived landmark node with upstream-absence provenance",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0205",
+      "point_id": "BL64",
+      "statement_id": "S:BL64:note:1",
+      "v1_defect_class": "SOURCE_RELATION_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:BL64:note:1:104-140",
+        "LM:S:BL64:note:1:91-99",
+        "LM:S:BL64:note:1:95-99",
+        "RL:S:BL64:note:1:00:midpoint-between",
+        "RL:S:BL64:note:1:01:between"
+      ],
+      "repaired": true,
+      "repair_mechanism": "expected-relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0206",
+      "point_id": "GV24",
+      "statement_id": "S:GV24:note:1",
+      "v1_defect_class": "SOURCE_RELATION_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV24:note:1:117-148",
+        "LM:S:GV24:note:1:121-132",
+        "LM:S:GV24:note:1:136-148",
+        "RL:S:GV24:note:1:00:midpoint-between",
+        "RL:S:GV24:note:1:01:between",
+        "RL:S:GV24:note:1:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "expected-relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0207",
+      "point_id": "CV1",
+      "statement_id": "S:CV1:note:1",
+      "v1_defect_class": "SOURCE_RELATION_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:CV1:note:1:36-44",
+        "LM:S:CV1:note:1:40-44",
+        "LM:S:CV1:note:1:49-66",
+        "RL:S:CV1:note:1:00:midpoint-between",
+        "RL:S:CV1:note:1:01:between"
+      ],
+      "repaired": true,
+      "repair_mechanism": "expected-relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0208",
+      "point_id": "CV12",
+      "statement_id": "S:CV12:note:1",
+      "v1_defect_class": "SOURCE_RELATION_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:CV12:note:1:106-115",
+        "LM:S:CV12:note:1:61-87",
+        "LM:S:CV12:note:1:92-115",
+        "RL:S:CV12:note:1:00:on-line",
+        "RL:S:CV12:note:1:01:midpoint-between",
+        "RL:S:CV12:note:1:02:center-of"
+      ],
+      "repaired": true,
+      "repair_mechanism": "expected-relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0209",
+      "point_id": "CV22",
+      "statement_id": "S:CV22:note:1",
+      "v1_defect_class": "SOURCE_RELATION_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:CV22:note:1:29-39",
+        "LM:S:CV22:note:1:55-87",
+        "LM:S:CV22:note:1:59-70",
+        "RL:S:CV22:note:1:00:midpoint-between",
+        "RL:S:CV22:note:1:01:between",
+        "RL:S:CV22:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "expected-relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0210",
+      "point_id": "GV20",
+      "statement_id": "S:GV20:note:2",
+      "v1_defect_class": "SOURCE_RELATION_OMISSION",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [],
+      "repaired": true,
+      "repair_mechanism": "expected-relation compiler",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0211",
+      "point_id": "ST4",
+      "statement_id": "S:ST4:note:1",
+      "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST4:note:1:16-39",
+        "LM:S:ST4:note:1:69-86",
+        "LM:S:ST4:note:1:97-134",
+        "RL:S:ST4:note:1:00:relative-to",
+        "RL:S:ST4:note:1:01:surface-landmark",
+        "RL:S:ST4:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "condition/branch schema with branch relation and landmark IDs",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0212",
+      "point_id": "ST17",
+      "statement_id": "S:ST17:note:1",
+      "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST17:note:1:20-26",
+        "LM:S:ST17:note:1:30-83",
+        "LM:S:ST17:note:1:59-83",
+        "RL:S:ST17:note:1:00:center-of",
+        "RL:S:ST17:note:1:01:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "condition/branch schema with branch relation and landmark IDs",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0213",
+      "point_id": "ST18",
+      "statement_id": "S:ST18:note:1",
+      "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST18:note:1:148-181",
+        "LM:S:ST18:note:1:55-66",
+        "LM:S:ST18:note:1:71-99",
+        "RL:S:ST18:note:1:00:at-junction",
+        "RL:S:ST18:note:1:01:midpoint-of-entity"
+      ],
+      "repaired": true,
+      "repair_mechanism": "condition/branch schema with branch relation and landmark IDs",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0214",
+      "point_id": "PC4",
+      "statement_id": "S:PC4:note:2",
+      "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:PC4:note:2:70-103",
+        "RL:S:PC4:note:2:00:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "condition/branch schema with branch relation and landmark IDs",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0215",
+      "point_id": "PC5",
+      "statement_id": "S:PC5:note:2",
+      "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:PC5:note:2:70-103",
+        "RL:S:PC5:note:2:00:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "condition/branch schema with branch relation and landmark IDs",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0216",
+      "point_id": "PC6",
+      "statement_id": "S:PC6:note:2",
+      "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:PC6:note:2:70-103",
+        "RL:S:PC6:note:2:00:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "condition/branch schema with branch relation and landmark IDs",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0217",
+      "point_id": "GB24",
+      "statement_id": "S:GB24:note:2",
+      "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB24:note:2:61-83",
+        "LM:S:GB24:note:2:88-117",
+        "RL:S:GB24:note:2:00:at-junction"
+      ],
+      "repaired": true,
+      "repair_mechanism": "condition/branch schema with branch relation and landmark IDs",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0218",
+      "point_id": "LR14",
+      "statement_id": "S:LR14:note:1",
+      "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LR14:note:1:128-150",
+        "LM:S:LR14:note:1:155-182",
+        "LM:S:LR14:note:1:25-50",
+        "RL:S:LR14:note:1:00:at-junction",
+        "RL:S:LR14:note:1:01:relative-to",
+        "RL:S:LR14:note:1:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "condition/branch schema with branch relation and landmark IDs",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0219",
+      "point_id": "CV1",
+      "statement_id": "S:CV1:location",
+      "v1_defect_class": "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:CV1:location:102-113",
+        "LM:S:CV1:location:131-151",
+        "LM:S:CV1:location:155-169",
+        "RL:S:CV1:location:00:surface-landmark",
+        "RL:S:CV1:location:01:on-line:male",
+        "RL:S:CV1:location:02:midpoint-between:male"
+      ],
+      "repaired": true,
+      "repair_mechanism": "condition/branch schema with branch relation and landmark IDs",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0220",
+      "point_id": "ST1",
+      "statement_id": "S:ST1:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST1:location:25-32",
+        "LM:S:ST1:location:37-60",
+        "LM:S:ST1:location:7-11",
+        "RL:S:ST1:location:00:between",
+        "RL:S:ST1:location:01:relative-to",
+        "RL:S:ST1:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0221",
+      "point_id": "ST43",
+      "statement_id": "S:ST43:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST43:location:103-141",
+        "LM:S:ST43:location:39-72:156c28b5",
+        "LM:S:ST43:location:50-72",
+        "RL:S:ST43:location:00:between",
+        "RL:S:ST43:location:01:relative-to",
+        "RL:S:ST43:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0222",
+      "point_id": "ST44",
+      "statement_id": "S:ST44:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:ST44:location:117-120",
+        "LM:S:ST44:location:125-136",
+        "LM:S:ST44:location:39-60:c30c4620",
+        "RL:S:ST44:location:00:between",
+        "RL:S:ST44:location:01:between",
+        "RL:S:ST44:location:02:relative-to"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0223",
+      "point_id": "HT8",
+      "statement_id": "S:HT8:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:HT8:location:101-138",
+        "LM:S:HT8:location:32-42",
+        "LM:S:HT8:location:55-88:f036fedf",
+        "RL:S:HT8:location:00:between",
+        "RL:S:HT8:location:01:relative-to",
+        "RL:S:HT8:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0224",
+      "point_id": "HT8",
+      "statement_id": "S:HT8:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:HT8:note:1:137-140",
+        "LM:S:HT8:note:1:18-52:c4aef829",
+        "LM:S:HT8:note:1:29-52",
+        "RL:S:HT8:note:1:00:between",
+        "RL:S:HT8:note:1:01:same-level",
+        "RL:S:HT8:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0225",
+      "point_id": "KI1",
+      "statement_id": "S:KI1:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:KI1:note:1:174-182",
+        "LM:S:KI1:note:1:188-249",
+        "LM:S:KI1:note:1:215-234",
+        "RL:S:KI1:note:1:00:on-line",
+        "RL:S:KI1:note:1:01:between",
+        "RL:S:KI1:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0226",
+      "point_id": "PC7",
+      "statement_id": "S:PC7:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:PC7:note:1:130-153",
+        "LM:S:PC7:note:1:179-194:85f9e3d7",
+        "LM:S:PC7:note:1:203-224:c25f23ce",
+        "RL:S:PC7:note:1:00:between",
+        "RL:S:PC7:note:1:01:same-level",
+        "RL:S:PC7:note:1:02:midpoint-of-entity"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0227",
+      "point_id": "PC8",
+      "statement_id": "S:PC8:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:PC8:location:101-133",
+        "LM:S:PC8:location:32-42",
+        "LM:S:PC8:location:55-88:f036fedf",
+        "RL:S:PC8:location:00:between",
+        "RL:S:PC8:location:01:relative-to",
+        "RL:S:PC8:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0228",
+      "point_id": "PC8",
+      "statement_id": "S:PC8:remarks",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:PC8:remarks:106-129",
+        "LM:S:PC8:remarks:142-174",
+        "LM:S:PC8:remarks:47-51",
+        "RL:S:PC8:remarks:00:between",
+        "RL:S:PC8:remarks:01:relative-to",
+        "RL:S:PC8:remarks:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0229",
+      "point_id": "TE3",
+      "statement_id": "S:TE3:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE3:location:103-141",
+        "LM:S:TE3:location:39-72:156c28b5",
+        "LM:S:TE3:location:50-72",
+        "RL:S:TE3:location:00:between",
+        "RL:S:TE3:location:01:relative-to",
+        "RL:S:TE3:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0230",
+      "point_id": "TE4",
+      "statement_id": "S:TE4:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:TE4:note:1:133-144",
+        "LM:S:TE4:note:1:77-110:e741c38b",
+        "LM:S:TE4:note:1:87-110",
+        "RL:S:TE4:note:1:00:between",
+        "RL:S:TE4:note:1:01:same-level"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0231",
+      "point_id": "GB42",
+      "statement_id": "S:GB42:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GB42:location:103-141",
+        "LM:S:GB42:location:39-72:156c28b5",
+        "LM:S:GB42:location:50-72",
+        "RL:S:GB42:location:00:between",
+        "RL:S:GB42:location:01:relative-to",
+        "RL:S:GB42:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0232",
+      "point_id": "LR3",
+      "statement_id": "S:LR3:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LR3:location:102-145",
+        "LM:S:LR3:location:156-177",
+        "LM:S:LR3:location:39-72:6c398dd4",
+        "RL:S:LR3:location:00:between",
+        "RL:S:LR3:location:01:relative-to",
+        "RL:S:LR3:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0233",
+      "point_id": "LR3",
+      "statement_id": "S:LR3:note:1",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:LR3:note:1:105-169",
+        "LM:S:LR3:note:1:140-145",
+        "LM:S:LR3:note:1:149-169",
+        "RL:S:LR3:note:1:00:between",
+        "RL:S:LR3:note:1:01:surface-landmark",
+        "RL:S:LR3:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0234",
+      "point_id": "GV16",
+      "statement_id": "S:GV16:location",
+      "v1_defect_class": "RELATION_ARGUMENT_MISBINDING",
+      "severity": "CRITICAL",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:GV16:location:103-113",
+        "LM:S:GV16:location:122-144",
+        "LM:S:GV16:location:57-94",
+        "RL:S:GV16:location:00:between",
+        "RL:S:GV16:location:01:relative-to",
+        "RL:S:GV16:location:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "source-span / expected-argument explicit binding",
+      "validator_result": "PASS"
+    },
+    {
+      "original_defect_id": "D0235",
+      "point_id": "KI1",
+      "statement_id": "S:KI1:note:1",
+      "v1_defect_class": "SOURCE_RELATION_OVERGENERATION",
+      "severity": "MAJOR",
+      "v2_affected_node_or_relation_ids": [
+        "LM:S:KI1:note:1:174-182",
+        "LM:S:KI1:note:1:188-249",
+        "LM:S:KI1:note:1:215-234",
+        "RL:S:KI1:note:1:00:on-line",
+        "RL:S:KI1:note:1:01:between",
+        "RL:S:KI1:note:1:02:surface-landmark"
+      ],
+      "repaired": true,
+      "repair_mechanism": "spec-whitelist relation generation",
+      "validator_result": "PASS"
+    }
+  ]
+}

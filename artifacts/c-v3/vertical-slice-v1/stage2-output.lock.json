@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-vertical-slice-v1-stage2-output-lock",
+  "status": "FROZEN_FOR_HUMAN_REVIEW",
+  "workflow_run_id": 37438671650,
+  "workflow_run_attempt": 3,
+  "workflow_artifact_id": 11399852799,
+  "workflow_artifact_name": "c-v3-vertical-slice-stage2",
+  "stage2_execution_sha256": "d70c437a536d21765a91693fd8e292b47cb3f157f89b503b135e52b974b74d86",
+  "stage2_validation_sha256": "aa1e7ec035cd01dae7a31f53b71c997dc5540a5bd26af4bb33d1c0b05447decd",
+  "source_status": "GENERATED_NOT_VALIDATED",
+  "automated_validation": {
+    "registry_identity": "193 checks / 0 errors",
+    "independent_validator": "954 checks / 0 errors",
+    "forged_relation_operator": "PASS",
+    "forged_fma_identity": "PASS"
+  },
+  "invariants": {
+    "physical_coordinates_generated": 0,
+    "legacy_c_coordinates_used_as_input": 0
+  },
+  "rule": "Human-review generation must consume this exact Stage 2 output artifact and must not execute or regenerate Stage 2 semantics."
+}

@@ -1,0 +1,103 @@
+name: Validate C v3 Stage 2 semantic repair
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/korean-tcm-knowledge]
+    paths:
+      - 'scripts/cv3/execute_vertical_slice_stage2_semantic_repair.py'
+      - 'scripts/cv3/validate_vertical_slice_stage2_semantic_repair.py'
+      - 'scripts/cv3/build_vertical_slice_stage2_semantic_repair_review.py'
+      - '.github/workflows/validate-c-v3-stage2-semantic-repair.yml'
+permissions:
+  contents: write
+  actions: read
+jobs:
+  repair-validate-review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/korean-tcm-knowledge
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install review dependencies
+        run: |
+          python -m pip install --quiet reportlab
+          command -v pdftoppm >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y poppler-utils)
+      - name: Download frozen pre-repair Stage 2 output
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p .tmp/c-v3-repair/before
+          curl -L --fail -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/seungho8437/Seungho-Atlas/actions/artifacts/11399852799/zip \
+            -o .tmp/c-v3-repair/before/source.zip
+          unzip -q .tmp/c-v3-repair/before/source.zip -d .tmp/c-v3-repair/before/extracted
+          test -f .tmp/c-v3-repair/before/extracted/stage2-execution.json
+          python - <<'PY'
+          import hashlib,json,pathlib
+          p=pathlib.Path('.tmp/c-v3-repair/before/extracted/stage2-execution.json')
+          h=hashlib.sha256(p.read_bytes()).hexdigest()
+          exp=json.load(open('artifacts/c-v3/vertical-slice-v1/stage2-output.lock.json'))['stage2_execution_sha256']
+          assert h==exp,(h,exp)
+          print('Frozen before-output identity PASS',h)
+          PY
+      - name: Build approved Stage 1 substrate
+        run: python scripts/cv3/build_stage1_substrate.py --out .tmp/c-v3-repair/spatial-substrate.json
+      - name: Regenerate approved calibration only
+        run: python scripts/cv3/build_vertical_slice_review.py --substrate .tmp/c-v3-repair/spatial-substrate.json --out-dir .tmp/c-v3-repair/review
+      - name: Recheck approved registry geometry identity
+        run: python scripts/cv3/validate_vertical_slice_review_identity.py --substrate .tmp/c-v3-repair/spatial-substrate.json --payload .tmp/c-v3-repair/review/registry-geometry-payload.json --html .tmp/c-v3-repair/review/surface-registry-review.html --out .tmp/c-v3-repair/review/review-identity-validation.json
+      - name: Execute repaired Stage 2 semantics
+        run: |
+          python scripts/cv3/execute_vertical_slice_stage2_semantic_repair.py \
+            --substrate .tmp/c-v3-repair/spatial-substrate.json \
+            --calibration .tmp/c-v3-repair/review/calibration-draft.json \
+            --out .tmp/c-v3-repair/stage2-repaired-execution.json
+      - name: Independent semantic-repair validation and regression scan
+        run: |
+          python scripts/cv3/validate_vertical_slice_stage2_semantic_repair.py \
+            --before .tmp/c-v3-repair/before/extracted/stage2-execution.json \
+            --after .tmp/c-v3-repair/stage2-repaired-execution.json \
+            --out artifacts/c-v3/vertical-slice-v1/stage2-semantic-repair-validation.json
+      - name: Build human semantic-repair review
+        run: |
+          python scripts/cv3/build_vertical_slice_stage2_semantic_repair_review.py \
+            --before .tmp/c-v3-repair/before/extracted/stage2-execution.json \
+            --after .tmp/c-v3-repair/stage2-repaired-execution.json \
+            --validation artifacts/c-v3/vertical-slice-v1/stage2-semantic-repair-validation.json \
+            --out-dir artifacts/c-v3/vertical-slice-v1
+      - name: Render-verify PDF
+        run: |
+          mkdir -p .tmp/c-v3-repair/pdf-renders
+          pdfinfo artifacts/c-v3/vertical-slice-v1/stage2-semantic-repair-human-review.pdf | tee .tmp/c-v3-repair/pdfinfo.txt
+          pdftoppm -png -r 72 artifacts/c-v3/vertical-slice-v1/stage2-semantic-repair-human-review.pdf .tmp/c-v3-repair/pdf-renders/page >/dev/null 2>&1
+          test "$(find .tmp/c-v3-repair/pdf-renders -name 'page-*.png' | wc -l)" -gt 10
+          test -s "$(find .tmp/c-v3-repair/pdf-renders -name 'page-*.png' | head -1)"
+      - name: Commit repair review artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add artifacts/c-v3/vertical-slice-v1/stage2-semantic-repair-human-review.html \
+                  artifacts/c-v3/vertical-slice-v1/stage2-semantic-repair-human-review.pdf \
+                  artifacts/c-v3/vertical-slice-v1/stage2-semantic-repair-human-review-data.json \
+                  artifacts/c-v3/vertical-slice-v1/stage2-semantic-repair-validation.json
+          if git diff --cached --quiet; then
+            echo "No artifact changes."
+          else
+            git commit -m "audit: generate Stage 2 semantic-repair human review"
+            git push origin HEAD:feature/korean-tcm-knowledge
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: c-v3-stage2-semantic-repair
+          path: |
+            .tmp/c-v3-repair/stage2-repaired-execution.json
+            artifacts/c-v3/vertical-slice-v1/stage2-semantic-repair-human-review.html
+            artifacts/c-v3/vertical-slice-v1/stage2-semantic-repair-human-review.pdf
+            artifacts/c-v3/vertical-slice-v1/stage2-semantic-repair-human-review-data.json
+            artifacts/c-v3/vertical-slice-v1/stage2-semantic-repair-validation.json
+            .tmp/c-v3-repair/pdfinfo.txt
+          if-no-files-found: warn

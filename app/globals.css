@@ -86,3 +86,43 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 @media(max-width:767px){body:has(.detail-sheet) .view-controls{visibility:hidden}}
 
 @media(max-height:600px) and (orientation:landscape){body:has(.detail-sheet) .bottom-dock{left:12px;right:324px;width:auto;transform:none;max-width:none;margin:0}}
+
+.anchor-panel{position:absolute;right:30px;top:94px;width:390px;max-height:calc(100dvh - 170px);overflow:auto;border-radius:14px;padding:14px 16px 16px;z-index:35}
+.anchor-intro{font-size:12px;line-height:1.55;color:#6f7b87;margin:10px 2px}
+.anchor-progress{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding:10px 2px 12px;border-bottom:1px solid #18253612}
+.anchor-progress strong{font-size:13px;color:#2f3c48}.anchor-progress span{font-size:10px;line-height:1.4;color:#8b96a1;text-align:right;max-width:180px}
+.anchor-list{display:grid;grid-template-columns:1fr;gap:4px;padding:10px 0}
+.anchor-row{width:100%;min-height:48px;display:flex;align-items:center;justify-content:space-between;text-align:left;border-radius:8px;padding:8px 10px!important;color:#4c5966!important}
+.anchor-row>span{display:flex;flex-direction:column;gap:3px;min-width:0}.anchor-row strong{font-size:12px;font-weight:600}.anchor-row small{font-size:10px;color:#8a95a0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.anchor-row.active{background:#253b4810!important;color:#253b48!important}
+.anchor-workspace{border-top:1px solid #18253612;padding-top:12px}.anchor-target-title{display:flex;flex-direction:column;gap:4px}.anchor-target-title span{font-size:10px;letter-spacing:.1em;color:#8b96a1;text-transform:uppercase}.anchor-target-title strong{font-size:15px;color:#2e3d49}
+.anchor-workspace>p{font-size:12px;line-height:1.55;color:#687582;margin:8px 0}.anchor-constraints{display:flex;gap:5px;flex-wrap:wrap}.anchor-constraints [data-slot=badge]{font-size:9px}
+.detector-box,.anchor-draft{margin-top:12px;padding:11px;border:1px solid #18253615;border-radius:9px;background:#ffffffb8}.detector-box>div:first-child,.anchor-draft>div:first-child{display:flex;flex-direction:column;gap:4px}.detector-box strong,.anchor-draft strong{font-size:12px}.detector-box span,.anchor-draft span{font-size:10px;line-height:1.45;color:#7c8793}
+.anchor-side-choice,.proposal-actions{display:flex;gap:6px;align-items:center;margin-top:9px;flex-wrap:wrap}.anchor-side-choice button,.proposal-actions button{min-height:34px;padding:0 10px;border:1px solid #18253618;border-radius:7px;font-size:11px}.anchor-side-choice button.active{background:#253b4812}
+.manual-anchor-help{display:flex;gap:8px;align-items:flex-start;margin-top:12px;padding:10px;border-radius:8px;background:#f6f8f9;color:#667481}.manual-anchor-help span{font-size:11px;line-height:1.5}
+.anchor-export{border-top:1px solid #18253612;margin-top:13px;padding-top:12px;display:flex;flex-direction:column;gap:5px}.anchor-export button{justify-content:flex-start;gap:7px;font-size:11px;padding:8px}.anchor-export span{font-size:9px;color:#8a95a0;line-height:1.4}
+@media(max-width:1000px){.anchor-panel{right:20px;width:360px}}
+@media(max-width:767px){.anchor-panel{top:112px;left:12px;right:12px;width:auto;max-height:calc(100dvh - 260px);padding:12px 14px;z-index:45}.anchor-intro{font-size:11px}.anchor-row{min-height:46px}.anchor-progress span{max-width:150px}}
+@media(max-height:600px) and (orientation:landscape){.anchor-panel{top:70px;right:12px;left:auto;width:360px;max-height:calc(100dvh - 90px)}}
+
+
+/* HUMAN_PLACED acupoint editor and runtime legend. */
+.placement-panel{position:absolute;right:30px;top:94px;width:430px;max-height:calc(100dvh - 170px);overflow:auto;border-radius:14px;padding:14px 16px 16px;z-index:38}
+.placement-panel .panel-heading{display:flex;align-items:center;gap:8px}.placement-panel .panel-heading .icon-button{margin-left:auto}
+.placement-disclaimer{margin:10px 0;padding:10px 11px;border-radius:8px;background:#fff7ed;color:#7c4a16;font-size:11px;line-height:1.5}
+.placement-nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;margin:10px 0}.placement-nav strong{text-align:center;font-size:12px}.placement-nav button{min-height:36px}
+.placement-search{display:flex;gap:7px}.placement-search input{flex:1;min-width:0;height:38px;border:1px solid #18253620;border-radius:8px;background:#ffffffd9;padding:0 10px;font-size:12px;outline:none}.placement-search input:focus{border-color:#536875}
+.placement-info{margin-top:11px;padding:12px;border:1px solid #18253615;border-radius:10px;background:#ffffffc7}.placement-info>div:first-child{display:flex;flex-direction:column;gap:3px}.placement-info strong{font-size:15px}.placement-info span{font-size:11px;color:#71808d}.placement-info p{font-size:12px;line-height:1.6;color:#4e5c68;margin:10px 0}.placement-meta{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.placement-highlight{display:flex;align-items:center;gap:9px;margin:11px 2px;font-size:11px;color:#576674}
+.placement-help,.placement-draft{display:flex;flex-direction:column;gap:4px;padding:10px 11px;border-radius:9px;background:#f5f8f9}.placement-help strong,.placement-draft strong{font-size:11px}.placement-help span,.placement-draft span{font-size:10px;line-height:1.5;color:#6f7d89}
+.placement-draft{margin-top:9px;border:1px solid #16a34a35;background:#f0fdf4}.placement-actions{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:9px}.placement-actions button{min-height:34px;border-radius:7px;font-size:11px}
+.placement-io{display:flex;gap:6px;margin-top:12px;padding-top:11px;border-top:1px solid #18253612}.placement-io button{flex:1;gap:6px;font-size:11px}
+.placement-errors{margin-top:9px;padding:9px;border-radius:8px;background:#fff1f2;color:#9f1239}.placement-errors p{margin:2px 0;font-size:10px;line-height:1.4}
+.placement-footnote{font-size:9px;line-height:1.45;color:#85919b;margin-top:9px}.placement-footnote code{font-size:9px}
+.render-warning{padding:7px 5px 10px;color:#b45309;font-size:9px;line-height:1.45}
+.acupoint-legend{display:flex;gap:9px;flex-wrap:wrap;padding:6px 5px;font-size:9px;color:#677581}.acupoint-legend span{display:flex;align-items:center;gap:4px}.acupoint-legend i{width:8px;height:8px;border-radius:999px;display:inline-block}.acupoint-legend .placed{background:#dc2626}.acupoint-legend .mirrored{background:#fca5a5}.acupoint-legend .flagged{background:transparent;border:2px solid #f97316}
+.meridian-filter{display:flex;flex-wrap:wrap;gap:3px;padding:4px 3px 8px}.meridian-filter button{height:25px;min-height:25px;padding:0 7px;border:1px solid #18253612;border-radius:6px;font-size:9px;color:#81909b}.meridian-filter button[aria-pressed=true]{background:#263b48;color:white}
+@media(max-width:1000px){.placement-panel{right:20px;width:390px}}
+@media(max-width:767px){.placement-panel{top:112px;left:12px;right:12px;width:auto;max-height:calc(100dvh - 260px);padding:12px 14px;z-index:46}.placement-search input{font-size:16px}.placement-actions button,.placement-io button{min-height:44px}}
+@media(max-height:600px) and (orientation:landscape){.placement-panel{top:70px;right:12px;left:auto;width:390px;max-height:calc(100dvh - 90px)}}
+
+.meridian-line-note{padding:5px 5px 9px;font-size:9px;line-height:1.45;color:#7c8793}

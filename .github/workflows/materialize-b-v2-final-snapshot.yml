@@ -1,0 +1,43 @@
+name: Materialize final B v2 graph
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/korean-tcm-knowledge
+    paths:
+      - scripts/data/anatomy-acupoint-relations-v2-final.json.gz
+      - scripts/materialize-b-v2-final-snapshot.py
+      - .github/workflows/materialize-b-v2-final-snapshot.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: materialize-b-v2-final-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/korean-tcm-knowledge
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Materialize and verify final graph snapshot
+        run: python scripts/materialize-b-v2-final-snapshot.py
+      - name: Commit exact final graph bytes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/knowledge/anatomy-acupoint-relations-v2.json
+          if git diff --cached --quiet; then
+            echo "Final B v2 graph already materialized."
+          else
+            git commit -m "data: materialize final source-first B v2 graph"
+            git pull --rebase origin feature/korean-tcm-knowledge
+            git push origin HEAD:feature/korean-tcm-knowledge
+          fi

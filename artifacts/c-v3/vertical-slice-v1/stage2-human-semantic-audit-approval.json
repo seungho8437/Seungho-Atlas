@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-vertical-slice-v1-stage2-human-semantic-audit-approval",
+  "status": "PASS",
+  "approved_at": "2026-10-06",
+  "scope": "Vertical Slice v1 20-point Stage 2 semantic execution",
+  "stage_state": {
+    "stage1": "APPROVED",
+    "registry_calibration": "APPROVED",
+    "stage2_automated_structural_validation": "PASS",
+    "stage2_semantic_repair_validation": "PASS",
+    "stage2_human_semantic_audit": "PASS",
+    "stage3": "NOT_STARTED"
+  },
+  "non_blocking_watchpoints": [
+    {
+      "watchpoint_id": "SUPPRESSED_PROVENANCE_EXECUTION_ISOLATION",
+      "description": "Suppressed/provenance-only parse nodes may remain in the audit graph, but they must never participate in canonical semantic execution, point-status determination, or false RESOLVED inference.",
+      "current_stage2_blocking": false,
+      "future_mandatory_metrics": {
+        "suppressed_executable_operand_count": 0,
+        "suppressed_status_aggregation_influence_count": 0,
+        "suppressed_only_resolved_path_count": 0
+      }
+    }
+  ],
+  "accepted_non_blocking_provenance": [
+    "semantic_suppressed=true parser residue that is not executable",
+    "provenance-only shadow parse",
+    "human-review renderer duplicate diagnostic display",
+    "diagnostic nodes with no canonical execution/status effect"
+  ],
+  "promotion_criteria": [
+    "WHO/source semantics is actually lost or transformed",
+    "incorrect operand/operator/direction/measurement/condition is executed",
+    "false RESOLVED or wrong-coordinate risk exists",
+    "same structural failure repeats across independent source expressions",
+    "a frozen semantic-contract invariant is violated"
+  ],
+  "overfitting_prohibitions": [
+    "BL17-specific rule",
+    "GB26-specific rule",
+    "acupoint-ID hard-code",
+    "WHO-sentence-string-only exception",
+    "point-specific suppression for validator passing"
+  ],
+  "task_invariants": {
+    "semantic_graph_modifications": 0,
+    "point_specific_patches": 0,
+    "coordinates_generated": 0,
+    "legacy_c_coordinate_references_introduced": 0,
+    "stage3_started": false
+  }
+}

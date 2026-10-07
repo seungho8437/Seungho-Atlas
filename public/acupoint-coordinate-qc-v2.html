@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Acupoint Coordinate QC v2 — provisional native solver</title>
+<style>
+:root{font-family:Inter,system-ui,sans-serif;color-scheme:dark;background:#0b0f14;color:#e6edf3}*{box-sizing:border-box}
+body{margin:0;overflow:hidden}#app{display:grid;grid-template-columns:390px 1fr;height:100vh}#panel{padding:14px;overflow:auto;border-right:1px solid #27313d;background:#0f141b}
+#view{position:relative}h1{font-size:16px;margin:0 0 8px}.row{display:flex;gap:8px;margin:8px 0}.row>*{min-width:0}
+select,button{background:#161d26;color:#e6edf3;border:1px solid #344150;border-radius:6px;padding:7px}select{width:100%}button{cursor:pointer}
+.card{border:1px solid #27313d;border-radius:8px;padding:9px;margin:9px 0;background:#111821}pre{white-space:pre-wrap;word-break:break-word;font-size:10.5px;line-height:1.35;margin:6px 0}
+.pill{display:inline-block;padding:2px 7px;border:1px solid #3d4b59;border-radius:999px;font-size:11px;margin:2px}.good{border-color:#238636}.warn{border-color:#d29922}.bad{border-color:#f85149}
+.small{font-size:11px;color:#9da7b3}#legend{position:absolute;left:12px;bottom:12px;background:#0f141bdd;border:1px solid #27313d;border-radius:8px;padding:8px;font-size:11px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}.raw{background:#ff7b72}.projected{background:#58a6ff}.legacy{background:#d2a8ff}
+</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.159.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.159.0/examples/jsm/"}}</script></head>
+<body><div id="app"><aside id="panel">
+<h1>C v2 Visual QC — NOT final validated</h1><div class="small">Frozen B v1 · relation-native candidates · BodyParts3D 4.0</div>
+<div class="row"><select id="point"></select></div><div class="row"><button id="prev">◀</button><button id="next">▶</button><button id="focus">Focus</button></div>
+<div class="row"><label><input id="showSkin" type="checkbox" checked/> skin</label><label><input id="showRaw" type="checkbox" checked/> raw</label><label><input id="showLegacy" type="checkbox"/> legacy baseline</label></div>
+<div id="status" class="card"></div><div id="residuals" class="card"></div><div id="provenance" class="card"></div><div id="queue" class="card"></div>
+</aside><main id="view"></main></div>
+<div id="legend"><span class="dot projected"></span>v2 projected <span class="dot raw"></span>v2 raw <span class="dot legacy"></span>v1 legacy</div>
+<script type="module">
+import * as THREE from 'three';import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+const $=id=>document.getElementById(id),loadJson=async p=>{const r=await fetch(p);if(!r.ok)throw new Error(p+' '+r.status);return r.json()};
+const [atlas,coords,qc]=await Promise.all([loadJson('/models/atlas.json'),loadJson('/knowledge/acupoint-coordinates-v2.json'),loadJson('/knowledge/acupoint-coordinate-qc-v2.json')]);
+const partsById=new Map(atlas.parts.map(p=>[p.id,p])),chunkCache=new Map();
+async function chunkBuffer(chunk){if(chunkCache.has(chunk))return chunkCache.get(chunk);const url='/models/'+atlas.chunks[chunk].url.split('/').pop(),b=await(await fetch(url)).arrayBuffer();chunkCache.set(chunk,b);return b}
+async function geometryOfPart(id){const p=partsById.get(id);if(!p)return null;const b=await chunkBuffer(p.chunk);const pos=new Float32Array(b,p.positions,p.vertexCount*3),idx=new Uint32Array(b,p.indices,p.indexCount);const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(new Float32Array(pos),3));g.setIndex(new THREE.BufferAttribute(new Uint32Array(idx),1));g.computeVertexNormals();return g}
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x0b0f14);const camera=new THREE.PerspectiveCamera(35,1,.001,50);camera.position.set(1.8,1,2.2);
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));$('view').appendChild(renderer.domElement);
+const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;scene.add(new THREE.HemisphereLight(0xffffff,0x223344,2.2));const dl=new THREE.DirectionalLight(0xffffff,2);dl.position.set(2,3,3);scene.add(dl);
+const skinGroup=new THREE.Group(),pointGroup=new THREE.Group();scene.add(skinGroup,pointGroup);
+const skin=partsById.get('FJ2810');if(skin){const g=await geometryOfPart('FJ2810'),m=new THREE.Mesh(g,new THREE.MeshStandardMaterial({color:0x74808f,transparent:true,opacity:.28,side:THREE.DoubleSide,depthWrite:false}));skinGroup.add(m)}
+function sphere(pos,color,r=.009){const s=new THREE.Mesh(new THREE.SphereGeometry(r,18,12),new THREE.MeshStandardMaterial({color,emissive:color,emissiveIntensity:.18}));s.position.fromArray(pos);pointGroup.add(s);return s}
+function line(a,b,color){const g=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3().fromArray(a),new THREE.Vector3().fromArray(b)]);pointGroup.add(new THREE.Line(g,new THREE.LineBasicMaterial({color})))}
+const all=[...coords.points].sort((a,b)=>(a.point_id+a.side).localeCompare(b.point_id+b.side,undefined,{numeric:true}));
+for(const x of all){const o=document.createElement('option');o.value=x.point_id+'|'+x.side;o.textContent=x.point_id+' · '+x.side+' · '+x.status;$('point').appendChild(o)}
+const fmt=v=>JSON.stringify(v,null,2),reviewMap=new Map((qc.review_queue||[]).map(x=>[x.point_id+'|'+x.side,x]));
+function cls(x){return x.final_validated?'good':x.relation_satisfied&&x.surface_projected?'warn':x.relation_executed?'warn':'bad'}
+async function show(rec){pointGroup.clear();
+ if(rec.coordinate_projected)sphere(rec.coordinate_projected,0x58a6ff,.011);
+ if($('showRaw').checked&&rec.coordinate_raw){sphere(rec.coordinate_raw,0xff7b72,.009);if(rec.coordinate_projected)line(rec.coordinate_raw,rec.coordinate_projected,0xff7b72)}
+ if($('showLegacy').checked&&rec.legacy_comparison?.coordinate_projected)sphere(rec.legacy_comparison.coordinate_projected,0xd2a8ff,.008);
+ $('status').innerHTML='<b>'+rec.point_id+' · '+rec.side+'</b><br><span class="pill '+cls(rec)+'">'+rec.status+'</span><pre>'+fmt({dependency_ready:rec.dependency_ready,relation_executed:rec.relation_executed,relation_satisfied:rec.relation_satisfied,surface_projected:rec.surface_projected,visual_QC_passed:rec.visual_QC_passed,final_validated:rec.final_validated,solver_method:rec.solver_method,coordinate_raw:rec.coordinate_raw,coordinate_projected:rec.coordinate_projected,projection:rec.projection})+'</pre>';
+ $('residuals').innerHTML='<b>Numeric relation residuals</b><pre>'+fmt({raw_required_relation_count:rec.raw_required_relation_count,raw_uncomputable_required_relations:rec.raw_uncomputable_required_relations,raw:rec.raw_relation_residuals,projected:rec.projected_relation_residuals})+'</pre>';
+ $('provenance').innerHTML='<b>Native provenance / legacy comparison</b><pre>'+fmt({native_relation_types_executed:rec.native_relation_types_executed,generator_evidence:rec.generator_evidence,measurements:rec.measurement_dependencies,legacy:rec.legacy_comparison,source_statement_ids:rec.source_statement_ids,relation_instance_ids:rec.relation_instance_ids})+'</pre>';
+ $('queue').innerHTML='<b>Review queue</b><pre>'+fmt(reviewMap.get(rec.point_id+'|'+rec.side)||null)+'</pre>';
+ if(rec.coordinate_projected){const p=new THREE.Vector3().fromArray(rec.coordinate_projected);controls.target.copy(p);camera.position.copy(p.clone().add(new THREE.Vector3(.32,.24,.42)));controls.update()}
+}
+function selected(){const [id,side]=$('point').value.split('|');return all.find(x=>x.point_id===id&&x.side===side)}
+$('point').onchange=()=>show(selected());$('focus').onclick=()=>show(selected());$('prev').onclick=()=>{$('point').selectedIndex=Math.max(0,$('point').selectedIndex-1);show(selected())};$('next').onclick=()=>{$('point').selectedIndex=Math.min(all.length-1,$('point').selectedIndex+1);show(selected())};
+$('showSkin').onchange=()=>skinGroup.visible=$('showSkin').checked;$('showRaw').onchange=()=>show(selected());$('showLegacy').onchange=()=>show(selected());
+function resize(){const w=$('view').clientWidth,h=$('view').clientHeight;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()}addEventListener('resize',resize);resize();
+renderer.setAnimationLoop(()=>{controls.update();renderer.render(scene,camera)});
+const first=all.findIndex(x=>x.relation_executed);$('point').selectedIndex=Math.max(0,first);await show(selected());
+</script></body></html>

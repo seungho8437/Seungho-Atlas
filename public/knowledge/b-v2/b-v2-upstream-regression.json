@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "before_sha256": {
+    "1A v1.0.5": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+    "Notes semantic-role v0.3": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a",
+    "Location semantic target v0.1": "77fd48c73129eb24dd7c5bc81ade3a6416c62b34f76145743f452f5d122197bc",
+    "Composite binding/decomposition v0.1": "3c6bf81de00508f0a2ee168b2cf37fffc295ade465883358ce168f403cc2f4c9",
+    "Location identity-resolution finalization v1": "3f01697631db39cb6efa32c443ec0e3a0050c287cfa2c8e12811325552ddff53"
+  },
+  "after_sha256": {
+    "1A v1.0.5": "f85e6c2aa1b823ae5c0d3b72ecb0c48a3f00047acde72aca276065de612bb762",
+    "Notes semantic-role v0.3": "ea15861304fef360f270f8a75ec9c763f9d8a4a174556a29ed4382b69c89085a",
+    "Location semantic target v0.1": "77fd48c73129eb24dd7c5bc81ade3a6416c62b34f76145743f452f5d122197bc",
+    "Composite binding/decomposition v0.1": "3c6bf81de00508f0a2ee168b2cf37fffc295ade465883358ce168f403cc2f4c9",
+    "Location identity-resolution finalization v1": "3f01697631db39cb6efa32c443ec0e3a0050c287cfa2c8e12811325552ddff53"
+  },
+  "modified": {
+    "1A v1.0.5": false,
+    "Notes semantic-role v0.3": false,
+    "Location semantic target v0.1": false,
+    "Composite binding/decomposition v0.1": false,
+    "Location identity-resolution finalization v1": false,
+    "FMA registry resolution policy v0.3.1": false
+  },
+  "all_zero": true
+}

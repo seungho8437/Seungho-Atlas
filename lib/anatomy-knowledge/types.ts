@@ -14,7 +14,15 @@ export type AnatomyLocalizationMap = Record<string, AnatomyLocalization>;
 
 export type MeridianId =
   | 'LU' | 'LI' | 'ST' | 'SP' | 'HT' | 'SI'
-  | 'BL' | 'KI' | 'PC' | 'TE' | 'GB' | 'LR' | 'GV' | 'CV';
+  | 'BL' | 'KI' | 'PC' | 'TE' | 'GB' | 'LR' | 'GV' | 'CV'
+  | 'EX' | 'SA' | 'AA';
+
+export type MeridianInfo = {
+  code: MeridianId;
+  nameKo: string;
+  nameHanja: string;
+  color: string;
+};
 
 export type KnowledgeSource = {
   id: string;
@@ -41,6 +49,58 @@ export type Acupoint = {
   laterality: 'midline' | 'bilateral';
   sourceIds: string[];
 };
+
+export type MeridianSinew = {
+  id: string;
+  meridian: MeridianId;
+  name: {
+    ko: string;
+    hanja: string;
+    en: string;
+  };
+  overviewKo?: string;
+  sourceIds: string[];
+};
+
+export type AnatomyAcupointRelation = {
+  anatomyId: string;
+  acupointId: string;
+  relation:
+    | 'surface-landmark'
+    | 'overlies'
+    | 'adjacent'
+    | 'between'
+    | 'deep-to'
+    | 'reference-landmark';
+  noteKo?: string;
+  sourceIds: string[];
+};
+
+export type AnatomyMeridianSinewRelation = {
+  anatomyId: string;
+  meridianSinewId: string;
+  relation:
+    | 'course-region'
+    | 'binding-region'
+    | 'branch-region'
+    | 'termination-region';
+  correspondence:
+    | 'direct-landmark'
+    | 'regional'
+    | 'interpretive';
+  noteKo?: string;
+  sourceIds: string[];
+};
+
+export type AcupointCoordinate = {
+  acupointId: string;
+  side: 'left' | 'right' | 'midline';
+  position: [number, number, number];
+  model: 'BodyParts3D-4.0';
+  status: 'validated' | 'review-needed' | 'model-limitation';
+  sourceIds: string[];
+};
+
 
 export type AcupointSemanticGraphV21 = {
   schema_version: string;

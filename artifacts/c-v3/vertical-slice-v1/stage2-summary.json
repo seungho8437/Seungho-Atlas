@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-vertical-slice-v1-stage2-summary",
+  "status": "AUTOMATED_STRUCTURAL_VALIDATION_PASS_SEMANTIC_REPAIR_VALIDATION_PASS_HUMAN_SEMANTIC_AUDIT_PASS",
+  "workflow": {
+    "name": "Validate C v3 Vertical Slice Stage 2",
+    "run_id": 37438671650,
+    "run_attempt": 3,
+    "conclusion": "success",
+    "note": "Current branch was checked out during rerun; successful result reflects latest Stage 2 solver/validator code."
+  },
+  "coverage": {
+    "cohort_points": 20,
+    "primary_location_status": {
+      "RESOLVED": 12,
+      "UNRESOLVED": 8
+    },
+    "landmark_status": {
+      "RESOLVED": 98,
+      "UNRESOLVED": 24,
+      "MULTIPLE": 2
+    },
+    "relation_status": {
+      "RESOLVED": 84,
+      "UNRESOLVED": 17
+    },
+    "measurement_status": {
+      "RESOLVED": 12
+    },
+    "condition_status": {
+      "RESOLVED": 1,
+      "CONDITIONAL": 3
+    }
+  },
+  "primary_location_resolved": [
+    "LI4",
+    "GB23",
+    "ST10",
+    "LI18",
+    "LI17",
+    "BL17",
+    "BL23",
+    "BL25",
+    "BL40",
+    "ST4",
+    "TE6",
+    "ST9"
+  ],
+  "primary_location_unresolved": {
+    "HT7": [
+      "flexor carpi ulnaris tendon not uniquely realized",
+      "pisiform/proximal-border note dependencies remain unresolved or multiple"
+    ],
+    "ST1": [
+      "eyeball multiple",
+      "infraorbital margin unresolved",
+      "pupil unresolved"
+    ],
+    "GB14": [
+      "pupil/centre-of-pupil unresolved"
+    ],
+    "LU6": [
+      "LU5-LU9 reference-line geometry family not yet realized"
+    ],
+    "LI7": [
+      "LI5-LI11 reference-line geometry family not yet realized"
+    ],
+    "GB26": [
+      "umbilicus/centre and free extremity of 11th rib subfeatures not yet uniquely realized"
+    ],
+    "ST2": [
+      "infraorbital foramen unresolved by generic atlas-name resolver"
+    ],
+    "TE20": [
+      "auricular apex unresolved on default atlas realization"
+    ]
+  },
+  "automated_validation": {
+    "registry_identity_recheck": {
+      "checks": 193,
+      "errors": 0,
+      "status": "PASS"
+    },
+    "stage2_independent_validator": {
+      "checks": 954,
+      "errors": 0,
+      "status": "PASS"
+    },
+    "negative_tests": {
+      "forged_relation_operator_rejected": true,
+      "forged_fma_identity_rejected": true
+    },
+    "validator_independence": "does not import solver, surface-registry executor, or calibration table"
+  },
+  "invariants": {
+    "physical_coordinates_generated": false,
+    "legacy_coordinate_input": false,
+    "stage3_blocked_until_human_approval": false,
+    "stage3_blocked_until_separate_command": true
+  },
+  "human_semantic_audit": {
+    "status": "PASS",
+    "reviewed_at": "2026-10-06",
+    "basis": "Latest 20-point Stage 2 human semantic re-audit",
+    "confirmed_defects": [
+      {
+        "point_id": "TE20",
+        "type": "condition_semantics_loss",
+        "detail": "body-position condition 'with the auricle folded' preserved as node but marked RESOLVED instead of CONDITIONAL"
+      },
+      {
+        "point_id": "ST10",
+        "type": "composite_subfeature_collapse",
+        "detail": "border of SCM collapses to whole SCM FMA mesh while border subfeature remains unresolved"
+      },
+      {
+        "point_id": "LI17",
+        "type": "composite_subfeature_collapse",
+        "detail": "posterior border of SCM collapses to whole SCM FMA mesh"
+      },
+      {
+        "point_id": "LI18",
+        "type": "composite_subfeature_collapse",
+        "detail": "anterior/posterior SCM borders collapse to identical whole SCM identity; between constraint loses border distinction"
+      },
+      {
+        "point_id": "LI18",
+        "type": "modifier_dependency_loss",
+        "detail": "superior border of thyroid cartilage subfeature exists but same-level relation depends on whole thyroid cartilage composite"
+      },
+      {
+        "point_id": "BL17",
+        "type": "modifier_dependency_loss",
+        "detail": "inferior-border subfeature exists but same-level relation depends on whole vertebral/spinous-process composite identity"
+      },
+      {
+        "point_id": "BL23",
+        "type": "modifier_dependency_loss",
+        "detail": "inferior-border subfeature exists but same-level relation depends on whole vertebral/spinous-process composite identity"
+      },
+      {
+        "point_id": "BL25",
+        "type": "modifier_dependency_loss",
+        "detail": "inferior-border subfeature exists but same-level relation depends on whole vertebral/spinous-process composite identity"
+      },
+      {
+        "point_id": "ST9",
+        "type": "modifier_dependency_loss",
+        "detail": "superior-border subfeature not bound into same-level relation; SCM border note also collapses to whole SCM identity"
+      }
+    ],
+    "structural_root_cause": "Composite semantic landmark containing a modifier/subfeature may currently be promoted using only parent whole-entity FMA geometry, while the extracted child subfeature is not required to participate in the executable dependency chain.",
+    "required_contracts": [
+      "A composite operand containing border/superior border/inferior border/midpoint/anterior border/posterior border/end/apex or equivalent subfeature cannot be RESOLVED solely by the parent whole-entity mesh.",
+      "If a relation uses a composite landmark with an extracted child subfeature, the executable dependency chain must bind and use that child subfeature or remain UNRESOLVED.",
+      "Pose/body-position conditions incompatible with default atlas pose must remain CONDITIONAL."
+    ],
+    "new_defect_families": [
+      {
+        "type": "QUANTITATIVE_RELATION_SEMANTICS_LOSS",
+        "detail": "Distance/value/unit/calibration semantics present in WHO/B must remain attached to repaired relation/dependency semantics and human-review projection."
+      },
+      {
+        "type": "DERIVED_GEOMETRY_OUTPUT_NOT_BOUND_TO_DOWNSTREAM_RELATION",
+        "detail": "Resolved midpoint/center/midpoint-between outputs must be represented as derived geometry identities and consumed by downstream relations when a named derived semantic operand exists."
+      },
+      {
+        "type": "LEXICALIZED_ANATOMICAL_ENTITY_FALSE_SUBFEATURE_SPLIT",
+        "detail": "An ontology/FMA-resolved lexicalized anatomical entity such as spinous process must not be re-decomposed into parent vertebra + generic process child for execution."
+      },
+      {
+        "type": "SUBFEATURE_SYNONYM_NORMALIZATION_GAP",
+        "detail": "Recognized lexical synonyms such as free extremity must normalize to a canonical subfeature type (free_end); unresolved geometry is distinct from unknown semantic type."
+      }
+    ],
+    "latest_repair_candidate": {
+      "workflow_run_id": 37450405490,
+      "artifact_commit": "4527db2",
+      "validation": "PASS",
+      "checks": 304,
+      "errors": 0,
+      "post_repair_counts": {
+        "parent_only_collapse": 0,
+        "unused_child_subfeature": 0,
+        "distinct_subfeature_identity_collapse": 0,
+        "condition_preservation_failure": 0,
+        "direction_preservation_failure": 0,
+        "relation_nonoperand_semantics_loss": 0,
+        "condition_linkage_loss": 0,
+        "quantitative_relation_semantics_loss": 0,
+        "derived_geometry_output_not_bound": 0,
+        "lexicalized_anatomical_entity_false_subfeature_split": 0,
+        "subfeature_synonym_normalization_gap": 0,
+        "false_fallback": 0
+      },
+      "negative_tests_added": [
+        "lexicalized_process_generic_split",
+        "atomic_fma_internal_child_executable",
+        "free_extremity_normalization_removed",
+        "synonym_left_unknown"
+      ],
+      "human_reaudit_required": false,
+      "human_reaudit_completed": true
+    },
+    "pass_scope": "Vertical Slice v1 20-point Stage 2 semantic execution only",
+    "resolved_defect_families": [
+      "parent-only composite resolution",
+      "unused child-subfeature execution",
+      "distinct-subfeature identity collapse",
+      "condition semantics/preservation failure",
+      "direction semantics loss",
+      "non-operand semantic loss",
+      "quantitative relation semantics loss",
+      "derived geometry output binding failure",
+      "false fallback",
+      "lexicalized anatomical entity false subfeature split",
+      "subfeature synonym normalization gap"
+    ],
+    "non_blocking_watchpoints": [
+      {
+        "watchpoint_id": "SUPPRESSED_PROVENANCE_EXECUTION_ISOLATION",
+        "blocking": false,
+        "description": "Suppressed/provenance-only parse nodes may remain in the audit graph, but they must never participate in canonical semantic execution, point-status determination, or false RESOLVED inference.",
+        "mandatory_expansion_metrics": {
+          "suppressed_executable_operand_count": {
+            "expected": 0
+          },
+          "suppressed_status_aggregation_influence_count": {
+            "expected": 0
+          },
+          "suppressed_only_resolved_path_count": {
+            "expected": 0
+          }
+        }
+      }
+    ],
+    "provenance_policy": {
+      "suppressed_parser_residue_is_blocking": false,
+      "provenance_only_shadow_parse_is_blocking": false,
+      "renderer_duplicate_diagnostic_node_is_blocking": false,
+      "condition_for_non_blocking": "The residue/edge must not participate in canonical execution, point-level status aggregation, or false RESOLVED inference."
+    },
+    "defect_family_promotion_criteria": [
+      "A. WHO/source semantics is actually lost or transformed.",
+      "B. An incorrect operand/operator/direction/measurement/condition is executed.",
+      "C. The issue can produce false RESOLVED or an incorrect coordinate.",
+      "D. The same structural failure repeats across independent source expressions.",
+      "E. A frozen semantic-contract invariant is violated."
+    ],
+    "point_specific_overfitting_forbidden": [
+      "acupoint-ID-specific rules",
+      "WHO-string-specific exceptions",
+      "point-specific suppression added only to pass a validator",
+      "individual point patch accepted as a defect-family fix"
+    ],
+    "historical_defects_status": "RESOLVED_IN_APPROVED_VERTICAL_SLICE",
+    "current_blocking_defects": []
+  },
+  "next_gate": "Stage 2 Vertical Slice v1 is approved. Stage 3 remains NOT STARTED and requires a separate explicit command.",
+  "semantic_repair": {
+    "status": "PASS",
+    "workflow_run_id": 37450405490,
+    "artifact_commit": "4527db2",
+    "checks": 304,
+    "errors": 0,
+    "known_affected_repair": {
+      "TE20": "UNRESOLVED; body_position condition repaired to CONDITIONAL",
+      "ST10": "UNRESOLVED; SCM border whole-mesh collapse blocked",
+      "LI17": "UNRESOLVED; SCM posterior-border whole-mesh collapse blocked",
+      "LI18": "UNRESOLVED; anterior/posterior SCM border collapse and thyroid superior-border dependency blocked",
+      "BL17": "UNRESOLVED; inferior-border child required by same-level relation",
+      "BL23": "UNRESOLVED; inferior-border child required by same-level relation",
+      "BL25": "UNRESOLVED; inferior-border child required by same-level relation",
+      "ST9": "UNRESOLVED; thyroid superior-border and SCM border collapses blocked"
+    },
+    "repaired_primary_status_counts": {
+      "RESOLVED": 3,
+      "UNRESOLVED": 17
+    },
+    "pre_repair_regression_findings_outside_known8": 54,
+    "post_repair_counts": {
+      "parent_only_collapse": 0,
+      "unused_child_subfeature": 0,
+      "distinct_subfeature_identity_collapse": 0,
+      "condition_preservation_failure": 0,
+      "direction_preservation_failure": 0,
+      "relation_nonoperand_semantics_loss": 0,
+      "condition_linkage_loss": 0,
+      "quantitative_relation_semantics_loss": 0,
+      "derived_geometry_output_not_bound": 0,
+      "lexicalized_anatomical_entity_false_subfeature_split": 0,
+      "subfeature_synonym_normalization_gap": 0,
+      "false_fallback": 0
+    },
+    "negative_tests": {
+      "child_removed_parent_whole_mesh": "PASS",
+      "distinct_borders_same_geometry_hash": "PASS",
+      "same_level_child_replaced_by_parent": "PASS",
+      "te20_conditional_to_resolved": "PASS",
+      "unknown_subfeature_whole_entity_fallback": "PASS"
+    },
+    "coordinate_generation_count": 0,
+    "legacy_c_coordinate_reference_count": 0,
+    "human_semantic_audit": "PASS",
+    "non_blocking_watchpoint_ids": [
+      "SUPPRESSED_PROVENANCE_EXECUTION_ISOLATION"
+    ]
+  }
+}

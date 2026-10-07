@@ -1,0 +1,23 @@
+name: Extract C v3 vertical slice Stage 2 input
+on:
+  workflow_dispatch:
+  push:
+    branches: [feature/korean-tcm-knowledge]
+    paths:
+      - 'scripts/cv3/extract_vertical_slice_stage2_input.py'
+      - '.github/workflows/extract-c-v3-vertical-slice-stage2.yml'
+permissions:
+  contents: read
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: feature/korean-tcm-knowledge}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python scripts/cv3/extract_vertical_slice_stage2_input.py --out .tmp/c-v3-slice/stage2-semantic-input.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: c-v3-vertical-slice-stage2-input
+          path: .tmp/c-v3-slice/stage2-semantic-input.json

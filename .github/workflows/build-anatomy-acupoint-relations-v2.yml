@@ -1,0 +1,184 @@
+name: Build B v2 source-first acupoint relation graph
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/korean-tcm-knowledge
+    paths:
+      - scripts/build-anatomy-acupoint-relations-v2.py
+      - scripts/b_v2_source_semantics.py
+      - scripts/data/b-v2-*.json.gz.b64.txt
+      - scripts/data/anatomy-acupoint-relations-v1.json.gz.b64.txt
+      - .github/workflows/build-anatomy-acupoint-relations-v2.yml
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/korean-tcm-knowledge
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Decode frozen/audited B v2 inputs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import base64,gzip,shutil
+          root=Path('.')
+          tmp=root/'.tmp/b-semantic-audit'
+          frozen=tmp/'frozen_upstream'
+          frozen.mkdir(parents=True,exist_ok=True)
+          mapping={
+            'scripts/data/b-v2-statement-ledger-v1.json.gz.b64.txt': tmp/'b-semantic-integrity-statement-ledger-v1.json',
+            'scripts/data/b-v2-defect-inventory-v1.json.gz.b64.txt': tmp/'b-semantic-integrity-defect-inventory-v1.json',
+            'scripts/data/b-v2-regression-cases-v1.json.gz.b64.txt': tmp/'b-semantic-integrity-regression-cases-v1.json',
+            'scripts/data/b-v2-primary-pages-raw.jsonl.gz.b64.txt': tmp/'primary_pages_raw.jsonl',
+            'scripts/data/b-v2-location-identity-final-v1.json.gz.b64.txt': tmp/'location_fma_identity_resolution_final_v1.json',
+            'scripts/data/b-v2-notes-identity-v1.json.gz.b64.txt': tmp/'notes_anatomical_identity_mapping_v1.json',
+            'scripts/data/b-v2-remarks-adjudication-v1.json.gz.b64.txt': tmp/'remarks_adjudication_v1.json',
+            'scripts/data/anatomy-acupoint-relations-v1.json.gz.b64.txt': tmp/'anatomy-acupoint-relations.json',
+            'scripts/data/b-v2-upstream-1A-v1.0.5.json.gz.b64.txt': frozen/'who_361_points_1A_annotations_v1.0.5.json',
+            'scripts/data/b-v2-upstream-notes-semantic-role-v0.3.json.gz.b64.txt': frozen/'1A_note_semantic_roles_v0.3.json',
+            'scripts/data/b-v2-upstream-location-semantic-target-v0.1.json.gz.b64.txt': frozen/'location_semantic_target_layer_v0.1.json',
+            'scripts/data/b-v2-upstream-composite-binding-v0.1.json.gz.b64.txt': frozen/'location_composite_binding_v0.1.json',
+          }
+          for src,dst in mapping.items():
+              raw=base64.b64decode(Path(src).read_text().strip())
+              dst.parent.mkdir(parents=True,exist_ok=True)
+              dst.write_bytes(gzip.decompress(raw))
+          shutil.copy2(tmp/'location_fma_identity_resolution_final_v1.json', frozen/'location_fma_identity_resolution_final_v1.json')
+          PY
+
+      - name: Independent deterministic rebuild run 1
+        env:
+          B_V2_BASE: ${{ github.workspace }}/.tmp/b-semantic-audit
+          B_V2_OUT: ${{ github.workspace }}/.tmp/b-v2-run1
+        run: python scripts/build-anatomy-acupoint-relations-v2.py
+
+      - name: Independent deterministic rebuild run 2
+        env:
+          B_V2_BASE: ${{ github.workspace }}/.tmp/b-semantic-audit
+          B_V2_OUT: ${{ github.workspace }}/.tmp/b-v2-run2
+        run: python scripts/build-anatomy-acupoint-relations-v2.py
+
+      - name: Enforce independent byte reproducibility and freeze gate
+        run: |
+          for f in anatomy-acupoint-relations-v2.json b-v2-compiled-source-spec.json b-v2-validator-results.json b-v2-negative-validator-tests.json b-v2-upstream-regression.json; do
+            cmp ".tmp/b-v2-run1/$f" ".tmp/b-v2-run2/$f"
+          done
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          s=json.loads(Path('.tmp/b-v2-run2/b-v2-review-summary.json').read_text())
+          assert s['B_v2_statements']==583
+          assert s['exact_semantic_matches']==583
+          assert s['remaining_blocked_or_mismatched']==0
+          assert s['known_defects_total']==235 and s['known_defects_repaired']==235
+          assert s['unresolved_CRITICAL']==0 and s['unresolved_MAJOR']==0
+          assert s['semantic_cardinality_error_count']==0
+          assert s['source_provenance_incomplete_count']==0
+          assert s['negative_validator_tests_PASS'] is True
+          assert s['orphan_landmark_relation_geometry_count']==0
+          assert s['invalid_FMA_reference_count']==0
+          assert all(not v for v in s['upstream_frozen_diff'].values())
+          assert all(v['PASS'] for v in s['mandatory_regression'].values())
+          assert s['deterministic_rebuild_reproducibility_PASS'] is True
+          assert s['final_judgment']=='B_V2_FREEZE_CANDIDATE'
+          PY
+
+      - name: Assemble independent review bundle and final gate
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,hashlib,zipfile,shutil
+          root=Path('.')
+          r1=root/'.tmp/b-v2-run1'; r2=root/'.tmp/b-v2-run2'; src=root/'.tmp/b-semantic-audit'; final=root/'.tmp/b-v2-final'
+          final.mkdir(parents=True,exist_ok=True)
+          def sha(p):
+              h=hashlib.sha256()
+              with open(p,'rb') as f:
+                  for b in iter(lambda:f.read(1<<20),b''): h.update(b)
+              return h.hexdigest()
+          def dump(p,o): p.write_text(json.dumps(o,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          summary=json.loads((r2/'b-v2-review-summary.json').read_text())
+          publish=['anatomy-acupoint-relations-v2.json','b-v2-compiled-source-spec.json','b-v2-known-defect-repair-verification.json','b-v2-negative-validator-tests.json','b-v2-semantic-diff-v1.json','b-v2-upstream-regression.json','b-v2-review-summary.json','b-v2-validator-results.json','b-v2-rebuild-report.md','b-v2-manifest.json']
+          for f in publish: shutil.copy2(r2/f,final/f)
+          for f in ['b-semantic-integrity-statement-ledger-v1.json','b-semantic-integrity-defect-inventory-v1.json','b-semantic-integrity-regression-cases-v1.json']: shutil.copy2(src/f,final/f)
+          shutil.copy2('scripts/build-anatomy-acupoint-relations-v2.py',final/'build-anatomy-acupoint-relations-v2.py')
+          shutil.copy2('scripts/b_v2_source_semantics.py',final/'b-v2-source-semantics.py')
+          repro_files=['anatomy-acupoint-relations-v2.json','b-v2-compiled-source-spec.json','b-v2-validator-results.json','b-v2-negative-validator-tests.json','b-v2-upstream-regression.json']
+          repro={'schema_version':'1.0.0','independent_fresh_runs':2,'files':{}}
+          for f in repro_files:
+              h1,h2=sha(r1/f),sha(r2/f)
+              repro['files'][f]={'run1_sha256':h1,'run2_sha256':h2,'byte_identical':h1==h2}
+          repro['PASS']=all(x['byte_identical'] for x in repro['files'].values())
+          dump(final/'b-v2-reproducibility.json',repro)
+          hard_gate={
+            'statements_583':summary['B_v2_statements']==583,
+            'exact_583':summary['exact_semantic_matches']==583 and summary['remaining_blocked_or_mismatched']==0,
+            'known_defects_235_repaired':summary['known_defects_total']==235 and summary['known_defects_repaired']==235,
+            'unresolved_critical_zero':summary['unresolved_CRITICAL']==0,
+            'unresolved_major_zero':summary['unresolved_MAJOR']==0,
+            'semantic_cardinality_zero':summary['semantic_cardinality_error_count']==0,
+            'source_provenance_complete':summary['source_provenance_incomplete_count']==0,
+            'orphan_zero':summary['orphan_landmark_relation_geometry_count']==0,
+            'invalid_fma_zero':summary['invalid_FMA_reference_count']==0,
+            'upstream_diff_zero':all(not v for v in summary['upstream_frozen_diff'].values()),
+            'mandatory_regressions_pass':all(v['PASS'] for v in summary['mandatory_regression'].values()),
+            'negative_validator_tests_pass':summary['negative_validator_tests_PASS'] is True,
+            'independent_reproducibility_pass':repro['PASS'],
+          }
+          judgment='B_V2_FREEZE_CANDIDATE' if all(hard_gate.values()) else 'B_V2_NOT_READY'
+          gate={'schema_version':'1.0.0','final_judgment':judgment,'hard_gate':hard_gate,'counts':{k:summary[k] for k in ['B_v2_statements','exact_semantic_matches','remaining_blocked_or_mismatched','total_landmark_nodes','total_relation_instances','total_geometry_nodes','total_conditional_branches','total_composite_bindings','total_proportional_measurements','known_defects_total','known_defects_repaired','unresolved_CRITICAL','unresolved_MAJOR']},'semantic_diff':summary['semantic_diff'],'mandatory_regression':summary['mandatory_regression'],'negative_validator_tests_PASS':summary['negative_validator_tests_PASS'],'upstream_frozen_diff':summary['upstream_frozen_diff'],'independent_reproducibility':repro}
+          dump(final/'b-v2-final-gate.json',gate)
+          review_md=['# B v2 final review','',f'Final judgment: **{judgment}**','',f"- Statements: {summary['B_v2_statements']}",f"- Exact semantic matches: {summary['exact_semantic_matches']}/583",f"- Remaining blocked/mismatched: {summary['remaining_blocked_or_mismatched']}",f"- Known defects repaired: {summary['known_defects_repaired']}/{summary['known_defects_total']}",f"- Unresolved CRITICAL/MAJOR: {summary['unresolved_CRITICAL']}/{summary['unresolved_MAJOR']}",f"- Landmark / relation / geometry: {summary['total_landmark_nodes']} / {summary['total_relation_instances']} / {summary['total_geometry_nodes']}",f"- Conditional branches: {summary['total_conditional_branches']}",f"- Upstream frozen diff: {sum(bool(v) for v in summary['upstream_frozen_diff'].values())}",f"- Negative tests: {'PASS' if summary['negative_validator_tests_PASS'] else 'FAIL'}",f"- Independent rebuild reproducibility: {'PASS' if repro['PASS'] else 'FAIL'}",'','C remains stopped. No C artifact is generated by this workflow.']
+          (final/'B-v2-final-review.md').write_text('\n'.join(review_md)+'\n',encoding='utf-8')
+          content_files=[p for p in final.iterdir() if p.is_file() and p.name not in {'b-v2-content-manifest.json','b-v2-review-bundle.zip','b-v2-zip-integrity.json','b-v2-review-manifest.json'}]
+          content_manifest={'schema_version':'1.0.0','final_judgment':judgment,'files':{p.name:{'sha256':sha(p),'bytes':p.stat().st_size} for p in sorted(content_files)},'graph_sha256':sha(final/'anatomy-acupoint-relations-v2.json'),'builder_sha256':sha(final/'build-anatomy-acupoint-relations-v2.py'),'source_parser_sha256':sha(final/'b-v2-source-semantics.py')}
+          dump(final/'b-v2-content-manifest.json',content_manifest)
+          zpath=final/'b-v2-review-bundle.zip'
+          with zipfile.ZipFile(zpath,'w',zipfile.ZIP_DEFLATED) as z:
+              for p in sorted(final.iterdir()):
+                  if p.is_file() and p.name not in {'b-v2-review-bundle.zip','b-v2-zip-integrity.json','b-v2-review-manifest.json'}: z.write(p,p.name)
+          with zipfile.ZipFile(zpath) as z:
+              bad=z.testzip(); names=z.namelist()
+          zi={'schema_version':'1.0.0','zip_sha256':sha(zpath),'zip_bytes':zpath.stat().st_size,'testzip_bad_member':bad,'integrity_PASS':bad is None,'contains_content_manifest':'b-v2-content-manifest.json' in names,'member_count':len(names)}
+          dump(final/'b-v2-zip-integrity.json',zi)
+          review_manifest={'schema_version':'1.0.0','final_judgment':judgment,'content_manifest_sha256':sha(final/'b-v2-content-manifest.json'),'zip_integrity_sha256':sha(final/'b-v2-zip-integrity.json'),'review_zip_sha256':zi['zip_sha256'],'integrity_PASS':zi['integrity_PASS'],'hard_gate_PASS':all(hard_gate.values())}
+          dump(final/'b-v2-review-manifest.json',review_manifest)
+          assert judgment=='B_V2_FREEZE_CANDIDATE' and zi['integrity_PASS']
+          PY
+
+      - name: Publish B v2 freeze-candidate artifacts
+        run: |
+          mkdir -p public/knowledge/b-v2 artifacts
+          cp .tmp/b-v2-final/anatomy-acupoint-relations-v2.json public/knowledge/anatomy-acupoint-relations-v2.json
+          for f in .tmp/b-v2-final/*; do
+            case "$(basename "$f")" in
+              anatomy-acupoint-relations-v2.json|b-v2-review-bundle.zip|b-semantic-integrity-*.json|build-anatomy-acupoint-relations-v2.py|b-v2-source-semantics.py) ;;
+              *) cp "$f" public/knowledge/b-v2/ ;;
+            esac
+          done
+          cp .tmp/b-v2-final/b-v2-review-bundle.zip artifacts/b-v2-review-bundle.zip
+          sha256sum artifacts/b-v2-review-bundle.zip > artifacts/b-v2-review-bundle.zip.sha256
+          unzip -t artifacts/b-v2-review-bundle.zip
+
+      - name: Commit B v2 freeze candidate
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/knowledge/anatomy-acupoint-relations-v2.json public/knowledge/b-v2 artifacts/b-v2-review-bundle.zip artifacts/b-v2-review-bundle.zip.sha256
+          if git diff --cached --quiet; then
+            echo "No B v2 output changes."
+          else
+            git commit -m "data: finalize source-first acupoint relation graph v2"
+            git pull --rebase origin feature/korean-tcm-knowledge
+            git push origin HEAD:feature/korean-tcm-knowledge
+          fi

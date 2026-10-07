@@ -1,0 +1,4900 @@
+{
+  "schemaVersion": 1,
+  "methodology": {
+    "principle": "Bind each measurement frame to WHO proportional-bone or finger-cun calibrations without inventing a global cun. Ambiguity is preserved as an explicit blocker."
+  },
+  "records": [
+    {
+      "acupointId": "LU1",
+      "bindings": [
+        {
+          "frameId": "LU1:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          }
+        },
+        {
+          "frameId": "LU1:MF2",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_SUPRASTERNAL_TO_XIPHISTERNAL"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 64,
+            "end": 71
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LU2",
+      "bindings": [
+        {
+          "frameId": "LU2:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 52,
+            "end": 59
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LU3",
+      "bindings": [
+        {
+          "frameId": "LU3:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "UPPER_ARM_AXILLARY_TO_CUBITAL"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 47,
+            "end": 54
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LU4",
+      "bindings": [
+        {
+          "frameId": "LU4:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "UPPER_ARM_AXILLARY_TO_CUBITAL"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 47,
+            "end": 54
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LU5",
+      "bindings": []
+    },
+    {
+      "acupointId": "LU6",
+      "bindings": [
+        {
+          "frameId": "LU6:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LU7",
+      "bindings": [
+        {
+          "frameId": "LU7:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 64,
+            "end": 73
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LU8",
+      "bindings": [
+        {
+          "frameId": "LU8:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 45,
+            "end": 52
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LU9",
+      "bindings": []
+    },
+    {
+      "acupointId": "LU10",
+      "bindings": []
+    },
+    {
+      "acupointId": "LU11",
+      "bindings": [
+        {
+          "frameId": "LU11:MF1",
+          "unit": "F-cun",
+          "status": "method-bound",
+          "candidateCalibrationIds": [
+            "F_CUN_MIDDLE_FINGER",
+            "F_CUN_THUMB_WIDTH",
+            "F_CUN_FOUR_FINGER_WIDTH"
+          ],
+          "selectionRule": "F-cun is patient/model finger based; choose the WHO finger method represented by the source context before geometry.",
+          "sourceSpan": {
+            "start": 35,
+            "end": 44
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LI1",
+      "bindings": [
+        {
+          "frameId": "LI1:MF1",
+          "unit": "F-cun",
+          "status": "method-bound",
+          "candidateCalibrationIds": [
+            "F_CUN_MIDDLE_FINGER",
+            "F_CUN_THUMB_WIDTH",
+            "F_CUN_FOUR_FINGER_WIDTH"
+          ],
+          "selectionRule": "F-cun is patient/model finger based; choose the WHO finger method represented by the source context before geometry.",
+          "sourceSpan": {
+            "start": 38,
+            "end": 47
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LI2",
+      "bindings": []
+    },
+    {
+      "acupointId": "LI3",
+      "bindings": []
+    },
+    {
+      "acupointId": "LI4",
+      "bindings": []
+    },
+    {
+      "acupointId": "LI5",
+      "bindings": []
+    },
+    {
+      "acupointId": "LI6",
+      "bindings": [
+        {
+          "frameId": "LI6:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 43,
+            "end": 50
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LI7",
+      "bindings": [
+        {
+          "frameId": "LI7:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 43,
+            "end": 50
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LI8",
+      "bindings": [
+        {
+          "frameId": "LI8:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LI9",
+      "bindings": [
+        {
+          "frameId": "LI9:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LI10",
+      "bindings": [
+        {
+          "frameId": "LI10:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LI11",
+      "bindings": []
+    },
+    {
+      "acupointId": "LI12",
+      "bindings": []
+    },
+    {
+      "acupointId": "LI13",
+      "bindings": [
+        {
+          "frameId": "LI13:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "UPPER_ARM_AXILLARY_TO_CUBITAL"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LI14",
+      "bindings": [
+        {
+          "frameId": "LI14:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "UPPER_ARM_AXILLARY_TO_CUBITAL"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 34,
+            "end": 41
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LI15",
+      "bindings": []
+    },
+    {
+      "acupointId": "LI16",
+      "bindings": []
+    },
+    {
+      "acupointId": "LI17",
+      "bindings": []
+    },
+    {
+      "acupointId": "LI18",
+      "bindings": []
+    },
+    {
+      "acupointId": "LI19",
+      "bindings": [
+        {
+          "frameId": "LI19:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 51,
+            "end": 60
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LI20",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST1",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST2",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST3",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST4",
+      "bindings": [
+        {
+          "frameId": "ST4:MF1",
+          "unit": "F-cun",
+          "status": "method-bound",
+          "candidateCalibrationIds": [
+            "F_CUN_MIDDLE_FINGER",
+            "F_CUN_THUMB_WIDTH",
+            "F_CUN_FOUR_FINGER_WIDTH"
+          ],
+          "selectionRule": "F-cun is patient/model finger based; choose the WHO finger method represented by the source context before geometry.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 25
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST5",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST6",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST7",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST8",
+      "bindings": [
+        {
+          "frameId": "ST8:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 22,
+            "end": 31
+          }
+        },
+        {
+          "frameId": "ST8:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 45,
+            "end": 54
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST9",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST10",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST11",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST12",
+      "bindings": [
+        {
+          "frameId": "ST12:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 27,
+            "end": 34
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST13",
+      "bindings": [
+        {
+          "frameId": "ST13:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 26,
+            "end": 33
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST14",
+      "bindings": [
+        {
+          "frameId": "ST14:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST15",
+      "bindings": [
+        {
+          "frameId": "ST15:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST16",
+      "bindings": [
+        {
+          "frameId": "ST16:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST17",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST18",
+      "bindings": [
+        {
+          "frameId": "ST18:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 30,
+            "end": 37
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST19",
+      "bindings": [
+        {
+          "frameId": "ST19:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        },
+        {
+          "frameId": "ST19:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST20",
+      "bindings": [
+        {
+          "frameId": "ST20:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        },
+        {
+          "frameId": "ST20:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST21",
+      "bindings": [
+        {
+          "frameId": "ST21:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        },
+        {
+          "frameId": "ST21:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST22",
+      "bindings": [
+        {
+          "frameId": "ST22:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        },
+        {
+          "frameId": "ST22:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST23",
+      "bindings": [
+        {
+          "frameId": "ST23:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        },
+        {
+          "frameId": "ST23:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST24",
+      "bindings": [
+        {
+          "frameId": "ST24:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        },
+        {
+          "frameId": "ST24:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST25",
+      "bindings": [
+        {
+          "frameId": "ST25:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 20,
+            "end": 27
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST26",
+      "bindings": [
+        {
+          "frameId": "ST26:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          }
+        },
+        {
+          "frameId": "ST26:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST27",
+      "bindings": [
+        {
+          "frameId": "ST27:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          }
+        },
+        {
+          "frameId": "ST27:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST28",
+      "bindings": [
+        {
+          "frameId": "ST28:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          }
+        },
+        {
+          "frameId": "ST28:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST29",
+      "bindings": [
+        {
+          "frameId": "ST29:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          }
+        },
+        {
+          "frameId": "ST29:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST30",
+      "bindings": [
+        {
+          "frameId": "ST30:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST31",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST32",
+      "bindings": [
+        {
+          "frameId": "ST32:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "THIGH_PUBIC_TO_PATELLA_BASE",
+            "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+            "THIGH_GLUTEAL_FOLD_TO_POPLITEAL"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 50,
+            "end": 57
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST33",
+      "bindings": [
+        {
+          "frameId": "ST33:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "THIGH_PUBIC_TO_PATELLA_BASE",
+            "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+            "THIGH_GLUTEAL_FOLD_TO_POPLITEAL"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 35,
+            "end": 42
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST34",
+      "bindings": [
+        {
+          "frameId": "ST34:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "THIGH_PUBIC_TO_PATELLA_BASE",
+            "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+            "THIGH_GLUTEAL_FOLD_TO_POPLITEAL"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST35",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST36",
+      "bindings": [
+        {
+          "frameId": "ST36:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST37",
+      "bindings": [
+        {
+          "frameId": "ST37:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST38",
+      "bindings": [
+        {
+          "frameId": "ST38:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST39",
+      "bindings": [
+        {
+          "frameId": "ST39:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST40",
+      "bindings": [
+        {
+          "frameId": "ST40:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 36,
+            "end": 43
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "ST41",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST42",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST43",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST44",
+      "bindings": []
+    },
+    {
+      "acupointId": "ST45",
+      "bindings": [
+        {
+          "frameId": "ST45:MF1",
+          "unit": "F-cun",
+          "status": "method-bound",
+          "candidateCalibrationIds": [
+            "F_CUN_MIDDLE_FINGER",
+            "F_CUN_THUMB_WIDTH",
+            "F_CUN_FOUR_FINGER_WIDTH"
+          ],
+          "selectionRule": "F-cun is patient/model finger based; choose the WHO finger method represented by the source context before geometry.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SP1",
+      "bindings": [
+        {
+          "frameId": "SP1:MF1",
+          "unit": "F-cun",
+          "status": "method-bound",
+          "candidateCalibrationIds": [
+            "F_CUN_MIDDLE_FINGER",
+            "F_CUN_THUMB_WIDTH",
+            "F_CUN_FOUR_FINGER_WIDTH"
+          ],
+          "selectionRule": "F-cun is patient/model finger based; choose the WHO finger method represented by the source context before geometry.",
+          "sourceSpan": {
+            "start": 35,
+            "end": 44
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SP2",
+      "bindings": []
+    },
+    {
+      "acupointId": "SP3",
+      "bindings": []
+    },
+    {
+      "acupointId": "SP4",
+      "bindings": []
+    },
+    {
+      "acupointId": "SP5",
+      "bindings": []
+    },
+    {
+      "acupointId": "SP6",
+      "bindings": [
+        {
+          "frameId": "SP6:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SP7",
+      "bindings": [
+        {
+          "frameId": "SP7:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SP8",
+      "bindings": [
+        {
+          "frameId": "SP8:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 36,
+            "end": 43
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SP9",
+      "bindings": []
+    },
+    {
+      "acupointId": "SP10",
+      "bindings": [
+        {
+          "frameId": "SP10:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "THIGH_PUBIC_TO_PATELLA_BASE",
+            "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+            "THIGH_GLUTEAL_FOLD_TO_POPLITEAL"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SP11",
+      "bindings": []
+    },
+    {
+      "acupointId": "SP12",
+      "bindings": []
+    },
+    {
+      "acupointId": "SP13",
+      "bindings": [
+        {
+          "frameId": "SP13:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 27
+          }
+        },
+        {
+          "frameId": "SP13:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SP14",
+      "bindings": [
+        {
+          "frameId": "SP14:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 27
+          }
+        },
+        {
+          "frameId": "SP14:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SP15",
+      "bindings": [
+        {
+          "frameId": "SP15:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 20,
+            "end": 27
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SP16",
+      "bindings": [
+        {
+          "frameId": "SP16:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        },
+        {
+          "frameId": "SP16:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SP17",
+      "bindings": [
+        {
+          "frameId": "SP17:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 30,
+            "end": 37
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SP18",
+      "bindings": [
+        {
+          "frameId": "SP18:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SP19",
+      "bindings": [
+        {
+          "frameId": "SP19:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SP20",
+      "bindings": [
+        {
+          "frameId": "SP20:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SP21",
+      "bindings": []
+    },
+    {
+      "acupointId": "HT1",
+      "bindings": []
+    },
+    {
+      "acupointId": "HT2",
+      "bindings": [
+        {
+          "frameId": "HT2:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "UPPER_ARM_AXILLARY_TO_CUBITAL"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 33,
+            "end": 40
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "HT3",
+      "bindings": []
+    },
+    {
+      "acupointId": "HT4",
+      "bindings": [
+        {
+          "frameId": "HT4:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 44,
+            "end": 53
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "HT5",
+      "bindings": [
+        {
+          "frameId": "HT5:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "HT6",
+      "bindings": [
+        {
+          "frameId": "HT6:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 50
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "HT7",
+      "bindings": []
+    },
+    {
+      "acupointId": "HT8",
+      "bindings": []
+    },
+    {
+      "acupointId": "HT9",
+      "bindings": [
+        {
+          "frameId": "HT9:MF1",
+          "unit": "F-cun",
+          "status": "method-bound",
+          "candidateCalibrationIds": [
+            "F_CUN_MIDDLE_FINGER",
+            "F_CUN_THUMB_WIDTH",
+            "F_CUN_FOUR_FINGER_WIDTH"
+          ],
+          "selectionRule": "F-cun is patient/model finger based; choose the WHO finger method represented by the source context before geometry.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SI1",
+      "bindings": [
+        {
+          "frameId": "SI1:MF1",
+          "unit": "F-cun",
+          "status": "method-bound",
+          "candidateCalibrationIds": [
+            "F_CUN_MIDDLE_FINGER",
+            "F_CUN_THUMB_WIDTH",
+            "F_CUN_FOUR_FINGER_WIDTH"
+          ],
+          "selectionRule": "F-cun is patient/model finger based; choose the WHO finger method represented by the source context before geometry.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SI2",
+      "bindings": []
+    },
+    {
+      "acupointId": "SI3",
+      "bindings": []
+    },
+    {
+      "acupointId": "SI4",
+      "bindings": []
+    },
+    {
+      "acupointId": "SI5",
+      "bindings": []
+    },
+    {
+      "acupointId": "SI6",
+      "bindings": [
+        {
+          "frameId": "SI6:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 42,
+            "end": 49
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SI7",
+      "bindings": [
+        {
+          "frameId": "SI7:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SI8",
+      "bindings": []
+    },
+    {
+      "acupointId": "SI9",
+      "bindings": [
+        {
+          "frameId": "SI9:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "UPPER_ARM_AXILLARY_TO_CUBITAL"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 31,
+            "end": 38
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SI10",
+      "bindings": []
+    },
+    {
+      "acupointId": "SI11",
+      "bindings": []
+    },
+    {
+      "acupointId": "SI12",
+      "bindings": []
+    },
+    {
+      "acupointId": "SI13",
+      "bindings": []
+    },
+    {
+      "acupointId": "SI14",
+      "bindings": [
+        {
+          "frameId": "SI14:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 47,
+            "end": 54
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SI15",
+      "bindings": [
+        {
+          "frameId": "SI15:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "SI16",
+      "bindings": []
+    },
+    {
+      "acupointId": "SI17",
+      "bindings": []
+    },
+    {
+      "acupointId": "SI18",
+      "bindings": []
+    },
+    {
+      "acupointId": "SI19",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL1",
+      "bindings": [
+        {
+          "frameId": "BL1:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 61,
+            "end": 70
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL2",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL3",
+      "bindings": [
+        {
+          "frameId": "BL3:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 24,
+            "end": 33
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL4",
+      "bindings": [
+        {
+          "frameId": "BL4:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          }
+        },
+        {
+          "frameId": "BL4:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 38,
+            "end": 47
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL5",
+      "bindings": [
+        {
+          "frameId": "BL5:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 22
+          }
+        },
+        {
+          "frameId": "BL5:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 36,
+            "end": 45
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL6",
+      "bindings": [
+        {
+          "frameId": "BL6:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          }
+        },
+        {
+          "frameId": "BL6:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 38,
+            "end": 47
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL7",
+      "bindings": [
+        {
+          "frameId": "BL7:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 22
+          }
+        },
+        {
+          "frameId": "BL7:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 36,
+            "end": 45
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL8",
+      "bindings": [
+        {
+          "frameId": "BL8:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          }
+        },
+        {
+          "frameId": "BL8:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 38,
+            "end": 47
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL9",
+      "bindings": [
+        {
+          "frameId": "BL9:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL10",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL11",
+      "bindings": [
+        {
+          "frameId": "BL11:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 47,
+            "end": 56
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL12",
+      "bindings": [
+        {
+          "frameId": "BL12:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 47,
+            "end": 56
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL13",
+      "bindings": [
+        {
+          "frameId": "BL13:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 47,
+            "end": 56
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL14",
+      "bindings": [
+        {
+          "frameId": "BL14:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 47,
+            "end": 56
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL15",
+      "bindings": [
+        {
+          "frameId": "BL15:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 57
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL16",
+      "bindings": [
+        {
+          "frameId": "BL16:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 57
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL17",
+      "bindings": [
+        {
+          "frameId": "BL17:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 57
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL18",
+      "bindings": [
+        {
+          "frameId": "BL18:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 57
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL19",
+      "bindings": [
+        {
+          "frameId": "BL19:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 57
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL20",
+      "bindings": [
+        {
+          "frameId": "BL20:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 49,
+            "end": 58
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL21",
+      "bindings": [
+        {
+          "frameId": "BL21:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 49,
+            "end": 58
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL22",
+      "bindings": [
+        {
+          "frameId": "BL22:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 46,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL23",
+      "bindings": [
+        {
+          "frameId": "BL23:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 46,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL24",
+      "bindings": [
+        {
+          "frameId": "BL24:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 46,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL25",
+      "bindings": [
+        {
+          "frameId": "BL25:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 46,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL26",
+      "bindings": [
+        {
+          "frameId": "BL26:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 47,
+            "end": 56
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL27",
+      "bindings": [
+        {
+          "frameId": "BL27:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 50
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL28",
+      "bindings": [
+        {
+          "frameId": "BL28:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 50
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL29",
+      "bindings": [
+        {
+          "frameId": "BL29:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 50
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL30",
+      "bindings": [
+        {
+          "frameId": "BL30:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 50
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL31",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL32",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL33",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL34",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL35",
+      "bindings": [
+        {
+          "frameId": "BL35:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 21,
+            "end": 30
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL36",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL37",
+      "bindings": [
+        {
+          "frameId": "BL37:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "THIGH_PUBIC_TO_PATELLA_BASE",
+            "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+            "THIGH_GLUTEAL_FOLD_TO_POPLITEAL"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL38",
+      "bindings": [
+        {
+          "frameId": "BL38:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "THIGH_PUBIC_TO_PATELLA_BASE",
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "KNEE_MEDIAL_TIBIAL_CONDYLE_TO_PATELLA_APEX",
+            "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+            "THIGH_GLUTEAL_FOLD_TO_POPLITEAL",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL39",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL40",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL41",
+      "bindings": [
+        {
+          "frameId": "BL41:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 47,
+            "end": 54
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL42",
+      "bindings": [
+        {
+          "frameId": "BL42:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 47,
+            "end": 54
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL43",
+      "bindings": [
+        {
+          "frameId": "BL43:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 47,
+            "end": 54
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL44",
+      "bindings": [
+        {
+          "frameId": "BL44:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL45",
+      "bindings": [
+        {
+          "frameId": "BL45:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL46",
+      "bindings": [
+        {
+          "frameId": "BL46:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL47",
+      "bindings": [
+        {
+          "frameId": "BL47:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL48",
+      "bindings": [
+        {
+          "frameId": "BL48:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL49",
+      "bindings": [
+        {
+          "frameId": "BL49:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 49,
+            "end": 56
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL50",
+      "bindings": [
+        {
+          "frameId": "BL50:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 49,
+            "end": 56
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL51",
+      "bindings": [
+        {
+          "frameId": "BL51:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 46,
+            "end": 53
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL52",
+      "bindings": [
+        {
+          "frameId": "BL52:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "BACK_SCAPULAR_MEDIAL_BORDERS"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 46,
+            "end": 53
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL53",
+      "bindings": [
+        {
+          "frameId": "BL53:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL54",
+      "bindings": [
+        {
+          "frameId": "BL54:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL55",
+      "bindings": [
+        {
+          "frameId": "BL55:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL56",
+      "bindings": [
+        {
+          "frameId": "BL56:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 36,
+            "end": 43
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL57",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL58",
+      "bindings": [
+        {
+          "frameId": "BL58:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 50,
+            "end": 57
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL59",
+      "bindings": [
+        {
+          "frameId": "BL59:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "BL60",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL61",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL62",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL63",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL64",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL65",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL66",
+      "bindings": []
+    },
+    {
+      "acupointId": "BL67",
+      "bindings": [
+        {
+          "frameId": "BL67:MF1",
+          "unit": "F-cun",
+          "status": "method-bound",
+          "candidateCalibrationIds": [
+            "F_CUN_MIDDLE_FINGER",
+            "F_CUN_THUMB_WIDTH",
+            "F_CUN_FOUR_FINGER_WIDTH"
+          ],
+          "selectionRule": "F-cun is patient/model finger based; choose the WHO finger method represented by the source context before geometry.",
+          "sourceSpan": {
+            "start": 32,
+            "end": 41
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI1",
+      "bindings": []
+    },
+    {
+      "acupointId": "KI2",
+      "bindings": []
+    },
+    {
+      "acupointId": "KI3",
+      "bindings": []
+    },
+    {
+      "acupointId": "KI4",
+      "bindings": []
+    },
+    {
+      "acupointId": "KI5",
+      "bindings": [
+        {
+          "frameId": "KI5:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 17,
+            "end": 24
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI6",
+      "bindings": [
+        {
+          "frameId": "KI6:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 21,
+            "end": 28
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI7",
+      "bindings": [
+        {
+          "frameId": "KI7:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 34,
+            "end": 41
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI8",
+      "bindings": [
+        {
+          "frameId": "KI8:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 44,
+            "end": 51
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI9",
+      "bindings": [
+        {
+          "frameId": "KI9:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 40,
+            "end": 47
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI10",
+      "bindings": []
+    },
+    {
+      "acupointId": "KI11",
+      "bindings": [
+        {
+          "frameId": "KI11:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          }
+        },
+        {
+          "frameId": "KI11:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI12",
+      "bindings": [
+        {
+          "frameId": "KI12:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          }
+        },
+        {
+          "frameId": "KI12:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI13",
+      "bindings": [
+        {
+          "frameId": "KI13:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          }
+        },
+        {
+          "frameId": "KI13:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI14",
+      "bindings": [
+        {
+          "frameId": "KI14:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          }
+        },
+        {
+          "frameId": "KI14:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI15",
+      "bindings": [
+        {
+          "frameId": "KI15:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          }
+        },
+        {
+          "frameId": "KI15:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI16",
+      "bindings": [
+        {
+          "frameId": "KI16:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 20,
+            "end": 29
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI17",
+      "bindings": [
+        {
+          "frameId": "KI17:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        },
+        {
+          "frameId": "KI17:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI18",
+      "bindings": [
+        {
+          "frameId": "KI18:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        },
+        {
+          "frameId": "KI18:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI19",
+      "bindings": [
+        {
+          "frameId": "KI19:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        },
+        {
+          "frameId": "KI19:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI20",
+      "bindings": [
+        {
+          "frameId": "KI20:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        },
+        {
+          "frameId": "KI20:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI21",
+      "bindings": [
+        {
+          "frameId": "KI21:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        },
+        {
+          "frameId": "KI21:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI22",
+      "bindings": [
+        {
+          "frameId": "KI22:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 30,
+            "end": 37
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI23",
+      "bindings": [
+        {
+          "frameId": "KI23:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI24",
+      "bindings": [
+        {
+          "frameId": "KI24:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI25",
+      "bindings": [
+        {
+          "frameId": "KI25:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI26",
+      "bindings": [
+        {
+          "frameId": "KI26:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "KI27",
+      "bindings": [
+        {
+          "frameId": "KI27:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "PC1",
+      "bindings": [
+        {
+          "frameId": "PC1:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "PC2",
+      "bindings": [
+        {
+          "frameId": "PC2:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "UPPER_ARM_AXILLARY_TO_CUBITAL"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 42,
+            "end": 49
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "PC3",
+      "bindings": []
+    },
+    {
+      "acupointId": "PC4",
+      "bindings": [
+        {
+          "frameId": "PC4:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 49,
+            "end": 56
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "PC5",
+      "bindings": [
+        {
+          "frameId": "PC5:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 49,
+            "end": 56
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "PC6",
+      "bindings": [
+        {
+          "frameId": "PC6:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 49,
+            "end": 56
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "PC7",
+      "bindings": []
+    },
+    {
+      "acupointId": "PC8",
+      "bindings": []
+    },
+    {
+      "acupointId": "PC9",
+      "bindings": []
+    },
+    {
+      "acupointId": "TE1",
+      "bindings": [
+        {
+          "frameId": "TE1:MF1",
+          "unit": "F-cun",
+          "status": "method-bound",
+          "candidateCalibrationIds": [
+            "F_CUN_MIDDLE_FINGER",
+            "F_CUN_THUMB_WIDTH",
+            "F_CUN_FOUR_FINGER_WIDTH"
+          ],
+          "selectionRule": "F-cun is patient/model finger based; choose the WHO finger method represented by the source context before geometry.",
+          "sourceSpan": {
+            "start": 32,
+            "end": 41
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "TE2",
+      "bindings": []
+    },
+    {
+      "acupointId": "TE3",
+      "bindings": []
+    },
+    {
+      "acupointId": "TE4",
+      "bindings": []
+    },
+    {
+      "acupointId": "TE5",
+      "bindings": [
+        {
+          "frameId": "TE5:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 46,
+            "end": 53
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "TE6",
+      "bindings": [
+        {
+          "frameId": "TE6:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 46,
+            "end": 53
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "TE7",
+      "bindings": [
+        {
+          "frameId": "TE7:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 35,
+            "end": 42
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "TE8",
+      "bindings": [
+        {
+          "frameId": "TE8:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 46,
+            "end": 53
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "TE9",
+      "bindings": [
+        {
+          "frameId": "TE9:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 46,
+            "end": 53
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "TE10",
+      "bindings": [
+        {
+          "frameId": "TE10:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "UPPER_ARM_AXILLARY_TO_CUBITAL",
+            "FOREARM_CUBITAL_TO_WRIST"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 25,
+            "end": 32
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "TE11",
+      "bindings": [
+        {
+          "frameId": "TE11:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "UPPER_ARM_AXILLARY_TO_CUBITAL"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "TE12",
+      "bindings": [
+        {
+          "frameId": "TE12:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "UPPER_ARM_AXILLARY_TO_CUBITAL"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "TE13",
+      "bindings": [
+        {
+          "frameId": "TE13:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "UPPER_ARM_AXILLARY_TO_CUBITAL"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 35,
+            "end": 42
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "TE14",
+      "bindings": []
+    },
+    {
+      "acupointId": "TE15",
+      "bindings": []
+    },
+    {
+      "acupointId": "TE16",
+      "bindings": []
+    },
+    {
+      "acupointId": "TE17",
+      "bindings": []
+    },
+    {
+      "acupointId": "TE18",
+      "bindings": []
+    },
+    {
+      "acupointId": "TE19",
+      "bindings": []
+    },
+    {
+      "acupointId": "TE20",
+      "bindings": []
+    },
+    {
+      "acupointId": "TE21",
+      "bindings": []
+    },
+    {
+      "acupointId": "TE22",
+      "bindings": []
+    },
+    {
+      "acupointId": "TE23",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB1",
+      "bindings": [
+        {
+          "frameId": "GB1:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 21,
+            "end": 30
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB2",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB3",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB4",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB5",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB6",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB7",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB8",
+      "bindings": [
+        {
+          "frameId": "GB8:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 32,
+            "end": 41
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB9",
+      "bindings": [
+        {
+          "frameId": "GB9:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 31,
+            "end": 38
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB10",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB11",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB12",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB13",
+      "bindings": [
+        {
+          "frameId": "GB13:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          }
+        },
+        {
+          "frameId": "GB13:MF2",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 38,
+            "end": 45
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB14",
+      "bindings": [
+        {
+          "frameId": "GB14:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 13,
+            "end": 20
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB15",
+      "bindings": [
+        {
+          "frameId": "GB15:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB16",
+      "bindings": [
+        {
+          "frameId": "GB16:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB17",
+      "bindings": [
+        {
+          "frameId": "GB17:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB18",
+      "bindings": [
+        {
+          "frameId": "GB18:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_HAIRLINE_CORNERS",
+            "HEAD_MASTOID_TO_MASTOID"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 22
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB19",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB20",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB21",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB22",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB23",
+      "bindings": [
+        {
+          "frameId": "GB23:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_SUPRASTERNAL_TO_XIPHISTERNAL",
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 32,
+            "end": 39
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB24",
+      "bindings": [
+        {
+          "frameId": "GB24:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 30,
+            "end": 37
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB25",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB26",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB27",
+      "bindings": [
+        {
+          "frameId": "GB27:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB28",
+      "bindings": [
+        {
+          "frameId": "GB28:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 25,
+            "end": 34
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB29",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB30",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB31",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB32",
+      "bindings": [
+        {
+          "frameId": "GB32:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "THIGH_PUBIC_TO_PATELLA_BASE",
+            "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+            "THIGH_GLUTEAL_FOLD_TO_POPLITEAL"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 30,
+            "end": 37
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB33",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB34",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB35",
+      "bindings": [
+        {
+          "frameId": "GB35:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB36",
+      "bindings": [
+        {
+          "frameId": "GB36:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB37",
+      "bindings": [
+        {
+          "frameId": "GB37:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB38",
+      "bindings": [
+        {
+          "frameId": "GB38:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB39",
+      "bindings": [
+        {
+          "frameId": "GB39:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GB40",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB41",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB42",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB43",
+      "bindings": []
+    },
+    {
+      "acupointId": "GB44",
+      "bindings": [
+        {
+          "frameId": "GB44:MF1",
+          "unit": "F-cun",
+          "status": "method-bound",
+          "candidateCalibrationIds": [
+            "F_CUN_MIDDLE_FINGER",
+            "F_CUN_THUMB_WIDTH",
+            "F_CUN_FOUR_FINGER_WIDTH"
+          ],
+          "selectionRule": "F-cun is patient/model finger based; choose the WHO finger method represented by the source context before geometry.",
+          "sourceSpan": {
+            "start": 32,
+            "end": 41
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LR1",
+      "bindings": [
+        {
+          "frameId": "LR1:MF1",
+          "unit": "F-cun",
+          "status": "method-bound",
+          "candidateCalibrationIds": [
+            "F_CUN_MIDDLE_FINGER",
+            "F_CUN_THUMB_WIDTH",
+            "F_CUN_FOUR_FINGER_WIDTH"
+          ],
+          "selectionRule": "F-cun is patient/model finger based; choose the WHO finger method represented by the source context before geometry.",
+          "sourceSpan": {
+            "start": 32,
+            "end": 41
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LR2",
+      "bindings": []
+    },
+    {
+      "acupointId": "LR3",
+      "bindings": []
+    },
+    {
+      "acupointId": "LR4",
+      "bindings": []
+    },
+    {
+      "acupointId": "LR5",
+      "bindings": [
+        {
+          "frameId": "LR5:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LR6",
+      "bindings": [
+        {
+          "frameId": "LR6:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "LEG_PATELLA_APEX_TO_MEDIAL_MALLEOLUS",
+            "LEG_MEDIAL_TIBIAL_CONDYLE_TO_MEDIAL_MALLEOLUS",
+            "LEG_POPLITEAL_TO_LATERAL_MALLEOLUS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LR7",
+      "bindings": [
+        {
+          "frameId": "LR7:MF1",
+          "unit": "B-cun",
+          "status": "unresolved-no-who-interval",
+          "candidateCalibrationIds": [],
+          "selectionRule": "No direct WHO proportional interval was assigned; do not fall back to global body height.",
+          "sourceSpan": {
+            "start": 38,
+            "end": 45
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LR8",
+      "bindings": []
+    },
+    {
+      "acupointId": "LR9",
+      "bindings": [
+        {
+          "frameId": "LR9:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "THIGH_PUBIC_TO_PATELLA_BASE",
+            "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+            "THIGH_GLUTEAL_FOLD_TO_POPLITEAL"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 40,
+            "end": 47
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LR10",
+      "bindings": [
+        {
+          "frameId": "LR10:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "THIGH_PUBIC_TO_PATELLA_BASE",
+            "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+            "THIGH_GLUTEAL_FOLD_TO_POPLITEAL"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 22,
+            "end": 29
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LR11",
+      "bindings": [
+        {
+          "frameId": "LR11:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "THIGH_PUBIC_TO_PATELLA_BASE",
+            "THIGH_GREATER_TROCHANTER_TO_POPLITEAL",
+            "THIGH_GLUTEAL_FOLD_TO_POPLITEAL"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 22,
+            "end": 29
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LR12",
+      "bindings": [
+        {
+          "frameId": "LR12:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 39,
+            "end": 48
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "LR13",
+      "bindings": []
+    },
+    {
+      "acupointId": "LR14",
+      "bindings": [
+        {
+          "frameId": "LR14:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_NIPPLE_TO_NIPPLE"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 30,
+            "end": 37
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GV1",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV2",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV3",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV4",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV5",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV6",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV7",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV8",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV9",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV10",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV11",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV12",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV13",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV14",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV15",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV16",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV17",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV18",
+      "bindings": [
+        {
+          "frameId": "GV18:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 22
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GV19",
+      "bindings": [
+        {
+          "frameId": "GV19:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GV20",
+      "bindings": [
+        {
+          "frameId": "GV20:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 22
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GV21",
+      "bindings": [
+        {
+          "frameId": "GV21:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GV22",
+      "bindings": [
+        {
+          "frameId": "GV22:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 22
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GV23",
+      "bindings": [
+        {
+          "frameId": "GV23:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 22
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GV24",
+      "bindings": [
+        {
+          "frameId": "GV24:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "HEAD_ANTERIOR_TO_POSTERIOR_HAIRLINE",
+            "HEAD_GLABELLA_TO_ANTERIOR_HAIRLINE"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "GV25",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV26",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV27",
+      "bindings": []
+    },
+    {
+      "acupointId": "GV28",
+      "bindings": []
+    },
+    {
+      "acupointId": "CV1",
+      "bindings": []
+    },
+    {
+      "acupointId": "CV2",
+      "bindings": []
+    },
+    {
+      "acupointId": "CV3",
+      "bindings": [
+        {
+          "frameId": "CV3:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "CV4",
+      "bindings": [
+        {
+          "frameId": "CV4:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "CV5",
+      "bindings": [
+        {
+          "frameId": "CV5:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "CV6",
+      "bindings": [
+        {
+          "frameId": "CV6:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 27
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "CV7",
+      "bindings": [
+        {
+          "frameId": "CV7:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "CV8",
+      "bindings": []
+    },
+    {
+      "acupointId": "CV9",
+      "bindings": [
+        {
+          "frameId": "CV9:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "CV10",
+      "bindings": [
+        {
+          "frameId": "CV10:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "CV11",
+      "bindings": [
+        {
+          "frameId": "CV11:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "CV12",
+      "bindings": [
+        {
+          "frameId": "CV12:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "CV13",
+      "bindings": [
+        {
+          "frameId": "CV13:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "CV14",
+      "bindings": [
+        {
+          "frameId": "CV14:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "CV15",
+      "bindings": [
+        {
+          "frameId": "CV15:MF1",
+          "unit": "B-cun",
+          "status": "ambiguous-candidate-set",
+          "candidateCalibrationIds": [
+            "ABDOMEN_XIPHISTERNAL_TO_UMBILICUS",
+            "ABDOMEN_UMBILICUS_TO_PUBIC_SYMPHYSIS"
+          ],
+          "selectionRule": "Multiple or proxy WHO intervals are possible; source landmarks/aspect must disambiguate before coordinate generation.",
+          "sourceSpan": {
+            "start": 17,
+            "end": 24
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "CV16",
+      "bindings": []
+    },
+    {
+      "acupointId": "CV17",
+      "bindings": []
+    },
+    {
+      "acupointId": "CV18",
+      "bindings": []
+    },
+    {
+      "acupointId": "CV19",
+      "bindings": []
+    },
+    {
+      "acupointId": "CV20",
+      "bindings": []
+    },
+    {
+      "acupointId": "CV21",
+      "bindings": [
+        {
+          "frameId": "CV21:MF1",
+          "unit": "B-cun",
+          "status": "candidate-bound",
+          "candidateCalibrationIds": [
+            "CHEST_SUPRASTERNAL_TO_XIPHISTERNAL"
+          ],
+          "selectionRule": "Single WHO interval matches the local region and axis; anchor entities still require geometric resolution.",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          }
+        }
+      ]
+    },
+    {
+      "acupointId": "CV22",
+      "bindings": []
+    },
+    {
+      "acupointId": "CV23",
+      "bindings": []
+    },
+    {
+      "acupointId": "CV24",
+      "bindings": []
+    }
+  ]
+}

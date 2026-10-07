@@ -1,0 +1,31 @@
+name: Terminology Audit Bundle
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/korean-tcm-knowledge
+    paths:
+      - public/knowledge/anatomy-ko.json
+      - public/knowledge/kaa-nameko-audit.json
+      - public/knowledge/anatomy-terminology-semantic-audit.json
+      - scripts/audit-anatomy-terminology-semantics.mjs
+      - .github/workflows/terminology-audit-bundle.yml
+
+permissions:
+  contents: read
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/audit-anatomy-terminology-semantics.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: terminology-audit-bundle
+          path: |
+            public/knowledge/anatomy-ko.json
+            public/knowledge/kaa-nameko-audit.json
+            public/knowledge/anatomy-terminology-semantic-audit.json
+          retention-days: 14

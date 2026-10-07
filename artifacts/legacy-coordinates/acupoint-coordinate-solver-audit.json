@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 2,
+  "standardAcupointCount": 361,
+  "measurementFrameCount": 237,
+  "coordinateFrame": {
+    "superiorInferiorAxis": 1,
+    "leftRightAxis": 0,
+    "anteriorPosteriorAxis": 2
+  },
+  "reviewResolution": {
+    "surfacePathFramesResolved": 2,
+    "endpointAlternativeFramesResolved": 15,
+    "regionalReferenceFramesReviewed": 40,
+    "fingerCunFramesResolved": 11
+  },
+  "connections": {
+    "directFrames": 186,
+    "reviewedRegionalFrames": 40,
+    "reviewedFingerMethodFrames": 11,
+    "autoSolveFrames": 237,
+    "unresolvedMeasurementFrames": 0
+  },
+  "geodesic": [
+    {
+      "key": "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE:left",
+      "from": "prominence-medial-malleolus",
+      "to": "sole",
+      "metricPolicy": "skin-FJ2810-local-seam-repaired-edge-geodesic",
+      "intervalLength": 0.18958713903479085,
+      "cunLength": 0.06319571301159695,
+      "skinMeshId": "FJ2810",
+      "weldTolerance": 0.0009336323390529325,
+      "weldedVertexLinks": 565,
+      "seamRepairRadius": 0,
+      "seamRepairLinksAdded": 0,
+      "localVertexCount": 0,
+      "chordLength": 0.15254901011522873,
+      "geodesicToChordRatio": 1.242794947614443,
+      "fromVertex": 14247,
+      "toVertex": 18640,
+      "fromSnapDistance": 0.010241494616734967,
+      "toSnapDistance": 0,
+      "pathVertexCount": 14
+    },
+    {
+      "key": "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE:right",
+      "from": "prominence-medial-malleolus",
+      "to": "sole",
+      "metricPolicy": "skin-FJ2810-local-seam-repaired-edge-geodesic",
+      "intervalLength": 0.18806418188631094,
+      "cunLength": 0.06268806062877032,
+      "skinMeshId": "FJ2810",
+      "weldTolerance": 0.0009336323390529325,
+      "weldedVertexLinks": 565,
+      "seamRepairRadius": 0.0028008970171587975,
+      "seamRepairLinksAdded": 357,
+      "localVertexCount": 1572,
+      "chordLength": 0.1622509154182623,
+      "geodesicToChordRatio": 1.1590947354688588,
+      "fromVertex": 8774,
+      "toVertex": 4191,
+      "fromSnapDistance": 0.009498846822471195,
+      "toSnapDistance": 0,
+      "pathVertexCount": 15
+    },
+    {
+      "key": "ANKLE_MEDIAL_MALLEOLUS_TO_SOLE:midline",
+      "from": "prominence-medial-malleolus",
+      "to": "sole",
+      "metricPolicy": "skin-FJ2810-local-seam-repaired-edge-geodesic",
+      "intervalLength": 0.18958713903479085,
+      "cunLength": 0.06319571301159695,
+      "skinMeshId": "FJ2810",
+      "weldTolerance": 0.0009336323390529325,
+      "weldedVertexLinks": 565,
+      "seamRepairRadius": 0,
+      "seamRepairLinksAdded": 0,
+      "localVertexCount": 0,
+      "chordLength": 0.15254901011522873,
+      "geodesicToChordRatio": 1.242794947614443,
+      "fromVertex": 14247,
+      "toVertex": 18640,
+      "fromSnapDistance": 0.010241494616734967,
+      "toSnapDistance": 0,
+      "pathVertexCount": 14
+    }
+  ],
+  "invariants": {
+    "all361Covered": true,
+    "all237MeasurementFramesReady": true,
+    "twoSurfacePathFramesResolved": true,
+    "fifteenEndpointAlternativesResolved": true,
+    "fortyRegionalReferencesReviewed": true,
+    "elevenFingerCunMethodsSelected": true,
+    "noGlobalBodyHeightCun": true,
+    "skinGeodesicUsesFJ2810": true
+  }
+}

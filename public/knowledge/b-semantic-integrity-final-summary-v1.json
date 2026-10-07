@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0.0",
+  "summary": {
+    "audit_version": "B semantic integrity audit v1",
+    "mode": "AUDIT_ONLY_NO_MUTATION",
+    "primary_source": "9789290613831-eng.pdf",
+    "base_B_sha256": "6dd00d386a6262d02900ec5a30ea9b18aace899f071159e772c12679740b1d06",
+    "total_statements_audited": 583,
+    "source_primary_verified_statements": 583,
+    "exact_semantic_match_statements": 373,
+    "defect_containing_statements": 210,
+    "affected_acupoints": 174,
+    "defect_records_total": 291,
+    "defect_class_counts_complete": {
+      "SOURCE_LANDMARK_EXTRACTION_OMISSION": 17,
+      "RELATION_ARGUMENT_MISBINDING": 140,
+      "REFERENCE_LINE_ENDPOINT_OMISSION": 13,
+      "COMPOSITE_PARENT_BINDING_ERROR": 54,
+      "CONDITIONAL_ENDPOINT_SCHEMA_OR_BINDING_GAP": 9,
+      "SOURCE_RELATION_OMISSION": 17,
+      "SOURCE_RELATION_OVERGENERATION": 2,
+      "RELATION_TYPE_MISCLASSIFICATION": 39,
+      "SOURCE_SPAN_MISMATCH": 0,
+      "LANDMARK_SEMANTIC_IDENTITY_MISMATCH": 0
+    },
+    "severity_counts_complete": {
+      "CRITICAL": 231,
+      "MAJOR": 60,
+      "MINOR": 0
+    },
+    "source_section_defect_record_counts": {
+      "location": 178,
+      "note": 108,
+      "remarks": 5
+    },
+    "source_section_defective_statement_counts": {
+      "location": 137,
+      "note": 70,
+      "remarks": 3
+    },
+    "reference_line_endpoint_cardinality_defect_count": 13,
+    "expanded_endpoint_cardinality_defect_count": 42,
+    "conditional_defect_count": 9,
+    "composite_parent_defect_count": 54,
+    "source_landmark_omission_count": 17,
+    "argument_misbinding_count": 140,
+    "relation_family_defect_counts": {
+      "depression": 106,
+      "composite_parent": 54,
+      "intersection": 24,
+      "midpoint_of_entity": 15,
+      "between": 15,
+      "operator_operand": 14,
+      "line_construct": 14,
+      "conditional": 9,
+      "curve_on_line": 4,
+      "landmark_definition": 4
+    },
+    "relation_type_defect_record_counts": {
+      "surface-landmark": 123,
+      "NO_CURRENT_RELATION": 92,
+      "relative-to": 36,
+      "reference-landmark": 18,
+      "midpoint-between": 17,
+      "between": 16,
+      "at-junction": 4,
+      "on-line": 1,
+      "overlies": 1,
+      "fraction-along-line": 1
+    },
+    "mandatory_regression_cases": {
+      "CV1": {
+        "defect_count": 10
+      },
+      "CV12": {
+        "defect_count": 4
+      },
+      "GB26": {
+        "defect_count": 0
+      },
+      "ST35": {
+        "defect_count": 2
+      },
+      "ST29": {
+        "defect_count": 0
+      }
+    },
+    "source_statement_text_match_583_of_583": true,
+    "audit_coverage_invariant": true,
+    "classification_case": "Case C — systemic construction failure",
+    "recommendation": "FULL_B_REBUILD_REQUIRED",
+    "recommendation_scope": "Rebuild B relation-graph construction from frozen WHO/upstream evidence; do not discard frozen upstream layers wholesale. Reopen only evidence-proven upstream extraction/binding exceptions.",
+    "freeze_state": {
+      "B_v1": "freeze temporarily revoked pending audit",
+      "C_v2": "stopped",
+      "mutations_performed": false
+    }
+  }
+}

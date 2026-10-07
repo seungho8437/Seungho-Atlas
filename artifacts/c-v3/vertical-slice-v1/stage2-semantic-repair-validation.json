@@ -1,0 +1,3084 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-stage2-semantic-repair-validation",
+  "status": "PASS",
+  "checks": 304,
+  "errors": 0,
+  "error_details": [],
+  "coverage": {
+    "known_affected": 8,
+    "regression_points": 20
+  },
+  "remaining_defects": [],
+  "pre_repair_scan": {
+    "total": 644,
+    "new_regression_defects_outside_known8": 391,
+    "new_regression_findings": [
+      {
+        "rule": "subfeature_synonym_normalization_gap",
+        "point_id": "HT7",
+        "node_id": "LM:S:HT7:note:1:38-54",
+        "source_raw": "proxi-mal border",
+        "expected": {
+          "source_lexical_form": "border",
+          "canonical_subfeature_type": "border"
+        },
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:00:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:00:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:HT7:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:00:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:HT7:location:50-82"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:00:relative-to",
+        "expected": "radial",
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:00:relative-to"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:01:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:01:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:HT7:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:01:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:HT7:location:7-26"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:01:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:01:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:02:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:02:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:HT7:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:02:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:HT7:location:91-110"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:02:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:location:02:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:note:1:00:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:note:1:00:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:HT7:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:note:1:00:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:HT7:note:1:33-75"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:note:1:00:relative-to",
+        "expected": "radial",
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:note:1:00:relative-to"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:note:1:01:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:note:1:01:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:HT7:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:note:1:01:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:HT7:note:1:13-23"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:note:1:01:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:note:1:03:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:note:1:03:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:HT7:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:note:1:03:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:HT7:note:1:84-103"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:note:1:03:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "HT7",
+        "relation_id": "RL:S:HT7:note:1:03:surface-landmark"
+      },
+      {
+        "rule": "parent_only_composite_resolution",
+        "point_id": "LI4",
+        "node_id": "LM:S:LI4:location:36-79",
+        "source_raw": " the midpoint of the second metacarpal bone",
+        "geometry_kind": "fma_concept",
+        "identity": "fma:FMA23900:FJ3243,FJ3352"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:00:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:00:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:LI4:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:00:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LI4:location:36-79"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:00:relative-to",
+        "expected": "radial",
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:00:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:00:relative-to"
+      },
+      {
+        "rule": "parent_only_composite_resolution",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:00:relative-to",
+        "node_id": "LM:S:LI4:location:36-79",
+        "source_raw": " the midpoint of the second metacarpal bone",
+        "detail": "subfeature-bearing relation operand has no executable child"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:01:midpoint-of-entity",
+        "field": "op",
+        "expected": "entity_midpoint",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:01:midpoint-of-entity",
+        "field": "source_statement_id",
+        "expected": "S:LI4:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:01:midpoint-of-entity",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LI4:location:53-79"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:01:midpoint-of-entity"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:01:midpoint-of-entity"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:02:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:02:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:LI4:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:02:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LI4:location:7-25"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:02:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI4",
+        "relation_id": "RL:S:LI4:location:02:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST1",
+        "relation_id": "RL:S:ST1:location:00:between",
+        "field": "op",
+        "expected": "between_constraint",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST1",
+        "relation_id": "RL:S:ST1:location:00:between",
+        "field": "source_statement_id",
+        "expected": "S:ST1:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST1",
+        "relation_id": "RL:S:ST1:location:00:between",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:ST1:location:25-32",
+          "LM:S:ST1:location:37-60"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "ST1",
+        "relation_id": "RL:S:ST1:location:00:between"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST1",
+        "relation_id": "RL:S:ST1:location:01:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST1",
+        "relation_id": "RL:S:ST1:location:01:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:ST1:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST1",
+        "relation_id": "RL:S:ST1:location:01:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:ST1:location:82-92"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "ST1",
+        "relation_id": "RL:S:ST1:location:01:relative-to",
+        "expected": "inferior",
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "ST1",
+        "relation_id": "RL:S:ST1:location:01:relative-to"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST1",
+        "relation_id": "RL:S:ST1:location:02:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST1",
+        "relation_id": "RL:S:ST1:location:02:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:ST1:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST1",
+        "relation_id": "RL:S:ST1:location:02:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:ST1:location:7-11"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "ST1",
+        "relation_id": "RL:S:ST1:location:02:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "ST1",
+        "relation_id": "RL:S:ST1:location:02:surface-landmark"
+      },
+      {
+        "rule": "subfeature_synonym_normalization_gap",
+        "point_id": "GB14",
+        "node_id": "LM:S:GB14:location:72-78",
+        "source_raw": "centre",
+        "expected": {
+          "source_lexical_form": "centre",
+          "canonical_subfeature_type": "center"
+        },
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:00:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:00:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:GB14:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:00:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:GB14:location:32-45"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:00:relative-to",
+        "expected": "superior",
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:00:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:GB14:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:00:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:GB14:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:00:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:00:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:00:relative-to"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:01:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:01:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:GB14:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:01:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:GB14:location:67-91"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:01:relative-to",
+        "expected": "superior",
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:01:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:GB14:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:01:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:GB14:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:01:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:01:relative-to"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:02:center-of",
+        "field": "op",
+        "expected": "entity_center",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:02:center-of",
+        "field": "source_statement_id",
+        "expected": "S:GB14:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:02:center-of",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:GB14:location:82-91"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:02:center-of",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:GB14:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:02:center-of"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:03:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:03:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:GB14:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:03:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:GB14:location:7-11"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:03:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:GB14:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:03:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB14",
+        "relation_id": "RL:S:GB14:location:03:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:00:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:00:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:GB23:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:00:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:GB23:location:84-105"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:00:relative-to",
+        "expected": "anterior",
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:00:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:GB23:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:00:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:GB23:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:00:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:00:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:00:relative-to"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:01:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:01:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:GB23:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:01:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:GB23:location:7-30"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:01:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:GB23:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:01:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:01:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:02:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:02:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:GB23:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:02:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:GB23:location:39-63"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:02:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:GB23:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:02:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB23",
+        "relation_id": "RL:S:GB23:location:02:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:00:on-line",
+        "field": "op",
+        "expected": "line_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:00:on-line",
+        "field": "source_statement_id",
+        "expected": "S:LU6:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:00:on-line",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LU6:location:67-70",
+          "LM:S:LU6:location:76-79"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:00:on-line",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:00:on-line"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:00:on-line"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:01:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:01:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:LU6:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:01:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LU6:location:100-124"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:01:relative-to",
+        "expected": "superior",
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:01:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:LU6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:01:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:01:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:01:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:01:relative-to"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:02:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:02:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:LU6:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:02:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LU6:location:7-27"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:02:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:02:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:02:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:03:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:03:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:LU6:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:03:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LU6:location:51-66"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:03:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:location:03:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:00:on-line",
+        "field": "op",
+        "expected": "line_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:00:on-line",
+        "field": "source_statement_id",
+        "expected": "S:LU6:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:00:on-line",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LU6:note:1:94-97",
+          "LM:S:LU6:note:1:103-106"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:00:on-line",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00",
+          "PM:S:LU6:note:1:01"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:00:on-line"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:00:on-line"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:01:midpoint-between",
+        "field": "op",
+        "expected": "midpoint_between",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:01:midpoint-between",
+        "field": "source_statement_id",
+        "expected": "S:LU6:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:01:midpoint-between",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LU6:note:1:94-97",
+          "LM:S:LU6:note:1:103-106"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:01:midpoint-between",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00",
+          "PM:S:LU6:note:1:01"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:01:midpoint-between"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:01:midpoint-between"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:02:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:02:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:LU6:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:02:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LU6:note:1:32-36"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:02:relative-to",
+        "expected": "inferior",
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:02:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:02:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00",
+          "PM:S:LU6:note:1:01"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:02:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:02:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:02:relative-to"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:03:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:03:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:LU6:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:03:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LU6:note:1:57-106"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:03:relative-to",
+        "expected": "superior",
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:03:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:01"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:03:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00",
+          "PM:S:LU6:note:1:01"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:03:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LU6",
+        "relation_id": "RL:S:LU6:note:1:03:relative-to"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:67-70:reference-acupoint:f42e2db8d9",
+        "field": "op",
+        "expected": "reference_dependency",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:67-70:reference-acupoint:f42e2db8d9",
+        "field": "source_statement_id",
+        "expected": "S:LU6:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:67-70:reference-acupoint:f42e2db8d9",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM21:S:LU6:location:67-70:002c0a95e5"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:67-70:reference-acupoint:f42e2db8d9",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:67-70:reference-acupoint:f42e2db8d9"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:67-70:reference-acupoint:f42e2db8d9"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:76-79:reference-acupoint:5171900d45",
+        "field": "op",
+        "expected": "reference_dependency",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:76-79:reference-acupoint:5171900d45",
+        "field": "source_statement_id",
+        "expected": "S:LU6:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:76-79:reference-acupoint:5171900d45",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM21:S:LU6:location:76-79:30c4b43ed7"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:76-79:reference-acupoint:5171900d45",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:76-79:reference-acupoint:5171900d45"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:location:76-79:reference-acupoint:5171900d45"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:33-36:reference-acupoint:a79a726278",
+        "field": "op",
+        "expected": "reference_dependency",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:33-36:reference-acupoint:a79a726278",
+        "field": "source_statement_id",
+        "expected": "S:LU6:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:33-36:reference-acupoint:a79a726278",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LU6:note:1:32-36"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:33-36:reference-acupoint:a79a726278",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00",
+          "PM:S:LU6:note:1:01"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:33-36:reference-acupoint:a79a726278"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:33-36:reference-acupoint:a79a726278"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:94-97:reference-acupoint:0d3fedaf0b",
+        "field": "op",
+        "expected": "reference_dependency",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:94-97:reference-acupoint:0d3fedaf0b",
+        "field": "source_statement_id",
+        "expected": "S:LU6:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:94-97:reference-acupoint:0d3fedaf0b",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LU6:note:1:94-97"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:94-97:reference-acupoint:0d3fedaf0b",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00",
+          "PM:S:LU6:note:1:01"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:94-97:reference-acupoint:0d3fedaf0b"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:94-97:reference-acupoint:0d3fedaf0b"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:103-106:reference-acupoint:ffaf5ca270",
+        "field": "op",
+        "expected": "reference_dependency",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:103-106:reference-acupoint:ffaf5ca270",
+        "field": "source_statement_id",
+        "expected": "S:LU6:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:103-106:reference-acupoint:ffaf5ca270",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LU6:note:1:103-106"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:103-106:reference-acupoint:ffaf5ca270",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LU6:note:1:00",
+          "PM:S:LU6:note:1:01"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:103-106:reference-acupoint:ffaf5ca270"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LU6",
+        "relation_id": "RL21:S:LU6:note:1:103-106:reference-acupoint:ffaf5ca270"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:00:on-line",
+        "field": "op",
+        "expected": "line_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:00:on-line",
+        "field": "source_statement_id",
+        "expected": "S:LI7:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:00:on-line",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LI7:location:68-71",
+          "LM:S:LI7:location:77-81"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:00:on-line",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LI7:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:00:on-line"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:00:on-line"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:01:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:01:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:LI7:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:01:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LI7:location:102-126"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:01:relative-to",
+        "expected": "superior",
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:01:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:LI7:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:01:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LI7:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:01:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:01:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:01:relative-to"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:02:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:02:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:LI7:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:02:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LI7:location:7-28"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:02:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LI7:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:02:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:02:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:03:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:03:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:LI7:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:03:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:LI7:location:52-67"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:03:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LI7:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LI7",
+        "relation_id": "RL:S:LI7:location:03:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:68-71:reference-acupoint:931d5b1cfd",
+        "field": "op",
+        "expected": "reference_dependency",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:68-71:reference-acupoint:931d5b1cfd",
+        "field": "source_statement_id",
+        "expected": "S:LI7:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:68-71:reference-acupoint:931d5b1cfd",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM21:S:LI7:location:68-71:1bff496df7"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:68-71:reference-acupoint:931d5b1cfd",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LI7:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:68-71:reference-acupoint:931d5b1cfd"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:68-71:reference-acupoint:931d5b1cfd"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:77-81:reference-acupoint:bbace3ac1c",
+        "field": "op",
+        "expected": "reference_dependency",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:77-81:reference-acupoint:bbace3ac1c",
+        "field": "source_statement_id",
+        "expected": "S:LI7:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:77-81:reference-acupoint:bbace3ac1c",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM21:S:LI7:location:77-81:245ea01482"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:77-81:reference-acupoint:bbace3ac1c",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:LI7:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:77-81:reference-acupoint:bbace3ac1c"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "LI7",
+        "relation_id": "RL21:S:LI7:location:77-81:reference-acupoint:bbace3ac1c"
+      },
+      {
+        "rule": "subfeature_synonym_normalization_gap",
+        "point_id": "GB26",
+        "node_id": "LM:S:GB26:location:40-54",
+        "source_raw": "free extremity",
+        "expected": {
+          "source_lexical_form": "free extremity",
+          "canonical_subfeature_type": "free_end"
+        },
+        "actual": null
+      },
+      {
+        "rule": "subfeature_synonym_normalization_gap",
+        "point_id": "GB26",
+        "node_id": "LM:S:GB26:location:97-103",
+        "source_raw": "centre",
+        "expected": {
+          "source_lexical_form": "centre",
+          "canonical_subfeature_type": "center"
+        },
+        "actual": null
+      },
+      {
+        "rule": "subfeature_synonym_normalization_gap",
+        "point_id": "GB26",
+        "node_id": "LM:S:GB26:note:1:85-99",
+        "source_raw": "free extremity",
+        "expected": {
+          "source_lexical_form": "free extremity",
+          "canonical_subfeature_type": "free_end"
+        },
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:00:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:00:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:GB26:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:00:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:GB26:location:35-70"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:00:relative-to",
+        "expected": "inferior",
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:00:relative-to"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:01:same-level",
+        "field": "op",
+        "expected": "same_level_plane",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:01:same-level",
+        "field": "source_statement_id",
+        "expected": "S:GB26:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:01:same-level",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:GB26:location:93-116"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:01:same-level"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:02:center-of",
+        "field": "op",
+        "expected": "entity_center",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:02:center-of",
+        "field": "source_statement_id",
+        "expected": "S:GB26:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:02:center-of",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:GB26:location:107-116"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:02:center-of"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:03:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:03:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:GB26:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:03:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:GB26:location:7-22"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:03:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:location:03:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:note:2:00:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:note:2:00:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:GB26:note:2",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:note:2:00:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:GB26:note:2:27-32"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:note:2:00:relative-to",
+        "expected": "inferior",
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:note:2:00:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:note:2:00:relative-to"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:note:2:01:same-level",
+        "field": "op",
+        "expected": "same_level_plane",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:note:2:01:same-level",
+        "field": "source_statement_id",
+        "expected": "S:GB26:note:2",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:note:2:01:same-level",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:GB26:note:2:55-58"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:note:2:01:same-level"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB26",
+        "relation_id": "RL:S:GB26:note:2:01:same-level"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL21:S:GB26:note:2:28-32:reference-acupoint:260f7e9589",
+        "field": "op",
+        "expected": "reference_dependency",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL21:S:GB26:note:2:28-32:reference-acupoint:260f7e9589",
+        "field": "source_statement_id",
+        "expected": "S:GB26:note:2",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL21:S:GB26:note:2:28-32:reference-acupoint:260f7e9589",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:GB26:note:2:27-32"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "GB26",
+        "relation_id": "RL21:S:GB26:note:2:28-32:reference-acupoint:260f7e9589"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB26",
+        "relation_id": "RL21:S:GB26:note:2:28-32:reference-acupoint:260f7e9589"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL21:S:GB26:note:2:55-58:reference-acupoint:3e3fd2558d",
+        "field": "op",
+        "expected": "reference_dependency",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL21:S:GB26:note:2:55-58:reference-acupoint:3e3fd2558d",
+        "field": "source_statement_id",
+        "expected": "S:GB26:note:2",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "GB26",
+        "relation_id": "RL21:S:GB26:note:2:55-58:reference-acupoint:3e3fd2558d",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:GB26:note:2:55-58"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "GB26",
+        "relation_id": "RL21:S:GB26:note:2:55-58:reference-acupoint:3e3fd2558d"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "GB26",
+        "relation_id": "RL21:S:GB26:note:2:55-58:reference-acupoint:3e3fd2558d"
+      },
+      {
+        "rule": "child_subfeature_false_fallback",
+        "point_id": "GB26",
+        "node_id": "LM:S:GB26:location:40-54",
+        "subfeature": "free_end",
+        "geometry_kind": "entity_subfeature",
+        "identity": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST2",
+        "relation_id": "RL:S:ST2:location:00:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST2",
+        "relation_id": "RL:S:ST2:location:00:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:ST2:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST2",
+        "relation_id": "RL:S:ST2:location:00:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:ST2:location:20-40"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "ST2",
+        "relation_id": "RL:S:ST2:location:00:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST2",
+        "relation_id": "RL:S:ST2:location:01:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST2",
+        "relation_id": "RL:S:ST2:location:01:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:ST2:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST2",
+        "relation_id": "RL:S:ST2:location:01:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:ST2:location:7-11"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "ST2",
+        "relation_id": "RL:S:ST2:location:01:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "ST2",
+        "relation_id": "RL:S:ST2:location:01:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "BL40",
+        "relation_id": "RL:S:BL40:location:00:midpoint-of-entity",
+        "field": "op",
+        "expected": "entity_midpoint",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "BL40",
+        "relation_id": "RL:S:BL40:location:00:midpoint-of-entity",
+        "field": "source_statement_id",
+        "expected": "S:BL40:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "BL40",
+        "relation_id": "RL:S:BL40:location:00:midpoint-of-entity",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:BL40:location:56-76"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "BL40",
+        "relation_id": "RL:S:BL40:location:00:midpoint-of-entity"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "BL40",
+        "relation_id": "RL:S:BL40:location:00:midpoint-of-entity"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "BL40",
+        "relation_id": "RL:S:BL40:location:01:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "BL40",
+        "relation_id": "RL:S:BL40:location:01:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:BL40:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "BL40",
+        "relation_id": "RL:S:BL40:location:01:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:BL40:location:7-23"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "BL40",
+        "relation_id": "RL:S:BL40:location:01:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "BL40",
+        "relation_id": "RL:S:BL40:location:01:surface-landmark"
+      },
+      {
+        "rule": "parent_only_composite_resolution",
+        "point_id": "ST4",
+        "node_id": "LM:S:ST4:location:33-56",
+        "source_raw": " the angle of the mouth",
+        "geometry_kind": "fma_concept",
+        "identity": "fma:FMA49184:FJ1252,FJ1253,FJ2741,FJ2748,FJ2753,FJ2760,FJ2761,FJ2762,FJ2766,FJ2768,FJ3289"
+      },
+      {
+        "rule": "parent_only_composite_resolution",
+        "point_id": "ST4",
+        "node_id": "LM:S:ST4:note:1:16-39",
+        "source_raw": " the angle of the mouth",
+        "geometry_kind": "fma_concept",
+        "identity": "fma:FMA49184:FJ1252,FJ1253,FJ2741,FJ2748,FJ2753,FJ2760,FJ2761,FJ2762,FJ2766,FJ2768,FJ3289"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:00:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:00:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:ST4:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:00:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:ST4:location:33-56"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:00:relative-to",
+        "expected": "lateral",
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:00:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:ST4:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:00:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:ST4:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:00:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:00:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:00:relative-to"
+      },
+      {
+        "rule": "parent_only_composite_resolution",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:00:relative-to",
+        "node_id": "LM:S:ST4:location:33-56",
+        "source_raw": " the angle of the mouth",
+        "detail": "subfeature-bearing relation operand has no executable child"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:01:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:01:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:ST4:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:01:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:ST4:location:7-11"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:01:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:ST4:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:01:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:location:01:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:00:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:00:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:ST4:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:00:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:ST4:note:1:16-39"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:00:relative-to",
+        "expected": "lateral",
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:00:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:00:relative-to"
+      },
+      {
+        "rule": "parent_only_composite_resolution",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:00:relative-to",
+        "node_id": "LM:S:ST4:note:1:16-39",
+        "source_raw": " the angle of the mouth",
+        "detail": "subfeature-bearing relation operand has no executable child"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:01:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:01:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:ST4:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:01:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:ST4:note:1:69-86"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:01:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:02:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:02:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:ST4:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:02:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:ST4:note:1:97-134"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "ST4",
+        "relation_id": "RL:S:ST4:note:1:02:surface-landmark"
+      },
+      {
+        "rule": "condition_linkage_loss",
+        "point_id": "ST4",
+        "condition_id": "CD:S:ST4:note:1:00",
+        "expected": "S:ST4:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:00:between",
+        "field": "op",
+        "expected": "between_constraint",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:00:between",
+        "field": "source_statement_id",
+        "expected": "S:TE6:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:00:between",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:TE6:location:87-93",
+          "LM:S:TE6:location:98-106"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:00:between",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:00:between"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:00:between"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:01:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:01:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:TE6:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:01:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:TE6:location:127-151"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:01:relative-to",
+        "expected": "proximal",
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:01:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:TE6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:01:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:01:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:01:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:01:relative-to"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:02:midpoint-of-entity",
+        "field": "op",
+        "expected": "entity_midpoint",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:02:midpoint-of-entity",
+        "field": "source_statement_id",
+        "expected": "S:TE6:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:02:midpoint-of-entity",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:TE6:location:52-106"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:02:midpoint-of-entity",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:02:midpoint-of-entity"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:02:midpoint-of-entity"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:03:surface-landmark",
+        "field": "op",
+        "expected": "surface_membership",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:03:surface-landmark",
+        "field": "source_statement_id",
+        "expected": "S:TE6:location",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:03:surface-landmark",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:TE6:location:7-23"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:03:surface-landmark",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:location:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:03:surface-landmark"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:location:03:surface-landmark"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:00:between",
+        "field": "op",
+        "expected": "between_constraint",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:00:between",
+        "field": "source_statement_id",
+        "expected": "S:TE6:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:00:between",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:TE6:note:1:43-49",
+          "LM:S:TE6:note:1:54-62"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:00:between",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:note:1:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:00:between"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:00:between"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:01:relative-to",
+        "field": "op",
+        "expected": "directional_relation",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:01:relative-to",
+        "field": "source_statement_id",
+        "expected": "S:TE6:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:01:relative-to",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:TE6:note:1:25-29"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "direction_preservation_failure",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:01:relative-to",
+        "expected": "proximal",
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:01:relative-to",
+        "field": "bound_measurement_ids",
+        "expected": [
+          "PM:S:TE6:note:1:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:01:relative-to",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:note:1:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:01:relative-to",
+        "field": "quantitative_constraints_count",
+        "expected": 1,
+        "actual": 0
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:01:relative-to"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:01:relative-to"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:02:same-level",
+        "field": "op",
+        "expected": "same_level_plane",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:02:same-level",
+        "field": "source_statement_id",
+        "expected": "S:TE6:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:02:same-level",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:TE6:note:1:85-88"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:02:same-level",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:note:1:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:02:same-level"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL:S:TE6:note:1:02:same-level"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:26-29:reference-acupoint:87571bdea7",
+        "field": "op",
+        "expected": "reference_dependency",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:26-29:reference-acupoint:87571bdea7",
+        "field": "source_statement_id",
+        "expected": "S:TE6:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:26-29:reference-acupoint:87571bdea7",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:TE6:note:1:25-29"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:26-29:reference-acupoint:87571bdea7",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:note:1:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:26-29:reference-acupoint:87571bdea7"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:26-29:reference-acupoint:87571bdea7"
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:85-88:reference-acupoint:eeb3b40f1e",
+        "field": "op",
+        "expected": "reference_dependency",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:85-88:reference-acupoint:eeb3b40f1e",
+        "field": "source_statement_id",
+        "expected": "S:TE6:note:1",
+        "actual": null
+      },
+      {
+        "rule": "relation_nonoperand_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:85-88:reference-acupoint:eeb3b40f1e",
+        "field": "semantic_argument_node_ids",
+        "expected": [
+          "LM:S:TE6:note:1:85-88"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "quantitative_relation_semantics_loss",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:85-88:reference-acupoint:eeb3b40f1e",
+        "field": "statement_measurement_ids",
+        "expected": [
+          "PM:S:TE6:note:1:00"
+        ],
+        "actual": null
+      },
+      {
+        "rule": "relation_semantic_hash_mismatch",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:85-88:reference-acupoint:eeb3b40f1e"
+      },
+      {
+        "rule": "operand_trace_incomplete",
+        "point_id": "TE6",
+        "relation_id": "RL21:S:TE6:note:1:85-88:reference-acupoint:eeb3b40f1e"
+      }
+    ]
+  },
+  "post_repair_counts": {
+    "parent_only_collapse": 0,
+    "unused_child_subfeature": 0,
+    "distinct_subfeature_identity_collapse": 0,
+    "condition_preservation_failure": 0,
+    "direction_preservation_failure": 0,
+    "relation_nonoperand_semantics_loss": 0,
+    "condition_linkage_loss": 0,
+    "quantitative_relation_semantics_loss": 0,
+    "derived_geometry_output_not_bound": 0,
+    "lexicalized_anatomical_entity_false_subfeature_split": 0,
+    "subfeature_synonym_normalization_gap": 0,
+    "false_fallback": 0
+  },
+  "negative_tests": {
+    "child_removed_parent_whole_mesh": true,
+    "distinct_borders_same_geometry_hash": true,
+    "same_level_child_replaced_by_parent": true,
+    "te20_conditional_to_resolved": true,
+    "unknown_subfeature_whole_entity_fallback": true,
+    "direction_anterior_to_none": true,
+    "direction_posterior_to_none": true,
+    "direction_radial_to_none": true,
+    "direction_lateral_to_none": true,
+    "quantitative_value_to_none": true,
+    "quantitative_unit_to_none": true,
+    "derived_output_binding_removed": true,
+    "lexicalized_process_generic_split": true,
+    "atomic_fma_internal_child_executable": true,
+    "free_extremity_normalization_removed": true,
+    "synonym_left_unknown": true
+  },
+  "coordinate_generation_count": 0,
+  "legacy_c_coordinate_reference_count": 0,
+  "final_state": {
+    "stage2_automated_structural_validation": "PASS",
+    "stage2_semantic_repair_validation": "PASS",
+    "stage2_human_semantic_audit": "PENDING",
+    "stage3": "NOT_STARTED"
+  }
+}

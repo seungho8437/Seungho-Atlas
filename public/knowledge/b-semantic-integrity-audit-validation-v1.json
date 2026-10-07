@@ -1,0 +1,16 @@
+{
+  "status": "PASS_AUDIT_COMPLETENESS_WITH_SYSTEMIC_B_FAILURE",
+  "checks": {
+    "source_statements_583": true,
+    "location_361": true,
+    "notes_216": true,
+    "remarks_6": true,
+    "primary_source_verified_583": true,
+    "ledger_partition_complete": true,
+    "all_defects_have_required_inventory_fields": true,
+    "all_defect_pages_resolved": true,
+    "B_sha_unchanged": true,
+    "B_mutation_performed": false,
+    "C_mutation_performed": false
+  }
+}

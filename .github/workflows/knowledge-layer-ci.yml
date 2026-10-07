@@ -1,0 +1,33 @@
+name: Knowledge Layer CI
+
+on:
+  push:
+    branches:
+      - feature/korean-tcm-knowledge
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.0'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: node scripts/validate-atlas.mjs
+      - run: node --experimental-strip-types scripts/validate-interactions.mjs
+      - run: npm run validate:knowledge
+      - run: node scripts/validate-acupoint-location-specs.mjs
+      - run: node scripts/validate-acupoint-specialized-landmarks.mjs
+      - run: node scripts/validate-landmark-anchor-ui.mjs
+      - run: node scripts/validate-acupoint-final-calibration-geometry.mjs
+      - run: node scripts/validate-acupoint-coordinate-solver.mjs
+      - run: npm run audit:korean
+      - run: npm run audit:terminology
+      - run: npm run build
+      - run: npm run validate:cloudflare

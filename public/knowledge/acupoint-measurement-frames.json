@@ -1,0 +1,5924 @@
+{
+  "schemaVersion": 1,
+  "methodology": {
+    "principle": "Every B-cun/F-cun measurement receives a body-region-local frame; B-cun calibration anchors are resolved in the next geometric calibration stage, never by global body height."
+  },
+  "records": [
+    {
+      "acupointId": "LU1",
+      "frames": [
+        {
+          "id": "LU1:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 6,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          },
+          "sourceText": "6 B-cun"
+        },
+        {
+          "id": "LU1:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "inferior",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 64,
+            "end": 71
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LU2",
+      "frames": [
+        {
+          "id": "LU2:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 6,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 52,
+            "end": 59
+          },
+          "sourceText": "6 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LU3",
+      "frames": [
+        {
+          "id": "LU3:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "inferior",
+          "bodyRegion": "upper-arm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 47,
+            "end": 54
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LU4",
+      "frames": [
+        {
+          "id": "LU4:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "inferior",
+          "bodyRegion": "upper-arm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 47,
+            "end": 54
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LU5",
+      "frames": []
+    },
+    {
+      "acupointId": "LU6",
+      "frames": [
+        {
+          "id": "LU6:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 7,
+          "direction": "superior",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          },
+          "sourceText": "7 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LU7",
+      "frames": [
+        {
+          "id": "LU7:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "superior",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 64,
+            "end": 73
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LU8",
+      "frames": [
+        {
+          "id": "LU8:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "superior",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 45,
+            "end": 52
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LU9",
+      "frames": []
+    },
+    {
+      "acupointId": "LU10",
+      "frames": []
+    },
+    {
+      "acupointId": "LU11",
+      "frames": [
+        {
+          "id": "LU11:MF1",
+          "measurementIndex": 0,
+          "unit": "F-cun",
+          "value": 0.1,
+          "direction": "lateral",
+          "bodyRegion": "wrist-hand",
+          "sidePolicy": "bilateral",
+          "axis": "surface-geodesic",
+          "path": "surface-geodesic",
+          "calibration": "finger-cun",
+          "calibrationStatus": "model-independent-source-measurement",
+          "sourceSpan": {
+            "start": 35,
+            "end": 44
+          },
+          "sourceText": "0.1 F-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LI1",
+      "frames": [
+        {
+          "id": "LI1:MF1",
+          "measurementIndex": 0,
+          "unit": "F-cun",
+          "value": 0.1,
+          "direction": "lateral",
+          "bodyRegion": "wrist-hand",
+          "sidePolicy": "bilateral",
+          "axis": "surface-geodesic",
+          "path": "surface-geodesic",
+          "calibration": "finger-cun",
+          "calibrationStatus": "model-independent-source-measurement",
+          "sourceSpan": {
+            "start": 38,
+            "end": 47
+          },
+          "sourceText": "0.1 F-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LI2",
+      "frames": []
+    },
+    {
+      "acupointId": "LI3",
+      "frames": []
+    },
+    {
+      "acupointId": "LI4",
+      "frames": []
+    },
+    {
+      "acupointId": "LI5",
+      "frames": []
+    },
+    {
+      "acupointId": "LI6",
+      "frames": [
+        {
+          "id": "LI6:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "superior",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 43,
+            "end": 50
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LI7",
+      "frames": [
+        {
+          "id": "LI7:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5,
+          "direction": "superior",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 43,
+            "end": 50
+          },
+          "sourceText": "5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LI8",
+      "frames": [
+        {
+          "id": "LI8:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "inferior",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LI9",
+      "frames": [
+        {
+          "id": "LI9:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "inferior",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LI10",
+      "frames": [
+        {
+          "id": "LI10:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "inferior",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LI11",
+      "frames": []
+    },
+    {
+      "acupointId": "LI12",
+      "frames": []
+    },
+    {
+      "acupointId": "LI13",
+      "frames": [
+        {
+          "id": "LI13:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "superior",
+          "bodyRegion": "upper-arm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LI14",
+      "frames": [
+        {
+          "id": "LI14:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 7,
+          "direction": "superior",
+          "bodyRegion": "upper-arm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 34,
+            "end": 41
+          },
+          "sourceText": "7 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LI15",
+      "frames": []
+    },
+    {
+      "acupointId": "LI16",
+      "frames": []
+    },
+    {
+      "acupointId": "LI17",
+      "frames": []
+    },
+    {
+      "acupointId": "LI18",
+      "frames": []
+    },
+    {
+      "acupointId": "LI19",
+      "frames": [
+        {
+          "id": "LI19:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "lateral",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 51,
+            "end": 60
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LI20",
+      "frames": []
+    },
+    {
+      "acupointId": "ST1",
+      "frames": []
+    },
+    {
+      "acupointId": "ST2",
+      "frames": []
+    },
+    {
+      "acupointId": "ST3",
+      "frames": []
+    },
+    {
+      "acupointId": "ST4",
+      "frames": [
+        {
+          "id": "ST4:MF1",
+          "measurementIndex": 0,
+          "unit": "F-cun",
+          "value": 0.4,
+          "direction": "lateral",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "finger-cun",
+          "calibrationStatus": "model-independent-source-measurement",
+          "sourceSpan": {
+            "start": 16,
+            "end": 25
+          },
+          "sourceText": "0.4 F-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST5",
+      "frames": []
+    },
+    {
+      "acupointId": "ST6",
+      "frames": []
+    },
+    {
+      "acupointId": "ST7",
+      "frames": []
+    },
+    {
+      "acupointId": "ST8",
+      "frames": [
+        {
+          "id": "ST8:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "lateral",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 22,
+            "end": 31
+          },
+          "sourceText": "0.5 B-cun"
+        },
+        {
+          "id": "ST8:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 4.5,
+          "direction": "lateral",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 45,
+            "end": 54
+          },
+          "sourceText": "4.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST9",
+      "frames": []
+    },
+    {
+      "acupointId": "ST10",
+      "frames": []
+    },
+    {
+      "acupointId": "ST11",
+      "frames": []
+    },
+    {
+      "acupointId": "ST12",
+      "frames": [
+        {
+          "id": "ST12:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "lateral",
+          "bodyRegion": "neck",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 27,
+            "end": 34
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST13",
+      "frames": [
+        {
+          "id": "ST13:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 26,
+            "end": 33
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST14",
+      "frames": [
+        {
+          "id": "ST14:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST15",
+      "frames": [
+        {
+          "id": "ST15:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST16",
+      "frames": [
+        {
+          "id": "ST16:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST17",
+      "frames": []
+    },
+    {
+      "acupointId": "ST18",
+      "frames": [
+        {
+          "id": "ST18:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 30,
+            "end": 37
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST19",
+      "frames": [
+        {
+          "id": "ST19:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 6,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "6 B-cun"
+        },
+        {
+          "id": "ST19:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST20",
+      "frames": [
+        {
+          "id": "ST20:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "5 B-cun"
+        },
+        {
+          "id": "ST20:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST21",
+      "frames": [
+        {
+          "id": "ST21:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "4 B-cun"
+        },
+        {
+          "id": "ST21:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST22",
+      "frames": [
+        {
+          "id": "ST22:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "3 B-cun"
+        },
+        {
+          "id": "ST22:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST23",
+      "frames": [
+        {
+          "id": "ST23:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "2 B-cun"
+        },
+        {
+          "id": "ST23:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST24",
+      "frames": [
+        {
+          "id": "ST24:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "1 B-cun"
+        },
+        {
+          "id": "ST24:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST25",
+      "frames": [
+        {
+          "id": "ST25:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 20,
+            "end": 27
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST26",
+      "frames": [
+        {
+          "id": "ST26:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          },
+          "sourceText": "1 B-cun"
+        },
+        {
+          "id": "ST26:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST27",
+      "frames": [
+        {
+          "id": "ST27:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          },
+          "sourceText": "2 B-cun"
+        },
+        {
+          "id": "ST27:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST28",
+      "frames": [
+        {
+          "id": "ST28:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          },
+          "sourceText": "3 B-cun"
+        },
+        {
+          "id": "ST28:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST29",
+      "frames": [
+        {
+          "id": "ST29:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          },
+          "sourceText": "4 B-cun"
+        },
+        {
+          "id": "ST29:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST30",
+      "frames": [
+        {
+          "id": "ST30:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "pelvis-perineum",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST31",
+      "frames": []
+    },
+    {
+      "acupointId": "ST32",
+      "frames": [
+        {
+          "id": "ST32:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 6,
+          "direction": "superior",
+          "bodyRegion": "thigh",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 50,
+            "end": 57
+          },
+          "sourceText": "6 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST33",
+      "frames": [
+        {
+          "id": "ST33:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "superior",
+          "bodyRegion": "thigh",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 35,
+            "end": 42
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST34",
+      "frames": [
+        {
+          "id": "ST34:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "superior",
+          "bodyRegion": "thigh",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST35",
+      "frames": []
+    },
+    {
+      "acupointId": "ST36",
+      "frames": [
+        {
+          "id": "ST36:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "inferior",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST37",
+      "frames": [
+        {
+          "id": "ST37:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 6,
+          "direction": "inferior",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          },
+          "sourceText": "6 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST38",
+      "frames": [
+        {
+          "id": "ST38:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 8,
+          "direction": "inferior",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          },
+          "sourceText": "8 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST39",
+      "frames": [
+        {
+          "id": "ST39:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 9,
+          "direction": "inferior",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          },
+          "sourceText": "9 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST40",
+      "frames": [
+        {
+          "id": "ST40:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 8,
+          "direction": "superior",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 36,
+            "end": 43
+          },
+          "sourceText": "8 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "ST41",
+      "frames": []
+    },
+    {
+      "acupointId": "ST42",
+      "frames": []
+    },
+    {
+      "acupointId": "ST43",
+      "frames": []
+    },
+    {
+      "acupointId": "ST44",
+      "frames": []
+    },
+    {
+      "acupointId": "ST45",
+      "frames": [
+        {
+          "id": "ST45:MF1",
+          "measurementIndex": 0,
+          "unit": "F-cun",
+          "value": 0.1,
+          "direction": "lateral",
+          "bodyRegion": "ankle-foot",
+          "sidePolicy": "bilateral",
+          "axis": "surface-geodesic",
+          "path": "surface-geodesic",
+          "calibration": "finger-cun",
+          "calibrationStatus": "model-independent-source-measurement",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          },
+          "sourceText": "0.1 F-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SP1",
+      "frames": [
+        {
+          "id": "SP1:MF1",
+          "measurementIndex": 0,
+          "unit": "F-cun",
+          "value": 0.1,
+          "direction": "medial",
+          "bodyRegion": "wrist-hand",
+          "sidePolicy": "bilateral",
+          "axis": "surface-geodesic",
+          "path": "surface-geodesic",
+          "calibration": "finger-cun",
+          "calibrationStatus": "model-independent-source-measurement",
+          "sourceSpan": {
+            "start": 35,
+            "end": 44
+          },
+          "sourceText": "0.1 F-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SP2",
+      "frames": []
+    },
+    {
+      "acupointId": "SP3",
+      "frames": []
+    },
+    {
+      "acupointId": "SP4",
+      "frames": []
+    },
+    {
+      "acupointId": "SP5",
+      "frames": []
+    },
+    {
+      "acupointId": "SP6",
+      "frames": [
+        {
+          "id": "SP6:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "superior",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SP7",
+      "frames": [
+        {
+          "id": "SP7:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 6,
+          "direction": "superior",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          },
+          "sourceText": "6 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SP8",
+      "frames": [
+        {
+          "id": "SP8:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "inferior",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 36,
+            "end": 43
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SP9",
+      "frames": []
+    },
+    {
+      "acupointId": "SP10",
+      "frames": [
+        {
+          "id": "SP10:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "superior",
+          "bodyRegion": "thigh",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SP11",
+      "frames": []
+    },
+    {
+      "acupointId": "SP12",
+      "frames": []
+    },
+    {
+      "acupointId": "SP13",
+      "frames": [
+        {
+          "id": "SP13:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4.3,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 27
+          },
+          "sourceText": "4.3 B-cun"
+        },
+        {
+          "id": "SP13:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SP14",
+      "frames": [
+        {
+          "id": "SP14:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.3,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 27
+          },
+          "sourceText": "1.3 B-cun"
+        },
+        {
+          "id": "SP14:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SP15",
+      "frames": [
+        {
+          "id": "SP15:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 20,
+            "end": 27
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SP16",
+      "frames": [
+        {
+          "id": "SP16:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "3 B-cun"
+        },
+        {
+          "id": "SP16:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SP17",
+      "frames": [
+        {
+          "id": "SP17:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 6,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 30,
+            "end": 37
+          },
+          "sourceText": "6 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SP18",
+      "frames": [
+        {
+          "id": "SP18:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 6,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          },
+          "sourceText": "6 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SP19",
+      "frames": [
+        {
+          "id": "SP19:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 6,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          },
+          "sourceText": "6 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SP20",
+      "frames": [
+        {
+          "id": "SP20:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 6,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          },
+          "sourceText": "6 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SP21",
+      "frames": []
+    },
+    {
+      "acupointId": "HT1",
+      "frames": []
+    },
+    {
+      "acupointId": "HT2",
+      "frames": [
+        {
+          "id": "HT2:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "superior",
+          "bodyRegion": "upper-arm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 33,
+            "end": 40
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "HT3",
+      "frames": []
+    },
+    {
+      "acupointId": "HT4",
+      "frames": [
+        {
+          "id": "HT4:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "proximal",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 44,
+            "end": 53
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "HT5",
+      "frames": [
+        {
+          "id": "HT5:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "proximal",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "HT6",
+      "frames": [
+        {
+          "id": "HT6:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "proximal",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 50
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "HT7",
+      "frames": []
+    },
+    {
+      "acupointId": "HT8",
+      "frames": []
+    },
+    {
+      "acupointId": "HT9",
+      "frames": [
+        {
+          "id": "HT9:MF1",
+          "measurementIndex": 0,
+          "unit": "F-cun",
+          "value": 0.1,
+          "direction": "lateral",
+          "bodyRegion": "wrist-hand",
+          "sidePolicy": "bilateral",
+          "axis": "surface-geodesic",
+          "path": "surface-geodesic",
+          "calibration": "finger-cun",
+          "calibrationStatus": "model-independent-source-measurement",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          },
+          "sourceText": "0.1 F-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SI1",
+      "frames": [
+        {
+          "id": "SI1:MF1",
+          "measurementIndex": 0,
+          "unit": "F-cun",
+          "value": 0.1,
+          "direction": "medial",
+          "bodyRegion": "wrist-hand",
+          "sidePolicy": "bilateral",
+          "axis": "surface-geodesic",
+          "path": "surface-geodesic",
+          "calibration": "finger-cun",
+          "calibrationStatus": "model-independent-source-measurement",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          },
+          "sourceText": "0.1 F-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SI2",
+      "frames": []
+    },
+    {
+      "acupointId": "SI3",
+      "frames": []
+    },
+    {
+      "acupointId": "SI4",
+      "frames": []
+    },
+    {
+      "acupointId": "SI5",
+      "frames": []
+    },
+    {
+      "acupointId": "SI6",
+      "frames": [
+        {
+          "id": "SI6:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "proximal",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 42,
+            "end": 49
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SI7",
+      "frames": [
+        {
+          "id": "SI7:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5,
+          "direction": "proximal",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          },
+          "sourceText": "5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SI8",
+      "frames": []
+    },
+    {
+      "acupointId": "SI9",
+      "frames": [
+        {
+          "id": "SI9:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "superior",
+          "bodyRegion": "shoulder",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 31,
+            "end": 38
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SI10",
+      "frames": []
+    },
+    {
+      "acupointId": "SI11",
+      "frames": []
+    },
+    {
+      "acupointId": "SI12",
+      "frames": []
+    },
+    {
+      "acupointId": "SI13",
+      "frames": []
+    },
+    {
+      "acupointId": "SI14",
+      "frames": [
+        {
+          "id": "SI14:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 47,
+            "end": 54
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SI15",
+      "frames": [
+        {
+          "id": "SI15:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "SI16",
+      "frames": []
+    },
+    {
+      "acupointId": "SI17",
+      "frames": []
+    },
+    {
+      "acupointId": "SI18",
+      "frames": []
+    },
+    {
+      "acupointId": "SI19",
+      "frames": []
+    },
+    {
+      "acupointId": "BL1",
+      "frames": [
+        {
+          "id": "BL1:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 0.1,
+          "direction": "medial",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 61,
+            "end": 70
+          },
+          "sourceText": "0.1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL2",
+      "frames": []
+    },
+    {
+      "acupointId": "BL3",
+      "frames": [
+        {
+          "id": "BL3:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 24,
+            "end": 33
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL4",
+      "frames": [
+        {
+          "id": "BL4:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          },
+          "sourceText": "0.5 B-cun"
+        },
+        {
+          "id": "BL4:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 38,
+            "end": 47
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL5",
+      "frames": [
+        {
+          "id": "BL5:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 22
+          },
+          "sourceText": "1 B-cun"
+        },
+        {
+          "id": "BL5:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 36,
+            "end": 45
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL6",
+      "frames": [
+        {
+          "id": "BL6:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2.5,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          },
+          "sourceText": "2.5 B-cun"
+        },
+        {
+          "id": "BL6:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 38,
+            "end": 47
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL7",
+      "frames": [
+        {
+          "id": "BL7:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 22
+          },
+          "sourceText": "4 B-cun"
+        },
+        {
+          "id": "BL7:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 36,
+            "end": 45
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL8",
+      "frames": [
+        {
+          "id": "BL8:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5.5,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          },
+          "sourceText": "5.5 B-cun"
+        },
+        {
+          "id": "BL8:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 38,
+            "end": 47
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL9",
+      "frames": [
+        {
+          "id": "BL9:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.3,
+          "direction": "lateral",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 48
+          },
+          "sourceText": "1.3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL10",
+      "frames": []
+    },
+    {
+      "acupointId": "BL11",
+      "frames": [
+        {
+          "id": "BL11:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 47,
+            "end": 56
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL12",
+      "frames": [
+        {
+          "id": "BL12:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 47,
+            "end": 56
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL13",
+      "frames": [
+        {
+          "id": "BL13:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 47,
+            "end": 56
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL14",
+      "frames": [
+        {
+          "id": "BL14:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 47,
+            "end": 56
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL15",
+      "frames": [
+        {
+          "id": "BL15:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 57
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL16",
+      "frames": [
+        {
+          "id": "BL16:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 57
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL17",
+      "frames": [
+        {
+          "id": "BL17:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 57
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL18",
+      "frames": [
+        {
+          "id": "BL18:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 57
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL19",
+      "frames": [
+        {
+          "id": "BL19:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 57
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL20",
+      "frames": [
+        {
+          "id": "BL20:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 49,
+            "end": 58
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL21",
+      "frames": [
+        {
+          "id": "BL21:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 49,
+            "end": 58
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL22",
+      "frames": [
+        {
+          "id": "BL22:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 46,
+            "end": 55
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL23",
+      "frames": [
+        {
+          "id": "BL23:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 46,
+            "end": 55
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL24",
+      "frames": [
+        {
+          "id": "BL24:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 46,
+            "end": 55
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL25",
+      "frames": [
+        {
+          "id": "BL25:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 46,
+            "end": 55
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL26",
+      "frames": [
+        {
+          "id": "BL26:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 47,
+            "end": 56
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL27",
+      "frames": [
+        {
+          "id": "BL27:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "pelvis-perineum",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 50
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL28",
+      "frames": [
+        {
+          "id": "BL28:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "pelvis-perineum",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 50
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL29",
+      "frames": [
+        {
+          "id": "BL29:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "pelvis-perineum",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 50
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL30",
+      "frames": [
+        {
+          "id": "BL30:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "lateral",
+          "bodyRegion": "pelvis-perineum",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 50
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL31",
+      "frames": []
+    },
+    {
+      "acupointId": "BL32",
+      "frames": []
+    },
+    {
+      "acupointId": "BL33",
+      "frames": []
+    },
+    {
+      "acupointId": "BL34",
+      "frames": []
+    },
+    {
+      "acupointId": "BL35",
+      "frames": [
+        {
+          "id": "BL35:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "lateral",
+          "bodyRegion": "pelvis-perineum",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 21,
+            "end": 30
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL36",
+      "frames": []
+    },
+    {
+      "acupointId": "BL37",
+      "frames": [
+        {
+          "id": "BL37:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 6,
+          "direction": "inferior",
+          "bodyRegion": "thigh",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          },
+          "sourceText": "6 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL38",
+      "frames": [
+        {
+          "id": "BL38:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "proximal",
+          "bodyRegion": "knee",
+          "sidePolicy": "bilateral",
+          "axis": "surface-geodesic",
+          "path": "surface-geodesic",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL39",
+      "frames": []
+    },
+    {
+      "acupointId": "BL40",
+      "frames": []
+    },
+    {
+      "acupointId": "BL41",
+      "frames": [
+        {
+          "id": "BL41:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 47,
+            "end": 54
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL42",
+      "frames": [
+        {
+          "id": "BL42:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 47,
+            "end": 54
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL43",
+      "frames": [
+        {
+          "id": "BL43:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 47,
+            "end": 54
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL44",
+      "frames": [
+        {
+          "id": "BL44:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL45",
+      "frames": [
+        {
+          "id": "BL45:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL46",
+      "frames": [
+        {
+          "id": "BL46:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL47",
+      "frames": [
+        {
+          "id": "BL47:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL48",
+      "frames": [
+        {
+          "id": "BL48:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL49",
+      "frames": [
+        {
+          "id": "BL49:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 49,
+            "end": 56
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL50",
+      "frames": [
+        {
+          "id": "BL50:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 49,
+            "end": 56
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL51",
+      "frames": [
+        {
+          "id": "BL51:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 46,
+            "end": 53
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL52",
+      "frames": [
+        {
+          "id": "BL52:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "back",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 46,
+            "end": 53
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL53",
+      "frames": [
+        {
+          "id": "BL53:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "pelvis-perineum",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL54",
+      "frames": [
+        {
+          "id": "BL54:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "pelvis-perineum",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL55",
+      "frames": [
+        {
+          "id": "BL55:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "inferior",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 41,
+            "end": 48
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL56",
+      "frames": [
+        {
+          "id": "BL56:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5,
+          "direction": "inferior",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 36,
+            "end": 43
+          },
+          "sourceText": "5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL57",
+      "frames": []
+    },
+    {
+      "acupointId": "BL58",
+      "frames": [
+        {
+          "id": "BL58:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 7,
+          "direction": "proximal",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 50,
+            "end": 57
+          },
+          "sourceText": "7 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL59",
+      "frames": [
+        {
+          "id": "BL59:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "proximal",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "BL60",
+      "frames": []
+    },
+    {
+      "acupointId": "BL61",
+      "frames": []
+    },
+    {
+      "acupointId": "BL62",
+      "frames": []
+    },
+    {
+      "acupointId": "BL63",
+      "frames": []
+    },
+    {
+      "acupointId": "BL64",
+      "frames": []
+    },
+    {
+      "acupointId": "BL65",
+      "frames": []
+    },
+    {
+      "acupointId": "BL66",
+      "frames": []
+    },
+    {
+      "acupointId": "BL67",
+      "frames": [
+        {
+          "id": "BL67:MF1",
+          "measurementIndex": 0,
+          "unit": "F-cun",
+          "value": 0.1,
+          "direction": "proximal",
+          "bodyRegion": "ankle-foot",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "finger-cun",
+          "calibrationStatus": "model-independent-source-measurement",
+          "sourceSpan": {
+            "start": 32,
+            "end": 41
+          },
+          "sourceText": "0.1 F-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI1",
+      "frames": []
+    },
+    {
+      "acupointId": "KI2",
+      "frames": []
+    },
+    {
+      "acupointId": "KI3",
+      "frames": []
+    },
+    {
+      "acupointId": "KI4",
+      "frames": []
+    },
+    {
+      "acupointId": "KI5",
+      "frames": [
+        {
+          "id": "KI5:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "inferior",
+          "bodyRegion": "ankle-foot",
+          "sidePolicy": "bilateral",
+          "axis": "surface-geodesic",
+          "path": "surface-geodesic",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 17,
+            "end": 24
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI6",
+      "frames": [
+        {
+          "id": "KI6:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "inferior",
+          "bodyRegion": "ankle-foot",
+          "sidePolicy": "bilateral",
+          "axis": "surface-geodesic",
+          "path": "surface-geodesic",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 21,
+            "end": 28
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI7",
+      "frames": [
+        {
+          "id": "KI7:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "superior",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 34,
+            "end": 41
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI8",
+      "frames": [
+        {
+          "id": "KI8:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "superior",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 44,
+            "end": 51
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI9",
+      "frames": [
+        {
+          "id": "KI9:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5,
+          "direction": "superior",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 40,
+            "end": 47
+          },
+          "sourceText": "5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI10",
+      "frames": []
+    },
+    {
+      "acupointId": "KI11",
+      "frames": [
+        {
+          "id": "KI11:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          },
+          "sourceText": "5 B-cun"
+        },
+        {
+          "id": "KI11:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 48
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI12",
+      "frames": [
+        {
+          "id": "KI12:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          },
+          "sourceText": "4 B-cun"
+        },
+        {
+          "id": "KI12:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 48
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI13",
+      "frames": [
+        {
+          "id": "KI13:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          },
+          "sourceText": "3 B-cun"
+        },
+        {
+          "id": "KI13:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 48
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI14",
+      "frames": [
+        {
+          "id": "KI14:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          },
+          "sourceText": "2 B-cun"
+        },
+        {
+          "id": "KI14:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 48
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI15",
+      "frames": [
+        {
+          "id": "KI15:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          },
+          "sourceText": "1 B-cun"
+        },
+        {
+          "id": "KI15:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 48
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI16",
+      "frames": [
+        {
+          "id": "KI16:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 20,
+            "end": 29
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI17",
+      "frames": [
+        {
+          "id": "KI17:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "2 B-cun"
+        },
+        {
+          "id": "KI17:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI18",
+      "frames": [
+        {
+          "id": "KI18:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "3 B-cun"
+        },
+        {
+          "id": "KI18:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI19",
+      "frames": [
+        {
+          "id": "KI19:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "4 B-cun"
+        },
+        {
+          "id": "KI19:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI20",
+      "frames": [
+        {
+          "id": "KI20:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "5 B-cun"
+        },
+        {
+          "id": "KI20:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI21",
+      "frames": [
+        {
+          "id": "KI21:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 6,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "6 B-cun"
+        },
+        {
+          "id": "KI21:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "lateral",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 46
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI22",
+      "frames": [
+        {
+          "id": "KI22:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 30,
+            "end": 37
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI23",
+      "frames": [
+        {
+          "id": "KI23:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI24",
+      "frames": [
+        {
+          "id": "KI24:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI25",
+      "frames": [
+        {
+          "id": "KI25:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI26",
+      "frames": [
+        {
+          "id": "KI26:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "KI27",
+      "frames": [
+        {
+          "id": "KI27:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "PC1",
+      "frames": [
+        {
+          "id": "PC1:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 29,
+            "end": 36
+          },
+          "sourceText": "5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "PC2",
+      "frames": [
+        {
+          "id": "PC2:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "inferior",
+          "bodyRegion": "upper-arm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 42,
+            "end": 49
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "PC3",
+      "frames": []
+    },
+    {
+      "acupointId": "PC4",
+      "frames": [
+        {
+          "id": "PC4:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5,
+          "direction": "proximal",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 49,
+            "end": 56
+          },
+          "sourceText": "5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "PC5",
+      "frames": [
+        {
+          "id": "PC5:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "proximal",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 49,
+            "end": 56
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "PC6",
+      "frames": [
+        {
+          "id": "PC6:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "proximal",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 49,
+            "end": 56
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "PC7",
+      "frames": []
+    },
+    {
+      "acupointId": "PC8",
+      "frames": []
+    },
+    {
+      "acupointId": "PC9",
+      "frames": []
+    },
+    {
+      "acupointId": "TE1",
+      "frames": [
+        {
+          "id": "TE1:MF1",
+          "measurementIndex": 0,
+          "unit": "F-cun",
+          "value": 0.1,
+          "direction": "proximal",
+          "bodyRegion": "wrist-hand",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "finger-cun",
+          "calibrationStatus": "model-independent-source-measurement",
+          "sourceSpan": {
+            "start": 32,
+            "end": 41
+          },
+          "sourceText": "0.1 F-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "TE2",
+      "frames": []
+    },
+    {
+      "acupointId": "TE3",
+      "frames": []
+    },
+    {
+      "acupointId": "TE4",
+      "frames": []
+    },
+    {
+      "acupointId": "TE5",
+      "frames": [
+        {
+          "id": "TE5:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "proximal",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 46,
+            "end": 53
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "TE6",
+      "frames": [
+        {
+          "id": "TE6:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "proximal",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 46,
+            "end": 53
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "TE7",
+      "frames": [
+        {
+          "id": "TE7:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "proximal",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 35,
+            "end": 42
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "TE8",
+      "frames": [
+        {
+          "id": "TE8:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "proximal",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 46,
+            "end": 53
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "TE9",
+      "frames": [
+        {
+          "id": "TE9:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5,
+          "direction": "distal",
+          "bodyRegion": "forearm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 46,
+            "end": 53
+          },
+          "sourceText": "5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "TE10",
+      "frames": [
+        {
+          "id": "TE10:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "proximal",
+          "bodyRegion": "elbow",
+          "sidePolicy": "bilateral",
+          "axis": "surface-geodesic",
+          "path": "surface-geodesic",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 25,
+            "end": 32
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "TE11",
+      "frames": [
+        {
+          "id": "TE11:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "proximal",
+          "bodyRegion": "upper-arm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "TE12",
+      "frames": [
+        {
+          "id": "TE12:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5,
+          "direction": "proximal",
+          "bodyRegion": "upper-arm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 48,
+            "end": 55
+          },
+          "sourceText": "5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "TE13",
+      "frames": [
+        {
+          "id": "TE13:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "inferior",
+          "bodyRegion": "upper-arm",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 35,
+            "end": 42
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "TE14",
+      "frames": []
+    },
+    {
+      "acupointId": "TE15",
+      "frames": []
+    },
+    {
+      "acupointId": "TE16",
+      "frames": []
+    },
+    {
+      "acupointId": "TE17",
+      "frames": []
+    },
+    {
+      "acupointId": "TE18",
+      "frames": []
+    },
+    {
+      "acupointId": "TE19",
+      "frames": []
+    },
+    {
+      "acupointId": "TE20",
+      "frames": []
+    },
+    {
+      "acupointId": "TE21",
+      "frames": []
+    },
+    {
+      "acupointId": "TE22",
+      "frames": []
+    },
+    {
+      "acupointId": "TE23",
+      "frames": []
+    },
+    {
+      "acupointId": "GB1",
+      "frames": [
+        {
+          "id": "GB1:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "lateral",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 21,
+            "end": 30
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB2",
+      "frames": []
+    },
+    {
+      "acupointId": "GB3",
+      "frames": []
+    },
+    {
+      "acupointId": "GB4",
+      "frames": []
+    },
+    {
+      "acupointId": "GB5",
+      "frames": []
+    },
+    {
+      "acupointId": "GB6",
+      "frames": []
+    },
+    {
+      "acupointId": "GB7",
+      "frames": []
+    },
+    {
+      "acupointId": "GB8",
+      "frames": [
+        {
+          "id": "GB8:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 32,
+            "end": 41
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB9",
+      "frames": [
+        {
+          "id": "GB9:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 31,
+            "end": 38
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB10",
+      "frames": []
+    },
+    {
+      "acupointId": "GB11",
+      "frames": []
+    },
+    {
+      "acupointId": "GB12",
+      "frames": []
+    },
+    {
+      "acupointId": "GB13",
+      "frames": [
+        {
+          "id": "GB13:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          },
+          "sourceText": "0.5 B-cun"
+        },
+        {
+          "id": "GB13:MF2",
+          "measurementIndex": 1,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "lateral",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 38,
+            "end": 45
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB14",
+      "frames": [
+        {
+          "id": "GB14:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 13,
+            "end": 20
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB15",
+      "frames": [
+        {
+          "id": "GB15:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "medial",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB16",
+      "frames": [
+        {
+          "id": "GB16:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "medial",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB17",
+      "frames": [
+        {
+          "id": "GB17:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2.5,
+          "direction": "medial",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          },
+          "sourceText": "2.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB18",
+      "frames": [
+        {
+          "id": "GB18:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "medial",
+          "bodyRegion": "head",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 22
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB19",
+      "frames": []
+    },
+    {
+      "acupointId": "GB20",
+      "frames": []
+    },
+    {
+      "acupointId": "GB21",
+      "frames": []
+    },
+    {
+      "acupointId": "GB22",
+      "frames": []
+    },
+    {
+      "acupointId": "GB23",
+      "frames": [
+        {
+          "id": "GB23:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "anterior",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "surface-geodesic",
+          "path": "surface-geodesic",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 32,
+            "end": 39
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB24",
+      "frames": [
+        {
+          "id": "GB24:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 30,
+            "end": 37
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB25",
+      "frames": []
+    },
+    {
+      "acupointId": "GB26",
+      "frames": []
+    },
+    {
+      "acupointId": "GB27",
+      "frames": [
+        {
+          "id": "GB27:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB28",
+      "frames": [
+        {
+          "id": "GB28:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 25,
+            "end": 34
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB29",
+      "frames": []
+    },
+    {
+      "acupointId": "GB30",
+      "frames": []
+    },
+    {
+      "acupointId": "GB31",
+      "frames": []
+    },
+    {
+      "acupointId": "GB32",
+      "frames": [
+        {
+          "id": "GB32:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 7,
+          "direction": "superior",
+          "bodyRegion": "thigh",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 30,
+            "end": 37
+          },
+          "sourceText": "7 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB33",
+      "frames": []
+    },
+    {
+      "acupointId": "GB34",
+      "frames": []
+    },
+    {
+      "acupointId": "GB35",
+      "frames": [
+        {
+          "id": "GB35:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 7,
+          "direction": "proximal",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          },
+          "sourceText": "7 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB36",
+      "frames": [
+        {
+          "id": "GB36:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 7,
+          "direction": "proximal",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          },
+          "sourceText": "7 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB37",
+      "frames": [
+        {
+          "id": "GB37:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5,
+          "direction": "proximal",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          },
+          "sourceText": "5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB38",
+      "frames": [
+        {
+          "id": "GB38:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "proximal",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB39",
+      "frames": [
+        {
+          "id": "GB39:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "proximal",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 37,
+            "end": 44
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GB40",
+      "frames": []
+    },
+    {
+      "acupointId": "GB41",
+      "frames": []
+    },
+    {
+      "acupointId": "GB42",
+      "frames": []
+    },
+    {
+      "acupointId": "GB43",
+      "frames": []
+    },
+    {
+      "acupointId": "GB44",
+      "frames": [
+        {
+          "id": "GB44:MF1",
+          "measurementIndex": 0,
+          "unit": "F-cun",
+          "value": 0.1,
+          "direction": "proximal",
+          "bodyRegion": "ankle-foot",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "finger-cun",
+          "calibrationStatus": "model-independent-source-measurement",
+          "sourceSpan": {
+            "start": 32,
+            "end": 41
+          },
+          "sourceText": "0.1 F-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LR1",
+      "frames": [
+        {
+          "id": "LR1:MF1",
+          "measurementIndex": 0,
+          "unit": "F-cun",
+          "value": 0.1,
+          "direction": "proximal",
+          "bodyRegion": "wrist-hand",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "finger-cun",
+          "calibrationStatus": "model-independent-source-measurement",
+          "sourceSpan": {
+            "start": 32,
+            "end": 41
+          },
+          "sourceText": "0.1 F-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LR2",
+      "frames": []
+    },
+    {
+      "acupointId": "LR3",
+      "frames": []
+    },
+    {
+      "acupointId": "LR4",
+      "frames": []
+    },
+    {
+      "acupointId": "LR5",
+      "frames": [
+        {
+          "id": "LR5:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5,
+          "direction": "proximal",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          },
+          "sourceText": "5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LR6",
+      "frames": [
+        {
+          "id": "LR6:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 7,
+          "direction": "proximal",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 46
+          },
+          "sourceText": "7 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LR7",
+      "frames": [
+        {
+          "id": "LR7:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "posterior",
+          "bodyRegion": "leg",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 38,
+            "end": 45
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LR8",
+      "frames": []
+    },
+    {
+      "acupointId": "LR9",
+      "frames": [
+        {
+          "id": "LR9:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "proximal",
+          "bodyRegion": "thigh",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 40,
+            "end": 47
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LR10",
+      "frames": [
+        {
+          "id": "LR10:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "distal",
+          "bodyRegion": "thigh",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 22,
+            "end": 29
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LR11",
+      "frames": [
+        {
+          "id": "LR11:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "distal",
+          "bodyRegion": "thigh",
+          "sidePolicy": "bilateral",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 22,
+            "end": 29
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LR12",
+      "frames": [
+        {
+          "id": "LR12:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2.5,
+          "direction": "lateral",
+          "bodyRegion": "pelvis-perineum",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 39,
+            "end": 48
+          },
+          "sourceText": "2.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "LR13",
+      "frames": []
+    },
+    {
+      "acupointId": "LR14",
+      "frames": [
+        {
+          "id": "LR14:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "lateral",
+          "bodyRegion": "chest",
+          "sidePolicy": "bilateral",
+          "axis": "transverse",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 30,
+            "end": 37
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GV1",
+      "frames": []
+    },
+    {
+      "acupointId": "GV2",
+      "frames": []
+    },
+    {
+      "acupointId": "GV3",
+      "frames": []
+    },
+    {
+      "acupointId": "GV4",
+      "frames": []
+    },
+    {
+      "acupointId": "GV5",
+      "frames": []
+    },
+    {
+      "acupointId": "GV6",
+      "frames": []
+    },
+    {
+      "acupointId": "GV7",
+      "frames": []
+    },
+    {
+      "acupointId": "GV8",
+      "frames": []
+    },
+    {
+      "acupointId": "GV9",
+      "frames": []
+    },
+    {
+      "acupointId": "GV10",
+      "frames": []
+    },
+    {
+      "acupointId": "GV11",
+      "frames": []
+    },
+    {
+      "acupointId": "GV12",
+      "frames": []
+    },
+    {
+      "acupointId": "GV13",
+      "frames": []
+    },
+    {
+      "acupointId": "GV14",
+      "frames": []
+    },
+    {
+      "acupointId": "GV15",
+      "frames": []
+    },
+    {
+      "acupointId": "GV16",
+      "frames": []
+    },
+    {
+      "acupointId": "GV17",
+      "frames": []
+    },
+    {
+      "acupointId": "GV18",
+      "frames": [
+        {
+          "id": "GV18:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 22
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GV19",
+      "frames": [
+        {
+          "id": "GV19:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5.5,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          },
+          "sourceText": "5.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GV20",
+      "frames": [
+        {
+          "id": "GV20:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 22
+          },
+          "sourceText": "5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GV21",
+      "frames": [
+        {
+          "id": "GV21:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3.5,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          },
+          "sourceText": "3.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GV22",
+      "frames": [
+        {
+          "id": "GV22:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 22
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GV23",
+      "frames": [
+        {
+          "id": "GV23:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 22
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GV24",
+      "frames": [
+        {
+          "id": "GV24:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 0.5,
+          "direction": "superior",
+          "bodyRegion": "head",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 15,
+            "end": 24
+          },
+          "sourceText": "0.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "GV25",
+      "frames": []
+    },
+    {
+      "acupointId": "GV26",
+      "frames": []
+    },
+    {
+      "acupointId": "GV27",
+      "frames": []
+    },
+    {
+      "acupointId": "GV28",
+      "frames": []
+    },
+    {
+      "acupointId": "CV1",
+      "frames": []
+    },
+    {
+      "acupointId": "CV2",
+      "frames": []
+    },
+    {
+      "acupointId": "CV3",
+      "frames": [
+        {
+          "id": "CV3:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "CV4",
+      "frames": [
+        {
+          "id": "CV4:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "CV5",
+      "frames": [
+        {
+          "id": "CV5:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "CV6",
+      "frames": [
+        {
+          "id": "CV6:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1.5,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 27
+          },
+          "sourceText": "1.5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "CV7",
+      "frames": [
+        {
+          "id": "CV7:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "CV8",
+      "frames": []
+    },
+    {
+      "acupointId": "CV9",
+      "frames": [
+        {
+          "id": "CV9:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "CV10",
+      "frames": [
+        {
+          "id": "CV10:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 2,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "2 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "CV11",
+      "frames": [
+        {
+          "id": "CV11:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 3,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "3 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "CV12",
+      "frames": [
+        {
+          "id": "CV12:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 4,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "4 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "CV13",
+      "frames": [
+        {
+          "id": "CV13:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 5,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "5 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "CV14",
+      "frames": [
+        {
+          "id": "CV14:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 6,
+          "direction": "superior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 16,
+            "end": 23
+          },
+          "sourceText": "6 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "CV15",
+      "frames": [
+        {
+          "id": "CV15:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "inferior",
+          "bodyRegion": "abdomen",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 17,
+            "end": 24
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "CV16",
+      "frames": []
+    },
+    {
+      "acupointId": "CV17",
+      "frames": []
+    },
+    {
+      "acupointId": "CV18",
+      "frames": []
+    },
+    {
+      "acupointId": "CV19",
+      "frames": []
+    },
+    {
+      "acupointId": "CV20",
+      "frames": []
+    },
+    {
+      "acupointId": "CV21",
+      "frames": [
+        {
+          "id": "CV21:MF1",
+          "measurementIndex": 0,
+          "unit": "B-cun",
+          "value": 1,
+          "direction": "inferior",
+          "bodyRegion": "chest",
+          "sidePolicy": "midline",
+          "axis": "longitudinal",
+          "path": "local-anatomical-axis",
+          "calibration": "proportional-bone-cun",
+          "calibrationStatus": "requires-regional-cun-anchor-resolution",
+          "sourceSpan": {
+            "start": 18,
+            "end": 25
+          },
+          "sourceText": "1 B-cun"
+        }
+      ]
+    },
+    {
+      "acupointId": "CV22",
+      "frames": []
+    },
+    {
+      "acupointId": "CV23",
+      "frames": []
+    },
+    {
+      "acupointId": "CV24",
+      "frames": []
+    }
+  ]
+}

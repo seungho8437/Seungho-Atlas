@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "mesh_binding": {
+    "atlas_sha256": "da72bf9b512622cab3f69d1e1eef131c9ec279bd6b0f2973f375ec285b69792a",
+    "skin_part_id": "FJ2810",
+    "frame": {
+      "units": "m",
+      "left": "+x",
+      "anterior": "+z",
+      "up": "+y"
+    }
+  },
+  "generated_at": "2026-10-07T00:00:00.000Z",
+  "warnings": [],
+  "paths": []
+}

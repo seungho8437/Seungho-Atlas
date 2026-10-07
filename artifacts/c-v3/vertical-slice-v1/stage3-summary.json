@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-vertical-slice-v1-stage3-summary",
+  "status": "AUTOMATED_VALIDATED_HUMAN_AUDIT_PENDING",
+  "summary": {
+    "logical_points": 20,
+    "generated_points": 0,
+    "generated_coordinates": 0,
+    "unresolved_stage3": 4,
+    "blocked_by_stage2": 16,
+    "legacy_coordinate_inputs": 0
+  },
+  "validation": {
+    "status": "PASS",
+    "checks": 89,
+    "errors": 0,
+    "negative_tests": {
+      "forged_coordinate_rejected": true,
+      "duplicate_side_rejected": true,
+      "over_budget_projection_rejected": true,
+      "missing_trace_rejected": true,
+      "stage2_unresolved_coordinate_injection_rejected": true,
+      "suppressed_operand_injection_rejected": true
+    },
+    "suppressed_provenance_watchpoint_metrics": {
+      "suppressed_executable_operand_count": 0,
+      "suppressed_status_aggregation_influence_count": 0,
+      "suppressed_only_resolved_path_count": 0
+    }
+  },
+  "deployable": false,
+  "production_write": false,
+  "stage4": "NOT_STARTED"
+}

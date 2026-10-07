@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0.0",
+  "zip_sha256": "1e630d2ad4bf7df5965aa2b04659376af3745dd7ac0b6f15285f3a4d15a101bc",
+  "zip_bytes": 516093,
+  "testzip_bad_member": null,
+  "integrity_PASS": true,
+  "contains_content_manifest": true,
+  "member_count": 19
+}

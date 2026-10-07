@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0.0",
+  "artifact": "c-v3-suppressed-provenance-expansion-watchpoint",
+  "watchpoint_id": "SUPPRESSED_PROVENANCE_EXECUTION_ISOLATION",
+  "blocking_now": false,
+  "applies_to": [
+    "expansion cohort",
+    "361-point full execution"
+  ],
+  "description": "Suppressed/provenance-only parse nodes may remain in the audit graph, but must never participate in canonical semantic execution, point-status determination, or false RESOLVED inference.",
+  "mandatory_metrics": [
+    {
+      "metric": "suppressed_executable_operand_count",
+      "definition": "Count semantic_suppressed=true nodes appearing in executable_argument_node_ids.",
+      "expected": 0
+    },
+    {
+      "metric": "suppressed_status_aggregation_influence_count",
+      "definition": "Count cases where semantic_suppressed=true node status changes point-level RESOLVED/UNRESOLVED aggregation.",
+      "expected": 0
+    },
+    {
+      "metric": "suppressed_only_resolved_path_count",
+      "definition": "Count RESOLVED relations whose canonical success depends on a suppressed node or suppressed-only path.",
+      "expected": 0
+    }
+  ],
+  "violation_handling": [
+    "Do not patch the individual point first.",
+    "Inventory every occurrence across the active cohort/full dataset.",
+    "Determine whether the same structural pattern repeats.",
+    "Determine whether source semantics or canonical execution is actually affected.",
+    "Promote to a blocking defect family only when promotion criteria are met.",
+    "If promoted: defect family -> validator contract -> negative test -> full regression."
+  ],
+  "promotion_criteria": [
+    "WHO/source semantics is actually lost or transformed.",
+    "An incorrect operand/operator/direction/measurement/condition is executed.",
+    "The issue can produce false RESOLVED or an incorrect coordinate.",
+    "The same structural failure repeats across independent source expressions.",
+    "A frozen semantic-contract invariant is violated."
+  ],
+  "non_blocking_by_default": [
+    "suppressed parser residue outside executable graph",
+    "provenance-only shadow parse",
+    "human-review renderer duplicate display",
+    "diagnostic node with no canonical execution/status effect"
+  ],
+  "prohibited_overfitting": [
+    "BL17-specific rule",
+    "GB26-specific rule",
+    "acupoint-ID hard-code",
+    "single-WHO-string exception",
+    "point-specific suppression to satisfy validator"
+  ],
+  "current_task_invariants": {
+    "semantic_graph_modifications": 0,
+    "point_specific_patches": 0,
+    "coordinates_generated": 0,
+    "legacy_c_coordinate_references_introduced": 0,
+    "stage3_started": false
+  }
+}
