@@ -70,7 +70,7 @@ export function buildRenderRegistry(source,acupoints,binding,generatedAt=new Dat
   const def=byId.get(item.id);if(!def)throw new Error('Unknown acupoint '+item.id);
   if(item.status==='SKIPPED')continue;
   if(!item.position||!item.surface)throw new Error(item.id+' requires position and surface');
-  points.push({...item,origin:'placed',snap_distance_m:0});
+  points.push({...item,origin:'placed'});
   if(def.laterality==='bilateral'){
    const m=mirrorAndSnap(binding,item.position),side=item.side==='left'?'right':'left',flagged=m.distance>.003||item.status==='FLAGGED';
    points.push({id:item.id,side,position:m.position,surface:m.surface,status:flagged?'FLAGGED':item.status,origin:'mirrored',snap_distance_m:m.distance,note:item.note??''});
