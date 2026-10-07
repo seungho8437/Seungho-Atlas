@@ -39,7 +39,7 @@ export type AcupointRenderPoint={
  surface:AcupointSurface;
  status:'PLACED'|'FLAGGED';
  origin:AcupointOrigin;
- snap_distance_m:number;
+ snap_distance_m?:number;
  note?:string;
 };
 
@@ -61,7 +61,7 @@ export type AcupointPlacementCandidate={
   side:'left'|'right';
   position:[number,number,number];
   surface:AcupointSurface;
-  snap_distance_m?:number;
+  snap_distance_m:number;
  };
 };
 
