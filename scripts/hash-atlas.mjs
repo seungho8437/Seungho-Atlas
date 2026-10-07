@@ -12,4 +12,10 @@ const skin=atlas.parts.find(part=>part.id==='FJ2810');
 if(!skin)throw new Error('Skin part FJ2810 not found');
 const out={atlas_sha256:hash.digest('hex'),skin_part_id:'FJ2810',skin_triangles:skin.indexCount/3};
 if(process.argv.includes('--stdout'))console.log('ATLAS_SHA256='+out.atlas_sha256);
-else{writeFileSync(join(modelDir,'atlas.hash.json'),JSON.stringify(out,null,2)+'\n');console.log('Wrote public/models/atlas.hash.json',out.atlas_sha256);}
+else if(process.argv.includes('--check')){
+ const saved=JSON.parse(readFileSync(join(modelDir,'atlas.hash.json'),'utf8'));
+ if(saved.atlas_sha256!==out.atlas_sha256||saved.skin_part_id!==out.skin_part_id||saved.skin_triangles!==out.skin_triangles){
+  console.error('atlas.hash.json is stale', {expected:out,actual:saved});process.exit(1);
+ }
+ console.log('Atlas hash binding PASS',out.atlas_sha256);
+}else{writeFileSync(join(modelDir,'atlas.hash.json'),JSON.stringify(out,null,2)+'\n');console.log('Wrote public/models/atlas.hash.json',out.atlas_sha256);}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "mesh_binding": {
-    "atlas_sha256": "c359f4bcd2cba90b7411d66d5e9fc04dc81294d46cd5c1e8b212c824f2e5bbee",
+    "atlas_sha256": "da72bf9b512622cab3f69d1e1eef131c9ec279bd6b0f2973f375ec285b69792a",
     "skin_part_id": "FJ2810",
     "frame": {
       "units": "m",
