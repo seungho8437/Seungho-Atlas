@@ -84,7 +84,52 @@ export default function Home(){
  const goPlacement=(index:number)=>{setPlacementIndex(Math.max(0,Math.min(index,placementQueue.length-1)));setPlacementDraft(null);setPlacementImportErrors([]);};
  const findPlacement=()=>{const id=placementSearch.trim().toUpperCase(),index=placementQueue.findIndex(p=>p.id===id);if(index>=0)goPlacement(index);else setPlacementImportErrors([`${id||'입력값'}: 361혈 큐에서 찾을 수 없습니다.`]);};
  const exportPlacements=()=>{if(!placementSource)return;const blob=new Blob([JSON.stringify(placementSource,null,2)+'\n'],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='acupoint-placements.source.json';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);};
- const importPlacements=async(file:File)=>{const errors:string[]=[];try{const data=JSON.parse(await file.text()) as AcupointPlacementSource;if(data.schema_version!==1)errors.push('schema_version은 1이어야 합니다.');if(!atlasHash)errors.push('현재 atlas hash를 아직 불러오지 못했습니다.');else{if(data.mesh_binding?.atlas_sha256!==atlasHash.atlas_sha256)errors.push(`atlas_sha256 불일치: 가져온 값 ${data.mesh_binding?.atlas_sha256??'없음'} / 현재 ${atlasHash.atlas_sha256}`);if(data.mesh_binding?.skin_part_id!==atlasHash.skin_part_id)errors.push(`skin_part_id 불일치: ${data.mesh_binding?.skin_part_id??'없음'}`);}if(!Array.isArray(data.points))errors.push('points 배열이 없습니다.');else{const ids=new Set<string>();for(const p of data.points){const def=acupoints.find(x=>x.id===p.id);if(!def)errors.push(`${p.id}: acupoints.json에 없는 ID`);if(ids.has(p.id))errors.push(`${p.id}: 중복 ID`);ids.add(p.id);if(def?.laterality==='midline'&&p.side!=='midline')errors.push(`${p.id}: 정중선 혈은 side=midline이어야 합니다.`);if(def?.laterality==='bilateral'&&!['left','right'].includes(p.side))errors.push(`${p.id}: 쌍측 혈은 side=left/right여야 합니다.`);}}if(errors.length){setPlacementImportErrors(errors);return;}if(placementSource)placementHistory.current.push(placementSource.points);setPlacementSource(data);setPlacementDraft(null);setPlacementImportErrors([]);}catch(e){setPlacementImportErrors([`JSON 파싱 실패: ${e instanceof Error?e.message:String(e)}`]);}};
+ const importPlacements=async(file:File)=>{
+  const errors:string[]=[];
+  try{
+   const data=JSON.parse(await file.text()) as AcupointPlacementSource;
+   if(data.schema_version!==1)errors.push('schema_version은 1이어야 합니다.');
+   if(!atlasHash)errors.push('현재 atlas hash를 아직 불러오지 못했습니다.');
+   else{
+    if(data.mesh_binding?.atlas_sha256!==atlasHash.atlas_sha256)errors.push(`atlas_sha256 불일치: 가져온 값 ${data.mesh_binding?.atlas_sha256??'없음'} / 현재 ${atlasHash.atlas_sha256}`);
+    if(data.mesh_binding?.skin_part_id!==atlasHash.skin_part_id)errors.push(`skin_part_id 불일치: ${data.mesh_binding?.skin_part_id??'없음'}`);
+   }
+   const frame=data.mesh_binding?.frame;
+   if(frame?.units!=='m'||frame?.left!=='+x'||frame?.anterior!=='+z'||frame?.up!=='+y')errors.push('frame은 units=m, left=+x, anterior=+z, up=+y 여야 합니다.');
+   if(!Array.isArray(data.points))errors.push('points 배열이 없습니다.');
+   else{
+    const ids=new Set<string>();
+    for(const [i,p] of data.points.entries()){
+     const label=p?.id||`points[${i}]`,def=acupoints.find(x=>x.id===p?.id);
+     if(!def)errors.push(`${label}: acupoints.json에 없는 ID`);
+     if(ids.has(p?.id))errors.push(`${label}: 중복 ID`);if(p?.id)ids.add(p.id);
+     if(!['PLACED','SKIPPED','FLAGGED'].includes(p?.status))errors.push(`${label}: status는 PLACED/SKIPPED/FLAGGED 중 하나여야 합니다.`);
+     if(def?.laterality==='midline'&&p.side!=='midline')errors.push(`${label}: 정중선 혈은 side=midline이어야 합니다.`);
+     if(def?.laterality==='bilateral'&&!['left','right'].includes(p.side))errors.push(`${label}: 쌍측 혈은 side=left/right여야 합니다.`);
+     if(typeof p?.placed_at!=='string'||!p.placed_at)errors.push(`${label}: placed_at 문자열이 필요합니다.`);
+     if(typeof p?.note!=='string')errors.push(`${label}: note 문자열이 필요합니다.`);
+     if(p?.status!=='SKIPPED'){
+      if(!Array.isArray(p?.position)||p.position.length!==3||!p.position.every(Number.isFinite))errors.push(`${label}: position은 유한한 [x,y,z]여야 합니다.`);
+      if(!p?.surface)errors.push(`${label}: surface가 필요합니다.`);
+      else{
+       if(p.surface.mesh_id!==(atlasHash?.skin_part_id??'FJ2810'))errors.push(`${label}: surface.mesh_id가 현재 Skin과 다릅니다.`);
+       if(!Number.isInteger(p.surface.triangle_index)||p.surface.triangle_index<0||(atlasHash&&p.surface.triangle_index>=atlasHash.skin_triangles))errors.push(`${label}: triangle_index가 Skin 범위를 벗어났습니다.`);
+       const w=p.surface.barycentric;
+       if(!Array.isArray(w)||w.length!==3||!w.every(Number.isFinite)||Math.abs(w.reduce((sum,x)=>sum+x,0)-1)>1e-6||w.some(x=>x< -1e-6||x>1+1e-6))errors.push(`${label}: barycentric은 합이 1인 유효한 3성분이어야 합니다.`);
+      }
+      if(Array.isArray(p?.position)&&p.position.length===3){
+       if(p.side==='left'&&!(p.position[0]>0))errors.push(`${label}: left는 x>0이어야 합니다.`);
+       if(p.side==='right'&&!(p.position[0]<0))errors.push(`${label}: right는 x<0이어야 합니다.`);
+       if(p.side==='midline'&&Math.abs(p.position[0])>.005)errors.push(`${label}: midline은 |x|≤5 mm여야 합니다.`);
+      }
+     }
+    }
+   }
+   if(errors.length){setPlacementImportErrors(errors);return;}
+   if(placementSource)placementHistory.current.push(placementSource.points);
+   setPlacementSource(data);setPlacementDraft(null);setPlacementImportErrors([]);
+  }catch(e){setPlacementImportErrors([`JSON 파싱 실패: ${e instanceof Error?e.message:String(e)}`]);}
+ };
  const selectedAcupointSemantic=useMemo(()=>{if(knowledge?.kind!=='acupoint'||!acupointGraph)return null;const pointId=knowledge.point.id;const statements=acupointGraph.source_statements.filter(s=>s.point_id===pointId);const statementIds=new Set(statements.map(s=>s.source_statement_id));const landmarks=acupointGraph.landmark_nodes.filter(n=>statementIds.has(n.source_statement_id));const landmarkById=new Map(landmarks.map(n=>[n.node_id,n]));const relations=acupointGraph.relation_instances.filter(r=>statementIds.has(r.source_statement_id)).map(r=>({...r,argumentLabels:r.argument_node_ids.map(id=>landmarkById.get(id)?.derived_semantic_label??landmarkById.get(id)?.source_raw??id)}));const conditions=acupointGraph.conditions.filter(c=>statementIds.has(c.source_statement_id));const measurements=acupointGraph.proportional_measurements.filter(m=>statementIds.has(m.source_statement_id)).map(m=>({...m,anchorLabel:m.anchor_landmark_id?landmarkById.get(m.anchor_landmark_id)?.derived_semantic_label??landmarkById.get(m.anchor_landmark_id)?.source_raw:null}));const references=[...new Set(landmarks.map(n=>n.cross_reference_point_id).filter((id):id is string=>Boolean(id)))];return{statements,relations,conditions,measurements,references};},[knowledge,acupointGraph]);
  const choose=(c:Concept)=>{setKnowledge(null);setChosen(c);setState(s=>({...s,selected:c.elements,isolate:false,rotate:false}));setDetails(true);setPanel(null);};
  const chooseAcupoint=(point:Acupoint)=>{

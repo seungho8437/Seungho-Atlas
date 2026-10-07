@@ -45,7 +45,20 @@
           "BL37",
           "BL38",
           "BL39",
-          "BL40"
+          "BL40",
+          "BL55",
+          "BL56",
+          "BL57",
+          "BL58",
+          "BL59",
+          "BL60",
+          "BL61",
+          "BL62",
+          "BL63",
+          "BL64",
+          "BL65",
+          "BL66",
+          "BL67"
         ],
         [
           "BL41",
@@ -62,24 +75,9 @@
           "BL52",
           "BL53",
           "BL54"
-        ],
-        [
-          "BL55",
-          "BL56",
-          "BL57",
-          "BL58",
-          "BL59",
-          "BL60",
-          "BL61",
-          "BL62",
-          "BL63",
-          "BL64",
-          "BL65",
-          "BL66",
-          "BL67"
         ]
       ],
-      "note": "BL41–BL54 is kept as a separate second-line path. BL55–BL67 is conservatively left as a third path rather than guessing a connection not specified in the implementation brief."
+      "note": "Known exception only: BL41–BL54 is a separate second-line path and is not connected after BL40. The main numeric sequence resumes at BL55 after BL40; no other textbook exceptions are inferred."
     }
   }
 }

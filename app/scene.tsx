@@ -138,7 +138,7 @@ export default function AnatomyScene({atlas,state,acupointRender,showAcupoints,m
   const nearestSkinHit=(rc:T.Raycaster):{partIndex:number;hit:T.Intersection<T.Object3D>}|null=>{
    let bestPartIndex=-1,bestHit:T.Intersection<T.Object3D>|null=null;
    for(let i=0;i<atlas.parts.length;i++){
-    const p=atlas.parts[i];if(p.system!=='integumentary'||p.name!=='Skin')continue;
+    const p=atlas.parts[i];if(p.id!=='FJ2810')continue;
     const mesh=pickers[i];if(!mesh)continue;
     const hit=rc.intersectObject(mesh,false)[0];
     if(hit&&(!bestHit||hit.distance<bestHit.distance)){bestPartIndex=i;bestHit=hit;}
