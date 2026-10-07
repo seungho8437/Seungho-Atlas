@@ -272,10 +272,10 @@ export default function AnatomyScene({atlas,state,acupointRender,showAcupoints,v
    if(found<0&&amount>.45)found=findTarget(e.clientX-rect.left,e.clientY-rect.top,e.pointerType==='touch'?24:16);if(found>=0){hover.hidden=true;select.current(atlas.parts[found].id);}
   };
   renderer.domElement.addEventListener('pointerdown',down);renderer.domElement.addEventListener('pointermove',move);renderer.domElement.addEventListener('pointerup',up);renderer.domElement.addEventListener('pointercancel',cancel);
-  const clock=new T.Clock();let lastExtent=-1,lastShowAcupoints=showAcupointsRef.current,lastDetectorKey='',lastMarkerVersion=-1;
+  const clock=new T.Clock();let lastExtent=-1,lastShowAcupoints=showAcupointsRef.current,lastDetectorKey='',lastMarkerVersion=-1,lastPlacementMode=placementModeRef.current;
   const animate=()=>{
    if(disposed)return;frame=requestAnimationFrame(animate);const dt=Math.min(clock.getDelta(),.05),s=latest.current;
-   const changed=lastState?.visible!==s.visible||lastState?.selected!==s.selected||lastState?.isolate!==s.isolate;
+   const placementChanged=lastPlacementMode!==placementModeRef.current;if(placementChanged){lastPlacementMode=placementModeRef.current;layoutKey='';}\n   const changed=lastState?.visible!==s.visible||lastState?.selected!==s.selected||lastState?.isolate!==s.isolate;
    if(markerVersionRef.current!==lastMarkerVersion){
     lastMarkerVersion=markerVersionRef.current;const meridians=new Set(visibleMeridiansRef.current);
     const local=placementPointsRef.current.filter(p=>p.status!=='SKIPPED'&&p.position).map(p=>({id:p.id,side:p.side,status:p.status as 'PLACED'|'FLAGGED',origin:'placed' as const,position:p.position!}));
@@ -286,7 +286,7 @@ export default function AnatomyScene({atlas,state,acupointRender,showAcupoints,v
    }
    const moving=Math.abs(amount-s.explode)>.0001;
    if(moving){amount=T.MathUtils.damp(amount,s.explode,8,dt);dirty=true;}
-   if(changed||moving||lastExtent<0){
+   if(changed||moving||lastExtent<0||placementChanged){
     const visible=new Set(s.visible),selection=new Set(s.selected);
     const visibleParts=atlas.parts.filter(p=>s.isolate?selection.has(p.id):visible.has(p.system)||selection.has(p.id)||(placementModeRef.current&&p.id==='FJ2810'));
     const nextLayoutKey=visibleParts.map(p=>p.id).join(',')+':'+camera.aspect.toFixed(3);

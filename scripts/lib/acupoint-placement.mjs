@@ -20,7 +20,7 @@ export function loadBinding(){
  const buf=readFileSync(join(ROOT,'public',chunk.url.replace(/^\/+/,'')));
  const positions=new Float32Array(buf.buffer,buf.byteOffset+skin.positions,skin.vertexCount*3);
  const indices=new Uint32Array(buf.buffer,buf.byteOffset+skin.indices,skin.indexCount);
- const midlineX=(skin.bounds[0][0]+skin.bounds[1][0])/2;
+ const midlineX=0; // x_app=x_mm*0.001 preserves the anatomical midsagittal plane at x=0
  return {atlas,hash,skin,positions,indices,midlineX};
 }
 export function vertex(binding,i){const p=binding.positions;return[p[i*3],p[i*3+1],p[i*3+2]];}
