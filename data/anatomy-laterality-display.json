@@ -1,0 +1,6688 @@
+{
+  "schema_version": 1,
+  "source_commit": "061994eea8d0bc3eac9d942d3b81a94b254634f2",
+  "source_file": "public/knowledge/anatomy-ko.json",
+  "description": "Display-only policy. Never replaces FMA IDs, original multilingual canonical source, WHO semantic relations, or surface coordinates.",
+  "counts": {
+    "concepts": 3432,
+    "paired_groups": 574,
+    "neutralized_groups": 512,
+    "neutralized_concepts": 1024,
+    "excluded_groups": 76
+  },
+  "neutralized": {
+    "FMA10552": {
+      "side": "left",
+      "ko": "등쪽어깨동맥",
+      "hanja": "背側肩胛動脈",
+      "en": "dorsal scapular artery"
+    },
+    "FMA10660": {
+      "side": "right",
+      "ko": "깊은목동맥",
+      "hanja": "深頸動脈",
+      "en": "deep cervical artery"
+    },
+    "FMA10680": {
+      "side": "left",
+      "ko": "아래갑상동맥",
+      "hanja": "下甲狀腺動脈",
+      "en": "inferior thyroid artery"
+    },
+    "FMA10681": {
+      "side": "left",
+      "ko": "어깨위동맥",
+      "hanja": "肩胛上動脈",
+      "en": "suprascapular artery"
+    },
+    "FMA10682": {
+      "side": "left",
+      "ko": "가로목동맥",
+      "hanja": "橫頸動脈",
+      "en": "transverse cervical artery"
+    },
+    "FMA10683": {
+      "side": "left",
+      "ko": "얕은목동맥",
+      "hanja": "淺頸動脈",
+      "en": "superficial cervical artery"
+    },
+    "FMA10692": {
+      "side": "right",
+      "ko": "근육가로막동맥",
+      "hanja": "筋橫隔動脈",
+      "en": "musculophrenic artery"
+    },
+    "FMA10697": {
+      "side": "right",
+      "ko": "아래갑상동맥",
+      "hanja": "下甲狀腺動脈",
+      "en": "inferior thyroid artery"
+    },
+    "FMA10698": {
+      "side": "right",
+      "ko": "어깨위동맥",
+      "hanja": "肩胛上動脈",
+      "en": "suprascapular artery"
+    },
+    "FMA10699": {
+      "side": "right",
+      "ko": "가로목동맥",
+      "hanja": "橫頸動脈",
+      "en": "transverse cervical artery"
+    },
+    "FMA10700": {
+      "side": "right",
+      "ko": "얕은목동맥",
+      "hanja": "淺頸動脈",
+      "en": "superficial cervical artery"
+    },
+    "FMA11343": {
+      "side": "right",
+      "ko": "발",
+      "hanja": "足",
+      "en": "foot"
+    },
+    "FMA11344": {
+      "side": "left",
+      "ko": "발",
+      "hanja": "足",
+      "en": "foot"
+    },
+    "FMA11345": {
+      "side": "right",
+      "ko": "아래팔",
+      "hanja": "前腕",
+      "en": "forearm"
+    },
+    "FMA11346": {
+      "side": "left",
+      "ko": "아래팔",
+      "hanja": "前腕",
+      "en": "forearm"
+    },
+    "FMA12514": {
+      "side": "right",
+      "ko": "안구",
+      "hanja": "眼球",
+      "en": "eyeball"
+    },
+    "FMA12515": {
+      "side": "left",
+      "ko": "안구",
+      "hanja": "眼球",
+      "en": "eyeball"
+    },
+    "FMA13322": {
+      "side": "right",
+      "ko": "빗장뼈",
+      "hanja": "鎖骨",
+      "en": "clavicle"
+    },
+    "FMA13323": {
+      "side": "left",
+      "ko": "빗장뼈",
+      "hanja": "鎖骨",
+      "en": "clavicle"
+    },
+    "FMA13325": {
+      "side": "right",
+      "ko": "노쪽피부정맥",
+      "hanja": "橈側皮靜脈",
+      "en": "cephalic vein"
+    },
+    "FMA13326": {
+      "side": "left",
+      "ko": "노쪽피부정맥",
+      "hanja": "橈側皮靜脈",
+      "en": "cephalic vein"
+    },
+    "FMA13330": {
+      "side": "right",
+      "ko": "겨드랑정맥",
+      "hanja": "腋窩靜脈",
+      "en": "axillary vein"
+    },
+    "FMA13331": {
+      "side": "left",
+      "ko": "겨드랑정맥",
+      "hanja": "腋窩靜脈",
+      "en": "axillary vein"
+    },
+    "FMA13336": {
+      "side": "right",
+      "ko": "배바깥빗근",
+      "hanja": "外腹斜筋",
+      "en": "external oblique"
+    },
+    "FMA13337": {
+      "side": "left",
+      "ko": "배바깥빗근",
+      "hanja": "外腹斜筋",
+      "en": "external oblique"
+    },
+    "FMA13346": {
+      "side": "right",
+      "ko": "복장목뿔근",
+      "hanja": "胸骨舌骨筋",
+      "en": "sternohyoid"
+    },
+    "FMA13347": {
+      "side": "left",
+      "ko": "복장목뿔근",
+      "hanja": "胸骨舌骨筋",
+      "en": "sternohyoid"
+    },
+    "FMA13348": {
+      "side": "right",
+      "ko": "어깨목뿔근",
+      "hanja": "肩胛舌骨筋",
+      "en": "omohyoid"
+    },
+    "FMA13349": {
+      "side": "left",
+      "ko": "어깨목뿔근",
+      "hanja": "肩胛舌骨筋",
+      "en": "omohyoid"
+    },
+    "FMA13350": {
+      "side": "right",
+      "ko": "복장방패근",
+      "hanja": "胸骨甲狀筋",
+      "en": "sternothyroid"
+    },
+    "FMA13351": {
+      "side": "left",
+      "ko": "복장방패근",
+      "hanja": "胸骨甲狀筋",
+      "en": "sternothyroid"
+    },
+    "FMA13352": {
+      "side": "right",
+      "ko": "방패목뿔근",
+      "hanja": "甲狀舌骨筋",
+      "en": "thyrohyoid"
+    },
+    "FMA13353": {
+      "side": "left",
+      "ko": "방패목뿔근",
+      "hanja": "甲狀舌骨筋",
+      "en": "thyrohyoid"
+    },
+    "FMA13373": {
+      "side": "right",
+      "ko": "큰가슴근",
+      "hanja": "大胸筋",
+      "en": "pectoralis major"
+    },
+    "FMA13374": {
+      "side": "left",
+      "ko": "큰가슴근",
+      "hanja": "大胸筋",
+      "en": "pectoralis major"
+    },
+    "FMA13375": {
+      "side": "right",
+      "ko": "작은가슴근",
+      "hanja": "小胸筋",
+      "en": "pectoralis minor"
+    },
+    "FMA13376": {
+      "side": "left",
+      "ko": "작은가슴근",
+      "hanja": "小胸筋",
+      "en": "pectoralis minor"
+    },
+    "FMA13381": {
+      "side": "right",
+      "ko": "큰마름근",
+      "hanja": "菱形大",
+      "en": "rhomboid major"
+    },
+    "FMA13382": {
+      "side": "left",
+      "ko": "큰마름근",
+      "hanja": "菱形大",
+      "en": "rhomboid major"
+    },
+    "FMA13383": {
+      "side": "right",
+      "ko": "작은마름근",
+      "hanja": "菱形小",
+      "en": "rhomboid minor"
+    },
+    "FMA13384": {
+      "side": "left",
+      "ko": "작은마름근",
+      "hanja": "菱形小",
+      "en": "rhomboid minor"
+    },
+    "FMA13388": {
+      "side": "right",
+      "ko": "뒤목갈비근",
+      "hanja": "斜角後",
+      "en": "scalenus posterior"
+    },
+    "FMA13389": {
+      "side": "left",
+      "ko": "뒤목갈비근",
+      "hanja": "斜角後",
+      "en": "scalenus posterior"
+    },
+    "FMA13390": {
+      "side": "right",
+      "ko": "중간목갈비근",
+      "hanja": "中斜角筋",
+      "en": "scalenus medius"
+    },
+    "FMA13391": {
+      "side": "left",
+      "ko": "중간목갈비근",
+      "hanja": "中斜角筋",
+      "en": "scalenus medius"
+    },
+    "FMA13392": {
+      "side": "right",
+      "ko": "앞목갈비근",
+      "hanja": "斜角前",
+      "en": "scalenus anterior"
+    },
+    "FMA13393": {
+      "side": "left",
+      "ko": "앞목갈비근",
+      "hanja": "斜角前",
+      "en": "scalenus anterior"
+    },
+    "FMA13395": {
+      "side": "right",
+      "ko": "어깨뼈",
+      "hanja": "肩胛骨",
+      "en": "scapula"
+    },
+    "FMA13396": {
+      "side": "left",
+      "ko": "어깨뼈",
+      "hanja": "肩胛骨",
+      "en": "scapula"
+    },
+    "FMA13398": {
+      "side": "right",
+      "ko": "앞톱니근",
+      "hanja": "鋸前",
+      "en": "serratus anterior"
+    },
+    "FMA13399": {
+      "side": "left",
+      "ko": "앞톱니근",
+      "hanja": "鋸前",
+      "en": "serratus anterior"
+    },
+    "FMA13403": {
+      "side": "right",
+      "ko": "위뒤톱니근",
+      "hanja": "鋸後上",
+      "en": "serratus posterior superior"
+    },
+    "FMA13404": {
+      "side": "left",
+      "ko": "위뒤톱니근",
+      "hanja": "鋸後上",
+      "en": "serratus posterior superior"
+    },
+    "FMA13405": {
+      "side": "right",
+      "ko": "아래뒤톱니근",
+      "hanja": "鋸後下",
+      "en": "serratus posterior inferior"
+    },
+    "FMA13406": {
+      "side": "left",
+      "ko": "아래뒤톱니근",
+      "hanja": "鋸後下",
+      "en": "serratus posterior inferior"
+    },
+    "FMA13408": {
+      "side": "right",
+      "ko": "목빗근",
+      "hanja": "胸鎖乳突筋",
+      "en": "sternocleidomastoid"
+    },
+    "FMA13409": {
+      "side": "left",
+      "ko": "목빗근",
+      "hanja": "胸鎖乳突筋",
+      "en": "sternocleidomastoid"
+    },
+    "FMA13411": {
+      "side": "left",
+      "ko": "빗장밑근",
+      "hanja": "鎖骨下筋",
+      "en": "subclavius"
+    },
+    "FMA13412": {
+      "side": "right",
+      "ko": "빗장밑근",
+      "hanja": "鎖骨下筋",
+      "en": "subclavius"
+    },
+    "FMA13414": {
+      "side": "right",
+      "ko": "어깨밑근",
+      "hanja": "肩胛下筋",
+      "en": "subscapularis"
+    },
+    "FMA13415": {
+      "side": "left",
+      "ko": "어깨밑근",
+      "hanja": "肩胛下筋",
+      "en": "subscapularis"
+    },
+    "FMA14335": {
+      "side": "right",
+      "ko": "콩팥정맥",
+      "hanja": "腎靜脈",
+      "en": "renal vein"
+    },
+    "FMA14336": {
+      "side": "left",
+      "ko": "콩팥정맥",
+      "hanja": "腎靜脈",
+      "en": "renal vein"
+    },
+    "FMA14341": {
+      "side": "right",
+      "ko": "고환정맥",
+      "hanja": "睾丸靜脈",
+      "en": "testicular vein"
+    },
+    "FMA14343": {
+      "side": "right",
+      "ko": "부신정맥",
+      "hanja": "副腎靜脈",
+      "en": "suprarenal vein"
+    },
+    "FMA14345": {
+      "side": "left",
+      "ko": "고환정맥",
+      "hanja": "睾丸靜脈",
+      "en": "testicular vein"
+    },
+    "FMA14349": {
+      "side": "left",
+      "ko": "부신정맥",
+      "hanja": "副腎靜脈",
+      "en": "suprarenal vein"
+    },
+    "FMA14746": {
+      "side": "right",
+      "ko": "아래가로막동맥",
+      "hanja": "下橫隔動脈",
+      "en": "inferior phrenic artery"
+    },
+    "FMA14747": {
+      "side": "left",
+      "ko": "아래가로막동맥",
+      "hanja": "下橫隔動脈",
+      "en": "inferior phrenic artery"
+    },
+    "FMA14752": {
+      "side": "right",
+      "ko": "콩팥동맥",
+      "hanja": "腎動脈",
+      "en": "renal artery"
+    },
+    "FMA14753": {
+      "side": "left",
+      "ko": "콩팥동맥",
+      "hanja": "腎動脈",
+      "en": "renal artery"
+    },
+    "FMA14755": {
+      "side": "right",
+      "ko": "중간부신동맥",
+      "hanja": "中副腎動脈",
+      "en": "middle suprarenal artery"
+    },
+    "FMA14756": {
+      "side": "left",
+      "ko": "중간부신동맥",
+      "hanja": "中副腎動脈",
+      "en": "middle suprarenal artery"
+    },
+    "FMA14759": {
+      "side": "right",
+      "ko": "고환동맥",
+      "hanja": "睾丸動脈",
+      "en": "testicular artery"
+    },
+    "FMA14760": {
+      "side": "left",
+      "ko": "고환동맥",
+      "hanja": "睾丸動脈",
+      "en": "testicular artery"
+    },
+    "FMA14765": {
+      "side": "right",
+      "ko": "온엉덩동맥",
+      "hanja": "總腸骨動脈",
+      "en": "common iliac artery"
+    },
+    "FMA14766": {
+      "side": "left",
+      "ko": "온엉덩동맥",
+      "hanja": "總腸骨動脈",
+      "en": "common iliac artery"
+    },
+    "FMA14781": {
+      "side": "right",
+      "ko": "위그물막동맥",
+      "hanja": "胃大網動脈",
+      "en": "gastro-epiploic artery"
+    },
+    "FMA14796": {
+      "side": "left",
+      "ko": "위그물막동맥",
+      "hanja": "胃大網動脈",
+      "en": "gastro-epiploic artery"
+    },
+    "FMA15390": {
+      "side": "left",
+      "ko": "위그물막정맥",
+      "hanja": "胃大網靜脈",
+      "en": "gastroepiploic vein"
+    },
+    "FMA15397": {
+      "side": "right",
+      "ko": "위그물막정맥",
+      "hanja": "胃大網靜脈",
+      "en": "gastroepiploic vein"
+    },
+    "FMA15571": {
+      "side": "right",
+      "ko": "요관",
+      "hanja": "尿管",
+      "en": "ureter"
+    },
+    "FMA15572": {
+      "side": "left",
+      "ko": "요관",
+      "hanja": "尿管",
+      "en": "ureter"
+    },
+    "FMA15629": {
+      "side": "right",
+      "ko": "부신",
+      "hanja": "副腎",
+      "en": "adrenal gland"
+    },
+    "FMA15630": {
+      "side": "left",
+      "ko": "부신",
+      "hanja": "副腎",
+      "en": "adrenal gland"
+    },
+    "FMA15809": {
+      "side": "right",
+      "ko": "반간",
+      "hanja": "半肝",
+      "en": "hemiliver"
+    },
+    "FMA15810": {
+      "side": "left",
+      "ko": "반간",
+      "hanja": "半肝",
+      "en": "hemiliver"
+    },
+    "FMA16582": {
+      "side": "right",
+      "ko": "다리이음부위",
+      "hanja": "骨盤帶",
+      "en": "pelvic girdle"
+    },
+    "FMA16583": {
+      "side": "left",
+      "ko": "다리이음부위",
+      "hanja": "骨盤帶",
+      "en": "pelvic girdle"
+    },
+    "FMA16586": {
+      "side": "right",
+      "ko": "볼기뼈",
+      "hanja": "寬骨",
+      "en": "hip bone"
+    },
+    "FMA16587": {
+      "side": "left",
+      "ko": "볼기뼈",
+      "hanja": "寬骨",
+      "en": "hip bone"
+    },
+    "FMA18256": {
+      "side": "right",
+      "ko": "부고환",
+      "hanja": "副睾丸",
+      "en": "epididymis"
+    },
+    "FMA18257": {
+      "side": "left",
+      "ko": "부고환",
+      "hanja": "副睾丸",
+      "en": "epididymis"
+    },
+    "FMA18806": {
+      "side": "right",
+      "ko": "바깥엉덩동맥",
+      "hanja": "外腸骨動脈",
+      "en": "external iliac artery"
+    },
+    "FMA18807": {
+      "side": "left",
+      "ko": "바깥엉덩동맥",
+      "hanja": "外腸骨動脈",
+      "en": "external iliac artery"
+    },
+    "FMA18809": {
+      "side": "right",
+      "ko": "속엉덩동맥",
+      "hanja": "內腸骨動脈",
+      "en": "internal iliac artery"
+    },
+    "FMA18810": {
+      "side": "left",
+      "ko": "속엉덩동맥",
+      "hanja": "內腸骨動脈",
+      "en": "internal iliac artery"
+    },
+    "FMA18885": {
+      "side": "right",
+      "ko": "바깥엉덩정맥",
+      "hanja": "外腸骨靜脈",
+      "en": "external iliac vein"
+    },
+    "FMA18886": {
+      "side": "left",
+      "ko": "바깥엉덩정맥",
+      "hanja": "外腸骨靜脈",
+      "en": "external iliac vein"
+    },
+    "FMA18887": {
+      "side": "right",
+      "ko": "속엉덩정맥",
+      "hanja": "內腸骨靜脈",
+      "en": "internal iliac vein"
+    },
+    "FMA18888": {
+      "side": "left",
+      "ko": "속엉덩정맥",
+      "hanja": "內腸骨靜脈",
+      "en": "internal iliac vein"
+    },
+    "FMA18903": {
+      "side": "right",
+      "ko": "엉덩허리정맥",
+      "hanja": "腸腰靜脈",
+      "en": "iliolumbar vein"
+    },
+    "FMA18904": {
+      "side": "left",
+      "ko": "엉덩허리정맥",
+      "hanja": "腸腰靜脈",
+      "en": "iliolumbar vein"
+    },
+    "FMA18906": {
+      "side": "right",
+      "ko": "가쪽엉치정맥",
+      "hanja": "外側薦靜脈",
+      "en": "lateral sacral vein"
+    },
+    "FMA18907": {
+      "side": "left",
+      "ko": "가쪽엉치정맥",
+      "hanja": "外側薦靜脈",
+      "en": "lateral sacral vein"
+    },
+    "FMA18909": {
+      "side": "right",
+      "ko": "위볼기정맥",
+      "hanja": "上臀靜脈",
+      "en": "superior gluteal vein"
+    },
+    "FMA18910": {
+      "side": "left",
+      "ko": "위볼기정맥",
+      "hanja": "上臀靜脈",
+      "en": "superior gluteal vein"
+    },
+    "FMA18912": {
+      "side": "right",
+      "ko": "아래볼기정맥",
+      "hanja": "下臀靜脈",
+      "en": "inferior gluteal vein"
+    },
+    "FMA18913": {
+      "side": "left",
+      "ko": "아래볼기정맥",
+      "hanja": "下臀靜脈",
+      "en": "inferior gluteal vein"
+    },
+    "FMA18915": {
+      "side": "right",
+      "ko": "폐쇄정맥",
+      "hanja": "閉鎖靜脈",
+      "en": "obturator vein"
+    },
+    "FMA18916": {
+      "side": "left",
+      "ko": "폐쇄정맥",
+      "hanja": "閉鎖靜脈",
+      "en": "obturator vein"
+    },
+    "FMA18918": {
+      "side": "right",
+      "ko": "속음부정맥",
+      "hanja": "內陰部靜脈",
+      "en": "internal pudendal vein"
+    },
+    "FMA18919": {
+      "side": "left",
+      "ko": "속음부정맥",
+      "hanja": "內陰部靜脈",
+      "en": "internal pudendal vein"
+    },
+    "FMA19235": {
+      "side": "right",
+      "ko": "정관",
+      "hanja": "精管",
+      "en": "deferent duct"
+    },
+    "FMA19236": {
+      "side": "left",
+      "ko": "정관",
+      "hanja": "精管",
+      "en": "deferent duct"
+    },
+    "FMA19387": {
+      "side": "right",
+      "ko": "정낭",
+      "hanja": "精囊",
+      "en": "seminal vesicle"
+    },
+    "FMA19388": {
+      "side": "left",
+      "ko": "정낭",
+      "hanja": "精囊",
+      "en": "seminal vesicle"
+    },
+    "FMA20688": {
+      "side": "right",
+      "ko": "아래배벽동맥",
+      "hanja": "下腹壁動脈",
+      "en": "inferior epigastric artery"
+    },
+    "FMA20689": {
+      "side": "left",
+      "ko": "아래배벽동맥",
+      "hanja": "下腹壁動脈",
+      "en": "inferior epigastric artery"
+    },
+    "FMA20735": {
+      "side": "right",
+      "ko": "얕은배벽동맥",
+      "hanja": "淺上腹動脈",
+      "en": "superficial epigastric artery"
+    },
+    "FMA20736": {
+      "side": "left",
+      "ko": "얕은배벽동맥",
+      "hanja": "淺上腹動脈",
+      "en": "superficial epigastric artery"
+    },
+    "FMA20796": {
+      "side": "right",
+      "ko": "깊은넙다리동맥",
+      "hanja": "深大腿動脈",
+      "en": "deep femoral artery"
+    },
+    "FMA20797": {
+      "side": "left",
+      "ko": "깊은넙다리동맥",
+      "hanja": "深大腿動脈",
+      "en": "deep femoral artery"
+    },
+    "FMA20801": {
+      "side": "right",
+      "ko": "가쪽넙다리휘돌이동맥",
+      "hanja": "外側回旋大腿動脈",
+      "en": "lateral circumflex femoral artery"
+    },
+    "FMA20802": {
+      "side": "left",
+      "ko": "가쪽넙다리휘돌이동맥",
+      "hanja": "外側回旋大腿動脈",
+      "en": "lateral circumflex femoral artery"
+    },
+    "FMA20818": {
+      "side": "right",
+      "ko": "음경등동맥",
+      "hanja": "陰莖背側動脈",
+      "en": "dorsal artery of penis"
+    },
+    "FMA20819": {
+      "side": "left",
+      "ko": "음경등동맥",
+      "hanja": "陰莖背側動脈",
+      "en": "dorsal artery of penis"
+    },
+    "FMA21163": {
+      "side": "right",
+      "ko": "아래배벽정맥",
+      "hanja": "下腹壁靜脈",
+      "en": "inferior epigastric vein"
+    },
+    "FMA21164": {
+      "side": "left",
+      "ko": "아래배벽정맥",
+      "hanja": "下腹壁靜脈",
+      "en": "inferior epigastric vein"
+    },
+    "FMA21188": {
+      "side": "right",
+      "ko": "넙다리정맥",
+      "hanja": "大腿靜脈",
+      "en": "femoral vein"
+    },
+    "FMA21189": {
+      "side": "left",
+      "ko": "넙다리정맥",
+      "hanja": "大腿靜脈",
+      "en": "femoral vein"
+    },
+    "FMA21379": {
+      "side": "right",
+      "ko": "큰두렁정맥",
+      "hanja": "大伏在靜脈",
+      "en": "great saphenous vein"
+    },
+    "FMA21380": {
+      "side": "left",
+      "ko": "큰두렁정맥",
+      "hanja": "大伏在靜脈",
+      "en": "great saphenous vein"
+    },
+    "FMA21385": {
+      "side": "right",
+      "ko": "얕은음경등정맥",
+      "hanja": "陰莖淺背側靜脈",
+      "en": "superficial dorsal vein of penis"
+    },
+    "FMA21386": {
+      "side": "left",
+      "ko": "얕은음경등정맥",
+      "hanja": "陰莖淺背側靜脈",
+      "en": "superficial dorsal vein of penis"
+    },
+    "FMA21387": {
+      "side": "right",
+      "ko": "온엉덩정맥",
+      "hanja": "總腸骨靜脈",
+      "en": "common iliac vein"
+    },
+    "FMA21388": {
+      "side": "left",
+      "ko": "온엉덩정맥",
+      "hanja": "總腸骨靜脈",
+      "en": "common iliac vein"
+    },
+    "FMA22322": {
+      "side": "right",
+      "ko": "엉덩근",
+      "hanja": "腸骨筋",
+      "en": "iliacus"
+    },
+    "FMA22323": {
+      "side": "left",
+      "ko": "엉덩근",
+      "hanja": "腸骨筋",
+      "en": "iliacus"
+    },
+    "FMA22324": {
+      "side": "right",
+      "ko": "속폐쇄근",
+      "hanja": "內閉鎖筋",
+      "en": "obturator internus"
+    },
+    "FMA22325": {
+      "side": "left",
+      "ko": "속폐쇄근",
+      "hanja": "內閉鎖筋",
+      "en": "obturator internus"
+    },
+    "FMA22326": {
+      "side": "right",
+      "ko": "바깥폐쇄근",
+      "hanja": "外閉鎖筋",
+      "en": "obturator externus"
+    },
+    "FMA22327": {
+      "side": "left",
+      "ko": "바깥폐쇄근",
+      "hanja": "外閉鎖筋",
+      "en": "obturator externus"
+    },
+    "FMA22328": {
+      "side": "right",
+      "ko": "큰볼기근",
+      "hanja": "大臀筋",
+      "en": "gluteus maximus"
+    },
+    "FMA22329": {
+      "side": "left",
+      "ko": "큰볼기근",
+      "hanja": "大臀筋",
+      "en": "gluteus maximus"
+    },
+    "FMA22330": {
+      "side": "right",
+      "ko": "중간볼기근",
+      "hanja": "臀中",
+      "en": "gluteus medius"
+    },
+    "FMA22331": {
+      "side": "left",
+      "ko": "중간볼기근",
+      "hanja": "臀中",
+      "en": "gluteus medius"
+    },
+    "FMA22332": {
+      "side": "right",
+      "ko": "작은볼기근",
+      "hanja": "臀小",
+      "en": "gluteus minimus"
+    },
+    "FMA22333": {
+      "side": "left",
+      "ko": "작은볼기근",
+      "hanja": "臀小",
+      "en": "gluteus minimus"
+    },
+    "FMA22334": {
+      "side": "right",
+      "ko": "쌍둥이위",
+      "hanja": "雙子上",
+      "en": "gemellus superior"
+    },
+    "FMA22335": {
+      "side": "left",
+      "ko": "쌍둥이위",
+      "hanja": "雙子上",
+      "en": "gemellus superior"
+    },
+    "FMA22336": {
+      "side": "right",
+      "ko": "쌍둥이아래",
+      "hanja": "雙子下",
+      "en": "gemellus inferior"
+    },
+    "FMA22337": {
+      "side": "left",
+      "ko": "쌍둥이아래",
+      "hanja": "雙子下",
+      "en": "gemellus inferior"
+    },
+    "FMA22338": {
+      "side": "right",
+      "ko": "넙다리네모근",
+      "hanja": "大腿方形筋",
+      "en": "quadratus femoris"
+    },
+    "FMA22339": {
+      "side": "left",
+      "ko": "넙다리네모근",
+      "hanja": "大腿方形筋",
+      "en": "quadratus femoris"
+    },
+    "FMA22340": {
+      "side": "right",
+      "ko": "궁둥구멍근",
+      "hanja": "梨狀筋",
+      "en": "piriformis"
+    },
+    "FMA22341": {
+      "side": "left",
+      "ko": "궁둥구멍근",
+      "hanja": "梨狀筋",
+      "en": "piriformis"
+    },
+    "FMA22342": {
+      "side": "right",
+      "ko": "큰허리근",
+      "hanja": "大腰筋",
+      "en": "psoas major"
+    },
+    "FMA22343": {
+      "side": "left",
+      "ko": "큰허리근",
+      "hanja": "大腰筋",
+      "en": "psoas major"
+    },
+    "FMA22354": {
+      "side": "right",
+      "ko": "넙다리빗근",
+      "hanja": "縫工筋",
+      "en": "sartorius"
+    },
+    "FMA22355": {
+      "side": "left",
+      "ko": "넙다리빗근",
+      "hanja": "縫工筋",
+      "en": "sartorius"
+    },
+    "FMA22358": {
+      "side": "right",
+      "ko": "반힘줄근",
+      "hanja": "半腱樣筋",
+      "en": "semitendinosus"
+    },
+    "FMA22359": {
+      "side": "left",
+      "ko": "반힘줄근",
+      "hanja": "半腱樣筋",
+      "en": "semitendinosus"
+    },
+    "FMA22425": {
+      "side": "right",
+      "ko": "넙다리근막긴장근",
+      "hanja": "大腿筋膜張筋",
+      "en": "tensor fasciae latae"
+    },
+    "FMA22426": {
+      "side": "left",
+      "ko": "넙다리근막긴장근",
+      "hanja": "大腿筋膜張筋",
+      "en": "tensor fasciae latae"
+    },
+    "FMA22448": {
+      "side": "right",
+      "ko": "반막근",
+      "hanja": "半膜樣筋",
+      "en": "semimembranosus"
+    },
+    "FMA22449": {
+      "side": "left",
+      "ko": "반막근",
+      "hanja": "半膜樣筋",
+      "en": "semimembranosus"
+    },
+    "FMA22450": {
+      "side": "right",
+      "ko": "두덩근",
+      "hanja": "恥骨筋",
+      "en": "pectineus"
+    },
+    "FMA22451": {
+      "side": "left",
+      "ko": "두덩근",
+      "hanja": "恥骨筋",
+      "en": "pectineus"
+    },
+    "FMA22452": {
+      "side": "right",
+      "ko": "짧은모음근",
+      "hanja": "內轉筋短",
+      "en": "adductor brevis"
+    },
+    "FMA22454": {
+      "side": "left",
+      "ko": "짧은모음근",
+      "hanja": "內轉筋短",
+      "en": "adductor brevis"
+    },
+    "FMA22456": {
+      "side": "right",
+      "ko": "긴모음근",
+      "hanja": "內轉筋長",
+      "en": "adductor longus"
+    },
+    "FMA22457": {
+      "side": "left",
+      "ko": "긴모음근",
+      "hanja": "內轉筋長",
+      "en": "adductor longus"
+    },
+    "FMA22459": {
+      "side": "right",
+      "ko": "큰모음근",
+      "hanja": "大內轉筋",
+      "en": "adductor magnus"
+    },
+    "FMA22460": {
+      "side": "left",
+      "ko": "큰모음근",
+      "hanja": "大內轉筋",
+      "en": "adductor magnus"
+    },
+    "FMA22507": {
+      "side": "right",
+      "ko": "무릎내림동맥",
+      "hanja": "下行膝動脈",
+      "en": "descending genicular artery"
+    },
+    "FMA22508": {
+      "side": "left",
+      "ko": "무릎내림동맥",
+      "hanja": "下行膝動脈",
+      "en": "descending genicular artery"
+    },
+    "FMA22544": {
+      "side": "right",
+      "ko": "앞정강근",
+      "hanja": "前脛骨筋",
+      "en": "tibialis anterior"
+    },
+    "FMA22545": {
+      "side": "left",
+      "ko": "앞정강근",
+      "hanja": "前脛骨筋",
+      "en": "tibialis anterior"
+    },
+    "FMA22546": {
+      "side": "right",
+      "ko": "긴엄지폄근",
+      "hanja": "伸筋拇趾長",
+      "en": "extensor hallucis longus"
+    },
+    "FMA22547": {
+      "side": "left",
+      "ko": "긴엄지폄근",
+      "hanja": "伸筋拇趾長",
+      "en": "extensor hallucis longus"
+    },
+    "FMA22548": {
+      "side": "right",
+      "ko": "긴발가락폄근",
+      "hanja": "長趾伸筋",
+      "en": "extensor digitorum longus"
+    },
+    "FMA22549": {
+      "side": "left",
+      "ko": "긴발가락폄근",
+      "hanja": "長趾伸筋",
+      "en": "extensor digitorum longus"
+    },
+    "FMA22550": {
+      "side": "right",
+      "ko": "셋째종아리근",
+      "hanja": "第三腓骨筋",
+      "en": "fibularis tertius"
+    },
+    "FMA22551": {
+      "side": "left",
+      "ko": "셋째종아리근",
+      "hanja": "第三腓骨筋",
+      "en": "fibularis tertius"
+    },
+    "FMA22552": {
+      "side": "right",
+      "ko": "긴종아리근",
+      "hanja": "腓骨長",
+      "en": "fibularis longus"
+    },
+    "FMA22553": {
+      "side": "left",
+      "ko": "긴종아리근",
+      "hanja": "腓骨長",
+      "en": "fibularis longus"
+    },
+    "FMA22554": {
+      "side": "right",
+      "ko": "짧은종아리근",
+      "hanja": "腓骨短",
+      "en": "fibularis brevis"
+    },
+    "FMA22555": {
+      "side": "left",
+      "ko": "짧은종아리근",
+      "hanja": "腓骨短",
+      "en": "fibularis brevis"
+    },
+    "FMA22558": {
+      "side": "right",
+      "ko": "가자미근",
+      "hanja": "比筋",
+      "en": "soleus"
+    },
+    "FMA22559": {
+      "side": "left",
+      "ko": "가자미근",
+      "hanja": "比筋",
+      "en": "soleus"
+    },
+    "FMA22560": {
+      "side": "right",
+      "ko": "장딴지빗근",
+      "hanja": "足底筋",
+      "en": "plantaris"
+    },
+    "FMA22561": {
+      "side": "left",
+      "ko": "장딴지빗근",
+      "hanja": "足底筋",
+      "en": "plantaris"
+    },
+    "FMA22562": {
+      "side": "right",
+      "ko": "중간무릎동맥",
+      "hanja": "中膝動脈",
+      "en": "middle genicular artery"
+    },
+    "FMA22563": {
+      "side": "left",
+      "ko": "중간무릎동맥",
+      "hanja": "中膝動脈",
+      "en": "middle genicular artery"
+    },
+    "FMA22586": {
+      "side": "right",
+      "ko": "안쪽위무릎동맥",
+      "hanja": "內側上膝動脈",
+      "en": "medial superior genicular artery"
+    },
+    "FMA22587": {
+      "side": "left",
+      "ko": "안쪽위무릎동맥",
+      "hanja": "內側上膝動脈",
+      "en": "medial superior genicular artery"
+    },
+    "FMA22588": {
+      "side": "right",
+      "ko": "가쪽위무릎동맥",
+      "hanja": "外側上膝動脈",
+      "en": "lateral superior genicular artery"
+    },
+    "FMA22589": {
+      "side": "left",
+      "ko": "가쪽위무릎동맥",
+      "hanja": "外側上膝動脈",
+      "en": "lateral superior genicular artery"
+    },
+    "FMA22591": {
+      "side": "right",
+      "ko": "오금근",
+      "hanja": "膝窩筋",
+      "en": "popliteus"
+    },
+    "FMA22592": {
+      "side": "left",
+      "ko": "오금근",
+      "hanja": "膝窩筋",
+      "en": "popliteus"
+    },
+    "FMA22655": {
+      "side": "right",
+      "ko": "겨드랑동맥",
+      "hanja": "腋窩動脈",
+      "en": "axillary artery"
+    },
+    "FMA22656": {
+      "side": "left",
+      "ko": "겨드랑동맥",
+      "hanja": "腋窩動脈",
+      "en": "axillary artery"
+    },
+    "FMA22672": {
+      "side": "right",
+      "ko": "가슴봉우리동맥",
+      "hanja": "胸肩峰動脈",
+      "en": "thoraco-acromial artery"
+    },
+    "FMA22673": {
+      "side": "left",
+      "ko": "가슴봉우리동맥",
+      "hanja": "胸肩峰動脈",
+      "en": "thoraco-acromial artery"
+    },
+    "FMA22675": {
+      "side": "right",
+      "ko": "가쪽가슴동맥",
+      "hanja": "外側胸動脈",
+      "en": "lateral thoracic artery"
+    },
+    "FMA22676": {
+      "side": "left",
+      "ko": "가쪽가슴동맥",
+      "hanja": "外側胸動脈",
+      "en": "lateral thoracic artery"
+    },
+    "FMA22678": {
+      "side": "right",
+      "ko": "어깨밑동맥",
+      "hanja": "肩胛下動脈",
+      "en": "subscapular artery"
+    },
+    "FMA22679": {
+      "side": "left",
+      "ko": "어깨밑동맥",
+      "hanja": "肩胛下動脈",
+      "en": "subscapular artery"
+    },
+    "FMA22682": {
+      "side": "right",
+      "ko": "앞위팔휘돌이동맥",
+      "hanja": "前回旋上腕骨動脈",
+      "en": "anterior circumflex humeral artery"
+    },
+    "FMA22683": {
+      "side": "left",
+      "ko": "앞위팔휘돌이동맥",
+      "hanja": "前回旋上腕骨動脈",
+      "en": "anterior circumflex humeral artery"
+    },
+    "FMA22685": {
+      "side": "right",
+      "ko": "뒤위팔휘돌이동맥",
+      "hanja": "後回旋上腕骨動脈",
+      "en": "posterior circumflex humeral artery"
+    },
+    "FMA22687": {
+      "side": "left",
+      "ko": "뒤위팔휘돌이동맥",
+      "hanja": "後回旋上腕骨動脈",
+      "en": "posterior circumflex humeral artery"
+    },
+    "FMA22691": {
+      "side": "right",
+      "ko": "위팔동맥",
+      "hanja": "上腕動脈",
+      "en": "brachial artery"
+    },
+    "FMA22692": {
+      "side": "left",
+      "ko": "위팔동맥",
+      "hanja": "上腕動脈",
+      "en": "brachial artery"
+    },
+    "FMA22696": {
+      "side": "right",
+      "ko": "깊은위팔동맥",
+      "hanja": "深上腕動脈",
+      "en": "deep brachial artery"
+    },
+    "FMA22697": {
+      "side": "left",
+      "ko": "깊은위팔동맥",
+      "hanja": "深上腕動脈",
+      "en": "deep brachial artery"
+    },
+    "FMA22707": {
+      "side": "right",
+      "ko": "위자쪽곁동맥",
+      "hanja": "上尺側側副動脈",
+      "en": "superior ulnar collateral artery"
+    },
+    "FMA22708": {
+      "side": "left",
+      "ko": "위자쪽곁동맥",
+      "hanja": "上尺側側副動脈",
+      "en": "superior ulnar collateral artery"
+    },
+    "FMA22712": {
+      "side": "right",
+      "ko": "아래자쪽곁동맥",
+      "hanja": "下尺側側副動脈",
+      "en": "inferior ulnar collateral artery"
+    },
+    "FMA22713": {
+      "side": "left",
+      "ko": "아래자쪽곁동맥",
+      "hanja": "下尺側側副動脈",
+      "en": "inferior ulnar collateral artery"
+    },
+    "FMA22726": {
+      "side": "right",
+      "ko": "목널판근",
+      "hanja": "頸板狀筋",
+      "en": "splenius cervicis"
+    },
+    "FMA22727": {
+      "side": "left",
+      "ko": "목널판근",
+      "hanja": "頸板狀筋",
+      "en": "splenius cervicis"
+    },
+    "FMA22728": {
+      "side": "right",
+      "ko": "머리널판근",
+      "hanja": "頭板狀筋",
+      "en": "splenius capitis"
+    },
+    "FMA22729": {
+      "side": "left",
+      "ko": "머리널판근",
+      "hanja": "頭板狀筋",
+      "en": "splenius capitis"
+    },
+    "FMA22733": {
+      "side": "right",
+      "ko": "노동맥",
+      "hanja": "橈骨動脈",
+      "en": "radial artery"
+    },
+    "FMA22734": {
+      "side": "left",
+      "ko": "노동맥",
+      "hanja": "橈骨動脈",
+      "en": "radial artery"
+    },
+    "FMA22740": {
+      "side": "right",
+      "ko": "허리엉덩갈비근",
+      "hanja": "腰腸肋筋",
+      "en": "iliocostalis lumborum"
+    },
+    "FMA22741": {
+      "side": "left",
+      "ko": "허리엉덩갈비근",
+      "hanja": "腰腸肋筋",
+      "en": "iliocostalis lumborum"
+    },
+    "FMA22742": {
+      "side": "right",
+      "ko": "등엉덩갈비근",
+      "hanja": "胸腸肋筋",
+      "en": "iliocostalis thoracis"
+    },
+    "FMA22743": {
+      "side": "left",
+      "ko": "등엉덩갈비근",
+      "hanja": "胸腸肋筋",
+      "en": "iliocostalis thoracis"
+    },
+    "FMA22744": {
+      "side": "right",
+      "ko": "목엉덩갈비근",
+      "hanja": "頸腸肋筋",
+      "en": "iliocostalis cervicis"
+    },
+    "FMA22745": {
+      "side": "left",
+      "ko": "목엉덩갈비근",
+      "hanja": "頸腸肋筋",
+      "en": "iliocostalis cervicis"
+    },
+    "FMA22751": {
+      "side": "right",
+      "ko": "등가장긴근",
+      "hanja": "胸最長筋",
+      "en": "longissimus thoracis"
+    },
+    "FMA22753": {
+      "side": "left",
+      "ko": "등가장긴근",
+      "hanja": "胸最長筋",
+      "en": "longissimus thoracis"
+    },
+    "FMA22754": {
+      "side": "right",
+      "ko": "머리가장긴근",
+      "hanja": "頭最長筋",
+      "en": "longissimus capitis"
+    },
+    "FMA22756": {
+      "side": "left",
+      "ko": "머리가장긴근",
+      "hanja": "頭最長筋",
+      "en": "longissimus capitis"
+    },
+    "FMA22757": {
+      "side": "right",
+      "ko": "목가장긴근",
+      "hanja": "頸最長筋",
+      "en": "longissimus cervicis"
+    },
+    "FMA22758": {
+      "side": "left",
+      "ko": "목가장긴근",
+      "hanja": "頸最長筋",
+      "en": "longissimus cervicis"
+    },
+    "FMA22764": {
+      "side": "right",
+      "ko": "노쪽되돌이동맥",
+      "hanja": "橈側反回動脈",
+      "en": "radial recurrent artery"
+    },
+    "FMA22766": {
+      "side": "left",
+      "ko": "노쪽되돌이동맥",
+      "hanja": "橈側反回動脈",
+      "en": "radial recurrent artery"
+    },
+    "FMA22777": {
+      "side": "right",
+      "ko": "집게손가락노동맥",
+      "hanja": "橈側示指動脈",
+      "en": "arteria radialis indicis"
+    },
+    "FMA22778": {
+      "side": "left",
+      "ko": "집게손가락노동맥",
+      "hanja": "橈側示指動脈",
+      "en": "arteria radialis indicis"
+    },
+    "FMA22779": {
+      "side": "right",
+      "ko": "등가시근",
+      "hanja": "胸棘筋",
+      "en": "spinalis thoracis"
+    },
+    "FMA22780": {
+      "side": "left",
+      "ko": "등가시근",
+      "hanja": "胸棘筋",
+      "en": "spinalis thoracis"
+    },
+    "FMA22797": {
+      "side": "right",
+      "ko": "자동맥",
+      "hanja": "尺骨動脈",
+      "en": "ulnar artery"
+    },
+    "FMA22798": {
+      "side": "left",
+      "ko": "자동맥",
+      "hanja": "尺骨動脈",
+      "en": "ulnar artery"
+    },
+    "FMA22801": {
+      "side": "right",
+      "ko": "앞자쪽되돌이동맥",
+      "hanja": "前尺側反回動脈",
+      "en": "anterior ulnar recurrent artery"
+    },
+    "FMA22802": {
+      "side": "left",
+      "ko": "앞자쪽되돌이동맥",
+      "hanja": "前尺側反回動脈",
+      "en": "anterior ulnar recurrent artery"
+    },
+    "FMA22804": {
+      "side": "right",
+      "ko": "뒤자쪽되돌이동맥",
+      "hanja": "後尺側反回動脈",
+      "en": "posterior ulnar recurrent artery"
+    },
+    "FMA22805": {
+      "side": "left",
+      "ko": "뒤자쪽되돌이동맥",
+      "hanja": "後尺側反回動脈",
+      "en": "posterior ulnar recurrent artery"
+    },
+    "FMA22807": {
+      "side": "right",
+      "ko": "온뼈사이동맥",
+      "hanja": "總骨間動脈",
+      "en": "common interosseous artery"
+    },
+    "FMA22808": {
+      "side": "left",
+      "ko": "온뼈사이동맥",
+      "hanja": "總骨間動脈",
+      "en": "common interosseous artery"
+    },
+    "FMA22812": {
+      "side": "right",
+      "ko": "앞뼈사이동맥",
+      "hanja": "前骨間動脈",
+      "en": "anterior interosseous artery"
+    },
+    "FMA22813": {
+      "side": "left",
+      "ko": "앞뼈사이동맥",
+      "hanja": "前骨間動脈",
+      "en": "anterior interosseous artery"
+    },
+    "FMA22821": {
+      "side": "right",
+      "ko": "자동맥등쪽손목가지",
+      "hanja": "尺骨動脈背側手根枝",
+      "en": "dorsal carpal branch of ulnar artery"
+    },
+    "FMA22822": {
+      "side": "left",
+      "ko": "자동맥등쪽손목가지",
+      "hanja": "尺骨動脈背側手根枝",
+      "en": "dorsal carpal branch of ulnar artery"
+    },
+    "FMA22835": {
+      "side": "right",
+      "ko": "얕은손바닥동맥활",
+      "hanja": "淺手掌動脈弓",
+      "en": "superficial palmar arterial arch"
+    },
+    "FMA22837": {
+      "side": "left",
+      "ko": "얕은손바닥동맥활",
+      "hanja": "淺手掌動脈弓",
+      "en": "superficial palmar arterial arch"
+    },
+    "FMA22839": {
+      "side": "right",
+      "ko": "깊은손바닥활",
+      "hanja": "深手掌弓",
+      "en": "deep palmar arch"
+    },
+    "FMA22840": {
+      "side": "left",
+      "ko": "깊은손바닥활",
+      "hanja": "深手掌弓",
+      "en": "deep palmar arch"
+    },
+    "FMA22856": {
+      "side": "right",
+      "ko": "첫째온손바닥손발가락동맥",
+      "hanja": "第一總手掌指動脈",
+      "en": "first common palmar digital artery"
+    },
+    "FMA22864": {
+      "side": "right",
+      "ko": "바닥쪽손허리동맥",
+      "hanja": "手掌中手動脈",
+      "en": "palmar metacarpal artery"
+    },
+    "FMA22865": {
+      "side": "left",
+      "ko": "바닥쪽손허리동맥",
+      "hanja": "手掌中手動脈",
+      "en": "palmar metacarpal artery"
+    },
+    "FMA22872": {
+      "side": "right",
+      "ko": "등반가시근",
+      "hanja": "胸半棘筋",
+      "en": "semispinalis thoracis"
+    },
+    "FMA22873": {
+      "side": "left",
+      "ko": "등반가시근",
+      "hanja": "胸半棘筋",
+      "en": "semispinalis thoracis"
+    },
+    "FMA22874": {
+      "side": "right",
+      "ko": "목반가시근",
+      "hanja": "頸半棘筋",
+      "en": "semispinalis cervicis"
+    },
+    "FMA22875": {
+      "side": "left",
+      "ko": "목반가시근",
+      "hanja": "頸半棘筋",
+      "en": "semispinalis cervicis"
+    },
+    "FMA22876": {
+      "side": "right",
+      "ko": "머리반가시근",
+      "hanja": "頭半棘筋",
+      "en": "semispinalis capitis"
+    },
+    "FMA22877": {
+      "side": "left",
+      "ko": "머리반가시근",
+      "hanja": "頭半棘筋",
+      "en": "semispinalis capitis"
+    },
+    "FMA22890": {
+      "side": "right",
+      "ko": "등가시사이근",
+      "hanja": "胸棘間筋",
+      "en": "interspinalis thoracis"
+    },
+    "FMA22891": {
+      "side": "left",
+      "ko": "등가시사이근",
+      "hanja": "胸棘間筋",
+      "en": "interspinalis thoracis"
+    },
+    "FMA22905": {
+      "side": "right",
+      "ko": "엄지으뜸동맥",
+      "hanja": "主拇指動脈",
+      "en": "arteria princeps pollicis"
+    },
+    "FMA22907": {
+      "side": "left",
+      "ko": "엄지으뜸동맥",
+      "hanja": "主拇指動脈",
+      "en": "arteria princeps pollicis"
+    },
+    "FMA22909": {
+      "side": "right",
+      "ko": "자쪽피부정맥",
+      "hanja": "尺側皮靜脈",
+      "en": "basilic vein"
+    },
+    "FMA22910": {
+      "side": "left",
+      "ko": "자쪽피부정맥",
+      "hanja": "尺側皮靜脈",
+      "en": "basilic vein"
+    },
+    "FMA22912": {
+      "side": "right",
+      "ko": "깊은손바닥정맥활",
+      "hanja": "深手掌靜脈弓",
+      "en": "deep palmar venous arch"
+    },
+    "FMA22913": {
+      "side": "left",
+      "ko": "깊은손바닥정맥활",
+      "hanja": "深手掌靜脈弓",
+      "en": "deep palmar venous arch"
+    },
+    "FMA22915": {
+      "side": "right",
+      "ko": "얕은손바닥정맥활",
+      "hanja": "淺手掌靜脈弓",
+      "en": "superficial palmar venous arch"
+    },
+    "FMA22916": {
+      "side": "left",
+      "ko": "얕은손바닥정맥활",
+      "hanja": "淺手掌靜脈弓",
+      "en": "superficial palmar venous arch"
+    },
+    "FMA22920": {
+      "side": "right",
+      "ko": "바닥쪽손허리정맥",
+      "hanja": "手掌中手靜脈",
+      "en": "palmar metacarpal vein"
+    },
+    "FMA22921": {
+      "side": "left",
+      "ko": "바닥쪽손허리정맥",
+      "hanja": "手掌中手靜脈",
+      "en": "palmar metacarpal vein"
+    },
+    "FMA22935": {
+      "side": "right",
+      "ko": "안쪽위팔정맥",
+      "hanja": "內側上腕靜脈",
+      "en": "medial brachial vein"
+    },
+    "FMA22936": {
+      "side": "left",
+      "ko": "안쪽위팔정맥",
+      "hanja": "內側上腕靜脈",
+      "en": "medial brachial vein"
+    },
+    "FMA22948": {
+      "side": "right",
+      "ko": "노정맥",
+      "hanja": "橈側靜脈",
+      "en": "radial vein"
+    },
+    "FMA22949": {
+      "side": "left",
+      "ko": "노정맥",
+      "hanja": "橈側靜脈",
+      "en": "radial vein"
+    },
+    "FMA22951": {
+      "side": "right",
+      "ko": "자정맥",
+      "hanja": "尺側靜脈",
+      "en": "ulnar vein"
+    },
+    "FMA22952": {
+      "side": "left",
+      "ko": "자정맥",
+      "hanja": "尺側靜脈",
+      "en": "ulnar vein"
+    },
+    "FMA22964": {
+      "side": "right",
+      "ko": "팔오금중간정맥",
+      "hanja": "正中肘靜脈",
+      "en": "median cubital vein"
+    },
+    "FMA22965": {
+      "side": "left",
+      "ko": "팔오금중간정맥",
+      "hanja": "正中肘靜脈",
+      "en": "median cubital vein"
+    },
+    "FMA22968": {
+      "side": "right",
+      "ko": "아래팔중간정맥",
+      "hanja": "正中前腕靜脈",
+      "en": "median antebrachial vein"
+    },
+    "FMA22969": {
+      "side": "left",
+      "ko": "아래팔중간정맥",
+      "hanja": "正中前腕靜脈",
+      "en": "median antebrachial vein"
+    },
+    "FMA23089": {
+      "side": "right",
+      "ko": "허리돌림근",
+      "hanja": "腰回旋筋",
+      "en": "lumbar rotator"
+    },
+    "FMA23090": {
+      "side": "left",
+      "ko": "허리돌림근",
+      "hanja": "腰回旋筋",
+      "en": "lumbar rotator"
+    },
+    "FMA23114": {
+      "side": "right",
+      "ko": "어깨밑정맥",
+      "hanja": "肩胛下靜脈",
+      "en": "subscapular vein"
+    },
+    "FMA23115": {
+      "side": "left",
+      "ko": "어깨밑정맥",
+      "hanja": "肩胛下靜脈",
+      "en": "subscapular vein"
+    },
+    "FMA23130": {
+      "side": "right",
+      "ko": "위팔뼈",
+      "hanja": "上腕骨",
+      "en": "humerus"
+    },
+    "FMA23131": {
+      "side": "left",
+      "ko": "위팔뼈",
+      "hanja": "上腕骨",
+      "en": "humerus"
+    },
+    "FMA23180": {
+      "side": "right",
+      "ko": "어깨휘돌이동맥",
+      "hanja": "回旋肩胛動脈",
+      "en": "circumflex scapular artery"
+    },
+    "FMA23181": {
+      "side": "left",
+      "ko": "어깨휘돌이동맥",
+      "hanja": "回旋肩胛動脈",
+      "en": "circumflex scapular artery"
+    },
+    "FMA23218": {
+      "side": "right",
+      "ko": "가슴이음",
+      "hanja": "胸帶",
+      "en": "pectoral girdle"
+    },
+    "FMA23219": {
+      "side": "left",
+      "ko": "가슴이음",
+      "hanja": "胸帶",
+      "en": "pectoral girdle"
+    },
+    "FMA23464": {
+      "side": "right",
+      "ko": "노뼈",
+      "hanja": "橈骨",
+      "en": "radius"
+    },
+    "FMA23465": {
+      "side": "left",
+      "ko": "노뼈",
+      "hanja": "橈骨",
+      "en": "radius"
+    },
+    "FMA23467": {
+      "side": "right",
+      "ko": "자뼈",
+      "hanja": "尺骨",
+      "en": "ulna"
+    },
+    "FMA23468": {
+      "side": "left",
+      "ko": "자뼈",
+      "hanja": "尺骨",
+      "en": "ulna"
+    },
+    "FMA23725": {
+      "side": "right",
+      "ko": "작은마름뼈",
+      "hanja": "小菱形骨",
+      "en": "trapezoid"
+    },
+    "FMA242609": {
+      "side": "right",
+      "ko": "원시겉질",
+      "hanja": "古皮質",
+      "en": "archicortex"
+    },
+    "FMA242611": {
+      "side": "left",
+      "ko": "원시겉질",
+      "hanja": "古皮質",
+      "en": "archicortex"
+    },
+    "FMA242625": {
+      "side": "right",
+      "ko": "앞이마겉질",
+      "hanja": "前前頭皮質",
+      "en": "prefrontal cortex"
+    },
+    "FMA242627": {
+      "side": "left",
+      "ko": "앞이마겉질",
+      "hanja": "前前頭皮質",
+      "en": "prefrontal cortex"
+    },
+    "FMA24435": {
+      "side": "right",
+      "ko": "손배뼈",
+      "hanja": "舟狀骨",
+      "en": "scaphoid"
+    },
+    "FMA24436": {
+      "side": "left",
+      "ko": "손배뼈",
+      "hanja": "舟狀骨",
+      "en": "scaphoid"
+    },
+    "FMA24437": {
+      "side": "right",
+      "ko": "반달뼈",
+      "hanja": "月狀骨",
+      "en": "lunate"
+    },
+    "FMA24438": {
+      "side": "left",
+      "ko": "반달뼈",
+      "hanja": "月狀骨",
+      "en": "lunate"
+    },
+    "FMA24439": {
+      "side": "right",
+      "ko": "세모뼈",
+      "hanja": "三角骨",
+      "en": "triquetral"
+    },
+    "FMA24440": {
+      "side": "left",
+      "ko": "세모뼈",
+      "hanja": "三角骨",
+      "en": "triquetral"
+    },
+    "FMA24441": {
+      "side": "right",
+      "ko": "콩알뼈",
+      "hanja": "豆狀骨",
+      "en": "pisiform"
+    },
+    "FMA24442": {
+      "side": "left",
+      "ko": "콩알뼈",
+      "hanja": "豆狀骨",
+      "en": "pisiform"
+    },
+    "FMA24443": {
+      "side": "right",
+      "ko": "큰마름뼈",
+      "hanja": "大菱形骨",
+      "en": "trapezium"
+    },
+    "FMA24444": {
+      "side": "left",
+      "ko": "큰마름뼈",
+      "hanja": "大菱形骨",
+      "en": "trapezium"
+    },
+    "FMA24445": {
+      "side": "left",
+      "ko": "작은마름뼈",
+      "hanja": "小菱形骨",
+      "en": "trapezoid"
+    },
+    "FMA24446": {
+      "side": "right",
+      "ko": "알머리뼈",
+      "hanja": "有頭骨",
+      "en": "capitate"
+    },
+    "FMA24447": {
+      "side": "left",
+      "ko": "알머리뼈",
+      "hanja": "有頭骨",
+      "en": "capitate"
+    },
+    "FMA24448": {
+      "side": "right",
+      "ko": "갈고리뼈",
+      "hanja": "有鉤骨",
+      "en": "hamate"
+    },
+    "FMA24449": {
+      "side": "left",
+      "ko": "갈고리뼈",
+      "hanja": "有鉤骨",
+      "en": "hamate"
+    },
+    "FMA24464": {
+      "side": "right",
+      "ko": "첫째손허리뼈",
+      "hanja": "第一中手骨",
+      "en": "first metacarpal bone"
+    },
+    "FMA24465": {
+      "side": "left",
+      "ko": "첫째손허리뼈",
+      "hanja": "第一中手骨",
+      "en": "first metacarpal bone"
+    },
+    "FMA24466": {
+      "side": "right",
+      "ko": "둘째손허리뼈",
+      "hanja": "第二中手骨",
+      "en": "second metacarpal bone"
+    },
+    "FMA24467": {
+      "side": "left",
+      "ko": "둘째손허리뼈",
+      "hanja": "第二中手骨",
+      "en": "second metacarpal bone"
+    },
+    "FMA24468": {
+      "side": "right",
+      "ko": "셋째손허리뼈",
+      "hanja": "第三中手骨",
+      "en": "third metacarpal bone"
+    },
+    "FMA24469": {
+      "side": "left",
+      "ko": "셋째손허리뼈",
+      "hanja": "第三中手骨",
+      "en": "third metacarpal bone"
+    },
+    "FMA24470": {
+      "side": "right",
+      "ko": "넷째손허리뼈",
+      "hanja": "第四中手骨",
+      "en": "fourth metacarpal bone"
+    },
+    "FMA24471": {
+      "side": "left",
+      "ko": "넷째손허리뼈",
+      "hanja": "第四中手骨",
+      "en": "fourth metacarpal bone"
+    },
+    "FMA24472": {
+      "side": "right",
+      "ko": "다섯째손허리뼈",
+      "hanja": "第五中手骨",
+      "en": "fifth metacarpal bone"
+    },
+    "FMA24473": {
+      "side": "left",
+      "ko": "다섯째손허리뼈",
+      "hanja": "第五中手骨",
+      "en": "fifth metacarpal bone"
+    },
+    "FMA24474": {
+      "side": "right",
+      "ko": "넙다리뼈",
+      "hanja": "大腿骨",
+      "en": "femur"
+    },
+    "FMA24475": {
+      "side": "left",
+      "ko": "넙다리뼈",
+      "hanja": "大腿骨",
+      "en": "femur"
+    },
+    "FMA24477": {
+      "side": "right",
+      "ko": "정강뼈",
+      "hanja": "脛骨",
+      "en": "tibia"
+    },
+    "FMA24478": {
+      "side": "left",
+      "ko": "정강뼈",
+      "hanja": "脛骨",
+      "en": "tibia"
+    },
+    "FMA24480": {
+      "side": "right",
+      "ko": "종아리뼈",
+      "hanja": "腓骨",
+      "en": "fibula"
+    },
+    "FMA24481": {
+      "side": "left",
+      "ko": "종아리뼈",
+      "hanja": "腓骨",
+      "en": "fibula"
+    },
+    "FMA24482": {
+      "side": "right",
+      "ko": "목말뼈",
+      "hanja": "距骨",
+      "en": "talus"
+    },
+    "FMA24483": {
+      "side": "left",
+      "ko": "목말뼈",
+      "hanja": "距骨",
+      "en": "talus"
+    },
+    "FMA24486": {
+      "side": "right",
+      "ko": "무릎뼈",
+      "hanja": "膝蓋骨",
+      "en": "patella"
+    },
+    "FMA24487": {
+      "side": "left",
+      "ko": "무릎뼈",
+      "hanja": "膝蓋骨",
+      "en": "patella"
+    },
+    "FMA24497": {
+      "side": "right",
+      "ko": "발꿈치뼈",
+      "hanja": "踵骨",
+      "en": "calcaneus"
+    },
+    "FMA24498": {
+      "side": "left",
+      "ko": "발꿈치뼈",
+      "hanja": "踵骨",
+      "en": "calcaneus"
+    },
+    "FMA24507": {
+      "side": "right",
+      "ko": "첫째발허리뼈",
+      "hanja": "第一中足骨",
+      "en": "first metatarsal bone"
+    },
+    "FMA24508": {
+      "side": "left",
+      "ko": "첫째발허리뼈",
+      "hanja": "第一中足骨",
+      "en": "first metatarsal bone"
+    },
+    "FMA24509": {
+      "side": "right",
+      "ko": "둘째발허리뼈",
+      "hanja": "第二中足骨",
+      "en": "second metatarsal bone"
+    },
+    "FMA24510": {
+      "side": "left",
+      "ko": "둘째발허리뼈",
+      "hanja": "第二中足骨",
+      "en": "second metatarsal bone"
+    },
+    "FMA24511": {
+      "side": "right",
+      "ko": "셋째발허리뼈",
+      "hanja": "第三中足骨",
+      "en": "third metatarsal bone"
+    },
+    "FMA24512": {
+      "side": "left",
+      "ko": "셋째발허리뼈",
+      "hanja": "第三中足骨",
+      "en": "third metatarsal bone"
+    },
+    "FMA24513": {
+      "side": "right",
+      "ko": "넷째발허리뼈",
+      "hanja": "第四中足骨",
+      "en": "fourth metatarsal bone"
+    },
+    "FMA24514": {
+      "side": "left",
+      "ko": "넷째발허리뼈",
+      "hanja": "第四中足骨",
+      "en": "fourth metatarsal bone"
+    },
+    "FMA24515": {
+      "side": "right",
+      "ko": "다섯째발허리뼈",
+      "hanja": "第五中足骨",
+      "en": "fifth metatarsal bone"
+    },
+    "FMA24516": {
+      "side": "left",
+      "ko": "다섯째발허리뼈",
+      "hanja": "第五中足骨",
+      "en": "fifth metatarsal bone"
+    },
+    "FMA24521": {
+      "side": "right",
+      "ko": "안쪽쐐기뼈",
+      "hanja": "內側楔狀骨",
+      "en": "medial cuneiform bone"
+    },
+    "FMA24522": {
+      "side": "left",
+      "ko": "안쪽쐐기뼈",
+      "hanja": "內側楔狀骨",
+      "en": "medial cuneiform bone"
+    },
+    "FMA24523": {
+      "side": "right",
+      "ko": "중간쐐기뼈",
+      "hanja": "中間楔狀骨",
+      "en": "intermediate cuneiform bone"
+    },
+    "FMA24524": {
+      "side": "left",
+      "ko": "중간쐐기뼈",
+      "hanja": "中間楔狀骨",
+      "en": "intermediate cuneiform bone"
+    },
+    "FMA24525": {
+      "side": "right",
+      "ko": "가쪽쐐기뼈",
+      "hanja": "外側楔狀骨",
+      "en": "lateral cuneiform bone"
+    },
+    "FMA24526": {
+      "side": "left",
+      "ko": "가쪽쐐기뼈",
+      "hanja": "外側楔狀骨",
+      "en": "lateral cuneiform bone"
+    },
+    "FMA24528": {
+      "side": "right",
+      "ko": "입방뼈",
+      "hanja": "立方骨",
+      "en": "cuboid bone"
+    },
+    "FMA24529": {
+      "side": "left",
+      "ko": "입방뼈",
+      "hanja": "立方骨",
+      "en": "cuboid bone"
+    },
+    "FMA24880": {
+      "side": "right",
+      "ko": "자유위팔다리",
+      "hanja": "遊離上肢",
+      "en": "free upper limb"
+    },
+    "FMA24881": {
+      "side": "left",
+      "ko": "자유위팔다리",
+      "hanja": "遊離上肢",
+      "en": "free upper limb"
+    },
+    "FMA24882": {
+      "side": "right",
+      "ko": "자유아래팔다리",
+      "hanja": "遊離下肢",
+      "en": "free lower limb"
+    },
+    "FMA24883": {
+      "side": "left",
+      "ko": "자유아래팔다리",
+      "hanja": "遊離下肢",
+      "en": "free lower limb"
+    },
+    "FMA24895": {
+      "side": "right",
+      "ko": "팔",
+      "hanja": "上腕",
+      "en": "arm"
+    },
+    "FMA24896": {
+      "side": "left",
+      "ko": "팔",
+      "hanja": "上腕",
+      "en": "arm"
+    },
+    "FMA24940": {
+      "side": "right",
+      "ko": "손목",
+      "hanja": "腕關節",
+      "en": "wrist"
+    },
+    "FMA24941": {
+      "side": "left",
+      "ko": "손목",
+      "hanja": "腕關節",
+      "en": "wrist"
+    },
+    "FMA24965": {
+      "side": "right",
+      "ko": "볼기",
+      "hanja": "寬",
+      "en": "hip"
+    },
+    "FMA24966": {
+      "side": "left",
+      "ko": "볼기",
+      "hanja": "寬",
+      "en": "hip"
+    },
+    "FMA24968": {
+      "side": "right",
+      "ko": "넙다리",
+      "hanja": "大腿",
+      "en": "thigh"
+    },
+    "FMA24969": {
+      "side": "left",
+      "ko": "넙다리",
+      "hanja": "大腿",
+      "en": "thigh"
+    },
+    "FMA24977": {
+      "side": "right",
+      "ko": "무릎",
+      "hanja": "膝",
+      "en": "knee"
+    },
+    "FMA24978": {
+      "side": "left",
+      "ko": "무릎",
+      "hanja": "膝",
+      "en": "knee"
+    },
+    "FMA24980": {
+      "side": "right",
+      "ko": "종아리",
+      "hanja": "下腿",
+      "en": "leg"
+    },
+    "FMA24981": {
+      "side": "left",
+      "ko": "종아리",
+      "hanja": "下腿",
+      "en": "leg"
+    },
+    "FMA25558": {
+      "side": "right",
+      "ko": "가쪽가슴벽",
+      "hanja": "外側胸壁",
+      "en": "lateral chest wall"
+    },
+    "FMA25559": {
+      "side": "left",
+      "ko": "가쪽가슴벽",
+      "hanja": "外側胸壁",
+      "en": "lateral chest wall"
+    },
+    "FMA25572": {
+      "side": "right",
+      "ko": "골성어깨이음뼈",
+      "hanja": "骨性肩胛帶",
+      "en": "bony pectoral girdle"
+    },
+    "FMA25573": {
+      "side": "left",
+      "ko": "골성어깨이음뼈",
+      "hanja": "骨性肩胛帶",
+      "en": "bony pectoral girdle"
+    },
+    "FMA258714": {
+      "side": "right",
+      "ko": "시상",
+      "hanja": "視床",
+      "en": "thalamus"
+    },
+    "FMA258716": {
+      "side": "left",
+      "ko": "시상",
+      "hanja": "視床",
+      "en": "thalamus"
+    },
+    "FMA258847": {
+      "side": "right",
+      "ko": "발꿈치힘줄",
+      "hanja": "踵骨腱",
+      "en": "calcaneal tendon"
+    },
+    "FMA260124": {
+      "side": "right",
+      "ko": "눈확내용물",
+      "hanja": "眼窩內容",
+      "en": "orbital content"
+    },
+    "FMA260127": {
+      "side": "left",
+      "ko": "눈확내용물",
+      "hanja": "眼窩內容",
+      "en": "orbital content"
+    },
+    "FMA261139": {
+      "side": "right",
+      "ko": "해마형성체",
+      "hanja": "海馬形成",
+      "en": "hippocampal formation"
+    },
+    "FMA261141": {
+      "side": "left",
+      "ko": "해마형성체",
+      "hanja": "海馬形成",
+      "en": "hippocampal formation"
+    },
+    "FMA264844": {
+      "side": "left",
+      "ko": "발꿈치힘줄",
+      "hanja": "踵骨腱",
+      "en": "calcaneal tendon"
+    },
+    "FMA268667": {
+      "side": "right",
+      "ko": "되돌이뼈사이동맥",
+      "hanja": "反回骨間動脈",
+      "en": "recurrent interosseous artery"
+    },
+    "FMA268669": {
+      "side": "left",
+      "ko": "되돌이뼈사이동맥",
+      "hanja": "反回骨間動脈",
+      "en": "recurrent interosseous artery"
+    },
+    "FMA32530": {
+      "side": "right",
+      "ko": "큰뒤머리곧은근",
+      "hanja": "直頭後大",
+      "en": "rectus capitis posterior major"
+    },
+    "FMA32531": {
+      "side": "left",
+      "ko": "큰뒤머리곧은근",
+      "hanja": "直頭後大",
+      "en": "rectus capitis posterior major"
+    },
+    "FMA32532": {
+      "side": "right",
+      "ko": "작은뒤머리곧은근",
+      "hanja": "直頭後小",
+      "en": "rectus capitis posterior minor"
+    },
+    "FMA32533": {
+      "side": "left",
+      "ko": "작은뒤머리곧은근",
+      "hanja": "直頭後小",
+      "en": "rectus capitis posterior minor"
+    },
+    "FMA32534": {
+      "side": "right",
+      "ko": "위머리빗근",
+      "hanja": "上頭斜筋",
+      "en": "obliquus capitis superior"
+    },
+    "FMA32535": {
+      "side": "left",
+      "ko": "위머리빗근",
+      "hanja": "上頭斜筋",
+      "en": "obliquus capitis superior"
+    },
+    "FMA32536": {
+      "side": "right",
+      "ko": "아래머리빗근",
+      "hanja": "下頭斜筋",
+      "en": "obliquus capitis inferior"
+    },
+    "FMA32537": {
+      "side": "left",
+      "ko": "아래머리빗근",
+      "hanja": "下頭斜筋",
+      "en": "obliquus capitis inferior"
+    },
+    "FMA32540": {
+      "side": "right",
+      "ko": "어깨올림근",
+      "hanja": "肩胛擧筋",
+      "en": "levator scapulae"
+    },
+    "FMA32541": {
+      "side": "left",
+      "ko": "어깨올림근",
+      "hanja": "肩胛擧筋",
+      "en": "levator scapulae"
+    },
+    "FMA32544": {
+      "side": "right",
+      "ko": "가시위근",
+      "hanja": "棘上筋",
+      "en": "supraspinatus"
+    },
+    "FMA32545": {
+      "side": "left",
+      "ko": "가시위근",
+      "hanja": "棘上筋",
+      "en": "supraspinatus"
+    },
+    "FMA32547": {
+      "side": "right",
+      "ko": "가시아래근",
+      "hanja": "棘下筋",
+      "en": "infraspinatus muscle"
+    },
+    "FMA32548": {
+      "side": "left",
+      "ko": "가시아래근",
+      "hanja": "棘下筋",
+      "en": "infraspinatus muscle"
+    },
+    "FMA32551": {
+      "side": "right",
+      "ko": "큰원근",
+      "hanja": "圓大",
+      "en": "teres major"
+    },
+    "FMA32552": {
+      "side": "left",
+      "ko": "큰원근",
+      "hanja": "圓大",
+      "en": "teres major"
+    },
+    "FMA32553": {
+      "side": "right",
+      "ko": "작은원근",
+      "hanja": "圓小",
+      "en": "teres minor"
+    },
+    "FMA32554": {
+      "side": "left",
+      "ko": "작은원근",
+      "hanja": "圓小",
+      "en": "teres minor"
+    },
+    "FMA37386": {
+      "side": "right",
+      "ko": "짧은엄지벌림근",
+      "hanja": "外轉筋拇指短",
+      "en": "abductor pollicis brevis"
+    },
+    "FMA37387": {
+      "side": "left",
+      "ko": "짧은엄지벌림근",
+      "hanja": "外轉筋拇指短",
+      "en": "abductor pollicis brevis"
+    },
+    "FMA37388": {
+      "side": "right",
+      "ko": "짧은엄지굽힘근",
+      "hanja": "屈筋拇指短",
+      "en": "flexor pollicis brevis"
+    },
+    "FMA37389": {
+      "side": "left",
+      "ko": "짧은엄지굽힘근",
+      "hanja": "屈筋拇指短",
+      "en": "flexor pollicis brevis"
+    },
+    "FMA37390": {
+      "side": "right",
+      "ko": "엄지맞섬근",
+      "hanja": "拇指對立筋",
+      "en": "opponens pollicis"
+    },
+    "FMA37391": {
+      "side": "left",
+      "ko": "엄지맞섬근",
+      "hanja": "拇指對立筋",
+      "en": "opponens pollicis"
+    },
+    "FMA37459": {
+      "side": "right",
+      "ko": "엄지벌림근",
+      "hanja": "外轉筋拇趾",
+      "en": "abductor hallucis"
+    },
+    "FMA37460": {
+      "side": "left",
+      "ko": "엄지벌림근",
+      "hanja": "外轉筋拇趾",
+      "en": "abductor hallucis"
+    },
+    "FMA37461": {
+      "side": "right",
+      "ko": "짧은발가락굽힘근",
+      "hanja": "屈筋指短",
+      "en": "flexor digitorum brevis"
+    },
+    "FMA37462": {
+      "side": "left",
+      "ko": "짧은발가락굽힘근",
+      "hanja": "屈筋指短",
+      "en": "flexor digitorum brevis"
+    },
+    "FMA37465": {
+      "side": "right",
+      "ko": "발바닥네모근",
+      "hanja": "足底方形筋",
+      "en": "flexor accessorius"
+    },
+    "FMA37466": {
+      "side": "left",
+      "ko": "발바닥네모근",
+      "hanja": "足底方形筋",
+      "en": "flexor accessorius"
+    },
+    "FMA37665": {
+      "side": "right",
+      "ko": "부리위팔근",
+      "hanja": "烏喙腕筋",
+      "en": "coracobrachialis"
+    },
+    "FMA37666": {
+      "side": "left",
+      "ko": "부리위팔근",
+      "hanja": "烏喙腕筋",
+      "en": "coracobrachialis"
+    },
+    "FMA37668": {
+      "side": "right",
+      "ko": "위팔근",
+      "hanja": "上腕筋",
+      "en": "brachialis"
+    },
+    "FMA37669": {
+      "side": "left",
+      "ko": "위팔근",
+      "hanja": "上腕筋",
+      "en": "brachialis"
+    },
+    "FMA37705": {
+      "side": "right",
+      "ko": "팔꿈치근",
+      "hanja": "肘筋",
+      "en": "anconeus"
+    },
+    "FMA37706": {
+      "side": "left",
+      "ko": "팔꿈치근",
+      "hanja": "肘筋",
+      "en": "anconeus"
+    },
+    "FMA38454": {
+      "side": "right",
+      "ko": "네모엎침근",
+      "hanja": "回內筋方形",
+      "en": "pronator quadratus"
+    },
+    "FMA38455": {
+      "side": "left",
+      "ko": "네모엎침근",
+      "hanja": "回內筋方形",
+      "en": "pronator quadratus"
+    },
+    "FMA38460": {
+      "side": "right",
+      "ko": "노쪽손목굽힘근",
+      "hanja": "屈筋手根橈側",
+      "en": "flexor carpi radialis"
+    },
+    "FMA38461": {
+      "side": "left",
+      "ko": "노쪽손목굽힘근",
+      "hanja": "屈筋手根橈側",
+      "en": "flexor carpi radialis"
+    },
+    "FMA38463": {
+      "side": "right",
+      "ko": "긴손바닥근",
+      "hanja": "長掌筋",
+      "en": "palmaris longus"
+    },
+    "FMA38464": {
+      "side": "left",
+      "ko": "긴손바닥근",
+      "hanja": "長掌筋",
+      "en": "palmaris longus"
+    },
+    "FMA38470": {
+      "side": "right",
+      "ko": "얕은손가락굽힘근",
+      "hanja": "淺指屈筋",
+      "en": "flexor digitorum superficialis"
+    },
+    "FMA38471": {
+      "side": "left",
+      "ko": "얕은손가락굽힘근",
+      "hanja": "淺指屈筋",
+      "en": "flexor digitorum superficialis"
+    },
+    "FMA38479": {
+      "side": "right",
+      "ko": "깊은손가락굽힘근",
+      "hanja": "深指屈筋",
+      "en": "flexor digitorum profundus"
+    },
+    "FMA38480": {
+      "side": "left",
+      "ko": "깊은손가락굽힘근",
+      "hanja": "深指屈筋",
+      "en": "flexor digitorum profundus"
+    },
+    "FMA38482": {
+      "side": "right",
+      "ko": "긴엄지굽힘근",
+      "hanja": "屈筋拇指長",
+      "en": "flexor pollicis longus"
+    },
+    "FMA38484": {
+      "side": "left",
+      "ko": "긴엄지굽힘근",
+      "hanja": "屈筋拇指長",
+      "en": "flexor pollicis longus"
+    },
+    "FMA38486": {
+      "side": "right",
+      "ko": "위팔노근",
+      "hanja": "上腕橈骨筋",
+      "en": "brachioradialis"
+    },
+    "FMA38487": {
+      "side": "left",
+      "ko": "위팔노근",
+      "hanja": "上腕橈骨筋",
+      "en": "brachioradialis"
+    },
+    "FMA38495": {
+      "side": "right",
+      "ko": "긴노쪽손목폄근",
+      "hanja": "伸筋手根橈側長",
+      "en": "extensor carpi radialis longus"
+    },
+    "FMA38496": {
+      "side": "left",
+      "ko": "긴노쪽손목폄근",
+      "hanja": "伸筋手根橈側長",
+      "en": "extensor carpi radialis longus"
+    },
+    "FMA38498": {
+      "side": "right",
+      "ko": "짧은노쪽손목폄근",
+      "hanja": "伸筋手根橈側短",
+      "en": "extensor carpi radialis brevis"
+    },
+    "FMA38499": {
+      "side": "left",
+      "ko": "짧은노쪽손목폄근",
+      "hanja": "伸筋手根橈側短",
+      "en": "extensor carpi radialis brevis"
+    },
+    "FMA38501": {
+      "side": "right",
+      "ko": "손가락폄근",
+      "hanja": "伸筋指",
+      "en": "extensor digitorum"
+    },
+    "FMA38502": {
+      "side": "left",
+      "ko": "손가락폄근",
+      "hanja": "伸筋指",
+      "en": "extensor digitorum"
+    },
+    "FMA38504": {
+      "side": "right",
+      "ko": "새끼폄근",
+      "hanja": "伸筋指小指",
+      "en": "extensor digiti minimi"
+    },
+    "FMA38505": {
+      "side": "left",
+      "ko": "새끼폄근",
+      "hanja": "伸筋指小指",
+      "en": "extensor digiti minimi"
+    },
+    "FMA38507": {
+      "side": "right",
+      "ko": "자쪽손목폄근",
+      "hanja": "尺側手根伸筋",
+      "en": "extensor carpi ulnaris"
+    },
+    "FMA38508": {
+      "side": "left",
+      "ko": "자쪽손목폄근",
+      "hanja": "尺側手根伸筋",
+      "en": "extensor carpi ulnaris"
+    },
+    "FMA38513": {
+      "side": "right",
+      "ko": "손뒤침근",
+      "hanja": "回外筋",
+      "en": "supinator"
+    },
+    "FMA38514": {
+      "side": "left",
+      "ko": "손뒤침근",
+      "hanja": "回外筋",
+      "en": "supinator"
+    },
+    "FMA38516": {
+      "side": "right",
+      "ko": "긴엄지벌림근",
+      "hanja": "外轉筋拇指長",
+      "en": "abductor pollicis longus"
+    },
+    "FMA38517": {
+      "side": "left",
+      "ko": "긴엄지벌림근",
+      "hanja": "外轉筋拇指長",
+      "en": "abductor pollicis longus"
+    },
+    "FMA38519": {
+      "side": "right",
+      "ko": "짧은엄지폄근",
+      "hanja": "伸筋拇指短",
+      "en": "extensor pollicis brevis"
+    },
+    "FMA38520": {
+      "side": "left",
+      "ko": "짧은엄지폄근",
+      "hanja": "伸筋拇指短",
+      "en": "extensor pollicis brevis"
+    },
+    "FMA38522": {
+      "side": "right",
+      "ko": "긴엄지폄근",
+      "hanja": "伸筋拇指長",
+      "en": "extensor pollicis longus"
+    },
+    "FMA38523": {
+      "side": "left",
+      "ko": "긴엄지폄근",
+      "hanja": "伸筋拇指長",
+      "en": "extensor pollicis longus"
+    },
+    "FMA38525": {
+      "side": "right",
+      "ko": "집게폄근",
+      "hanja": "伸筋示指",
+      "en": "extensor indicis"
+    },
+    "FMA38526": {
+      "side": "left",
+      "ko": "집게폄근",
+      "hanja": "伸筋示指",
+      "en": "extensor indicis"
+    },
+    "FMA38928": {
+      "side": "right",
+      "ko": "넙다리곧은근",
+      "hanja": "大腿直筋",
+      "en": "rectus femoris"
+    },
+    "FMA38929": {
+      "side": "left",
+      "ko": "넙다리곧은근",
+      "hanja": "大腿直筋",
+      "en": "rectus femoris"
+    },
+    "FMA38930": {
+      "side": "right",
+      "ko": "가쪽넓은근",
+      "hanja": "外側廣筋",
+      "en": "vastus lateralis"
+    },
+    "FMA38931": {
+      "side": "left",
+      "ko": "가쪽넓은근",
+      "hanja": "外側廣筋",
+      "en": "vastus lateralis"
+    },
+    "FMA38932": {
+      "side": "right",
+      "ko": "안쪽넓은근",
+      "hanja": "內側廣筋",
+      "en": "vastus medialis"
+    },
+    "FMA38933": {
+      "side": "left",
+      "ko": "안쪽넓은근",
+      "hanja": "內側廣筋",
+      "en": "vastus medialis"
+    },
+    "FMA38934": {
+      "side": "right",
+      "ko": "중간넓은근",
+      "hanja": "中間廣筋",
+      "en": "vastus intermedius"
+    },
+    "FMA38935": {
+      "side": "left",
+      "ko": "중간넓은근",
+      "hanja": "中間廣筋",
+      "en": "vastus intermedius"
+    },
+    "FMA3941": {
+      "side": "right",
+      "ko": "온목동맥",
+      "hanja": "總頸動脈",
+      "en": "common carotid artery"
+    },
+    "FMA3949": {
+      "side": "right",
+      "ko": "속목동맥",
+      "hanja": "內頸動脈",
+      "en": "internal carotid artery"
+    },
+    "FMA3953": {
+      "side": "right",
+      "ko": "빗장밑동맥",
+      "hanja": "鎖骨下動脈",
+      "en": "subclavian artery"
+    },
+    "FMA3958": {
+      "side": "right",
+      "ko": "척추동맥",
+      "hanja": "椎骨動脈",
+      "en": "vertebral artery"
+    },
+    "FMA3969": {
+      "side": "right",
+      "ko": "속가슴동맥",
+      "hanja": "內胸動脈",
+      "en": "internal thoracic artery"
+    },
+    "FMA3988": {
+      "side": "right",
+      "ko": "위배벽동맥",
+      "hanja": "上腹壁動脈",
+      "en": "superior epigastric artery"
+    },
+    "FMA3992": {
+      "side": "right",
+      "ko": "갑상목동맥",
+      "hanja": "甲狀頸幹",
+      "en": "thyrocervical trunk"
+    },
+    "FMA4057": {
+      "side": "right",
+      "ko": "등쪽어깨동맥",
+      "hanja": "背側肩胛動脈",
+      "en": "dorsal scapular artery"
+    },
+    "FMA4058": {
+      "side": "left",
+      "ko": "온목동맥",
+      "hanja": "總頸動脈",
+      "en": "common carotid artery"
+    },
+    "FMA4062": {
+      "side": "left",
+      "ko": "속목동맥",
+      "hanja": "內頸動脈",
+      "en": "internal carotid artery"
+    },
+    "FMA4066": {
+      "side": "left",
+      "ko": "척추동맥",
+      "hanja": "椎骨動脈",
+      "en": "vertebral artery"
+    },
+    "FMA4068": {
+      "side": "left",
+      "ko": "속가슴동맥",
+      "hanja": "內胸動脈",
+      "en": "internal thoracic artery"
+    },
+    "FMA4077": {
+      "side": "left",
+      "ko": "근육가로막동맥",
+      "hanja": "筋橫隔動脈",
+      "en": "musculophrenic artery"
+    },
+    "FMA4083": {
+      "side": "left",
+      "ko": "위배벽동맥",
+      "hanja": "上腹壁動脈",
+      "en": "superior epigastric artery"
+    },
+    "FMA4084": {
+      "side": "left",
+      "ko": "갑상목동맥",
+      "hanja": "甲狀頸幹",
+      "en": "thyrocervical trunk"
+    },
+    "FMA4086": {
+      "side": "left",
+      "ko": "목갈비동맥",
+      "hanja": "肋頸幹",
+      "en": "costocervical trunk"
+    },
+    "FMA4088": {
+      "side": "left",
+      "ko": "위갈비사이동맥",
+      "hanja": "上肋間動脈",
+      "en": "superior intercostal artery"
+    },
+    "FMA4112": {
+      "side": "left",
+      "ko": "둘째뒤갈비사이동맥",
+      "hanja": "第二後肋間動脈",
+      "en": "second posterior intercostal artery"
+    },
+    "FMA4134": {
+      "side": "left",
+      "ko": "깊은목동맥",
+      "hanja": "深頸動脈",
+      "en": "deep cervical artery"
+    },
+    "FMA43883": {
+      "side": "right",
+      "ko": "두덩정강근",
+      "hanja": "薄筋",
+      "en": "gracilis"
+    },
+    "FMA43884": {
+      "side": "left",
+      "ko": "두덩정강근",
+      "hanja": "薄筋",
+      "en": "gracilis"
+    },
+    "FMA43886": {
+      "side": "right",
+      "ko": "작은모음근",
+      "hanja": "內轉筋小",
+      "en": "adductor minimus"
+    },
+    "FMA43887": {
+      "side": "left",
+      "ko": "작은모음근",
+      "hanja": "內轉筋小",
+      "en": "adductor minimus"
+    },
+    "FMA43890": {
+      "side": "right",
+      "ko": "안쪽아래무릎동맥",
+      "hanja": "下內側膝動脈",
+      "en": "inferior medial genicular artery"
+    },
+    "FMA43891": {
+      "side": "left",
+      "ko": "안쪽아래무릎동맥",
+      "hanja": "下內側膝動脈",
+      "en": "inferior medial genicular artery"
+    },
+    "FMA43892": {
+      "side": "right",
+      "ko": "가쪽아래무릎동맥",
+      "hanja": "下外側膝動脈",
+      "en": "inferior lateral genicular artery"
+    },
+    "FMA43893": {
+      "side": "left",
+      "ko": "가쪽아래무릎동맥",
+      "hanja": "下外側膝動脈",
+      "en": "inferior lateral genicular artery"
+    },
+    "FMA43896": {
+      "side": "right",
+      "ko": "앞정강동맥",
+      "hanja": "前脛骨動脈",
+      "en": "anterior tibial artery"
+    },
+    "FMA43897": {
+      "side": "left",
+      "ko": "앞정강동맥",
+      "hanja": "前脛骨動脈",
+      "en": "anterior tibial artery"
+    },
+    "FMA43898": {
+      "side": "right",
+      "ko": "뒤정강동맥",
+      "hanja": "後脛骨動脈",
+      "en": "posterior tibial artery"
+    },
+    "FMA43899": {
+      "side": "left",
+      "ko": "뒤정강동맥",
+      "hanja": "後脛骨動脈",
+      "en": "posterior tibial artery"
+    },
+    "FMA43907": {
+      "side": "right",
+      "ko": "앞정강되돌이동맥",
+      "hanja": "前脛骨反回動脈",
+      "en": "anterior tibial recurrent artery"
+    },
+    "FMA43908": {
+      "side": "left",
+      "ko": "앞정강되돌이동맥",
+      "hanja": "前脛骨反回動脈",
+      "en": "anterior tibial recurrent artery"
+    },
+    "FMA43916": {
+      "side": "right",
+      "ko": "발등동맥",
+      "hanja": "足背動脈",
+      "en": "dorsalis pedis artery"
+    },
+    "FMA43917": {
+      "side": "left",
+      "ko": "발등동맥",
+      "hanja": "足背動脈",
+      "en": "dorsalis pedis artery"
+    },
+    "FMA43929": {
+      "side": "right",
+      "ko": "안쪽발바닥동맥",
+      "hanja": "內側足底動脈",
+      "en": "medial plantar artery"
+    },
+    "FMA43930": {
+      "side": "left",
+      "ko": "안쪽발바닥동맥",
+      "hanja": "內側足底動脈",
+      "en": "medial plantar artery"
+    },
+    "FMA43931": {
+      "side": "right",
+      "ko": "가쪽발바닥동맥",
+      "hanja": "外側足底動脈",
+      "en": "lateral plantar artery"
+    },
+    "FMA43932": {
+      "side": "left",
+      "ko": "가쪽발바닥동맥",
+      "hanja": "外側足底動脈",
+      "en": "lateral plantar artery"
+    },
+    "FMA43937": {
+      "side": "right",
+      "ko": "얕은안쪽발바닥동맥",
+      "hanja": "淺內側足底動脈",
+      "en": "superficial medial plantar artery"
+    },
+    "FMA43938": {
+      "side": "left",
+      "ko": "얕은안쪽발바닥동맥",
+      "hanja": "淺內側足底動脈",
+      "en": "superficial medial plantar artery"
+    },
+    "FMA43943": {
+      "side": "right",
+      "ko": "발바닥동맥활",
+      "hanja": "足底弓",
+      "en": "plantar arch"
+    },
+    "FMA43944": {
+      "side": "left",
+      "ko": "발바닥동맥활",
+      "hanja": "足底弓",
+      "en": "plantar arch"
+    },
+    "FMA44249": {
+      "side": "right",
+      "ko": "긴발바닥인대",
+      "hanja": "長足底靭帶",
+      "en": "long plantar ligament"
+    },
+    "FMA44250": {
+      "side": "left",
+      "ko": "긴발바닥인대",
+      "hanja": "長足底靭帶",
+      "en": "long plantar ligament"
+    },
+    "FMA44328": {
+      "side": "right",
+      "ko": "오금정맥",
+      "hanja": "膝窩靜脈",
+      "en": "popliteal vein"
+    },
+    "FMA44329": {
+      "side": "left",
+      "ko": "오금정맥",
+      "hanja": "膝窩靜脈",
+      "en": "popliteal vein"
+    },
+    "FMA44334": {
+      "side": "right",
+      "ko": "작은두렁정맥",
+      "hanja": "小伏在靜脈",
+      "en": "small saphenous vein"
+    },
+    "FMA44335": {
+      "side": "left",
+      "ko": "작은두렁정맥",
+      "hanja": "小伏在靜脈",
+      "en": "small saphenous vein"
+    },
+    "FMA44336": {
+      "side": "right",
+      "ko": "앞정강정맥",
+      "hanja": "前脛骨靜脈",
+      "en": "anterior tibial vein"
+    },
+    "FMA44337": {
+      "side": "left",
+      "ko": "앞정강정맥",
+      "hanja": "前脛骨靜脈",
+      "en": "anterior tibial vein"
+    },
+    "FMA44338": {
+      "side": "right",
+      "ko": "뒤정강정맥",
+      "hanja": "後脛骨靜脈",
+      "en": "posterior tibial vein"
+    },
+    "FMA44339": {
+      "side": "left",
+      "ko": "뒤정강정맥",
+      "hanja": "後脛骨靜脈",
+      "en": "posterior tibial vein"
+    },
+    "FMA44340": {
+      "side": "right",
+      "ko": "얕은배벽정맥",
+      "hanja": "淺上腹靜脈",
+      "en": "superficial epigastric vein"
+    },
+    "FMA44341": {
+      "side": "left",
+      "ko": "얕은배벽정맥",
+      "hanja": "淺上腹靜脈",
+      "en": "superficial epigastric vein"
+    },
+    "FMA44885": {
+      "side": "right",
+      "ko": "종아리정맥",
+      "hanja": "腓骨靜脈",
+      "en": "fibular vein"
+    },
+    "FMA44886": {
+      "side": "left",
+      "ko": "종아리정맥",
+      "hanja": "腓骨靜脈",
+      "en": "fibular vein"
+    },
+    "FMA44887": {
+      "side": "right",
+      "ko": "무릎정맥",
+      "hanja": "膝靜脈",
+      "en": "genicular vein"
+    },
+    "FMA44888": {
+      "side": "left",
+      "ko": "무릎정맥",
+      "hanja": "膝靜脈",
+      "en": "genicular vein"
+    },
+    "FMA44918": {
+      "side": "right",
+      "ko": "안쪽넙다리휘돌이정맥",
+      "hanja": "內側回旋大腿靜脈",
+      "en": "medial circumflex femoral vein"
+    },
+    "FMA44919": {
+      "side": "left",
+      "ko": "안쪽넙다리휘돌이정맥",
+      "hanja": "內側回旋大腿靜脈",
+      "en": "medial circumflex femoral vein"
+    },
+    "FMA44920": {
+      "side": "right",
+      "ko": "가쪽넙다리휘돌이정맥",
+      "hanja": "外側回旋大腿靜脈",
+      "en": "lateral circumflex femoral vein"
+    },
+    "FMA44922": {
+      "side": "left",
+      "ko": "가쪽넙다리휘돌이정맥",
+      "hanja": "外側回旋大腿靜脈",
+      "en": "lateral circumflex femoral vein"
+    },
+    "FMA45739": {
+      "side": "right",
+      "ko": "넓은목근",
+      "hanja": "廣頸筋",
+      "en": "platysma"
+    },
+    "FMA45740": {
+      "side": "left",
+      "ko": "넓은목근",
+      "hanja": "廣頸筋",
+      "en": "platysma"
+    },
+    "FMA45826": {
+      "side": "right",
+      "ko": "붓목뿔근",
+      "hanja": "莖狀舌骨筋",
+      "en": "stylohyoid"
+    },
+    "FMA45827": {
+      "side": "left",
+      "ko": "붓목뿔근",
+      "hanja": "莖狀舌骨筋",
+      "en": "stylohyoid"
+    },
+    "FMA45854": {
+      "side": "right",
+      "ko": "두덩꼬리근",
+      "hanja": "恥骨尾骨筋",
+      "en": "pubococcygeus"
+    },
+    "FMA45855": {
+      "side": "left",
+      "ko": "두덩꼬리근",
+      "hanja": "恥骨尾骨筋",
+      "en": "pubococcygeus"
+    },
+    "FMA45856": {
+      "side": "right",
+      "ko": "두덩곧창자근",
+      "hanja": "恥骨直腸筋",
+      "en": "puborectalis"
+    },
+    "FMA45857": {
+      "side": "left",
+      "ko": "두덩곧창자근",
+      "hanja": "恥骨直腸筋",
+      "en": "puborectalis"
+    },
+    "FMA45858": {
+      "side": "right",
+      "ko": "엉덩꼬리근",
+      "hanja": "腸骨尾骨筋",
+      "en": "iliococcygeus"
+    },
+    "FMA45859": {
+      "side": "left",
+      "ko": "엉덩꼬리근",
+      "hanja": "腸骨尾骨筋",
+      "en": "iliococcygeus"
+    },
+    "FMA46292": {
+      "side": "right",
+      "ko": "턱두힘살근",
+      "hanja": "二腹筋",
+      "en": "digastric"
+    },
+    "FMA46293": {
+      "side": "left",
+      "ko": "턱두힘살근",
+      "hanja": "二腹筋",
+      "en": "digastric"
+    },
+    "FMA46309": {
+      "side": "right",
+      "ko": "머리긴근",
+      "hanja": "長頭",
+      "en": "longus capitis"
+    },
+    "FMA46310": {
+      "side": "left",
+      "ko": "머리긴근",
+      "hanja": "長頭",
+      "en": "longus capitis"
+    },
+    "FMA46313": {
+      "side": "right",
+      "ko": "앞머리곧은근",
+      "hanja": "直頭前",
+      "en": "rectus capitis anterior"
+    },
+    "FMA46314": {
+      "side": "left",
+      "ko": "앞머리곧은근",
+      "hanja": "直頭前",
+      "en": "rectus capitis anterior"
+    },
+    "FMA46317": {
+      "side": "right",
+      "ko": "가쪽머리곧은근",
+      "hanja": "直頭外側",
+      "en": "rectus capitis lateralis"
+    },
+    "FMA46318": {
+      "side": "left",
+      "ko": "가쪽머리곧은근",
+      "hanja": "直頭外側",
+      "en": "rectus capitis lateralis"
+    },
+    "FMA46321": {
+      "side": "right",
+      "ko": "턱목뿔근",
+      "hanja": "顎舌骨筋",
+      "en": "mylohyoid"
+    },
+    "FMA46322": {
+      "side": "left",
+      "ko": "턱목뿔근",
+      "hanja": "顎舌骨筋",
+      "en": "mylohyoid"
+    },
+    "FMA46326": {
+      "side": "right",
+      "ko": "턱끝목뿔근",
+      "hanja": "頤舌骨筋",
+      "en": "geniohyoid"
+    },
+    "FMA46327": {
+      "side": "left",
+      "ko": "턱끝목뿔근",
+      "hanja": "頤舌骨筋",
+      "en": "geniohyoid"
+    },
+    "FMA4634": {
+      "side": "right",
+      "ko": "갈비밑동맥",
+      "hanja": "肋下動脈",
+      "en": "subcostal artery"
+    },
+    "FMA46443": {
+      "side": "right",
+      "ko": "꼬리근",
+      "hanja": "尾骨筋",
+      "en": "coccygeus"
+    },
+    "FMA46444": {
+      "side": "left",
+      "ko": "꼬리근",
+      "hanja": "尾骨筋",
+      "en": "coccygeus"
+    },
+    "FMA4654": {
+      "side": "left",
+      "ko": "갈비밑동맥",
+      "hanja": "肋下動脈",
+      "en": "subcostal artery"
+    },
+    "FMA46577": {
+      "side": "right",
+      "ko": "뒤반지모뿔근",
+      "hanja": "後輪狀披裂筋",
+      "en": "posterior crico-arytenoid"
+    },
+    "FMA46578": {
+      "side": "left",
+      "ko": "뒤반지모뿔근",
+      "hanja": "後輪狀披裂筋",
+      "en": "posterior crico-arytenoid"
+    },
+    "FMA46580": {
+      "side": "right",
+      "ko": "가쪽반지모뿔근",
+      "hanja": "外側輪狀披裂筋",
+      "en": "lateral crico-arytenoid"
+    },
+    "FMA46581": {
+      "side": "left",
+      "ko": "가쪽반지모뿔근",
+      "hanja": "外側輪狀披裂筋",
+      "en": "lateral crico-arytenoid"
+    },
+    "FMA46584": {
+      "side": "right",
+      "ko": "빗모뿔근",
+      "hanja": "斜披裂",
+      "en": "oblique arytenoid"
+    },
+    "FMA46585": {
+      "side": "left",
+      "ko": "빗모뿔근",
+      "hanja": "斜披裂",
+      "en": "oblique arytenoid"
+    },
+    "FMA46589": {
+      "side": "right",
+      "ko": "방패모뿔근",
+      "hanja": "甲狀披裂筋",
+      "en": "thyro-arytenoid"
+    },
+    "FMA46590": {
+      "side": "left",
+      "ko": "방패모뿔근",
+      "hanja": "甲狀披裂筋",
+      "en": "thyro-arytenoid"
+    },
+    "FMA46592": {
+      "side": "right",
+      "ko": "성대근",
+      "hanja": "聲帶筋",
+      "en": "vocalis"
+    },
+    "FMA46593": {
+      "side": "left",
+      "ko": "성대근",
+      "hanja": "聲帶筋",
+      "en": "vocalis"
+    },
+    "FMA46604": {
+      "side": "right",
+      "ko": "모뿔덮개근",
+      "hanja": "披裂喉頭蓋筋",
+      "en": "aryepiglotticus"
+    },
+    "FMA46605": {
+      "side": "left",
+      "ko": "모뿔덮개근",
+      "hanja": "披裂喉頭蓋筋",
+      "en": "aryepiglotticus"
+    },
+    "FMA46631": {
+      "side": "right",
+      "ko": "위인두수축근",
+      "hanja": "上咽頭收縮筋",
+      "en": "superior pharyngeal constrictor"
+    },
+    "FMA46632": {
+      "side": "left",
+      "ko": "위인두수축근",
+      "hanja": "上咽頭收縮筋",
+      "en": "superior pharyngeal constrictor"
+    },
+    "FMA46633": {
+      "side": "right",
+      "ko": "중간인두수축근",
+      "hanja": "中咽頭收縮筋",
+      "en": "middle pharyngeal constrictor"
+    },
+    "FMA46634": {
+      "side": "left",
+      "ko": "중간인두수축근",
+      "hanja": "中咽頭收縮筋",
+      "en": "middle pharyngeal constrictor"
+    },
+    "FMA46635": {
+      "side": "right",
+      "ko": "아래인두수축근",
+      "hanja": "下咽頭收縮筋",
+      "en": "inferior pharyngeal constrictor"
+    },
+    "FMA46636": {
+      "side": "left",
+      "ko": "아래인두수축근",
+      "hanja": "下咽頭收縮筋",
+      "en": "inferior pharyngeal constrictor"
+    },
+    "FMA46667": {
+      "side": "right",
+      "ko": "붓인두근",
+      "hanja": "莖狀咽頭筋",
+      "en": "stylopharyngeus"
+    },
+    "FMA46668": {
+      "side": "left",
+      "ko": "붓인두근",
+      "hanja": "莖狀咽頭筋",
+      "en": "stylopharyngeus"
+    },
+    "FMA46669": {
+      "side": "right",
+      "ko": "귀관인두근",
+      "hanja": "耳管咽頭筋",
+      "en": "salpingopharyngeus"
+    },
+    "FMA46670": {
+      "side": "left",
+      "ko": "귀관인두근",
+      "hanja": "耳管咽頭筋",
+      "en": "salpingopharyngeus"
+    },
+    "FMA46671": {
+      "side": "right",
+      "ko": "입천장인두근",
+      "hanja": "口蓋咽頭筋",
+      "en": "palatopharyngeus"
+    },
+    "FMA46672": {
+      "side": "left",
+      "ko": "입천장인두근",
+      "hanja": "口蓋咽頭筋",
+      "en": "palatopharyngeus"
+    },
+    "FMA46698": {
+      "side": "right",
+      "ko": "턱끝혀근",
+      "hanja": "頤舌筋",
+      "en": "genioglossus"
+    },
+    "FMA46702": {
+      "side": "left",
+      "ko": "턱끝혀근",
+      "hanja": "頤舌筋",
+      "en": "genioglossus"
+    },
+    "FMA46703": {
+      "side": "right",
+      "ko": "목뿔혀근",
+      "hanja": "舌骨舌筋",
+      "en": "hyoglossus"
+    },
+    "FMA46704": {
+      "side": "left",
+      "ko": "목뿔혀근",
+      "hanja": "舌骨舌筋",
+      "en": "hyoglossus"
+    },
+    "FMA46728": {
+      "side": "right",
+      "ko": "입천장올림근",
+      "hanja": "口蓋擧筋",
+      "en": "levator veli palatini"
+    },
+    "FMA46729": {
+      "side": "left",
+      "ko": "입천장올림근",
+      "hanja": "口蓋擧筋",
+      "en": "levator veli palatini"
+    },
+    "FMA46731": {
+      "side": "right",
+      "ko": "입천장긴장근",
+      "hanja": "口蓋緊張筋",
+      "en": "tensor veli palatini"
+    },
+    "FMA46732": {
+      "side": "left",
+      "ko": "입천장긴장근",
+      "hanja": "口蓋緊張筋",
+      "en": "tensor veli palatini"
+    },
+    "FMA4694": {
+      "side": "left",
+      "ko": "빗장밑동맥",
+      "hanja": "鎖骨下動脈",
+      "en": "subclavian artery"
+    },
+    "FMA4751": {
+      "side": "right",
+      "ko": "팔머리정맥",
+      "hanja": "上腕頭靜脈",
+      "en": "brachiocephalic vein"
+    },
+    "FMA4754": {
+      "side": "right",
+      "ko": "속목정맥",
+      "hanja": "內頸靜脈",
+      "en": "internal jugular vein"
+    },
+    "FMA4755": {
+      "side": "right",
+      "ko": "빗장밑정맥",
+      "hanja": "鎖骨下靜脈",
+      "en": "subclavian vein"
+    },
+    "FMA4761": {
+      "side": "left",
+      "ko": "팔머리정맥",
+      "hanja": "上腕頭靜脈",
+      "en": "brachiocephalic vein"
+    },
+    "FMA4762": {
+      "side": "left",
+      "ko": "속목정맥",
+      "hanja": "內頸靜脈",
+      "en": "internal jugular vein"
+    },
+    "FMA4763": {
+      "side": "left",
+      "ko": "빗장밑정맥",
+      "hanja": "鎖骨下靜脈",
+      "en": "subclavian vein"
+    },
+    "FMA4771": {
+      "side": "right",
+      "ko": "위배벽정맥",
+      "hanja": "上腹壁靜脈",
+      "en": "superior epigastric vein"
+    },
+    "FMA4772": {
+      "side": "right",
+      "ko": "근육가로막정맥",
+      "hanja": "筋橫隔靜脈",
+      "en": "musculophrenic vein"
+    },
+    "FMA4785": {
+      "side": "left",
+      "ko": "위배벽정맥",
+      "hanja": "上腹壁靜脈",
+      "en": "superior epigastric vein"
+    },
+    "FMA4786": {
+      "side": "left",
+      "ko": "근육가로막정맥",
+      "hanja": "筋橫隔靜脈",
+      "en": "musculophrenic vein"
+    },
+    "FMA4843": {
+      "side": "right",
+      "ko": "오름허리정맥",
+      "hanja": "上行腰靜脈",
+      "en": "ascending lumbar vein"
+    },
+    "FMA4844": {
+      "side": "right",
+      "ko": "갈비밑정맥",
+      "hanja": "肋下靜脈",
+      "en": "subcostal vein"
+    },
+    "FMA49044": {
+      "side": "right",
+      "ko": "위곧은근",
+      "hanja": "上直",
+      "en": "superior rectus"
+    },
+    "FMA49045": {
+      "side": "left",
+      "ko": "위곧은근",
+      "hanja": "上直",
+      "en": "superior rectus"
+    },
+    "FMA49046": {
+      "side": "right",
+      "ko": "아래곧은근",
+      "hanja": "下直",
+      "en": "inferior rectus"
+    },
+    "FMA49047": {
+      "side": "left",
+      "ko": "아래곧은근",
+      "hanja": "下直",
+      "en": "inferior rectus"
+    },
+    "FMA49048": {
+      "side": "right",
+      "ko": "눈꺼풀올림근",
+      "hanja": "上眼瞼擧筋",
+      "en": "levator palpebrae superioris"
+    },
+    "FMA49049": {
+      "side": "left",
+      "ko": "눈꺼풀올림근",
+      "hanja": "上眼瞼擧筋",
+      "en": "levator palpebrae superioris"
+    },
+    "FMA49050": {
+      "side": "right",
+      "ko": "아래빗근",
+      "hanja": "下斜",
+      "en": "inferior oblique"
+    },
+    "FMA49051": {
+      "side": "left",
+      "ko": "아래빗근",
+      "hanja": "下斜",
+      "en": "inferior oblique"
+    },
+    "FMA49052": {
+      "side": "right",
+      "ko": "위빗근",
+      "hanja": "上斜",
+      "en": "superior oblique"
+    },
+    "FMA49053": {
+      "side": "left",
+      "ko": "위빗근",
+      "hanja": "上斜",
+      "en": "superior oblique"
+    },
+    "FMA49054": {
+      "side": "right",
+      "ko": "가쪽곧은근",
+      "hanja": "外側直",
+      "en": "lateral rectus"
+    },
+    "FMA49055": {
+      "side": "left",
+      "ko": "가쪽곧은근",
+      "hanja": "外側直",
+      "en": "lateral rectus"
+    },
+    "FMA49056": {
+      "side": "right",
+      "ko": "안쪽곧은근",
+      "hanja": "內側直",
+      "en": "medial rectus"
+    },
+    "FMA49057": {
+      "side": "left",
+      "ko": "안쪽곧은근",
+      "hanja": "內側直",
+      "en": "medial rectus"
+    },
+    "FMA49072": {
+      "side": "right",
+      "ko": "온힘줄고리",
+      "hanja": "總腱輪",
+      "en": "common tendinous ring"
+    },
+    "FMA49073": {
+      "side": "left",
+      "ko": "온힘줄고리",
+      "hanja": "總腱輪",
+      "en": "common tendinous ring"
+    },
+    "FMA4950": {
+      "side": "left",
+      "ko": "오름허리정맥",
+      "hanja": "上行腰靜脈",
+      "en": "ascending lumbar vein"
+    },
+    "FMA4951": {
+      "side": "left",
+      "ko": "갈비밑정맥",
+      "hanja": "肋下靜脈",
+      "en": "subcostal vein"
+    },
+    "FMA49869": {
+      "side": "right",
+      "ko": "눈동맥",
+      "hanja": "眼動脈",
+      "en": "ophthalmic artery"
+    },
+    "FMA49870": {
+      "side": "left",
+      "ko": "눈동맥",
+      "hanja": "眼動脈",
+      "en": "ophthalmic artery"
+    },
+    "FMA50029": {
+      "side": "right",
+      "ko": "앞대뇌동맥",
+      "hanja": "前大腦動脈",
+      "en": "anterior cerebral artery"
+    },
+    "FMA50030": {
+      "side": "left",
+      "ko": "앞대뇌동맥",
+      "hanja": "前大腦動脈",
+      "en": "anterior cerebral artery"
+    },
+    "FMA50071": {
+      "side": "right",
+      "ko": "가쪽얕은가슴벽",
+      "hanja": "外側淺部胸壁",
+      "en": "lateral superficial chest wall"
+    },
+    "FMA50072": {
+      "side": "left",
+      "ko": "가쪽얕은가슴벽",
+      "hanja": "外側淺部胸壁",
+      "en": "lateral superficial chest wall"
+    },
+    "FMA50085": {
+      "side": "right",
+      "ko": "뒤교통동맥",
+      "hanja": "後交通動脈",
+      "en": "posterior communicating artery"
+    },
+    "FMA50086": {
+      "side": "left",
+      "ko": "뒤교통동맥",
+      "hanja": "後交通動脈",
+      "en": "posterior communicating artery"
+    },
+    "FMA50088": {
+      "side": "right",
+      "ko": "앞맥락동맥",
+      "hanja": "前脈絡膜動脈",
+      "en": "anterior choroidal artery"
+    },
+    "FMA50089": {
+      "side": "left",
+      "ko": "앞맥락동맥",
+      "hanja": "前脈絡膜動脈",
+      "en": "anterior choroidal artery"
+    },
+    "FMA50343": {
+      "side": "right",
+      "ko": "안쪽눈확이마동맥",
+      "hanja": "內側前頭基底動脈",
+      "en": "medial frontobasal artery"
+    },
+    "FMA50344": {
+      "side": "left",
+      "ko": "안쪽눈확이마동맥",
+      "hanja": "內側前頭基底動脈",
+      "en": "medial frontobasal artery"
+    },
+    "FMA50347": {
+      "side": "right",
+      "ko": "뇌들보모서리동맥",
+      "hanja": "腦梁邊緣動脈",
+      "en": "callosomarginal artery"
+    },
+    "FMA50348": {
+      "side": "left",
+      "ko": "뇌들보모서리동맥",
+      "hanja": "腦梁邊緣動脈",
+      "en": "callosomarginal artery"
+    },
+    "FMA50359": {
+      "side": "right",
+      "ko": "뇌들보주위동맥",
+      "hanja": "腦梁周圍動脈",
+      "en": "pericallosal artery"
+    },
+    "FMA50360": {
+      "side": "left",
+      "ko": "뇌들보주위동맥",
+      "hanja": "腦梁周圍動脈",
+      "en": "pericallosal artery"
+    },
+    "FMA50380": {
+      "side": "right",
+      "ko": "관자극동맥",
+      "hanja": "極側頭動脈",
+      "en": "polar temporal artery"
+    },
+    "FMA50381": {
+      "side": "left",
+      "ko": "관자극동맥",
+      "hanja": "極側頭動脈",
+      "en": "polar temporal artery"
+    },
+    "FMA50383": {
+      "side": "right",
+      "ko": "앞관자동맥",
+      "hanja": "前側頭動脈",
+      "en": "anterior temporal artery"
+    },
+    "FMA50384": {
+      "side": "left",
+      "ko": "앞관자동맥",
+      "hanja": "前側頭動脈",
+      "en": "anterior temporal artery"
+    },
+    "FMA5039": {
+      "side": "right",
+      "ko": "목갈비동맥",
+      "hanja": "肋頸幹",
+      "en": "costocervical trunk"
+    },
+    "FMA5041": {
+      "side": "right",
+      "ko": "둘째뒤갈비사이동맥",
+      "hanja": "第二後肋間動脈",
+      "en": "second posterior intercostal artery"
+    },
+    "FMA5042": {
+      "side": "right",
+      "ko": "위갈비사이동맥",
+      "hanja": "上肋間動脈",
+      "en": "superior intercostal artery"
+    },
+    "FMA50443": {
+      "side": "right",
+      "ko": "가쪽눈확이마동맥",
+      "hanja": "外側前頭基底動脈",
+      "en": "lateral frontobasal artery"
+    },
+    "FMA50444": {
+      "side": "left",
+      "ko": "가쪽눈확이마동맥",
+      "hanja": "外側前頭基底動脈",
+      "en": "lateral frontobasal artery"
+    },
+    "FMA50445": {
+      "side": "right",
+      "ko": "이마앞동맥",
+      "hanja": "前前頭動脈",
+      "en": "prefrontal artery"
+    },
+    "FMA50478": {
+      "side": "left",
+      "ko": "이마앞동맥",
+      "hanja": "前前頭動脈",
+      "en": "prefrontal artery"
+    },
+    "FMA50486": {
+      "side": "right",
+      "ko": "앞마루동맥",
+      "hanja": "前頭頂動脈",
+      "en": "anterior parietal artery"
+    },
+    "FMA50487": {
+      "side": "left",
+      "ko": "앞마루동맥",
+      "hanja": "前頭頂動脈",
+      "en": "anterior parietal artery"
+    },
+    "FMA50489": {
+      "side": "right",
+      "ko": "뒤마루동맥",
+      "hanja": "後頭頂動脈",
+      "en": "posterior parietal artery"
+    },
+    "FMA50490": {
+      "side": "left",
+      "ko": "뒤마루동맥",
+      "hanja": "後頭頂動脈",
+      "en": "posterior parietal artery"
+    },
+    "FMA50519": {
+      "side": "right",
+      "ko": "뒤아래소뇌동맥",
+      "hanja": "後下小腦動脈",
+      "en": "posterior inferior cerebellar artery"
+    },
+    "FMA50520": {
+      "side": "left",
+      "ko": "뒤아래소뇌동맥",
+      "hanja": "後下小腦動脈",
+      "en": "posterior inferior cerebellar artery"
+    },
+    "FMA50532": {
+      "side": "right",
+      "ko": "앞척수동맥",
+      "hanja": "前脊髓動脈",
+      "en": "anterior spinal artery"
+    },
+    "FMA50533": {
+      "side": "left",
+      "ko": "앞척수동맥",
+      "hanja": "前脊髓動脈",
+      "en": "anterior spinal artery"
+    },
+    "FMA50561": {
+      "side": "right",
+      "ko": "다리뇌동맥",
+      "hanja": "橋動脈",
+      "en": "pontine artery"
+    },
+    "FMA50562": {
+      "side": "left",
+      "ko": "다리뇌동맥",
+      "hanja": "橋動脈",
+      "en": "pontine artery"
+    },
+    "FMA50574": {
+      "side": "right",
+      "ko": "위소뇌동맥",
+      "hanja": "上小腦動脈",
+      "en": "superior cerebellar artery"
+    },
+    "FMA50575": {
+      "side": "left",
+      "ko": "위소뇌동맥",
+      "hanja": "上小腦動脈",
+      "en": "superior cerebellar artery"
+    },
+    "FMA50584": {
+      "side": "right",
+      "ko": "뒤대뇌동맥",
+      "hanja": "後大腦動脈",
+      "en": "posterior cerebral artery"
+    },
+    "FMA50585": {
+      "side": "left",
+      "ko": "뒤대뇌동맥",
+      "hanja": "後大腦動脈",
+      "en": "posterior cerebral artery"
+    },
+    "FMA50643": {
+      "side": "right",
+      "ko": "가쪽뒤통수동맥",
+      "hanja": "外側後頭動脈",
+      "en": "lateral occipital artery"
+    },
+    "FMA50644": {
+      "side": "left",
+      "ko": "가쪽뒤통수동맥",
+      "hanja": "外側後頭動脈",
+      "en": "lateral occipital artery"
+    },
+    "FMA50645": {
+      "side": "right",
+      "ko": "안쪽뒤통수동맥",
+      "hanja": "內側後頭動脈",
+      "en": "medial occipital artery"
+    },
+    "FMA50646": {
+      "side": "left",
+      "ko": "안쪽뒤통수동맥",
+      "hanja": "內側後頭動脈",
+      "en": "medial occipital artery"
+    },
+    "FMA50658": {
+      "side": "right",
+      "ko": "뒤맥락막동맥",
+      "hanja": "後脈絡膜動脈",
+      "en": "posterior choroidal artery"
+    },
+    "FMA50659": {
+      "side": "left",
+      "ko": "뒤맥락막동맥",
+      "hanja": "後脈絡膜動脈",
+      "en": "posterior choroidal artery"
+    },
+    "FMA50664": {
+      "side": "right",
+      "ko": "시상관통동맥",
+      "hanja": "視床貫通動脈",
+      "en": "thalamoperforating artery"
+    },
+    "FMA50665": {
+      "side": "left",
+      "ko": "시상관통동맥",
+      "hanja": "視床貫通動脈",
+      "en": "thalamoperforating artery"
+    },
+    "FMA50670": {
+      "side": "right",
+      "ko": "시상무릎동맥",
+      "hanja": "視床膝狀動脈",
+      "en": "thalamogeniculate artery"
+    },
+    "FMA50671": {
+      "side": "left",
+      "ko": "시상무릎동맥",
+      "hanja": "視床膝狀動脈",
+      "en": "thalamogeniculate artery"
+    },
+    "FMA50672": {
+      "side": "right",
+      "ko": "뒤안쪽맥락막동맥",
+      "hanja": "後內側脈絡膜動脈",
+      "en": "posterior medial choroidal artery"
+    },
+    "FMA50673": {
+      "side": "left",
+      "ko": "뒤안쪽맥락막동맥",
+      "hanja": "後內側脈絡膜動脈",
+      "en": "posterior medial choroidal artery"
+    },
+    "FMA50684": {
+      "side": "right",
+      "ko": "팽대동맥",
+      "hanja": "膨大動脈",
+      "en": "splenial artery"
+    },
+    "FMA50685": {
+      "side": "left",
+      "ko": "팽대동맥",
+      "hanja": "膨大動脈",
+      "en": "splenial artery"
+    },
+    "FMA50859": {
+      "side": "right",
+      "ko": "어깨위정맥",
+      "hanja": "肩胛上靜脈",
+      "en": "suprascapular vein"
+    },
+    "FMA50860": {
+      "side": "left",
+      "ko": "어깨위정맥",
+      "hanja": "肩胛上靜脈",
+      "en": "suprascapular vein"
+    },
+    "FMA50875": {
+      "side": "right",
+      "ko": "시각신경",
+      "hanja": "視神經",
+      "en": "optic nerve"
+    },
+    "FMA50878": {
+      "side": "left",
+      "ko": "시각신경",
+      "hanja": "視神經",
+      "en": "optic nerve"
+    },
+    "FMA50881": {
+      "side": "right",
+      "ko": "도르래신경",
+      "hanja": "滑車神經",
+      "en": "trochlear nerve"
+    },
+    "FMA50882": {
+      "side": "left",
+      "ko": "도르래신경",
+      "hanja": "滑車神經",
+      "en": "trochlear nerve"
+    },
+    "FMA51042": {
+      "side": "right",
+      "ko": "깊은넙다리정맥",
+      "hanja": "深大腿靜脈",
+      "en": "deep femoral vein"
+    },
+    "FMA51043": {
+      "side": "left",
+      "ko": "깊은넙다리정맥",
+      "hanja": "深大腿靜脈",
+      "en": "deep femoral vein"
+    },
+    "FMA51144": {
+      "side": "right",
+      "ko": "짧은엄지폄근",
+      "hanja": "伸筋拇趾短",
+      "en": "extensor hallucis brevis"
+    },
+    "FMA51145": {
+      "side": "left",
+      "ko": "짧은엄지폄근",
+      "hanja": "伸筋拇趾短",
+      "en": "extensor hallucis brevis"
+    },
+    "FMA52622": {
+      "side": "right",
+      "ko": "눈신경",
+      "hanja": "眼神經",
+      "en": "ophthalmic nerve"
+    },
+    "FMA52623": {
+      "side": "left",
+      "ko": "눈신경",
+      "hanja": "眼神經",
+      "en": "ophthalmic nerve"
+    },
+    "FMA52629": {
+      "side": "right",
+      "ko": "눈물샘신경",
+      "hanja": "淚神經",
+      "en": "lacrimal nerve"
+    },
+    "FMA52630": {
+      "side": "left",
+      "ko": "눈물샘신경",
+      "hanja": "淚神經",
+      "en": "lacrimal nerve"
+    },
+    "FMA52639": {
+      "side": "right",
+      "ko": "이마신경",
+      "hanja": "前頭神經",
+      "en": "frontal nerve"
+    },
+    "FMA52640": {
+      "side": "left",
+      "ko": "이마신경",
+      "hanja": "前頭神經",
+      "en": "frontal nerve"
+    },
+    "FMA52643": {
+      "side": "right",
+      "ko": "도르래위신경",
+      "hanja": "滑車上神經",
+      "en": "supratrochlear nerve"
+    },
+    "FMA52644": {
+      "side": "left",
+      "ko": "도르래위신경",
+      "hanja": "滑車上神經",
+      "en": "supratrochlear nerve"
+    },
+    "FMA52656": {
+      "side": "right",
+      "ko": "위눈확신경",
+      "hanja": "上眼窩神經",
+      "en": "supra-orbital nerve"
+    },
+    "FMA52657": {
+      "side": "left",
+      "ko": "위눈확신경",
+      "hanja": "上眼窩神經",
+      "en": "supra-orbital nerve"
+    },
+    "FMA52669": {
+      "side": "right",
+      "ko": "코섬모체신경",
+      "hanja": "鼻毛樣神經",
+      "en": "nasociliary nerve"
+    },
+    "FMA52670": {
+      "side": "left",
+      "ko": "코섬모체신경",
+      "hanja": "鼻毛樣神經",
+      "en": "nasociliary nerve"
+    },
+    "FMA52676": {
+      "side": "right",
+      "ko": "앞벌집신경",
+      "hanja": "前篩骨神經",
+      "en": "anterior ethmoidal nerve"
+    },
+    "FMA52677": {
+      "side": "left",
+      "ko": "앞벌집신경",
+      "hanja": "前篩骨神經",
+      "en": "anterior ethmoidal nerve"
+    },
+    "FMA52698": {
+      "side": "right",
+      "ko": "도르래아래신경",
+      "hanja": "滑車下神經",
+      "en": "infratrochlear nerve"
+    },
+    "FMA52699": {
+      "side": "left",
+      "ko": "도르래아래신경",
+      "hanja": "滑車下神經",
+      "en": "infratrochlear nerve"
+    },
+    "FMA52715": {
+      "side": "right",
+      "ko": "뒤벌집신경",
+      "hanja": "後篩骨神經",
+      "en": "posterior ethmoidal nerve"
+    },
+    "FMA52716": {
+      "side": "left",
+      "ko": "뒤벌집신경",
+      "hanja": "後篩骨神經",
+      "en": "posterior ethmoidal nerve"
+    },
+    "FMA52738": {
+      "side": "right",
+      "ko": "관자뼈",
+      "hanja": "側頭骨",
+      "en": "temporal bone"
+    },
+    "FMA52739": {
+      "side": "left",
+      "ko": "관자뼈",
+      "hanja": "側頭骨",
+      "en": "temporal bone"
+    },
+    "FMA52788": {
+      "side": "right",
+      "ko": "마루뼈",
+      "hanja": "頭頂骨",
+      "en": "parietal bone"
+    },
+    "FMA52789": {
+      "side": "left",
+      "ko": "마루뼈",
+      "hanja": "頭頂骨",
+      "en": "parietal bone"
+    },
+    "FMA52892": {
+      "side": "right",
+      "ko": "광대뼈",
+      "hanja": "顴骨",
+      "en": "zygomatic bone"
+    },
+    "FMA52893": {
+      "side": "left",
+      "ko": "광대뼈",
+      "hanja": "顴骨",
+      "en": "zygomatic bone"
+    },
+    "FMA53082": {
+      "side": "right",
+      "ko": "눈확",
+      "hanja": "眼窩",
+      "en": "orbit"
+    },
+    "FMA53083": {
+      "side": "left",
+      "ko": "눈확",
+      "hanja": "眼窩",
+      "en": "orbit"
+    },
+    "FMA53549": {
+      "side": "right",
+      "ko": "섬모체신경절",
+      "hanja": "毛樣神經節",
+      "en": "ciliary ganglion"
+    },
+    "FMA53550": {
+      "side": "left",
+      "ko": "섬모체신경절",
+      "hanja": "毛樣神經節",
+      "en": "ciliary ganglion"
+    },
+    "FMA53637": {
+      "side": "right",
+      "ko": "볼",
+      "hanja": "頰",
+      "en": "cheek"
+    },
+    "FMA53638": {
+      "side": "left",
+      "ko": "볼",
+      "hanja": "頰",
+      "en": "cheek"
+    },
+    "FMA53645": {
+      "side": "right",
+      "ko": "눈물뼈",
+      "hanja": "淚骨",
+      "en": "lacrimal bone"
+    },
+    "FMA53646": {
+      "side": "left",
+      "ko": "눈물뼈",
+      "hanja": "淚骨",
+      "en": "lacrimal bone"
+    },
+    "FMA53647": {
+      "side": "right",
+      "ko": "코뼈",
+      "hanja": "鼻骨",
+      "en": "nasal bone"
+    },
+    "FMA53648": {
+      "side": "left",
+      "ko": "코뼈",
+      "hanja": "鼻骨",
+      "en": "nasal bone"
+    },
+    "FMA53649": {
+      "side": "right",
+      "ko": "위턱뼈",
+      "hanja": "上顎骨",
+      "en": "maxilla"
+    },
+    "FMA53650": {
+      "side": "left",
+      "ko": "위턱뼈",
+      "hanja": "上顎骨",
+      "en": "maxilla"
+    },
+    "FMA53655": {
+      "side": "right",
+      "ko": "입천장뼈",
+      "hanja": "口蓋骨",
+      "en": "palatine bone"
+    },
+    "FMA53656": {
+      "side": "left",
+      "ko": "입천장뼈",
+      "hanja": "口蓋骨",
+      "en": "palatine bone"
+    },
+    "FMA54440": {
+      "side": "right",
+      "ko": "위눈꺼풀",
+      "hanja": "上眼瞼",
+      "en": "upper eyelid"
+    },
+    "FMA54441": {
+      "side": "left",
+      "ko": "위눈꺼풀",
+      "hanja": "上眼瞼",
+      "en": "upper eyelid"
+    },
+    "FMA54443": {
+      "side": "right",
+      "ko": "아래눈꺼풀",
+      "hanja": "下眼瞼",
+      "en": "lower eyelid"
+    },
+    "FMA54444": {
+      "side": "left",
+      "ko": "아래눈꺼풀",
+      "hanja": "下眼瞼",
+      "en": "lower eyelid"
+    },
+    "FMA54449": {
+      "side": "right",
+      "ko": "눈",
+      "hanja": "眼",
+      "en": "eye"
+    },
+    "FMA54450": {
+      "side": "left",
+      "ko": "눈",
+      "hanja": "眼",
+      "en": "eye"
+    },
+    "FMA54667": {
+      "side": "right",
+      "ko": "눈확칸",
+      "hanja": "眼窩區劃",
+      "en": "orbital compartment"
+    },
+    "FMA54668": {
+      "side": "left",
+      "ko": "눈확칸",
+      "hanja": "眼窩區劃",
+      "en": "orbital compartment"
+    },
+    "FMA54737": {
+      "side": "right",
+      "ko": "아래코선반",
+      "hanja": "下鼻甲介",
+      "en": "inferior nasal concha"
+    },
+    "FMA54738": {
+      "side": "left",
+      "ko": "아래코선반",
+      "hanja": "下鼻甲介",
+      "en": "inferior nasal concha"
+    },
+    "FMA55113": {
+      "side": "right",
+      "ko": "모뿔연골",
+      "hanja": "披裂軟骨",
+      "en": "arytenoid cartilage"
+    },
+    "FMA55114": {
+      "side": "left",
+      "ko": "모뿔연골",
+      "hanja": "披裂軟骨",
+      "en": "arytenoid cartilage"
+    },
+    "FMA55115": {
+      "side": "right",
+      "ko": "잔뿔연골",
+      "hanja": "小角軟骨",
+      "en": "corniculate cartilage"
+    },
+    "FMA55116": {
+      "side": "left",
+      "ko": "잔뿔연골",
+      "hanja": "小角軟骨",
+      "en": "corniculate cartilage"
+    },
+    "FMA55117": {
+      "side": "right",
+      "ko": "쐐기연골",
+      "hanja": "楔狀軟骨",
+      "en": "cuneiform cartilage"
+    },
+    "FMA55118": {
+      "side": "left",
+      "ko": "쐐기연골",
+      "hanja": "楔狀軟骨",
+      "en": "cuneiform cartilage"
+    },
+    "FMA55133": {
+      "side": "right",
+      "ko": "방패목뿔막",
+      "hanja": "甲狀舌骨膜",
+      "en": "thyrohyoid membrane"
+    },
+    "FMA55134": {
+      "side": "left",
+      "ko": "방패목뿔막",
+      "hanja": "甲狀舌骨膜",
+      "en": "thyrohyoid membrane"
+    },
+    "FMA55140": {
+      "side": "right",
+      "ko": "가쪽방패목뿔인대",
+      "hanja": "外側甲狀舌骨靭帶",
+      "en": "lateral thyrohyoid ligament"
+    },
+    "FMA55141": {
+      "side": "left",
+      "ko": "가쪽방패목뿔인대",
+      "hanja": "外側甲狀舌骨靭帶",
+      "en": "lateral thyrohyoid ligament"
+    },
+    "FMA55245": {
+      "side": "right",
+      "ko": "성대인대",
+      "hanja": "聲帶靭帶",
+      "en": "vocal ligament"
+    },
+    "FMA55246": {
+      "side": "left",
+      "ko": "성대인대",
+      "hanja": "聲帶靭帶",
+      "en": "vocal ligament"
+    },
+    "FMA55251": {
+      "side": "right",
+      "ko": "탄력원뿔",
+      "hanja": "彈性圓錐",
+      "en": "conus elasticus"
+    },
+    "FMA55252": {
+      "side": "left",
+      "ko": "탄력원뿔",
+      "hanja": "彈性圓錐",
+      "en": "conus elasticus"
+    },
+    "FMA55619": {
+      "side": "right",
+      "ko": "날개아래턱솔기",
+      "hanja": "翼突下顎縫線",
+      "en": "pterygomandibular raphe"
+    },
+    "FMA55620": {
+      "side": "left",
+      "ko": "날개아래턱솔기",
+      "hanja": "翼突下顎縫線",
+      "en": "pterygomandibular raphe"
+    },
+    "FMA55680": {
+      "side": "right",
+      "ko": "위가쪽이차앞니치아",
+      "hanja": "上外側二次切齒齒",
+      "en": "upper lateral secondary incisor tooth"
+    },
+    "FMA55681": {
+      "side": "right",
+      "ko": "위중심이차앞니치아",
+      "hanja": "上中央二次切齒齒",
+      "en": "upper central secondary incisor tooth"
+    },
+    "FMA55682": {
+      "side": "left",
+      "ko": "위중심이차앞니치아",
+      "hanja": "上中央二次切齒齒",
+      "en": "upper central secondary incisor tooth"
+    },
+    "FMA55683": {
+      "side": "left",
+      "ko": "위가쪽이차앞니치아",
+      "hanja": "上外側二次切齒齒",
+      "en": "upper lateral secondary incisor tooth"
+    },
+    "FMA55686": {
+      "side": "right",
+      "ko": "아래 이차 송곳니",
+      "hanja": "下二次犬齒",
+      "en": "lower secondary canine tooth"
+    },
+    "FMA55687": {
+      "side": "left",
+      "ko": "아래 이차 송곳니",
+      "hanja": "下二次犬齒",
+      "en": "lower secondary canine tooth"
+    },
+    "FMA55688": {
+      "side": "right",
+      "ko": "위둘째이차작은어금니치아",
+      "hanja": "上第二二次小臼齒齒",
+      "en": "upper second secondary premolar tooth"
+    },
+    "FMA55689": {
+      "side": "right",
+      "ko": "위첫째이차작은어금니치아",
+      "hanja": "上第一二次小臼齒齒",
+      "en": "upper first secondary premolar tooth"
+    },
+    "FMA55690": {
+      "side": "left",
+      "ko": "위첫째이차작은어금니치아",
+      "hanja": "上第一二次小臼齒齒",
+      "en": "upper first secondary premolar tooth"
+    },
+    "FMA55691": {
+      "side": "left",
+      "ko": "위둘째이차작은어금니치아",
+      "hanja": "上第二二次小臼齒齒",
+      "en": "upper second secondary premolar tooth"
+    },
+    "FMA55692": {
+      "side": "left",
+      "ko": "아래둘째이차작은어금니치아",
+      "hanja": "下第二二次小臼齒齒",
+      "en": "lower second secondary premolar tooth"
+    },
+    "FMA55693": {
+      "side": "left",
+      "ko": "아래첫째이차작은어금니치아",
+      "hanja": "下第一二次小臼齒齒",
+      "en": "lower first secondary premolar tooth"
+    },
+    "FMA55694": {
+      "side": "right",
+      "ko": "아래첫째이차작은어금니치아",
+      "hanja": "下第一二次小臼齒齒",
+      "en": "lower first secondary premolar tooth"
+    },
+    "FMA55695": {
+      "side": "right",
+      "ko": "아래둘째이차작은어금니치아",
+      "hanja": "下第二二次小臼齒齒",
+      "en": "lower second secondary premolar tooth"
+    },
+    "FMA55697": {
+      "side": "right",
+      "ko": "위둘째이차어금니치아",
+      "hanja": "上第二二次臼齒齒",
+      "en": "upper second secondary molar tooth"
+    },
+    "FMA55698": {
+      "side": "right",
+      "ko": "위첫째이차어금니치아",
+      "hanja": "上第一二次臼齒齒",
+      "en": "upper first secondary molar tooth"
+    },
+    "FMA55699": {
+      "side": "left",
+      "ko": "위첫째이차어금니치아",
+      "hanja": "上第一二次臼齒齒",
+      "en": "upper first secondary molar tooth"
+    },
+    "FMA55700": {
+      "side": "left",
+      "ko": "위둘째이차어금니치아",
+      "hanja": "上第二二次臼齒齒",
+      "en": "upper second secondary molar tooth"
+    },
+    "FMA55703": {
+      "side": "left",
+      "ko": "아래둘째이차어금니치아",
+      "hanja": "下第二二次臼齒齒",
+      "en": "lower second secondary molar tooth"
+    },
+    "FMA55704": {
+      "side": "left",
+      "ko": "아래첫째이차어금니치아",
+      "hanja": "下第一二次臼齒齒",
+      "en": "lower first secondary molar tooth"
+    },
+    "FMA55705": {
+      "side": "right",
+      "ko": "아래첫째이차어금니치아",
+      "hanja": "下第一二次臼齒齒",
+      "en": "lower first secondary molar tooth"
+    },
+    "FMA55706": {
+      "side": "right",
+      "ko": "아래둘째이차어금니치아",
+      "hanja": "下第二二次臼齒齒",
+      "en": "lower second secondary molar tooth"
+    },
+    "FMA55798": {
+      "side": "right",
+      "ko": "위 이차 송곳니",
+      "hanja": "上二次犬齒",
+      "en": "upper secondary canine tooth"
+    },
+    "FMA55799": {
+      "side": "left",
+      "ko": "위 이차 송곳니",
+      "hanja": "上二次犬齒",
+      "en": "upper secondary canine tooth"
+    },
+    "FMA57140": {
+      "side": "right",
+      "ko": "아래가쪽이차앞니치아",
+      "hanja": "下外側二次切齒齒",
+      "en": "lower lateral secondary incisor tooth"
+    },
+    "FMA57141": {
+      "side": "left",
+      "ko": "아래가쪽이차앞니치아",
+      "hanja": "下外側二次切齒齒",
+      "en": "lower lateral secondary incisor tooth"
+    },
+    "FMA57142": {
+      "side": "right",
+      "ko": "아래중심이차앞니치아",
+      "hanja": "下中央二次切齒齒",
+      "en": "lower central secondary incisor tooth"
+    },
+    "FMA57143": {
+      "side": "left",
+      "ko": "아래중심이차앞니치아",
+      "hanja": "下中央二次切齒齒",
+      "en": "lower central secondary incisor tooth"
+    },
+    "FMA58236": {
+      "side": "right",
+      "ko": "홍채",
+      "hanja": "虹彩",
+      "en": "iris"
+    },
+    "FMA58237": {
+      "side": "left",
+      "ko": "홍채",
+      "hanja": "虹彩",
+      "en": "iris"
+    },
+    "FMA58239": {
+      "side": "right",
+      "ko": "각막",
+      "hanja": "角膜",
+      "en": "cornea"
+    },
+    "FMA58240": {
+      "side": "left",
+      "ko": "각막",
+      "hanja": "角膜",
+      "en": "cornea"
+    },
+    "FMA58242": {
+      "side": "right",
+      "ko": "수정체",
+      "hanja": "水晶體",
+      "en": "lens"
+    },
+    "FMA58243": {
+      "side": "left",
+      "ko": "수정체",
+      "hanja": "水晶體",
+      "en": "lens"
+    },
+    "FMA58271": {
+      "side": "right",
+      "ko": "공막",
+      "hanja": "鞏膜",
+      "en": "sclera"
+    },
+    "FMA58272": {
+      "side": "left",
+      "ko": "공막",
+      "hanja": "鞏膜",
+      "en": "sclera"
+    },
+    "FMA58299": {
+      "side": "right",
+      "ko": "맥락막",
+      "hanja": "脈絡膜",
+      "en": "choroid"
+    },
+    "FMA58300": {
+      "side": "left",
+      "ko": "맥락막",
+      "hanja": "脈絡膜",
+      "en": "choroid"
+    },
+    "FMA58483": {
+      "side": "right",
+      "ko": "섬모체관",
+      "hanja": "毛樣體冠",
+      "en": "corona ciliaris"
+    },
+    "FMA58484": {
+      "side": "left",
+      "ko": "섬모체관",
+      "hanja": "毛樣體冠",
+      "en": "corona ciliaris"
+    },
+    "FMA58776": {
+      "side": "right",
+      "ko": "엉덩정강띠",
+      "hanja": "腸脛靭帶",
+      "en": "iliotibial tract"
+    },
+    "FMA58777": {
+      "side": "left",
+      "ko": "엉덩정강띠",
+      "hanja": "腸脛靭帶",
+      "en": "iliotibial tract"
+    },
+    "FMA58828": {
+      "side": "right",
+      "ko": "유리체",
+      "hanja": "硝子體",
+      "en": "vitreous body"
+    },
+    "FMA58829": {
+      "side": "left",
+      "ko": "유리체",
+      "hanja": "硝子體",
+      "en": "vitreous body"
+    },
+    "FMA59102": {
+      "side": "right",
+      "ko": "눈물샘",
+      "hanja": "淚腺",
+      "en": "lacrimal gland"
+    },
+    "FMA59103": {
+      "side": "left",
+      "ko": "눈물샘",
+      "hanja": "淚腺",
+      "en": "lacrimal gland"
+    },
+    "FMA59368": {
+      "side": "right",
+      "ko": "눈물기관",
+      "hanja": "淚器",
+      "en": "lacrimal apparatus"
+    },
+    "FMA59369": {
+      "side": "left",
+      "ko": "눈물기관",
+      "hanja": "淚器",
+      "en": "lacrimal apparatus"
+    },
+    "FMA59505": {
+      "side": "right",
+      "ko": "큰콧방울연골",
+      "hanja": "大翼軟骨",
+      "en": "major alar cartilage"
+    },
+    "FMA59506": {
+      "side": "left",
+      "ko": "큰콧방울연골",
+      "hanja": "大翼軟骨",
+      "en": "major alar cartilage"
+    },
+    "FMA59512": {
+      "side": "right",
+      "ko": "가쪽코연골",
+      "hanja": "外側鼻軟骨",
+      "en": "lateral nasal cartilage"
+    },
+    "FMA59513": {
+      "side": "left",
+      "ko": "가쪽코연골",
+      "hanja": "外側鼻軟骨",
+      "en": "lateral nasal cartilage"
+    },
+    "FMA59541": {
+      "side": "right",
+      "ko": "눈물못",
+      "hanja": "淚湖",
+      "en": "lacrimal lake"
+    },
+    "FMA59542": {
+      "side": "left",
+      "ko": "눈물못",
+      "hanja": "淚湖",
+      "en": "lacrimal lake"
+    },
+    "FMA59545": {
+      "side": "right",
+      "ko": "눈물주머니",
+      "hanja": "淚囊",
+      "en": "lacrimal sac"
+    },
+    "FMA59546": {
+      "side": "left",
+      "ko": "눈물주머니",
+      "hanja": "淚囊",
+      "en": "lacrimal sac"
+    },
+    "FMA59555": {
+      "side": "right",
+      "ko": "코눈물관",
+      "hanja": "鼻淚管",
+      "en": "nasolacrimal duct"
+    },
+    "FMA59556": {
+      "side": "left",
+      "ko": "코눈물관",
+      "hanja": "鼻淚管",
+      "en": "nasolacrimal duct"
+    },
+    "FMA59582": {
+      "side": "right",
+      "ko": "눈물소관",
+      "hanja": "淚小管",
+      "en": "lacrimal canaliculus"
+    },
+    "FMA59583": {
+      "side": "left",
+      "ko": "눈물소관",
+      "hanja": "淚小管",
+      "en": "lacrimal canaliculus"
+    },
+    "FMA59802": {
+      "side": "right",
+      "ko": "턱밑샘",
+      "hanja": "顎下腺",
+      "en": "submandibular gland"
+    },
+    "FMA59803": {
+      "side": "left",
+      "ko": "턱밑샘",
+      "hanja": "顎下腺",
+      "en": "submandibular gland"
+    },
+    "FMA59804": {
+      "side": "right",
+      "ko": "혀밑샘",
+      "hanja": "舌下腺",
+      "en": "sublingual gland"
+    },
+    "FMA59805": {
+      "side": "left",
+      "ko": "혀밑샘",
+      "hanja": "舌下腺",
+      "en": "sublingual gland"
+    },
+    "FMA60325": {
+      "side": "right",
+      "ko": "엄지손가락",
+      "hanja": "拇指",
+      "en": "thumb"
+    },
+    "FMA60326": {
+      "side": "left",
+      "ko": "엄지손가락",
+      "hanja": "拇指",
+      "en": "thumb"
+    },
+    "FMA60327": {
+      "side": "right",
+      "ko": "새끼손가락",
+      "hanja": "小手指",
+      "en": "little finger"
+    },
+    "FMA60328": {
+      "side": "left",
+      "ko": "새끼손가락",
+      "hanja": "小手指",
+      "en": "little finger"
+    },
+    "FMA60329": {
+      "side": "right",
+      "ko": "고리손가락",
+      "hanja": "環手指",
+      "en": "ring finger"
+    },
+    "FMA60330": {
+      "side": "left",
+      "ko": "고리손가락",
+      "hanja": "環手指",
+      "en": "ring finger"
+    },
+    "FMA60331": {
+      "side": "right",
+      "ko": "중간손가락",
+      "hanja": "中手指",
+      "en": "middle finger"
+    },
+    "FMA60332": {
+      "side": "left",
+      "ko": "중간손가락",
+      "hanja": "中手指",
+      "en": "middle finger"
+    },
+    "FMA60333": {
+      "side": "right",
+      "ko": "집게손가락손가락",
+      "hanja": "示指手指",
+      "en": "index finger"
+    },
+    "FMA60334": {
+      "side": "left",
+      "ko": "집게손가락손가락",
+      "hanja": "示指手指",
+      "en": "index finger"
+    },
+    "FMA60335": {
+      "side": "right",
+      "ko": "엄지발가락",
+      "hanja": "拇趾",
+      "en": "big toe"
+    },
+    "FMA60336": {
+      "side": "left",
+      "ko": "엄지발가락",
+      "hanja": "拇趾",
+      "en": "big toe"
+    },
+    "FMA60337": {
+      "side": "right",
+      "ko": "둘째발가락",
+      "hanja": "第二足趾",
+      "en": "second toe"
+    },
+    "FMA60338": {
+      "side": "left",
+      "ko": "둘째발가락",
+      "hanja": "第二足趾",
+      "en": "second toe"
+    },
+    "FMA60339": {
+      "side": "right",
+      "ko": "셋째발가락",
+      "hanja": "第三足趾",
+      "en": "third toe"
+    },
+    "FMA60340": {
+      "side": "left",
+      "ko": "셋째발가락",
+      "hanja": "第三足趾",
+      "en": "third toe"
+    },
+    "FMA60341": {
+      "side": "right",
+      "ko": "넷째발가락",
+      "hanja": "第四足趾",
+      "en": "fourth toe"
+    },
+    "FMA60342": {
+      "side": "left",
+      "ko": "넷째발가락",
+      "hanja": "第四足趾",
+      "en": "fourth toe"
+    },
+    "FMA60343": {
+      "side": "right",
+      "ko": "새끼발가락",
+      "hanja": "小足趾",
+      "en": "little toe"
+    },
+    "FMA60344": {
+      "side": "left",
+      "ko": "새끼발가락",
+      "hanja": "小足趾",
+      "en": "little toe"
+    },
+    "FMA61064": {
+      "side": "right",
+      "ko": "눈물관",
+      "hanja": "淚管",
+      "en": "lacrimal duct"
+    },
+    "FMA61065": {
+      "side": "left",
+      "ko": "눈물관",
+      "hanja": "淚管",
+      "en": "lacrimal duct"
+    },
+    "FMA61068": {
+      "side": "right",
+      "ko": "손고유",
+      "hanja": "手固有",
+      "en": "hand proper"
+    },
+    "FMA61069": {
+      "side": "left",
+      "ko": "손고유",
+      "hanja": "手固有",
+      "en": "hand proper"
+    },
+    "FMA61472": {
+      "side": "right",
+      "ko": "가슴의 흉근부분",
+      "hanja": "胸部大胸筋部",
+      "en": "pectoral part of chest"
+    },
+    "FMA61473": {
+      "side": "left",
+      "ko": "가슴의 흉근부분",
+      "hanja": "胸部大胸筋部",
+      "en": "pectoral part of chest"
+    },
+    "FMA61819": {
+      "side": "left",
+      "ko": "대뇌반구",
+      "hanja": "大腦半球",
+      "en": "cerebral hemisphere"
+    },
+    "FMA62382": {
+      "side": "right",
+      "ko": "시각로",
+      "hanja": "視路",
+      "en": "optic tract"
+    },
+    "FMA65014": {
+      "side": "right",
+      "ko": "긴엄지굽힘근",
+      "hanja": "屈筋拇趾長",
+      "en": "flexor hallucis longus"
+    },
+    "FMA65015": {
+      "side": "left",
+      "ko": "긴엄지굽힘근",
+      "hanja": "屈筋拇趾長",
+      "en": "flexor hallucis longus"
+    },
+    "FMA65016": {
+      "side": "right",
+      "ko": "긴발가락굽힘근",
+      "hanja": "屈筋指長",
+      "en": "flexor digitorum longus"
+    },
+    "FMA65017": {
+      "side": "left",
+      "ko": "긴발가락굽힘근",
+      "hanja": "屈筋指長",
+      "en": "flexor digitorum longus"
+    },
+    "FMA65018": {
+      "side": "right",
+      "ko": "뒤정강근",
+      "hanja": "後脛骨筋",
+      "en": "tibialis posterior"
+    },
+    "FMA65019": {
+      "side": "left",
+      "ko": "뒤정강근",
+      "hanja": "後脛骨筋",
+      "en": "tibialis posterior"
+    },
+    "FMA66242": {
+      "side": "right",
+      "ko": "첫째뒤갈비사이동맥",
+      "hanja": "第一後肋間動脈",
+      "en": "first posterior intercostal artery"
+    },
+    "FMA66243": {
+      "side": "left",
+      "ko": "첫째뒤갈비사이동맥",
+      "hanja": "第一後肋間動脈",
+      "en": "first posterior intercostal artery"
+    },
+    "FMA66321": {
+      "side": "right",
+      "ko": "가슴등동맥",
+      "hanja": "胸背動脈",
+      "en": "thoracodorsal artery"
+    },
+    "FMA66322": {
+      "side": "left",
+      "ko": "가슴등동맥",
+      "hanja": "胸背動脈",
+      "en": "thoracodorsal artery"
+    },
+    "FMA67292": {
+      "side": "right",
+      "ko": "대뇌반구",
+      "hanja": "大腦半球",
+      "en": "cerebral hemisphere"
+    },
+    "FMA67936": {
+      "side": "left",
+      "ko": "시각로",
+      "hanja": "視路",
+      "en": "optic tract"
+    },
+    "FMA69265": {
+      "side": "right",
+      "ko": "아래부신동맥",
+      "hanja": "下副腎動脈",
+      "en": "inferior suprarenal artery"
+    },
+    "FMA69266": {
+      "side": "left",
+      "ko": "아래부신동맥",
+      "hanja": "下副腎動脈",
+      "en": "inferior suprarenal artery"
+    },
+    "FMA69490": {
+      "side": "right",
+      "ko": "가쪽발목동맥",
+      "hanja": "外側足根動脈",
+      "en": "lateral tarsal artery"
+    },
+    "FMA69491": {
+      "side": "left",
+      "ko": "가쪽발목동맥",
+      "hanja": "外側足根動脈",
+      "en": "lateral tarsal artery"
+    },
+    "FMA69494": {
+      "side": "right",
+      "ko": "활꼴동맥",
+      "hanja": "弓狀動脈",
+      "en": "arcuate artery"
+    },
+    "FMA69495": {
+      "side": "left",
+      "ko": "활꼴동맥",
+      "hanja": "弓狀動脈",
+      "en": "arcuate artery"
+    },
+    "FMA69514": {
+      "side": "right",
+      "ko": "깊은발바닥동맥",
+      "hanja": "深足底動脈",
+      "en": "deep plantar artery"
+    },
+    "FMA69515": {
+      "side": "left",
+      "ko": "깊은발바닥동맥",
+      "hanja": "深足底動脈",
+      "en": "deep plantar artery"
+    },
+    "FMA70249": {
+      "side": "right",
+      "ko": "넙다리동맥",
+      "hanja": "大腿動脈",
+      "en": "femoral artery"
+    },
+    "FMA70250": {
+      "side": "left",
+      "ko": "넙다리동맥",
+      "hanja": "大腿動脈",
+      "en": "femoral artery"
+    },
+    "FMA70347": {
+      "side": "right",
+      "ko": "갑상목동맥",
+      "hanja": "甲狀頸動脈",
+      "en": "thyrocervical artery"
+    },
+    "FMA70348": {
+      "side": "left",
+      "ko": "갑상목동맥",
+      "hanja": "甲狀頸動脈",
+      "en": "thyrocervical artery"
+    },
+    "FMA70351": {
+      "side": "right",
+      "ko": "갈비목동맥",
+      "hanja": "肋頸動脈",
+      "en": "costocervical artery"
+    },
+    "FMA70352": {
+      "side": "left",
+      "ko": "갈비목동맥",
+      "hanja": "肋頸動脈",
+      "en": "costocervical artery"
+    },
+    "FMA71102": {
+      "side": "right",
+      "ko": "위비뇨길",
+      "hanja": "上部尿路",
+      "en": "upper urinary tract"
+    },
+    "FMA71103": {
+      "side": "left",
+      "ko": "위비뇨길",
+      "hanja": "上部尿路",
+      "en": "upper urinary tract"
+    },
+    "FMA71211": {
+      "side": "right",
+      "ko": "가쪽가슴정맥",
+      "hanja": "外側胸靜脈",
+      "en": "lateral thoracic vein"
+    },
+    "FMA71212": {
+      "side": "left",
+      "ko": "가쪽가슴정맥",
+      "hanja": "外側胸靜脈",
+      "en": "lateral thoracic vein"
+    },
+    "FMA71214": {
+      "side": "right",
+      "ko": "가슴등정맥",
+      "hanja": "胸背靜脈",
+      "en": "thoracodorsal vein"
+    },
+    "FMA71215": {
+      "side": "left",
+      "ko": "가슴등정맥",
+      "hanja": "胸背靜脈",
+      "en": "thoracodorsal vein"
+    },
+    "FMA7185": {
+      "side": "right",
+      "ko": "위팔다리",
+      "hanja": "上肢",
+      "en": "upper limb"
+    },
+    "FMA7186": {
+      "side": "left",
+      "ko": "위팔다리",
+      "hanja": "上肢",
+      "en": "upper limb"
+    },
+    "FMA7187": {
+      "side": "right",
+      "ko": "다리",
+      "hanja": "下肢",
+      "en": "lower limb"
+    },
+    "FMA7188": {
+      "side": "left",
+      "ko": "다리",
+      "hanja": "下肢",
+      "en": "lower limb"
+    },
+    "FMA7204": {
+      "side": "right",
+      "ko": "콩팥",
+      "hanja": "腎臟",
+      "en": "kidney"
+    },
+    "FMA7205": {
+      "side": "left",
+      "ko": "콩팥",
+      "hanja": "腎臟",
+      "en": "kidney"
+    },
+    "FMA7211": {
+      "side": "right",
+      "ko": "고환",
+      "hanja": "睾丸",
+      "en": "testis"
+    },
+    "FMA7212": {
+      "side": "left",
+      "ko": "고환",
+      "hanja": "睾丸",
+      "en": "testis"
+    },
+    "FMA72309": {
+      "side": "right",
+      "ko": "붓목뿔인대",
+      "hanja": "莖狀舌骨靭帶",
+      "en": "stylohyoid ligament"
+    },
+    "FMA72311": {
+      "side": "left",
+      "ko": "붓목뿔인대",
+      "hanja": "莖狀舌骨靭帶",
+      "en": "stylohyoid ligament"
+    },
+    "FMA72653": {
+      "side": "right",
+      "ko": "위이마이랑",
+      "hanja": "上前頭回",
+      "en": "superior frontal gyrus"
+    },
+    "FMA72654": {
+      "side": "left",
+      "ko": "위이마이랑",
+      "hanja": "上前頭回",
+      "en": "superior frontal gyrus"
+    },
+    "FMA72655": {
+      "side": "right",
+      "ko": "중간이마이랑",
+      "hanja": "中前頭回",
+      "en": "middle frontal gyrus"
+    },
+    "FMA72656": {
+      "side": "left",
+      "ko": "중간이마이랑",
+      "hanja": "中前頭回",
+      "en": "middle frontal gyrus"
+    },
+    "FMA72657": {
+      "side": "right",
+      "ko": "아래이마이랑",
+      "hanja": "下前頭回",
+      "en": "inferior frontal gyrus"
+    },
+    "FMA72658": {
+      "side": "left",
+      "ko": "아래이마이랑",
+      "hanja": "下前頭回",
+      "en": "inferior frontal gyrus"
+    },
+    "FMA72661": {
+      "side": "right",
+      "ko": "중심앞이랑",
+      "hanja": "中心前回",
+      "en": "precentral gyrus"
+    },
+    "FMA72662": {
+      "side": "left",
+      "ko": "중심앞이랑",
+      "hanja": "中心前回",
+      "en": "precentral gyrus"
+    },
+    "FMA72665": {
+      "side": "right",
+      "ko": "중심뒤이랑",
+      "hanja": "中心後回",
+      "en": "postcentral gyrus"
+    },
+    "FMA72666": {
+      "side": "left",
+      "ko": "중심뒤이랑",
+      "hanja": "中心後回",
+      "en": "postcentral gyrus"
+    },
+    "FMA72667": {
+      "side": "right",
+      "ko": "모서리위이랑",
+      "hanja": "緣上回",
+      "en": "supramarginal gyrus"
+    },
+    "FMA72668": {
+      "side": "left",
+      "ko": "모서리위이랑",
+      "hanja": "緣上回",
+      "en": "supramarginal gyrus"
+    },
+    "FMA72669": {
+      "side": "right",
+      "ko": "모이랑",
+      "hanja": "角回",
+      "en": "angular gyrus"
+    },
+    "FMA72670": {
+      "side": "left",
+      "ko": "모이랑",
+      "hanja": "角回",
+      "en": "angular gyrus"
+    },
+    "FMA72685": {
+      "side": "right",
+      "ko": "중간관자이랑",
+      "hanja": "中側頭回",
+      "en": "middle temporal gyrus"
+    },
+    "FMA72686": {
+      "side": "left",
+      "ko": "중간관자이랑",
+      "hanja": "中側頭回",
+      "en": "middle temporal gyrus"
+    },
+    "FMA72687": {
+      "side": "right",
+      "ko": "아래관자이랑",
+      "hanja": "下側頭回",
+      "en": "inferior temporal gyrus"
+    },
+    "FMA72688": {
+      "side": "left",
+      "ko": "아래관자이랑",
+      "hanja": "下側頭回",
+      "en": "inferior temporal gyrus"
+    },
+    "FMA72689": {
+      "side": "right",
+      "ko": "방추이랑",
+      "hanja": "紡錘狀回",
+      "en": "fusiform gyrus"
+    },
+    "FMA72690": {
+      "side": "left",
+      "ko": "방추이랑",
+      "hanja": "紡錘狀回",
+      "en": "fusiform gyrus"
+    },
+    "FMA72705": {
+      "side": "right",
+      "ko": "해마곁이랑",
+      "hanja": "海馬旁回",
+      "en": "parahippocampal gyrus"
+    },
+    "FMA72706": {
+      "side": "left",
+      "ko": "해마곁이랑",
+      "hanja": "海馬旁回",
+      "en": "parahippocampal gyrus"
+    },
+    "FMA72713": {
+      "side": "right",
+      "ko": "해마",
+      "hanja": "海馬",
+      "en": "hippocampus"
+    },
+    "FMA72714": {
+      "side": "left",
+      "ko": "해마",
+      "hanja": "海馬",
+      "en": "hippocampus"
+    },
+    "FMA72717": {
+      "side": "right",
+      "ko": "띠이랑",
+      "hanja": "帶狀回",
+      "en": "cingulate gyrus"
+    },
+    "FMA72718": {
+      "side": "left",
+      "ko": "띠이랑",
+      "hanja": "帶狀回",
+      "en": "cingulate gyrus"
+    },
+    "FMA72826": {
+      "side": "right",
+      "ko": "꼬리핵",
+      "hanja": "尾狀核",
+      "en": "caudate nucleus"
+    },
+    "FMA72827": {
+      "side": "left",
+      "ko": "꼬리핵",
+      "hanja": "尾狀核",
+      "en": "caudate nucleus"
+    },
+    "FMA72828": {
+      "side": "right",
+      "ko": "조가비핵",
+      "hanja": "被殼",
+      "en": "putamen"
+    },
+    "FMA72829": {
+      "side": "left",
+      "ko": "조가비핵",
+      "hanja": "被殼",
+      "en": "putamen"
+    },
+    "FMA72830": {
+      "side": "right",
+      "ko": "창백핵",
+      "hanja": "淡蒼球",
+      "en": "globus pallidus"
+    },
+    "FMA72831": {
+      "side": "left",
+      "ko": "창백핵",
+      "hanja": "淡蒼球",
+      "en": "globus pallidus"
+    },
+    "FMA72832": {
+      "side": "right",
+      "ko": "편도체",
+      "hanja": "扁桃體",
+      "en": "amygdala"
+    },
+    "FMA72833": {
+      "side": "left",
+      "ko": "편도체",
+      "hanja": "扁桃體",
+      "en": "amygdala"
+    },
+    "FMA72906": {
+      "side": "right",
+      "ko": "속섬유막",
+      "hanja": "內囊",
+      "en": "internal capsule"
+    },
+    "FMA72907": {
+      "side": "left",
+      "ko": "속섬유막",
+      "hanja": "內囊",
+      "en": "internal capsule"
+    },
+    "FMA72924": {
+      "side": "right",
+      "ko": "앞뇌뇌궁",
+      "hanja": "前腦腦弓",
+      "en": "fornix of forebrain"
+    },
+    "FMA72925": {
+      "side": "left",
+      "ko": "앞뇌뇌궁",
+      "hanja": "前腦腦弓",
+      "en": "fornix of forebrain"
+    },
+    "FMA72977": {
+      "side": "right",
+      "ko": "대뇌섬",
+      "hanja": "島",
+      "en": "insula"
+    },
+    "FMA72978": {
+      "side": "left",
+      "ko": "대뇌섬",
+      "hanja": "島",
+      "en": "insula"
+    },
+    "FMA73086": {
+      "side": "right",
+      "ko": "발고유",
+      "hanja": "足固有",
+      "en": "foot proper"
+    },
+    "FMA73087": {
+      "side": "left",
+      "ko": "발고유",
+      "hanja": "足固有",
+      "en": "foot proper"
+    },
+    "FMA73303": {
+      "side": "right",
+      "ko": "가쪽무릎체",
+      "hanja": "外側膝狀體",
+      "en": "lateral geniculate body"
+    },
+    "FMA73304": {
+      "side": "left",
+      "ko": "가쪽무릎체",
+      "hanja": "外側膝狀體",
+      "en": "lateral geniculate body"
+    },
+    "FMA73309": {
+      "side": "right",
+      "ko": "안쪽무릎체",
+      "hanja": "內側膝狀體",
+      "en": "medial geniculate body"
+    },
+    "FMA73310": {
+      "side": "left",
+      "ko": "안쪽무릎체",
+      "hanja": "內側膝狀體",
+      "en": "medial geniculate body"
+    },
+    "FMA7338": {
+      "side": "right",
+      "ko": "끝기관지허파구역",
+      "hanja": "尖氣管支肺分節",
+      "en": "apical bronchopulmonary segment"
+    },
+    "FMA7339": {
+      "side": "right",
+      "ko": "뒤기관지허파구역",
+      "hanja": "後氣管支肺分節",
+      "en": "posterior bronchopulmonary segment"
+    },
+    "FMA73413": {
+      "side": "right",
+      "ko": "시상섬유줄",
+      "hanja": "視床髓質線條",
+      "en": "stria medullaris of thalamus"
+    },
+    "FMA73414": {
+      "side": "left",
+      "ko": "시상섬유줄",
+      "hanja": "視床髓質線條",
+      "en": "stria medullaris of thalamus"
+    },
+    "FMA73422": {
+      "side": "right",
+      "ko": "위둔덕",
+      "hanja": "上丘",
+      "en": "superior colliculus"
+    },
+    "FMA73423": {
+      "side": "left",
+      "ko": "위둔덕",
+      "hanja": "上丘",
+      "en": "superior colliculus"
+    },
+    "FMA73434": {
+      "side": "right",
+      "ko": "아래둔덕",
+      "hanja": "下丘",
+      "en": "inferior colliculus"
+    },
+    "FMA73435": {
+      "side": "left",
+      "ko": "아래둔덕",
+      "hanja": "下丘",
+      "en": "inferior colliculus"
+    },
+    "FMA7359": {
+      "side": "right",
+      "ko": "앞기관지허파구역",
+      "hanja": "前氣管支肺分節",
+      "en": "anterior bronchopulmonary segment"
+    },
+    "FMA7362": {
+      "side": "right",
+      "ko": "뒤바닥기관지허파구역",
+      "hanja": "後基底氣管支肺分節",
+      "en": "posterior basal bronchopulmonary segment"
+    },
+    "FMA7363": {
+      "side": "right",
+      "ko": "가쪽바닥기관지허파구역",
+      "hanja": "外側基底氣管支肺分節",
+      "en": "lateral basal bronchopulmonary segment"
+    },
+    "FMA7364": {
+      "side": "right",
+      "ko": "앞바닥기관지허파구역",
+      "hanja": "前基底氣管支肺分節",
+      "en": "anterior basal bronchopulmonary segment"
+    },
+    "FMA7365": {
+      "side": "right",
+      "ko": "안쪽바닥기관지허파구역",
+      "hanja": "內側基底氣管支肺分節",
+      "en": "medial basal bronchopulmonary segment"
+    },
+    "FMA7366": {
+      "side": "right",
+      "ko": "위기관지허파구역",
+      "hanja": "上氣管支肺分節",
+      "en": "superior bronchopulmonary segment"
+    },
+    "FMA7373": {
+      "side": "left",
+      "ko": "앞기관지허파구역",
+      "hanja": "前氣管支肺分節",
+      "en": "anterior bronchopulmonary segment"
+    },
+    "FMA7376": {
+      "side": "left",
+      "ko": "위기관지허파구역",
+      "hanja": "上氣管支肺分節",
+      "en": "superior bronchopulmonary segment"
+    },
+    "FMA7377": {
+      "side": "left",
+      "ko": "안쪽바닥기관지허파구역",
+      "hanja": "內側基底氣管支肺分節",
+      "en": "medial basal bronchopulmonary segment"
+    },
+    "FMA7378": {
+      "side": "left",
+      "ko": "앞바닥기관지허파구역",
+      "hanja": "前基底氣管支肺分節",
+      "en": "anterior basal bronchopulmonary segment"
+    },
+    "FMA7379": {
+      "side": "left",
+      "ko": "가쪽바닥기관지허파구역",
+      "hanja": "外側基底氣管支肺分節",
+      "en": "lateral basal bronchopulmonary segment"
+    },
+    "FMA7380": {
+      "side": "left",
+      "ko": "뒤바닥기관지허파구역",
+      "hanja": "後基底氣管支肺分節",
+      "en": "posterior basal bronchopulmonary segment"
+    },
+    "FMA7385": {
+      "side": "left",
+      "ko": "끝기관지허파구역",
+      "hanja": "尖氣管支肺分節",
+      "en": "apical bronchopulmonary segment"
+    },
+    "FMA7386": {
+      "side": "left",
+      "ko": "뒤기관지허파구역",
+      "hanja": "後氣管支肺分節",
+      "en": "posterior bronchopulmonary segment"
+    },
+    "FMA77380": {
+      "side": "right",
+      "ko": "오금동맥",
+      "hanja": "膝窩動脈",
+      "en": "popliteal artery"
+    },
+    "FMA77381": {
+      "side": "left",
+      "ko": "오금동맥",
+      "hanja": "膝窩動脈",
+      "en": "popliteal artery"
+    },
+    "FMA77949": {
+      "side": "right",
+      "ko": "어깨휘돌이정맥",
+      "hanja": "回旋肩胛靜脈",
+      "en": "circumflex scapular vein"
+    },
+    "FMA77950": {
+      "side": "left",
+      "ko": "어깨휘돌이정맥",
+      "hanja": "回旋肩胛靜脈",
+      "en": "circumflex scapular vein"
+    },
+    "FMA77954": {
+      "side": "right",
+      "ko": "앞위팔휘돌이정맥",
+      "hanja": "前回旋上腕骨靜脈",
+      "en": "anterior circumflex humeral vein"
+    },
+    "FMA77955": {
+      "side": "left",
+      "ko": "앞위팔휘돌이정맥",
+      "hanja": "前回旋上腕骨靜脈",
+      "en": "anterior circumflex humeral vein"
+    },
+    "FMA7857": {
+      "side": "right",
+      "ko": "첫째갈비뼈",
+      "hanja": "第一肋骨",
+      "en": "first rib"
+    },
+    "FMA7875": {
+      "side": "right",
+      "ko": "첫째갈비연골",
+      "hanja": "第一肋軟骨",
+      "en": "first costal cartilage"
+    },
+    "FMA7882": {
+      "side": "right",
+      "ko": "둘째갈비뼈",
+      "hanja": "第二肋骨",
+      "en": "second rib"
+    },
+    "FMA7886": {
+      "side": "right",
+      "ko": "둘째갈비연골",
+      "hanja": "第二肋軟骨",
+      "en": "second costal cartilage"
+    },
+    "FMA7909": {
+      "side": "right",
+      "ko": "셋째갈비뼈",
+      "hanja": "第三肋骨",
+      "en": "third rib"
+    },
+    "FMA7913": {
+      "side": "right",
+      "ko": "셋째갈비연골",
+      "hanja": "第三肋軟骨",
+      "en": "third costal cartilage"
+    },
+    "FMA7957": {
+      "side": "right",
+      "ko": "넷째갈비뼈",
+      "hanja": "第四肋骨",
+      "en": "fourth rib"
+    },
+    "FMA7976": {
+      "side": "right",
+      "ko": "넷째갈비연골",
+      "hanja": "第四肋軟骨",
+      "en": "fourth costal cartilage"
+    },
+    "FMA7987": {
+      "side": "left",
+      "ko": "첫째갈비뼈",
+      "hanja": "第一肋骨",
+      "en": "first rib"
+    },
+    "FMA8005": {
+      "side": "left",
+      "ko": "첫째갈비연골",
+      "hanja": "第一肋軟骨",
+      "en": "first costal cartilage"
+    },
+    "FMA8012": {
+      "side": "left",
+      "ko": "둘째갈비뼈",
+      "hanja": "第二肋骨",
+      "en": "second rib"
+    },
+    "FMA8031": {
+      "side": "left",
+      "ko": "둘째갈비연골",
+      "hanja": "第二肋軟骨",
+      "en": "second costal cartilage"
+    },
+    "FMA8039": {
+      "side": "left",
+      "ko": "셋째갈비뼈",
+      "hanja": "第三肋骨",
+      "en": "third rib"
+    },
+    "FMA8058": {
+      "side": "left",
+      "ko": "셋째갈비연골",
+      "hanja": "第三肋軟骨",
+      "en": "third costal cartilage"
+    },
+    "FMA8066": {
+      "side": "right",
+      "ko": "다섯째갈비뼈",
+      "hanja": "第五肋骨",
+      "en": "fifth rib"
+    },
+    "FMA8070": {
+      "side": "right",
+      "ko": "다섯째갈비연골",
+      "hanja": "第五肋軟骨",
+      "en": "fifth costal cartilage"
+    },
+    "FMA8093": {
+      "side": "left",
+      "ko": "다섯째갈비뼈",
+      "hanja": "第五肋骨",
+      "en": "fifth rib"
+    },
+    "FMA8112": {
+      "side": "left",
+      "ko": "다섯째갈비연골",
+      "hanja": "第五肋軟骨",
+      "en": "fifth costal cartilage"
+    },
+    "FMA8148": {
+      "side": "left",
+      "ko": "넷째갈비뼈",
+      "hanja": "第四肋骨",
+      "en": "fourth rib"
+    },
+    "FMA8167": {
+      "side": "left",
+      "ko": "넷째갈비연골",
+      "hanja": "第四肋軟骨",
+      "en": "fourth costal cartilage"
+    },
+    "FMA8175": {
+      "side": "right",
+      "ko": "여섯째갈비뼈",
+      "hanja": "第六肋骨",
+      "en": "sixth rib"
+    },
+    "FMA81752": {
+      "side": "right",
+      "ko": "목돌림근",
+      "hanja": "頸回旋筋",
+      "en": "cervical rotator"
+    },
+    "FMA81753": {
+      "side": "left",
+      "ko": "목돌림근",
+      "hanja": "頸回旋筋",
+      "en": "cervical rotator"
+    },
+    "FMA8194": {
+      "side": "right",
+      "ko": "여섯째갈비연골",
+      "hanja": "第六肋軟骨",
+      "en": "sixth costal cartilage"
+    },
+    "FMA8202": {
+      "side": "left",
+      "ko": "여섯째갈비뼈",
+      "hanja": "第六肋骨",
+      "en": "sixth rib"
+    },
+    "FMA8221": {
+      "side": "left",
+      "ko": "여섯째갈비연골",
+      "hanja": "第六肋軟骨",
+      "en": "sixth costal cartilage"
+    },
+    "FMA8229": {
+      "side": "right",
+      "ko": "일곱째갈비뼈",
+      "hanja": "第七肋骨",
+      "en": "seventh rib"
+    },
+    "FMA8248": {
+      "side": "right",
+      "ko": "일곱째갈비연골",
+      "hanja": "第七肋軟骨",
+      "en": "seventh costal cartilage"
+    },
+    "FMA8256": {
+      "side": "left",
+      "ko": "일곱째갈비뼈",
+      "hanja": "第七肋骨",
+      "en": "seventh rib"
+    },
+    "FMA82734": {
+      "side": "right",
+      "ko": "긴섬모체신경",
+      "hanja": "長毛樣神經",
+      "en": "long ciliary nerve"
+    },
+    "FMA82735": {
+      "side": "left",
+      "ko": "긴섬모체신경",
+      "hanja": "長毛樣神經",
+      "en": "long ciliary nerve"
+    },
+    "FMA8275": {
+      "side": "left",
+      "ko": "일곱째갈비연골",
+      "hanja": "第七肋軟骨",
+      "en": "seventh costal cartilage"
+    },
+    "FMA8283": {
+      "side": "right",
+      "ko": "여덟째갈비뼈",
+      "hanja": "第八肋骨",
+      "en": "eighth rib"
+    },
+    "FMA8310": {
+      "side": "left",
+      "ko": "여덟째갈비뼈",
+      "hanja": "第八肋骨",
+      "en": "eighth rib"
+    },
+    "FMA8364": {
+      "side": "right",
+      "ko": "아홉째갈비뼈",
+      "hanja": "第九肋骨",
+      "en": "ninth rib"
+    },
+    "FMA8391": {
+      "side": "left",
+      "ko": "아홉째갈비뼈",
+      "hanja": "第九肋骨",
+      "en": "ninth rib"
+    },
+    "FMA8445": {
+      "side": "right",
+      "ko": "열째갈비뼈",
+      "hanja": "第十肋骨",
+      "en": "tenth rib"
+    },
+    "FMA8472": {
+      "side": "left",
+      "ko": "열째갈비뼈",
+      "hanja": "第十肋骨",
+      "en": "tenth rib"
+    },
+    "FMA85055": {
+      "side": "right",
+      "ko": "허파가슴막칸",
+      "hanja": "肺胸膜區劃",
+      "en": "pulmopleural compartment"
+    },
+    "FMA85056": {
+      "side": "left",
+      "ko": "허파가슴막칸",
+      "hanja": "肺胸膜區劃",
+      "en": "pulmopleural compartment"
+    },
+    "FMA85118": {
+      "side": "left",
+      "ko": "첫째온손바닥손발가락동맥",
+      "hanja": "第一總手掌指動脈",
+      "en": "first common palmar digital artery"
+    },
+    "FMA85119": {
+      "side": "right",
+      "ko": "둘째온손바닥손발가락동맥",
+      "hanja": "第二總手掌指動脈",
+      "en": "second common palmar digital artery"
+    },
+    "FMA85120": {
+      "side": "left",
+      "ko": "둘째온손바닥손발가락동맥",
+      "hanja": "第二總手掌指動脈",
+      "en": "second common palmar digital artery"
+    },
+    "FMA85121": {
+      "side": "right",
+      "ko": "셋째온손바닥손발가락동맥",
+      "hanja": "第三總手掌指動脈",
+      "en": "third common palmar digital artery"
+    },
+    "FMA85122": {
+      "side": "left",
+      "ko": "셋째온손바닥손발가락동맥",
+      "hanja": "第三總手掌指動脈",
+      "en": "third common palmar digital artery"
+    },
+    "FMA85123": {
+      "side": "right",
+      "ko": "넷째온손바닥손발가락동맥",
+      "hanja": "第四總手掌指動脈",
+      "en": "fourth common palmar digital artery"
+    },
+    "FMA85124": {
+      "side": "left",
+      "ko": "넷째온손바닥손발가락동맥",
+      "hanja": "第四總手掌指動脈",
+      "en": "fourth common palmar digital artery"
+    },
+    "FMA8531": {
+      "side": "right",
+      "ko": "열한째갈비뼈",
+      "hanja": "第十一肋骨",
+      "en": "eleventh rib"
+    },
+    "FMA8532": {
+      "side": "left",
+      "ko": "열한째갈비뼈",
+      "hanja": "第十一肋骨",
+      "en": "eleventh rib"
+    },
+    "FMA8533": {
+      "side": "right",
+      "ko": "열두째갈비뼈",
+      "hanja": "第十二肋骨",
+      "en": "twelfth rib"
+    },
+    "FMA8534": {
+      "side": "left",
+      "ko": "열두째갈비뼈",
+      "hanja": "第十二肋骨",
+      "en": "twelfth rib"
+    },
+    "FMA8671": {
+      "side": "right",
+      "ko": "온바닥정맥",
+      "hanja": "總基底靜脈",
+      "en": "common basal vein"
+    },
+    "FMA8672": {
+      "side": "right",
+      "ko": "위바닥정맥",
+      "hanja": "上基底靜脈",
+      "en": "superior basal vein"
+    },
+    "FMA8674": {
+      "side": "right",
+      "ko": "아래바닥정맥",
+      "hanja": "下基底靜脈",
+      "en": "inferior basal vein"
+    },
+    "FMA8676": {
+      "side": "left",
+      "ko": "온바닥정맥",
+      "hanja": "總基底靜脈",
+      "en": "common basal vein"
+    },
+    "FMA8677": {
+      "side": "left",
+      "ko": "위바닥정맥",
+      "hanja": "上基底靜脈",
+      "en": "superior basal vein"
+    },
+    "FMA8679": {
+      "side": "left",
+      "ko": "아래바닥정맥",
+      "hanja": "下基底靜脈",
+      "en": "inferior basal vein"
+    },
+    "FMA9713": {
+      "side": "right",
+      "ko": "손",
+      "hanja": "手",
+      "en": "hand"
+    },
+    "FMA9714": {
+      "side": "left",
+      "ko": "손",
+      "hanja": "手",
+      "en": "hand"
+    },
+    "FMA9761": {
+      "side": "right",
+      "ko": "가슴가로근",
+      "hanja": "胸橫筋",
+      "en": "transversus thoracis"
+    },
+    "FMA9762": {
+      "side": "left",
+      "ko": "가슴가로근",
+      "hanja": "胸橫筋",
+      "en": "transversus thoracis"
+    }
+  },
+  "excluded": {
+    "intrinsic_anatomy": [
+      {
+        "base": "main bronchus",
+        "ids": [
+          "FMA7396",
+          "FMA7395"
+        ]
+      },
+      {
+        "base": "anterior segmental artery",
+        "ids": [
+          "FMA8620",
+          "FMA13279"
+        ]
+      },
+      {
+        "base": "apical segmental artery",
+        "ids": [
+          "FMA8634",
+          "FMA8617"
+        ]
+      },
+      {
+        "base": "posterior segmental artery",
+        "ids": [
+          "FMA8635",
+          "FMA8619"
+        ]
+      },
+      {
+        "base": "superior segmental artery",
+        "ids": [
+          "FMA8642",
+          "FMA8627"
+        ]
+      },
+      {
+        "base": "anterior basal segmental artery",
+        "ids": [
+          "FMA8645",
+          "FMA8630"
+        ]
+      },
+      {
+        "base": "lateral basal segmental artery",
+        "ids": [
+          "FMA8646",
+          "FMA8631"
+        ]
+      },
+      {
+        "base": "posterior basal segmental artery",
+        "ids": [
+          "FMA8647",
+          "FMA8632"
+        ]
+      },
+      {
+        "base": "anterior segmental vein",
+        "ids": [
+          "FMA8662",
+          "FMA8667"
+        ]
+      },
+      {
+        "base": "posterior segmental vein",
+        "ids": [
+          "FMA8663",
+          "FMA9438"
+        ]
+      },
+      {
+        "base": "anterior basal segmental vein",
+        "ids": [
+          "FMA8673",
+          "FMA8678"
+        ]
+      },
+      {
+        "base": "lateral basal segmental vein",
+        "ids": [
+          "FMA9425",
+          "FMA9450"
+        ]
+      },
+      {
+        "base": "posterior basal segmental vein",
+        "ids": [
+          "FMA9428",
+          "FMA9451"
+        ]
+      },
+      {
+        "base": "apical segmental vein",
+        "ids": [
+          "FMA9437",
+          "FMA8661"
+        ]
+      },
+      {
+        "base": "hepatic vein",
+        "ids": [
+          "FMA14338",
+          "FMA14339"
+        ]
+      },
+      {
+        "base": "hepatic duct",
+        "ids": [
+          "FMA14669",
+          "FMA14670"
+        ]
+      },
+      {
+        "base": "portal vein",
+        "ids": [
+          "FMA15414",
+          "FMA15415"
+        ]
+      },
+      {
+        "base": "upper lobar artery",
+        "ids": [
+          "FMA68197",
+          "FMA68198"
+        ]
+      },
+      {
+        "base": "apical segmental bronchial tree",
+        "ids": [
+          "FMA68211",
+          "FMA68223"
+        ]
+      },
+      {
+        "base": "anterior segmental bronchial tree",
+        "ids": [
+          "FMA68212",
+          "FMA68222"
+        ]
+      },
+      {
+        "base": "posterior segmental bronchial tree",
+        "ids": [
+          "FMA68213",
+          "FMA68225"
+        ]
+      },
+      {
+        "base": "superior segmental bronchial tree",
+        "ids": [
+          "FMA68216",
+          "FMA68228"
+        ]
+      },
+      {
+        "base": "medial basal segmental bronchial tree",
+        "ids": [
+          "FMA68218",
+          "FMA68230"
+        ]
+      },
+      {
+        "base": "lateral basal segmental bronchial tree",
+        "ids": [
+          "FMA68220",
+          "FMA68232"
+        ]
+      },
+      {
+        "base": "posterior basal segmental bronchial tree",
+        "ids": [
+          "FMA68221",
+          "FMA68233"
+        ]
+      },
+      {
+        "base": "anterior basal segmental bronchial tree",
+        "ids": [
+          "FMA68231",
+          "FMA68321"
+        ]
+      },
+      {
+        "base": "superior parietal lobule",
+        "ids": [
+          "FMA72671",
+          "FMA72672"
+        ]
+      },
+      {
+        "base": "occipital lobe",
+        "ids": [
+          "FMA72975",
+          "FMA72976"
+        ]
+      },
+      {
+        "base": "lateral ventricle",
+        "ids": [
+          "FMA78449",
+          "FMA78450"
+        ]
+      },
+      {
+        "base": "atrium",
+        "ids": [
+          "FMA7096",
+          "FMA7097"
+        ]
+      },
+      {
+        "base": "ventricle",
+        "ids": [
+          "FMA7098",
+          "FMA7101"
+        ]
+      },
+      {
+        "base": "lung",
+        "ids": [
+          "FMA7309",
+          "FMA7310"
+        ]
+      },
+      {
+        "base": "upper lobar vein",
+        "ids": [
+          "FMA8655",
+          "FMA8657"
+        ]
+      },
+      {
+        "base": "hepatic artery",
+        "ids": [
+          "FMA14778",
+          "FMA14779"
+        ]
+      },
+      {
+        "base": "bronchial tree",
+        "ids": [
+          "FMA26661",
+          "FMA26662"
+        ]
+      },
+      {
+        "base": "coronary artery",
+        "ids": [
+          "FMA50039",
+          "FMA50040"
+        ]
+      },
+      {
+        "base": "lower lobar artery",
+        "ids": [
+          "FMA68200",
+          "FMA68201"
+        ]
+      },
+      {
+        "base": "basal segmental artery",
+        "ids": [
+          "FMA68845",
+          "FMA68846"
+        ]
+      },
+      {
+        "base": "hepatic biliary tree",
+        "ids": [
+          "FMA71857",
+          "FMA71858"
+        ]
+      },
+      {
+        "base": "frontal lobe",
+        "ids": [
+          "FMA72969",
+          "FMA72970"
+        ]
+      },
+      {
+        "base": "temporal lobe",
+        "ids": [
+          "FMA72971",
+          "FMA72972"
+        ]
+      },
+      {
+        "base": "parietal lobe",
+        "ids": [
+          "FMA72973",
+          "FMA72974"
+        ]
+      },
+      {
+        "base": "limbic lobe",
+        "ids": [
+          "FMA72980",
+          "FMA72981"
+        ]
+      }
+    ],
+    "source_authored_side": [
+      {
+        "base": "marginal vein",
+        "ids": [
+          "FMA4708",
+          "FMA4716"
+        ]
+      },
+      {
+        "base": "superior intercostal vein",
+        "ids": [
+          "FMA4797",
+          "FMA4877"
+        ]
+      },
+      {
+        "base": "gastric artery",
+        "ids": [
+          "FMA14768",
+          "FMA14776"
+        ]
+      },
+      {
+        "base": "colic artery",
+        "ids": [
+          "FMA14811",
+          "FMA14826"
+        ]
+      },
+      {
+        "base": "colic vein",
+        "ids": [
+          "FMA15394",
+          "FMA15407"
+        ]
+      },
+      {
+        "base": "gastric vein",
+        "ids": [
+          "FMA15399",
+          "FMA15400"
+        ]
+      },
+      {
+        "base": "pulmonary artery",
+        "ids": [
+          "FMA50872",
+          "FMA50873"
+        ]
+      }
+    ],
+    "asymmetric_names": [
+      {
+        "base": "anterior cusp of pulmonary valve",
+        "ids": [
+          "FMA7247",
+          "FMA7249"
+        ]
+      },
+      {
+        "base": "posterior cusp of aortic valve",
+        "ids": [
+          "FMA7252",
+          "FMA7254"
+        ]
+      },
+      {
+        "base": "inferior pulmonary vein",
+        "ids": [
+          "FMA49911",
+          "FMA49913"
+        ]
+      },
+      {
+        "base": "superior pulmonary vein",
+        "ids": [
+          "FMA49914",
+          "FMA49916"
+        ]
+      },
+      {
+        "base": "lobe of thymus",
+        "ids": [
+          "FMA71194",
+          "FMA71195"
+        ]
+      },
+      {
+        "base": "side of heart",
+        "ids": [
+          "FMA7165",
+          "FMA7166"
+        ]
+      },
+      {
+        "base": "lobe of liver",
+        "ids": [
+          "FMA13362",
+          "FMA13363"
+        ]
+      },
+      {
+        "base": "side of rib cage",
+        "ids": [
+          "FMA20224",
+          "FMA20225"
+        ]
+      },
+      {
+        "base": "side of bony pelvis",
+        "ids": [
+          "FMA20226",
+          "FMA20227"
+        ]
+      },
+      {
+        "base": "lateral wall of internal nose",
+        "ids": [
+          "FMA59671",
+          "FMA59672"
+        ]
+      },
+      {
+        "base": "side of internal nose",
+        "ids": [
+          "FMA59748",
+          "FMA59749"
+        ]
+      },
+      {
+        "base": "parietal part of head",
+        "ids": [
+          "FMA61732",
+          "FMA61733"
+        ]
+      }
+    ],
+    "unpaired": [
+      {
+        "base": "conus artery",
+        "ids": [
+          "FMA3807"
+        ]
+      },
+      {
+        "base": "anterior branch of anterior interventricular branch of left coronary artery",
+        "ids": [
+          "FMA3870"
+        ]
+      },
+      {
+        "base": "internal thoracic vein",
+        "ids": [
+          "FMA4758"
+        ]
+      },
+      {
+        "base": "medial basal segmental artery",
+        "ids": [
+          "FMA8644"
+        ]
+      },
+      {
+        "base": "superior segmental vein",
+        "ids": [
+          "FMA8670"
+        ]
+      },
+      {
+        "base": "medial basal segmental vein",
+        "ids": [
+          "FMA9422"
+        ]
+      },
+      {
+        "base": "main bronchus proper",
+        "ids": [
+          "FMA68418"
+        ]
+      },
+      {
+        "base": "lobe branch of right hepatic artery",
+        "ids": [
+          "FMA71708"
+        ]
+      },
+      {
+        "base": "lobe branch of left hepatic artery",
+        "ids": [
+          "FMA71710"
+        ]
+      },
+      {
+        "base": "stria terminalis",
+        "ids": [
+          "FMA72940"
+        ]
+      },
+      {
+        "base": "duct of caudate lobe of liver",
+        "ids": [
+          "FMA76903"
+        ]
+      },
+      {
+        "base": "intermediate tendon",
+        "ids": [
+          "FMA258850"
+        ]
+      },
+      {
+        "base": "shoulder",
+        "ids": [
+          "FMA33642"
+        ]
+      },
+      {
+        "base": "middle cerebral artery",
+        "ids": [
+          "FMA50082"
+        ]
+      }
+    ],
+    "nested_laterality": []
+  }
+}
