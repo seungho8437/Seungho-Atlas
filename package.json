@@ -20,7 +20,8 @@
     "validate:acupoints": "node scripts/validate-acupoint-placements.mjs",
     "build:meridians": "node scripts/build-meridian-lines.mjs",
     "check:isolation": "node scripts/check-no-placement-leak.mjs",
-    "eval:solver": "node scripts/eval/compare-solver-to-reference.mjs"
+    "eval:solver": "node scripts/eval/compare-solver-to-reference.mjs",
+    "validate:laterality": "node scripts/validate-laterality-display.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

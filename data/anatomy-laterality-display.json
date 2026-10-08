@@ -1,14 +1,16 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source_commit": "061994eea8d0bc3eac9d942d3b81a94b254634f2",
   "source_file": "public/knowledge/anatomy-ko.json",
-  "description": "Display-only policy. Never replaces FMA IDs, original multilingual canonical source, WHO semantic relations, or surface coordinates.",
+  "description": "Display-only, reversible, FMA-identity-preserving. Additional verified pairs can have left/right within the English name; the original source is untouched.",
   "counts": {
     "concepts": 3432,
     "paired_groups": 574,
-    "neutralized_groups": 512,
-    "neutralized_concepts": 1024,
-    "excluded_groups": 76
+    "neutralized_groups": 608,
+    "neutralized_concepts": 1216,
+    "excluded_groups": 76,
+    "nested_position_groups": 96,
+    "nested_position_concepts": 192
   },
   "neutralized": {
     "FMA10552": {
@@ -1775,6 +1777,18 @@
       "hanja": "腰回旋筋",
       "en": "lumbar rotator"
     },
+    "FMA230986": {
+      "side": "right",
+      "ko": "새끼발가락중간마디뼈",
+      "hanja": "小足趾中指骨",
+      "en": "middle phalanx of little toe"
+    },
+    "FMA230988": {
+      "side": "left",
+      "ko": "새끼발가락중간마디뼈",
+      "hanja": "小足趾中指骨",
+      "en": "middle phalanx of little toe"
+    },
     "FMA23114": {
       "side": "right",
       "ko": "어깨밑정맥",
@@ -1847,11 +1861,89 @@
       "hanja": "尺骨",
       "en": "ulna"
     },
+    "FMA23707": {
+      "side": "right",
+      "ko": "아래팔뼈사이막",
+      "hanja": "前腕骨間膜",
+      "en": "interosseous membrane of forearm"
+    },
+    "FMA23708": {
+      "side": "left",
+      "ko": "아래팔뼈사이막",
+      "hanja": "前腕骨間膜",
+      "en": "interosseous membrane of forearm"
+    },
     "FMA23725": {
       "side": "right",
       "ko": "작은마름뼈",
       "hanja": "小菱形骨",
       "en": "trapezoid"
+    },
+    "FMA23938": {
+      "side": "left",
+      "ko": "집게손가락손가락중간마디뼈",
+      "hanja": "示指手指中指骨",
+      "en": "middle phalanx of index finger"
+    },
+    "FMA23940": {
+      "side": "left",
+      "ko": "중간손가락중간마디뼈",
+      "hanja": "中手指中指骨",
+      "en": "middle phalanx of middle finger"
+    },
+    "FMA23942": {
+      "side": "left",
+      "ko": "고리손가락중간마디뼈",
+      "hanja": "環手指中指骨",
+      "en": "middle phalanx of ring finger"
+    },
+    "FMA23944": {
+      "side": "left",
+      "ko": "새끼손가락중간마디뼈",
+      "hanja": "小手指中指骨",
+      "en": "middle phalanx of little finger"
+    },
+    "FMA23951": {
+      "side": "left",
+      "ko": "엄지손가락먼쪽마디뼈",
+      "hanja": "拇指遠位指骨",
+      "en": "distal phalanx of thumb"
+    },
+    "FMA23953": {
+      "side": "left",
+      "ko": "집게손가락손가락먼쪽마디뼈",
+      "hanja": "示指手指遠位指骨",
+      "en": "distal phalanx of index finger"
+    },
+    "FMA23955": {
+      "side": "left",
+      "ko": "중간손가락먼쪽마디뼈",
+      "hanja": "中手指遠位指骨",
+      "en": "distal phalanx of middle finger"
+    },
+    "FMA23957": {
+      "side": "left",
+      "ko": "고리손가락먼쪽마디뼈",
+      "hanja": "環手指遠位指骨",
+      "en": "distal phalanx of ring finger"
+    },
+    "FMA23959": {
+      "side": "left",
+      "ko": "새끼손가락먼쪽마디뼈",
+      "hanja": "小手指遠位指骨",
+      "en": "distal phalanx of little finger"
+    },
+    "FMA24163": {
+      "side": "right",
+      "ko": "가슴이음골격",
+      "hanja": "胸帶骨格",
+      "en": "skeleton of pectoral girdle"
+    },
+    "FMA24164": {
+      "side": "left",
+      "ko": "가슴이음골격",
+      "hanja": "胸帶骨格",
+      "en": "skeleton of pectoral girdle"
     },
     "FMA242609": {
       "side": "right",
@@ -1966,6 +2058,90 @@
       "ko": "갈고리뼈",
       "hanja": "有鉤骨",
       "en": "hamate"
+    },
+    "FMA24450": {
+      "side": "right",
+      "ko": "엄지손가락몸쪽마디뼈",
+      "hanja": "拇指近位指骨",
+      "en": "proximal phalanx of thumb"
+    },
+    "FMA24451": {
+      "side": "right",
+      "ko": "집게손가락손가락몸쪽마디뼈",
+      "hanja": "示指手指近位指骨",
+      "en": "proximal phalanx of index finger"
+    },
+    "FMA24452": {
+      "side": "right",
+      "ko": "중간손가락몸쪽마디뼈",
+      "hanja": "中手指近位指骨",
+      "en": "proximal phalanx of middle finger"
+    },
+    "FMA24453": {
+      "side": "right",
+      "ko": "고리손가락몸쪽마디뼈",
+      "hanja": "環手指近位指骨",
+      "en": "proximal phalanx of ring finger"
+    },
+    "FMA24454": {
+      "side": "right",
+      "ko": "새끼손가락몸쪽마디뼈",
+      "hanja": "小手指近位指骨",
+      "en": "proximal phalanx of little finger"
+    },
+    "FMA24455": {
+      "side": "right",
+      "ko": "집게손가락손가락중간마디뼈",
+      "hanja": "示指手指中指骨",
+      "en": "middle phalanx of index finger"
+    },
+    "FMA24456": {
+      "side": "right",
+      "ko": "중간손가락중간마디뼈",
+      "hanja": "中手指中指骨",
+      "en": "middle phalanx of middle finger"
+    },
+    "FMA24457": {
+      "side": "right",
+      "ko": "고리손가락중간마디뼈",
+      "hanja": "環手指中指骨",
+      "en": "middle phalanx of ring finger"
+    },
+    "FMA24458": {
+      "side": "right",
+      "ko": "새끼손가락중간마디뼈",
+      "hanja": "小手指中指骨",
+      "en": "middle phalanx of little finger"
+    },
+    "FMA24459": {
+      "side": "right",
+      "ko": "엄지손가락먼쪽마디뼈",
+      "hanja": "拇指遠位指骨",
+      "en": "distal phalanx of thumb"
+    },
+    "FMA24460": {
+      "side": "right",
+      "ko": "집게손가락손가락먼쪽마디뼈",
+      "hanja": "示指手指遠位指骨",
+      "en": "distal phalanx of index finger"
+    },
+    "FMA24461": {
+      "side": "right",
+      "ko": "중간손가락먼쪽마디뼈",
+      "hanja": "中手指遠位指骨",
+      "en": "distal phalanx of middle finger"
+    },
+    "FMA24462": {
+      "side": "right",
+      "ko": "고리손가락먼쪽마디뼈",
+      "hanja": "環手指遠位指骨",
+      "en": "distal phalanx of ring finger"
+    },
+    "FMA24463": {
+      "side": "right",
+      "ko": "새끼손가락먼쪽마디뼈",
+      "hanja": "小手指遠位指骨",
+      "en": "distal phalanx of little finger"
     },
     "FMA24464": {
       "side": "right",
@@ -2098,6 +2274,18 @@
       "ko": "발꿈치뼈",
       "hanja": "踵骨",
       "en": "calcaneus"
+    },
+    "FMA24500": {
+      "side": "right",
+      "ko": "발배뼈",
+      "hanja": "足舟狀骨",
+      "en": "navicular bone of foot"
+    },
+    "FMA24501": {
+      "side": "left",
+      "ko": "발배뼈",
+      "hanja": "足舟狀骨",
+      "en": "navicular bone of foot"
     },
     "FMA24507": {
       "side": "right",
@@ -2495,6 +2683,270 @@
       "hanja": "圓小",
       "en": "teres minor"
     },
+    "FMA32634": {
+      "side": "right",
+      "ko": "둘째발가락몸쪽마디뼈",
+      "hanja": "第二足趾近位指骨",
+      "en": "proximal phalanx of second toe"
+    },
+    "FMA32635": {
+      "side": "left",
+      "ko": "둘째발가락몸쪽마디뼈",
+      "hanja": "第二足趾近位指骨",
+      "en": "proximal phalanx of second toe"
+    },
+    "FMA32636": {
+      "side": "right",
+      "ko": "셋째발가락몸쪽마디뼈",
+      "hanja": "第三足趾近位指骨",
+      "en": "proximal phalanx of third toe"
+    },
+    "FMA32637": {
+      "side": "left",
+      "ko": "셋째발가락몸쪽마디뼈",
+      "hanja": "第三足趾近位指骨",
+      "en": "proximal phalanx of third toe"
+    },
+    "FMA32638": {
+      "side": "right",
+      "ko": "넷째발가락몸쪽마디뼈",
+      "hanja": "第四足趾近位指骨",
+      "en": "proximal phalanx of fourth toe"
+    },
+    "FMA32639": {
+      "side": "left",
+      "ko": "넷째발가락몸쪽마디뼈",
+      "hanja": "第四足趾近位指骨",
+      "en": "proximal phalanx of fourth toe"
+    },
+    "FMA32640": {
+      "side": "right",
+      "ko": "새끼발가락몸쪽마디뼈",
+      "hanja": "小足趾近位指骨",
+      "en": "proximal phalanx of little toe"
+    },
+    "FMA32641": {
+      "side": "left",
+      "ko": "새끼발가락몸쪽마디뼈",
+      "hanja": "小足趾近位指骨",
+      "en": "proximal phalanx of little toe"
+    },
+    "FMA32642": {
+      "side": "right",
+      "ko": "둘째발가락중간마디뼈",
+      "hanja": "第二足趾中指骨",
+      "en": "middle phalanx of second toe"
+    },
+    "FMA32643": {
+      "side": "left",
+      "ko": "둘째발가락중간마디뼈",
+      "hanja": "第二足趾中指骨",
+      "en": "middle phalanx of second toe"
+    },
+    "FMA32644": {
+      "side": "right",
+      "ko": "셋째발가락중간마디뼈",
+      "hanja": "第三足趾中指骨",
+      "en": "middle phalanx of third toe"
+    },
+    "FMA32645": {
+      "side": "left",
+      "ko": "셋째발가락중간마디뼈",
+      "hanja": "第三足趾中指骨",
+      "en": "middle phalanx of third toe"
+    },
+    "FMA32646": {
+      "side": "right",
+      "ko": "넷째발가락중간마디뼈",
+      "hanja": "第四足趾中指骨",
+      "en": "middle phalanx of fourth toe"
+    },
+    "FMA32647": {
+      "side": "left",
+      "ko": "넷째발가락중간마디뼈",
+      "hanja": "第四足趾中指骨",
+      "en": "middle phalanx of fourth toe"
+    },
+    "FMA32650": {
+      "side": "right",
+      "ko": "엄지발가락먼쪽마디뼈",
+      "hanja": "拇趾遠位指骨",
+      "en": "distal phalanx of big toe"
+    },
+    "FMA32651": {
+      "side": "left",
+      "ko": "엄지발가락먼쪽마디뼈",
+      "hanja": "拇趾遠位指骨",
+      "en": "distal phalanx of big toe"
+    },
+    "FMA32652": {
+      "side": "right",
+      "ko": "둘째발가락먼쪽마디뼈",
+      "hanja": "第二足趾遠位指骨",
+      "en": "distal phalanx of second toe"
+    },
+    "FMA32653": {
+      "side": "left",
+      "ko": "둘째발가락먼쪽마디뼈",
+      "hanja": "第二足趾遠位指骨",
+      "en": "distal phalanx of second toe"
+    },
+    "FMA32654": {
+      "side": "right",
+      "ko": "셋째발가락먼쪽마디뼈",
+      "hanja": "第三足趾遠位指骨",
+      "en": "distal phalanx of third toe"
+    },
+    "FMA32655": {
+      "side": "left",
+      "ko": "셋째발가락먼쪽마디뼈",
+      "hanja": "第三足趾遠位指骨",
+      "en": "distal phalanx of third toe"
+    },
+    "FMA32656": {
+      "side": "right",
+      "ko": "넷째발가락먼쪽마디뼈",
+      "hanja": "第四足趾遠位指骨",
+      "en": "distal phalanx of fourth toe"
+    },
+    "FMA32657": {
+      "side": "left",
+      "ko": "넷째발가락먼쪽마디뼈",
+      "hanja": "第四足趾遠位指骨",
+      "en": "distal phalanx of fourth toe"
+    },
+    "FMA32658": {
+      "side": "right",
+      "ko": "새끼발가락먼쪽마디뼈",
+      "hanja": "小足趾遠位指骨",
+      "en": "distal phalanx of little toe"
+    },
+    "FMA32659": {
+      "side": "left",
+      "ko": "새끼발가락먼쪽마디뼈",
+      "hanja": "小足趾遠位指骨",
+      "en": "distal phalanx of little toe"
+    },
+    "FMA33581": {
+      "side": "right",
+      "ko": "등세모오름부분",
+      "hanja": "僧帽上行部",
+      "en": "ascending part of trapezius"
+    },
+    "FMA33583": {
+      "side": "left",
+      "ko": "등세모오름부분",
+      "hanja": "僧帽上行部",
+      "en": "ascending part of trapezius"
+    },
+    "FMA33584": {
+      "side": "right",
+      "ko": "등세모가로부분",
+      "hanja": "僧帽橫部",
+      "en": "transverse part of trapezius"
+    },
+    "FMA33585": {
+      "side": "left",
+      "ko": "등세모가로부분",
+      "hanja": "僧帽橫部",
+      "en": "transverse part of trapezius"
+    },
+    "FMA33586": {
+      "side": "right",
+      "ko": "등세모내림부분",
+      "hanja": "僧帽下行部",
+      "en": "descending part of trapezius"
+    },
+    "FMA33587": {
+      "side": "left",
+      "ko": "등세모내림부분",
+      "hanja": "僧帽下行部",
+      "en": "descending part of trapezius"
+    },
+    "FMA33644": {
+      "side": "right",
+      "ko": "가슴이음가슴부분",
+      "hanja": "胸帶胸部",
+      "en": "pectoral part of pectoral girdle"
+    },
+    "FMA33645": {
+      "side": "left",
+      "ko": "가슴이음가슴부분",
+      "hanja": "胸帶胸部",
+      "en": "pectoral part of pectoral girdle"
+    },
+    "FMA33646": {
+      "side": "right",
+      "ko": "가슴이음어깨뼈부분",
+      "hanja": "胸帶肩胛部",
+      "en": "scapular part of pectoral girdle"
+    },
+    "FMA33647": {
+      "side": "left",
+      "ko": "가슴이음어깨뼈부분",
+      "hanja": "胸帶肩胛部",
+      "en": "scapular part of pectoral girdle"
+    },
+    "FMA34680": {
+      "side": "right",
+      "ko": "어깨세모근의 빗장부분",
+      "hanja": "三角筋鎖骨部",
+      "en": "clavicular part of deltoid"
+    },
+    "FMA34681": {
+      "side": "left",
+      "ko": "어깨세모근의 빗장부분",
+      "hanja": "三角筋鎖骨部",
+      "en": "clavicular part of deltoid"
+    },
+    "FMA34682": {
+      "side": "right",
+      "ko": "어깨세모봉우리부분",
+      "hanja": "三角肩峰部",
+      "en": "acromial part of deltoid"
+    },
+    "FMA34683": {
+      "side": "left",
+      "ko": "어깨세모봉우리부분",
+      "hanja": "三角肩峰部",
+      "en": "acromial part of deltoid"
+    },
+    "FMA34684": {
+      "side": "right",
+      "ko": "어깨세모척수부분",
+      "hanja": "三角脊髓部",
+      "en": "spinal part of deltoid"
+    },
+    "FMA34685": {
+      "side": "left",
+      "ko": "어깨세모척수부분",
+      "hanja": "三角脊髓部",
+      "en": "spinal part of deltoid"
+    },
+    "FMA34690": {
+      "side": "right",
+      "ko": "큰가슴근의 빗장부분",
+      "hanja": "大胸筋鎖骨部",
+      "en": "clavicular part of pectoralis major"
+    },
+    "FMA34691": {
+      "side": "left",
+      "ko": "큰가슴근의 빗장부분",
+      "hanja": "大胸筋鎖骨部",
+      "en": "clavicular part of pectoralis major"
+    },
+    "FMA35192": {
+      "side": "right",
+      "ko": "종아리뼈사이막",
+      "hanja": "下腿骨間膜",
+      "en": "interosseous membrane of leg"
+    },
+    "FMA35193": {
+      "side": "left",
+      "ko": "종아리뼈사이막",
+      "hanja": "下腿骨間膜",
+      "en": "interosseous membrane of leg"
+    },
     "FMA37386": {
       "side": "right",
       "ko": "짧은엄지벌림근",
@@ -2531,6 +2983,42 @@
       "hanja": "拇指對立筋",
       "en": "opponens pollicis"
     },
+    "FMA37396": {
+      "side": "right",
+      "ko": "손벌림근손가락새끼",
+      "hanja": "手外轉筋指小指",
+      "en": "abductor digiti minimi of hand"
+    },
+    "FMA37397": {
+      "side": "left",
+      "ko": "손벌림근손가락새끼",
+      "hanja": "手外轉筋指小指",
+      "en": "abductor digiti minimi of hand"
+    },
+    "FMA37398": {
+      "side": "right",
+      "ko": "손굽힘근손가락새끼짧은",
+      "hanja": "手屈筋指小指短",
+      "en": "flexor digiti minimi brevis of hand"
+    },
+    "FMA37399": {
+      "side": "left",
+      "ko": "손굽힘근손가락새끼짧은",
+      "hanja": "手屈筋指小指短",
+      "en": "flexor digiti minimi brevis of hand"
+    },
+    "FMA37400": {
+      "side": "right",
+      "ko": "손 새끼맞섬근",
+      "hanja": "手小指對立筋",
+      "en": "opponens digiti minimi of hand"
+    },
+    "FMA37401": {
+      "side": "left",
+      "ko": "손 새끼맞섬근",
+      "hanja": "手小指對立筋",
+      "en": "opponens digiti minimi of hand"
+    },
     "FMA37459": {
       "side": "right",
       "ko": "엄지벌림근",
@@ -2555,6 +3043,18 @@
       "hanja": "屈筋指短",
       "en": "flexor digitorum brevis"
     },
+    "FMA37463": {
+      "side": "right",
+      "ko": "발벌림근손가락새끼",
+      "hanja": "足外轉筋指小指",
+      "en": "abductor digiti minimi of foot"
+    },
+    "FMA37464": {
+      "side": "left",
+      "ko": "발벌림근손가락새끼",
+      "hanja": "足外轉筋指小指",
+      "en": "abductor digiti minimi of foot"
+    },
     "FMA37465": {
       "side": "right",
       "ko": "발바닥네모근",
@@ -2566,6 +3066,42 @@
       "ko": "발바닥네모근",
       "hanja": "足底方形筋",
       "en": "flexor accessorius"
+    },
+    "FMA37471": {
+      "side": "right",
+      "ko": "발굽힘근손가락새끼짧은",
+      "hanja": "足屈筋指小指短",
+      "en": "flexor digiti minimi brevis of foot"
+    },
+    "FMA37472": {
+      "side": "left",
+      "ko": "발굽힘근손가락새끼짧은",
+      "hanja": "足屈筋指小指短",
+      "en": "flexor digiti minimi brevis of foot"
+    },
+    "FMA37483": {
+      "side": "right",
+      "ko": "발넷째벌레근",
+      "hanja": "足第四蟲樣筋",
+      "en": "fourth lumbrical of foot"
+    },
+    "FMA37484": {
+      "side": "left",
+      "ko": "발넷째벌레근",
+      "hanja": "足第四蟲樣筋",
+      "en": "fourth lumbrical of foot"
+    },
+    "FMA37485": {
+      "side": "right",
+      "ko": "발셋째벌레근",
+      "hanja": "足第三蟲樣筋",
+      "en": "third lumbrical of foot"
+    },
+    "FMA37486": {
+      "side": "left",
+      "ko": "발셋째벌레근",
+      "hanja": "足第三蟲樣筋",
+      "en": "third lumbrical of foot"
     },
     "FMA37665": {
       "side": "right",
@@ -2591,6 +3127,66 @@
       "hanja": "上腕筋",
       "en": "brachialis"
     },
+    "FMA37684": {
+      "side": "right",
+      "ko": "두갈래위팔짧은머리",
+      "hanja": "二頭上腕短頭",
+      "en": "short head of biceps brachii"
+    },
+    "FMA37685": {
+      "side": "left",
+      "ko": "두갈래위팔짧은머리",
+      "hanja": "二頭上腕短頭",
+      "en": "short head of biceps brachii"
+    },
+    "FMA37686": {
+      "side": "right",
+      "ko": "두갈래위팔긴머리",
+      "hanja": "二頭上腕長頭",
+      "en": "long head of biceps brachii"
+    },
+    "FMA37687": {
+      "side": "left",
+      "ko": "두갈래위팔긴머리",
+      "hanja": "二頭上腕長頭",
+      "en": "long head of biceps brachii"
+    },
+    "FMA37695": {
+      "side": "right",
+      "ko": "위팔세갈래근 안쪽갈래",
+      "hanja": "上腕三頭筋內側頭",
+      "en": "medial head of triceps brachii"
+    },
+    "FMA37696": {
+      "side": "left",
+      "ko": "위팔세갈래근 안쪽갈래",
+      "hanja": "上腕三頭筋內側頭",
+      "en": "medial head of triceps brachii"
+    },
+    "FMA37697": {
+      "side": "right",
+      "ko": "위팔세갈래근 가쪽갈래",
+      "hanja": "上腕三頭筋外側頭",
+      "en": "lateral head of triceps brachii"
+    },
+    "FMA37698": {
+      "side": "left",
+      "ko": "위팔세갈래근 가쪽갈래",
+      "hanja": "上腕三頭筋外側頭",
+      "en": "lateral head of triceps brachii"
+    },
+    "FMA37699": {
+      "side": "right",
+      "ko": "위팔세갈래근 긴갈래",
+      "hanja": "上腕三頭筋長頭",
+      "en": "long head of triceps brachii"
+    },
+    "FMA37700": {
+      "side": "left",
+      "ko": "위팔세갈래근 긴갈래",
+      "hanja": "上腕三頭筋長頭",
+      "en": "long head of triceps brachii"
+    },
     "FMA37705": {
       "side": "right",
       "ko": "팔꿈치근",
@@ -2602,6 +3198,66 @@
       "ko": "팔꿈치근",
       "hanja": "肘筋",
       "en": "anconeus"
+    },
+    "FMA37717": {
+      "side": "right",
+      "ko": "발첫째벌레근",
+      "hanja": "足第一蟲樣筋",
+      "en": "first lumbrical of foot"
+    },
+    "FMA37718": {
+      "side": "left",
+      "ko": "발첫째벌레근",
+      "hanja": "足第一蟲樣筋",
+      "en": "first lumbrical of foot"
+    },
+    "FMA37719": {
+      "side": "right",
+      "ko": "발둘째벌레근",
+      "hanja": "足第二蟲樣筋",
+      "en": "second lumbrical of foot"
+    },
+    "FMA37720": {
+      "side": "left",
+      "ko": "발둘째벌레근",
+      "hanja": "足第二蟲樣筋",
+      "en": "second lumbrical of foot"
+    },
+    "FMA37741": {
+      "side": "right",
+      "ko": "발셋째발바닥뼈사이",
+      "hanja": "足第三足底骨間",
+      "en": "third plantar interosseous of foot"
+    },
+    "FMA37742": {
+      "side": "left",
+      "ko": "발셋째발바닥뼈사이",
+      "hanja": "足第三足底骨間",
+      "en": "third plantar interosseous of foot"
+    },
+    "FMA37743": {
+      "side": "right",
+      "ko": "발둘째발바닥뼈사이",
+      "hanja": "足第二足底骨間",
+      "en": "second plantar interosseous of foot"
+    },
+    "FMA37744": {
+      "side": "left",
+      "ko": "발둘째발바닥뼈사이",
+      "hanja": "足第二足底骨間",
+      "en": "second plantar interosseous of foot"
+    },
+    "FMA37745": {
+      "side": "right",
+      "ko": "발첫째발바닥뼈사이",
+      "hanja": "足第一足底骨間",
+      "en": "first plantar interosseous of foot"
+    },
+    "FMA37746": {
+      "side": "left",
+      "ko": "발첫째발바닥뼈사이",
+      "hanja": "足第一足底骨間",
+      "en": "first plantar interosseous of foot"
     },
     "FMA38454": {
       "side": "right",
@@ -2807,6 +3463,54 @@
       "hanja": "伸筋示指",
       "en": "extensor indicis"
     },
+    "FMA38560": {
+      "side": "right",
+      "ko": "원엎침근 위팔갈래",
+      "hanja": "圓回內筋上腕頭",
+      "en": "humeral head of pronator teres"
+    },
+    "FMA38561": {
+      "side": "left",
+      "ko": "원엎침근 위팔갈래",
+      "hanja": "圓回內筋上腕頭",
+      "en": "humeral head of pronator teres"
+    },
+    "FMA38562": {
+      "side": "right",
+      "ko": "원엎침근 자갈래",
+      "hanja": "圓回內筋尺骨頭",
+      "en": "ulnar head of pronator teres"
+    },
+    "FMA38563": {
+      "side": "left",
+      "ko": "원엎침근 자갈래",
+      "hanja": "圓回內筋尺骨頭",
+      "en": "ulnar head of pronator teres"
+    },
+    "FMA38617": {
+      "side": "right",
+      "ko": "자쪽손목굽힘근 위팔갈래",
+      "hanja": "尺側手根屈筋上腕頭",
+      "en": "humeral head of flexor carpi ulnaris"
+    },
+    "FMA38618": {
+      "side": "left",
+      "ko": "자쪽손목굽힘근 위팔갈래",
+      "hanja": "尺側手根屈筋上腕頭",
+      "en": "humeral head of flexor carpi ulnaris"
+    },
+    "FMA38619": {
+      "side": "right",
+      "ko": "자쪽손목굽힘근 자갈래",
+      "hanja": "尺側手根屈筋尺骨頭",
+      "en": "ulnar head of flexor carpi ulnaris"
+    },
+    "FMA38620": {
+      "side": "left",
+      "ko": "자쪽손목굽힘근 자갈래",
+      "hanja": "尺側手根屈筋尺骨頭",
+      "en": "ulnar head of flexor carpi ulnaris"
+    },
     "FMA38928": {
       "side": "right",
       "ko": "넙다리곧은근",
@@ -2968,6 +3672,54 @@
       "ko": "깊은목동맥",
       "hanja": "深頸動脈",
       "en": "deep cervical artery"
+    },
+    "FMA42398": {
+      "side": "right",
+      "ko": "손 벌레근 집합",
+      "hanja": "手蟲樣筋群",
+      "en": "set of lumbricals of hand"
+    },
+    "FMA42399": {
+      "side": "left",
+      "ko": "손 벌레근 집합",
+      "hanja": "手蟲樣筋群",
+      "en": "set of lumbricals of hand"
+    },
+    "FMA42402": {
+      "side": "right",
+      "ko": "손 손바닥쪽뼈사이근 집합",
+      "hanja": "手手掌側骨間筋群",
+      "en": "set of palmar interossei of hand"
+    },
+    "FMA42403": {
+      "side": "left",
+      "ko": "손 손바닥쪽뼈사이근 집합",
+      "hanja": "手手掌側骨間筋群",
+      "en": "set of palmar interossei of hand"
+    },
+    "FMA42404": {
+      "side": "right",
+      "ko": "손 손등쪽뼈사이근 집합",
+      "hanja": "手手背側骨間筋群",
+      "en": "set of dorsal interossei of hand"
+    },
+    "FMA42405": {
+      "side": "left",
+      "ko": "손 손등쪽뼈사이근 집합",
+      "hanja": "手手背側骨間筋群",
+      "en": "set of dorsal interossei of hand"
+    },
+    "FMA43253": {
+      "side": "right",
+      "ko": "엄지발가락몸쪽마디뼈",
+      "hanja": "拇趾近位指骨",
+      "en": "proximal phalanx of big toe"
+    },
+    "FMA43254": {
+      "side": "left",
+      "ko": "엄지발가락몸쪽마디뼈",
+      "hanja": "拇趾近位指骨",
+      "en": "proximal phalanx of big toe"
     },
     "FMA43883": {
       "side": "right",
@@ -3233,6 +3985,18 @@
       "hanja": "外側回旋大腿靜脈",
       "en": "lateral circumflex femoral vein"
     },
+    "FMA45097": {
+      "side": "right",
+      "ko": "발 종자뼈",
+      "hanja": "足種子骨",
+      "en": "sesamoid bone of foot"
+    },
+    "FMA45098": {
+      "side": "left",
+      "ko": "발 종자뼈",
+      "hanja": "足種子骨",
+      "en": "sesamoid bone of foot"
+    },
     "FMA45739": {
       "side": "right",
       "ko": "넓은목근",
@@ -3292,6 +4056,138 @@
       "ko": "엉덩꼬리근",
       "hanja": "腸骨尾骨筋",
       "en": "iliococcygeus"
+    },
+    "FMA45874": {
+      "side": "right",
+      "ko": "가슴큰배부분",
+      "hanja": "胸筋大腹部",
+      "en": "abdominal part of pectoralis major"
+    },
+    "FMA45875": {
+      "side": "left",
+      "ko": "가슴큰배부분",
+      "hanja": "胸筋大腹部",
+      "en": "abdominal part of pectoralis major"
+    },
+    "FMA45888": {
+      "side": "right",
+      "ko": "두갈래넙다리긴머리",
+      "hanja": "二頭大腿長頭",
+      "en": "long head of biceps femoris"
+    },
+    "FMA45889": {
+      "side": "left",
+      "ko": "두갈래넙다리긴머리",
+      "hanja": "二頭大腿長頭",
+      "en": "long head of biceps femoris"
+    },
+    "FMA45891": {
+      "side": "right",
+      "ko": "두갈래넙다리짧은머리",
+      "hanja": "二頭大腿短頭",
+      "en": "short head of biceps femoris"
+    },
+    "FMA45892": {
+      "side": "left",
+      "ko": "두갈래넙다리짧은머리",
+      "hanja": "二頭大腿短頭",
+      "en": "short head of biceps femoris"
+    },
+    "FMA45957": {
+      "side": "right",
+      "ko": "장딴지안쪽머리",
+      "hanja": "腓腹內側頭",
+      "en": "medial head of gastrocnemius"
+    },
+    "FMA45958": {
+      "side": "left",
+      "ko": "장딴지안쪽머리",
+      "hanja": "腓腹內側頭",
+      "en": "medial head of gastrocnemius"
+    },
+    "FMA45960": {
+      "side": "right",
+      "ko": "장딴지가쪽머리",
+      "hanja": "腓腹外側頭",
+      "en": "lateral head of gastrocnemius"
+    },
+    "FMA45961": {
+      "side": "left",
+      "ko": "장딴지가쪽머리",
+      "hanja": "腓腹外側頭",
+      "en": "lateral head of gastrocnemius"
+    },
+    "FMA45971": {
+      "side": "right",
+      "ko": "굽힘근엄지발가락짧은안쪽머리",
+      "hanja": "屈筋拇趾短內側頭",
+      "en": "medial head of flexor hallucis brevis"
+    },
+    "FMA45972": {
+      "side": "left",
+      "ko": "굽힘근엄지발가락짧은안쪽머리",
+      "hanja": "屈筋拇趾短內側頭",
+      "en": "medial head of flexor hallucis brevis"
+    },
+    "FMA45973": {
+      "side": "right",
+      "ko": "굽힘근엄지발가락짧은가쪽머리",
+      "hanja": "屈筋拇趾短外側頭",
+      "en": "lateral head of flexor hallucis brevis"
+    },
+    "FMA45974": {
+      "side": "left",
+      "ko": "굽힘근엄지발가락짧은가쪽머리",
+      "hanja": "屈筋拇趾短外側頭",
+      "en": "lateral head of flexor hallucis brevis"
+    },
+    "FMA46018": {
+      "side": "right",
+      "ko": "모음근엄지발가락빗머리",
+      "hanja": "內轉筋拇趾斜頭",
+      "en": "oblique head of adductor hallucis"
+    },
+    "FMA46019": {
+      "side": "left",
+      "ko": "모음근엄지발가락빗머리",
+      "hanja": "內轉筋拇趾斜頭",
+      "en": "oblique head of adductor hallucis"
+    },
+    "FMA46020": {
+      "side": "right",
+      "ko": "모음근엄지발가락가로머리",
+      "hanja": "內轉筋拇趾橫頭",
+      "en": "transverse head of adductor hallucis"
+    },
+    "FMA46021": {
+      "side": "left",
+      "ko": "모음근엄지발가락가로머리",
+      "hanja": "內轉筋拇趾橫頭",
+      "en": "transverse head of adductor hallucis"
+    },
+    "FMA46121": {
+      "side": "right",
+      "ko": "모음근엄지손가락빗머리",
+      "hanja": "內轉筋拇指斜頭",
+      "en": "oblique head of adductor pollicis"
+    },
+    "FMA46122": {
+      "side": "left",
+      "ko": "모음근엄지손가락빗머리",
+      "hanja": "內轉筋拇指斜頭",
+      "en": "oblique head of adductor pollicis"
+    },
+    "FMA46123": {
+      "side": "right",
+      "ko": "모음근엄지손가락가로머리",
+      "hanja": "內轉筋拇指橫頭",
+      "en": "transverse head of adductor pollicis"
+    },
+    "FMA46124": {
+      "side": "left",
+      "ko": "모음근엄지손가락가로머리",
+      "hanja": "內轉筋拇指橫頭",
+      "en": "transverse head of adductor pollicis"
     },
     "FMA46292": {
       "side": "right",
@@ -3460,6 +4356,30 @@
       "ko": "모뿔덮개근",
       "hanja": "披裂喉頭蓋筋",
       "en": "aryepiglotticus"
+    },
+    "FMA46611": {
+      "side": "right",
+      "ko": "반지방패근 곧은부분",
+      "hanja": "輪狀甲狀筋直部",
+      "en": "straight part of cricothyroid"
+    },
+    "FMA46612": {
+      "side": "left",
+      "ko": "반지방패근 곧은부분",
+      "hanja": "輪狀甲狀筋直部",
+      "en": "straight part of cricothyroid"
+    },
+    "FMA46613": {
+      "side": "right",
+      "ko": "반지방패근 빗부분",
+      "hanja": "輪狀甲狀筋斜部",
+      "en": "oblique part of cricothyroid"
+    },
+    "FMA46614": {
+      "side": "left",
+      "ko": "반지방패근 빗부분",
+      "hanja": "輪狀甲狀筋斜部",
+      "en": "oblique part of cricothyroid"
     },
     "FMA46631": {
       "side": "right",
@@ -3754,6 +4674,30 @@
       "ko": "온힘줄고리",
       "hanja": "總腱輪",
       "en": "common tendinous ring"
+    },
+    "FMA49144": {
+      "side": "right",
+      "ko": "가쪽곧은근 제동인대",
+      "hanja": "外直筋制動靭帶",
+      "en": "check ligament of lateral rectus"
+    },
+    "FMA49145": {
+      "side": "left",
+      "ko": "가쪽곧은근 제동인대",
+      "hanja": "外直筋制動靭帶",
+      "en": "check ligament of lateral rectus"
+    },
+    "FMA49147": {
+      "side": "right",
+      "ko": "안쪽곧은근 제동인대",
+      "hanja": "內直筋制動靭帶",
+      "en": "check ligament of medial rectus"
+    },
+    "FMA49148": {
+      "side": "left",
+      "ko": "안쪽곧은근 제동인대",
+      "hanja": "內直筋制動靭帶",
+      "en": "check ligament of medial rectus"
     },
     "FMA4950": {
       "side": "left",
@@ -4144,6 +5088,18 @@
       "ko": "깊은넙다리정맥",
       "hanja": "深大腿靜脈",
       "en": "deep femoral vein"
+    },
+    "FMA51044": {
+      "side": "right",
+      "ko": "넙다리근막",
+      "hanja": "大腿筋膜",
+      "en": "fascia lata of thigh"
+    },
+    "FMA51045": {
+      "side": "left",
+      "ko": "넙다리근막",
+      "hanja": "大腿筋膜",
+      "en": "fascia lata of thigh"
     },
     "FMA51144": {
       "side": "right",
@@ -4769,6 +5725,54 @@
       "hanja": "脈絡膜",
       "en": "choroid"
     },
+    "FMA58405": {
+      "side": "right",
+      "ko": "자유위팔다리둘러싸는근막",
+      "hanja": "遊離上肢包圍筋膜",
+      "en": "investing fascia of free upper limb"
+    },
+    "FMA58406": {
+      "side": "left",
+      "ko": "자유위팔다리둘러싸는근막",
+      "hanja": "遊離上肢包圍筋膜",
+      "en": "investing fascia of free upper limb"
+    },
+    "FMA58418": {
+      "side": "right",
+      "ko": "아래팔다리둘러싸는근막",
+      "hanja": "下肢包圍筋膜",
+      "en": "investing fascia of lower limb"
+    },
+    "FMA58419": {
+      "side": "left",
+      "ko": "아래팔다리둘러싸는근막",
+      "hanja": "下肢包圍筋膜",
+      "en": "investing fascia of lower limb"
+    },
+    "FMA58429": {
+      "side": "right",
+      "ko": "자유아래팔다리둘러싸는근막",
+      "hanja": "遊離下肢包圍筋膜",
+      "en": "investing fascia of free lower limb"
+    },
+    "FMA58430": {
+      "side": "left",
+      "ko": "자유아래팔다리둘러싸는근막",
+      "hanja": "遊離下肢包圍筋膜",
+      "en": "investing fascia of free lower limb"
+    },
+    "FMA58448": {
+      "side": "right",
+      "ko": "손목싸개근막",
+      "hanja": "腕部被覆筋膜",
+      "en": "investing fascia of wrist"
+    },
+    "FMA58449": {
+      "side": "left",
+      "ko": "손목싸개근막",
+      "hanja": "腕部被覆筋膜",
+      "en": "investing fascia of wrist"
+    },
     "FMA58483": {
       "side": "right",
       "ko": "섬모체관",
@@ -4780,6 +5784,30 @@
       "ko": "섬모체관",
       "hanja": "毛樣體冠",
       "en": "corona ciliaris"
+    },
+    "FMA58575": {
+      "side": "right",
+      "ko": "아래팔둘러싸는근막",
+      "hanja": "前腕包圍筋膜",
+      "en": "investing fascia of forearm"
+    },
+    "FMA58576": {
+      "side": "left",
+      "ko": "아래팔둘러싸는근막",
+      "hanja": "前腕包圍筋膜",
+      "en": "investing fascia of forearm"
+    },
+    "FMA58742": {
+      "side": "right",
+      "ko": "넙다리둘러싸는근막",
+      "hanja": "大腿包圍筋膜",
+      "en": "investing fascia of thigh"
+    },
+    "FMA58743": {
+      "side": "left",
+      "ko": "넙다리둘러싸는근막",
+      "hanja": "大腿包圍筋膜",
+      "en": "investing fascia of thigh"
     },
     "FMA58776": {
       "side": "right",
@@ -5129,6 +6157,24 @@
       "hanja": "後脛骨筋",
       "en": "tibialis posterior"
     },
+    "FMA65198": {
+      "side": "right",
+      "ko": "굽힘근엄지손가락짧은얕은머리",
+      "hanja": "屈筋拇指短淺頭",
+      "en": "superficial head of flexor pollicis brevis"
+    },
+    "FMA65199": {
+      "side": "left",
+      "ko": "굽힘근엄지손가락짧은얕은머리",
+      "hanja": "屈筋拇指短淺頭",
+      "en": "superficial head of flexor pollicis brevis"
+    },
+    "FMA65470": {
+      "side": "left",
+      "ko": "엄지손가락몸쪽마디뼈",
+      "hanja": "拇指近位指骨",
+      "en": "proximal phalanx of thumb"
+    },
     "FMA66242": {
       "side": "right",
       "ko": "첫째뒤갈비사이동맥",
@@ -5152,6 +6198,12 @@
       "ko": "가슴등동맥",
       "hanja": "胸背動脈",
       "en": "thoracodorsal artery"
+    },
+    "FMA66791": {
+      "side": "left",
+      "ko": "새끼손가락몸쪽마디뼈",
+      "hanja": "小手指近位指骨",
+      "en": "proximal phalanx of little finger"
     },
     "FMA67292": {
       "side": "right",
@@ -5308,6 +6360,24 @@
       "ko": "다리",
       "hanja": "下肢",
       "en": "lower limb"
+    },
+    "FMA71908": {
+      "side": "left",
+      "ko": "중간손가락몸쪽마디뼈",
+      "hanja": "中手指近位指骨",
+      "en": "proximal phalanx of middle finger"
+    },
+    "FMA71915": {
+      "side": "left",
+      "ko": "집게손가락손가락몸쪽마디뼈",
+      "hanja": "示指手指近位指骨",
+      "en": "proximal phalanx of index finger"
+    },
+    "FMA71916": {
+      "side": "left",
+      "ko": "고리손가락몸쪽마디뼈",
+      "hanja": "環手指近位指骨",
+      "en": "proximal phalanx of ring finger"
     },
     "FMA7204": {
       "side": "right",
@@ -5585,6 +6655,18 @@
       "hanja": "島",
       "en": "insula"
     },
+    "FMA73055": {
+      "side": "right",
+      "ko": "무릎 앞부분",
+      "hanja": "膝前部",
+      "en": "anterior part of knee"
+    },
+    "FMA73056": {
+      "side": "left",
+      "ko": "무릎 앞부분",
+      "hanja": "膝前部",
+      "en": "anterior part of knee"
+    },
     "FMA73086": {
       "side": "right",
       "ko": "발고유",
@@ -5753,6 +6835,30 @@
       "hanja": "後氣管支肺分節",
       "en": "posterior bronchopulmonary segment"
     },
+    "FMA74075": {
+      "side": "right",
+      "ko": "긴갈비올림근 집합",
+      "hanja": "長肋骨擧筋群",
+      "en": "set of levatores costarum longi"
+    },
+    "FMA74076": {
+      "side": "left",
+      "ko": "긴갈비올림근 집합",
+      "hanja": "長肋骨擧筋群",
+      "en": "set of levatores costarum longi"
+    },
+    "FMA74077": {
+      "side": "right",
+      "ko": "짧은갈비올림근 집합",
+      "hanja": "短肋骨擧筋群",
+      "en": "set of levatores costarum breves"
+    },
+    "FMA74078": {
+      "side": "left",
+      "ko": "짧은갈비올림근 집합",
+      "hanja": "短肋骨擧筋群",
+      "en": "set of levatores costarum breves"
+    },
     "FMA77380": {
       "side": "right",
       "ko": "오금동맥",
@@ -5813,6 +6919,18 @@
       "hanja": "第二肋軟骨",
       "en": "second costal cartilage"
     },
+    "FMA79065": {
+      "side": "right",
+      "ko": "무릎무릎뼈부분",
+      "hanja": "膝膝蓋部",
+      "en": "patellar part of knee"
+    },
+    "FMA79066": {
+      "side": "left",
+      "ko": "무릎무릎뼈부분",
+      "hanja": "膝膝蓋部",
+      "en": "patellar part of knee"
+    },
     "FMA7909": {
       "side": "right",
       "ko": "셋째갈비뼈",
@@ -5824,6 +6942,18 @@
       "ko": "셋째갈비연골",
       "hanja": "第三肋軟骨",
       "en": "third costal cartilage"
+    },
+    "FMA79181": {
+      "side": "right",
+      "ko": "손고유골격",
+      "hanja": "手固有骨格",
+      "en": "skeleton of hand proper"
+    },
+    "FMA79182": {
+      "side": "left",
+      "ko": "손고유골격",
+      "hanja": "手固有骨格",
+      "en": "skeleton of hand proper"
     },
     "FMA7957": {
       "side": "right",
@@ -5842,6 +6972,18 @@
       "ko": "첫째갈비뼈",
       "hanja": "第一肋骨",
       "en": "first rib"
+    },
+    "FMA79979": {
+      "side": "right",
+      "ko": "큰가슴근 복장갈비부분",
+      "hanja": "大胸筋胸肋部",
+      "en": "sternocostal part of pectoralis major"
+    },
+    "FMA79980": {
+      "side": "left",
+      "ko": "큰가슴근 복장갈비부분",
+      "hanja": "大胸筋胸肋部",
+      "en": "sternocostal part of pectoralis major"
     },
     "FMA8005": {
       "side": "left",
@@ -6094,6 +7236,18 @@
       "ko": "열두째갈비뼈",
       "hanja": "第十二肋骨",
       "en": "twelfth rib"
+    },
+    "FMA86034": {
+      "side": "right",
+      "ko": "발 새끼발가락맞섬근",
+      "hanja": "足小趾對立筋",
+      "en": "opponens digiti minimi of foot"
+    },
+    "FMA86035": {
+      "side": "left",
+      "ko": "발 새끼발가락맞섬근",
+      "hanja": "足小趾對立筋",
+      "en": "opponens digiti minimi of foot"
     },
     "FMA8671": {
       "side": "right",
@@ -6684,5 +7838,567 @@
       }
     ],
     "nested_laterality": []
+  },
+  "nested_position_audit": {
+    "baseline_commit": "f097d14340193675787d15636d3a1433c8c517ac",
+    "method": "Exactly one English side word anywhere in name; exact opposite-side FMA pair; remove only first Korean side prefix, first Hanja side prefix, and English side token; identical three-language bases; conservative musculoskeletal whitelist; no anatomy identity changes.",
+    "counts": {
+      "examined_signatures": 378,
+      "approved_pairs": 96,
+      "approved_concepts": 192,
+      "not_auto_modified_groups": {
+        "needs_structural_or_terminology_review": 105,
+        "asymmetric_or_conflicting_names": 6,
+        "unpaired_or_ambiguous": 171
+      }
+    },
+    "approved_pairs": [
+      {
+        "signature": "interosseous membrane of {side} forearm",
+        "left": "FMA23708",
+        "right": "FMA23707"
+      },
+      {
+        "signature": "middle phalanx of {side} index finger",
+        "left": "FMA23938",
+        "right": "FMA24455"
+      },
+      {
+        "signature": "middle phalanx of {side} middle finger",
+        "left": "FMA23940",
+        "right": "FMA24456"
+      },
+      {
+        "signature": "middle phalanx of {side} ring finger",
+        "left": "FMA23942",
+        "right": "FMA24457"
+      },
+      {
+        "signature": "middle phalanx of {side} little finger",
+        "left": "FMA23944",
+        "right": "FMA24458"
+      },
+      {
+        "signature": "distal phalanx of {side} thumb",
+        "left": "FMA23951",
+        "right": "FMA24459"
+      },
+      {
+        "signature": "distal phalanx of {side} index finger",
+        "left": "FMA23953",
+        "right": "FMA24460"
+      },
+      {
+        "signature": "distal phalanx of {side} middle finger",
+        "left": "FMA23955",
+        "right": "FMA24461"
+      },
+      {
+        "signature": "distal phalanx of {side} ring finger",
+        "left": "FMA23957",
+        "right": "FMA24462"
+      },
+      {
+        "signature": "distal phalanx of {side} little finger",
+        "left": "FMA23959",
+        "right": "FMA24463"
+      },
+      {
+        "signature": "proximal phalanx of {side} thumb",
+        "left": "FMA65470",
+        "right": "FMA24450"
+      },
+      {
+        "signature": "proximal phalanx of {side} index finger",
+        "left": "FMA71915",
+        "right": "FMA24451"
+      },
+      {
+        "signature": "proximal phalanx of {side} middle finger",
+        "left": "FMA71908",
+        "right": "FMA24452"
+      },
+      {
+        "signature": "proximal phalanx of {side} ring finger",
+        "left": "FMA71916",
+        "right": "FMA24453"
+      },
+      {
+        "signature": "proximal phalanx of {side} little finger",
+        "left": "FMA66791",
+        "right": "FMA24454"
+      },
+      {
+        "signature": "navicular bone of {side} foot",
+        "left": "FMA24501",
+        "right": "FMA24500"
+      },
+      {
+        "signature": "proximal phalanx of {side} second toe",
+        "left": "FMA32635",
+        "right": "FMA32634"
+      },
+      {
+        "signature": "proximal phalanx of {side} third toe",
+        "left": "FMA32637",
+        "right": "FMA32636"
+      },
+      {
+        "signature": "proximal phalanx of {side} fourth toe",
+        "left": "FMA32639",
+        "right": "FMA32638"
+      },
+      {
+        "signature": "proximal phalanx of {side} little toe",
+        "left": "FMA32641",
+        "right": "FMA32640"
+      },
+      {
+        "signature": "middle phalanx of {side} second toe",
+        "left": "FMA32643",
+        "right": "FMA32642"
+      },
+      {
+        "signature": "middle phalanx of {side} third toe",
+        "left": "FMA32645",
+        "right": "FMA32644"
+      },
+      {
+        "signature": "middle phalanx of {side} fourth toe",
+        "left": "FMA32647",
+        "right": "FMA32646"
+      },
+      {
+        "signature": "distal phalanx of {side} big toe",
+        "left": "FMA32651",
+        "right": "FMA32650"
+      },
+      {
+        "signature": "distal phalanx of {side} second toe",
+        "left": "FMA32653",
+        "right": "FMA32652"
+      },
+      {
+        "signature": "distal phalanx of {side} third toe",
+        "left": "FMA32655",
+        "right": "FMA32654"
+      },
+      {
+        "signature": "distal phalanx of {side} fourth toe",
+        "left": "FMA32657",
+        "right": "FMA32656"
+      },
+      {
+        "signature": "distal phalanx of {side} little toe",
+        "left": "FMA32659",
+        "right": "FMA32658"
+      },
+      {
+        "signature": "ascending part of {side} trapezius",
+        "left": "FMA33583",
+        "right": "FMA33581"
+      },
+      {
+        "signature": "transverse part of {side} trapezius",
+        "left": "FMA33585",
+        "right": "FMA33584"
+      },
+      {
+        "signature": "descending part of {side} trapezius",
+        "left": "FMA33587",
+        "right": "FMA33586"
+      },
+      {
+        "signature": "clavicular part of {side} deltoid",
+        "left": "FMA34681",
+        "right": "FMA34680"
+      },
+      {
+        "signature": "acromial part of {side} deltoid",
+        "left": "FMA34683",
+        "right": "FMA34682"
+      },
+      {
+        "signature": "spinal part of {side} deltoid",
+        "left": "FMA34685",
+        "right": "FMA34684"
+      },
+      {
+        "signature": "clavicular part of {side} pectoralis major",
+        "left": "FMA34691",
+        "right": "FMA34690"
+      },
+      {
+        "signature": "interosseous membrane of {side} leg",
+        "left": "FMA35193",
+        "right": "FMA35192"
+      },
+      {
+        "signature": "abductor digiti minimi of {side} hand",
+        "left": "FMA37397",
+        "right": "FMA37396"
+      },
+      {
+        "signature": "flexor digiti minimi brevis of {side} hand",
+        "left": "FMA37399",
+        "right": "FMA37398"
+      },
+      {
+        "signature": "opponens digiti minimi of {side} hand",
+        "left": "FMA37401",
+        "right": "FMA37400"
+      },
+      {
+        "signature": "abductor digiti minimi of {side} foot",
+        "left": "FMA37464",
+        "right": "FMA37463"
+      },
+      {
+        "signature": "flexor digiti minimi brevis of {side} foot",
+        "left": "FMA37472",
+        "right": "FMA37471"
+      },
+      {
+        "signature": "fourth lumbrical of {side} foot",
+        "left": "FMA37484",
+        "right": "FMA37483"
+      },
+      {
+        "signature": "third lumbrical of {side} foot",
+        "left": "FMA37486",
+        "right": "FMA37485"
+      },
+      {
+        "signature": "short head of {side} biceps brachii",
+        "left": "FMA37685",
+        "right": "FMA37684"
+      },
+      {
+        "signature": "long head of {side} biceps brachii",
+        "left": "FMA37687",
+        "right": "FMA37686"
+      },
+      {
+        "signature": "medial head of {side} triceps brachii",
+        "left": "FMA37696",
+        "right": "FMA37695"
+      },
+      {
+        "signature": "lateral head of {side} triceps brachii",
+        "left": "FMA37698",
+        "right": "FMA37697"
+      },
+      {
+        "signature": "long head of {side} triceps brachii",
+        "left": "FMA37700",
+        "right": "FMA37699"
+      },
+      {
+        "signature": "first lumbrical of {side} foot",
+        "left": "FMA37718",
+        "right": "FMA37717"
+      },
+      {
+        "signature": "second lumbrical of {side} foot",
+        "left": "FMA37720",
+        "right": "FMA37719"
+      },
+      {
+        "signature": "third plantar interosseous of {side} foot",
+        "left": "FMA37742",
+        "right": "FMA37741"
+      },
+      {
+        "signature": "second plantar interosseous of {side} foot",
+        "left": "FMA37744",
+        "right": "FMA37743"
+      },
+      {
+        "signature": "first plantar interosseous of {side} foot",
+        "left": "FMA37746",
+        "right": "FMA37745"
+      },
+      {
+        "signature": "humeral head of {side} pronator teres",
+        "left": "FMA38561",
+        "right": "FMA38560"
+      },
+      {
+        "signature": "ulnar head of {side} pronator teres",
+        "left": "FMA38563",
+        "right": "FMA38562"
+      },
+      {
+        "signature": "humeral head of {side} flexor carpi ulnaris",
+        "left": "FMA38618",
+        "right": "FMA38617"
+      },
+      {
+        "signature": "ulnar head of {side} flexor carpi ulnaris",
+        "left": "FMA38620",
+        "right": "FMA38619"
+      },
+      {
+        "signature": "set of lumbricals of {side} hand",
+        "left": "FMA42399",
+        "right": "FMA42398"
+      },
+      {
+        "signature": "set of palmar interossei of {side} hand",
+        "left": "FMA42403",
+        "right": "FMA42402"
+      },
+      {
+        "signature": "set of dorsal interossei of {side} hand",
+        "left": "FMA42405",
+        "right": "FMA42404"
+      },
+      {
+        "signature": "proximal phalanx of {side} big toe",
+        "left": "FMA43254",
+        "right": "FMA43253"
+      },
+      {
+        "signature": "sesamoid bone of {side} foot",
+        "left": "FMA45098",
+        "right": "FMA45097"
+      },
+      {
+        "signature": "abdominal part of {side} pectoralis major",
+        "left": "FMA45875",
+        "right": "FMA45874"
+      },
+      {
+        "signature": "long head of {side} biceps femoris",
+        "left": "FMA45889",
+        "right": "FMA45888"
+      },
+      {
+        "signature": "short head of {side} biceps femoris",
+        "left": "FMA45892",
+        "right": "FMA45891"
+      },
+      {
+        "signature": "medial head of {side} gastrocnemius",
+        "left": "FMA45958",
+        "right": "FMA45957"
+      },
+      {
+        "signature": "lateral head of {side} gastrocnemius",
+        "left": "FMA45961",
+        "right": "FMA45960"
+      },
+      {
+        "signature": "medial head of {side} flexor hallucis brevis",
+        "left": "FMA45972",
+        "right": "FMA45971"
+      },
+      {
+        "signature": "lateral head of {side} flexor hallucis brevis",
+        "left": "FMA45974",
+        "right": "FMA45973"
+      },
+      {
+        "signature": "oblique head of {side} adductor hallucis",
+        "left": "FMA46019",
+        "right": "FMA46018"
+      },
+      {
+        "signature": "transverse head of {side} adductor hallucis",
+        "left": "FMA46021",
+        "right": "FMA46020"
+      },
+      {
+        "signature": "oblique head of {side} adductor pollicis",
+        "left": "FMA46122",
+        "right": "FMA46121"
+      },
+      {
+        "signature": "transverse head of {side} adductor pollicis",
+        "left": "FMA46124",
+        "right": "FMA46123"
+      },
+      {
+        "signature": "straight part of {side} cricothyroid",
+        "left": "FMA46612",
+        "right": "FMA46611"
+      },
+      {
+        "signature": "oblique part of {side} cricothyroid",
+        "left": "FMA46614",
+        "right": "FMA46613"
+      },
+      {
+        "signature": "check ligament of {side} lateral rectus",
+        "left": "FMA49145",
+        "right": "FMA49144"
+      },
+      {
+        "signature": "check ligament of {side} medial rectus",
+        "left": "FMA49148",
+        "right": "FMA49147"
+      },
+      {
+        "signature": "superficial head of {side} flexor pollicis brevis",
+        "left": "FMA65199",
+        "right": "FMA65198"
+      },
+      {
+        "signature": "set of {side} levatores costarum longi",
+        "left": "FMA74076",
+        "right": "FMA74075"
+      },
+      {
+        "signature": "set of {side} levatores costarum breves",
+        "left": "FMA74078",
+        "right": "FMA74077"
+      },
+      {
+        "signature": "sternocostal part of {side} pectoralis major",
+        "left": "FMA79980",
+        "right": "FMA79979"
+      },
+      {
+        "signature": "opponens digiti minimi of {side} foot",
+        "left": "FMA86035",
+        "right": "FMA86034"
+      },
+      {
+        "signature": "middle phalanx of {side} little toe",
+        "left": "FMA230988",
+        "right": "FMA230986"
+      },
+      {
+        "signature": "skeleton of {side} pectoral girdle",
+        "left": "FMA24164",
+        "right": "FMA24163"
+      },
+      {
+        "signature": "pectoral part of {side} pectoral girdle",
+        "left": "FMA33645",
+        "right": "FMA33644"
+      },
+      {
+        "signature": "scapular part of {side} pectoral girdle",
+        "left": "FMA33647",
+        "right": "FMA33646"
+      },
+      {
+        "signature": "fascia lata of {side} thigh",
+        "left": "FMA51045",
+        "right": "FMA51044"
+      },
+      {
+        "signature": "investing fascia of {side} free upper limb",
+        "left": "FMA58406",
+        "right": "FMA58405"
+      },
+      {
+        "signature": "investing fascia of {side} lower limb",
+        "left": "FMA58419",
+        "right": "FMA58418"
+      },
+      {
+        "signature": "investing fascia of {side} free lower limb",
+        "left": "FMA58430",
+        "right": "FMA58429"
+      },
+      {
+        "signature": "investing fascia of {side} wrist",
+        "left": "FMA58449",
+        "right": "FMA58448"
+      },
+      {
+        "signature": "investing fascia of {side} forearm",
+        "left": "FMA58576",
+        "right": "FMA58575"
+      },
+      {
+        "signature": "investing fascia of {side} thigh",
+        "left": "FMA58743",
+        "right": "FMA58742"
+      },
+      {
+        "signature": "anterior part of {side} knee",
+        "left": "FMA73056",
+        "right": "FMA73055"
+      },
+      {
+        "signature": "patellar part of {side} knee",
+        "left": "FMA79066",
+        "right": "FMA79065"
+      },
+      {
+        "signature": "skeleton of {side} hand proper",
+        "left": "FMA79182",
+        "right": "FMA79181"
+      }
+    ],
+    "excluded_signature_examples": {
+      "needs_structural_or_terminology_review": [
+        "trunk of {side} coronary artery",
+        "cavity of {side} ventricle",
+        "wall of {side} atrium",
+        "cavity of {side} atrium",
+        "caudate lobe branch of {side} portal vein",
+        "region of anterior sector of {side} liver (in-vivo)",
+        "tributary of {side} hepatic vein",
+        "descending branch of {side} lateral circumflex femoral artery",
+        "dorsal carpal branch of {side} radial artery",
+        "lateral proper palmar digital artery of {side} middle finger",
+        "medial proper palmar digital artery of {side} index finger",
+        "lateral proper palmar digital artery of {side} little finger",
+        "pectoral branch of {side} thoraco-acromial artery",
+        "acromial branch of {side} thoraco-acromial artery",
+        "deltoid branch of {side} thoraco-acromial artery",
+        "middle collateral branch of {side} deep brachial artery",
+        "radial collateral branch of {side} deep brachial artery",
+        "flexor retinaculum of {side} wrist",
+        "dorsal venous arch of {side} foot",
+        "plantar venous arch of {side} foot"
+      ],
+      "asymmetric_or_conflicting_names": [
+        "sphenoid part of {side} middle cerebral artery",
+        "insular part of {side} middle cerebral artery",
+        "anterolateral central branch of {side} middle cerebral artery",
+        "temporo-occipital branch of {side} middle cerebral artery",
+        "wall of {side} side of internal nose",
+        "wall of {side} side of heart"
+      ],
+      "unpaired_or_ambiguous": [
+        "{side} conus artery",
+        "anterior ventricular branch of {side} coronary artery",
+        "first anterior ventricular branch of {side} coronary artery",
+        "marginal branch of {side} coronary artery",
+        "posterior ventricular branch of {side} coronary artery",
+        "first posterior ventricular branch of {side} coronary artery",
+        "posterior interventricular branch of {side} coronary artery",
+        "septal branch of {side} posterior interventricular artery",
+        "first septal branch of {side} posterior interventricular artery",
+        "second septal branch of {side} posterior interventricular artery",
+        "diagonal branch of anterior descending branch of {side} coronary artery",
+        "conus branch of anterior interventricular branch of {side} coronary artery",
+        "circumflex branch of {side} coronary artery",
+        "{side} marginal vein",
+        "posterior vein of {side} ventricle",
+        "{side} internal thoracic vein",
+        "{side} superior intercostal vein",
+        "{side} anterior cusp of pulmonary valve",
+        "{side} posterior cusp of aortic valve",
+        "anterior papillary muscle of {side} ventricle"
+      ]
+    },
+    "verified_example": {
+      "FMA37698": {
+        "ko": "위팔세갈래근 가쪽갈래",
+        "hanja": "上腕三頭筋外側頭",
+        "en": "lateral head of triceps brachii"
+      },
+      "FMA37697": {
+        "ko": "위팔세갈래근 가쪽갈래",
+        "hanja": "上腕三頭筋外側頭",
+        "en": "lateral head of triceps brachii"
+      }
+    }
   }
 }
